@@ -1,0 +1,63 @@
+ECHO is off.
+ECHO is off.
+NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'rpais' on host '400p1t176rg0518' (Windows NT_amd64 version 6.2) on Mon Sep 25 22:24:05 +1000 2023
+INFO: [HLS 200-10] In directory 'C:/SPB_Data/ELEN90096-Group-2'
+Sourcing Tcl script 'C:/SPB_Data/ELEN90096-Group-2/hls-project/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: source C:/SPB_Data/ELEN90096-Group-2/hls-project/solution1/csim.tcl
+INFO: [HLS 200-1510] Running: open_project hls-project 
+INFO: [HLS 200-10] Opening project 'C:/SPB_Data/ELEN90096-Group-2/hls-project'.
+INFO: [HLS 200-1510] Running: set_top conv1 
+INFO: [HLS 200-1510] Running: add_files golden/src/conv1.cpp 
+INFO: [HLS 200-10] Adding design file 'golden/src/conv1.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files golden/src/srcnn.cpp 
+INFO: [HLS 200-10] Adding design file 'golden/src/srcnn.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files golden/src/srcnn.h 
+INFO: [HLS 200-10] Adding design file 'golden/src/srcnn.h' to the project
+INFO: [HLS 200-1510] Running: add_files golden/src/util.cpp 
+INFO: [HLS 200-10] Adding design file 'golden/src/util.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files golden/src/util.h 
+INFO: [HLS 200-10] Adding design file 'golden/src/util.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb golden/test/csim.cpp 
+INFO: [HLS 200-10] Adding test bench file 'golden/test/csim.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb golden/test/tb_conv1.cpp 
+INFO: [HLS 200-10] Adding test bench file 'golden/test/tb_conv1.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb golden/test/tb_srcnn.cpp 
+INFO: [HLS 200-10] Adding test bench file 'golden/test/tb_srcnn.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/SPB_Data/ELEN90096-Group-2/hls-project/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck24-ubva530-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xck24-ubva530-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../golden/test/csim.cpp in debug mode
+   Compiling ../../../../golden/test/tb_conv1.cpp in debug mode
+csim.mk:84: recipe for target 'obj/tb_conv1.o' failed
+../../../../golden/test/tb_conv1.cpp:4:19: fatal error: srcnn.h: No such file or directory
+ #include "srcnn.h"
+                   ^
+compilation terminated.
+make: *** [obj/tb_conv1.o] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.311 seconds; current allocated memory: 0.789 MB.
+4
+    while executing
+"source C:/SPB_Data/ELEN90096-Group-2/hls-project/solution1/csim.tcl"
+    invoked from within
+"hls::main C:/SPB_Data/ELEN90096-Group-2/hls-project/solution1/csim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 4.875 seconds; peak allocated memory: 90.473 MB.
