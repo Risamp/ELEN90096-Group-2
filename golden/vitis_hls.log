@@ -2,7 +2,7 @@ ECHO is off.
 ECHO is off.
 NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'rpais' on host '400p1t176rg0518' (Windows NT_amd64 version 6.2) on Mon Sep 25 22:32:28 +1000 2023
+INFO: [HLS 200-10] For user 'rpais' on host '400p1t176rg0518' (Windows NT_amd64 version 6.2) on Tue Sep 26 00:48:31 +1000 2023
 INFO: [HLS 200-10] In directory 'C:/SPB_Data/ELEN90096-Group-2/golden'
 Sourcing Tcl script 'C:/SPB_Data/ELEN90096-Group-2/golden/srcnn_hls/solution1/csim.tcl'
 INFO: [HLS 200-1510] Running: source C:/SPB_Data/ELEN90096-Group-2/golden/srcnn_hls/solution1/csim.tcl
@@ -40,7 +40,7 @@ INFO: [HLS 200-1510] Running: create_clock -period 10 -name default
 INFO: [HLS 200-1510] Running: csim_design -clean -quiet 
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-INFO: [HLS 200-2036] Building debug C Simulation binar^Cs
+INFO: [HLS 200-2036] Building debug C Simulation binaries
    Compiling ../../../../test/tb_conv1.cpp in debug mode
    Compiling ../../../../test/tb_srcnn.cpp in debug mode
    Compiling ../../../../test/csim.cpp in debug mode
@@ -49,12 +49,12 @@ INFO: [HLS 200-2036] Building debug C Simulation binar^Cs
    Compiling ../../../../src/util.cpp in debug mode
    Generating csim.exe
 ***** CONV1 Golden Reference *****
-  - Butterfly MSE: 0.00512151
+  - Butterfly MSE: 0.00940139
 
 ***** SRCNN Golden Reference *****
   - Butterfly MSE: 0.27515
 
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.021 seconds; current allocated memory: 0.711 MB.
-INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 11.6 seconds; peak allocated memory: 96.496 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.146 seconds; current allocated memory: 0.820 MB.
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 11.749 seconds; peak allocated memory: 91.355 MB.

@@ -1,5 +1,6 @@
 #include "srcnn.h"
 
+
 void srcnn(ftmap_t input_ftmap[N0][H][W],
            param_t conv1_weights[N1][N0][F1][F1],
            param_t conv1_biases[N1],
