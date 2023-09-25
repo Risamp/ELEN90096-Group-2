@@ -19,11 +19,10 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 	    //apply N1 convolutions
 	    for (int n1 = 0; n1 < N1; n1++) {
 	        //each convolution has an output feature map of size H x W
-			//how much we increment W/H depends on the stride - I cannot see where this is specified for SRCNN, so have assumed 1
+			//how much we increment W/H depends on the stride - I cannot see where this is specified for this layer, so have assumed 1
 	        for (int h = -startPaddingH; h < H+endPaddingH; h++) {
 	            for (int w = -startPaddingW; w < W+endPaddingW; w++) {
 	                //each kernel has a size of F1 x F1
-	            	int validPoints = 0;
 	                for (int f1h = 0; f1h < F1; f1h++) {
 	                    for (int f1w = 0; f1w < F1; f1w++) {
 	                        //input has N0 features
