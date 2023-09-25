@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="conv1.cpp" path="C:\SPB_Data\ELEN90096-Group-2\golden\src\conv1.cpp"/>
+    <originFiles name="srcnn.cpp" path="C:\SPB_Data\ELEN90096-Group-2\golden\src\srcnn.cpp"/>
+    <originFiles name="srcnn.h" path="C:\SPB_Data\ELEN90096-Group-2\golden\src\srcnn.h"/>
+    <originFiles name="util.cpp" path="C:\SPB_Data\ELEN90096-Group-2\golden\src\util.cpp"/>
+    <originFiles name="util.h" path="C:\SPB_Data\ELEN90096-Group-2\golden\src\util.h"/>
+  </source>
+  <testbench>
+    <originFiles name="csim.cpp" path="C:\SPB_Data\ELEN90096-Group-2\golden\test\csim.cpp"/>
+    <originFiles name="tb_conv1.cpp" path="C:\SPB_Data\ELEN90096-Group-2\golden\test\tb_conv1.cpp"/>
+    <originFiles name="tb_srcnn.cpp" path="C:\SPB_Data\ELEN90096-Group-2\golden\test\tb_srcnn.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
