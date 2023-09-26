@@ -11,10 +11,10 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 {
 	// implement conv1 layer of SRCNN here
 		//Calculate padding
-		int startPaddingH = floor(H%F1 / 2);
-		int endPaddingH = ceil(H%F1 / 2);
-		int startPaddingW = floor(W%F1 / 2);
-		int endPaddingW = ceil(W%F1 / 2);
+		int startPaddingH = floor((F1 - H%F1) / 2);
+		int endPaddingH = ceil((F1 - H%F1) / 2);
+		int startPaddingW = floor((F1 - W%F1) / 2);
+		int endPaddingW = ceil((F1 - W%F1) / 2);
 
 	    //apply N1 convolutions
 	    for (int n1 = 0; n1 < N1; n1++) {
