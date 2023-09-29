@@ -7,6 +7,8 @@
 open_project srcnn_hls
 set_top srcnn
 add_files src/conv1.cpp
+add_files src/conv2.cpp
+add_files src/conv3.cpp
 add_files src/srcnn.cpp
 add_files src/srcnn.h
 add_files src/util.cpp

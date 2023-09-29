@@ -4,14 +4,16 @@ INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../../test/tb_srcnn.cpp in debug mode
    Compiling ../../../../test/csim.cpp in debug mode
    Compiling ../../../../src/conv1.cpp in debug mode
+   Compiling ../../../../src/conv2.cpp in debug mode
+   Compiling ../../../../src/conv3.cpp in debug mode
    Compiling ../../../../src/srcnn.cpp in debug mode
    Compiling ../../../../src/util.cpp in debug mode
    Generating csim.exe
 ***** CONV1 Golden Reference *****
-  - Butterfly MSE: 0.00940139
+  - Butterfly MSE: 0.000344326
 
 ***** SRCNN Golden Reference *****
-  - Butterfly MSE: 0.27515
+  - Butterfly MSE: 0.0018445
 
 INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

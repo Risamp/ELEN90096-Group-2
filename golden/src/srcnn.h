@@ -43,8 +43,8 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 
 // implements last convolutional layer of SCRNN
 void conv3(ftmap_t input_ftmap[N2][H][W],
-           param_t conv1_weights[N3][N2][F3][F3],
-           param_t conv1_biases[N3],
+           param_t conv3_weights[N3][N2][F3][F3],
+           param_t conv3_biases[N3],
            ftmap_t output_ftmap[N3][H][W]);
 
 #endif /* _SRCNN_H_ */

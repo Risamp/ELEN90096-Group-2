@@ -26,6 +26,6 @@ double calculate_mse(ftmap_t *img1,
                      int      count);
 
 //clamp for extending edge values
-int clamp(int value, int min, int max)
+int clamp(int value, int min, int max);
 
 #endif

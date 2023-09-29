@@ -47,6 +47,16 @@
 			<location>C:/SPB_Data/ELEN90096-Group-2/golden/src/conv1.cpp</location>
 		</link>
 		<link>
+			<name>source/conv2.cpp</name>
+			<type>1</type>
+			<location>C:/SPB_Data/ELEN90096-Group-2/golden/src/conv2.cpp</location>
+		</link>
+		<link>
+			<name>source/conv3.cpp</name>
+			<type>1</type>
+			<location>C:/SPB_Data/ELEN90096-Group-2/golden/src/conv3.cpp</location>
+		</link>
+		<link>
 			<name>source/srcnn.cpp</name>
 			<type>1</type>
 			<location>C:/SPB_Data/ELEN90096-Group-2/golden/src/srcnn.cpp</location>

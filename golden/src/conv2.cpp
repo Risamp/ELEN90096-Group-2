@@ -1,11 +1,11 @@
 #include "srcnn.h"
 #include <cmath>
-#include "utils.h"
+#include "util.h"
 
 using namespace std;
 
 // implements conv2 layer of SRCNN
-void conv1(ftmap_t input_ftmap[N1][H][W],
+void conv2(ftmap_t input_ftmap[N1][H][W],
            param_t conv2_weights[N2][N1][F2][F2],
            param_t conv2_biases[N2],
            ftmap_t output_ftmap[N2][H][W])
@@ -45,11 +45,4 @@ void conv1(ftmap_t input_ftmap[N1][H][W],
 	        }
 	    }
 
-}
-
-
-int clamp(int value, int min, int max) {
-	if (value < min) return min;
-	if (value > max) return max;
-	return value;
 }

@@ -4,8 +4,6 @@
 
 using namespace std;
 
-int clamp(int value, int min, int max);
-
 // implements conv1 layer of SRCNN
 void conv1(ftmap_t input_ftmap[N0][H][W],
            param_t conv1_weights[N1][N0][F1][F1],

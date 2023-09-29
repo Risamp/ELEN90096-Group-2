@@ -6,10 +6,10 @@
     <originFiles name="srcnn.h" path="C:\SPB_Data\ELEN90096-Group-2\golden\src\srcnn.h"/>
     <originFiles name="util.cpp" path="C:\SPB_Data\ELEN90096-Group-2\golden\src\util.cpp"/>
     <originFiles name="util.h" path="C:\SPB_Data\ELEN90096-Group-2\golden\src\util.h"/>
+    <originFiles name="conv2.cpp" path="C:\SPB_Data\ELEN90096-Group-2\golden\src\conv2.cpp"/>
+    <originFiles name="conv3.cpp" path="C:\SPB_Data\ELEN90096-Group-2\golden\src\conv3.cpp"/>
   </source>
   <testbench>
-    <originFiles name="set5" path="C:\SPB_Data\ELEN90096-Group-2\golden\test\set5"/>
-    <originFiles name="weights" path="C:\SPB_Data\ELEN90096-Group-2\golden\src\weights"/>
     <originFiles name="tb_conv1.cpp" path="C:\SPB_Data\ELEN90096-Group-2\golden\test\tb_conv1.cpp"/>
     <originFiles name="tb_srcnn.cpp" path="C:\SPB_Data\ELEN90096-Group-2\golden\test\tb_srcnn.cpp"/>
     <originFiles name="csim.cpp" path="C:\SPB_Data\ELEN90096-Group-2\golden\test\csim.cpp"/>
