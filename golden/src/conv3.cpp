@@ -26,8 +26,8 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 	                    for (int f3w = 0; f3w < F3; f3w++) {
 
 							// check for overflow - if there is, clamp (i.e. extend edge values)
-							int yPixelClamped = clamp(h + f3h - padding, 0, H);
-							int xPixelClamped = clamp(w + f3w - padding, 0, W);
+							int yPixelClamped = clamp(h + f3h - padding, 0, H - 1);
+							int xPixelClamped = clamp(w + f3w - padding, 0, W - 1);
 							
 	                        // input has N2 features
 	                        for (int n2 = 0; n2 < N2; n2++) {

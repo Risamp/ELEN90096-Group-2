@@ -27,15 +27,8 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 	                    for (int f1w = 0; f1w < F1; f1w++) {
 
 							// check for overflow - if there is, clamp (i.e. extend edge values)
-							int yPixelClamped = clamp(h + f1h - padding, 0, H);
-							int xPixelClamped = clamp(w + f1w - padding, 0, W);
-							
-							// debug
-//							cout << "height: " << h << ", width: " << w << "\n";
-//							cout << "f1h: " << f1h << " f1w: " << f1w << "\n";
-//							cout << "overall height: " << h + f1h - padding << " overall width: " << w + f1w - padding << "\n";
-//							cout << "value: (" << yPixelClamped << ", " << xPixelClamped << ")" << "\n";
-//							cout << "--------------------------" << "\n";
+							int yPixelClamped = clamp(h + f1h - padding, 0, H - 1);
+							int xPixelClamped = clamp(w + f1w - padding, 0, W - 1);
 
 	                        // input has N0 features
 	                        for (int n0 = 0; n0 < N0; n0++) {

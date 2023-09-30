@@ -2,7 +2,7 @@ ECHO is off.
 ECHO is off.
 NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'rpais' on host '400p1t176rg0506' (Windows NT_amd64 version 6.2) on Sat Sep 30 15:10:51 +1000 2023
+INFO: [HLS 200-10] For user 'rpais' on host '400p1t176rg0506' (Windows NT_amd64 version 6.2) on Sat Sep 30 15:16:42 +1000 2023
 INFO: [HLS 200-10] In directory 'C:/SPB_Data/ELEN90096-Group-2/golden'
 Sourcing Tcl script 'C:/SPB_Data/ELEN90096-Group-2/golden/srcnn_hls/solution1/csim.tcl'
 INFO: [HLS 200-1510] Running: source C:/SPB_Data/ELEN90096-Group-2/golden/srcnn_hls/solution1/csim.tcl
@@ -62,5 +62,5 @@ INFO: [HLS 200-2036] Building debug C Simulation binaries
 
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 16.464 seconds; current allocated memory: 0.742 MB.
-INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 18.072 seconds; peak allocated memory: 90.785 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 16.21 seconds; current allocated memory: 0.727 MB.
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 17.761 seconds; peak allocated memory: 95.855 MB.
