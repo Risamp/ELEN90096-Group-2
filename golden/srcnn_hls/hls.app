@@ -11,6 +11,8 @@
         <file name="../../test/tb_srcnn.cpp" sc="0" tb="1" cflags="-I../../src -Wno-unknown-pragmas" csimflags="" blackbox="false"/>
         <file name="../../test/csim.cpp" sc="0" tb="1" cflags="-I../../src -Wno-unknown-pragmas" csimflags="" blackbox="false"/>
         <file name="src/conv1.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+        <file name="src/conv2.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+        <file name="src/conv3.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="src/srcnn.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="src/srcnn.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="src/util.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>

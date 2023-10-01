@@ -1,9 +1,9 @@
 #include "srcnn.h"
+#include <iostream>
+#include "util.h"
 #include <cmath>
 
 using namespace std;
-
-int clamp(int value, int min, int max);
 
 // implements conv1 layer of SRCNN
 void conv1(ftmap_t input_ftmap[N0][H][W],
@@ -27,9 +27,9 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 	                    for (int f1w = 0; f1w < F1; f1w++) {
 
 							// check for overflow - if there is, clamp (i.e. extend edge values)
-							int yPixelClamped = clamp(h + f1h - padding, 0, H);
-							int xPixelClamped = clamp(w + f1w - padding, 0, W);
-							
+							int yPixelClamped = clamp(h + f1h - padding, 0, H - 1);
+							int xPixelClamped = clamp(w + f1w - padding, 0, W - 1);
+
 	                        // input has N0 features
 	                        for (int n0 = 0; n0 < N0; n0++) {
 								output_ftmap[n1][h][w] += conv1_weights[n1][n0][f1h][f1w] * input_ftmap[n0][yPixelClamped][xPixelClamped];
@@ -46,11 +46,4 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 	        }
 	    }
 
-}
-
-
-int clamp(int value, int min, int max) {
-	if (value < min) return min;
-	if (value > max) return max;
-	return value;
 }

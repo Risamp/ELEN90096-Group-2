@@ -2,6 +2,8 @@
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
     <originFiles name="conv1.cpp" path="C:\SPB_Data\ELEN90096-Group-2\golden\src\conv1.cpp"/>
+    <originFiles name="conv2.cpp" path="C:\SPB_Data\ELEN90096-Group-2\golden\src\conv2.cpp"/>
+    <originFiles name="conv3.cpp" path="C:\SPB_Data\ELEN90096-Group-2\golden\src\conv3.cpp"/>
     <originFiles name="srcnn.cpp" path="C:\SPB_Data\ELEN90096-Group-2\golden\src\srcnn.cpp"/>
     <originFiles name="srcnn.h" path="C:\SPB_Data\ELEN90096-Group-2\golden\src\srcnn.h"/>
     <originFiles name="util.cpp" path="C:\SPB_Data\ELEN90096-Group-2\golden\src\util.cpp"/>

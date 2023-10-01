@@ -2,7 +2,7 @@ ECHO is off.
 ECHO is off.
 NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'rpais' on host '400p1t176rg0518' (Windows NT_amd64 version 6.2) on Tue Sep 26 00:48:31 +1000 2023
+INFO: [HLS 200-10] For user 'rpais' on host '400p1t176rg0506' (Windows NT_amd64 version 6.2) on Sat Sep 30 15:16:42 +1000 2023
 INFO: [HLS 200-10] In directory 'C:/SPB_Data/ELEN90096-Group-2/golden'
 Sourcing Tcl script 'C:/SPB_Data/ELEN90096-Group-2/golden/srcnn_hls/solution1/csim.tcl'
 INFO: [HLS 200-1510] Running: source C:/SPB_Data/ELEN90096-Group-2/golden/srcnn_hls/solution1/csim.tcl
@@ -11,6 +11,10 @@ INFO: [HLS 200-10] Opening project 'C:/SPB_Data/ELEN90096-Group-2/golden/srcnn_h
 INFO: [HLS 200-1510] Running: set_top srcnn 
 INFO: [HLS 200-1510] Running: add_files src/conv1.cpp 
 INFO: [HLS 200-10] Adding design file 'src/conv1.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/conv2.cpp 
+INFO: [HLS 200-10] Adding design file 'src/conv2.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/conv3.cpp 
+INFO: [HLS 200-10] Adding design file 'src/conv3.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files src/srcnn.cpp 
 INFO: [HLS 200-10] Adding design file 'src/srcnn.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files src/srcnn.h 
@@ -45,16 +49,18 @@ INFO: [HLS 200-2036] Building debug C Simulation binaries
    Compiling ../../../../test/tb_srcnn.cpp in debug mode
    Compiling ../../../../test/csim.cpp in debug mode
    Compiling ../../../../src/conv1.cpp in debug mode
+   Compiling ../../../../src/conv2.cpp in debug mode
+   Compiling ../../../../src/conv3.cpp in debug mode
    Compiling ../../../../src/srcnn.cpp in debug mode
    Compiling ../../../../src/util.cpp in debug mode
    Generating csim.exe
 ***** CONV1 Golden Reference *****
-  - Butterfly MSE: 0.00940139
+  - Butterfly MSE: 3.40524e-015
 
 ***** SRCNN Golden Reference *****
-  - Butterfly MSE: 0.27515
+  - Butterfly MSE: 2.17875e-013
 
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.146 seconds; current allocated memory: 0.820 MB.
-INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 11.749 seconds; peak allocated memory: 91.355 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 16.21 seconds; current allocated memory: 0.727 MB.
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 17.761 seconds; peak allocated memory: 95.855 MB.
