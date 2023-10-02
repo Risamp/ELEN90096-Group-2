@@ -1,0 +1,46 @@
+{
+    "0": {
+        "name": "srcnn",
+        "file": "",
+        "fileloc": "0",
+        "instructions": "226",
+        "total_instructions": "1280",
+        "calls": "1",
+        "basicblocks": "28",
+        "loads": {
+            "G": "3",
+            "L": "2",
+            "T": "4"
+        },
+        "stores": {
+            "G": "1",
+            "L": "4",
+            "T": "1"
+        },
+        "loops": {
+            "L": "2",
+            "N": "7"
+        }
+    },
+    "1": {
+        "name": "conv1",
+        "file": "",
+        "fileloc": "0",
+        "instructions": "1054",
+        "total_instructions": "1054",
+        "calls": "",
+        "basicblocks": "136",
+        "loads": {
+            "G": "9",
+            "L": "36"
+        },
+        "stores": {
+            "G": "9",
+            "L": "18"
+        },
+        "loops": {
+            "L": "9",
+            "N": "36"
+        }
+    }
+}

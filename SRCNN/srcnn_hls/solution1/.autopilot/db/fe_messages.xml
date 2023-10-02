@@ -1,0 +1,42 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=3" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:24:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=3" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="H:/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl:25:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="srcnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=srcnn" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/srcnn.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="srcnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-359" msg_severity="INFO" msg_loc="src/conv1.cpp:13:0" msg_body="Unrolling loop 'VITIS_LOOP_21_2' (src/conv1.cpp:21:21) in function 'conv1': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).">
+        <args Factor="3" LoopLoc="src/conv1.cpp:21:21" LoopName="VITIS_LOOP_21_2" TripCount="3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv1.cpp:13:0" msg_body="Unrolling loop 'VITIS_LOOP_21_2' (src/conv1.cpp:21:21) in function 'conv1' completely with a factor of 3">
+        <args Factor="3" LoopLoc="src/conv1.cpp:21:21" LoopName="VITIS_LOOP_21_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-359" msg_severity="INFO" msg_loc="src/conv1.cpp:13:0" msg_body="Unrolling loop 'VITIS_LOOP_23_3' (src/conv1.cpp:23:19) in function 'conv1': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).">
+        <args Factor="3" LoopLoc="src/conv1.cpp:23:19" LoopName="VITIS_LOOP_23_3" TripCount="3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv1.cpp:13:0" msg_body="Unrolling loop 'VITIS_LOOP_23_3' (src/conv1.cpp:23:19) in function 'conv1' completely with a factor of 3">
+        <args Factor="3" LoopLoc="src/conv1.cpp:23:19" LoopName="VITIS_LOOP_23_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv1.cpp:13:0" msg_body="Inlining function 'clamp(int, int, int)' into 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'">
+        <args Callee="clamp(int, int, int)" Callee-DebugLoc="File src/util.cpp Line 82 Column 0" Caller="conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])" Caller-DebugLoc="File src/conv1.cpp Line 13 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv2.cpp:12:0" msg_body="Inlining function 'clamp(int, int, int)' into 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'">
+        <args Callee="clamp(int, int, int)" Callee-DebugLoc="File src/util.cpp Line 82 Column 0" Caller="conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])" Caller-DebugLoc="File src/conv2.cpp Line 12 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv3.cpp:12:0" msg_body="Inlining function 'clamp(int, int, int)' into 'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'">
+        <args Callee="clamp(int, int, int)" Callee-DebugLoc="File src/util.cpp Line 82 Column 0" Caller="conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])" Caller-DebugLoc="File src/conv3.cpp Line 12 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/srcnn.cpp:12:0" msg_body="Inlining function 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])' into 'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255])'">
+        <args Callee="conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])" Callee-DebugLoc="File src/conv2.cpp Line 12 Column 0" Caller="srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255])" Caller-DebugLoc="File src/srcnn.cpp Line 12 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/srcnn.cpp:12:0" msg_body="Inlining function 'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])' into 'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255])'">
+        <args Callee="conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])" Callee-DebugLoc="File src/conv3.cpp Line 12 Column 0" Caller="srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255])" Caller-DebugLoc="File src/srcnn.cpp Line 12 Column 0"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+
