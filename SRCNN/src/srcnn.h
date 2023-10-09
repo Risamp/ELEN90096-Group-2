@@ -47,7 +47,7 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 
 // loads input feature map to buffer for first convolutional layer
 void load_conv1_input_tile_from_DRAM(
-	ftmap_t input_fm_buffer[C1ITN][C1ITH][C1ITW],
+	ftmap_t input_fm_buffer[C1TC][C1TH+2*P1][C1TW+2*P1],
 	ftmap_t input_fm[N0][H][W],
 	int th,
 	int tw
