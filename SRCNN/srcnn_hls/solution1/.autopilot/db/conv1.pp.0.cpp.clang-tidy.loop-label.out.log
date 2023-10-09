@@ -1,40 +1,40 @@
-H:\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27783:3: warning: Added loop label VITIS_LOOP_17_1:   [xilinx-label-all-loops]
+C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27784:3: warning: Added loop label VITIS_LOOP_18_1:   [xilinx-label-all-loops]
   for (int n0 = 0; n0 < 1; n0++) {
   ^~~
-  VITIS_LOOP_17_1: 
-H:\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27783:3: note: FIX-IT applied suggested code changes
-H:\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27787:4: warning: Added loop label VITIS_LOOP_21_2:   [xilinx-label-all-loops]
+  VITIS_LOOP_18_1: 
+C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27784:3: note: FIX-IT applied suggested code changes
+C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27788:4: warning: Added loop label VITIS_LOOP_22_2:   [xilinx-label-all-loops]
    for (int h = 0; h < 255; h += 255 / 3) {
    ^~~
-   VITIS_LOOP_21_2: 
-H:\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27787:4: note: FIX-IT applied suggested code changes
-H:\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27789:2: warning: Added loop label VITIS_LOOP_23_3:   [xilinx-label-all-loops]
- for (int w = 0; w < 255; w += 255 / 3) {
+   VITIS_LOOP_22_2: 
+C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27788:4: note: FIX-IT applied suggested code changes
+C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27790:5: warning: Added loop label VITIS_LOOP_24_3:   [xilinx-label-all-loops]
+    for (int w = 0; w < 255; w += 255 / 3) {
+    ^~~
+    VITIS_LOOP_24_3: 
+C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27790:5: note: FIX-IT applied suggested code changes
+C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27794:6: warning: Added loop label VITIS_LOOP_28_4:   [xilinx-label-all-loops]
+     for (int n1 = 0; n1 < 64; n1++) {
+     ^~~
+     VITIS_LOOP_28_4: 
+C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27794:6: note: FIX-IT applied suggested code changes
+C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27797:2: warning: Added loop label VITIS_LOOP_31_5:   [xilinx-label-all-loops]
+ for (int th = 0; th < 255 / 3; th++) {
  ^~~
- VITIS_LOOP_23_3: 
-H:\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27789:2: note: FIX-IT applied suggested code changes
-H:\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27793:2: warning: Added loop label VITIS_LOOP_27_4:   [xilinx-label-all-loops]
- for (int n1 = 0; n1 < 64; n1++) {
- ^~~
- VITIS_LOOP_27_4: 
-H:\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27793:2: note: FIX-IT applied suggested code changes
-H:\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27796:7: warning: Added loop label VITIS_LOOP_30_5:   [xilinx-label-all-loops]
-      for (int th = 0; th < 255 / 3; th++) {
-      ^~~
-      VITIS_LOOP_30_5: 
-H:\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27796:7: note: FIX-IT applied suggested code changes
-H:\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27797:8: warning: Added loop label VITIS_LOOP_31_6:   [xilinx-label-all-loops]
+ VITIS_LOOP_31_5: 
+C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27797:2: note: FIX-IT applied suggested code changes
+C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27798:8: warning: Added loop label VITIS_LOOP_32_6:   [xilinx-label-all-loops]
        for (int tw = 0; tw < 255 / 3; tw++) {
        ^~~
-       VITIS_LOOP_31_6: 
-H:\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27797:8: note: FIX-IT applied suggested code changes
-H:\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27799:9: warning: Added loop label VITIS_LOOP_33_7:   [xilinx-label-all-loops]
+       VITIS_LOOP_32_6: 
+C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27798:8: note: FIX-IT applied suggested code changes
+C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27800:9: warning: Added loop label VITIS_LOOP_34_7:   [xilinx-label-all-loops]
         for (int f1h = 0; f1h < 9; f1h++) {
         ^~~
-        VITIS_LOOP_33_7: 
-H:\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27799:9: note: FIX-IT applied suggested code changes
-H:\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27800:10: warning: Added loop label VITIS_LOOP_34_8:   [xilinx-label-all-loops]
+        VITIS_LOOP_34_7: 
+C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27800:9: note: FIX-IT applied suggested code changes
+C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27801:10: warning: Added loop label VITIS_LOOP_35_8:   [xilinx-label-all-loops]
          for (int f1w = 0; f1w < 9; f1w++) {
          ^~~
-         VITIS_LOOP_34_8: 
-H:\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27800:10: note: FIX-IT applied suggested code changes
+         VITIS_LOOP_35_8: 
+C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:27801:10: note: FIX-IT applied suggested code changes

@@ -1,0 +1,19 @@
+{
+  "0": {
+    "basicblocks": 33,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 4,
+    "instructions": 153,
+    "loads": {
+      "G": 4,
+      "T": 8
+    },
+    "name": "srcnn",
+    "stores": {
+      "G": 4,
+      "T": 1
+    },
+    "total_instructions": 153
+  }
+}

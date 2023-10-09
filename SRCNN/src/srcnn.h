@@ -15,9 +15,15 @@
 #define N3 1            // conv3 output features
 #define F3 5            // conv3 kernel size
 #define T 3				// number of tiles in each dimension
-#define TH H / T		// pixels per tile (height)
-#define TW W / T		// pixels per tile (width)
-#define TT T * T 		// tiles per feature
+#define C1TC N0 		// input tile depth
+#define C1TH H / T		// input tile height
+#define C1TW W / T		// input tile depth
+#define C1TN N1			// output tile depth
+#define C1TT T * T 		// tiles per feature
+
+
+//Padding values
+#define P1 (F1 - 1) / 2	// padding conv1
 
 // data types
 typedef float ftmap_t;  // feature map
@@ -38,6 +44,14 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
            param_t conv1_weights[N1][N0][F1][F1],
            param_t conv1_biases[N1],
            ftmap_t output_ftmap[N1][H][W]);
+
+// loads input feature map to buffer for first convolutional layer
+void load_conv1_input_tile_from_DRAM(
+	ftmap_t input_fm_buffer[C1ITN][C1ITH][C1ITW],
+	ftmap_t input_fm[N0][H][W],
+	int th,
+	int tw
+);
 
 // implements second convolutional layer of SCRNN
 void conv2(ftmap_t input_ftmap[N1][H][W],

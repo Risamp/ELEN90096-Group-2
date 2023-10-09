@@ -1,5 +1,4 @@
 <pragmas>
-<pragma file="src/conv1.cpp" line="22" pragmaType="unroll" parentfunction="conv1" factor="3" skip_exit_check="0"/>
-<pragma file="src/conv1.cpp" line="24" pragmaType="unroll" parentfunction="conv1" factor="3" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="15" pragmaType="pipeline" parentfunction="srcnn" off="1" ii="0" style=""/>
+<pragma file="src/srcnn.cpp" line="21" pragmaType="pipeline" parentfunction="srcnn" off="1" ii="0" style=""/>
+<pragma file="src/conv1.cpp" line="29" pragmaType="unroll" parentfunction="conv1" factor="3" skip_exit_check="0"/>
 </pragmas>

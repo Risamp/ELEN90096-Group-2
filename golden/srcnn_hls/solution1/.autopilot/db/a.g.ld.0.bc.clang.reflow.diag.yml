@@ -1,0 +1,84 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'clamp(int, int, int)'
+    DebugLoc:        { File: src/util.cpp, Line: 82, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/conv2.cpp, Line: 12, Column: 0 }
+Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'clamp(int, int, int)'
+    DebugLoc:        { File: src/util.cpp, Line: 82, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/conv2.cpp, Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/conv3.cpp, Line: 12, Column: 0 }
+Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'clamp(int, int, int)'
+    DebugLoc:        { File: src/util.cpp, Line: 82, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/conv3.cpp, Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/srcnn.cpp, Line: 12, Column: 0 }
+Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/srcnn.cpp, Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/srcnn.cpp, Line: 12, Column: 0 }
+Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/conv2.cpp, Line: 12, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/srcnn.cpp, Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/srcnn.cpp, Line: 12, Column: 0 }
+Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/conv3.cpp, Line: 12, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/srcnn.cpp, Line: 12, Column: 0 }
+  - String:          ''''
+...

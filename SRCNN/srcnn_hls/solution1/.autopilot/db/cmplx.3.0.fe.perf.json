@@ -14,22 +14,22 @@
       "G": 2,
       "T": 1
     },
-    "total_instructions": 579
+    "total_instructions": 283
   },
   "1": {
-    "basicblocks": 109,
+    "basicblocks": 38,
     "calls": "",
     "file": "conv1.cpp",
     "fileloc": 9,
-    "instructions": 484,
+    "instructions": 188,
     "loads": {
-      "G": 9,
-      "L": 27
+      "G": 3,
+      "L": 9
     },
     "name": "conv1",
     "stores": {
-      "G": 18
+      "G": 6
     },
-    "total_instructions": 484
+    "total_instructions": 188
   }
 }

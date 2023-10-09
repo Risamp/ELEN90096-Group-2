@@ -13,8 +13,8 @@ void load_image(std::string  fname,
     float   p_flp;
 
     std::ifstream ifs(fname, std::ios::in | std::ios::binary);
-    if (!ifs)
-        throw std::runtime_error("File not found");
+//    if (!ifs)
+//        throw std::runtime_error("File not found");
 
     for (int i = 0; i < count; i++) {
         ifs.read((char *) &p, sizeof(uint8_t));
@@ -33,8 +33,8 @@ void load_ftmap(std::string  fname,
     float f;
 
     std::ifstream ifs(fname, std::ios::in | std::ios::binary);
-    if (!ifs)
-        throw std::runtime_error("File not found");
+//    if (!ifs)
+//        throw std::runtime_error("File not found");
 
     for (int i = 0; i < count; i++) {
         ifs.read((char *) &f, sizeof(float));
@@ -52,8 +52,8 @@ void load_param(std::string  fname,
     float p;
 
     std::ifstream ifs(fname, std::ios::in | std::ios::binary);
-    if (!ifs)
-        throw std::runtime_error("File not found");
+//    if (!ifs)
+//        throw std::runtime_error("File not found");
 
     for (int i = 0; i < count; i++) {
         ifs.read((char *) &p, sizeof(float));

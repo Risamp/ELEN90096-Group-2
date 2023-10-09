@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1'" level="0">
-<item name = "Date">Mon Oct  2 16:34:12 2023
+<item name = "Date">Mon Oct  9 15:13:27 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">3142107657, 3142107657, 31.421 sec, 31.421 sec, 3142107657, 3142107657, no</column>
+<column name="">3240298141, 3240298168, 32.403 sec, 32.403 sec, 3240298141, 3240298168, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,51 +35,21 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_27_4">349123072, 349123072, 5455048, -, -, 64, no</column>
-<column name=" + VITIS_LOOP_30_5">5455045, 5455045, 64177, -, -, 85, no</column>
-<column name="  ++ VITIS_LOOP_31_6">64175, 64175, 755, -, -, 85, no</column>
-<column name="   +++ VITIS_LOOP_33_7">747, 747, 83, -, -, 9, no</column>
-<column name="    ++++ VITIS_LOOP_34_8">81, 81, 9, -, -, 9, no</column>
-<column name="- VITIS_LOOP_27_4">349123072, 349123072, 5455048, -, -, 64, no</column>
-<column name=" + VITIS_LOOP_30_5">5455045, 5455045, 64177, -, -, 85, no</column>
-<column name="  ++ VITIS_LOOP_31_6">64175, 64175, 755, -, -, 85, no</column>
-<column name="   +++ VITIS_LOOP_33_7">747, 747, 83, -, -, 9, no</column>
-<column name="    ++++ VITIS_LOOP_34_8">81, 81, 9, -, -, 9, no</column>
-<column name="- VITIS_LOOP_27_4">349123072, 349123072, 5455048, -, -, 64, no</column>
-<column name=" + VITIS_LOOP_30_5">5455045, 5455045, 64177, -, -, 85, no</column>
-<column name="  ++ VITIS_LOOP_31_6">64175, 64175, 755, -, -, 85, no</column>
-<column name="   +++ VITIS_LOOP_33_7">747, 747, 83, -, -, 9, no</column>
-<column name="    ++++ VITIS_LOOP_34_8">81, 81, 9, -, -, 9, no</column>
-<column name="- VITIS_LOOP_27_4">349123072, 349123072, 5455048, -, -, 64, no</column>
-<column name=" + VITIS_LOOP_30_5">5455045, 5455045, 64177, -, -, 85, no</column>
-<column name="  ++ VITIS_LOOP_31_6">64175, 64175, 755, -, -, 85, no</column>
-<column name="   +++ VITIS_LOOP_33_7">747, 747, 83, -, -, 9, no</column>
-<column name="    ++++ VITIS_LOOP_34_8">81, 81, 9, -, -, 9, no</column>
-<column name="- VITIS_LOOP_27_4">349123072, 349123072, 5455048, -, -, 64, no</column>
-<column name=" + VITIS_LOOP_30_5">5455045, 5455045, 64177, -, -, 85, no</column>
-<column name="  ++ VITIS_LOOP_31_6">64175, 64175, 755, -, -, 85, no</column>
-<column name="   +++ VITIS_LOOP_33_7">747, 747, 83, -, -, 9, no</column>
-<column name="    ++++ VITIS_LOOP_34_8">81, 81, 9, -, -, 9, no</column>
-<column name="- VITIS_LOOP_27_4">349123072, 349123072, 5455048, -, -, 64, no</column>
-<column name=" + VITIS_LOOP_30_5">5455045, 5455045, 64177, -, -, 85, no</column>
-<column name="  ++ VITIS_LOOP_31_6">64175, 64175, 755, -, -, 85, no</column>
-<column name="   +++ VITIS_LOOP_33_7">747, 747, 83, -, -, 9, no</column>
-<column name="    ++++ VITIS_LOOP_34_8">81, 81, 9, -, -, 9, no</column>
-<column name="- VITIS_LOOP_27_4">349123072, 349123072, 5455048, -, -, 64, no</column>
-<column name=" + VITIS_LOOP_30_5">5455045, 5455045, 64177, -, -, 85, no</column>
-<column name="  ++ VITIS_LOOP_31_6">64175, 64175, 755, -, -, 85, no</column>
-<column name="   +++ VITIS_LOOP_33_7">747, 747, 83, -, -, 9, no</column>
-<column name="    ++++ VITIS_LOOP_34_8">81, 81, 9, -, -, 9, no</column>
-<column name="- VITIS_LOOP_27_4">349123072, 349123072, 5455048, -, -, 64, no</column>
-<column name=" + VITIS_LOOP_30_5">5455045, 5455045, 64177, -, -, 85, no</column>
-<column name="  ++ VITIS_LOOP_31_6">64175, 64175, 755, -, -, 85, no</column>
-<column name="   +++ VITIS_LOOP_33_7">747, 747, 83, -, -, 9, no</column>
-<column name="    ++++ VITIS_LOOP_34_8">81, 81, 9, -, -, 9, no</column>
-<column name="- VITIS_LOOP_27_4">349123072, 349123072, 5455048, -, -, 64, no</column>
-<column name=" + VITIS_LOOP_30_5">5455045, 5455045, 64177, -, -, 85, no</column>
-<column name="  ++ VITIS_LOOP_31_6">64175, 64175, 755, -, -, 85, no</column>
-<column name="   +++ VITIS_LOOP_33_7">747, 747, 83, -, -, 9, no</column>
-<column name="    ++++ VITIS_LOOP_34_8">81, 81, 9, -, -, 9, no</column>
+<column name="- VITIS_LOOP_22_2">3240298140, 3240298167, 1080099380 ~ 1080099389, -, -, 3, no</column>
+<column name=" + VITIS_LOOP_24_3">1080099378, 1080099387, 360033126 ~ 360033129, -, -, 3, no</column>
+<column name="  ++ VITIS_LOOP_28_4">360033124, 360033126, 16365142, -, -, 22, no</column>
+<column name="   +++ VITIS_LOOP_31_5">5455045, 5455045, 64177, -, -, 85, no</column>
+<column name="    ++++ VITIS_LOOP_32_6">64175, 64175, 755, -, -, 85, no</column>
+<column name="     +++++ VITIS_LOOP_34_7">747, 747, 83, -, -, 9, no</column>
+<column name="      ++++++ VITIS_LOOP_35_8">81, 81, 9, -, -, 9, no</column>
+<column name="   +++ VITIS_LOOP_31_5">5455045, 5455045, 64177, -, -, 85, no</column>
+<column name="    ++++ VITIS_LOOP_32_6">64175, 64175, 755, -, -, 85, no</column>
+<column name="     +++++ VITIS_LOOP_34_7">747, 747, 83, -, -, 9, no</column>
+<column name="      ++++++ VITIS_LOOP_35_8">81, 81, 9, -, -, 9, no</column>
+<column name="   +++ VITIS_LOOP_31_5">5455045, 5455045, 64177, -, -, 85, no</column>
+<column name="    ++++ VITIS_LOOP_32_6">64175, 64175, 755, -, -, 85, no</column>
+<column name="     +++++ VITIS_LOOP_34_7">747, 747, 83, -, -, 9, no</column>
+<column name="      ++++++ VITIS_LOOP_35_8">81, 81, 9, -, -, 9, no</column>
 </table>
 </item>
 </section>

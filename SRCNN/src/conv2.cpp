@@ -10,7 +10,7 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
            param_t conv2_biases[N2],
            ftmap_t output_ftmap[N2][H][W])
 {
-	// implement conv2 layer of SRCNN here
+		// implement conv2 layer of SRCNN here
 		int padding = (F2 - 1) / 2;
 
 	    // apply N2 convolutions
@@ -28,7 +28,7 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 							// check for overflow - if there is, clamp (i.e. extend edge values)
 							int yPixelClamped = clamp(h + f2h - padding, 0, H - 1);
 							int xPixelClamped = clamp(w + f2w - padding, 0, W - 1);
-							
+
 	                        // input has N1 features
 	                        for (int n1 = 0; n1 < N1; n1++) {
 								output_ftmap[n2][h][w] += conv2_weights[n2][n1][f2h][f2w] * input_ftmap[n1][yPixelClamped][xPixelClamped];

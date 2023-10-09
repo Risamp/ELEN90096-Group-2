@@ -17239,20 +17239,25 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][2
            param_t conv3_biases[1],
            ftmap_t output_ftmap[1][255][255])
 {
-#line 25 "H:/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl"
+#line 25 "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl"
+#pragma HLSDIRECTIVE TOP name=srcnn
+# 12 "src/srcnn.cpp"
+
+#line 7 "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
 # 12 "src/srcnn.cpp"
 
 
 
-#pragma HLS PIPELINE off
 
 
- static ftmap_t conv1_output_ftmap[64][255][255];
+
+    static ftmap_t conv1_output_ftmap[64][255][255];
     conv1(input_ftmap, conv1_weights, conv1_biases, conv1_output_ftmap);
 
+#pragma HLS PIPELINE off
 
-    static ftmap_t conv2_output_ftmap[32][255][255];
+ static ftmap_t conv2_output_ftmap[32][255][255];
     conv2(conv1_output_ftmap, conv2_weights, conv2_biases, conv2_output_ftmap);
 
 

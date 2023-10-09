@@ -1,141 +1,19 @@
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
-Name:            PragmaPartially2FullyUnroll
+Name:            PragmaPartiallyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
 Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_21_2
+  - LoopName:        VITIS_LOOP_28_4
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:21:21'
+  - LoopLoc:         'src/conv1.cpp:28:23'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
-  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
-  - Factor:          '3'
-  - String:          ') is no less than the loop trip count (='
-  - TripCount:       '3'
-  - String:          ').'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_21_2
-  - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:21:21'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          conv1
-  - String:          ''' completely with a factor of '
-  - Factor:          '3'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaPartially2FullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_23_3
-  - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:23:19'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          conv1
-  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
-  - Factor:          '3'
-  - String:          ') is no less than the loop trip count (='
-  - TripCount:       '3'
-  - String:          ').'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_23_3
-  - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:23:19'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          conv1
-  - String:          ''' completely with a factor of '
-  - Factor:          '3'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaPartially2FullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_23_3
-  - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:23:19'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          conv1
-  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
-  - Factor:          '3'
-  - String:          ') is no less than the loop trip count (='
-  - TripCount:       '3'
-  - String:          ').'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_23_3
-  - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:23:19'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          conv1
-  - String:          ''' completely with a factor of '
-  - Factor:          '3'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaPartially2FullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_23_3
-  - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:23:19'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          conv1
-  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
-  - Factor:          '3'
-  - String:          ') is no less than the loop trip count (='
-  - TripCount:       '3'
-  - String:          ').'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_23_3
-  - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:23:19'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          conv1
-  - String:          ''' completely with a factor of '
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
   - Factor:          '3'
 ...
 --- !Passed
@@ -207,4 +85,20 @@ Args:
   - Caller:          'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255])'
     DebugLoc:        { File: src/srcnn.cpp, Line: 12, Column: 0 }
   - String:          ''''
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: src/conv1.cpp, Line: 28, Column: 23 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_28_4
+  - String:          ' '
+  - LoopLoc:         'src/conv1.cpp:28:23'
+  - String:          ' '
+  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+  - String:          ' '
 ...

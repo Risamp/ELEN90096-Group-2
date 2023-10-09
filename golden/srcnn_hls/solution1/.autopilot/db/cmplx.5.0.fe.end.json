@@ -1,0 +1,25 @@
+{
+    "0": {
+        "name": "srcnn",
+        "file": "",
+        "fileloc": "0",
+        "instructions": "349",
+        "total_instructions": "349",
+        "calls": "",
+        "basicblocks": "43",
+        "loads": {
+            "G": "4",
+            "L": "3",
+            "T": "7"
+        },
+        "stores": {
+            "G": "2",
+            "L": "6",
+            "T": "1"
+        },
+        "loops": {
+            "L": "3",
+            "N": "11"
+        }
+    }
+}

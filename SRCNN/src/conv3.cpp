@@ -10,7 +10,7 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
            param_t conv3_biases[N3],
            ftmap_t output_ftmap[N3][H][W])
 {
-	// implement conv3 layer of SRCNN here
+		// implement conv3 layer of SRCNN here
 		int padding = (F3 - 1) / 2;
 
 	    // apply N3 convolutions

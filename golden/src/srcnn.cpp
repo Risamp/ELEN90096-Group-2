@@ -12,6 +12,7 @@ void srcnn(ftmap_t input_ftmap[N0][H][W],
 {
     // Implement end-to-end SRCNN here
     // Assuming image pre-processing is already completed
+	#pragma HLS PIPELINE OFF
 
     // apply convolutional layer 1
     static ftmap_t conv1_output_ftmap[N1][H][W];
