@@ -32,8 +32,6 @@ function out = diff(a, b, size)
     a_data = fread(aID,size,"uint8");
     b_data = fread(bID,size,"uint8");
 
-    out = imfuse(a_data,b_data,'falsecolor','Scaling','joint','ColorChannels',[2 1 1]);
-    out = pagetranspose(out);
-
-    fclose('all');
+    out = imfuse(a_data,b_data,'falsecolor','Scaling','joint','ColorChannels',[1 2 0]);
+    out = ind2rgb(out, [[1, 0, 0], [0, 0, 1]]);
 end

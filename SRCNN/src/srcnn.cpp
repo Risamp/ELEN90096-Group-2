@@ -1,5 +1,6 @@
 #include "srcnn.h"
 #include "util.h"
+#include <cstring>
 
 void srcnn(ftmap_t input_ftmap[N0][H][W],
            param_t conv1_weights[N1][N0][F1][F1],
@@ -12,15 +13,19 @@ void srcnn(ftmap_t input_ftmap[N0][H][W],
 {
     // Implement end-to-end SRCNN here
     // Assuming image pre-processing is already completed
-	//#pragma HLS PIPELINE off
+	#pragma HLS PIPELINE off
+
+	static ftmap_t conv1_output_ftmap[N1][H][W] = {0};
+	static ftmap_t conv2_output_ftmap[N2][H][W] = {0};
+
+	memset(conv1_output_ftmap, 0, N1 * H * W * sizeof(ftmap_t));
+	memset(conv2_output_ftmap, 0, N2 * H * W * sizeof(ftmap_t));
+	memset(output_ftmap, 0, N3 * H * W * sizeof(ftmap_t));
 
     // apply convolutional layer 1
-    static ftmap_t conv1_output_ftmap[N1][H][W] = {0};
     conv1(input_ftmap, conv1_weights, conv1_biases, conv1_output_ftmap);
 
-	#pragma HLS PIPELINE off
     // apply non-linear mapping layer
-    static ftmap_t conv2_output_ftmap[N2][H][W] = {0};
     conv2(conv1_output_ftmap, conv2_weights, conv2_biases, conv2_output_ftmap);
 
     // reconstruction layer

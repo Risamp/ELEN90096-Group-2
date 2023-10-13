@@ -2,7 +2,7 @@ ECHO is off.
 ECHO is off.
 NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'bcevans' on host '400p1l1760g0519' (Windows NT_amd64 version 6.2) on Fri Oct 13 23:06:32 +1100 2023
+INFO: [HLS 200-10] For user 'bcevans' on host '400p1l1760g0519' (Windows NT_amd64 version 6.2) on Sat Oct 14 01:31:39 +1100 2023
 INFO: [HLS 200-10] In directory 'C:/SPB_Data/ELEN90096-Group-2/SRCNN'
 Sourcing Tcl script 'C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim.tcl'
 INFO: [HLS 200-1510] Running: source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim.tcl
@@ -64,27 +64,27 @@ INFO: [HLS 200-2036] Building debug C Simulation binaries
    Compiling ../../../../src/util.cpp in debug mode
    Generating csim.exe
 ***** CONV1 Golden Reference *****
-  - Butterfly MSE: 3.40524e-015
+  - Butterfly MSE: 0.0173809
 
 ***** SRCNN Golden Reference *****
-  - Butterfly MSE: 2.17875e-013
+  - Butterfly MSE: 0.0967919
 
 ***** SRCNN - Set14 Test *****
 Image Name     PSNR GT vs HR (dB)  PSNR GT vs HR MATLAB (dB)  PSNR GT vs LR (dB)  MSE GT vs HR   MSE GT vs HR MATLAB        
-baboon         8.05697             24.9898                    27.3618             1.02436        0.00161402                 
-barbara        9.7729              26.2451                    24.8997             14.9732        0.00316839                 
-bridge         8.25005             26.8397                    25.2317             75.2713        0.00237435                 
-coastguard     9.3657              33.4187                    26.3                248.238        0.00206895                 
-face           7.85471             27.3319                    32.6794             655.734        0.000454177                
-flowers        8.30609             35.727                     25.6995             1460.01        0.00184746                 
-foreman        8.57683             30.8413                    33.2014             2945.02        0.000266235                
-lenna          9.31497             27.1209                    29.1689             5585.98        0.000822304                
-man            8.59232             27.9822                    26.0613             9922.53        0.00193996                 
-monarch        8.89875             33.4745                    24.5799             16705          0.00159023                 
-pepper         9.79139             29.4367                    32.0454             27018          0.000447919                
-ppt3           7.78797             27.6649                    26.6842             42221          0.0011378                  
-zebra          8.3287              0                          24.7423             64283.7        0.00171134                 
+baboon         15.5561             24.9898                    27.3618             0.0499429      0.00161402                 
+barbara        14.986              26.2451                    24.8997             0.0585248      0.00316839                 
+bridge         12.261              26.8397                    25.2317             0.0726693      0.00237435                 
+coastguard     15.9172             33.4187                    26.3                0.0411671      0.00206895                 
+face           14.5337             27.3319                    32.6794             0.028527       0.000454177                
+flowers        12.1127             35.727                     25.6995             0.0774504      0.00184746                 
+foreman        14.6347             30.8413                    33.2014             0.0714745      0.000266235                
+lenna          13.6816             27.1209                    29.1689             0.0657572      0.000822304                
+man            13.2712             27.9822                    26.0613             0.0524959      0.00193996                 
+monarch        11.5636             33.4745                    24.5799             0.0926292      0.00159023                 
+pepper         15.066              29.4367                    32.0454             0.0571418      0.000447919                
+ppt3           11.7709             27.6649                    26.6842             0.119339       0.0011378                  
+zebra          10.526              0                          24.7423             0.110664       0.00171134                 
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 94.465 seconds; current allocated memory: 0.699 MB.
-INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 2 seconds. Total elapsed time: 96.912 seconds; peak allocated memory: 91.973 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 72.063 seconds; current allocated memory: 0.711 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 2 seconds. Total elapsed time: 74.404 seconds; peak allocated memory: 91.883 MB.
