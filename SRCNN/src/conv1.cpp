@@ -20,7 +20,7 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 			(ti, tj): current tile index
 			(tx0, ty0): image space coordinates of tile origin
 			(tx, ty): current tile space coordinates
-			(kx, ky): current kernel space coordinates [-P1, P1]
+			(kx, ky): current kernel space coordinates
 			(bx, by): current buffer space coordinates
 
 		*/

@@ -21,6 +21,8 @@
 
 //Padding values
 #define P1 (F1 - 1) / 2	// padding conv1
+#define P2 (F2 - 1) / 2	// padding conv2
+#define P3 (F3 - 1) / 2	// padding conv3
 
 // data types
 typedef float ftmap_t;  // feature map
@@ -42,17 +44,6 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
            param_t conv1_biases[N1],
            ftmap_t output_ftmap[N1][H][W]);
 
-// loads a buffer tile (i.e. tile + padding) into a given buffer for layer 1.
-void load_buffer_tile_c1(ftmap_t input_fm_buffer[N0][TH + (2 * P1)][TW + (2 * P1)],
-                         ftmap_t input_fm[N0][H][W],
-                         int tx0,
-                         int ty0);
-
-void export_buffer_tile_c1(ftmap_t output_fm_buffer[N1][TH][TW],
-                           ftmap_t output_ftmap[N1][H][W],
-                           int tx0,
-                           int ty0);
-
 // implements second convolutional layer of SCRNN
 void conv2(ftmap_t input_ftmap[N1][H][W],
            param_t conv2_weights[N2][N1][F2][F2],
@@ -67,5 +58,36 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 
 //clamp for extending edge values
 int clamp(int value, int min, int max);
+
+// load or ship buffer tiles (i.e. tile + padding for input, tile for output) into a given buffer
+void load_buffer_tile_c1(ftmap_t input_fm_buffer[N0][TH + (2 * P1)][TW + (2 * P1)],
+                         ftmap_t input_fm[N0][H][W],
+                         int tx0,
+                         int ty0);
+
+void export_buffer_tile_c1(ftmap_t output_fm_buffer[N1][TH][TW],
+                           ftmap_t output_ftmap[N1][H][W],
+                           int tx0,
+                           int ty0);
+
+void load_buffer_tile_c2(ftmap_t input_fm_buffer[N1][TH + (2 * P2)][TW + (2 * P2)],
+                         ftmap_t input_fm[N1][H][W],
+                         int tx0,
+                         int ty0);
+
+void export_buffer_tile_c2(ftmap_t output_fm_buffer[N2][TH][TW],
+                           ftmap_t output_ftmap[N2][H][W],
+                           int tx0,
+                           int ty0);
+
+void load_buffer_tile_c3(ftmap_t input_fm_buffer[N2][TH + (2 * P3)][TW + (2 * P3)],
+                         ftmap_t input_fm[N2][H][W],
+                         int tx0,
+                         int ty0);
+
+void export_buffer_tile_c3(ftmap_t output_fm_buffer[N3][TH][TW],
+                           ftmap_t output_ftmap[N3][H][W],
+                           int tx0,
+                           int ty0);
 
 #endif /* _SRCNN_H_ */

@@ -1,6 +1,8 @@
 #include "srcnn.h"
-#include <cmath>
+#include <iostream>
 #include "util.h"
+#include <cmath>
+#include <cstring>
 
 using namespace std;
 
@@ -10,39 +12,129 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
            param_t conv2_biases[N2],
            ftmap_t output_ftmap[N2][H][W])
 {
-		// implement conv2 layer of SRCNN here
-		int padding = (F2 - 1) / 2;
 
-	    // apply N2 convolutions
-	    for (int n2 = 0; n2 < N2; n2++) {
+	/*
+		nin: current input layer
+		nout: current output layer
 
-	        // each convolution has an output feature map of size H x W
-			// how much we increment W/H depends on the stride - I cannot see where this is specified for this layer, so have assumed 1
-	        for (int h = 0; h < H; h++) {
-	            for (int w = 0; w < W; w++) {
+		(ti, tj): current tile index
+		(tx0, ty0): image space coordinates of tile origin
+		(tx, ty): current tile space coordinates
+		(kx, ky): current kernel space coordinates
+		(bx, by): current buffer space coordinates
 
-	                //each kernel has a size of F2 x F2
-	                for (int f2h = 0; f2h < F2; f2h++) {
-	                    for (int f2w = 0; f2w < F2; f2w++) {
+	*/
 
-							// check for overflow - if there is, clamp (i.e. extend edge values)
-							int yPixelClamped = clamp(h + f2h - padding, 0, H - 1);
-							int xPixelClamped = clamp(w + f2w - padding, 0, W - 1);
+	#pragma HLS PIPELINE off
 
-	                        // input has N1 features
-	                        for (int n1 = 0; n1 < N1; n1++) {
-								output_ftmap[n2][h][w] += conv2_weights[n2][n1][f2h][f2w] * input_ftmap[n1][yPixelClamped][xPixelClamped];
-	                        }
-	                    }
-	                }
+	// for each tile (ti, tj) in our T x T grid
+	for (int tj = 0; tj < T; tj++) {
+	for (int ti = 0; ti < T; ti++) {
 
-	                // add bias, and apply relu
-	                output_ftmap[n2][h][w] = output_ftmap[n2][h][w] + conv2_biases[n2];
-	                if (output_ftmap[n2][h][w] < 0) {
-	                    output_ftmap[n2][h][w] = 0;
-	                }
-	            }
-	        }
-	    }
+		int ty0 = tj * TH;
+		int tx0 = ti * TW;
 
+		// initialise input and output buffers
+		static ftmap_t input_fm_buffer[N1][TH + (2 * P2)][TW + (2 * P2)];
+		static ftmap_t output_fm_buffer[N2][TH][TW] = {0};
+
+		// load buffer-sized chunk
+		load_buffer_tile_c2(input_fm_buffer, input_ftmap, tx0, ty0);
+
+		// for each output layer
+		for (int nout = 0; nout < N2; nout++) {
+
+			// for each pixel in tile
+			for (int ty = 0; ty < TH; ty++) {
+			for (int tx = 0; tx < TW; tx++) {
+
+				// for each pixel in the kernel
+				for (int ky = 0; ky < F2; ky++) {
+				for (int kx = 0; kx < F2; kx++) {
+
+					// get buffer-space coordinates
+					int by = ty + ky;
+					int bx = tx + kx;
+
+					// for each input layer
+					// TODO: PIPELINE THIS
+					for (int nin = 0; nin < N1; nin++) {
+						output_fm_buffer[nout][ty][tx] += conv2_weights[nout][nin][ky][kx] * input_fm_buffer[nin][by][bx];
+					}
+				}}
+
+			}}
+
+		}
+
+		// load output buffer back to DRAM
+		export_buffer_tile_c2(output_fm_buffer, output_ftmap, tx0, ty0);
+	}}
+
+
+	// split relu from rest of loop
+	// nr = relu output layer
+	// xr, yr = relu coordinates within image
+	for (int nr = 0; nr < N2; nr++) {
+	for (int yr = 0; yr < H; yr++) {
+	for (int xr = 0; xr < W; xr++) {
+
+		output_ftmap[nr][yr][xr] += conv2_biases[nr];
+		if (output_ftmap[nr][yr][xr] < 0) {
+			output_ftmap[nr][yr][xr] = 0;
+		}
+
+	}}}
 }
+
+
+
+/* loads a buffer tile (i.e. tile + padding) into a given buffer for layer 1.
+ * input_fm_buffer = the buffer to load the image features into
+ * input_fm = the source image feature maps
+ * tx0, ty0 = image space coordinates of tile top left
+*/
+void load_buffer_tile_c2(
+	ftmap_t input_fm_buffer[N1][TH + (2 * P2)][TW + (2 * P2)],
+	ftmap_t input_fm[N1][H][W],
+	int tx0,
+	int ty0
+) {
+	// clear buffer
+	memset(input_fm_buffer, 0, N1 * (TH + (2 * P2)) * (TW + (2 * P2)) * sizeof(ftmap_t));
+
+	for (int nin = 0; nin < N1; nin++) { // input layer
+		for (int by = 0; by < TH + (2 * P2); by++) { // buffer space y
+			for (int bx = 0; bx < TW + (2 * P2); bx++) { // buffer space x
+
+				// check for overflow - if there is, clamp (i.e. extend edge values)
+				int xClamped = clamp(tx0 - P2 + bx, 0, W - 1);
+				int yClamped = clamp(ty0 - P2 + by, 0, H - 1);
+
+				//load value into input buffer
+				input_fm_buffer[nin][by][bx] = input_fm[nin][yClamped][xClamped];
+			}
+		}
+	}
+}
+
+void export_buffer_tile_c2(
+	ftmap_t output_fm_buffer[N2][TH][TW],
+	ftmap_t output_ftmap[N2][H][W],
+	int tx0,
+	int ty0
+) {
+	for (int nout = 0; nout < N2; nout++) { // output layer
+		for (int ty = 0; ty < TH; ty++) { // tile space y
+			for (int tx = 0; tx < TW; tx++) { // tile space x
+
+				output_ftmap[nout][ty0 + ty][tx0 + tx] = output_fm_buffer[nout][ty][tx];
+
+			}
+		}
+	}
+
+	// clear buffer
+	memset(output_fm_buffer, 0, N2 * TH * TW * sizeof(ftmap_t));
+}
+
