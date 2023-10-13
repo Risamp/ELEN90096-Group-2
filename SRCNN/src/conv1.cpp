@@ -31,12 +31,12 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 			int tx0 = ti * TW;
 			int ty0 = tj * TH;
 
-			// initialise input and output buffers
-			ftmap_t input_fm_buffer[N0][TH + (2 * P1)][TW + (2 * P1)];
-			ftmap_t output_fm_buffer[N1][TH][TW] = {0};
+			//initialise input and output buffers
+			//ftmap_t input_fm_buffer[N0][TH + (2 * P1)][TW + (2 * P1)];
+			//ftmap_t output_fm_buffer[N1][TH][TW] = {0};
 
 			// load buffer-sized chunk
-			load_buffer_tile_c1(input_fm_buffer, input_ftmap, tx0, ty0);
+			//load_buffer_tile_c1(input_fm_buffer, input_ftmap, tx0, ty0);
 
 			// for each output layer
 			for (int nout = 0; nout < N1; nout++) {
@@ -53,10 +53,13 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 						int bx = tx - P1 + kx;
 						int by = ty - P1 + ky;
 
+						int yPixelClamped = clamp(ty0 + ty - P1 + ky, 0, H - 1);
+						int xPixelClamped = clamp(tx0 + tx - P1 + kx, 0, W - 1);
+
 						// for each input layer
 						// TODO: PIPELINE THIS
 						for (int nin = 0; nin < N0; nin++) {
-							output_fm_buffer[nout][ty][tx] += conv1_weights[nout][nin][ky][kx] * input_fm_buffer[nin][by][bx];
+							output_ftmap[nout][ty0 + ty][tx0 + tx] += conv1_weights[nout][nin][ky][kx] * input_ftmap[nin][yPixelClamped][xPixelClamped];
 						}
 					}}
 
@@ -65,7 +68,7 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 			}
 
 			// load output buffer back to DRAM
-			export_buffer_tile_c1(output_fm_buffer, output_ftmap, tx0, ty0);
+			//export_buffer_tile_c1(output_fm_buffer, output_ftmap, tx0, ty0);
 		}}
 
 
