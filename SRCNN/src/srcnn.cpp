@@ -20,7 +20,7 @@ void srcnn(ftmap_t input_ftmap[N0][H][W],
 
 	#pragma HLS PIPELINE off
     // apply non-linear mapping layer
-    static ftmap_t conv2_output_ftmap[N2][H][W];
+    static ftmap_t conv2_output_ftmap[N2][H][W] = {0};
     conv2(conv1_output_ftmap, conv2_weights, conv2_biases, conv2_output_ftmap);
 
     // reconstruction layer

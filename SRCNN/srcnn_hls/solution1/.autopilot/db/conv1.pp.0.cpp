@@ -199,6 +199,9 @@ void conv3(ftmap_t input_ftmap[32][255][255],
            param_t conv3_weights[1][32][5][5],
            param_t conv3_biases[1],
            ftmap_t output_ftmap[1][255][255]);
+
+
+int clamp(int value, int min, int max);
 # 2 "src/conv1.cpp" 2
 # 1 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\iostream" 1 3
 # 37 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\iostream" 3
@@ -25779,7 +25782,14 @@ double calculate_mse(ftmap_t *img1,
                      int count);
 
 
-int clamp(int value, int min, int max);
+double calculate_PSNR(ftmap_t *img1,
+       ftmap_t *img2,
+       int count);
+
+
+void write_bin(std::string fname,
+      ftmap_t *ftmap,
+      int count);
 # 4 "src/conv1.cpp" 2
 # 1 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cmath" 1 3
 # 40 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cmath" 3
@@ -27789,82 +27799,38 @@ void conv1(ftmap_t input_ftmap[1][255][255],
            ftmap_t output_ftmap[64][255][255])
 {
 
-  for (int n0 = 0; n0 < 1; n0+= C1TC) {
+  int padding = (9 - 1) / 2;
+
+
+     VITIS_LOOP_18_1: for (int n1 = 0; n1 < 64; n1++) {
 
 
 
-   for (int h = 0; h < 255; h += C1TH) {
-    for (int w = 0; w < 255; w += C1TW) {
+         VITIS_LOOP_22_2: for (int h = 0; h < 255; h++) {
+             VITIS_LOOP_23_3: for (int w = 0; w < 255; w++) {
 
 
+                 VITIS_LOOP_26_4: for (int f1h = 0; f1h < 9; f1h++) {
+                     VITIS_LOOP_27_5: for (int f1w = 0; f1w < 9; f1w++) {
 
 
+       int yPixelClamped = clamp(h + f1h - padding, 0, 255 - 1);
+       int xPixelClamped = clamp(w + f1w - padding, 0, 255 - 1);
 
 
-     for (int n1 = 0; n1 < 64; n1 += C1TN) {
+                         VITIS_LOOP_34_6: for (int n0 = 0; n0 < 1; n0++) {
+        output_ftmap[n1][h][w] += conv1_weights[n1][n0][f1h][f1w] * input_ftmap[n0][yPixelClamped][xPixelClamped];
+                         }
+                     }
+                 }
 
 
-      ftmap_t output_fm_buffer[C1TN][C1TH][C1TW];
-      param_t weight_buffer[C1TN][C1TC][9][9];
-      memcpy(weight_buffer, conv1_weights, 64*1*9*9*sizeof(param_t));
-      for (int tn = 0; tn < C1TN; tn++) {
-       for (int th = (9 - 1) / 2; th < C1TH + (9 - 1) / 2; th++) {
-        for (int tw = (9 - 1) / 2; tw < C1TW + (9 - 1) / 2; tw++) {
-         output_fm_buffer[tn][th-(9 - 1) / 2][tw-(9 - 1) / 2] = conv1_biases[tn];
-         for (int tc = 0; tc < C1TC; tc++) {
-
-          for (int f1h = 0; f1h < 9; f1h++) {
-           for (int f1w = 0; f1w < 9; f1w++) {
-
-
-            int yPixel = th + f1h - (9 - 1) / 2;
-            int xPixel = tw + f1w - (9 - 1) / 2;
-
-            output_fm_buffer[tn][th][tw] += conv1_weights[tn][tc][f1h][f1w] * input_ftmap[tc][h+th][w+tw];
-           }
-          }
+                 output_ftmap[n1][h][w] = output_ftmap[n1][h][w] + conv1_biases[n1];
+                 if (output_ftmap[n1][h][w] < 0) {
+                     output_ftmap[n1][h][w] = 0;
+                 }
+             }
          }
-        }
-       }
-      }
-
-      memcpy(output_fm_buffer, (ftmap_t *)&output_ftmap[n1][h][w], 64*C1TH*C1TW*sizeof(ftmap_t));
-
      }
 
-
-    }
-   }
-
-
-   for (int n = 0; n < 64; n++){
-    if (output_ftmap[n][h+th][w+tw] < 0) {
-    output_ftmap[n][h+th][w+tw] = 0;
-    }
-   }
-
-  }
-}
-
-
-
-void load_conv1_input_tile_from_DRAM(
- ftmap_t input_fm_buffer[C1TC][C1TH+2*(9 - 1) / 2][C1TW+2*(9 - 1) / 2],
- ftmap_t input_fm[1][255][255],
- int th,
- int tw
-) {
-
- for (int c = 0; c < C1TC; c++) {
-  for (int h = 0; h < C1TH+2*(9 - 1) / 2; h++) {
-   for (int w = 0; w < C1TW+2*(9 - 1) / 2; w++) {
-
-    int yPixelClamped = clamp(th + h - (9 - 1) / 2, 0, 255 - 1);
-    int xPixelClamped = clamp(tw + w - (9 - 1) / 2, 0, 255 - 1);
-
-
-    input_fm_buffer[c][h][w] = input_fm[c][yPixelClamped][xPixelClamped];
-   }
-  }
- }
 }

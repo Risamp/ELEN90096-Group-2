@@ -1,59 +1,23 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:15:33" msg_body="use of undeclared identifier 'C1TC'">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl:28:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="srcnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=srcnn" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="srcnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=srcnn" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/srcnn.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="srcnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-2576" msg_severity="ERROR" msg_loc="src/util.cpp:17:9" msg_body="cannot use 'throw' with exceptions disabled">
         <args/>
     </msg>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:19:34" msg_body="use of undeclared identifier 'C1TH'">
+    <msg msg_groups="" msg_id="207-2576" msg_severity="ERROR" msg_loc="src/util.cpp:37:9" msg_body="cannot use 'throw' with exceptions disabled">
         <args/>
     </msg>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:20:35" msg_body="use of undeclared identifier 'C1TW'">
+    <msg msg_groups="" msg_id="207-2576" msg_severity="ERROR" msg_loc="src/util.cpp:56:9" msg_body="cannot use 'throw' with exceptions disabled">
         <args/>
     </msg>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:27:38" msg_body="use of undeclared identifier 'C1TN'">
-        <args/>
-    </msg>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:30:32" msg_body="use of undeclared identifier 'C1TN'">
-        <args/>
-    </msg>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:30:38" msg_body="use of undeclared identifier 'C1TH'">
-        <args/>
-    </msg>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:30:44" msg_body="use of undeclared identifier 'C1TW'">
-        <args/>
-    </msg>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:31:29" msg_body="use of undeclared identifier 'C1TN'">
-        <args/>
-    </msg>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:31:35" msg_body="use of undeclared identifier 'C1TC'">
-        <args/>
-    </msg>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:33:29" msg_body="use of undeclared identifier 'C1TN'">
-        <args/>
-    </msg>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:34:40" msg_body="use of undeclared identifier 'C1TH'">
-        <args/>
-    </msg>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:35:41" msg_body="use of undeclared identifier 'C1TW'">
-        <args/>
-    </msg>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:37:32" msg_body="use of undeclared identifier 'C1TC'">
-        <args/>
-    </msg>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:54:71" msg_body="use of undeclared identifier 'C1TH'">
-        <args/>
-    </msg>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:54:76" msg_body="use of undeclared identifier 'C1TW'">
-        <args/>
-    </msg>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:64:25" msg_body="use of undeclared identifier 'h'">
-        <args/>
-    </msg>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:64:27" msg_body="use of undeclared identifier 'th'">
-        <args/>
-    </msg>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:64:31" msg_body="use of undeclared identifier 'w'">
-        <args/>
-    </msg>
-    <msg msg_groups="" msg_id="207-3776" msg_severity="ERROR" msg_loc="src/conv1.cpp:64:33" msg_body="use of undeclared identifier 'tw'">
+    <msg msg_groups="" msg_id="207-2576" msg_severity="ERROR" msg_loc="src/util.cpp:111:9" msg_body="cannot use 'throw' with exceptions disabled">
         <args/>
     </msg>
 </xilinx:hls_fe_msgs>

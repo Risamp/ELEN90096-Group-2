@@ -1,0 +1,13 @@
+src/util.cpp:17:9: error: cannot use 'throw' with exceptions disabled
+        throw std::runtime_error("File not found");
+        ^
+src/util.cpp:37:9: error: cannot use 'throw' with exceptions disabled
+        throw std::runtime_error("File not found");
+        ^
+src/util.cpp:56:9: error: cannot use 'throw' with exceptions disabled
+        throw std::runtime_error("File not found");
+        ^
+src/util.cpp:111:9: error: cannot use 'throw' with exceptions disabled
+        throw std::runtime_error("Error writing to output bin file");
+        ^
+4 errors generated.

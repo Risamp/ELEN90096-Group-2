@@ -1,26 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Messages>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.212 seconds; current allocated memory: 91.730 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.295 seconds; current allocated memory: 91.555 MB." resolution=""/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;src/conv1.cpp&apos; ..." resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;C1TC&apos; (src/conv1.cpp:15:33)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;C1TH&apos; (src/conv1.cpp:19:34)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;C1TW&apos; (src/conv1.cpp:20:35)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;C1TN&apos; (src/conv1.cpp:27:38)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;C1TN&apos; (src/conv1.cpp:30:32)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;C1TH&apos; (src/conv1.cpp:30:38)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;C1TW&apos; (src/conv1.cpp:30:44)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;C1TN&apos; (src/conv1.cpp:31:29)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;C1TC&apos; (src/conv1.cpp:31:35)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;C1TN&apos; (src/conv1.cpp:33:29)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;C1TH&apos; (src/conv1.cpp:34:40)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;C1TW&apos; (src/conv1.cpp:35:41)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;C1TC&apos; (src/conv1.cpp:37:32)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;C1TH&apos; (src/conv1.cpp:54:71)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;C1TW&apos; (src/conv1.cpp:54:76)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;h&apos; (src/conv1.cpp:64:25)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;th&apos; (src/conv1.cpp:64:27)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;w&apos; (src/conv1.cpp:64:31)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-3776]" key="HLS 207-3776" tag="" content="use of undeclared identifier &apos;tw&apos; (src/conv1.cpp:64:33)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 207-59]" key="HLS 207-59" tag="" content="too many errors emitted, stopping now" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.774 seconds; current allocated memory: 1.066 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;src/conv2.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;src/conv3.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;src/srcnn.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;src/util.cpp&apos; ..." resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 207-2576]" key="HLS 207-2576" tag="" content="cannot use &apos;throw&apos; with exceptions disabled (src/util.cpp:17:9)" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 207-2576]" key="HLS 207-2576" tag="" content="cannot use &apos;throw&apos; with exceptions disabled (src/util.cpp:37:9)" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 207-2576]" key="HLS 207-2576" tag="" content="cannot use &apos;throw&apos; with exceptions disabled (src/util.cpp:56:9)" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 207-2576]" key="HLS 207-2576" tag="" content="cannot use &apos;throw&apos; with exceptions disabled (src/util.cpp:111:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 23.825 seconds; current allocated memory: 0.777 MB." resolution=""/>
 </Messages>
