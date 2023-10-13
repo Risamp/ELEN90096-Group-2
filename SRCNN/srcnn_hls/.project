@@ -82,6 +82,16 @@
 			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/test/csim.cpp</location>
 		</link>
 		<link>
+			<name>testbench/output</name>
+			<type>2</type>
+			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/test/output</location>
+		</link>
+		<link>
+			<name>testbench/set14</name>
+			<type>2</type>
+			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/test/set14</location>
+		</link>
+		<link>
 			<name>testbench/set5</name>
 			<type>2</type>
 			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/test/set5</location>
@@ -90,6 +100,11 @@
 			<name>testbench/tb_conv1.cpp</name>
 			<type>1</type>
 			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/test/tb_conv1.cpp</location>
+		</link>
+		<link>
+			<name>testbench/tb_set14.cpp</name>
+			<type>1</type>
+			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/test/tb_set14.cpp</location>
 		</link>
 		<link>
 			<name>testbench/tb_srcnn.cpp</name>

@@ -1,1 +1,1 @@
-obj/csim.o: ../../../../test/csim.cpp
+obj/csim.o: ../../../../../SRCNN/test/csim.cpp

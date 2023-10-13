@@ -19,7 +19,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../test/tb_conv1.cpp ../../../../test/tb_srcnn.cpp ../../../../test/csim.cpp ../../../../src/conv1.cpp ../../../../src/conv2.cpp ../../../../src/conv3.cpp ../../../../src/srcnn.cpp ../../../../src/util.cpp
+HLS_SOURCES = ../../../../test/csim.cpp ../../../../test/tb_conv1.cpp ../../../../test/tb_set14.cpp ../../../../test/tb_srcnn.cpp ../../../../src/conv1.cpp ../../../../src/conv2.cpp ../../../../src/conv3.cpp ../../../../src/srcnn.cpp ../../../../src/util.cpp
 
 override TARGET := csim.exe
 
@@ -74,23 +74,29 @@ all: $(TARGET)
 
 
 
+$(ObjDir)/csim.o: ../../../../test/csim.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../test/csim.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I../../../../src -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/csim.d
+
 $(ObjDir)/tb_conv1.o: ../../../../test/tb_conv1.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../test/tb_conv1.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I../../../../src -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/tb_conv1.d
 
+$(ObjDir)/tb_set14.o: ../../../../test/tb_set14.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../test/tb_set14.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I../../../../src -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/tb_set14.d
+
 $(ObjDir)/tb_srcnn.o: ../../../../test/tb_srcnn.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../test/tb_srcnn.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I../../../../src -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/tb_srcnn.d
-
-$(ObjDir)/csim.o: ../../../../test/csim.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../test/csim.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I../../../../src -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/csim.d
 
 $(ObjDir)/conv1.o: ../../../../src/conv1.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../src/conv1.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)

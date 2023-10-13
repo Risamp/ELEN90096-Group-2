@@ -47,4 +47,7 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
            param_t conv3_biases[N3],
            ftmap_t output_ftmap[N3][H][W]);
 
+//clamp for extending edge values
+int clamp(int value, int min, int max);
+
 #endif /* _SRCNN_H_ */

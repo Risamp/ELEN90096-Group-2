@@ -13,8 +13,8 @@ void load_image(std::string  fname,
     float   p_flp;
 
     std::ifstream ifs(fname, std::ios::in | std::ios::binary);
-    //if (!ifs)
-        //throw std::runtime_error("File not found");
+    if (!ifs)
+        throw std::runtime_error("File not found");
 
     for (int i = 0; i < count; i++) {
         ifs.read((char *) &p, sizeof(uint8_t));
@@ -33,8 +33,8 @@ void load_ftmap(std::string  fname,
     float f;
 
     std::ifstream ifs(fname, std::ios::in | std::ios::binary);
-//    if (!ifs)
-//        throw std::runtime_error("File not found");
+    if (!ifs)
+        throw std::runtime_error("File not found");
 
     for (int i = 0; i < count; i++) {
         ifs.read((char *) &f, sizeof(float));
@@ -52,8 +52,8 @@ void load_param(std::string  fname,
     float p;
 
     std::ifstream ifs(fname, std::ios::in | std::ios::binary);
-//    if (!ifs)
-//        throw std::runtime_error("File not found");
+    if (!ifs)
+        throw std::runtime_error("File not found");
 
     for (int i = 0; i < count; i++) {
         ifs.read((char *) &p, sizeof(float));
@@ -78,9 +78,37 @@ double calculate_mse(ftmap_t *img1,
     return mse;
 }
 
+// return PSNR between two images
+double calculate_PSNR(ftmap_t *img1,
+					  ftmap_t *img2,
+					  int      count)
+{
+	double rmse = 0.0;
+    for (int i = 0; i < count; i++) {
+    	// scale image values to uint8 in range [0 - 255] for RMSE calculation
+        rmse += std::pow((uint8_t)(img1[i]*255) - (uint8_t)(img2[i]*255), 2);
+    }
+    rmse = std::sqrt(rmse/count);
 
-int clamp(int value, int min, int max) {
-	if (value < min) return min;
-	if (value > max) return max;
-	return value;
+	return 20*std::log10(255.0 / rmse);
+}
+
+// write ftmap image to output file
+void write_bin(std::string    fname,
+			   ftmap_t       *ftmap,
+			   int            count)
+{
+    std::ofstream outputFile(fname, std::ios::binary);
+    // Check if the file is successfully opened
+    if (outputFile.is_open()) {
+        // Write uint8_t data to the file
+        for (int i = 0; i < count; i++) {
+            outputFile.put(static_cast<char>((uint8_t)(ftmap[i]*255)));
+        }
+
+        outputFile.close();
+    } else {
+        throw std::runtime_error("Error writing to output bin file");
+    }
+
 }

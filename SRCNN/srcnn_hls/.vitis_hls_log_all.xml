@@ -2,17 +2,44 @@
 <vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
   <errorLogs>
     <logs>
-      <synLog/>
+      <synLog>
+        <logs message="ERROR: [HLS 207-59] too many errors emitted, stopping now" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.832+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'tw' (src/conv1.cpp:64:33)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.826+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'w' (src/conv1.cpp:64:31)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.818+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'th' (src/conv1.cpp:64:27)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.812+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'h' (src/conv1.cpp:64:25)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.805+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'C1TW' (src/conv1.cpp:54:76)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.799+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'C1TH' (src/conv1.cpp:54:71)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.793+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'C1TC' (src/conv1.cpp:37:32)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.773+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'C1TW' (src/conv1.cpp:35:41)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.767+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'C1TH' (src/conv1.cpp:34:40)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.760+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'C1TN' (src/conv1.cpp:33:29)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.755+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'C1TC' (src/conv1.cpp:31:35)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.750+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'C1TN' (src/conv1.cpp:31:29)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.745+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'C1TW' (src/conv1.cpp:30:44)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.738+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'C1TH' (src/conv1.cpp:30:38)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.730+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'C1TN' (src/conv1.cpp:30:32)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.712+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'C1TN' (src/conv1.cpp:27:38)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.706+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'C1TW' (src/conv1.cpp:20:35)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.701+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'C1TH' (src/conv1.cpp:19:34)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.696+1100"/>
+        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'C1TC' (src/conv1.cpp:15:33)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:21.689+1100"/>
+      </synLog>
       <simLog/>
       <mgLog/>
       <packageLog/>
       <csimLog>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="srcnn_hls" solutionName="solution1" date="2023-10-09T18:01:57.589+1100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-09T18:00:40.093+1100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-09T18:00:04.744+1100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-09T17:59:10.902+1100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-09T15:28:55.752+1100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-09T15:28:34.982+1100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T22:16:59.349+1100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T22:15:29.175+1100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T22:14:17.988+1100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T22:12:55.654+1100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T21:53:31.007+1100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T21:48:56.933+1100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T21:45:18.666+1100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T21:43:49.307+1100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T21:39:31.656+1100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:53:55.238+1100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:52:13.505+1100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T17:38:44.479+1100"/>
       </csimLog>
     </logs>
   </errorLogs>

@@ -157,7 +157,7 @@ extern "C" {
 # 2 "<built-in>" 2
 # 1 "src/conv1.cpp" 2
 # 1 "src/srcnn.h" 1
-# 23 "src/srcnn.h"
+# 26 "src/srcnn.h"
 typedef float ftmap_t;
 typedef float param_t;
 
@@ -176,6 +176,17 @@ void conv1(ftmap_t input_ftmap[1][255][255],
            param_t conv1_weights[64][1][9][9],
            param_t conv1_biases[64],
            ftmap_t output_ftmap[64][255][255]);
+
+
+void load_buffer_tile_c1(ftmap_t input_fm_buffer[1][255 / 3 + (2 * (9 - 1) / 2)][255 / 3 + (2 * (9 - 1) / 2)],
+                         ftmap_t input_fm[1][255][255],
+                         int tx0,
+                         int ty0);
+
+void export_buffer_tile_c1(ftmap_t output_fm_buffer[64][255 / 3][255 / 3],
+                           ftmap_t output_ftmap[64][255][255],
+                           int tx0,
+                           int ty0);
 
 
 void conv2(ftmap_t input_ftmap[64][255][255],
@@ -27778,50 +27789,82 @@ void conv1(ftmap_t input_ftmap[1][255][255],
            ftmap_t output_ftmap[64][255][255])
 {
 
-  int padding = (9 - 1) / 2;
-
-
-  VITIS_LOOP_18_1: for (int n0 = 0; n0 < 1; n0++) {
+  for (int n0 = 0; n0 < 1; n0+= C1TC) {
 
 
 
-   VITIS_LOOP_22_2: for (int h = 0; h < 255; h += 255 / 3) {
-
-    VITIS_LOOP_24_3: for (int w = 0; w < 255; w += 255 / 3) {
-
+   for (int h = 0; h < 255; h += C1TH) {
+    for (int w = 0; w < 255; w += C1TW) {
 
 
-     VITIS_LOOP_28_4: for (int n1 = 0; n1 < 64; n1++) {
-#pragma HLS UNROLL factor=3
-
- VITIS_LOOP_31_5: for (int th = 0; th < 255 / 3; th++) {
-       VITIS_LOOP_32_6: for (int tw = 0; tw < 255 / 3; tw++) {
-
-        VITIS_LOOP_34_7: for (int f1h = 0; f1h < 9; f1h++) {
-         VITIS_LOOP_35_8: for (int f1w = 0; f1w < 9; f1w++) {
 
 
-          int yPixelClamped = clamp(h + th + f1h - padding, 0, 255 - 1);
-          int xPixelClamped = clamp(w + tw + f1w - padding, 0, 255 - 1);
 
-          output_ftmap[n1][h+th][w+tw] += conv1_weights[n1][n0][f1h][f1w] * input_ftmap[n0][yPixelClamped][xPixelClamped];
+
+     for (int n1 = 0; n1 < 64; n1 += C1TN) {
+
+
+      ftmap_t output_fm_buffer[C1TN][C1TH][C1TW];
+      param_t weight_buffer[C1TN][C1TC][9][9];
+      memcpy(weight_buffer, conv1_weights, 64*1*9*9*sizeof(param_t));
+      for (int tn = 0; tn < C1TN; tn++) {
+       for (int th = (9 - 1) / 2; th < C1TH + (9 - 1) / 2; th++) {
+        for (int tw = (9 - 1) / 2; tw < C1TW + (9 - 1) / 2; tw++) {
+         output_fm_buffer[tn][th-(9 - 1) / 2][tw-(9 - 1) / 2] = conv1_biases[tn];
+         for (int tc = 0; tc < C1TC; tc++) {
+
+          for (int f1h = 0; f1h < 9; f1h++) {
+           for (int f1w = 0; f1w < 9; f1w++) {
+
+
+            int yPixel = th + f1h - (9 - 1) / 2;
+            int xPixel = tw + f1w - (9 - 1) / 2;
+
+            output_fm_buffer[tn][th][tw] += conv1_weights[tn][tc][f1h][f1w] * input_ftmap[tc][h+th][w+tw];
+           }
+          }
          }
-        }
-
-
-        output_ftmap[n1][h+th][w+tw] = output_ftmap[n1][h+th][w+tw] + conv1_biases[n1];
-        if (output_ftmap[n1][h+th][w+tw] < 0) {
-         output_ftmap[n1][h+th][w+tw] = 0;
         }
        }
       }
 
-
-
+      memcpy(output_fm_buffer, (ftmap_t *)&output_ftmap[n1][h][w], 64*C1TH*C1TW*sizeof(ftmap_t));
 
      }
+
+
     }
    }
+
+
+   for (int n = 0; n < 64; n++){
+    if (output_ftmap[n][h+th][w+tw] < 0) {
+    output_ftmap[n][h+th][w+tw] = 0;
+    }
+   }
+
   }
-# 167 "src/conv1.cpp"
+}
+
+
+
+void load_conv1_input_tile_from_DRAM(
+ ftmap_t input_fm_buffer[C1TC][C1TH+2*(9 - 1) / 2][C1TW+2*(9 - 1) / 2],
+ ftmap_t input_fm[1][255][255],
+ int th,
+ int tw
+) {
+
+ for (int c = 0; c < C1TC; c++) {
+  for (int h = 0; h < C1TH+2*(9 - 1) / 2; h++) {
+   for (int w = 0; w < C1TW+2*(9 - 1) / 2; w++) {
+
+    int yPixelClamped = clamp(th + h - (9 - 1) / 2, 0, 255 - 1);
+    int xPixelClamped = clamp(tw + w - (9 - 1) / 2, 0, 255 - 1);
+
+
+    input_fm_buffer[c][h][w] = input_fm[c][yPixelClamped][xPixelClamped];
+   }
+  }
+ }
 }

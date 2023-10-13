@@ -67,19 +67,19 @@
 			<location>C:/SPB_Data/ELEN90096-Group-2/golden/src/srcnn.h</location>
 		</link>
 		<link>
-			<name>source/util.cpp</name>
-			<type>1</type>
-			<location>C:/SPB_Data/ELEN90096-Group-2/golden/src/util.cpp</location>
-		</link>
-		<link>
-			<name>source/util.h</name>
-			<type>1</type>
-			<location>C:/SPB_Data/ELEN90096-Group-2/golden/src/util.h</location>
-		</link>
-		<link>
 			<name>testbench/csim.cpp</name>
 			<type>1</type>
-			<location>C:/SPB_Data/ELEN90096-Group-2/golden/test/csim.cpp</location>
+			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/test/csim.cpp</location>
+		</link>
+		<link>
+			<name>testbench/output</name>
+			<type>2</type>
+			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/test/output</location>
+		</link>
+		<link>
+			<name>testbench/set14</name>
+			<type>2</type>
+			<location>C:/SPB_Data/ELEN90096-Group-2/golden/test/set14</location>
 		</link>
 		<link>
 			<name>testbench/set5</name>
@@ -92,9 +92,24 @@
 			<location>C:/SPB_Data/ELEN90096-Group-2/golden/test/tb_conv1.cpp</location>
 		</link>
 		<link>
+			<name>testbench/tb_set14.cpp</name>
+			<type>1</type>
+			<location>C:/SPB_Data/ELEN90096-Group-2/golden/test/tb_set14.cpp</location>
+		</link>
+		<link>
 			<name>testbench/tb_srcnn.cpp</name>
 			<type>1</type>
 			<location>C:/SPB_Data/ELEN90096-Group-2/golden/test/tb_srcnn.cpp</location>
+		</link>
+		<link>
+			<name>testbench/util.cpp</name>
+			<type>1</type>
+			<location>C:/SPB_Data/ELEN90096-Group-2/golden/test/util.cpp</location>
+		</link>
+		<link>
+			<name>testbench/util.h</name>
+			<type>1</type>
+			<location>C:/SPB_Data/ELEN90096-Group-2/golden/test/util.h</location>
 		</link>
 		<link>
 			<name>testbench/weights</name>

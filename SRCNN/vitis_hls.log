@@ -2,7 +2,7 @@ ECHO is off.
 ECHO is off.
 NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'bcevans' on host '400p1t176rg0526' (Windows NT_amd64 version 6.2) on Mon Oct 09 18:01:44 +1100 2023
+INFO: [HLS 200-10] For user 'bcevans' on host '400p1l1760g0519' (Windows NT_amd64 version 6.2) on Fri Oct 13 22:17:29 +1100 2023
 INFO: [HLS 200-10] In directory 'C:/SPB_Data/ELEN90096-Group-2/SRCNN'
 Sourcing Tcl script 'C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim.tcl'
 INFO: [HLS 200-1510] Running: source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim.tcl
@@ -23,16 +23,22 @@ INFO: [HLS 200-1510] Running: add_files src/util.cpp
 INFO: [HLS 200-10] Adding design file 'src/util.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files src/util.h 
 INFO: [HLS 200-10] Adding design file 'src/util.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb test/csim.cpp -cflags -Isrc -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'test/csim.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb test/tb_conv1.cpp -cflags -Isrc -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'test/tb_conv1.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb test/tb_set14.cpp -cflags -Isrc -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'test/tb_set14.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb test/tb_srcnn.cpp -cflags -Isrc -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'test/tb_srcnn.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb test/output -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'test/output' to the project
+INFO: [HLS 200-1510] Running: add_files -tb test/set14 -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'test/set14' to the project
 INFO: [HLS 200-1510] Running: add_files -tb test/set5 -cflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'test/set5' to the project
 INFO: [HLS 200-1510] Running: add_files -tb src/weights -cflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'src/weights' to the project
-INFO: [HLS 200-1510] Running: add_files -tb test/tb_conv1.cpp -cflags -Isrc -Wno-unknown-pragmas 
-INFO: [HLS 200-10] Adding test bench file 'test/tb_conv1.cpp' to the project
-INFO: [HLS 200-1510] Running: add_files -tb test/tb_srcnn.cpp -cflags -Isrc -Wno-unknown-pragmas 
-INFO: [HLS 200-10] Adding test bench file 'test/tb_srcnn.cpp' to the project
-INFO: [HLS 200-1510] Running: add_files -tb test/csim.cpp -cflags -Isrc -Wno-unknown-pragmas 
-INFO: [HLS 200-10] Adding test bench file 'test/csim.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
 INFO: [HLS 200-10] Opening solution 'C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
@@ -47,28 +53,38 @@ INFO: [HLS 200-1510] Running: csim_design -clean -quiet
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 INFO: [HLS 200-2036] Building debug C Simulation binaries
-   Compiling ../../../../test/tb_conv1.cpp in debug mode
-   Compiling ../../../../test/tb_srcnn.cpp in debug mode
    Compiling ../../../../test/csim.cpp in debug mode
+   Compiling ../../../../test/tb_conv1.cpp in debug mode
+   Compiling ../../../../test/tb_set14.cpp in debug mode
+   Compiling ../../../../test/tb_srcnn.cpp in debug mode
    Compiling ../../../../src/conv1.cpp in debug mode
    Compiling ../../../../src/conv2.cpp in debug mode
    Compiling ../../../../src/conv3.cpp in debug mode
    Compiling ../../../../src/srcnn.cpp in debug mode
    Compiling ../../../../src/util.cpp in debug mode
    Generating csim.exe
-@E Simulation failed: SIGSEGV.
-ERROR: [SIM 211-100] CSim failed with errors.
+***** CONV1 Golden Reference *****
+  - Butterfly MSE: 0.00565321
+
+***** SRCNN Golden Reference *****
+  - Butterfly MSE: 0.00866845
+
+***** SRCNN - Set14 Test *****
+Image Name     PSNR GT vs HR (dB)  PSNR GT vs HR MATLAB (dB)  PSNR GT vs LR (dB)  MSE GT vs HR   MSE GT vs HR MATLAB        
+baboon         9.07212             24.9898                    27.3618             1.09664        0.00161402                 
+barbara        9.51882             26.2451                    24.8997             15.5078        0.00316839                 
+bridge         8.31259             26.8397                    25.2317             77.2798        0.00237435                 
+coastguard     9.34622             33.4187                    26.3                253.902        0.00206895                 
+face           7.85554             27.3319                    32.6794             669.319        0.000454177                
+flowers        8.32555             35.727                     25.6995             1488.58        0.00184746                 
+foreman        8.56057             30.8413                    33.2014             2999.91        0.000266235                
+lenna          9.33207             27.1209                    29.1689             5684.52        0.000822304                
+man            8.57012             27.9822                    26.0613             10089.6        0.00193996                 
+monarch        8.88488             33.4745                    24.5799             16973.8        0.00159023                 
+pepper         9.81114             29.4367                    32.0454             27434.5        0.000447919                
+ppt3           7.77553             27.6649                    26.6842             42844.9        0.0011378                  
+zebra          8.35694             0                          24.7423             65189.8        0.00171134                 
+INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 11.585 seconds; current allocated memory: 0.711 MB.
-4
-    while executing
-"source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim.tcl"
-    invoked from within
-"hls::main C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim.tcl"
-    ("uplevel" body line 1)
-    invoked from within
-"uplevel 1 hls::main {*}$newargs"
-    (procedure "hls_proc" line 16)
-    invoked from within
-"hls_proc [info nameofexecutable] $argv"
-INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 13.196 seconds; peak allocated memory: 91.453 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 97.099 seconds; current allocated memory: 0.781 MB.
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 2 seconds. Total elapsed time: 99.323 seconds; peak allocated memory: 92.789 MB.

@@ -26,3 +26,9 @@ void srcnn(ftmap_t input_ftmap[N0][H][W],
     conv3(conv2_output_ftmap, conv3_weights, conv3_biases, output_ftmap);
 
 }
+
+int clamp(int value, int min, int max) {
+	if (value < min) return min;
+	if (value > max) return max;
+	return value;
+}

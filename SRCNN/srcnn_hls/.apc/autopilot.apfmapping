@@ -10,10 +10,9 @@
     <originFiles name="util.h" path="C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\util.h"/>
   </source>
   <testbench>
-    <originFiles name="set5" path="C:\SPB_Data\ELEN90096-Group-2\SRCNN\test\set5"/>
-    <originFiles name="weights" path="C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\weights"/>
-    <originFiles name="tb_conv1.cpp" path="C:\SPB_Data\ELEN90096-Group-2\SRCNN\test\tb_conv1.cpp"/>
-    <originFiles name="tb_srcnn.cpp" path="C:\SPB_Data\ELEN90096-Group-2\SRCNN\test\tb_srcnn.cpp"/>
     <originFiles name="csim.cpp" path="C:\SPB_Data\ELEN90096-Group-2\SRCNN\test\csim.cpp"/>
+    <originFiles name="tb_conv1.cpp" path="C:\SPB_Data\ELEN90096-Group-2\SRCNN\test\tb_conv1.cpp"/>
+    <originFiles name="tb_set14.cpp" path="C:\SPB_Data\ELEN90096-Group-2\SRCNN\test\tb_set14.cpp"/>
+    <originFiles name="tb_srcnn.cpp" path="C:\SPB_Data\ELEN90096-Group-2\SRCNN\test\tb_srcnn.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

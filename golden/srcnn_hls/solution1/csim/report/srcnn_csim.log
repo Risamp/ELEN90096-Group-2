@@ -1,13 +1,14 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../SRCNN/test/csim.cpp in debug mode
    Compiling ../../../../test/tb_conv1.cpp in debug mode
+   Compiling ../../../../test/tb_set14.cpp in debug mode
    Compiling ../../../../test/tb_srcnn.cpp in debug mode
-   Compiling ../../../../test/csim.cpp in debug mode
+   Compiling ../../../../test/util.cpp in debug mode
    Compiling ../../../../src/conv1.cpp in debug mode
    Compiling ../../../../src/conv2.cpp in debug mode
    Compiling ../../../../src/conv3.cpp in debug mode
    Compiling ../../../../src/srcnn.cpp in debug mode
-   Compiling ../../../../src/util.cpp in debug mode
    Generating csim.exe
 ***** CONV1 Golden Reference *****
   - Butterfly MSE: 3.40524e-015
@@ -15,5 +16,19 @@ INFO: [SIM 4] CSIM will launch GCC as the compiler.
 ***** SRCNN Golden Reference *****
   - Butterfly MSE: 2.17875e-013
 
-INFO: [SIM 1] CSim done with 0 errors.
+***** SRCNN - Set14 Test *****
+Image Name     PSNR GT vs HR (dB)  PSNR GT vs HR MATLAB (dB)  PSNR GT vs LR (dB)  MSE GT vs HR   MSE GT vs HR MATLAB        
+baboon         8.05697             24.9898                    27.3618             1.02436        0.00161402                 
+barbara        9.7729              26.2451                    24.8997             14.9732        0.00316839                 
+bridge         8.25005             26.8397                    25.2317             75.2713        0.00237435                 
+coastguard     9.3657              33.4187                    26.3                248.238        0.00206895                 
+face           7.85471             27.3319                    32.6794             655.734        0.000454177                
+flowers        8.30609             35.727                     25.6995             1460.01        0.00184746                 
+foreman        8.57683             30.8413                    33.2014             2945.02        0.000266235                
+lenna          9.31497             27.1209                    29.1689             5585.98        0.000822304                
+man            8.59232             27.9822                    26.0613             9922.53        0.00193996                 
+monarch        8.89875             33.4745                    24.5799             16705          0.00159023                 
+pepper         9.79139             29.4367                    32.0454             27018          0.000447919                
+ppt3           7.78797             27.6649                    26.6842             42221          0.0011378                  
+ERR: [SIM 100] CSim failed with errors.
 INFO: [SIM 3] *************** CSIM finish ***************

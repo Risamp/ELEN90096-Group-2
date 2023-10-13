@@ -1,0 +1,59 @@
+src/conv1.cpp:15:33: error: use of undeclared identifier 'C1TC'
+  for (int n0 = 0; n0 < 1; n0+= C1TC) {
+                                ^
+src/conv1.cpp:19:34: error: use of undeclared identifier 'C1TH'
+   for (int h = 0; h < 255; h += C1TH) {
+                                 ^
+src/conv1.cpp:20:35: error: use of undeclared identifier 'C1TW'
+    for (int w = 0; w < 255; w += C1TW) {
+                                  ^
+src/conv1.cpp:27:38: error: use of undeclared identifier 'C1TN'
+     for (int n1 = 0; n1 < 64; n1 += C1TN) {
+                                     ^
+src/conv1.cpp:30:32: error: use of undeclared identifier 'C1TN'
+      ftmap_t output_fm_buffer[C1TN][C1TH][C1TW];
+                               ^
+src/conv1.cpp:30:38: error: use of undeclared identifier 'C1TH'
+      ftmap_t output_fm_buffer[C1TN][C1TH][C1TW];
+                                     ^
+src/conv1.cpp:30:44: error: use of undeclared identifier 'C1TW'
+      ftmap_t output_fm_buffer[C1TN][C1TH][C1TW];
+                                           ^
+src/conv1.cpp:31:29: error: use of undeclared identifier 'C1TN'
+      param_t weight_buffer[C1TN][C1TC][9][9];
+                            ^
+src/conv1.cpp:31:35: error: use of undeclared identifier 'C1TC'
+      param_t weight_buffer[C1TN][C1TC][9][9];
+                                  ^
+src/conv1.cpp:33:29: error: use of undeclared identifier 'C1TN'
+      for (int tn = 0; tn < C1TN; tn++) {
+                            ^
+src/conv1.cpp:34:40: error: use of undeclared identifier 'C1TH'
+       for (int th = (9 - 1) / 2; th < C1TH + (9 - 1) / 2; th++) {
+                                       ^
+src/conv1.cpp:35:41: error: use of undeclared identifier 'C1TW'
+        for (int tw = (9 - 1) / 2; tw < C1TW + (9 - 1) / 2; tw++) {
+                                        ^
+src/conv1.cpp:37:32: error: use of undeclared identifier 'C1TC'
+         for (int tc = 0; tc < C1TC; tc++) {
+                               ^
+src/conv1.cpp:54:71: error: use of undeclared identifier 'C1TH'
+      memcpy(output_fm_buffer, (ftmap_t *)&output_ftmap[n1][h][w], 64*C1TH*C1TW*sizeof(ftmap_t));
+                                                                      ^
+src/conv1.cpp:54:76: error: use of undeclared identifier 'C1TW'
+      memcpy(output_fm_buffer, (ftmap_t *)&output_ftmap[n1][h][w], 64*C1TH*C1TW*sizeof(ftmap_t));
+                                                                           ^
+src/conv1.cpp:64:25: error: use of undeclared identifier 'h'
+    if (output_ftmap[n][h+th][w+tw] < 0) {
+                        ^
+src/conv1.cpp:64:27: error: use of undeclared identifier 'th'
+    if (output_ftmap[n][h+th][w+tw] < 0) {
+                          ^
+src/conv1.cpp:64:31: error: use of undeclared identifier 'w'
+    if (output_ftmap[n][h+th][w+tw] < 0) {
+                              ^
+src/conv1.cpp:64:33: error: use of undeclared identifier 'tw'
+    if (output_ftmap[n][h+th][w+tw] < 0) {
+                                ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.

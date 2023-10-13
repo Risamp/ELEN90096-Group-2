@@ -15,7 +15,7 @@ void srcnn(ftmap_t input_ftmap[N0][H][W],
 	//#pragma HLS PIPELINE off
 
     // apply convolutional layer 1
-    static ftmap_t conv1_output_ftmap[N1][H][W];
+    static ftmap_t conv1_output_ftmap[N1][H][W] = {0};
     conv1(input_ftmap, conv1_weights, conv1_biases, conv1_output_ftmap);
 
 	#pragma HLS PIPELINE off
@@ -27,3 +27,11 @@ void srcnn(ftmap_t input_ftmap[N0][H][W],
     conv3(conv2_output_ftmap, conv3_weights, conv3_biases, output_ftmap);
 
 }
+
+
+int clamp(int value, int min, int max) {
+	if (value < min) return min;
+	if (value > max) return max;
+	return value;
+}
+

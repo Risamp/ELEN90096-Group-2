@@ -13,11 +13,14 @@ add_files src/srcnn.cpp
 add_files src/srcnn.h
 add_files src/util.cpp
 add_files src/util.h
+add_files -tb test/csim.cpp -cflags "-Isrc -Wno-unknown-pragmas"
+add_files -tb test/tb_conv1.cpp -cflags "-Isrc -Wno-unknown-pragmas"
+add_files -tb test/tb_set14.cpp -cflags "-Isrc -Wno-unknown-pragmas"
+add_files -tb test/tb_srcnn.cpp -cflags "-Isrc -Wno-unknown-pragmas"
+add_files -tb test/output -cflags "-Wno-unknown-pragmas"
+add_files -tb test/set14 -cflags "-Wno-unknown-pragmas"
 add_files -tb test/set5 -cflags "-Wno-unknown-pragmas"
 add_files -tb src/weights -cflags "-Wno-unknown-pragmas"
-add_files -tb test/tb_conv1.cpp -cflags "-Isrc -Wno-unknown-pragmas"
-add_files -tb test/tb_srcnn.cpp -cflags "-Isrc -Wno-unknown-pragmas"
-add_files -tb test/csim.cpp -cflags "-Isrc -Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
 set_part {xck26-sfvc784-2LV-c}
 create_clock -period 10 -name default

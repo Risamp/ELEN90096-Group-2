@@ -1,13 +1,35 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling ../../../../test/tb_conv1.cpp in debug mode
-   Compiling ../../../../test/tb_srcnn.cpp in debug mode
    Compiling ../../../../test/csim.cpp in debug mode
+   Compiling ../../../../test/tb_conv1.cpp in debug mode
+   Compiling ../../../../test/tb_set14.cpp in debug mode
+   Compiling ../../../../test/tb_srcnn.cpp in debug mode
    Compiling ../../../../src/conv1.cpp in debug mode
    Compiling ../../../../src/conv2.cpp in debug mode
    Compiling ../../../../src/conv3.cpp in debug mode
    Compiling ../../../../src/srcnn.cpp in debug mode
    Compiling ../../../../src/util.cpp in debug mode
    Generating csim.exe
-ERR: [SIM 100] CSim failed with errors.
+***** CONV1 Golden Reference *****
+  - Butterfly MSE: 0.00565321
+
+***** SRCNN Golden Reference *****
+  - Butterfly MSE: 0.00866845
+
+***** SRCNN - Set14 Test *****
+Image Name     PSNR GT vs HR (dB)  PSNR GT vs HR MATLAB (dB)  PSNR GT vs LR (dB)  MSE GT vs HR   MSE GT vs HR MATLAB        
+baboon         9.07212             24.9898                    27.3618             1.09664        0.00161402                 
+barbara        9.51882             26.2451                    24.8997             15.5078        0.00316839                 
+bridge         8.31259             26.8397                    25.2317             77.2798        0.00237435                 
+coastguard     9.34622             33.4187                    26.3                253.902        0.00206895                 
+face           7.85554             27.3319                    32.6794             669.319        0.000454177                
+flowers        8.32555             35.727                     25.6995             1488.58        0.00184746                 
+foreman        8.56057             30.8413                    33.2014             2999.91        0.000266235                
+lenna          9.33207             27.1209                    29.1689             5684.52        0.000822304                
+man            8.57012             27.9822                    26.0613             10089.6        0.00193996                 
+monarch        8.88488             33.4745                    24.5799             16973.8        0.00159023                 
+pepper         9.81114             29.4367                    32.0454             27434.5        0.000447919                
+ppt3           7.77553             27.6649                    26.6842             42844.9        0.0011378                  
+zebra          8.35694             0                          24.7423             65189.8        0.00171134                 
+INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************
