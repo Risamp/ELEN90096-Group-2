@@ -67,16 +67,6 @@
 			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/srcnn.h</location>
 		</link>
 		<link>
-			<name>source/util.cpp</name>
-			<type>1</type>
-			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/util.cpp</location>
-		</link>
-		<link>
-			<name>source/util.h</name>
-			<type>1</type>
-			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/util.h</location>
-		</link>
-		<link>
 			<name>testbench/csim.cpp</name>
 			<type>1</type>
 			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/test/csim.cpp</location>
@@ -110,6 +100,16 @@
 			<name>testbench/tb_srcnn.cpp</name>
 			<type>1</type>
 			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/test/tb_srcnn.cpp</location>
+		</link>
+		<link>
+			<name>testbench/util.cpp</name>
+			<type>1</type>
+			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/test/util.cpp</location>
+		</link>
+		<link>
+			<name>testbench/util.h</name>
+			<type>1</type>
+			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/test/util.h</location>
 		</link>
 		<link>
 			<name>testbench/weights</name>

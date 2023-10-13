@@ -2,7 +2,7 @@ ECHO is off.
 ECHO is off.
 NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'bcevans' on host '400p1l1760g0519' (Windows NT_amd64 version 6.2) on Sat Oct 14 01:31:39 +1100 2023
+INFO: [HLS 200-10] For user 'bcevans' on host '400p1l1760g0519' (Windows NT_amd64 version 6.2) on Sat Oct 14 01:42:21 +1100 2023
 INFO: [HLS 200-10] In directory 'C:/SPB_Data/ELEN90096-Group-2/SRCNN'
 Sourcing Tcl script 'C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim.tcl'
 INFO: [HLS 200-1510] Running: source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim.tcl
@@ -19,10 +19,6 @@ INFO: [HLS 200-1510] Running: add_files src/srcnn.cpp
 INFO: [HLS 200-10] Adding design file 'src/srcnn.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files src/srcnn.h 
 INFO: [HLS 200-10] Adding design file 'src/srcnn.h' to the project
-INFO: [HLS 200-1510] Running: add_files src/util.cpp 
-INFO: [HLS 200-10] Adding design file 'src/util.cpp' to the project
-INFO: [HLS 200-1510] Running: add_files src/util.h 
-INFO: [HLS 200-10] Adding design file 'src/util.h' to the project
 INFO: [HLS 200-1510] Running: add_files -tb test/csim.cpp -cflags -Isrc -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'test/csim.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files -tb test/tb_conv1.cpp -cflags -Isrc -Wno-unknown-pragmas 
@@ -31,6 +27,10 @@ INFO: [HLS 200-1510] Running: add_files -tb test/tb_set14.cpp -cflags -Isrc -Wno
 INFO: [HLS 200-10] Adding test bench file 'test/tb_set14.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files -tb test/tb_srcnn.cpp -cflags -Isrc -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'test/tb_srcnn.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb test/util.cpp -cflags -Isrc -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'test/util.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb test/util.h -cflags -Isrc -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'test/util.h' to the project
 INFO: [HLS 200-1510] Running: add_files -tb test/output -cflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'test/output' to the project
 INFO: [HLS 200-1510] Running: add_files -tb test/set14 -cflags -Wno-unknown-pragmas 
@@ -57,34 +57,34 @@ INFO: [HLS 200-2036] Building debug C Simulation binaries
    Compiling ../../../../test/tb_conv1.cpp in debug mode
    Compiling ../../../../test/tb_set14.cpp in debug mode
    Compiling ../../../../test/tb_srcnn.cpp in debug mode
+   Compiling ../../../../test/util.cpp in debug mode
    Compiling ../../../../src/conv1.cpp in debug mode
    Compiling ../../../../src/conv2.cpp in debug mode
    Compiling ../../../../src/conv3.cpp in debug mode
    Compiling ../../../../src/srcnn.cpp in debug mode
-   Compiling ../../../../src/util.cpp in debug mode
    Generating csim.exe
 ***** CONV1 Golden Reference *****
-  - Butterfly MSE: 0.0173809
+  - Butterfly MSE: 3.40524e-015
 
 ***** SRCNN Golden Reference *****
-  - Butterfly MSE: 0.0967919
+  - Butterfly MSE: 2.17875e-013
 
 ***** SRCNN - Set14 Test *****
 Image Name     PSNR GT vs HR (dB)  PSNR GT vs HR MATLAB (dB)  PSNR GT vs LR (dB)  MSE GT vs HR   MSE GT vs HR MATLAB        
-baboon         15.5561             24.9898                    27.3618             0.0499429      0.00161402                 
-barbara        14.986              26.2451                    24.8997             0.0585248      0.00316839                 
-bridge         12.261              26.8397                    25.2317             0.0726693      0.00237435                 
-coastguard     15.9172             33.4187                    26.3                0.0411671      0.00206895                 
-face           14.5337             27.3319                    32.6794             0.028527       0.000454177                
-flowers        12.1127             35.727                     25.6995             0.0774504      0.00184746                 
-foreman        14.6347             30.8413                    33.2014             0.0714745      0.000266235                
-lenna          13.6816             27.1209                    29.1689             0.0657572      0.000822304                
-man            13.2712             27.9822                    26.0613             0.0524959      0.00193996                 
-monarch        11.5636             33.4745                    24.5799             0.0926292      0.00159023                 
-pepper         15.066              29.4367                    32.0454             0.0571418      0.000447919                
-ppt3           11.7709             27.6649                    26.6842             0.119339       0.0011378                  
-zebra          10.526              0                          24.7423             0.110664       0.00171134                 
+baboon         27.9104             24.9898                    27.3618             0.00161402     0.00161402                 
+barbara        24.9868             26.2451                    24.8997             0.00316839     0.00316839                 
+bridge         24.0522             26.8397                    25.2317             0.00237435     0.00237435                 
+coastguard     26.8309             33.4187                    26.3                0.00206895     0.00206895                 
+face           33.3716             27.3319                    32.6794             0.000454178    0.000454177                
+flowers        27.322              35.727                     25.6995             0.00184747     0.00184746                 
+foreman        35.7021             30.8413                    33.2014             0.000266235    0.000266235                
+lenna          30.8275             27.1209                    29.1689             0.000822305    0.000822304                
+man            27.1089             27.9822                    26.0613             0.00193997     0.00193996                 
+monarch        27.9674             33.4745                    24.5799             0.00159024     0.00159023                 
+pepper         33.4585             29.4367                    32.0454             0.00044792     0.000447919                
+ppt3           29.3386             27.6649                    26.6842             0.0011378      0.0011378                  
+zebra          27.4291             0                          24.7423             0.00171135     0.00171134                 
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 72.063 seconds; current allocated memory: 0.711 MB.
-INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 2 seconds. Total elapsed time: 74.404 seconds; peak allocated memory: 91.883 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 74.821 seconds; current allocated memory: 0.691 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 2 seconds. Total elapsed time: 77.229 seconds; peak allocated memory: 92.090 MB.

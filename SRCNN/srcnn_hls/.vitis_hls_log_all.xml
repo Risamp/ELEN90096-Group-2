@@ -3,30 +3,15 @@
   <errorLogs>
     <logs>
       <synLog>
-        <logs message="ERROR: [HLS 207-2576] cannot use 'throw' with exceptions disabled (src/util.cpp:111:9)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T22:52:41.364+1100"/>
-        <logs message="ERROR: [HLS 207-2576] cannot use 'throw' with exceptions disabled (src/util.cpp:56:9)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T22:52:41.357+1100"/>
-        <logs message="ERROR: [HLS 207-2576] cannot use 'throw' with exceptions disabled (src/util.cpp:37:9)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T22:52:41.336+1100"/>
-        <logs message="ERROR: [HLS 207-2576] cannot use 'throw' with exceptions disabled (src/util.cpp:17:9)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T22:52:41.325+1100"/>
+        <logs message="ERROR: [HLS 207-2576] cannot use 'throw' with exceptions disabled (src/util.cpp:111:9)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-14T01:37:44.595+1100"/>
+        <logs message="ERROR: [HLS 207-2576] cannot use 'throw' with exceptions disabled (src/util.cpp:56:9)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-14T01:37:44.588+1100"/>
+        <logs message="ERROR: [HLS 207-2576] cannot use 'throw' with exceptions disabled (src/util.cpp:37:9)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-14T01:37:44.580+1100"/>
+        <logs message="ERROR: [HLS 207-2576] cannot use 'throw' with exceptions disabled (src/util.cpp:17:9)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-14T01:37:44.573+1100"/>
       </synLog>
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="srcnn_hls" solutionName="solution1" date="2023-10-14T01:29:54.318+1100"/>
-        <logs message="ERROR: [SIM 211-107] error deleting &quot;C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim/build\output_zebra_3x_GT_u8.bin&quot;: permission denied" projectName="srcnn_hls" solutionName="solution1" date="2023-10-14T01:29:54.310+1100"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="srcnn_hls" solutionName="solution1" date="2023-10-14T01:29:19.181+1100"/>
-        <logs message="ERROR: [SIM 211-107] error deleting &quot;C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim/build\output_zebra_3x_GT_u8.bin&quot;: permission denied" projectName="srcnn_hls" solutionName="solution1" date="2023-10-14T01:29:19.174+1100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-14T00:49:58.797+1100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T23:21:32.774+1100"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T23:16:56.592+1100"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T23:15:31.229+1100"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T23:14:22.198+1100"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T23:12:50.811+1100"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T22:54:30.026+1100"/>
-        <logs message="ERROR: [SIM 211-107] error deleting &quot;C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim/build\output_baboon_3x_GT_u8.bin&quot;: permission denied" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T22:54:30.019+1100"/>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T22:53:40.589+1100"/>
-        <logs message="ERROR: [SIM 211-107] error deleting &quot;C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim/build\output_baboon_3x_GT_u8.bin&quot;: permission denied" projectName="srcnn_hls" solutionName="solution1" date="2023-10-13T22:53:40.582+1100"/>
-      </csimLog>
+      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>

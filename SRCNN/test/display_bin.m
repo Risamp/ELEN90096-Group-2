@@ -1,5 +1,5 @@
 % out = read_bin_file("../srcnn_hls/solution1/csim/build/output_baboon_3x_GT_u8.bin", [255, 255]);
-target_image = "zebra";
+target_image = "lenna";
 
 our_path = strcat("C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\csim\build\output_", target_image, "_3x_GT_u8.bin");
 original_path = strcat("C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\csim\build\set14\", target_image, "_3x_GT_u8.bin");

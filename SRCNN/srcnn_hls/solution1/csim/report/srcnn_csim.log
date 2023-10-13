@@ -4,32 +4,32 @@ INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../../test/tb_conv1.cpp in debug mode
    Compiling ../../../../test/tb_set14.cpp in debug mode
    Compiling ../../../../test/tb_srcnn.cpp in debug mode
+   Compiling ../../../../test/util.cpp in debug mode
    Compiling ../../../../src/conv1.cpp in debug mode
    Compiling ../../../../src/conv2.cpp in debug mode
    Compiling ../../../../src/conv3.cpp in debug mode
    Compiling ../../../../src/srcnn.cpp in debug mode
-   Compiling ../../../../src/util.cpp in debug mode
    Generating csim.exe
 ***** CONV1 Golden Reference *****
-  - Butterfly MSE: 0.0173809
+  - Butterfly MSE: 3.40524e-015
 
 ***** SRCNN Golden Reference *****
-  - Butterfly MSE: 0.0967919
+  - Butterfly MSE: 2.17875e-013
 
 ***** SRCNN - Set14 Test *****
 Image Name     PSNR GT vs HR (dB)  PSNR GT vs HR MATLAB (dB)  PSNR GT vs LR (dB)  MSE GT vs HR   MSE GT vs HR MATLAB        
-baboon         15.5561             24.9898                    27.3618             0.0499429      0.00161402                 
-barbara        14.986              26.2451                    24.8997             0.0585248      0.00316839                 
-bridge         12.261              26.8397                    25.2317             0.0726693      0.00237435                 
-coastguard     15.9172             33.4187                    26.3                0.0411671      0.00206895                 
-face           14.5337             27.3319                    32.6794             0.028527       0.000454177                
-flowers        12.1127             35.727                     25.6995             0.0774504      0.00184746                 
-foreman        14.6347             30.8413                    33.2014             0.0714745      0.000266235                
-lenna          13.6816             27.1209                    29.1689             0.0657572      0.000822304                
-man            13.2712             27.9822                    26.0613             0.0524959      0.00193996                 
-monarch        11.5636             33.4745                    24.5799             0.0926292      0.00159023                 
-pepper         15.066              29.4367                    32.0454             0.0571418      0.000447919                
-ppt3           11.7709             27.6649                    26.6842             0.119339       0.0011378                  
-zebra          10.526              0                          24.7423             0.110664       0.00171134                 
+baboon         27.9104             24.9898                    27.3618             0.00161402     0.00161402                 
+barbara        24.9868             26.2451                    24.8997             0.00316839     0.00316839                 
+bridge         24.0522             26.8397                    25.2317             0.00237435     0.00237435                 
+coastguard     26.8309             33.4187                    26.3                0.00206895     0.00206895                 
+face           33.3716             27.3319                    32.6794             0.000454178    0.000454177                
+flowers        27.322              35.727                     25.6995             0.00184747     0.00184746                 
+foreman        35.7021             30.8413                    33.2014             0.000266235    0.000266235                
+lenna          30.8275             27.1209                    29.1689             0.000822305    0.000822304                
+man            27.1089             27.9822                    26.0613             0.00193997     0.00193996                 
+monarch        27.9674             33.4745                    24.5799             0.00159024     0.00159023                 
+pepper         33.4585             29.4367                    32.0454             0.00044792     0.000447919                
+ppt3           29.3386             27.6649                    26.6842             0.0011378      0.0011378                  
+zebra          27.4291             0                          24.7423             0.00171135     0.00171134                 
 INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

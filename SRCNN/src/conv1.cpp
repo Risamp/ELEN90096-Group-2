@@ -53,8 +53,8 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 					for (int kx = 0; kx < F1; kx++) {
 
 						// get buffer-space coordinates
-						int by = ty + P1 + ky;
-						int bx = tx + P1 + kx;
+						int by = ty + ky;
+						int bx = tx + kx;
 
 						// for each input layer
 						// TODO: PIPELINE THIS

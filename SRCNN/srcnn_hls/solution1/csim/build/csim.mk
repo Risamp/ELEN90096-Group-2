@@ -19,7 +19,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../test/csim.cpp ../../../../test/tb_conv1.cpp ../../../../test/tb_set14.cpp ../../../../test/tb_srcnn.cpp ../../../../src/conv1.cpp ../../../../src/conv2.cpp ../../../../src/conv3.cpp ../../../../src/srcnn.cpp ../../../../src/util.cpp
+HLS_SOURCES = ../../../../test/csim.cpp ../../../../test/tb_conv1.cpp ../../../../test/tb_set14.cpp ../../../../test/tb_srcnn.cpp ../../../../test/util.cpp ../../../../src/conv1.cpp ../../../../src/conv2.cpp ../../../../src/conv3.cpp ../../../../src/srcnn.cpp
 
 override TARGET := csim.exe
 
@@ -98,6 +98,12 @@ $(ObjDir)/tb_srcnn.o: ../../../../test/tb_srcnn.cpp $(ObjDir)/.dir
 
 -include $(ObjDir)/tb_srcnn.d
 
+$(ObjDir)/util.o: ../../../../test/util.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../test/util.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I../../../../src -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/util.d
+
 $(ObjDir)/conv1.o: ../../../../src/conv1.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../src/conv1.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
@@ -121,9 +127,3 @@ $(ObjDir)/srcnn.o: ../../../../src/srcnn.cpp $(ObjDir)/.dir
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/srcnn.d
-
-$(ObjDir)/util.o: ../../../../src/util.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../src/util.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/util.d

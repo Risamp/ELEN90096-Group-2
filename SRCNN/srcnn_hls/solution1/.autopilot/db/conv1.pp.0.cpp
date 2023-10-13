@@ -27789,6 +27789,166 @@ namespace std
 
 }
 # 5 "src/conv1.cpp" 2
+# 1 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cstring" 1 3
+# 40 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cstring" 3
+
+
+# 1 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\string.h" 1 3
+# 21 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\string.h" 3
+extern "C" {
+# 45 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\string.h" 3
+  __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _memccpy(void *_Dst,const void *_Src,int _Val,size_t _MaxCount);
+                void *__attribute__((__cdecl__)) memchr(const void *_Buf ,int _Val,size_t _MaxCount);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _memicmp(const void *_Buf1,const void *_Buf2,size_t _Size);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _memicmp_l(const void *_Buf1,const void *_Buf2,size_t _Size,_locale_t _Locale);
+  int __attribute__((__cdecl__)) memcmp(const void *_Buf1,const void *_Buf2,size_t _Size);
+  void * __attribute__((__cdecl__)) memcpy(void * __restrict__ _Dst,const void * __restrict__ _Src,size_t _Size) ;
+  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) memcpy_s (void *_dest,size_t _numberOfElements,const void *_src,size_t _count);
+  void * __attribute__((__cdecl__)) mempcpy (void *_Dst, const void *_Src, size_t _Size);
+  void * __attribute__((__cdecl__)) memset(void *_Dst,int _Val,size_t _Size);
+
+  void * __attribute__((__cdecl__)) memccpy(void *_Dst,const void *_Src,int _Val,size_t _Size) ;
+  int __attribute__((__cdecl__)) memicmp(const void *_Buf1,const void *_Buf2,size_t _Size) ;
+
+
+  char * __attribute__((__cdecl__)) _strset(char *_Str,int _Val) ;
+  char * __attribute__((__cdecl__)) _strset_l(char *_Str,int _Val,_locale_t _Locale) ;
+  char * __attribute__((__cdecl__)) strcpy(char * __restrict__ _Dest,const char * __restrict__ _Source);
+  char * __attribute__((__cdecl__)) strcat(char * __restrict__ _Dest,const char * __restrict__ _Source);
+  int __attribute__((__cdecl__)) strcmp(const char *_Str1,const char *_Str2);
+  size_t __attribute__((__cdecl__)) strlen(const char *_Str);
+  size_t __attribute__((__cdecl__)) strnlen(const char *_Str,size_t _MaxCount);
+  void *__attribute__((__cdecl__)) memmove(void *_Dst,const void *_Src,size_t _Size) ;
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _strdup(const char *_Src);
+                char *__attribute__((__cdecl__)) strchr(const char *_Str,int _Val);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _stricmp(const char *_Str1,const char *_Str2);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _strcmpi(const char *_Str1,const char *_Str2);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _stricmp_l(const char *_Str1,const char *_Str2,_locale_t _Locale);
+  int __attribute__((__cdecl__)) strcoll(const char *_Str1,const char *_Str2);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _strcoll_l(const char *_Str1,const char *_Str2,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _stricoll(const char *_Str1,const char *_Str2);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _stricoll_l(const char *_Str1,const char *_Str2,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _strncoll (const char *_Str1,const char *_Str2,size_t _MaxCount);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _strncoll_l(const char *_Str1,const char *_Str2,size_t _MaxCount,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _strnicoll (const char *_Str1,const char *_Str2,size_t _MaxCount);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _strnicoll_l(const char *_Str1,const char *_Str2,size_t _MaxCount,_locale_t _Locale);
+  size_t __attribute__((__cdecl__)) strcspn(const char *_Str,const char *_Control);
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _strerror(const char *_ErrMsg) ;
+  char *__attribute__((__cdecl__)) strerror(int) ;
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _strlwr(char *_String) ;
+  char *strlwr_l(char *_String,_locale_t _Locale) ;
+  char *__attribute__((__cdecl__)) strncat(char * __restrict__ _Dest,const char * __restrict__ _Source,size_t _Count) ;
+  int __attribute__((__cdecl__)) strncmp(const char *_Str1,const char *_Str2,size_t _MaxCount);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _strnicmp(const char *_Str1,const char *_Str2,size_t _MaxCount);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _strnicmp_l(const char *_Str1,const char *_Str2,size_t _MaxCount,_locale_t _Locale);
+  char *strncpy(char * __restrict__ _Dest,const char * __restrict__ _Source,size_t _Count) ;
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _strnset(char *_Str,int _Val,size_t _MaxCount) ;
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _strnset_l(char *str,int c,size_t count,_locale_t _Locale) ;
+                char *__attribute__((__cdecl__)) strpbrk(const char *_Str,const char *_Control);
+                char *__attribute__((__cdecl__)) strrchr(const char *_Str,int _Ch);
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _strrev(char *_Str);
+  size_t __attribute__((__cdecl__)) strspn(const char *_Str,const char *_Control);
+                char *__attribute__((__cdecl__)) strstr(const char *_Str,const char *_SubStr);
+  char *__attribute__((__cdecl__)) strtok(char * __restrict__ _Str,const char * __restrict__ _Delim) ;
+
+
+  char *strtok_r(char * __restrict__ _Str, const char * __restrict__ _Delim, char ** __restrict__ __last);
+
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _strupr(char *_String) ;
+  __attribute__ ((__dllimport__)) char *_strupr_l(char *_String,_locale_t _Locale) ;
+  size_t __attribute__((__cdecl__)) strxfrm(char * __restrict__ _Dst,const char * __restrict__ _Src,size_t _MaxCount);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _strxfrm_l(char * __restrict__ _Dst,const char * __restrict__ _Src,size_t _MaxCount,_locale_t _Locale);
+
+
+  char *__attribute__((__cdecl__)) strdup(const char *_Src) ;
+  int __attribute__((__cdecl__)) strcmpi(const char *_Str1,const char *_Str2) ;
+  int __attribute__((__cdecl__)) stricmp(const char *_Str1,const char *_Str2) ;
+  char *__attribute__((__cdecl__)) strlwr(char *_Str) ;
+  int __attribute__((__cdecl__)) strnicmp(const char *_Str1,const char *_Str,size_t _MaxCount) ;
+  int __attribute__((__cdecl__)) strncasecmp (const char *, const char *, size_t);
+  int __attribute__((__cdecl__)) strcasecmp (const char *, const char *);
+
+
+
+
+
+
+
+  char *__attribute__((__cdecl__)) strnset(char *_Str,int _Val,size_t _MaxCount) ;
+  char *__attribute__((__cdecl__)) strrev(char *_Str) ;
+  char *__attribute__((__cdecl__)) strset(char *_Str,int _Val) ;
+  char *__attribute__((__cdecl__)) strupr(char *_Str) ;
+# 187 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\string.h" 3
+}
+
+
+
+# 1 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\sec_api/string_s.h" 1 3
+
+
+
+
+
+
+
+
+# 1 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\string.h" 1 3
+# 10 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\sec_api/string_s.h" 2 3
+# 191 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\x86_64-w64-mingw32\\include\\string.h" 2 3
+# 43 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cstring" 2 3
+# 71 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\cstring" 3
+namespace std
+{
+
+
+  using ::memchr;
+  using ::memcmp;
+  using ::memcpy;
+  using ::memmove;
+  using ::memset;
+  using ::strcat;
+  using ::strcmp;
+  using ::strcoll;
+  using ::strcpy;
+  using ::strcspn;
+  using ::strerror;
+  using ::strlen;
+  using ::strncat;
+  using ::strncmp;
+  using ::strncpy;
+  using ::strspn;
+  using ::strtok;
+  using ::strxfrm;
+  using ::strchr;
+  using ::strpbrk;
+  using ::strrchr;
+  using ::strstr;
+
+
+  inline void*
+  memchr(void* __s, int __c, size_t __n)
+  { return __builtin_memchr(__s, __c, __n); }
+
+  inline char*
+  strchr(char* __s, int __n)
+  { return __builtin_strchr(__s, __n); }
+
+  inline char*
+  strpbrk(char* __s1, const char* __s2)
+  { return __builtin_strpbrk(__s1, __s2); }
+
+  inline char*
+  strrchr(char* __s, int __n)
+  { return __builtin_strrchr(__s, __n); }
+
+  inline char*
+  strstr(char* __s1, const char* __s2)
+  { return __builtin_strstr(__s1, __s2); }
+
+
+
+}
+# 6 "src/conv1.cpp" 2
 
 using namespace std;
 
@@ -27798,39 +27958,109 @@ void conv1(ftmap_t input_ftmap[1][255][255],
            param_t conv1_biases[64],
            ftmap_t output_ftmap[64][255][255])
 {
-
-  int padding = (9 - 1) / 2;
-
-
-     VITIS_LOOP_18_1: for (int n1 = 0; n1 < 64; n1++) {
+# 28 "src/conv1.cpp"
+#pragma HLS PIPELINE off
 
 
+ VITIS_LOOP_31_1: for (int tj = 0; tj < 3; tj++) {
+  VITIS_LOOP_32_2: for (int ti = 0; ti < 3; ti++) {
 
-         VITIS_LOOP_22_2: for (int h = 0; h < 255; h++) {
-             VITIS_LOOP_23_3: for (int w = 0; w < 255; w++) {
-
-
-                 VITIS_LOOP_26_4: for (int f1h = 0; f1h < 9; f1h++) {
-                     VITIS_LOOP_27_5: for (int f1w = 0; f1w < 9; f1w++) {
+   int ty0 = tj * 255 / 3;
+   int tx0 = ti * 255 / 3;
 
 
-       int yPixelClamped = clamp(h + f1h - padding, 0, 255 - 1);
-       int xPixelClamped = clamp(w + f1w - padding, 0, 255 - 1);
+   ftmap_t input_fm_buffer[1][255 / 3 + (2 * (9 - 1) / 2)][255 / 3 + (2 * (9 - 1) / 2)];
+   ftmap_t output_fm_buffer[64][255 / 3][255 / 3] = {0};
 
 
-                         VITIS_LOOP_34_6: for (int n0 = 0; n0 < 1; n0++) {
-        output_ftmap[n1][h][w] += conv1_weights[n1][n0][f1h][f1w] * input_ftmap[n0][yPixelClamped][xPixelClamped];
-                         }
-                     }
-                 }
+   load_buffer_tile_c1(input_fm_buffer, input_ftmap, tx0, ty0);
 
 
-                 output_ftmap[n1][h][w] = output_ftmap[n1][h][w] + conv1_biases[n1];
-                 if (output_ftmap[n1][h][w] < 0) {
-                     output_ftmap[n1][h][w] = 0;
-                 }
-             }
-         }
-     }
+   VITIS_LOOP_45_3: for (int nout = 0; nout < 64; nout++) {
 
+
+    VITIS_LOOP_48_4: for (int ty = 0; ty < 255 / 3; ty++) {
+    VITIS_LOOP_49_5: for (int tx = 0; tx < 255 / 3; tx++) {
+
+
+     VITIS_LOOP_52_6: for (int ky = 0; ky < 9; ky++) {
+     VITIS_LOOP_53_7: for (int kx = 0; kx < 9; kx++) {
+
+
+      int by = ty + (9 - 1) / 2 + ky;
+      int bx = tx + (9 - 1) / 2 + kx;
+
+
+
+      VITIS_LOOP_61_8: for (int nin = 0; nin < 1; nin++) {
+       output_fm_buffer[nout][ty][tx] += conv1_weights[nout][nin][ky][kx] * input_fm_buffer[nin][by][bx];
+      }
+     }}
+
+    }}
+
+   }
+
+
+   export_buffer_tile_c1(output_fm_buffer, output_ftmap, tx0, ty0);
+  }}
+
+
+
+
+
+  VITIS_LOOP_78_9: for (int nr = 0; nr < 64; nr++) {
+  VITIS_LOOP_79_10: for (int yr = 0; yr < 255; yr++) {
+  VITIS_LOOP_80_11: for (int xr = 0; xr < 255; xr++) {
+
+   output_ftmap[nr][yr][xr] += conv1_biases[nr];
+   if (output_ftmap[nr][yr][xr] < 0) {
+    output_ftmap[nr][yr][xr] = 0;
+   }
+
+  }}}
+}
+# 97 "src/conv1.cpp"
+void load_buffer_tile_c1(
+ ftmap_t input_fm_buffer[1][255 / 3 + (2 * (9 - 1) / 2)][255 / 3 + (2 * (9 - 1) / 2)],
+ ftmap_t input_fm[1][255][255],
+ int tx0,
+ int ty0
+) {
+
+ memset(input_fm_buffer, 0, 1 * (255 / 3 + (2 * (9 - 1) / 2)) * (255 / 3 + (2 * (9 - 1) / 2)) * sizeof(ftmap_t));
+
+ VITIS_LOOP_106_1: for (int nin = 0; nin < 1; nin++) {
+  VITIS_LOOP_107_2: for (int by = 0; by < 255 / 3 + (2 * (9 - 1) / 2); by++) {
+   VITIS_LOOP_108_3: for (int bx = 0; bx < 255 / 3 + (2 * (9 - 1) / 2); bx++) {
+
+
+    int xClamped = clamp(tx0 - (9 - 1) / 2 + bx, 0, 255 - 1);
+    int yClamped = clamp(ty0 - (9 - 1) / 2 + by, 0, 255 - 1);
+
+
+    input_fm_buffer[nin][by][bx] = input_fm[nin][yClamped][xClamped];
+   }
+  }
+ }
+}
+
+void export_buffer_tile_c1(
+ ftmap_t output_fm_buffer[64][255 / 3][255 / 3],
+ ftmap_t output_ftmap[64][255][255],
+ int tx0,
+ int ty0
+) {
+ VITIS_LOOP_127_1: for (int nout = 0; nout < 64; nout++) {
+  VITIS_LOOP_128_2: for (int ty = 0; ty < 255 / 3; ty++) {
+   VITIS_LOOP_129_3: for (int tx = 0; tx < 255 / 3; tx++) {
+
+    output_ftmap[nout][ty0 + ty][tx0 + tx] = output_fm_buffer[nout][ty][tx];
+
+   }
+  }
+ }
+
+
+ memset(output_fm_buffer, 0, 64 * 255 / 3 * 255 / 3 * sizeof(ftmap_t));
 }
