@@ -157,7 +157,7 @@ extern "C" {
 # 2 "<built-in>" 2
 # 1 "src/conv1.cpp" 2
 # 1 "src/srcnn.h" 1
-# 26 "src/srcnn.h"
+# 28 "src/srcnn.h"
 typedef float ftmap_t;
 typedef float param_t;
 
@@ -178,17 +178,6 @@ void conv1(ftmap_t input_ftmap[1][255][255],
            ftmap_t output_ftmap[64][255][255]);
 
 
-void load_buffer_tile_c1(ftmap_t input_fm_buffer[1][255 / 3 + (2 * (9 - 1) / 2)][255 / 3 + (2 * (9 - 1) / 2)],
-                         ftmap_t input_fm[1][255][255],
-                         int tx0,
-                         int ty0);
-
-void export_buffer_tile_c1(ftmap_t output_fm_buffer[64][255 / 3][255 / 3],
-                           ftmap_t output_ftmap[64][255][255],
-                           int tx0,
-                           int ty0);
-
-
 void conv2(ftmap_t input_ftmap[64][255][255],
            param_t conv2_weights[32][64][1][1],
            param_t conv2_biases[32],
@@ -202,6 +191,37 @@ void conv3(ftmap_t input_ftmap[32][255][255],
 
 
 int clamp(int value, int min, int max);
+
+
+void load_buffer_tile_c1(ftmap_t input_fm_buffer[1][255 / 3 + (2 * (9 - 1) / 2)][255 / 3 + (2 * (9 - 1) / 2)],
+                         ftmap_t input_fm[1][255][255],
+                         int tx0,
+                         int ty0);
+
+void export_buffer_tile_c1(ftmap_t output_fm_buffer[64][255 / 3][255 / 3],
+                           ftmap_t output_ftmap[64][255][255],
+                           int tx0,
+                           int ty0);
+
+void load_buffer_tile_c2(ftmap_t input_fm_buffer[64][255 / 3 + (2 * (1 - 1) / 2)][255 / 3 + (2 * (1 - 1) / 2)],
+                         ftmap_t input_fm[64][255][255],
+                         int tx0,
+                         int ty0);
+
+void export_buffer_tile_c2(ftmap_t output_fm_buffer[32][255 / 3][255 / 3],
+                           ftmap_t output_ftmap[32][255][255],
+                           int tx0,
+                           int ty0);
+
+void load_buffer_tile_c3(ftmap_t input_fm_buffer[32][255 / 3 + (2 * (5 - 1) / 2)][255 / 3 + (2 * (5 - 1) / 2)],
+                         ftmap_t input_fm[32][255][255],
+                         int tx0,
+                         int ty0);
+
+void export_buffer_tile_c3(ftmap_t output_fm_buffer[1][255 / 3][255 / 3],
+                           ftmap_t output_ftmap[1][255][255],
+                           int tx0,
+                           int ty0);
 # 2 "src/conv1.cpp" 2
 # 1 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\iostream" 1 3
 # 37 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\iostream" 3
@@ -27962,37 +27982,40 @@ void conv1(ftmap_t input_ftmap[1][255][255],
 #pragma HLS PIPELINE off
 
 
- VITIS_LOOP_31_1: for (int tj = 0; tj < 3; tj++) {
-  VITIS_LOOP_32_2: for (int ti = 0; ti < 3; ti++) {
+ TILE_J: for (int tj = 0; tj < 3; tj++) {
+  TILE_I: for (int ti = 0; ti < 3; ti++) {
 
    int ty0 = tj * 255 / 3;
    int tx0 = ti * 255 / 3;
 
 
    ftmap_t input_fm_buffer[1][255 / 3 + (2 * (9 - 1) / 2)][255 / 3 + (2 * (9 - 1) / 2)];
-   ftmap_t output_fm_buffer[64][255 / 3][255 / 3] = {0};
+#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=block factor=8
+ ftmap_t output_fm_buffer[64][255 / 3][255 / 3] = {0};
+#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=block factor=8
 
 
-   load_buffer_tile_c1(input_fm_buffer, input_ftmap, tx0, ty0);
+ load_buffer_tile_c1(input_fm_buffer, input_ftmap, tx0, ty0);
 
 
-   VITIS_LOOP_45_3: for (int nout = 0; nout < 64; nout++) {
+   NOUT: for (int nout = 0; nout < 64; nout++) {
+#pragma HLS UNROLL factor=8
 
 
-    VITIS_LOOP_48_4: for (int ty = 0; ty < 255 / 3; ty++) {
-    VITIS_LOOP_49_5: for (int tx = 0; tx < 255 / 3; tx++) {
+ TY: for (int ty = 0; ty < 255 / 3; ty++) {
+    TX: for (int tx = 0; tx < 255 / 3; tx++) {
 
 
-     VITIS_LOOP_52_6: for (int ky = 0; ky < 9; ky++) {
-     VITIS_LOOP_53_7: for (int kx = 0; kx < 9; kx++) {
+     KY: for (int ky = 0; ky < 9; ky++) {
+     KX: for (int kx = 0; kx < 9; kx++) {
 
 
-      int by = ty + (9 - 1) / 2 + ky;
-      int bx = tx + (9 - 1) / 2 + kx;
+      int by = ty + ky;
+      int bx = tx + kx;
 
 
 
-      VITIS_LOOP_61_8: for (int nin = 0; nin < 1; nin++) {
+      NIN: for (int nin = 0; nin < 1; nin++) {
        output_fm_buffer[nout][ty][tx] += conv1_weights[nout][nin][ky][kx] * input_fm_buffer[nin][by][bx];
       }
      }}
@@ -28009,9 +28032,9 @@ void conv1(ftmap_t input_ftmap[1][255][255],
 
 
 
-  VITIS_LOOP_78_9: for (int nr = 0; nr < 64; nr++) {
-  VITIS_LOOP_79_10: for (int yr = 0; yr < 255; yr++) {
-  VITIS_LOOP_80_11: for (int xr = 0; xr < 255; xr++) {
+  RELU_N: for (int nr = 0; nr < 64; nr++) {
+  RELU_Y: for (int yr = 0; yr < 255; yr++) {
+  RELU_X: for (int xr = 0; xr < 255; xr++) {
 
    output_ftmap[nr][yr][xr] += conv1_biases[nr];
    if (output_ftmap[nr][yr][xr] < 0) {
@@ -28020,7 +28043,7 @@ void conv1(ftmap_t input_ftmap[1][255][255],
 
   }}}
 }
-# 97 "src/conv1.cpp"
+# 100 "src/conv1.cpp"
 void load_buffer_tile_c1(
  ftmap_t input_fm_buffer[1][255 / 3 + (2 * (9 - 1) / 2)][255 / 3 + (2 * (9 - 1) / 2)],
  ftmap_t input_fm[1][255][255],
@@ -28030,9 +28053,9 @@ void load_buffer_tile_c1(
 
  memset(input_fm_buffer, 0, 1 * (255 / 3 + (2 * (9 - 1) / 2)) * (255 / 3 + (2 * (9 - 1) / 2)) * sizeof(ftmap_t));
 
- VITIS_LOOP_106_1: for (int nin = 0; nin < 1; nin++) {
-  VITIS_LOOP_107_2: for (int by = 0; by < 255 / 3 + (2 * (9 - 1) / 2); by++) {
-   VITIS_LOOP_108_3: for (int bx = 0; bx < 255 / 3 + (2 * (9 - 1) / 2); bx++) {
+ IN_BUFFER_NIN: for (int nin = 0; nin < 1; nin++) {
+  IN_BUFFER_BY: for (int by = 0; by < 255 / 3 + (2 * (9 - 1) / 2); by++) {
+   IN_BUFFER_BX: for (int bx = 0; bx < 255 / 3 + (2 * (9 - 1) / 2); bx++) {
 
 
     int xClamped = clamp(tx0 - (9 - 1) / 2 + bx, 0, 255 - 1);
@@ -28051,9 +28074,9 @@ void export_buffer_tile_c1(
  int tx0,
  int ty0
 ) {
- VITIS_LOOP_127_1: for (int nout = 0; nout < 64; nout++) {
-  VITIS_LOOP_128_2: for (int ty = 0; ty < 255 / 3; ty++) {
-   VITIS_LOOP_129_3: for (int tx = 0; tx < 255 / 3; tx++) {
+ OUT_BUFFER_NOUT: for (int nout = 0; nout < 64; nout++) {
+  OUT_BUFFER_TY: for (int ty = 0; ty < 255 / 3; ty++) {
+   OUT_BUFFER_TX: for (int tx = 0; tx < 255 / 3; tx++) {
 
     output_ftmap[nout][ty0 + ty][tx0 + tx] = output_fm_buffer[nout][ty][tx];
 

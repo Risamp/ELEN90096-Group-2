@@ -2,22 +2,11 @@
 <vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
   <errorLogs>
     <logs>
-      <synLog>
-        <logs message="ERROR: [HLS 207-2576] cannot use 'throw' with exceptions disabled (src/util.cpp:111:9)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-14T01:37:44.595+1100"/>
-        <logs message="ERROR: [HLS 207-2576] cannot use 'throw' with exceptions disabled (src/util.cpp:56:9)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-14T01:37:44.588+1100"/>
-        <logs message="ERROR: [HLS 207-2576] cannot use 'throw' with exceptions disabled (src/util.cpp:37:9)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-14T01:37:44.580+1100"/>
-        <logs message="ERROR: [HLS 207-2576] cannot use 'throw' with exceptions disabled (src/util.cpp:17:9)" projectName="srcnn_hls" solutionName="solution1" date="2023-10-14T01:37:44.573+1100"/>
-      </synLog>
+      <synLog/>
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="srcnn_hls" solutionName="solution1" date="2023-10-14T02:01:55.829+1100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-14T01:59:50.150+1100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-14T01:58:47.359+1100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-14T01:56:56.044+1100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-14T01:54:56.563+1100"/>
-      </csimLog>
+      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>

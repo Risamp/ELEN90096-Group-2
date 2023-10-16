@@ -157,7 +157,7 @@ extern "C" {
 # 2 "<built-in>" 2
 # 1 "src/srcnn.cpp" 2
 # 1 "src/srcnn.h" 1
-# 26 "src/srcnn.h"
+# 28 "src/srcnn.h"
 typedef float ftmap_t;
 typedef float param_t;
 
@@ -178,17 +178,6 @@ void conv1(ftmap_t input_ftmap[1][255][255],
            ftmap_t output_ftmap[64][255][255]);
 
 
-void load_buffer_tile_c1(ftmap_t input_fm_buffer[1][255 / 3 + (2 * (9 - 1) / 2)][255 / 3 + (2 * (9 - 1) / 2)],
-                         ftmap_t input_fm[1][255][255],
-                         int tx0,
-                         int ty0);
-
-void export_buffer_tile_c1(ftmap_t output_fm_buffer[64][255 / 3][255 / 3],
-                           ftmap_t output_ftmap[64][255][255],
-                           int tx0,
-                           int ty0);
-
-
 void conv2(ftmap_t input_ftmap[64][255][255],
            param_t conv2_weights[32][64][1][1],
            param_t conv2_biases[32],
@@ -202,6 +191,37 @@ void conv3(ftmap_t input_ftmap[32][255][255],
 
 
 int clamp(int value, int min, int max);
+
+
+void load_buffer_tile_c1(ftmap_t input_fm_buffer[1][255 / 3 + (2 * (9 - 1) / 2)][255 / 3 + (2 * (9 - 1) / 2)],
+                         ftmap_t input_fm[1][255][255],
+                         int tx0,
+                         int ty0);
+
+void export_buffer_tile_c1(ftmap_t output_fm_buffer[64][255 / 3][255 / 3],
+                           ftmap_t output_ftmap[64][255][255],
+                           int tx0,
+                           int ty0);
+
+void load_buffer_tile_c2(ftmap_t input_fm_buffer[64][255 / 3 + (2 * (1 - 1) / 2)][255 / 3 + (2 * (1 - 1) / 2)],
+                         ftmap_t input_fm[64][255][255],
+                         int tx0,
+                         int ty0);
+
+void export_buffer_tile_c2(ftmap_t output_fm_buffer[32][255 / 3][255 / 3],
+                           ftmap_t output_ftmap[32][255][255],
+                           int tx0,
+                           int ty0);
+
+void load_buffer_tile_c3(ftmap_t input_fm_buffer[32][255 / 3 + (2 * (5 - 1) / 2)][255 / 3 + (2 * (5 - 1) / 2)],
+                         ftmap_t input_fm[32][255][255],
+                         int tx0,
+                         int ty0);
+
+void export_buffer_tile_c3(ftmap_t output_fm_buffer[1][255 / 3][255 / 3],
+                           ftmap_t output_ftmap[1][255][255],
+                           int tx0,
+                           int ty0);
 # 2 "src/srcnn.cpp" 2
 # 1 "src/util.h" 1
 
@@ -17433,7 +17453,9 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][2
 #pragma HLS PIPELINE off
 
  static ftmap_t conv1_output_ftmap[64][255][255] = {0};
+#pragma HLS ARRAY_PARTITION variable=conv1_output_ftmap type=block factor=8
  static ftmap_t conv2_output_ftmap[32][255][255] = {0};
+#pragma HLS ARRAY_PARTITION variable=conv2_output_ftmap type=block factor=8
 
  memset(conv1_output_ftmap, 0, 64 * 255 * 255 * sizeof(ftmap_t));
  memset(conv2_output_ftmap, 0, 32 * 255 * 255 * sizeof(ftmap_t));

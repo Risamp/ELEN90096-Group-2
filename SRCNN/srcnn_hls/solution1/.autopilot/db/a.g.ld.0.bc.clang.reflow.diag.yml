@@ -1,0 +1,263 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
+Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_61_8
+  - String:          ''' ('
+  - LoopLoc:         'src/conv3.cpp:61:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv3
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartially2FullyUnroll
+DebugLoc:        { File: src/conv2.cpp, Line: 14, Column: 0 }
+Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        TI
+  - String:          ''' ('
+  - LoopLoc:         'src/conv2.cpp:33:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''': changing partial unrolling into complete unrolling since the unrolling factor (='
+  - Factor:          '3'
+  - String:          ') is no less than the loop trip count (='
+  - TripCount:       '3'
+  - String:          ').'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/conv2.cpp, Line: 14, Column: 0 }
+Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        TI
+  - String:          ''' ('
+  - LoopLoc:         'src/conv2.cpp:33:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 14, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        NOUT
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:47:10'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/conv1.cpp, Line: 105, Column: 0 }
+Function:        _Z19load_buffer_tile_c1PA93_A93_fPA255_A255_fii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'clamp(int, int, int)'
+    DebugLoc:        { File: src/srcnn.cpp, Line: 39, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'load_buffer_tile_c1(float (*) [93][93], float (*) [255][255], int, int)'
+    DebugLoc:        { File: src/conv1.cpp, Line: 105, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/conv1.cpp, Line: 14, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'load_buffer_tile_c1(float (*) [93][93], float (*) [255][255], int, int)'
+    DebugLoc:        { File: src/conv1.cpp, Line: 105, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/conv1.cpp, Line: 14, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/conv1.cpp, Line: 14, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'export_buffer_tile_c1(float (*) [85][85], float (*) [255][255], int, int)'
+    DebugLoc:        { File: src/conv1.cpp, Line: 129, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/conv1.cpp, Line: 14, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/conv2.cpp, Line: 106, Column: 0 }
+Function:        _Z19load_buffer_tile_c2PA85_A85_fPA255_A255_fii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'clamp(int, int, int)'
+    DebugLoc:        { File: src/srcnn.cpp, Line: 39, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'load_buffer_tile_c2(float (*) [85][85], float (*) [255][255], int, int)'
+    DebugLoc:        { File: src/conv2.cpp, Line: 106, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/conv2.cpp, Line: 14, Column: 0 }
+Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'export_buffer_tile_c2(float (*) [85][85], float (*) [255][255], int, int)'
+    DebugLoc:        { File: src/conv2.cpp, Line: 130, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/conv2.cpp, Line: 14, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/conv3.cpp, Line: 103, Column: 0 }
+Function:        _Z19load_buffer_tile_c3PA89_A89_fPA255_A255_fii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'clamp(int, int, int)'
+    DebugLoc:        { File: src/srcnn.cpp, Line: 39, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'load_buffer_tile_c3(float (*) [89][89], float (*) [255][255], int, int)'
+    DebugLoc:        { File: src/conv3.cpp, Line: 103, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
+Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'load_buffer_tile_c3(float (*) [89][89], float (*) [255][255], int, int)'
+    DebugLoc:        { File: src/conv3.cpp, Line: 103, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
+Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'export_buffer_tile_c3(float (*) [85][85], float (*) [255][255], int, int)'
+    DebugLoc:        { File: src/conv3.cpp, Line: 127, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/srcnn.cpp, Line: 20, Column: 0 }
+Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E18conv2_output_ftmap
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/srcnn.cpp, Line: 18, Column: 0 }
+Function:        _Z19load_buffer_tile_c2PA85_A85_fPA255_A255_fii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E18conv1_output_ftmap
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/conv1.cpp, Line: 38, Column: 12 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input_fm_buffer
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/conv1.cpp, Line: 40, Column: 10 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          output_fm_buffer
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

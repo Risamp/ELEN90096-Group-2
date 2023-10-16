@@ -28,29 +28,31 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 	#pragma HLS PIPELINE off
 
 	// for each tile (ti, tj) in our T x T grid
-	for (int tj = 0; tj < T; tj++) {
-	for (int ti = 0; ti < T; ti++) {
+
+	TJ: for (int tj = 0; tj < T; tj++) {
+	TI: for (int ti = 0; ti < T; ti++) {
+#pragma HLS UNROLL factor=3
 
 		int ty0 = tj * TH;
 		int tx0 = ti * TW;
 
 		// initialise input and output buffers
-		static ftmap_t input_fm_buffer[N1][TH + (2 * P2)][TW + (2 * P2)];
-		static ftmap_t output_fm_buffer[N2][TH][TW] = {0};
+		ftmap_t input_fm_buffer[N1][TH + (2 * P2)][TW + (2 * P2)];
+		ftmap_t output_fm_buffer[N2][TH][TW] = {0};
 
 		// load buffer-sized chunk
 		load_buffer_tile_c2(input_fm_buffer, input_ftmap, tx0, ty0);
 
-		// for each output layer
-		for (int nout = 0; nout < N2; nout++) {
 
+		// for each output layer
+		NOUT: for (int nout = 0; nout < N2; nout++) {
 			// for each pixel in tile
-			for (int ty = 0; ty < TH; ty++) {
-			for (int tx = 0; tx < TW; tx++) {
+			TY: for (int ty = 0; ty < TH; ty++) {
+			TX: for (int tx = 0; tx < TW; tx++) {
 
 				// for each pixel in the kernel
-				for (int ky = 0; ky < F2; ky++) {
-				for (int kx = 0; kx < F2; kx++) {
+				KY: for (int ky = 0; ky < F2; ky++) {
+				KX: for (int kx = 0; kx < F2; kx++) {
 
 					// get buffer-space coordinates
 					int by = ty + ky;
@@ -58,7 +60,9 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 
 					// for each input layer
 					// TODO: PIPELINE THIS
-					for (int nin = 0; nin < N1; nin++) {
+					NIN: for (int nin = 0; nin < N1; nin++) {
+// it's a yes from me (-56% runtime)
+//#pragma HLS UNROLL factor=8
 						output_fm_buffer[nout][ty][tx] += conv2_weights[nout][nin][ky][kx] * input_fm_buffer[nin][by][bx];
 					}
 				}}
