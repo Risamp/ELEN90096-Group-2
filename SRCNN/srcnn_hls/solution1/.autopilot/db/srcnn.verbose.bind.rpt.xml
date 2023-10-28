@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn'" level="0">
-<item name = "Date">Mon Oct 16 13:38:15 2023
+<item name = "Date">Sat Oct 28 18:18:27 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.016 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,23 +24,19 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">5140262942, 5140262942, 51.403 sec, 51.403 sec, 5140262943, 5140262943, no</column>
+<column name="">4425370940, 4425370940, 44.254 sec, 44.254 sec, 4425370941, 4425370941, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_conv1_fu_406">conv1, 3196574540, 3196574540, 31.966 sec, 31.966 sec, 3196574540, 3196574540, no</column>
-<column name="grp_conv2_fu_432">conv2, 1654450628, 1654450628, 16.545 sec, 16.545 sec, 1654450628, 1654450628, no</column>
-<column name="grp_conv3_fu_472">conv3, 276687941, 276687941, 2.767 sec, 2.767 sec, 276687941, 276687941, no</column>
+<column name="grp_conv1_fu_112">conv1, 3190538956, 3190538956, 31.905 sec, 31.905 sec, 3190538956, 3190538956, no</column>
+<column name="grp_conv2_fu_130">conv2, 1234831981, 1234831981, 12.348 sec, 12.348 sec, 1234831981, 1234831981, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">8323200, 8323200, 2, -, -, 4161600, no</column>
-<column name="- Loop 2">4161600, 4161600, 2, -, -, 2080800, no</column>
-<column name="- Loop 3">65025, 65025, 1, -, -, 65025, no</column>
 </table>
 </item>
 </section>

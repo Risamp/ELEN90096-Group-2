@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1'" level="0">
-<item name = "Date">Mon Oct 16 13:38:07 2023
+<item name = "Date">Sat Oct 28 18:18:24 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.016 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">3196574540, 3196574540, 31.966 sec, 31.966 sec, 3196574540, 3196574540, no</column>
+<column name="">3190538956, 3190538956, 31.905 sec, 31.905 sec, 3190538956, 3190538956, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,52 +35,20 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILE_J">3154925706, 3154925706, 1051641902, -, -, 3, no</column>
-<column name=" + TILE_I">1051641900, 1051641900, 350547300, -, -, 3, no</column>
-<column name="  ++ TILE_I.1">924800, 924800, 2, -, -, 462400, no</column>
-<column name="  ++ TILE_I.2">8649, 8649, 1, -, -, 8649, no</column>
-<column name="  ++ IN_BUFFER_BY">17484, 17484, 188, -, -, 93, no</column>
-<column name="   +++ IN_BUFFER_BX">186, 186, 2, -, -, 93, no</column>
-<column name="  ++ NOUT">347273352, 347273352, 43409169, -, -, 8, no</column>
-<column name="   +++ TY">5426145, 5426145, 63837, -, -, 85, no</column>
-<column name="    ++++ TX">63835, 63835, 751, -, -, 85, no</column>
+<column name="- TILE_J">3190538955, 3190538955, 212702597, -, -, 15, no</column>
+<column name=" + TILE_I">212702595, 212702595, 14180173, -, -, 15, no</column>
+<column name="  ++ TILE_I.1">625, 625, 1, -, -, 625, no</column>
+<column name="  ++ IN_BUFFER_BY">6925, 6925, 277, -, -, 25, no</column>
+<column name="   +++ IN_BUFFER_BX">275, 275, 11, -, -, 25, no</column>
+<column name="  ++ NOUT">14003776, 14003776, 218809, -, -, 64, no</column>
+<column name="   +++ TY">218807, 218807, 12871, -, -, 17, no</column>
+<column name="    ++++ TX">12869, 12869, 757, -, -, 17, no</column>
 <column name="     +++++ KY">747, 747, 83, -, -, 9, no</column>
 <column name="      ++++++ KX">81, 81, 9, -, -, 9, no</column>
-<column name="   +++ TY">5426145, 5426145, 63837, -, -, 85, no</column>
-<column name="    ++++ TX">63835, 63835, 751, -, -, 85, no</column>
-<column name="     +++++ KY">747, 747, 83, -, -, 9, no</column>
-<column name="      ++++++ KX">81, 81, 9, -, -, 9, no</column>
-<column name="   +++ TY">5426145, 5426145, 63837, -, -, 85, no</column>
-<column name="    ++++ TX">63835, 63835, 751, -, -, 85, no</column>
-<column name="     +++++ KY">747, 747, 83, -, -, 9, no</column>
-<column name="      ++++++ KX">81, 81, 9, -, -, 9, no</column>
-<column name="   +++ TY">5426145, 5426145, 63837, -, -, 85, no</column>
-<column name="    ++++ TX">63835, 63835, 751, -, -, 85, no</column>
-<column name="     +++++ KY">747, 747, 83, -, -, 9, no</column>
-<column name="      ++++++ KX">81, 81, 9, -, -, 9, no</column>
-<column name="   +++ TY">5426145, 5426145, 63837, -, -, 85, no</column>
-<column name="    ++++ TX">63835, 63835, 751, -, -, 85, no</column>
-<column name="     +++++ KY">747, 747, 83, -, -, 9, no</column>
-<column name="      ++++++ KX">81, 81, 9, -, -, 9, no</column>
-<column name="   +++ TY">5426145, 5426145, 63837, -, -, 85, no</column>
-<column name="    ++++ TX">63835, 63835, 751, -, -, 85, no</column>
-<column name="     +++++ KY">747, 747, 83, -, -, 9, no</column>
-<column name="      ++++++ KX">81, 81, 9, -, -, 9, no</column>
-<column name="   +++ TY">5426145, 5426145, 63837, -, -, 85, no</column>
-<column name="    ++++ TX">63835, 63835, 751, -, -, 85, no</column>
-<column name="     +++++ KY">747, 747, 83, -, -, 9, no</column>
-<column name="      ++++++ KX">81, 81, 9, -, -, 9, no</column>
-<column name="   +++ TY">5426145, 5426145, 63837, -, -, 85, no</column>
-<column name="    ++++ TX">63835, 63835, 751, -, -, 85, no</column>
-<column name="     +++++ KY">747, 747, 83, -, -, 9, no</column>
-<column name="      ++++++ KX">81, 81, 9, -, -, 9, no</column>
-<column name="  ++ OUT_BUFFER_NOUT">1398208, 1398208, 21847, -, -, 64, no</column>
-<column name="   +++ OUT_BUFFER_TY">21845, 21845, 257, -, -, 85, no</column>
-<column name="    ++++ OUT_BUFFER_TX">255, 255, 3, -, -, 85, no</column>
-<column name="  ++ TILE_I.6">924800, 924800, 2, -, -, 462400, no</column>
-<column name="- RELU_N">41648832, 41648832, 650763, -, -, 64, no</column>
-<column name=" + RELU_Y">650760, 650760, 2552, -, -, 255, no</column>
-<column name="  ++ RELU_X">2550, 2550, 10, -, -, 255, no</column>
+<column name="  ++ OUT_BUFFER_NOUT">150337, 150337, 2349, -, -, 64, no</column>
+<column name="   +++ OUT_BUFFER_TY">2346, 2346, 138, -, -, 17, no</column>
+<column name="    ++++ OUT_BUFFER_TX">136, 136, 8, -, -, 17, no</column>
+<column name="  ++ TILE_I.5">18496, 18496, 1, -, -, 18496, no</column>
 </table>
 </item>
 </section>

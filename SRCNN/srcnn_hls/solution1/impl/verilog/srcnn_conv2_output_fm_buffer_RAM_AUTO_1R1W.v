@@ -13,8 +13,8 @@ module srcnn_conv2_output_fm_buffer_RAM_AUTO_1R1W (
     reset, clk);
 
 parameter DataWidth = 32;
-parameter AddressWidth = 18;
-parameter AddressRange = 231200;
+parameter AddressWidth = 14;
+parameter AddressRange = 9248;
  
 input[AddressWidth-1:0] address0;
 input ce0;
@@ -27,6 +27,9 @@ input clk;
 
 (* ram_style = "auto"  *)reg [DataWidth-1:0] ram[0:AddressRange-1];
 
+initial begin
+    $readmemh("./srcnn_conv2_output_fm_buffer_RAM_AUTO_1R1W.dat", ram);
+end 
 
  
 

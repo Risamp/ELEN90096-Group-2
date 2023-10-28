@@ -1,13 +1,14 @@
 <pragmas>
-<pragma file="src/conv2.cpp" line="28" pragmaType="pipeline" parentfunction="conv2" off="1" ii="0" style=""/>
-<pragma file="src/conv2.cpp" line="34" pragmaType="unroll" parentfunction="conv2" factor="3" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="17" pragmaType="pipeline" parentfunction="srcnn" off="1" ii="0" style=""/>
+<pragma file="src/srcnn.cpp" line="20" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="input_ftmap" bundle="" offset="slave" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/srcnn.cpp" line="21" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv1_weights" bundle="" offset="slave" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/srcnn.cpp" line="22" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv1_biases" bundle="" offset="slave" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/srcnn.cpp" line="23" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv2_weights" bundle="" offset="slave" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/srcnn.cpp" line="24" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv2_biases" bundle="" offset="slave" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/srcnn.cpp" line="25" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv3_weights" bundle="" offset="slave" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/srcnn.cpp" line="26" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv3_biases" bundle="" offset="slave" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/srcnn.cpp" line="27" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="output_ftmap" bundle="" offset="slave" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/srcnn.cpp" line="28" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
 <pragma file="src/conv1.cpp" line="28" pragmaType="pipeline" parentfunction="conv1" off="1" ii="0" style=""/>
-<pragma file="src/conv1.cpp" line="48" pragmaType="unroll" parentfunction="conv1" factor="8" skip_exit_check="0"/>
-<pragma file="src/conv1.cpp" line="39" pragmaType="array_partition" parentfunction="conv1" dim="1" factor="8" mode="block" dynamic="0" variable="input_fm_buffer"/>
-<pragma file="src/conv1.cpp" line="41" pragmaType="array_partition" parentfunction="conv1" dim="1" factor="8" mode="block" dynamic="0" variable="output_fm_buffer"/>
-<pragma file="src/conv3.cpp" line="28" pragmaType="pipeline" parentfunction="conv3" off="1" ii="0" style=""/>
-<pragma file="src/conv3.cpp" line="62" pragmaType="unroll" parentfunction="conv3" factor="8" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="16" pragmaType="pipeline" parentfunction="srcnn" off="1" ii="0" style=""/>
-<pragma file="src/srcnn.cpp" line="19" pragmaType="array_partition" parentfunction="srcnn" dim="1" factor="8" mode="block" dynamic="0" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E18conv1_output_ftmap"/>
-<pragma file="src/srcnn.cpp" line="21" pragmaType="array_partition" parentfunction="srcnn" dim="1" factor="8" mode="block" dynamic="0" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E18conv2_output_ftmap"/>
+<pragma file="src/conv2.cpp" line="28" pragmaType="pipeline" parentfunction="conv2" off="1" ii="0" style=""/>
 </pragmas>

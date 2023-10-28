@@ -4,7 +4,7 @@ target datalayout = "e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:20
 target triple = "fpga64-xilinx-none"
 
 ; Function Attrs: noinline
-define void @apatb_srcnn_ir([255 x [255 x float]]* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="1" %input_ftmap, [1 x [9 x [9 x float]]]* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="64" %conv1_weights, float* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="64" %conv1_biases, [64 x [1 x [1 x float]]]* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="32" %conv2_weights, float* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="32" %conv2_biases, [32 x [5 x [5 x float]]]* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="1" %conv3_weights, float* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="1" %conv3_biases, [255 x [255 x float]]* noalias nocapture nonnull "fpga.decayed.dim.hint"="1" %output_ftmap) local_unnamed_addr #0 {
+define void @apatb_srcnn_ir([255 x [255 x float]]* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="1" "maxi" %input_ftmap, [1 x [9 x [9 x float]]]* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="64" "maxi" %conv1_weights, float* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="64" "maxi" %conv1_biases, [64 x [1 x [1 x float]]]* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="32" "maxi" %conv2_weights, float* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="32" "maxi" %conv2_biases, [32 x [5 x [5 x float]]]* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="1" "maxi" %conv3_weights, float* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="1" "maxi" %conv3_biases, [255 x [255 x float]]* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="1" "maxi" %output_ftmap) local_unnamed_addr #0 {
 entry:
   %malloccall = tail call i8* @malloc(i64 260100)
   %input_ftmap_copy = bitcast i8* %malloccall to [1 x [255 x [255 x float]]]*
@@ -718,7 +718,6 @@ declare void @apatb_srcnn_hw([1 x [255 x [255 x float]]]*, [64 x [1 x [9 x [9 x 
 ; Function Attrs: argmemonly noinline norecurse
 define internal fastcc void @copy_back([1 x [255 x [255 x float]]]* noalias, [1 x [255 x [255 x float]]]* noalias readonly, [64 x [1 x [9 x [9 x float]]]]* noalias, [64 x [1 x [9 x [9 x float]]]]* noalias readonly, [64 x float]* noalias, [64 x float]* noalias readonly align 512, [32 x [64 x [1 x [1 x float]]]]* noalias, [32 x [64 x [1 x [1 x float]]]]* noalias readonly, [32 x float]* noalias, [32 x float]* noalias readonly align 512, [1 x [32 x [5 x [5 x float]]]]* noalias, [1 x [32 x [5 x [5 x float]]]]* noalias readonly align 512, [1 x float]* noalias, [1 x float]* noalias readonly align 512, [1 x [255 x [255 x float]]]* noalias, [1 x [255 x [255 x float]]]* noalias readonly) unnamed_addr #4 {
 entry:
-  call fastcc void @onebyonecpy_hls.p0a1a255a255f32([1 x [255 x [255 x float]]]* %14, [1 x [255 x [255 x float]]]* %15)
   ret void
 }
 

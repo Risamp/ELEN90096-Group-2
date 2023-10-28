@@ -68,23 +68,10 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 			}
 
 			// load output buffer back to DRAM
-			export_buffer_tile_c1(output_fm_buffer, output_ftmap, tx0, ty0);
+			export_buffer_tile_c1(output_fm_buffer, output_ftmap, tx0, ty0, conv1_biases);
 		}}
 
 
-		// split relu from rest of loop
-		// nr = relu output layer
-		// xr, yr = relu coordinates within image
-		RELU_N: for (int nr = 0; nr < N1; nr++) {
-		RELU_Y: for (int yr = 0; yr < H; yr++) {
-		RELU_X: for (int xr = 0; xr < W; xr++) {
-
-			output_ftmap[nr][yr][xr] += conv1_biases[nr];
-			if (output_ftmap[nr][yr][xr] < 0) {
-				output_ftmap[nr][yr][xr] = 0;
-			}
-
-		}}}
 }
 
 
@@ -122,13 +109,17 @@ void export_buffer_tile_c1(
 	ftmap_t output_fm_buffer[N1][TH][TW],
 	ftmap_t output_ftmap[N1][H][W],
 	int tx0,
-	int ty0
+	int ty0,
+	param_t conv1_biases[N1]
 ) {
 	OUT_BUFFER_NOUT: for (int nout = 0; nout < N1; nout++) { // output layer
 		OUT_BUFFER_TY: for (int ty = 0; ty < TH; ty++) { // tile space y
 			OUT_BUFFER_TX: for (int tx = 0; tx < TW; tx++) { // tile space x
 
-				output_ftmap[nout][ty0 + ty][tx0 + tx] = output_fm_buffer[nout][ty][tx];
+				output_ftmap[nout][ty0 + ty][tx0 + tx] = output_fm_buffer[nout][ty][tx] + conv1_biases[nout];
+				if (output_ftmap[nout][ty0 + ty][tx0 + tx] < 0) {
+					output_ftmap[nout][ty0 + ty][tx0 + tx] = 0;
+				}
 
 			}
 		}
