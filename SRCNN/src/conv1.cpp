@@ -36,16 +36,13 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 
 			// initialise input and output buffers
 			static ftmap_t input_fm_buffer[N0][TH + (2 * P1)][TW + (2 * P1)];
-#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=block factor=8
 			static ftmap_t output_fm_buffer[N1][TH][TW] = {0};
-#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=block factor=8
 
 			// load buffer-sized chunk
 			load_buffer_tile_c1(input_fm_buffer, input_ftmap, tx0, ty0);
 
 			// for each output layer
 			NOUT: for (int nout = 0; nout < N1; nout++) {
-#pragma HLS UNROLL factor=8
 
 				// for each pixel in tile
 				TY: for (int ty = 0; ty < TH; ty++) {

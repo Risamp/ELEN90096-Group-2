@@ -31,7 +31,6 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 
 	TJ: for (int tj = 0; tj < T; tj++) {
 	TI: for (int ti = 0; ti < T; ti++) {
-#pragma HLS UNROLL factor=3
 
 		int ty0 = tj * TH;
 		int tx0 = ti * TW;

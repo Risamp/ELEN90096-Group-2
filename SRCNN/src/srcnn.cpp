@@ -16,9 +16,7 @@ void srcnn(ftmap_t input_ftmap[N0][H][W],
 	#pragma HLS PIPELINE off
 
 	static ftmap_t conv1_output_ftmap[N1][H][W] = {0};
-#pragma HLS ARRAY_PARTITION variable=conv1_output_ftmap type=block factor=8
 	static ftmap_t conv2_output_ftmap[N2][H][W] = {0};
-#pragma HLS ARRAY_PARTITION variable=conv2_output_ftmap type=block factor=8
 
 	memset(conv1_output_ftmap, 0, N1 * H * W * sizeof(ftmap_t));
 	memset(conv2_output_ftmap, 0, N2 * H * W * sizeof(ftmap_t));
