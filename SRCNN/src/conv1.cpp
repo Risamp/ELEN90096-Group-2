@@ -35,9 +35,9 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 			int tx0 = ti * TW;
 
 			// initialise input and output buffers
-			ftmap_t input_fm_buffer[N0][TH + (2 * P1)][TW + (2 * P1)];
+			static ftmap_t input_fm_buffer[N0][TH + (2 * P1)][TW + (2 * P1)];
 #pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=block factor=8
-			ftmap_t output_fm_buffer[N1][TH][TW] = {0};
+			static ftmap_t output_fm_buffer[N1][TH][TW] = {0};
 #pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=block factor=8
 
 			// load buffer-sized chunk

@@ -138,4 +138,3 @@ void export_buffer_tile_c3(
 	// clear buffer
 	memset(output_fm_buffer, 0, N3 * TH * TW * sizeof(ftmap_t));
 }
-

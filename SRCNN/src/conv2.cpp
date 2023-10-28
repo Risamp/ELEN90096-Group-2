@@ -37,8 +37,8 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 		int tx0 = ti * TW;
 
 		// initialise input and output buffers
-		ftmap_t input_fm_buffer[N1][TH + (2 * P2)][TW + (2 * P2)];
-		ftmap_t output_fm_buffer[N2][TH][TW] = {0};
+		static ftmap_t input_fm_buffer[N1][TH + (2 * P2)][TW + (2 * P2)];
+		static ftmap_t output_fm_buffer[N2][TH][TW] = {0};
 
 		// load buffer-sized chunk
 		load_buffer_tile_c2(input_fm_buffer, input_ftmap, tx0, ty0);
@@ -141,4 +141,3 @@ void export_buffer_tile_c2(
 	// clear buffer
 	memset(output_fm_buffer, 0, N2 * TH * TW * sizeof(ftmap_t));
 }
-
