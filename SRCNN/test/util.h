@@ -2,8 +2,7 @@
 #define _UTIL_H_
 
 #include <string>
-
-#include "srcnn.h"
+//#include "srcnn.h"
 
 // load image from uint8_t file and normalize to interval [0, 1]
 void load_image(std::string  fname,

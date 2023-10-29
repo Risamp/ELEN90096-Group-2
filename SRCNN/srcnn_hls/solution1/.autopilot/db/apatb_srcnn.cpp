@@ -1254,8 +1254,8 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port8 {
 #endif
-    .width = 32,
-    .asize = 4,
+    .width = 16,
+    .asize = 2,
     .hbm = false,
     .name = { "gmem" },
 #ifdef POST_CHECK
@@ -1268,16 +1268,16 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #endif
 #endif
   };
-  __xlx_offset_byte_param_input_ftmap = 0*4;
-  __xlx_offset_byte_param_conv1_weights = 65025*4;
-  __xlx_offset_byte_param_conv1_biases = 70209*4;
-  __xlx_offset_byte_param_conv2_weights = 70273*4;
-  __xlx_offset_byte_param_conv2_biases = 72321*4;
-  __xlx_offset_byte_param_conv3_weights = 72353*4;
-  __xlx_offset_byte_param_conv3_biases = 73153*4;
-  __xlx_offset_byte_param_output_ftmap = 73154*4;
+  __xlx_offset_byte_param_input_ftmap = 0*2;
+  __xlx_offset_byte_param_conv1_weights = 65025*2;
+  __xlx_offset_byte_param_conv1_biases = 70209*2;
+  __xlx_offset_byte_param_conv2_weights = 70273*2;
+  __xlx_offset_byte_param_conv2_biases = 72321*2;
+  __xlx_offset_byte_param_conv3_weights = 72353*2;
+  __xlx_offset_byte_param_conv3_biases = 73153*2;
+  __xlx_offset_byte_param_output_ftmap = 73154*2;
   port8.param = { __xlx_apatb_param_input_ftmap, __xlx_apatb_param_conv1_weights, __xlx_apatb_param_conv1_biases, __xlx_apatb_param_conv2_weights, __xlx_apatb_param_conv2_biases, __xlx_apatb_param_conv3_weights, __xlx_apatb_param_conv3_biases, __xlx_apatb_param_output_ftmap };
-  port8.nbytes = { 260100, 20736, 256, 8192, 128, 3200, 4, 260100 };
+  port8.nbytes = { 130050, 10368, 128, 4096, 64, 1600, 2, 130050 };
   port8.offset = { 0, 65025, 70209, 70273, 72321, 72353, 73153, 73154 };
   port8.hasWrite = { false, false, false, false, false, false, false, false };
 

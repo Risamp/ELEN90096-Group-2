@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'srcnn'
 ================================================================
 + General Information: 
-    * Date:           Sat Oct 28 18:18:31 2023
+    * Date:           Sun Oct 29 20:14:37 2023
     * Version:        2023.1 (Build 3854077 on May  4 2023)
     * Project:        srcnn_hls
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,40 +15,25 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +--------------------------+------+------+------------+-----------+-----------+------------+-------+----------+--------------+---------+-----------+-----------+-----+
-    |          Modules         | Issue|      |  Latency   |  Latency  | Iteration |            |  Trip |          |              |         |           |           |     |
-    |          & Loops         | Type | Slack|  (cycles)  |    (ns)   |  Latency  |  Interval  | Count | Pipelined|     BRAM     |   DSP   |     FF    |    LUT    | URAM|
-    +--------------------------+------+------+------------+-----------+-----------+------------+-------+----------+--------------+---------+-----------+-----------+-----+
-    |+ srcnn                   |     -|  0.00|  4425370940|  4.425e+10|          -|  4425370941|      -|        no|  7478 (2596%)|  5 (~0%)|  3663 (1%)|  5318 (4%)|    -|
-    | + conv1                  |     -|  0.00|  3190538956|  3.191e+10|          -|  3190538956|      -|        no|      40 (13%)|        -|  977 (~0%)|  1806 (1%)|    -|
-    |  o TILE_J                |     -|  7.30|  3190538955|  3.191e+10|  212702597|           -|     15|        no|             -|        -|          -|          -|    -|
-    |   o TILE_I               |     -|  7.30|   212702595|  2.127e+09|   14180173|           -|     15|        no|             -|        -|          -|          -|    -|
-    |    o TILE_I.1            |     -|  7.30|         625|  6.250e+03|          1|           -|    625|        no|             -|        -|          -|          -|    -|
-    |    o IN_BUFFER_BY        |     -|  7.30|        6925|  6.925e+04|        277|           -|     25|        no|             -|        -|          -|          -|    -|
-    |     o IN_BUFFER_BX       |     -|  7.30|         275|  2.750e+03|         11|           -|     25|        no|             -|        -|          -|          -|    -|
-    |    o NOUT                |     -|  7.30|    14003776|  1.400e+08|     218809|           -|     64|        no|             -|        -|          -|          -|    -|
-    |     o TY                 |     -|  7.30|      218807|  2.188e+06|      12871|           -|     17|        no|             -|        -|          -|          -|    -|
-    |      o TX                |     -|  7.30|       12869|  1.287e+05|        757|           -|     17|        no|             -|        -|          -|          -|    -|
-    |       o KY               |     -|  7.30|         747|  7.470e+03|         83|           -|      9|        no|             -|        -|          -|          -|    -|
-    |        o KX              |     -|  7.30|          81|    810.000|          9|           -|      9|        no|             -|        -|          -|          -|    -|
-    |    o OUT_BUFFER_NOUT     |     -|  7.30|      150337|  1.503e+06|       2349|           -|     64|        no|             -|        -|          -|          -|    -|
-    |     o OUT_BUFFER_TY      |     -|  7.30|        2346|  2.346e+04|        138|           -|     17|        no|             -|        -|          -|          -|    -|
-    |      o OUT_BUFFER_TX     |     -|  7.30|         136|  1.360e+03|          8|           -|     17|        no|             -|        -|          -|          -|    -|
-    |    o TILE_I.5            |     -|  7.30|       18496|  1.850e+05|          1|           -|  18496|        no|             -|        -|          -|          -|    -|
-    | + conv2                  |     -|  0.00|  1234831981|  1.235e+10|          -|  1234831981|      -|        no|      60 (20%)|        -|  579 (~0%)|  1202 (1%)|    -|
-    |  o TJ                    |     -|  7.30|  1234831980|  1.235e+10|   82322132|           -|     15|        no|             -|        -|          -|          -|    -|
-    |   o TI                   |     -|  7.30|    82322130|  8.232e+08|    5488142|           -|     15|        no|             -|        -|          -|          -|    -|
-    |    o TI.1                |     -|  7.30|       18496|  1.850e+05|          1|           -|  18496|        no|             -|        -|          -|          -|    -|
-    |    o VITIS_LOOP_109_1    |     -|  7.30|       39296|  3.930e+05|        614|           -|     64|        no|             -|        -|          -|          -|    -|
-    |     o VITIS_LOOP_110_2   |     -|  7.30|         612|  6.120e+03|         36|           -|     17|        no|             -|        -|          -|          -|    -|
-    |      o VITIS_LOOP_111_3  |     -|  7.30|          34|    340.000|          2|           -|     17|        no|             -|        -|          -|          -|    -|
-    |    o NOUT                |     -|  7.30|     5421024|  5.421e+07|     169407|           -|     32|        no|             -|        -|          -|          -|    -|
-    |     o TY                 |     -|  7.30|      169405|  1.694e+06|       9965|           -|     17|        no|             -|        -|          -|          -|    -|
-    |      o TX                |     -|  7.30|        9963|  9.963e+04|        586|           -|     17|        no|             -|        -|          -|          -|    -|
-    |       o NIN              |     -|  7.30|         576|  5.760e+03|          9|           -|     64|        no|             -|        -|          -|          -|    -|
-    |    o VITIS_LOOP_131_1    |     -|  7.30|          64|    640.000|          2|           -|     32|        no|             -|        -|          -|          -|    -|
-    |    o TI.5                |     -|  7.30|        9248|  9.248e+04|          1|           -|   9248|        no|             -|        -|          -|          -|    -|
-    +--------------------------+------+------+------------+-----------+-----------+------------+-------+----------+--------------+---------+-----------+-----------+-----+
+    +-----------------------+------+------+------------+-----------+-----------+------------+-------+----------+---------+---------+------------+-----------+-----+
+    |        Modules        | Issue|      |  Latency   |  Latency  | Iteration |            |  Trip |          |         |         |            |           |     |
+    |        & Loops        | Type | Slack|  (cycles)  |    (ns)   |  Latency  |  Interval  | Count | Pipelined|  BRAM   |   DSP   |     FF     |    LUT    | URAM|
+    +-----------------------+------+------+------------+-----------+-----------+------------+-------+----------+---------+---------+------------+-----------+-----+
+    |+ srcnn                |     -|  0.00|  2145473132|  2.145e+10|          -|  2145473133|      -|        no|  25 (8%)|  1 (~0%)|  2259 (~0%)|  3251 (2%)|    -|
+    | + conv1               |     -|  0.00|  2145473131|  2.145e+10|          -|  2145473131|      -|        no|  23 (7%)|  1 (~0%)|   613 (~0%)|  1364 (1%)|    -|
+    |  o TILE_J             |     -|  7.30|  2145473130|  2.145e+10|  143031542|           -|     15|        no|        -|        -|           -|          -|    -|
+    |   o TILE_I            |     -|  7.30|   143031540|  1.430e+09|    9535436|           -|     15|        no|        -|        -|           -|          -|    -|
+    |    o TILE_I.1         |     -|  7.30|         625|  6.250e+03|          1|           -|    625|        no|        -|        -|           -|          -|    -|
+    |    o IN_BUFFER_BY     |     -|  7.30|        6925|  6.925e+04|        277|           -|     25|        no|        -|        -|           -|          -|    -|
+    |     o IN_BUFFER_BX    |     -|  7.30|         275|  2.750e+03|         11|           -|     25|        no|        -|        -|           -|          -|    -|
+    |    o NOUT             |     -|  7.30|     9509248|  9.509e+07|     148582|           -|     64|        no|        -|        -|           -|          -|    -|
+    |     o TY              |     -|  7.30|      148580|  1.486e+06|       8740|           -|     17|        no|        -|        -|           -|          -|    -|
+    |      o TX             |     -|  7.30|        8738|  8.738e+04|        514|           -|     17|        no|        -|        -|           -|          -|    -|
+    |       o KY            |     -|  7.30|         504|  5.040e+03|         56|           -|      9|        no|        -|        -|           -|          -|    -|
+    |        o KX           |     -|  7.30|          54|    540.000|          6|           -|      9|        no|        -|        -|           -|          -|    -|
+    |    o OUT_BUFFER_NOUT  |     -|  7.30|         128|  1.280e+03|          2|           -|     64|        no|        -|        -|           -|          -|    -|
+    |    o TILE_I.5         |     -|  7.30|       18496|  1.850e+05|          1|           -|  18496|        no|        -|        -|           -|          -|    -|
+    +-----------------------+------+------+------------+-----------+-----------+------------+-------+----------+---------+---------+------------+-----------+-----+
 
 
 ================================================================
@@ -59,7 +44,7 @@
 | Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
 |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
 +------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
-| m_axi_gmem | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem | 16 -> 16   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
 +------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
 
 * S_AXILITE Interfaces
@@ -110,18 +95,18 @@
 == SW I/O Information
 ================================================================
 * Top Function Arguments
-+---------------+-----------+----------+
-| Argument      | Direction | Datatype |
-+---------------+-----------+----------+
-| input_ftmap   | in        | float*   |
-| conv1_weights | in        | float*   |
-| conv1_biases  | in        | float*   |
-| conv2_weights | in        | float*   |
-| conv2_biases  | in        | float*   |
-| conv3_weights | in        | float*   |
-| conv3_biases  | in        | float*   |
-| output_ftmap  | in        | float*   |
-+---------------+-----------+----------+
++---------------+-----------+--------------------------------------+
+| Argument      | Direction | Datatype                             |
++---------------+-----------+--------------------------------------+
+| input_ftmap   | in        | ap_fixed<16, 9, AP_TRN, AP_WRAP, 0>* |
+| conv1_weights | in        | ap_fixed<16, 9, AP_TRN, AP_WRAP, 0>* |
+| conv1_biases  | in        | ap_fixed<16, 9, AP_TRN, AP_WRAP, 0>* |
+| conv2_weights | in        | ap_fixed<16, 9, AP_TRN, AP_WRAP, 0>* |
+| conv2_biases  | in        | ap_fixed<16, 9, AP_TRN, AP_WRAP, 0>* |
+| conv3_weights | in        | ap_fixed<16, 9, AP_TRN, AP_WRAP, 0>* |
+| conv3_biases  | in        | ap_fixed<16, 9, AP_TRN, AP_WRAP, 0>* |
+| output_ftmap  | in        | ap_fixed<16, 9, AP_TRN, AP_WRAP, 0>* |
++---------------+-----------+--------------------------------------+
 
 * SW-to-HW Mapping
 +---------------+---------------+-----------+----------+-------------------------------------------+
@@ -160,133 +145,81 @@
  Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
 
 * Inferred Burst Summary
-+--------------+-----------+--------+-------+------------------+----------------------+
-| HW Interface | Direction | Length | Width | Loop             | Loop Location        |
-+--------------+-----------+--------+-------+------------------+----------------------+
-| m_axi_gmem   | read      | 81     | 32    | KY               | src/conv1.cpp:52:10  |
-| m_axi_gmem   | read      | 64     | 32    | OUT_BUFFER_NOUT  | src/conv1.cpp:115:19 |
-| m_axi_gmem   | read      | 64     | 32    | NIN              | src/conv2.cpp:62:11  |
-| m_axi_gmem   | read      | 32     | 32    | VITIS_LOOP_131_1 | src/conv2.cpp:131:20 |
-+--------------+-----------+--------+-------+------------------+----------------------+
++--------------+-----------+--------+-------+-----------------+----------------------+
+| HW Interface | Direction | Length | Width | Loop            | Loop Location        |
++--------------+-----------+--------+-------+-----------------+----------------------+
+| m_axi_gmem   | read      | 81     | 16    | KY              | src/conv1.cpp:52:10  |
+| m_axi_gmem   | read      | 64     | 16    | OUT_BUFFER_NOUT | src/conv1.cpp:115:19 |
++--------------+-----------+--------+-------+-----------------+----------------------+
 
 * All M_AXI Variable Accesses
-+--------------+---------------+----------------------+-----------+--------------+--------+------------------+----------------------+------------+---------------------------------------------------------------------------------------------------------+
-| HW Interface | Variable      | Access Location      | Direction | Burst Status | Length | Loop             | Loop Location        | Resolution | Problem                                                                                                 |
-+--------------+---------------+----------------------+-----------+--------------+--------+------------------+----------------------+------------+---------------------------------------------------------------------------------------------------------+
-| m_axi_gmem   | conv2_weights | src/conv1.cpp:62:42  | read      | Widen Fail   |        | NIN              | src/conv2.cpp:62:11  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem   | conv1_weights | src/conv1.cpp:62:42  | read      | Widen Fail   |        | KX               | src/conv1.cpp:53:10  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem   | conv2_weights | src/conv1.cpp:62:42  | read      | Fail         |        | TX               | src/conv2.cpp:50:8   | 214-230    | Stride is incompatible                                                                                  |
-| m_axi_gmem   | conv1_weights | src/conv1.cpp:62:42  | read      | Fail         |        | TX               | src/conv1.cpp:49:9   | 214-230    | Stride is incompatible                                                                                  |
-| m_axi_gmem   | conv1_weights | src/conv1.cpp:62:42  | read      | Inferred     | 81     | KY               | src/conv1.cpp:52:10  |            |                                                                                                         |
-| m_axi_gmem   | input_ftmap   | src/conv1.cpp:102:36 | read      | Fail         |        | IN_BUFFER_BX     | src/conv1.cpp:95:18  | 214-229    | Could not analyze pattern                                                                               |
-| m_axi_gmem   | conv1_biases  | src/conv1.cpp:115:19 | read      | Widen Fail   |        | OUT_BUFFER_NOUT  | src/conv1.cpp:115:19 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem   | conv1_biases  | src/conv1.cpp:115:19 | read      | Fail         |        | TILE_I           | src/conv1.cpp:32:11  | 214-229    | Could not analyze pattern                                                                               |
-| m_axi_gmem   | conv1_biases  | src/conv1.cpp:115:19 | read      | Inferred     | 64     | OUT_BUFFER_NOUT  | src/conv1.cpp:115:19 |            |                                                                                                         |
-| m_axi_gmem   | conv2_weights | src/conv2.cpp:65:41  | read      | Inferred     | 64     | NIN              | src/conv2.cpp:62:11  |            |                                                                                                         |
-| m_axi_gmem   | conv2_biases  | src/conv2.cpp:131:20 | read      | Widen Fail   |        | VITIS_LOOP_131_1 | src/conv2.cpp:131:20 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem   | conv2_biases  | src/conv2.cpp:131:20 | read      | Fail         |        | TI               | src/conv2.cpp:33:6   | 214-229    | Could not analyze pattern                                                                               |
-| m_axi_gmem   | conv2_biases  | src/conv2.cpp:131:20 | read      | Inferred     | 32     | VITIS_LOOP_131_1 | src/conv2.cpp:131:20 |            |                                                                                                         |
-+--------------+---------------+----------------------+-----------+--------------+--------+------------------+----------------------+------------+---------------------------------------------------------------------------------------------------------+
++--------------+---------------+----------------------+-----------+--------------+--------+-----------------+----------------------+------------+-------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable      | Access Location      | Direction | Burst Status | Length | Loop            | Loop Location        | Resolution | Problem                                                                                               |
++--------------+---------------+----------------------+-----------+--------------+--------+-----------------+----------------------+------------+-------------------------------------------------------------------------------------------------------+
+| m_axi_gmem   | conv1_weights | src/conv1.cpp:62:75  | read      | Widen Fail   |        | KX              | src/conv1.cpp:53:10  | 214-353    | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | conv1_weights | src/conv1.cpp:62:75  | read      | Fail         |        | TX              | src/conv1.cpp:49:9   | 214-230    | Stride is incompatible                                                                                |
+| m_axi_gmem   | conv1_weights | src/conv1.cpp:62:75  | read      | Inferred     | 81     | KY              | src/conv1.cpp:52:10  |            |                                                                                                       |
+| m_axi_gmem   | input_ftmap   | src/conv1.cpp:102:34 | read      | Fail         |        | IN_BUFFER_BX    | src/conv1.cpp:95:18  | 214-229    | Could not analyze pattern                                                                             |
+| m_axi_gmem   | conv1_biases  | src/conv1.cpp:115:19 | read      | Widen Fail   |        | OUT_BUFFER_NOUT | src/conv1.cpp:115:19 | 214-353    | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | conv1_biases  | src/conv1.cpp:115:19 | read      | Fail         |        | TILE_I          | src/conv1.cpp:32:11  | 214-229    | Could not analyze pattern                                                                             |
+| m_axi_gmem   | conv1_biases  | src/conv1.cpp:115:19 | read      | Inferred     | 64     | OUT_BUFFER_NOUT | src/conv1.cpp:115:19 |            |                                                                                                       |
++--------------+---------------+----------------------+-----------+--------------+--------+-----------------+----------------------+------------+-------------------------------------------------------------------------------------------------------+
 
     * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
 
 ================================================================
 == Bind Op Report
 ================================================================
-+---------------------------+-----+--------+-------------+-----+--------+---------+
-| Name                      | DSP | Pragma | Variable    | Op  | Impl   | Latency |
-+---------------------------+-----+--------+-------------+-----+--------+---------+
-| + srcnn                   | 5   |        |             |     |        |         |
-|  + conv1                  | 0   |        |             |     |        |         |
-|    add_ln31_fu_542_p2     | -   |        | add_ln31    | add | fabric | 0       |
-|    add_ln32_fu_566_p2     | -   |        | add_ln32    | add | fabric | 0       |
-|    empty_54_fu_582_p2     | -   |        | empty_54    | add | fabric | 0       |
-|    add_ln94_1_fu_605_p2   | -   |        | add_ln94_1  | add | fabric | 0       |
-|    add_ln94_fu_621_p2     | -   |        | add_ln94    | add | fabric | 0       |
-|    tmp_fu_627_p2          | -   |        | tmp         | add | fabric | 0       |
-|    empty_55_fu_637_p2     | -   |        | empty_55    | add | fabric | 0       |
-|    sub_ln102_fu_706_p2    | -   |        | sub_ln102   | sub | fabric | 0       |
-|    add_ln102_2_fu_720_p2  | -   |        | add_ln102_2 | add | fabric | 0       |
-|    add_ln95_fu_741_p2     | -   |        | add_ln95    | add | fabric | 0       |
-|    add_ln98_1_fu_747_p2   | -   |        | add_ln98_1  | add | fabric | 0       |
-|    add_ln98_fu_757_p2     | -   |        | add_ln98    | add | fabric | 0       |
-|    add_ln45_1_fu_852_p2   | -   |        | add_ln45_1  | add | fabric | 0       |
-|    empty_56_fu_874_p2     | -   |        | empty_56    | add | fabric | 0       |
-|    add_ln45_fu_886_p2     | -   |        | add_ln45    | add | fabric | 0       |
-|    add_ln48_fu_896_p2     | -   |        | add_ln48    | add | fabric | 0       |
-|    empty_57_fu_925_p2     | -   |        | empty_57    | add | fabric | 0       |
-|    empty_59_fu_946_p2     | -   |        | empty_59    | add | fabric | 0       |
-|    add_ln48_1_fu_958_p2   | -   |        | add_ln48_1  | add | fabric | 0       |
-|    empty_60_fu_968_p2     | -   |        | empty_60    | add | fabric | 0       |
-|    add_ln49_fu_984_p2     | -   |        | add_ln49    | add | fabric | 0       |
-|    add_ln52_fu_1000_p2    | -   |        | add_ln52    | add | fabric | 0       |
-|    empty_62_fu_1006_p2    | -   |        | empty_62    | add | fabric | 0       |
-|    mul_5ns_6ns_10_1_1_U4  | -   |        | mul_ln62    | mul | auto   | 0       |
-|    add_ln53_fu_1032_p2    | -   |        | add_ln53    | add | fabric | 0       |
-|    add_ln57_fu_1038_p2    | -   |        | add_ln57    | add | fabric | 0       |
-|    add_ln62_fu_1048_p2    | -   |        | add_ln62    | add | fabric | 0       |
-|    sub_ln119_fu_1094_p2   | -   |        | sub_ln119   | sub | fabric | 0       |
-|    add_ln119_1_fu_1116_p2 | -   |        | add_ln119_1 | add | fabric | 0       |
-|    add_ln115_fu_1068_p2   | -   |        | add_ln115   | add | fabric | 0       |
-|    add_ln119_2_fu_1130_p2 | -   |        | add_ln119_2 | add | fabric | 0       |
-|    add_ln119_3_fu_1151_p2 | -   |        | add_ln119_3 | add | fabric | 0       |
-|    add_ln116_fu_1167_p2   | -   |        | add_ln116   | add | fabric | 0       |
-|    empty_65_fu_1173_p2    | -   |        | empty_65    | add | fabric | 0       |
-|    add_ln119_4_fu_1182_p2 | -   |        | add_ln119_4 | add | fabric | 0       |
-|    sub_ln119_1_fu_1203_p2 | -   |        | sub_ln119_1 | sub | fabric | 0       |
-|    add_ln119_5_fu_1213_p2 | -   |        | add_ln119_5 | add | fabric | 0       |
-|    add_ln117_fu_1233_p2   | -   |        | add_ln117   | add | fabric | 0       |
-|    add_ln119_fu_1239_p2   | -   |        | add_ln119   | add | fabric | 0       |
-|    add_ln119_6_fu_1248_p2 | -   |        | add_ln119_6 | add | fabric | 0       |
-|    empty_67_fu_1312_p2    | -   |        | empty_67    | add | fabric | 0       |
-|  + conv2                  | 0   |        |             |     |        |         |
-|    add_ln32_fu_421_p2     | -   |        | add_ln32    | add | fabric | 0       |
-|    add_ln33_fu_445_p2     | -   |        | add_ln33    | add | fabric | 0       |
-|    empty_42_fu_461_p2     | -   |        | empty_42    | add | fabric | 0       |
-|    sub_ln118_fu_504_p2    | -   |        | sub_ln118   | sub | fabric | 0       |
-|    add_ln118_fu_526_p2    | -   |        | add_ln118   | add | fabric | 0       |
-|    add_ln109_fu_538_p2    | -   |        | add_ln109   | add | fabric | 0       |
-|    add_ln118_1_fu_548_p2  | -   |        | add_ln118_1 | add | fabric | 0       |
-|    add_ln118_2_fu_569_p2  | -   |        | add_ln118_2 | add | fabric | 0       |
-|    add_ln110_fu_581_p2    | -   |        | add_ln110   | add | fabric | 0       |
-|    add_ln54_fu_587_p2     | -   |        | add_ln54    | add | fabric | 0       |
-|    yClamped_fu_596_p2     | -   |        | yClamped    | add | fabric | 0       |
-|    add_ln118_3_fu_605_p2  | -   |        | add_ln118_3 | add | fabric | 0       |
-|    sub_ln118_1_fu_626_p2  | -   |        | sub_ln118_1 | sub | fabric | 0       |
-|    add_ln118_4_fu_636_p2  | -   |        | add_ln118_4 | add | fabric | 0       |
-|    add_ln111_fu_652_p2    | -   |        | add_ln111   | add | fabric | 0       |
-|    add_ln54_2_fu_658_p2   | -   |        | add_ln54_2  | add | fabric | 0       |
-|    xClamped_fu_667_p2     | -   |        | xClamped    | add | fabric | 0       |
-|    add_ln118_5_fu_676_p2  | -   |        | add_ln118_5 | add | fabric | 0       |
-|    empty_43_fu_702_p2     | -   |        | empty_43    | add | fabric | 0       |
-|    add_ln47_fu_714_p2     | -   |        | add_ln47    | add | fabric | 0       |
-|    add_ln49_fu_736_p2     | -   |        | add_ln49    | add | fabric | 0       |
-|    empty_44_fu_769_p2     | -   |        | empty_44    | add | fabric | 0       |
-|    empty_46_fu_790_p2     | -   |        | empty_46    | add | fabric | 0       |
-|    add_ln49_1_fu_802_p2   | -   |        | add_ln49_1  | add | fabric | 0       |
-|    empty_47_fu_812_p2     | -   |        | empty_47    | add | fabric | 0       |
-|    add_ln50_fu_828_p2     | -   |        | add_ln50    | add | fabric | 0       |
-|    add_ln62_fu_903_p2     | -   |        | add_ln62    | add | fabric | 0       |
-|    add_ln131_fu_919_p2    | -   |        | add_ln131   | add | fabric | 0       |
-|    empty_53_fu_931_p2     | -   |        | empty_53    | add | fabric | 0       |
-+---------------------------+-----+--------+-------------+-----+--------+---------+
++--------------------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                                 | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++--------------------------------------+-----+--------+-------------+-----+--------+---------+
+| + srcnn                              | 1   |        |             |     |        |         |
+|  + conv1                             | 1   |        |             |     |        |         |
+|    add_ln31_fu_472_p2                | -   |        | add_ln31    | add | fabric | 0       |
+|    add_ln32_fu_484_p2                | -   |        | add_ln32    | add | fabric | 0       |
+|    empty_33_fu_500_p2                | -   |        | empty_33    | add | fabric | 0       |
+|    add_ln94_1_fu_511_p2              | -   |        | add_ln94_1  | add | fabric | 0       |
+|    add_ln94_fu_527_p2                | -   |        | add_ln94    | add | fabric | 0       |
+|    tmp3_fu_543_p2                    | -   |        | tmp3        | add | fabric | 0       |
+|    empty_34_fu_553_p2                | -   |        | empty_34    | add | fabric | 0       |
+|    sub_ln102_fu_623_p2               | -   |        | sub_ln102   | sub | fabric | 0       |
+|    add_ln102_2_fu_637_p2             | -   |        | add_ln102_2 | add | fabric | 0       |
+|    add_ln95_fu_658_p2                | -   |        | add_ln95    | add | fabric | 0       |
+|    add_ln98_1_fu_676_p2              | -   |        | add_ln98_1  | add | fabric | 0       |
+|    add_ln98_fu_686_p2                | -   |        | add_ln98    | add | fabric | 0       |
+|    add_ln45_1_fu_778_p2              | -   |        | add_ln45_1  | add | fabric | 0       |
+|    empty_35_fu_800_p2                | -   |        | empty_35    | add | fabric | 0       |
+|    add_ln45_fu_812_p2                | -   |        | add_ln45    | add | fabric | 0       |
+|    add_ln48_fu_822_p2                | -   |        | add_ln48    | add | fabric | 0       |
+|    empty_36_fu_851_p2                | -   |        | empty_36    | add | fabric | 0       |
+|    empty_38_fu_872_p2                | -   |        | empty_38    | add | fabric | 0       |
+|    add_ln48_1_fu_884_p2              | -   |        | add_ln48_1  | add | fabric | 0       |
+|    empty_39_fu_894_p2                | -   |        | empty_39    | add | fabric | 0       |
+|    add_ln49_fu_910_p2                | -   |        | add_ln49    | add | fabric | 0       |
+|    add_ln52_fu_926_p2                | -   |        | add_ln52    | add | fabric | 0       |
+|    empty_41_fu_932_p2                | -   |        | empty_41    | add | fabric | 0       |
+|    mul_5ns_6ns_10_1_1_U1             | -   |        | mul_ln62_1  | mul | auto   | 0       |
+|    add_ln53_fu_958_p2                | -   |        | add_ln53    | add | fabric | 0       |
+|    add_ln57_fu_964_p2                | -   |        | add_ln57    | add | fabric | 0       |
+|    add_ln62_1_fu_974_p2              | -   |        | add_ln62_1  | add | fabric | 0       |
+|    mac_muladd_16s_16s_23ns_23_4_1_U2 | 1   |        | mul_ln62    | mul | dsp48  | 3       |
+|    mac_muladd_16s_16s_23ns_23_4_1_U2 | 1   |        | add_ln62    | add | dsp48  | 3       |
+|    add_ln115_fu_1013_p2              | -   |        | add_ln115   | add | fabric | 0       |
+|    empty_45_fu_1025_p2               | -   |        | empty_45    | add | fabric | 0       |
++--------------------------------------+-----+--------+-------------+-----+--------+---------+
 
 
 ================================================================
 == Bind Storage Report
 ================================================================
-+--------------------------+------+------+--------+---------------------+---------+------+---------+
-| Name                     | BRAM | URAM | Pragma | Variable            | Storage | Impl | Latency |
-+--------------------------+------+------+--------+---------------------+---------+------+---------+
-| + srcnn                  | 7478 | 0    |        |                     |         |      |         |
-|   conv1_output_ftmap_U   | 7374 | -    |        | conv1_output_ftmap  | ram_1p  | auto | 1       |
-|  + conv1                 | 40   | 0    |        |                     |         |      |         |
-|    input_fm_buffer_1_0_U | 2    | -    |        | input_fm_buffer_1_0 | ram_1p  | auto | 1       |
-|    output_fm_buffer_1_U  | 38   | -    |        | output_fm_buffer_1  | ram_1p  | auto | 1       |
-|  + conv2                 | 60   | 0    |        |                     |         |      |         |
-|    input_fm_buffer_U     | 38   | -    |        | input_fm_buffer     | ram_1p  | auto | 1       |
-|    output_fm_buffer_U    | 22   | -    |        | output_fm_buffer    | ram_1p  | auto | 1       |
-+--------------------------+------+------+--------+---------------------+---------+------+---------+
++------------------------+------+------+--------+-------------------+---------+------+---------+
+| Name                   | BRAM | URAM | Pragma | Variable          | Storage | Impl | Latency |
++------------------------+------+------+--------+-------------------+---------+------+---------+
+| + srcnn                | 25   | 0    |        |                   |         |      |         |
+|  + conv1               | 23   | 0    |        |                   |         |      |         |
+|    input_fm_buffer_0_U | 1    | -    |        | input_fm_buffer_0 | ram_1p  | auto | 1       |
+|    output_fm_buffer_U  | 22   | -    |        | output_fm_buffer  | ram_1p  | auto | 1       |
++------------------------+------+------+--------+-------------------+---------+------+---------+
 
 
 ================================================================

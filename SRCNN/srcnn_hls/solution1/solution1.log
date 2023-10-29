@@ -13306,3 +13306,862 @@ INFO: [VLOG 209-307] Generating Verilog RTL for srcnn.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
 INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 9 seconds. CPU system time: 3 seconds. Elapsed time: 33.069 seconds; current allocated memory: 0.820 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.259 seconds; current allocated memory: 91.867 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/conv1.cpp' ... 
+ERROR: [HLS 207-1209] expected a qualified name after 'typename' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:690:21)
+ERROR: [HLS 207-1181] expected ',' or '>' in template-parameter-list (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:690:21)
+ERROR: [HLS 207-1276] expected parameter declarator (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:691:104)
+ERROR: [HLS 207-7] expected ')' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:691:104)
+INFO: [HLS 207-66] to match this '(' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:691:103)
+ERROR: [HLS 207-3776] use of undeclared identifier 'val' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:757:11)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:123:7)
+ERROR: [HLS 207-1219] expected ';' at end of declaration (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:565:69)
+ERROR: [HLS 207-3706] expression is not assignable (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:566:13)
+ERROR: [HLS 207-1228] expected unqualified-id (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:806:15)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1651:289)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1652:289)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1653:290)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1654:290)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1655:290)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1656:290)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1984:5)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2005:5)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2006:5)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 6.03 seconds; current allocated memory: 0.488 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.262 seconds; current allocated memory: 91.684 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/conv1.cpp' ... 
+ERROR: [HLS 207-1209] expected a qualified name after 'typename' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:690:21)
+ERROR: [HLS 207-1181] expected ',' or '>' in template-parameter-list (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:690:21)
+ERROR: [HLS 207-1276] expected parameter declarator (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:691:104)
+ERROR: [HLS 207-7] expected ')' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:691:104)
+INFO: [HLS 207-66] to match this '(' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:691:103)
+ERROR: [HLS 207-3776] use of undeclared identifier 'val' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:757:11)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:123:7)
+ERROR: [HLS 207-1219] expected ';' at end of declaration (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:565:69)
+ERROR: [HLS 207-3706] expression is not assignable (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:566:13)
+ERROR: [HLS 207-1228] expected unqualified-id (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:806:15)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1651:289)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1652:289)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1653:290)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1654:290)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1655:290)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1656:290)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1984:5)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2005:5)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2006:5)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.994 seconds; current allocated memory: 1.340 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.253 seconds; current allocated memory: 95.910 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/conv1.cpp' ... 
+ERROR: [HLS 207-1209] expected a qualified name after 'typename' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:690:21)
+ERROR: [HLS 207-1181] expected ',' or '>' in template-parameter-list (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:690:21)
+ERROR: [HLS 207-1276] expected parameter declarator (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:691:104)
+ERROR: [HLS 207-7] expected ')' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:691:104)
+INFO: [HLS 207-66] to match this '(' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:691:103)
+ERROR: [HLS 207-3776] use of undeclared identifier 'val' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:757:11)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:123:7)
+ERROR: [HLS 207-1219] expected ';' at end of declaration (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:565:69)
+ERROR: [HLS 207-3706] expression is not assignable (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:566:13)
+ERROR: [HLS 207-1228] expected unqualified-id (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:806:15)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1651:289)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1652:289)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1653:290)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1654:290)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1655:290)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1656:290)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1984:5)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2005:5)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2006:5)
+ERROR: [HLS 207-3699] conversion from 'double' to 'int' is not allowed in a converted constant expression (src/srcnn.h:30:18)
+ERROR: [HLS 207-59] too many errors emitted, stopping now
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.702 seconds; current allocated memory: 1.039 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.247 seconds; current allocated memory: 91.625 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/conv1.cpp' ... 
+ERROR: [HLS 207-1209] expected a qualified name after 'typename' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:690:21)
+ERROR: [HLS 207-1181] expected ',' or '>' in template-parameter-list (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:690:21)
+ERROR: [HLS 207-1276] expected parameter declarator (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:691:104)
+ERROR: [HLS 207-7] expected ')' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:691:104)
+INFO: [HLS 207-66] to match this '(' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:691:103)
+ERROR: [HLS 207-3776] use of undeclared identifier 'val' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:757:11)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:123:7)
+ERROR: [HLS 207-1219] expected ';' at end of declaration (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:565:69)
+ERROR: [HLS 207-3706] expression is not assignable (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:566:13)
+ERROR: [HLS 207-1228] expected unqualified-id (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:806:15)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1651:289)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1652:289)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1653:290)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1654:290)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1655:290)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1656:290)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:1984:5)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2005:5)
+ERROR: [HLS 207-7] expected identifier (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2006:5)
+ERROR: [HLS 207-3699] conversion from 'double' to 'int' is not allowed in a converted constant expression (src/srcnn.h:30:10)
+ERROR: [HLS 207-59] too many errors emitted, stopping now
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.662 seconds; current allocated memory: 0.754 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csim_design -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 7.176 seconds; current allocated memory: 0.973 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.253 seconds; current allocated memory: 91.562 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/conv1.cpp' ... 
+ERROR: [HLS 207-3325] use of overloaded operator '*' is ambiguous (with operand types 'param_t' (aka 'float') and 'ftmap_t' (aka 'ap_fixed<16, 9>')) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2372:2211)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2373:2310)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2374:2235)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2375:2256)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2376:2491)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2377:2547)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2378:2437)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2379:2493)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2380:2464)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2381:2520)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2382:2572)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2383:2583)
+INFO: [HLS 207-4370] built-in candidate operator*(float, float) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(float, double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(float, long double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(float, __float128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(float, int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(float, long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(float, long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(float, __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(float, unsigned int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(float, unsigned long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(float, unsigned long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(float, unsigned __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(double, float) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(double, double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(double, long double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(double, __float128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(double, int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(double, long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(double, long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(double, __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(double, unsigned int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(double, unsigned long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(double, unsigned long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(double, unsigned __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long double, float) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long double, double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long double, long double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long double, __float128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long double, int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long double, long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long double, long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long double, __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long double, unsigned int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long double, unsigned long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long double, unsigned long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long double, unsigned __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__float128, float) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__float128, double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__float128, long double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__float128, __float128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__float128, int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__float128, long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__float128, long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__float128, __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__float128, unsigned int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__float128, unsigned long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__float128, unsigned long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__float128, unsigned __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(int, float) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(int, double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(int, long double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(int, __float128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(int, int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(int, long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(int, long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(int, __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(int, unsigned int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(int, unsigned long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(int, unsigned long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(int, unsigned __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long, float) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long, double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long, long double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long, __float128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long, int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long, long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long, long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long, __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long, unsigned int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long, unsigned long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long, unsigned long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long, unsigned __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long long, float) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long long, double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long long, long double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long long, __float128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long long, int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long long, long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long long, long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long long, __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long long, unsigned int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long long, unsigned long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long long, unsigned long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(long long, unsigned __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__int128, float) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__int128, double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__int128, long double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__int128, __float128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__int128, int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__int128, long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__int128, long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__int128, __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__int128, unsigned int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__int128, unsigned long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__int128, unsigned long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(__int128, unsigned __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned int, float) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned int, double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned int, long double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned int, __float128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned int, int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned int, long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned int, long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned int, __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned int, unsigned int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned int, unsigned long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned int, unsigned long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned int, unsigned __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long, float) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long, double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long, long double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long, __float128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long, int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long, long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long, long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long, __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long, unsigned int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long, unsigned long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long, unsigned long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long, unsigned __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long long, float) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long long, double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long long, long double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long long, __float128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long long, int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long long, long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long long, long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long long, __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long long, unsigned int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long long, unsigned long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long long, unsigned long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned long long, unsigned __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned __int128, float) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned __int128, double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned __int128, long double) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned __int128, __float128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned __int128, int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned __int128, long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned __int128, long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned __int128, __int128) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned __int128, unsigned int) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned __int128, unsigned long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned __int128, unsigned long long) (src/conv1.cpp:62:75)
+INFO: [HLS 207-4370] built-in candidate operator*(unsigned __int128, unsigned __int128) (src/conv1.cpp:62:75)
+ERROR: [HLS 207-3325] use of overloaded operator '+' is ambiguous (with operand types 'ftmap_t' (aka 'ap_fixed<16, 9>') and 'param_t' (aka 'float')) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2372:239)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2373:248)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2374:238)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2375:239)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2376:264)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2377:265)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2378:260)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2379:261)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2380:262)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2381:263)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2382:270)
+INFO: [HLS 207-4372] candidate function [with _AP_W = 16, _AP_I = 9, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0] (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:2383:271)
+INFO: [HLS 207-4370] built-in candidate operator+(float, float) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(double, float) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long double, float) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__float128, float) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(int, float) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long, float) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long long, float) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__int128, float) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned int, float) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long, float) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long long, float) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned __int128, float) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(float, double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(double, double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long double, double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__float128, double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(int, double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long, double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long long, double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__int128, double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned int, double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long, double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long long, double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned __int128, double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(float, long double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(float, __float128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(float, int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(float, long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(float, long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(float, __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(float, unsigned int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(float, unsigned long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(float, unsigned long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(float, unsigned __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(double, long double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(double, __float128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(double, int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(double, long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(double, long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(double, __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(double, unsigned int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(double, unsigned long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(double, unsigned long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(double, unsigned __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long double, long double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long double, __float128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long double, int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long double, long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long double, long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long double, __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long double, unsigned int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long double, unsigned long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long double, unsigned long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long double, unsigned __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__float128, long double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__float128, __float128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__float128, int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__float128, long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__float128, long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__float128, __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__float128, unsigned int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__float128, unsigned long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__float128, unsigned long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__float128, unsigned __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(int, long double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(int, __float128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(int, int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(int, long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(int, long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(int, __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(int, unsigned int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(int, unsigned long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(int, unsigned long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(int, unsigned __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long, long double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long, __float128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long, int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long, long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long, long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long, __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long, unsigned int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long, unsigned long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long, unsigned long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long, unsigned __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long long, long double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long long, __float128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long long, int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long long, long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long long, long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long long, __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long long, unsigned int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long long, unsigned long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long long, unsigned long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(long long, unsigned __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__int128, long double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__int128, __float128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__int128, int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__int128, long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__int128, long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__int128, __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__int128, unsigned int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__int128, unsigned long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__int128, unsigned long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(__int128, unsigned __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned int, long double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned int, __float128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned int, int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned int, long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned int, long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned int, __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned int, unsigned int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned int, unsigned long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned int, unsigned long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned int, unsigned __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long, long double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long, __float128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long, int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long, long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long, long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long, __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long, unsigned int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long, unsigned long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long, unsigned long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long, unsigned __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long long, long double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long long, __float128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long long, int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long long, long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long long, long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long long, __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long long, unsigned int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long long, unsigned long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long long, unsigned long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned long long, unsigned __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned __int128, long double) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned __int128, __float128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned __int128, int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned __int128, long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned __int128, long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned __int128, __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned __int128, unsigned int) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned __int128, unsigned long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned __int128, unsigned long long) (src/conv1.cpp:119:77)
+INFO: [HLS 207-4370] built-in candidate operator+(unsigned __int128, unsigned __int128) (src/conv1.cpp:119:77)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 3.51 seconds; current allocated memory: 5.895 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.251 seconds; current allocated memory: 91.984 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/conv1.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/conv2.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/conv3.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/srcnn.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 29.214 seconds; current allocated memory: 92.555 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_buffer_tile_c1(ap_fixed<16, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [25][25], ap_fixed<16, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)' (src/conv1.cpp:89:0)
+INFO: [HLS 214-178] Inlining function 'load_buffer_tile_c1(ap_fixed<16, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [25][25], ap_fixed<16, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)' into 'conv1(ap_fixed<16, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<16, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<16, 9, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])' (src/conv1.cpp:14:0)
+INFO: [HLS 214-178] Inlining function 'export_buffer_tile_c1(ap_fixed<16, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [17][17], ap_fixed<16, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int, ap_fixed<16, 9, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'conv1(ap_fixed<16, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<16, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<16, 9, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 9, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])' (src/conv1.cpp:14:0)
+INFO: [HLS 214-241] Aggregating maxi variable 'conv1_weights' with compact=none mode in 16-bits
+INFO: [HLS 214-241] Aggregating maxi variable 'input_ftmap' with compact=none mode in 16-bits
+INFO: [HLS 214-115] Multiple burst reads of length 81 and bit width 16 in loop 'KY'(src/conv1.cpp:52:10) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv1.cpp:52:10)
+INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 16 in loop 'OUT_BUFFER_NOUT'(src/conv1.cpp:115:19) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv1.cpp:115:19)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.43 seconds; current allocated memory: 92.555 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.011 seconds; current allocated memory: 92.555 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.507 seconds; current allocated memory: 92.555 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-77] The top function 'srcnn' (src/srcnn.cpp:6) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 92.555 MB.
+INFO: [XFORM 203-102] Partitioning array 'input_fm_buffer' in dimension 1 automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv1' (src/conv1.cpp:31:10)...12 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.238 seconds; current allocated memory: 92.555 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.357 seconds; current allocated memory: 92.555 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'srcnn' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln62) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.213 seconds; current allocated memory: 92.555 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.624 seconds; current allocated memory: 92.555 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'srcnn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.156 seconds; current allocated memory: 92.555 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.059 seconds; current allocated memory: 92.555 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_23ns_23_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_5ns_6ns_10_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1'.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_input_fm_buffer_0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_output_fm_buffer_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.217 seconds; current allocated memory: 92.555 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'srcnn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/input_ftmap' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv1_weights' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv1_biases' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv2_weights' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv2_biases' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv3_weights' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv3_biases' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/output_ftmap' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'srcnn' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'input_ftmap', 'conv1_weights', 'conv1_biases', 'conv2_weights', 'conv2_biases', 'conv3_weights', 'conv3_biases', 'output_ftmap' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'srcnn'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.685 seconds; current allocated memory: 92.555 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.593 seconds; current allocated memory: 92.555 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.17 seconds; current allocated memory: 92.555 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for srcnn.
+INFO: [VLOG 209-307] Generating Verilog RTL for srcnn.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3 seconds. CPU system time: 2 seconds. Elapsed time: 44.87 seconds; current allocated memory: 0.602 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csim_design -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 9.98 seconds; current allocated memory: 0.723 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csim_design -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 9.87 seconds; current allocated memory: 0.711 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csim_design -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 9.72 seconds; current allocated memory: 0.676 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csim_design -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 9.517 seconds; current allocated memory: 0.668 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csim_design -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 9.702 seconds; current allocated memory: 0.738 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csim_design -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 10.036 seconds; current allocated memory: 0.641 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csim_design -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 10.187 seconds; current allocated memory: 0.949 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csim_design -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 9.91 seconds; current allocated memory: 0.738 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csim_design -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 10.229 seconds; current allocated memory: 0.695 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csim_design -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 9.759 seconds; current allocated memory: 0.715 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csim_design -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 9.838 seconds; current allocated memory: 0.723 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: csim_design -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.887 seconds; current allocated memory: 0.727 MB.

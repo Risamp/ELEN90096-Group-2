@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn'" level="0">
-<item name = "Date">Sat Oct 28 18:18:31 2023
+<item name = "Date">Sun Oct 29 20:14:36 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,15 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">4425370940, 4425370940, 44.254 sec, 44.254 sec, 4425370941, 4425370941, no</column>
+<column name="">2145473132, 2145473132, 21.455 sec, 21.455 sec, 2145473133, 2145473133, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_conv1_fu_112">conv1, 3190538956, 3190538956, 31.905 sec, 31.905 sec, 3190538956, 3190538956, no</column>
-<column name="grp_conv2_fu_130">conv2, 1234831981, 1234831981, 12.348 sec, 12.348 sec, 1234831981, 1234831981, no</column>
+<column name="grp_conv1_fu_92">conv1, 2145473131, 2145473131, 21.455 sec, 21.455 sec, 2145473131, 2145473131, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -51,12 +50,12 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, -, -, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">104, 5, 3337, 5115, 0</column>
-<column name="Memory">7374, -, 0, 0, 0</column>
-<column name="Multiplexer">-, -, -, 203, -</column>
-<column name="Register">-, -, 326, -, -</column>
+<column name="Instance">25, 1, 2064, 3219, 0</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 32, -</column>
+<column name="Register">-, -, 195, -, -</column>
 <specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
-<specialColumn name="Utilization (%)">2596, ~0, 1, 4, 0</specialColumn>
+<specialColumn name="Utilization (%)">8, ~0, ~0, 2, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -64,11 +63,8 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="control_s_axi_U">control_s_axi, 0, 0, 596, 1064, 0</column>
-<column name="grp_conv1_fu_112">conv1, 40, 0, 977, 1806, 0</column>
-<column name="grp_conv2_fu_130">conv2, 60, 0, 579, 1202, 0</column>
-<column name="fadd_32ns_32ns_32_4_full_dsp_1_U21">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
-<column name="fmul_32ns_32ns_32_3_max_dsp_1_U22">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
-<column name="gmem_m_axi_U">gmem_m_axi, 4, 0, 830, 694, 0</column>
+<column name="grp_conv1_fu_92">conv1, 23, 1, 613, 1364, 0</column>
+<column name="gmem_m_axi_U">gmem_m_axi, 2, 0, 855, 791, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -77,7 +73,6 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="conv1_output_ftmap_U">conv1_output_ftmap_RAM_AUTO_1R1W, 7374, 0, 0, 0, 4161600, 32, 1, 133171200</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
@@ -90,32 +85,18 @@
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">26, 5, 1, 5</column>
-<column name="conv1_output_ftmap_address0">14, 3, 22, 66</column>
-<column name="conv1_output_ftmap_ce0">14, 3, 1, 3</column>
-<column name="conv1_output_ftmap_we0">9, 2, 1, 2</column>
-<column name="gmem_ARADDR">14, 3, 64, 192</column>
-<column name="gmem_ARLEN">14, 3, 32, 96</column>
-<column name="gmem_ARVALID">14, 3, 1, 3</column>
-<column name="gmem_RREADY">14, 3, 1, 3</column>
-<column name="grp_fu_169_ce">14, 3, 1, 3</column>
-<column name="grp_fu_169_p0">14, 3, 32, 96</column>
-<column name="grp_fu_169_p1">14, 3, 32, 96</column>
-<column name="grp_fu_173_ce">14, 3, 1, 3</column>
-<column name="grp_fu_173_p0">14, 3, 32, 96</column>
-<column name="grp_fu_173_p1">14, 3, 32, 96</column>
+<column name="ap_NS_fsm">14, 3, 1, 3</column>
+<column name="gmem_ARVALID">9, 2, 1, 2</column>
+<column name="gmem_RREADY">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">4, 0, 4, 0</column>
-<column name="conv1_biases_read_reg_154">64, 0, 64, 0</column>
-<column name="conv1_weights_read_reg_159">64, 0, 64, 0</column>
-<column name="conv2_biases_read_reg_144">64, 0, 64, 0</column>
-<column name="conv2_weights_read_reg_149">64, 0, 64, 0</column>
-<column name="grp_conv1_fu_112_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_conv2_fu_130_ap_start_reg">1, 0, 1, 0</column>
-<column name="input_ftmap_read_reg_164">64, 0, 64, 0</column>
+<column name="ap_CS_fsm">2, 0, 2, 0</column>
+<column name="conv1_biases_read_reg_108">64, 0, 64, 0</column>
+<column name="conv1_weights_read_reg_113">64, 0, 64, 0</column>
+<column name="grp_conv1_fu_92_ap_start_reg">1, 0, 1, 0</column>
+<column name="input_ftmap_read_reg_118">64, 0, 64, 0</column>
 </table>
 </item>
 </section>

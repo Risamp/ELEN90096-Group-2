@@ -2,10 +2,10 @@ ECHO is off.
 ECHO is off.
 NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'rpais' on host '400p1l1760g0514' (Windows NT_amd64 version 6.2) on Sat Oct 28 18:17:59 +1100 2023
+INFO: [HLS 200-10] For user 'bcevans' on host '400p1t176rg0519' (Windows NT_amd64 version 6.2) on Sun Oct 29 20:37:33 +1100 2023
 INFO: [HLS 200-10] In directory 'C:/SPB_Data/ELEN90096-Group-2/SRCNN'
-Sourcing Tcl script 'C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl'
-INFO: [HLS 200-1510] Running: source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl
+Sourcing Tcl script 'C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim.tcl
 INFO: [HLS 200-1510] Running: open_project srcnn_hls 
 INFO: [HLS 200-10] Opening project 'C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls'.
 INFO: [HLS 200-1510] Running: set_top srcnn 
@@ -49,119 +49,193 @@ INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
-INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.317 seconds; current allocated memory: 91.969 MB.
-INFO: [HLS 200-10] Analyzing design file 'src/conv1.cpp' ... 
-INFO: [HLS 200-10] Analyzing design file 'src/conv2.cpp' ... 
-INFO: [HLS 200-10] Analyzing design file 'src/conv3.cpp' ... 
-INFO: [HLS 200-10] Analyzing design file 'src/srcnn.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 15.637 seconds; current allocated memory: 92.750 MB.
-INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_buffer_tile_c1(float (*) [25][25], float (*) [255][255], int, int)' (src/conv1.cpp:89:0)
-INFO: [HLS 214-178] Inlining function 'load_buffer_tile_c1(float (*) [25][25], float (*) [255][255], int, int)' into 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])' (src/conv1.cpp:14:0)
-INFO: [HLS 214-178] Inlining function 'export_buffer_tile_c1(float (*) [17][17], float (*) [255][255], int, int, float*)' into 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])' (src/conv1.cpp:14:0)
-INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_buffer_tile_c2(float (*) [17][17], float (*) [255][255], int, int)' (src/conv2.cpp:105:0)
-INFO: [HLS 214-178] Inlining function 'load_buffer_tile_c2(float (*) [17][17], float (*) [255][255], int, int)' into 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])' (src/conv2.cpp:14:0)
-INFO: [HLS 214-178] Inlining function 'export_buffer_tile_c2(float (*) [17][17], float (*) [255][255], int, int, float*)' into 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])' (src/conv2.cpp:14:0)
-INFO: [HLS 214-115] Multiple burst reads of length 81 and bit width 32 in loop 'KY'(src/conv1.cpp:52:10) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv1.cpp:52:10)
-INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 32 in loop 'OUT_BUFFER_NOUT'(src/conv1.cpp:115:19) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv1.cpp:115:19)
-INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 32 in loop 'NIN'(src/conv2.cpp:62:11) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv2.cpp:62:11)
-INFO: [HLS 214-115] Multiple burst reads of length 32 and bit width 32 in loop 'VITIS_LOOP_131_1'(src/conv2.cpp:131:20) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv2.cpp:131:20)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.328 seconds; current allocated memory: 92.750 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.014 seconds; current allocated memory: 92.750 MB.
-INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 92.750 MB.
-INFO: [HLS 200-10] Checking synthesizability ...
-WARNING: [SYNCHK 200-77] The top function 'srcnn' (src/srcnn.cpp:6) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
-INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.066 seconds; current allocated memory: 92.750 MB.
-INFO: [XFORM 203-102] Partitioning array 'input_fm_buffer.1' in dimension 1 automatically.
-INFO: [XFORM 203-11] Balancing expressions in function 'conv1' (src/conv1.cpp:31:10)...6 expression(s) balanced.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.245 seconds; current allocated memory: 92.750 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.211 seconds; current allocated memory: 92.750 MB.
-INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'srcnn' ...
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'conv1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.279 seconds; current allocated memory: 92.750 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.062 seconds; current allocated memory: 92.750 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'conv2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.946 seconds; current allocated memory: 92.750 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.615 seconds; current allocated memory: 92.750 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'srcnn' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.223 seconds; current allocated memory: 92.750 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.132 seconds; current allocated memory: 92.750 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'conv1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_5ns_6ns_10_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1'.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_input_fm_buffer_1_0_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.245 seconds; current allocated memory: 92.750 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'conv2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2'.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv2_output_fm_buffer_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.165 seconds; current allocated memory: 92.750 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'srcnn' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
-INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/gmem' to 'm_axi'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/input_ftmap' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv1_weights' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv1_biases' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv2_weights' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv2_biases' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv3_weights' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv3_biases' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/output_ftmap' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'srcnn' to 's_axilite & ap_ctrl_hs'.
-INFO: [RTGEN 206-100] Bundling port 'input_ftmap', 'conv1_weights', 'conv1_biases', 'conv2_weights', 'conv2_biases', 'conv3_weights', 'conv3_biases', 'output_ftmap' to AXI-Lite port control.
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'srcnn'.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_output_ftmap_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.627 seconds; current allocated memory: 92.750 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 1.055 seconds; current allocated memory: 92.750 MB.
-INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.755 seconds; current allocated memory: 92.750 MB.
-INFO: [VHDL 208-304] Generating VHDL RTL for srcnn.
-INFO: [VLOG 209-307] Generating Verilog RTL for srcnn.
-INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 9 seconds. CPU system time: 3 seconds. Elapsed time: 33.069 seconds; current allocated memory: 0.820 MB.
-INFO: [HLS 200-112] Total CPU user time: 11 seconds. Total CPU system time: 4 seconds. Total elapsed time: 35.45 seconds; peak allocated memory: 92.750 MB.
+INFO: [HLS 200-1510] Running: csim_design -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../test/csim.cpp in debug mode
+   Compiling ../../../../test/tb_conv1.cpp in debug mode
+   Compiling ../../../../test/tb_set14.cpp in debug mode
+   Compiling ../../../../test/tb_srcnn.cpp in debug mode
+   Compiling ../../../../test/util.cpp in debug mode
+csim.mk:102: recipe for target 'obj/util.o' failed
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/tb_conv1.cpp:4:
+C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/tb_conv1.cpp:4:
+C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/tb_set14.cpp:6:
+C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/tb_set14.cpp:6:
+C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/tb_srcnn.cpp:4:
+C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/tb_srcnn.cpp:4:
+C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from ../../../../test/util.cpp:3:0:
+../../../../test/util.h:9:17: error: 'ftmap_t' has not been declared
+                 ftmap_t     *image,
+                 ^~~~~~~
+../../../../test/util.h:14:17: error: 'ftmap_t' has not been declared
+                 ftmap_t     *ftmap,
+                 ^~~~~~~
+../../../../test/util.h:19:17: error: 'param_t' has not been declared
+                 param_t     *param,
+                 ^~~~~~~
+../../../../test/util.h:23:22: error: 'ftmap_t' was not declared in this scope
+ double calculate_mse(ftmap_t *img1,
+                      ^~~~~~~
+../../../../test/util.h:23:31: error: 'img1' was not declared in this scope
+ double calculate_mse(ftmap_t *img1,
+                               ^~~~
+../../../../test/util.h:24:22: error: 'ftmap_t' was not declared in this scope
+                      ftmap_t *img2,
+                      ^~~~~~~
+../../../../test/util.h:24:31: error: 'img2' was not declared in this scope
+                      ftmap_t *img2,
+                               ^~~~
+../../../../test/util.h:25:22: error: expected primary-expression before 'int'
+                      int      count);
+                      ^~~
+../../../../test/util.h:25:36: error: expression list treated as compound expression in initializer [-fpermissive]
+                      int      count);
+                                    ^
+../../../../test/util.h:28:23: error: 'ftmap_t' was not declared in this scope
+ double calculate_PSNR(ftmap_t *img1,
+                       ^~~~~~~
+../../../../test/util.h:28:32: error: 'img1' was not declared in this scope
+ double calculate_PSNR(ftmap_t *img1,
+                                ^~~~
+../../../../test/util.h:29:8: error: 'ftmap_t' was not declared in this scope
+        ftmap_t *img2,
+        ^~~~~~~
+../../../../test/util.h:29:17: error: 'img2' was not declared in this scope
+        ftmap_t *img2,
+                 ^~~~
+../../../../test/util.h:30:8: error: expected primary-expression before 'int'
+        int      count);
+        ^~~
+../../../../test/util.h:30:22: error: expression list treated as compound expression in initializer [-fpermissive]
+        int      count);
+                      ^
+../../../../test/util.h:34:7: error: 'ftmap_t' has not been declared
+       ftmap_t       *ftmap,
+       ^~~~~~~
+../../../../test/util.cpp:7:17: error: 'ftmap_t' has not been declared
+                 ftmap_t     *image,
+                 ^~~~~~~
+../../../../test/util.cpp: In function 'void load_image(std::__cxx11::string, int*, int)':
+../../../../test/util.cpp:20:21: error: 'ftmap_t' was not declared in this scope
+         image[i] = (ftmap_t) p_flp;
+                     ^~~~~~~
+../../../../test/util.cpp: At global scope:
+../../../../test/util.cpp:28:17: error: 'ftmap_t' has not been declared
+                 ftmap_t     *ftmap,
+                 ^~~~~~~
+../../../../test/util.cpp: In function 'void load_ftmap(std::__cxx11::string, int*, int)':
+../../../../test/util.cpp:39:21: error: 'ftmap_t' was not declared in this scope
+         ftmap[i] = (ftmap_t) f;
+                     ^~~~~~~
+../../../../test/util.cpp: At global scope:
+../../../../test/util.cpp:47:17: error: 'param_t' has not been declared
+                 param_t     *param,
+                 ^~~~~~~
+../../../../test/util.cpp: In function 'void load_param(std::__cxx11::string, int*, int)':
+../../../../test/util.cpp:58:21: error: 'param_t' was not declared in this scope
+         param[i] = (param_t) p;
+                     ^~~~~~~
+../../../../test/util.cpp: At global scope:
+../../../../test/util.cpp:65:22: error: redefinition of 'double calculate_mse'
+ double calculate_mse(ftmap_t *img1,
+                      ^~~~~~~
+In file included from ../../../../test/util.cpp:3:0:
+../../../../test/util.h:23:8: note: 'double calculate_mse' previously defined here
+ double calculate_mse(ftmap_t *img1,
+        ^~~~~~~~~~~~~
+../../../../test/util.cpp:65:22: error: 'ftmap_t' was not declared in this scope
+ double calculate_mse(ftmap_t *img1,
+                      ^~~~~~~
+../../../../test/util.cpp:65:31: error: 'img1' was not declared in this scope
+ double calculate_mse(ftmap_t *img1,
+                               ^~~~
+../../../../test/util.cpp:66:22: error: 'ftmap_t' was not declared in this scope
+                      ftmap_t *img2,
+                      ^~~~~~~
+../../../../test/util.cpp:66:31: error: 'img2' was not declared in this scope
+                      ftmap_t *img2,
+                               ^~~~
+../../../../test/util.cpp:67:22: error: expected primary-expression before 'int'
+                      int      count)
+                      ^~~
+make: *** [obj/util.o] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.887 seconds; current allocated memory: 0.727 MB.
+4
+    while executing
+"source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim.tcl"
+    invoked from within
+"hls::main C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 10.763 seconds; peak allocated memory: 94.602 MB.

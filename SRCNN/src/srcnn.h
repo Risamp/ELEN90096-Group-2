@@ -1,6 +1,8 @@
 #ifndef _SRCNN_H_
 #define _SRCNN_H_
 
+#include "ap_fixed.h"
+
 // image dimensions
 #define W  255          // image width
 #define H  255          // image height
@@ -25,8 +27,8 @@
 #define P3 (F3 - 1) / 2	// padding conv3
 
 // data types
-typedef float ftmap_t;  // feature map
-typedef float param_t;  // parameters
+typedef ap_fixed<16,9> ftmap_t;  // feature map
+typedef ap_fixed<16,9> param_t;  // parameters
 
 // implements end-to-end SRCNN
 void srcnn(ftmap_t input_ftmap[N0][H][W],

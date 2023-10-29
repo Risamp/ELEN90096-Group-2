@@ -1,5 +1,4 @@
 #include "srcnn.h"
-#include "util.h"
 #include <cstring>
 #include <iostream>
 
@@ -27,7 +26,7 @@ void srcnn(ftmap_t input_ftmap[N0][H][W],
 	#pragma HLS INTERFACE m_axi port=output_ftmap offset=slave depth=1
 	#pragma HLS INTERFACE s_axilite port=return
 
-	std::cout <<  "Blah Blah";
+	std::cout <<  sizeof(float);
 
 
 	static ftmap_t conv1_output_ftmap[N1][H][W] = {0};

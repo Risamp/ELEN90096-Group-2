@@ -1,6 +1,5 @@
 #include "srcnn.h"
 #include <iostream>
-#include "util.h"
 #include <cmath>
 #include <cstring>
 

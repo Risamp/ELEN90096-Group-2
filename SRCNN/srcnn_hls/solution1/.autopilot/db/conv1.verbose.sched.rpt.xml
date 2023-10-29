@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1'" level="0">
-<item name = "Date">Sat Oct 28 18:18:24 2023
+<item name = "Date">Sun Oct 29 20:14:35 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">3190538956, 3190538956, 31.905 sec, 31.905 sec, 3190538956, 3190538956, no</column>
+<column name="">2145473131, 2145473131, 21.455 sec, 21.455 sec, 2145473131, 2145473131, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,19 +35,17 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILE_J">3190538955, 3190538955, 212702597, -, -, 15, no</column>
-<column name=" + TILE_I">212702595, 212702595, 14180173, -, -, 15, no</column>
+<column name="- TILE_J">2145473130, 2145473130, 143031542, -, -, 15, no</column>
+<column name=" + TILE_I">143031540, 143031540, 9535436, -, -, 15, no</column>
 <column name="  ++ TILE_I.1">625, 625, 1, -, -, 625, no</column>
 <column name="  ++ IN_BUFFER_BY">6925, 6925, 277, -, -, 25, no</column>
 <column name="   +++ IN_BUFFER_BX">275, 275, 11, -, -, 25, no</column>
-<column name="  ++ NOUT">14003776, 14003776, 218809, -, -, 64, no</column>
-<column name="   +++ TY">218807, 218807, 12871, -, -, 17, no</column>
-<column name="    ++++ TX">12869, 12869, 757, -, -, 17, no</column>
-<column name="     +++++ KY">747, 747, 83, -, -, 9, no</column>
-<column name="      ++++++ KX">81, 81, 9, -, -, 9, no</column>
-<column name="  ++ OUT_BUFFER_NOUT">150337, 150337, 2349, -, -, 64, no</column>
-<column name="   +++ OUT_BUFFER_TY">2346, 2346, 138, -, -, 17, no</column>
-<column name="    ++++ OUT_BUFFER_TX">136, 136, 8, -, -, 17, no</column>
+<column name="  ++ NOUT">9509248, 9509248, 148582, -, -, 64, no</column>
+<column name="   +++ TY">148580, 148580, 8740, -, -, 17, no</column>
+<column name="    ++++ TX">8738, 8738, 514, -, -, 17, no</column>
+<column name="     +++++ KY">504, 504, 56, -, -, 9, no</column>
+<column name="      ++++++ KX">54, 54, 6, -, -, 9, no</column>
+<column name="  ++ OUT_BUFFER_NOUT">128, 128, 2, -, -, 64, no</column>
 <column name="  ++ TILE_I.5">18496, 18496, 1, -, -, 18496, no</column>
 </table>
 </item>

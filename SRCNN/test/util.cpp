@@ -1,8 +1,6 @@
 #include <fstream>
 #include <cmath>
-
 #include "util.h"
-
 
 // load image from uint8_t file and normalize to interval [0, 1]
 void load_image(std::string  fname,

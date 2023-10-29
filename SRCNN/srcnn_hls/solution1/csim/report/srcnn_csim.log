@@ -5,26 +5,171 @@ INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../../test/tb_set14.cpp in debug mode
    Compiling ../../../../test/tb_srcnn.cpp in debug mode
    Compiling ../../../../test/util.cpp in debug mode
-   Compiling ../../../../src/conv1.cpp in debug mode
-   Compiling ../../../../src/conv2.cpp in debug mode
-   Compiling ../../../../src/conv3.cpp in debug mode
-   Compiling ../../../../src/srcnn.cpp in debug mode
-   Generating csim.exe
-***** CONV1 Golden Reference *****
-  - Butterfly MSE: 3.40524e-015
-
-Blah Blah***** SRCNN Golden Reference *****
-  - Butterfly MSE: 0.27515
-
-***** SRCNN - Set14 Test *****
-Image Name     PSNR GT vs HR (dB)  PSNR GT vs HR MATLAB (dB)  PSNR GT vs LR (dB)  MSE GT vs HR   MSE GT vs HR MATLAB        
-Blah Blahbaboon         6.16102             24.9898                    27.3618             0.242046       0.00161402                 
-Blah Blahbarbara        5.56792             26.2451                    24.8997             0.277465       0.00316839                 
-Blah Blahbridge         5.94049             26.8397                    25.2317             0.254654       0.00237435                 
-Blah Blahcoastguard     6.01363             33.4187                    26.3                0.250401       0.00206895                 
-Blah Blahface           8.80412             27.3319                    32.6794             0.131701       0.000454177                
-Blah Blahflowers        7.13983             35.727                     25.6995             0.193204       0.00184746                 
-Blah Blahforeman        3.90042             30.8413                    33.2014             0.407341       0.000266235                
-Blah Blahlenna          6.03272             27.1209                    29.1689             0.249303       0.000822304                
-Blah Blahman            7.03768             27.9822                    26.0613             0.197802       0.00193996                 
-Blah Blahmonarch        5.66056             33.4745                    24.5799             0.271609       0.00159023                 
+csim.mk:102: recipe for target 'obj/util.o' failed
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/tb_conv1.cpp:4:
+C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/tb_conv1.cpp:4:
+C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/tb_set14.cpp:6:
+C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/tb_set14.cpp:6:
+C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/tb_srcnn.cpp:4:
+C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/tb_srcnn.cpp:4:
+C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from ../../../../test/util.cpp:3:0:
+../../../../test/util.h:9:17: error: 'ftmap_t' has not been declared
+                 ftmap_t     *image,
+                 ^~~~~~~
+../../../../test/util.h:14:17: error: 'ftmap_t' has not been declared
+                 ftmap_t     *ftmap,
+                 ^~~~~~~
+../../../../test/util.h:19:17: error: 'param_t' has not been declared
+                 param_t     *param,
+                 ^~~~~~~
+../../../../test/util.h:23:22: error: 'ftmap_t' was not declared in this scope
+ double calculate_mse(ftmap_t *img1,
+                      ^~~~~~~
+../../../../test/util.h:23:31: error: 'img1' was not declared in this scope
+ double calculate_mse(ftmap_t *img1,
+                               ^~~~
+../../../../test/util.h:24:22: error: 'ftmap_t' was not declared in this scope
+                      ftmap_t *img2,
+                      ^~~~~~~
+../../../../test/util.h:24:31: error: 'img2' was not declared in this scope
+                      ftmap_t *img2,
+                               ^~~~
+../../../../test/util.h:25:22: error: expected primary-expression before 'int'
+                      int      count);
+                      ^~~
+../../../../test/util.h:25:36: error: expression list treated as compound expression in initializer [-fpermissive]
+                      int      count);
+                                    ^
+../../../../test/util.h:28:23: error: 'ftmap_t' was not declared in this scope
+ double calculate_PSNR(ftmap_t *img1,
+                       ^~~~~~~
+../../../../test/util.h:28:32: error: 'img1' was not declared in this scope
+ double calculate_PSNR(ftmap_t *img1,
+                                ^~~~
+../../../../test/util.h:29:8: error: 'ftmap_t' was not declared in this scope
+        ftmap_t *img2,
+        ^~~~~~~
+../../../../test/util.h:29:17: error: 'img2' was not declared in this scope
+        ftmap_t *img2,
+                 ^~~~
+../../../../test/util.h:30:8: error: expected primary-expression before 'int'
+        int      count);
+        ^~~
+../../../../test/util.h:30:22: error: expression list treated as compound expression in initializer [-fpermissive]
+        int      count);
+                      ^
+../../../../test/util.h:34:7: error: 'ftmap_t' has not been declared
+       ftmap_t       *ftmap,
+       ^~~~~~~
+../../../../test/util.cpp:7:17: error: 'ftmap_t' has not been declared
+                 ftmap_t     *image,
+                 ^~~~~~~
+../../../../test/util.cpp: In function 'void load_image(std::__cxx11::string, int*, int)':
+../../../../test/util.cpp:20:21: error: 'ftmap_t' was not declared in this scope
+         image[i] = (ftmap_t) p_flp;
+                     ^~~~~~~
+../../../../test/util.cpp: At global scope:
+../../../../test/util.cpp:28:17: error: 'ftmap_t' has not been declared
+                 ftmap_t     *ftmap,
+                 ^~~~~~~
+../../../../test/util.cpp: In function 'void load_ftmap(std::__cxx11::string, int*, int)':
+../../../../test/util.cpp:39:21: error: 'ftmap_t' was not declared in this scope
+         ftmap[i] = (ftmap_t) f;
+                     ^~~~~~~
+../../../../test/util.cpp: At global scope:
+../../../../test/util.cpp:47:17: error: 'param_t' has not been declared
+                 param_t     *param,
+                 ^~~~~~~
+../../../../test/util.cpp: In function 'void load_param(std::__cxx11::string, int*, int)':
+../../../../test/util.cpp:58:21: error: 'param_t' was not declared in this scope
+         param[i] = (param_t) p;
+                     ^~~~~~~
+../../../../test/util.cpp: At global scope:
+../../../../test/util.cpp:65:22: error: redefinition of 'double calculate_mse'
+ double calculate_mse(ftmap_t *img1,
+                      ^~~~~~~
+In file included from ../../../../test/util.cpp:3:0:
+../../../../test/util.h:23:8: note: 'double calculate_mse' previously defined here
+ double calculate_mse(ftmap_t *img1,
+        ^~~~~~~~~~~~~
+../../../../test/util.cpp:65:22: error: 'ftmap_t' was not declared in this scope
+ double calculate_mse(ftmap_t *img1,
+                      ^~~~~~~
+../../../../test/util.cpp:65:31: error: 'img1' was not declared in this scope
+ double calculate_mse(ftmap_t *img1,
+                               ^~~~
+../../../../test/util.cpp:66:22: error: 'ftmap_t' was not declared in this scope
+                      ftmap_t *img2,
+                      ^~~~~~~
+../../../../test/util.cpp:66:31: error: 'img2' was not declared in this scope
+                      ftmap_t *img2,
+                               ^~~~
+../../../../test/util.cpp:67:22: error: expected primary-expression before 'int'
+                      int      count)
+                      ^~~
+make: *** [obj/util.o] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************
