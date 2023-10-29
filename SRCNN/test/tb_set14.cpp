@@ -6,6 +6,7 @@
 #include "srcnn.h"
 #include "util.h"
 
+
 using namespace std;
 
 ftmap_t img_LR_set14[N0][H][W];  // low resolution input image

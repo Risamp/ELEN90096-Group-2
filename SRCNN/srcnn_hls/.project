@@ -87,6 +87,11 @@
 			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/test/set5</location>
 		</link>
 		<link>
+			<name>testbench/srcnn.h</name>
+			<type>1</type>
+			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/srcnn.h</location>
+		</link>
+		<link>
 			<name>testbench/tb_conv1.cpp</name>
 			<type>1</type>
 			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/test/tb_conv1.cpp</location>

@@ -1,8 +1,0 @@
-srcnn_mul_5ns_6ns_10_1_1
-srcnn_mac_muladd_16s_16s_23ns_23_4_1
-srcnn_conv1_input_fm_buffer_0_RAM_AUTO_1R1W
-srcnn_conv1_output_fm_buffer_RAM_AUTO_1R1W
-srcnn_gmem_m_axi
-srcnn_control_s_axi
-conv1
-srcnn

@@ -1,44 +1,40 @@
 [
   {
-    "functionLabel": "",
-    "functionName": "srcnn",
     "id": 0,
-    "ifcond": "",
     "insert_position": "",
+    "functionName": "srcnn",
     "label": "",
+    "functionLabel": "",
+    "success": false,
+    "slx": false,
+    "ifcond": "",
+    "sourceFile": "C:\/SPB_Data\/ELEN90096-Group-2\/SRCNN\/srcnn_hls\/solution1\/directives.tcl",
+    "sourceLine": 7,
     "pragma": {
       "name": "TOP",
-      "option": [
-        {
+      "option": [{
           "name": "name",
           "value": "srcnn"
-        }
-      ]
-    },
-    "slx": false,
-    "sourceFile": "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/directives.tcl",
-    "sourceLine": 7,
-    "success": true
+        }]
+    }
   },
   {
-    "functionLabel": "",
-    "functionName": "srcnn",
     "id": 1,
-    "ifcond": "",
     "insert_position": "",
+    "functionName": "srcnn",
     "label": "",
+    "functionLabel": "",
+    "success": false,
+    "slx": false,
+    "ifcond": "",
+    "sourceFile": "C:\/SPB_Data\/ELEN90096-Group-2\/SRCNN\/srcnn_hls\/solution1\/csynth.tcl",
+    "sourceLine": 29,
     "pragma": {
       "name": "TOP",
-      "option": [
-        {
+      "option": [{
           "name": "name",
           "value": "srcnn"
-        }
-      ]
-    },
-    "slx": false,
-    "sourceFile": "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl",
-    "sourceLine": 28,
-    "success": true
+        }]
+    }
   }
 ]

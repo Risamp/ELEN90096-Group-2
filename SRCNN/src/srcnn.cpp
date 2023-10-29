@@ -16,15 +16,15 @@ void srcnn(ftmap_t input_ftmap[N0][H][W],
 	#pragma HLS PIPELINE off
 
 	//Interface definitions
-	#pragma HLS INTERFACE m_axi port=input_ftmap offset=slave depth=1
-	#pragma HLS INTERFACE m_axi port=conv1_weights offset=slave depth=1
-	#pragma HLS INTERFACE m_axi port=conv1_biases offset=slave depth=1
-	#pragma HLS INTERFACE m_axi port=conv2_weights offset=slave depth=1
-	#pragma HLS INTERFACE m_axi port=conv2_biases offset=slave depth=1
-	#pragma HLS INTERFACE m_axi port=conv3_weights offset=slave depth=1
-	#pragma HLS INTERFACE m_axi port=conv3_biases offset=slave depth=1
-	#pragma HLS INTERFACE m_axi port=output_ftmap offset=slave depth=1
-	#pragma HLS INTERFACE s_axilite port=return
+//	#pragma HLS INTERFACE m_axi port=input_ftmap offset=slave depth=1
+//	#pragma HLS INTERFACE m_axi port=conv1_weights offset=slave depth=1
+//	#pragma HLS INTERFACE m_axi port=conv1_biases offset=slave depth=1
+//	#pragma HLS INTERFACE m_axi port=conv2_weights offset=slave depth=1
+//	#pragma HLS INTERFACE m_axi port=conv2_biases offset=slave depth=1
+//	#pragma HLS INTERFACE m_axi port=conv3_weights offset=slave depth=1
+//	#pragma HLS INTERFACE m_axi port=conv3_biases offset=slave depth=1
+//	#pragma HLS INTERFACE m_axi port=output_ftmap offset=slave depth=1
+//	#pragma HLS INTERFACE s_axilite port=return
 
 	std::cout <<  sizeof(float);
 
@@ -32,18 +32,18 @@ void srcnn(ftmap_t input_ftmap[N0][H][W],
 	static ftmap_t conv1_output_ftmap[N1][H][W] = {0};
 	static ftmap_t conv2_output_ftmap[N2][H][W] = {0};
 
-//	memset(conv1_output_ftmap, 0, N1 * H * W * sizeof(ftmap_t));
-//	memset(conv2_output_ftmap, 0, N2 * H * W * sizeof(ftmap_t));
-//	memset(output_ftmap, 0, N3 * H * W * sizeof(ftmap_t));
-//
+	memset(conv1_output_ftmap, 0, N1 * H * W * sizeof(ftmap_t));
+	memset(conv2_output_ftmap, 0, N2 * H * W * sizeof(ftmap_t));
+	memset(output_ftmap, 0, N3 * H * W * sizeof(ftmap_t));
+
 //    // apply convolutional layer 1
     conv1(input_ftmap, conv1_weights, conv1_biases, conv1_output_ftmap);
 //
 //    // apply non-linear mapping layer
-//    conv2(conv1_output_ftmap, conv2_weights, conv2_biases, conv2_output_ftmap);
+    conv2(conv1_output_ftmap, conv2_weights, conv2_biases, conv2_output_ftmap);
 //
 //    // reconstruction layer
-//    conv3(conv2_output_ftmap, conv3_weights, conv3_biases, output_ftmap);
+    conv3(conv2_output_ftmap, conv3_weights, conv3_biases, output_ftmap);
 
 }
 

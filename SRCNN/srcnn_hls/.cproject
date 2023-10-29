@@ -133,7 +133,7 @@
                                 								
                                 <option id="gnu.c.link.option.libs.1343817202" name="Libraries (-l)" superClass="gnu.c.link.option.libs"/>
                                 								
-                                <option id="gnu.c.link.option.ldflags.2026656228" name="Linker flags" superClass="gnu.c.link.option.ldflags"/>
+                                <option id="gnu.c.link.option.ldflags.2026656228" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="-I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include" valueType="string"/>
                                 							
                             </tool>
                             							
@@ -147,7 +147,7 @@
                                 								
                                 <option id="gnu.cpp.link.option.libs.847286214" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs"/>
                                 								
-                                <option id="gnu.cpp.link.option.flags.266312888" name="Linker flags" superClass="gnu.cpp.link.option.flags"/>
+                                <option id="gnu.cpp.link.option.flags.266312888" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="-I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include" valueType="string"/>
                                 								
                                 <inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1860385624" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
                                     									
@@ -341,9 +341,11 @@
                         					
                     </fileInfo>
                     					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1615943918.209438923" name="srcnn.h" rcbsApplicability="disable" resourcePath="source/srcnn.h" toolsToInvoke=""/>
+                    					
                     <sourceEntries>
                         						
-                        <entry excluding=".apc|.settings|solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding=".apc|.settings|solution1|source/srcnn.h|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				
@@ -465,7 +467,7 @@
                                 								
                                 <option id="gnu.c.link.option.libs.1344311501" name="Libraries (-l)" superClass="gnu.c.link.option.libs"/>
                                 								
-                                <option id="gnu.c.link.option.ldflags.913864823" name="Linker flags" superClass="gnu.c.link.option.ldflags"/>
+                                <option id="gnu.c.link.option.ldflags.913864823" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="-I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include" valueType="string"/>
                                 							
                             </tool>
                             							
@@ -479,7 +481,7 @@
                                 								
                                 <option id="gnu.cpp.link.option.libs.1408194919" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs"/>
                                 								
-                                <option id="gnu.cpp.link.option.flags.1276284360" name="Linker flags" superClass="gnu.cpp.link.option.flags"/>
+                                <option id="gnu.cpp.link.option.flags.1276284360" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="-I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include" valueType="string"/>
                                 								
                                 <inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.70412402" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
                                     									
@@ -675,7 +677,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding=".apc|.settings|solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding=".apc|.settings|solution1|source/srcnn.h|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				
@@ -726,5 +728,21 @@
     </storageModule>
     	
     <storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+    	
+    <storageModule moduleId="refreshScope" versionNumber="2">
+        		
+        <configuration configurationName="Debug">
+            			
+            <resource resourceType="PROJECT" workspacePath="/srcnn_hls"/>
+            		
+        </configuration>
+        		
+        <configuration configurationName="Release">
+            			
+            <resource resourceType="PROJECT" workspacePath="/srcnn_hls"/>
+            		
+        </configuration>
+        	
+    </storageModule>
     
 </cproject>

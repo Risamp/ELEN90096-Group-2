@@ -2,7 +2,7 @@
     <includePaths/>
     <libraryPaths/>
     <Simulation argv="">
-        <SimFlow askAgain="false" name="csim" ldflags="" clean="true" csimMode="0" lastCsimMode="0"/>
+        <SimFlow askAgain="false" name="csim" ldflags="-I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include" clean="true" csimMode="0" lastCsimMode="0"/>
     </Simulation>
     <files xmlns="">
         <file name="src/conv1.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
@@ -11,6 +11,7 @@
         <file name="src/srcnn.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="src/srcnn.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="../../test/csim.cpp" sc="0" tb="1" cflags="-I../../src -Wno-unknown-pragmas" csimflags="" blackbox="false"/>
+        <file name="../../src/srcnn.h" sc="0" tb="1" cflags="-Wno-unknown-pragmas" csimflags="" blackbox="false"/>
         <file name="../../test/tb_conv1.cpp" sc="0" tb="1" cflags="-I../../src -Wno-unknown-pragmas" csimflags="" blackbox="false"/>
         <file name="../../test/tb_set14.cpp" sc="0" tb="1" cflags="-I../../src -Wno-unknown-pragmas" csimflags="" blackbox="false"/>
         <file name="../../test/tb_srcnn.cpp" sc="0" tb="1" cflags="-I../../src -Wno-unknown-pragmas" csimflags="" blackbox="false"/>

@@ -30,9 +30,11 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 
 	TJ: for (int tj = 0; tj < T; tj++) {
 	TI: for (int ti = 0; ti < T; ti++) {
+	TN: for (int tn = 0; tn < N1 / TD1; tn++) {
 
 		int ty0 = tj * TH;
 		int tx0 = ti * TW;
+		int tn0 = tn * TD1;
 
 		// initialise input and output buffers
 		static ftmap_t input_fm_buffer[N1][TH + (2 * P2)][TW + (2 * P2)];
@@ -58,10 +60,10 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 
 					// for each input layer
 					// TODO: PIPELINE THIS
-					NIN: for (int nin = 0; nin < N1; nin++) {
+					NIN: for (int nin = 0; nin < TD1; nin++) {
 // it's a yes from me (-56% runtime)
 //#pragma HLS UNROLL factor=8
-						output_fm_buffer[nout][ty][tx] += conv2_weights[nout][nin][ky][kx] * input_fm_buffer[nin][by][bx];
+						output_fm_buffer[nout][ty][tx] += conv2_weights[nout][tn0 + nin][ky][kx] * input_fm_buffer[tn0 + nin][by][bx];
 					}
 				}}
 
@@ -71,7 +73,7 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 
 		// load output buffer back to DRAM
 		export_buffer_tile_c2(output_fm_buffer, output_ftmap, tx0, ty0, conv2_biases);
-	}}
+	}}}
 
 
 	// split relu from rest of loop

@@ -16,9 +16,12 @@
 #define F2 1            // conv2 kernel size
 #define N3 1            // conv3 output features
 #define F3 5            // conv3 kernel size
-#define T 15				// number of tiles in each dimension
+
+#define T 15			// number of tiles in each dimension (width/height)
 #define TH H / T		// input tile height
-#define TW W / T		// input tile depth
+#define TW W / T		// input tile width
+#define TD1 N1 / 8		// N1 input tile depth
+#define TD2 N2 / 8		// N2 input tile depth
 
 
 //Padding values
@@ -27,8 +30,11 @@
 #define P3 (F3 - 1) / 2	// padding conv3
 
 // data types
-typedef ap_fixed<16,9> ftmap_t;  // feature map
-typedef ap_fixed<16,9> param_t;  // parameters
+//typedef ap_fixed<16,4> ftmap_t;  // feature map
+//typedef ap_fixed<16,4> param_t;  // parameters
+
+typedef float ftmap_t;  // feature map
+typedef float param_t;  // parameters
 
 // implements end-to-end SRCNN
 void srcnn(ftmap_t input_ftmap[N0][H][W],

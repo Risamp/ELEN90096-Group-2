@@ -58,6 +58,7 @@ IFLAG += -D__SIM_FIR__
 IFLAG += -D__SIM_DDS__
 
 IFLAG += -D__DSP48E2__
+LFLAG += -I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include
 IFLAG += -g
 IFLAG += -DNT
 LFLAG += -Wl,--enable-auto-import 
