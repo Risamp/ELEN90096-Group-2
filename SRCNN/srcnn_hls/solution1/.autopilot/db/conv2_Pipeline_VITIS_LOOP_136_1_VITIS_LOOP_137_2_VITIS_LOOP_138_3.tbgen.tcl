@@ -15,21 +15,21 @@ set DLRegItemOffset 0
 set C_modelName {conv2_Pipeline_VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ select_ln30_1 int 8 regular  }
+	{ select_ln30_2 int 8 regular  }
 	{ sext_ln30 int 62 regular  }
 	{ gmem int 32 regular {axi_master 2}  }
 	{ ti_cast14 int 4 regular  }
-	{ tmp_5 int 8 regular  }
+	{ tmp_9 int 8 regular  }
 	{ output_ftmap int 64 regular  }
 	{ output_fm_buffer float 32 regular {array 9248 { 1 3 } 1 1 } {global 0}  }
 }
 set hasAXIMCache 0
 set C_modelArgMapList {[ 
-	{ "Name" : "select_ln30_1", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY"} , 
+	{ "Name" : "select_ln30_2", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY"} , 
  	{ "Name" : "sext_ln30", "interface" : "wire", "bitwidth" : 62, "direction" : "READONLY"} , 
- 	{ "Name" : "gmem", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READWRITE", "bitSlice":[ {"cElement": [{"cName": "input_ftmap","offset": { "type": "dynamic","port_name": "input_ftmap","bundle": "control"},"direction": "READONLY"},{"cName": "conv1_weights","offset": { "type": "dynamic","port_name": "conv1_weights","bundle": "control"},"direction": "READONLY"},{"cName": "conv1_biases","offset": { "type": "dynamic","port_name": "conv1_biases","bundle": "control"},"direction": "READONLY"},{"cName": "conv1_output_ftmap","offset": { "type": "dynamic","port_name": "conv1_output_ftmap","bundle": "control"},"direction": "READWRITE"},{"cName": "conv2_weights","offset": { "type": "dynamic","port_name": "conv2_weights","bundle": "control"},"direction": "READONLY"},{"cName": "conv2_biases","offset": { "type": "dynamic","port_name": "conv2_biases","bundle": "control"},"direction": "READONLY"},{"cName": "conv2_output_ftmap","offset": { "type": "dynamic","port_name": "conv2_output_ftmap","bundle": "control"},"direction": "READWRITE"},{"cName": "conv3_weights","offset": { "type": "dynamic","port_name": "conv3_weights","bundle": "control"},"direction": "READONLY"},{"cName": "conv3_biases","offset": { "type": "dynamic","port_name": "conv3_biases","bundle": "control"},"direction": "READONLY"},{"cName": "output_ftmap","offset": { "type": "dynamic","port_name": "output_ftmap","bundle": "control"},"direction": "READWRITE"}]}]} , 
+ 	{ "Name" : "gmem", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READWRITE", "bitSlice":[ {"cElement": [{"cName": "input_ftmap","offset": { "type": "dynamic","port_name": "input_ftmap","bundle": "control"},},{"cName": "conv1_weights","offset": { "type": "dynamic","port_name": "conv1_weights","bundle": "control"},},{"cName": "conv1_biases","offset": { "type": "dynamic","port_name": "conv1_biases","bundle": "control"},"direction": "READONLY"},{"cName": "conv1_output_ftmap","offset": { "type": "dynamic","port_name": "conv1_output_ftmap","bundle": "control"},"direction": "READWRITE"},{"cName": "conv2_weights","offset": { "type": "dynamic","port_name": "conv2_weights","bundle": "control"},"direction": "READONLY"},{"cName": "conv2_biases","offset": { "type": "dynamic","port_name": "conv2_biases","bundle": "control"},"direction": "READONLY"},{"cName": "conv2_output_ftmap","offset": { "type": "dynamic","port_name": "conv2_output_ftmap","bundle": "control"},"direction": "READWRITE"},{"cName": "conv3_weights","offset": { "type": "dynamic","port_name": "conv3_weights","bundle": "control"},"direction": "READONLY"},{"cName": "conv3_biases","offset": { "type": "dynamic","port_name": "conv3_biases","bundle": "control"},"direction": "READONLY"},{"cName": "output_ftmap","offset": { "type": "dynamic","port_name": "output_ftmap","bundle": "control"},"direction": "READWRITE"}]}]} , 
  	{ "Name" : "ti_cast14", "interface" : "wire", "bitwidth" : 4, "direction" : "READONLY"} , 
- 	{ "Name" : "tmp_5", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY"} , 
+ 	{ "Name" : "tmp_9", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY"} , 
  	{ "Name" : "output_ftmap", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY"} , 
  	{ "Name" : "output_fm_buffer", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "extern" : 0} ]}
 # RTL Port declarations: 
@@ -87,10 +87,10 @@ set portList {
 	{ m_axi_gmem_BRESP sc_in sc_lv 2 signal 2 } 
 	{ m_axi_gmem_BID sc_in sc_lv 1 signal 2 } 
 	{ m_axi_gmem_BUSER sc_in sc_lv 1 signal 2 } 
-	{ select_ln30_1 sc_in sc_lv 8 signal 0 } 
+	{ select_ln30_2 sc_in sc_lv 8 signal 0 } 
 	{ sext_ln30 sc_in sc_lv 62 signal 1 } 
 	{ ti_cast14 sc_in sc_lv 4 signal 3 } 
-	{ tmp_5 sc_in sc_lv 8 signal 4 } 
+	{ tmp_9 sc_in sc_lv 8 signal 4 } 
 	{ output_ftmap sc_in sc_lv 64 signal 5 } 
 	{ output_fm_buffer_address0 sc_out sc_lv 14 signal 6 } 
 	{ output_fm_buffer_ce0 sc_out sc_logic 1 signal 6 } 
@@ -159,10 +159,10 @@ set NewPortList {[
  	{ "name": "m_axi_gmem_BRESP", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "gmem", "role": "BRESP" }} , 
  	{ "name": "m_axi_gmem_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "BID" }} , 
  	{ "name": "m_axi_gmem_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "BUSER" }} , 
- 	{ "name": "select_ln30_1", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "select_ln30_1", "role": "default" }} , 
+ 	{ "name": "select_ln30_2", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "select_ln30_2", "role": "default" }} , 
  	{ "name": "sext_ln30", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln30", "role": "default" }} , 
  	{ "name": "ti_cast14", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "ti_cast14", "role": "default" }} , 
- 	{ "name": "tmp_5", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "tmp_5", "role": "default" }} , 
+ 	{ "name": "tmp_9", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "tmp_9", "role": "default" }} , 
  	{ "name": "output_ftmap", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "output_ftmap", "role": "default" }} , 
  	{ "name": "output_fm_buffer_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":14, "type": "signal", "bundle":{"name": "output_fm_buffer", "role": "address0" }} , 
  	{ "name": "output_fm_buffer_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "output_fm_buffer", "role": "ce0" }} , 
@@ -194,7 +194,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "select_ln30_1", "Type" : "None", "Direction" : "I"},
+			{"Name" : "select_ln30_2", "Type" : "None", "Direction" : "I"},
 			{"Name" : "sext_ln30", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem", "Type" : "MAXI", "Direction" : "IO",
 				"BlockSignal" : [
@@ -204,23 +204,23 @@ set RtlHierarchyInfo {[
 					{"Name" : "gmem_blk_n_W", "Type" : "RtlSignal"},
 					{"Name" : "gmem_blk_n_B", "Type" : "RtlSignal"}]},
 			{"Name" : "ti_cast14", "Type" : "None", "Direction" : "I"},
-			{"Name" : "tmp_5", "Type" : "None", "Direction" : "I"},
+			{"Name" : "tmp_9", "Type" : "None", "Direction" : "I"},
 			{"Name" : "output_ftmap", "Type" : "None", "Direction" : "I"},
 			{"Name" : "output_fm_buffer", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "21", "FirstState" : "ap_ST_fsm_pp0_stage1", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage1_subdone", "LastState" : "ap_ST_fsm_pp0_stage5", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage5_subdone", "QuitState" : "ap_ST_fsm_pp0_stage5", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage5_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_6ns_19ns_24_1_1_U88", "Parent" : "0"},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_6ns_19ns_24_1_1_U58", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	conv2_Pipeline_VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3 {
-		select_ln30_1 {Type I LastRead 0 FirstWrite -1}
+		select_ln30_2 {Type I LastRead 0 FirstWrite -1}
 		sext_ln30 {Type I LastRead 0 FirstWrite -1}
 		gmem {Type IO LastRead 22 FirstWrite 21}
 		ti_cast14 {Type I LastRead 0 FirstWrite -1}
-		tmp_5 {Type I LastRead 0 FirstWrite -1}
+		tmp_9 {Type I LastRead 0 FirstWrite -1}
 		output_ftmap {Type I LastRead 0 FirstWrite -1}
 		output_fm_buffer {Type I LastRead 1 FirstWrite -1}}}
 
@@ -236,11 +236,11 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	select_ln30_1 { ap_none {  { select_ln30_1 in_data 0 8 } } }
+	select_ln30_2 { ap_none {  { select_ln30_2 in_data 0 8 } } }
 	sext_ln30 { ap_none {  { sext_ln30 in_data 0 62 } } }
 	 { m_axi {  { m_axi_gmem_AWVALID VALID 1 1 }  { m_axi_gmem_AWREADY READY 0 1 }  { m_axi_gmem_AWADDR ADDR 1 64 }  { m_axi_gmem_AWID ID 1 1 }  { m_axi_gmem_AWLEN SIZE 1 32 }  { m_axi_gmem_AWSIZE BURST 1 3 }  { m_axi_gmem_AWBURST LOCK 1 2 }  { m_axi_gmem_AWLOCK CACHE 1 2 }  { m_axi_gmem_AWCACHE PROT 1 4 }  { m_axi_gmem_AWPROT QOS 1 3 }  { m_axi_gmem_AWQOS REGION 1 4 }  { m_axi_gmem_AWREGION USER 1 4 }  { m_axi_gmem_AWUSER DATA 1 1 }  { m_axi_gmem_WVALID VALID 1 1 }  { m_axi_gmem_WREADY READY 0 1 }  { m_axi_gmem_WDATA FIFONUM 1 32 }  { m_axi_gmem_WSTRB STRB 1 4 }  { m_axi_gmem_WLAST LAST 1 1 }  { m_axi_gmem_WID ID 1 1 }  { m_axi_gmem_WUSER DATA 1 1 }  { m_axi_gmem_ARVALID VALID 1 1 }  { m_axi_gmem_ARREADY READY 0 1 }  { m_axi_gmem_ARADDR ADDR 1 64 }  { m_axi_gmem_ARID ID 1 1 }  { m_axi_gmem_ARLEN SIZE 1 32 }  { m_axi_gmem_ARSIZE BURST 1 3 }  { m_axi_gmem_ARBURST LOCK 1 2 }  { m_axi_gmem_ARLOCK CACHE 1 2 }  { m_axi_gmem_ARCACHE PROT 1 4 }  { m_axi_gmem_ARPROT QOS 1 3 }  { m_axi_gmem_ARQOS REGION 1 4 }  { m_axi_gmem_ARREGION USER 1 4 }  { m_axi_gmem_ARUSER DATA 1 1 }  { m_axi_gmem_RVALID VALID 0 1 }  { m_axi_gmem_RREADY READY 1 1 }  { m_axi_gmem_RDATA FIFONUM 0 32 }  { m_axi_gmem_RLAST LAST 0 1 }  { m_axi_gmem_RID ID 0 1 }  { m_axi_gmem_RFIFONUM LEN 0 9 }  { m_axi_gmem_RUSER DATA 0 1 }  { m_axi_gmem_RRESP RESP 0 2 }  { m_axi_gmem_BVALID VALID 0 1 }  { m_axi_gmem_BREADY READY 1 1 }  { m_axi_gmem_BRESP RESP 0 2 }  { m_axi_gmem_BID ID 0 1 }  { m_axi_gmem_BUSER DATA 0 1 } } }
 	ti_cast14 { ap_none {  { ti_cast14 in_data 0 4 } } }
-	tmp_5 { ap_none {  { tmp_5 in_data 0 8 } } }
+	tmp_9 { ap_none {  { tmp_9 in_data 0 8 } } }
 	output_ftmap { ap_none {  { output_ftmap in_data 0 64 } } }
 	output_fm_buffer { ap_memory {  { output_fm_buffer_address0 mem_address 1 14 }  { output_fm_buffer_ce0 mem_ce 1 1 }  { output_fm_buffer_q0 mem_dout 0 32 } } }
 }

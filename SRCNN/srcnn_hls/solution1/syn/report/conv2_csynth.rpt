@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2'
 ================================================================
-* Date:           Mon Oct 30 17:12:43 2023
+* Date:           Mon Oct 30 23:01:52 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -124,7 +124,7 @@
     +---------------------------------+----------+----+---+----+------------+------------+
     |          Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------------+----------+----+---+----+------------+------------+
-    |add_ln30_1_fu_282_p2             |         +|   0|  0|  15|           8|           1|
+    |add_ln30_2_fu_282_p2             |         +|   0|  0|  15|           8|           1|
     |add_ln30_fu_294_p2               |         +|   0|  0|  12|           4|           1|
     |add_ln31_fu_370_p2               |         +|   0|  0|  12|           4|           1|
     |add_ln38_fu_360_p2               |         +|   0|  0|  12|           4|           1|
@@ -132,8 +132,8 @@
     |icmp_ln31_fu_300_p2              |      icmp|   0|  0|  12|           4|           2|
     |icmp_ln38_fu_354_p2              |      icmp|   0|  0|  12|           4|           5|
     |ap_block_state4_on_subcall_done  |        or|   0|  0|   2|           1|           1|
-    |select_ln30_1_fu_330_p3          |    select|   0|  0|   8|           1|           8|
-    |select_ln30_2_fu_338_p3          |    select|   0|  0|   4|           1|           4|
+    |select_ln30_2_fu_330_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln30_3_fu_338_p3          |    select|   0|  0|   4|           1|           4|
     |select_ln30_fu_306_p3            |    select|   0|  0|   4|           1|           1|
     +---------------------------------+----------+----+---+----+------------+------------+
     |Total                            |          |   0|  0| 108|          40|          31|
@@ -212,7 +212,7 @@
     +-------------------------------------------------------------------------------------------+----+----+-----+-----------+
     |                                            Name                                           | FF | LUT| Bits| Const Bits|
     +-------------------------------------------------------------------------------------------+----+----+-----+-----------+
-    |add_ln30_1_reg_448                                                                         |   8|   0|    8|          0|
+    |add_ln30_2_reg_448                                                                         |   8|   0|    8|          0|
     |add_ln38_reg_479                                                                           |   4|   0|    4|          0|
     |ap_CS_fsm                                                                                  |  13|   0|   13|          0|
     |grp_conv2_Pipeline_1_fu_157_ap_start_reg                                                   |   1|   0|    1|          0|
@@ -223,14 +223,14 @@
     |grp_conv2_Pipeline_VITIS_LOOP_118_4_fu_194_ap_start_reg                                    |   1|   0|    1|          0|
     |grp_conv2_Pipeline_VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3_fu_169_ap_start_reg  |   1|   0|    1|          0|
     |indvar_flatten87_fu_118                                                                    |   8|   0|    8|          0|
-    |select_ln30_1_reg_460                                                                      |   8|   0|    8|          0|
-    |select_ln30_2_reg_466                                                                      |   4|   0|    4|          0|
+    |select_ln30_2_reg_460                                                                      |   8|   0|    8|          0|
+    |select_ln30_3_reg_466                                                                      |   4|   0|    4|          0|
     |select_ln30_reg_453                                                                        |   4|   0|    4|          0|
     |shl_ln3_reg_490                                                                            |   3|   0|    6|          3|
     |shl_ln4_reg_495                                                                            |   3|   0|    8|          5|
     |ti_fu_110                                                                                  |   4|   0|    4|          0|
     |tj_fu_114                                                                                  |   4|   0|    4|          0|
-    |tmp_5_reg_471                                                                              |   4|   0|    8|          4|
+    |tmp_9_reg_471                                                                              |   4|   0|    8|          4|
     |tn_reg_146                                                                                 |   4|   0|    4|          0|
     |trunc_ln101_reg_484                                                                        |   3|   0|    3|          0|
     |trunc_ln_reg_440                                                                           |  62|   0|   62|          0|
@@ -253,20 +253,20 @@
 |ap_done              |  out|    1|  ap_ctrl_hs|          conv2|  return value|
 |ap_idle              |  out|    1|  ap_ctrl_hs|          conv2|  return value|
 |ap_ready             |  out|    1|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_493_p_din0    |  out|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_493_p_din1    |  out|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_493_p_opcode  |  out|    2|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_493_p_dout0   |   in|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_493_p_ce      |  out|    1|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_497_p_din0    |  out|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_497_p_din1    |  out|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_497_p_dout0   |   in|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_497_p_ce      |  out|    1|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_501_p_din0    |  out|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_501_p_din1    |  out|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_501_p_opcode  |  out|    5|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_501_p_dout0   |   in|    1|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_501_p_ce      |  out|    1|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_822_p_din0    |  out|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_822_p_din1    |  out|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_822_p_opcode  |  out|    2|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_822_p_dout0   |   in|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_822_p_ce      |  out|    1|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_830_p_din0    |  out|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_830_p_din1    |  out|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_830_p_dout0   |   in|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_830_p_ce      |  out|    1|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_826_p_din0    |  out|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_826_p_din1    |  out|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_826_p_opcode  |  out|    5|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_826_p_dout0   |   in|    1|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_826_p_ce      |  out|    1|  ap_ctrl_hs|          conv2|  return value|
 |m_axi_gmem_AWVALID   |  out|    1|       m_axi|           gmem|       pointer|
 |m_axi_gmem_AWREADY   |   in|    1|       m_axi|           gmem|       pointer|
 |m_axi_gmem_AWADDR    |  out|   64|       m_axi|           gmem|       pointer|

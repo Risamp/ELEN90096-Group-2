@@ -22,23 +22,43 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>1299530746</Best-caseLatency>
-<Average-caseLatency>1299530746</Average-caseLatency>
-<Worst-caseLatency>1299530746</Worst-caseLatency>
-<Best-caseRealTimeLatency>12.995 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>12.995 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>12.995 sec</Worst-caseRealTimeLatency>
-<Interval-min>1299530747</Interval-min>
-<Interval-max>1299530747</Interval-max>
+<Best-caseLatency>196421668</Best-caseLatency>
+<Average-caseLatency>196421668</Average-caseLatency>
+<Worst-caseLatency>196421668</Worst-caseLatency>
+<Best-caseRealTimeLatency>1.964 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>1.964 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>1.964 sec</Worst-caseRealTimeLatency>
+<Interval-min>196421669</Interval-min>
+<Interval-max>196421669</Interval-max>
 </SummaryOfOverallLatency>
+<SummaryOfLoopLatency>
+<TILE_J_TILE_I>
+<Slack>7.30</Slack>
+<TripCount>225</TripCount>
+<Latency>8585550</Latency>
+<AbsoluteTimeLatency>85855500</AbsoluteTimeLatency>
+<IterationLatency>38158</IterationLatency>
+<InstanceList>
+</InstanceList>
+<OUT_BUFFER_NOUT>
+<Slack>7.30</Slack>
+<TripCount>64</TripCount>
+<Latency>19649</Latency>
+<AbsoluteTimeLatency>196490</AbsoluteTimeLatency>
+<IterationLatency>307</IterationLatency>
+<InstanceList>
+</InstanceList>
+</OUT_BUFFER_NOUT>
+</TILE_J_TILE_I>
+</SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>91</BRAM_18K>
-<DSP>16</DSP>
-<FF>47708</FF>
-<LUT>41795</LUT>
+<BRAM_18K>89</BRAM_18K>
+<DSP>14</DSP>
+<FF>46830</FF>
+<LUT>39865</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

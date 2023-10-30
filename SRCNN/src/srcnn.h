@@ -98,10 +98,12 @@ void export_buffer_tile_c2(ftmap_t output_fm_buffer[N2][TH][TW],
 						   param_t conv2_biases[N2]);
 
 void load_buffer_tile_c3(ftmap_t input_fm_buffer[UNROLL][TH + (2 * P3)][TW + (2 * P3)],
-                         ftmap_t input_fm[N2][H][W],
-                         int tx0,
-                         int ty0,
-						 int tn0);
+						ftmap_t input_fm[N2][H][W],
+						param_t weights_buffer[N3][UNROLL][F3][F3],
+						param_t conv3_weights[N3][N2][F3][F3],
+						int tx0,
+						int ty0,
+						int tn0);
 
 void export_buffer_tile_c3(ftmap_t output_fm_buffer[N3][TH][TW],
                            ftmap_t output_ftmap[N3][H][W],

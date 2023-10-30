@@ -17,7 +17,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 96 \
+    id 66 \
     name output_fm_buffer \
     reset_level 1 \
     sync_rst true \
@@ -35,22 +35,22 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 90 \
-    name select_ln30_1 \
+    id 60 \
+    name select_ln30_2 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_select_ln30_1 \
+    corename dc_select_ln30_2 \
     op interface \
-    ports { select_ln30_1 { I 8 vector } } \
+    ports { select_ln30_2 { I 8 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 91 \
+    id 61 \
     name sext_ln30 \
     type other \
     dir I \
@@ -65,7 +65,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 92 \
+    id 62 \
     name gmem \
     type other \
     dir IO \
@@ -80,7 +80,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 93 \
+    id 63 \
     name ti_cast14 \
     type other \
     dir I \
@@ -95,22 +95,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 94 \
-    name tmp_5 \
+    id 64 \
+    name tmp_9 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_tmp_5 \
+    corename dc_tmp_9 \
     op interface \
-    ports { tmp_5 { I 8 vector } } \
+    ports { tmp_9 { I 8 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 95 \
+    id 65 \
     name output_ftmap \
     type other \
     dir I \

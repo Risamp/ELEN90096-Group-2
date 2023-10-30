@@ -45,10 +45,10 @@ wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 wire   [63:0] p_cast30_fu_80_p1;
 reg   [8:0] empty_fu_32;
-wire   [8:0] empty_104_fu_64_p2;
+wire   [8:0] empty_106_fu_64_p2;
 wire    ap_loop_init;
 reg   [8:0] ap_sig_allocacmp_p_load;
-wire   [4:0] tmp_9_fu_70_p4;
+wire   [4:0] tmp_s_fu_70_p4;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -101,7 +101,7 @@ end
 always @ (posedge ap_clk) begin
     if (((ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         if ((exitcond276_fu_58_p2 == 1'd0)) begin
-            empty_fu_32 <= empty_104_fu_64_p2;
+            empty_fu_32 <= empty_106_fu_64_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             empty_fu_32 <= 9'd0;
         end
@@ -191,13 +191,13 @@ end
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign empty_104_fu_64_p2 = (ap_sig_allocacmp_p_load + 9'd1);
+assign empty_106_fu_64_p2 = (ap_sig_allocacmp_p_load + 9'd1);
 
 assign exitcond276_fu_58_p2 = ((ap_sig_allocacmp_p_load == 9'd256) ? 1'b1 : 1'b0);
 
-assign p_cast30_fu_80_p1 = tmp_9_fu_70_p4;
+assign p_cast30_fu_80_p1 = tmp_s_fu_70_p4;
 
-assign tmp_9_fu_70_p4 = {{ap_sig_allocacmp_p_load[7:3]}};
+assign tmp_s_fu_70_p4 = {{ap_sig_allocacmp_p_load[7:3]}};
 
 assign weights_buffer_0_0_0_address0 = p_cast30_fu_80_p1;
 

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3'
 ================================================================
-* Date:           Mon Oct 30 17:12:57 2023
+* Date:           Mon Oct 30 23:02:06 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -39,8 +39,8 @@
         |                                   Instance                                   |                               Module                              |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
         +------------------------------------------------------------------------------+-------------------------------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
         |grp_conv3_Pipeline_1_fu_151                                                   |conv3_Pipeline_1                                                   |     3530|     3530|  35.300 us|  35.300 us|   3530|   3530|       no|
-        |grp_conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3_fu_157                   |conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3                   |     5493|     5493|  54.930 us|  54.930 us|   5493|   5493|       no|
-        |grp_conv3_Pipeline_VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3_fu_170  |conv3_Pipeline_VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3  |     3540|     3540|  35.400 us|  35.400 us|   3540|   3540|       no|
+        |grp_conv3_Pipeline_VITIS_LOOP_138_2_VITIS_LOOP_139_3_fu_157                   |conv3_Pipeline_VITIS_LOOP_138_2_VITIS_LOOP_139_3                   |     5493|     5493|  54.930 us|  54.930 us|   5493|   5493|       no|
+        |grp_conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107_3_fu_170  |conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107_3  |     3540|     3540|  35.400 us|  35.400 us|   3540|   3540|       no|
         |grp_conv3_Pipeline_TY_TX_fu_183                                               |conv3_Pipeline_TY_TX                                               |    58418|    58418|   0.584 ms|   0.584 ms|  58418|  58418|       no|
         |grp_conv3_Pipeline_5_fu_198                                                   |conv3_Pipeline_5                                                   |      291|      291|   2.910 us|   2.910 us|    291|    291|       no|
         +------------------------------------------------------------------------------+-------------------------------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
@@ -86,9 +86,9 @@
     |grp_conv3_Pipeline_1_fu_151                                                   |conv3_Pipeline_1                                                   |        0|   0|     14|     65|    0|
     |grp_conv3_Pipeline_5_fu_198                                                   |conv3_Pipeline_5                                                   |        0|   0|     11|     59|    0|
     |grp_conv3_Pipeline_TY_TX_fu_183                                               |conv3_Pipeline_TY_TX                                               |        0|   0|  39574|  27779|    0|
-    |grp_conv3_Pipeline_VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3_fu_170  |conv3_Pipeline_VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3  |        0|   2|    275|    889|    0|
-    |grp_conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3_fu_157                   |conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3                   |        0|   0|    207|    653|    0|
-    |mul_5ns_8ns_12_1_1_U147                                                       |mul_5ns_8ns_12_1_1                                                 |        0|   0|      0|     40|    0|
+    |grp_conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107_3_fu_170  |conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107_3  |        0|   2|    275|    889|    0|
+    |grp_conv3_Pipeline_VITIS_LOOP_138_2_VITIS_LOOP_139_3_fu_157                   |conv3_Pipeline_VITIS_LOOP_138_2_VITIS_LOOP_139_3                   |        0|   0|    207|    653|    0|
+    |mul_5ns_8ns_12_1_1_U117                                                       |mul_5ns_8ns_12_1_1                                                 |        0|   0|      0|     40|    0|
     +------------------------------------------------------------------------------+-------------------------------------------------------------------+---------+----+-------+-------+-----+
     |Total                                                                         |                                                                   |        0|   2|  40081|  29485|    0|
     +------------------------------------------------------------------------------+-------------------------------------------------------------------+---------+----+-------+-------+-----+
@@ -116,12 +116,12 @@
     |add_ln31_1_fu_228_p2     |         +|   0|  0|  15|           8|           1|
     |add_ln31_fu_240_p2       |         +|   0|  0|  12|           4|           1|
     |add_ln32_fu_322_p2       |         +|   0|  0|  12|           4|           1|
-    |add_ln39_1_fu_300_p2     |         +|   0|  0|  19|          12|          10|
-    |add_ln39_fu_312_p2       |         +|   0|  0|  10|           3|           1|
+    |add_ln40_1_fu_300_p2     |         +|   0|  0|  19|          12|          10|
+    |add_ln40_fu_312_p2       |         +|   0|  0|  10|           3|           1|
     |icmp_ln31_fu_222_p2      |      icmp|   0|  0|  15|           8|           6|
     |icmp_ln32_fu_246_p2      |      icmp|   0|  0|  12|           4|           2|
-    |icmp_ln39_fu_306_p2      |      icmp|   0|  0|  12|           3|           4|
-    |or_ln98_fu_355_p2        |        or|   0|  0|   5|           5|           3|
+    |icmp_ln40_fu_306_p2      |      icmp|   0|  0|  12|           3|           4|
+    |or_ln103_fu_355_p2       |        or|   0|  0|   5|           5|           3|
     |select_ln31_1_fu_276_p3  |    select|   0|  0|   8|           1|           8|
     |select_ln31_2_fu_284_p3  |    select|   0|  0|   4|           1|           4|
     |select_ln31_fu_252_p3    |    select|   0|  0|   4|           1|           1|
@@ -177,15 +177,15 @@
     |                                            Name                                           | FF | LUT| Bits| Const Bits|
     +-------------------------------------------------------------------------------------------+----+----+-----+-----------+
     |add_ln31_1_reg_414                                                                         |   8|   0|    8|          0|
-    |add_ln39_1_reg_444                                                                         |  12|   0|   12|          0|
-    |add_ln39_reg_452                                                                           |   3|   0|    3|          0|
+    |add_ln40_1_reg_444                                                                         |  12|   0|   12|          0|
+    |add_ln40_reg_452                                                                           |   3|   0|    3|          0|
     |ap_CS_fsm                                                                                  |  11|   0|   11|          0|
     |empty_reg_473                                                                              |  12|   0|   12|          0|
     |grp_conv3_Pipeline_1_fu_151_ap_start_reg                                                   |   1|   0|    1|          0|
     |grp_conv3_Pipeline_5_fu_198_ap_start_reg                                                   |   1|   0|    1|          0|
     |grp_conv3_Pipeline_TY_TX_fu_183_ap_start_reg                                               |   1|   0|    1|          0|
-    |grp_conv3_Pipeline_VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3_fu_170_ap_start_reg  |   1|   0|    1|          0|
-    |grp_conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3_fu_157_ap_start_reg                   |   1|   0|    1|          0|
+    |grp_conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107_3_fu_170_ap_start_reg  |   1|   0|    1|          0|
+    |grp_conv3_Pipeline_VITIS_LOOP_138_2_VITIS_LOOP_139_3_fu_157_ap_start_reg                   |   1|   0|    1|          0|
     |indvar_flatten287_fu_100                                                                   |   8|   0|    8|          0|
     |p_shl1_reg_439                                                                             |   4|   0|    8|          4|
     |phi_mul_reg_139                                                                            |  12|   0|   12|          0|
@@ -197,7 +197,7 @@
     |tj_fu_96                                                                                   |   4|   0|    4|          0|
     |tmp1_reg_468                                                                               |   8|   0|    8|          0|
     |tn_reg_128                                                                                 |   3|   0|    3|          0|
-    |trunc_ln98_reg_457                                                                         |   2|   0|    2|          0|
+    |trunc_ln103_reg_457                                                                        |   2|   0|    2|          0|
     +-------------------------------------------------------------------------------------------+----+----+-----+-----------+
     |Total                                                                                      | 114|   0|  121|          7|
     +-------------------------------------------------------------------------------------------+----+----+-----+-----------+
@@ -217,15 +217,15 @@
 |ap_done               |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
 |ap_idle               |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
 |ap_ready              |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_493_p_din0     |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_493_p_din1     |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_493_p_opcode   |  out|    2|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_493_p_dout0    |   in|   32|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_493_p_ce       |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_497_p_din0     |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_497_p_din1     |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_497_p_dout0    |   in|   32|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_497_p_ce       |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_822_p_din0     |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_822_p_din1     |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_822_p_opcode   |  out|    2|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_822_p_dout0    |   in|   32|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_822_p_ce       |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_830_p_din0     |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_830_p_din1     |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_830_p_dout0    |   in|   32|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_830_p_ce       |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
 |m_axi_gmem_AWVALID    |  out|    1|       m_axi|                  gmem|       pointer|
 |m_axi_gmem_AWREADY    |   in|    1|       m_axi|                  gmem|       pointer|
 |m_axi_gmem_AWADDR     |  out|   64|       m_axi|                  gmem|       pointer|

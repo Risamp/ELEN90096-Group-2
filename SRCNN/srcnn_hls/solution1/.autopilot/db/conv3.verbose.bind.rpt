@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3'
 ================================================================
-* Date:           Mon Oct 30 17:12:35 2023
+* Date:           Mon Oct 30 23:01:46 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -39,8 +39,8 @@
         |                                   Instance                                   |                               Module                              |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
         +------------------------------------------------------------------------------+-------------------------------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
         |grp_conv3_Pipeline_1_fu_151                                                   |conv3_Pipeline_1                                                   |     3530|     3530|  35.300 us|  35.300 us|   3530|   3530|       no|
-        |grp_conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3_fu_157                   |conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3                   |     5493|     5493|  54.930 us|  54.930 us|   5493|   5493|       no|
-        |grp_conv3_Pipeline_VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3_fu_170  |conv3_Pipeline_VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3  |     3540|     3540|  35.400 us|  35.400 us|   3540|   3540|       no|
+        |grp_conv3_Pipeline_VITIS_LOOP_138_2_VITIS_LOOP_139_3_fu_157                   |conv3_Pipeline_VITIS_LOOP_138_2_VITIS_LOOP_139_3                   |     5493|     5493|  54.930 us|  54.930 us|   5493|   5493|       no|
+        |grp_conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107_3_fu_170  |conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107_3  |     3540|     3540|  35.400 us|  35.400 us|   3540|   3540|       no|
         |grp_conv3_Pipeline_TY_TX_fu_183                                               |conv3_Pipeline_TY_TX                                               |    58418|    58418|   0.584 ms|   0.584 ms|  58418|  58418|       no|
         |grp_conv3_Pipeline_5_fu_198                                                   |conv3_Pipeline_5                                                   |      291|      291|   2.910 us|   2.910 us|    291|    291|       no|
         +------------------------------------------------------------------------------+-------------------------------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
@@ -103,7 +103,7 @@ State 1 <SV = 0> <Delay = 0.42>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%ti = alloca i32 1"   --->   Operation 12 'alloca' 'ti' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tj = alloca i32 1"   --->   Operation 13 'alloca' 'tj' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%indvar_flatten287 = alloca i32 1"   --->   Operation 14 'alloca' 'indvar_flatten287' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_17, i32 0, i32 0, void @empty_2, i32 0, i32 512, void @empty_11, void @empty_12, void @empty_2, i32 16, i32 16, i32 16, i32 16, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_1, i32 0, i32 0, void @empty_9, i32 0, i32 512, void @empty_12, void @empty_13, void @empty_9, i32 16, i32 16, i32 16, i32 16, void @empty_9, void @empty_9, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%output_ftmap_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %output_ftmap" [src/conv3.cpp:31]   --->   Operation 16 'read' 'output_ftmap_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%conv3_biases_0_0_val_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %conv3_biases_0_0_val" [src/conv3.cpp:31]   --->   Operation 17 'read' 'conv3_biases_0_0_val_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%conv3_weights_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %conv3_weights" [src/conv3.cpp:31]   --->   Operation 18 'read' 'conv3_weights_read' <Predicate = true> <Delay = 0.00>
@@ -125,55 +125,55 @@ ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname vo
 ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 225, i64 225, i64 225"   --->   Operation 32 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = (!icmp_ln31)> <Delay = 0.00>
 ST_2 : Operation 33 [1/1] (0.79ns)   --->   "%icmp_ln32 = icmp_eq  i4 %ti_load, i4 15" [src/conv3.cpp:32]   --->   Operation 33 'icmp' 'icmp_ln32' <Predicate = (!icmp_ln31)> <Delay = 0.79> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 34 [1/1] (0.39ns)   --->   "%select_ln31 = select i1 %icmp_ln32, i4 0, i4 %ti_load" [src/conv3.cpp:31]   --->   Operation 34 'select' 'select_ln31' <Predicate = (!icmp_ln31)> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_1_mid1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %add_ln31, i4 %add_ln31" [src/conv3.cpp:31]   --->   Operation 35 'bitconcatenate' 'tmp_1_mid1' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_3_mid1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %add_ln31, i4 %add_ln31" [src/conv3.cpp:31]   --->   Operation 35 'bitconcatenate' 'tmp_3_mid1' <Predicate = (!icmp_ln31)> <Delay = 0.00>
 ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %tj_load, i4 %tj_load" [src/conv3.cpp:31]   --->   Operation 36 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln31)> <Delay = 0.00>
-ST_2 : Operation 37 [1/1] (0.39ns)   --->   "%select_ln31_1 = select i1 %icmp_ln32, i8 %tmp_1_mid1, i8 %tmp_s" [src/conv3.cpp:31]   --->   Operation 37 'select' 'select_ln31_1' <Predicate = (!icmp_ln31)> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.39ns)   --->   "%select_ln31_1 = select i1 %icmp_ln32, i8 %tmp_3_mid1, i8 %tmp_s" [src/conv3.cpp:31]   --->   Operation 37 'select' 'select_ln31_1' <Predicate = (!icmp_ln31)> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_2 : Operation 38 [1/1] (0.39ns)   --->   "%select_ln31_2 = select i1 %icmp_ln32, i4 %add_ln31, i4 %tj_load" [src/conv3.cpp:31]   --->   Operation 38 'select' 'select_ln31_2' <Predicate = (!icmp_ln31)> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%specloopname_ln32 = specloopname void @_ssdm_op_SpecLoopName, void @empty_23" [src/conv3.cpp:32]   --->   Operation 39 'specloopname' 'specloopname_ln32' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%specloopname_ln32 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5" [src/conv3.cpp:32]   --->   Operation 39 'specloopname' 'specloopname_ln32' <Predicate = (!icmp_ln31)> <Delay = 0.00>
 ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%p_shl1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %select_ln31, i4 0" [src/conv3.cpp:31]   --->   Operation 40 'bitconcatenate' 'p_shl1' <Predicate = (!icmp_ln31)> <Delay = 0.00>
-ST_2 : Operation 41 [1/1] (0.42ns)   --->   "%br_ln39 = br void %NOUT" [src/conv3.cpp:39]   --->   Operation 41 'br' 'br_ln39' <Predicate = (!icmp_ln31)> <Delay = 0.42>
-ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%ret_ln81 = ret" [src/conv3.cpp:81]   --->   Operation 42 'ret' 'ret_ln81' <Predicate = (icmp_ln31)> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.42ns)   --->   "%br_ln40 = br void %NOUT" [src/conv3.cpp:40]   --->   Operation 41 'br' 'br_ln40' <Predicate = (!icmp_ln31)> <Delay = 0.42>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%ret_ln84 = ret" [src/conv3.cpp:84]   --->   Operation 42 'ret' 'ret_ln84' <Predicate = (icmp_ln31)> <Delay = 0.00>
 
 State 3 <SV = 2> <Delay = 3.49>
-ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%tn = phi i3 %add_ln39, void %NOUT.split, i3 0, void %for.inc79" [src/conv3.cpp:39]   --->   Operation 43 'phi' 'tn' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%phi_mul = phi i12 %add_ln39_1, void %NOUT.split, i12 0, void %for.inc79" [src/conv3.cpp:39]   --->   Operation 44 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 45 [1/1] (0.80ns)   --->   "%add_ln39_1 = add i12 %phi_mul, i12 800" [src/conv3.cpp:39]   --->   Operation 45 'add' 'add_ln39_1' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 46 [1/1] (0.67ns)   --->   "%icmp_ln39 = icmp_eq  i3 %tn, i3 4" [src/conv3.cpp:39]   --->   Operation 46 'icmp' 'icmp_ln39' <Predicate = true> <Delay = 0.67> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 47 [1/1] (0.67ns)   --->   "%add_ln39 = add i3 %tn, i3 1" [src/conv3.cpp:39]   --->   Operation 47 'add' 'add_ln39' <Predicate = true> <Delay = 0.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln39 = br i1 %icmp_ln39, void %NOUT.split, void %for.inc.i24.preheader" [src/conv3.cpp:39]   --->   Operation 48 'br' 'br_ln39' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 49 [2/2] (0.00ns)   --->   "%call_ln0 = call void @conv3_Pipeline_1, i32 %input_fm_buffer"   --->   Operation 49 'call' 'call_ln0' <Predicate = (!icmp_ln39)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%trunc_ln98 = trunc i3 %tn" [src/conv3.cpp:98->src/conv3.cpp:49]   --->   Operation 50 'trunc' 'trunc_ln98' <Predicate = (!icmp_ln39)> <Delay = 0.00>
-ST_3 : Operation 51 [2/2] (2.81ns)   --->   "%call_ln31 = call void @conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3, i8 %select_ln31_1, i32 %conv3_biases_0_0_val_read, i4 %select_ln31, i8 %p_shl1, i64 %output_ftmap_read, i32 %gmem, i32 %output_fm_buffer_0" [src/conv3.cpp:31]   --->   Operation 51 'call' 'call_ln31' <Predicate = (icmp_ln39)> <Delay = 2.81> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_3 : Operation 52 [1/1] (0.79ns)   --->   "%add_ln32 = add i4 %select_ln31, i4 1" [src/conv3.cpp:32]   --->   Operation 52 'add' 'add_ln32' <Predicate = (icmp_ln39)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 53 [1/1] (0.42ns)   --->   "%store_ln32 = store i8 %add_ln31_1, i8 %indvar_flatten287" [src/conv3.cpp:32]   --->   Operation 53 'store' 'store_ln32' <Predicate = (icmp_ln39)> <Delay = 0.42>
-ST_3 : Operation 54 [1/1] (0.42ns)   --->   "%store_ln32 = store i4 %select_ln31_2, i4 %tj" [src/conv3.cpp:32]   --->   Operation 54 'store' 'store_ln32' <Predicate = (icmp_ln39)> <Delay = 0.42>
-ST_3 : Operation 55 [1/1] (0.42ns)   --->   "%store_ln32 = store i4 %add_ln32, i4 %ti" [src/conv3.cpp:32]   --->   Operation 55 'store' 'store_ln32' <Predicate = (icmp_ln39)> <Delay = 0.42>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%tn = phi i3 %add_ln40, void %NOUT.split, i3 0, void %for.inc79" [src/conv3.cpp:40]   --->   Operation 43 'phi' 'tn' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%phi_mul = phi i12 %add_ln40_1, void %NOUT.split, i12 0, void %for.inc79" [src/conv3.cpp:40]   --->   Operation 44 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (0.80ns)   --->   "%add_ln40_1 = add i12 %phi_mul, i12 800" [src/conv3.cpp:40]   --->   Operation 45 'add' 'add_ln40_1' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 46 [1/1] (0.67ns)   --->   "%icmp_ln40 = icmp_eq  i3 %tn, i3 4" [src/conv3.cpp:40]   --->   Operation 46 'icmp' 'icmp_ln40' <Predicate = true> <Delay = 0.67> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 47 [1/1] (0.67ns)   --->   "%add_ln40 = add i3 %tn, i3 1" [src/conv3.cpp:40]   --->   Operation 47 'add' 'add_ln40' <Predicate = true> <Delay = 0.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln40 = br i1 %icmp_ln40, void %NOUT.split, void %for.inc.i24.preheader" [src/conv3.cpp:40]   --->   Operation 48 'br' 'br_ln40' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [2/2] (0.00ns)   --->   "%call_ln0 = call void @conv3_Pipeline_1, i32 %input_fm_buffer"   --->   Operation 49 'call' 'call_ln0' <Predicate = (!icmp_ln40)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%trunc_ln103 = trunc i3 %tn" [src/conv3.cpp:103->src/conv3.cpp:52]   --->   Operation 50 'trunc' 'trunc_ln103' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_3 : Operation 51 [2/2] (2.81ns)   --->   "%call_ln31 = call void @conv3_Pipeline_VITIS_LOOP_138_2_VITIS_LOOP_139_3, i8 %select_ln31_1, i32 %conv3_biases_0_0_val_read, i4 %select_ln31, i8 %p_shl1, i64 %output_ftmap_read, i32 %gmem, i32 %output_fm_buffer_0" [src/conv3.cpp:31]   --->   Operation 51 'call' 'call_ln31' <Predicate = (icmp_ln40)> <Delay = 2.81> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 52 [1/1] (0.79ns)   --->   "%add_ln32 = add i4 %select_ln31, i4 1" [src/conv3.cpp:32]   --->   Operation 52 'add' 'add_ln32' <Predicate = (icmp_ln40)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 53 [1/1] (0.42ns)   --->   "%store_ln32 = store i8 %add_ln31_1, i8 %indvar_flatten287" [src/conv3.cpp:32]   --->   Operation 53 'store' 'store_ln32' <Predicate = (icmp_ln40)> <Delay = 0.42>
+ST_3 : Operation 54 [1/1] (0.42ns)   --->   "%store_ln32 = store i4 %select_ln31_2, i4 %tj" [src/conv3.cpp:32]   --->   Operation 54 'store' 'store_ln32' <Predicate = (icmp_ln40)> <Delay = 0.42>
+ST_3 : Operation 55 [1/1] (0.42ns)   --->   "%store_ln32 = store i4 %add_ln32, i4 %ti" [src/conv3.cpp:32]   --->   Operation 55 'store' 'store_ln32' <Predicate = (icmp_ln40)> <Delay = 0.42>
 
 State 4 <SV = 3> <Delay = 0.00>
 ST_4 : Operation 56 [1/2] (0.00ns)   --->   "%call_ln0 = call void @conv3_Pipeline_1, i32 %input_fm_buffer"   --->   Operation 56 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 5 <SV = 4> <Delay = 0.00>
-ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%shl_ln1 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i2.i3, i2 %trunc_ln98, i3 0" [src/conv3.cpp:98->src/conv3.cpp:49]   --->   Operation 57 'bitconcatenate' 'shl_ln1' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%tmp1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %select_ln31_2, i4 %select_ln31_2" [src/srcnn.cpp:52->src/conv3.cpp:106->src/conv3.cpp:49]   --->   Operation 58 'bitconcatenate' 'tmp1' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 59 [2/2] (0.00ns)   --->   "%call_ln31 = call void @conv3_Pipeline_VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3, i8 %select_ln31_1, i8 %tmp1, i5 %shl_ln1, i4 %select_ln31, i64 %input_ftmap_read, i32 %gmem, i32 %input_fm_buffer" [src/conv3.cpp:31]   --->   Operation 59 'call' 'call_ln31' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%shl_ln1 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i2.i3, i2 %trunc_ln103, i3 0" [src/conv3.cpp:103->src/conv3.cpp:52]   --->   Operation 57 'bitconcatenate' 'shl_ln1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%tmp1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %select_ln31_2, i4 %select_ln31_2" [src/srcnn.cpp:52->src/conv3.cpp:111->src/conv3.cpp:52]   --->   Operation 58 'bitconcatenate' 'tmp1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 59 [2/2] (0.00ns)   --->   "%call_ln31 = call void @conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107_3, i8 %select_ln31_1, i8 %tmp1, i5 %shl_ln1, i4 %select_ln31, i64 %input_ftmap_read, i32 %gmem, i32 %input_fm_buffer" [src/conv3.cpp:31]   --->   Operation 59 'call' 'call_ln31' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 6 <SV = 5> <Delay = 1.65>
-ST_6 : Operation 60 [1/2] (0.00ns)   --->   "%call_ln31 = call void @conv3_Pipeline_VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3, i8 %select_ln31_1, i8 %tmp1, i5 %shl_ln1, i4 %select_ln31, i64 %input_ftmap_read, i32 %gmem, i32 %input_fm_buffer" [src/conv3.cpp:31]   --->   Operation 60 'call' 'call_ln31' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_6 : Operation 61 [1/1] (0.00ns)   --->   "%or_ln98 = or i5 %shl_ln1, i5 7" [src/conv3.cpp:98->src/conv3.cpp:49]   --->   Operation 61 'or' 'or_ln98' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 62 [1/1] (0.00ns)   --->   "%or_ln98_cast = zext i5 %or_ln98" [src/conv3.cpp:98->src/conv3.cpp:49]   --->   Operation 62 'zext' 'or_ln98_cast' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 63 [1/1] (1.65ns)   --->   "%empty = mul i12 %or_ln98_cast, i12 100" [src/conv3.cpp:98->src/conv3.cpp:49]   --->   Operation 63 'mul' 'empty' <Predicate = true> <Delay = 1.65> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 60 [1/2] (0.00ns)   --->   "%call_ln31 = call void @conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107_3, i8 %select_ln31_1, i8 %tmp1, i5 %shl_ln1, i4 %select_ln31, i64 %input_ftmap_read, i32 %gmem, i32 %input_fm_buffer" [src/conv3.cpp:31]   --->   Operation 60 'call' 'call_ln31' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 61 [1/1] (0.00ns)   --->   "%or_ln103 = or i5 %shl_ln1, i5 7" [src/conv3.cpp:103->src/conv3.cpp:52]   --->   Operation 61 'or' 'or_ln103' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 62 [1/1] (0.00ns)   --->   "%or_ln103_cast = zext i5 %or_ln103" [src/conv3.cpp:103->src/conv3.cpp:52]   --->   Operation 62 'zext' 'or_ln103_cast' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 63 [1/1] (1.65ns)   --->   "%empty = mul i12 %or_ln103_cast, i12 100" [src/conv3.cpp:103->src/conv3.cpp:52]   --->   Operation 63 'mul' 'empty' <Predicate = true> <Delay = 1.65> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 7 <SV = 6> <Delay = 1.08>
-ST_7 : Operation 64 [2/2] (1.08ns)   --->   "%call_ln98 = call void @conv3_Pipeline_TY_TX, i12 %empty, i64 %conv3_weights_read, i12 %empty, i12 %phi_mul, i32 %gmem, i32 %output_fm_buffer_0, i32 %input_fm_buffer" [src/conv3.cpp:98->src/conv3.cpp:49]   --->   Operation 64 'call' 'call_ln98' <Predicate = true> <Delay = 1.08> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 64 [2/2] (1.08ns)   --->   "%call_ln103 = call void @conv3_Pipeline_TY_TX, i12 %empty, i64 %conv3_weights_read, i12 %empty, i12 %phi_mul, i32 %gmem, i32 %output_fm_buffer_0, i32 %input_fm_buffer" [src/conv3.cpp:103->src/conv3.cpp:52]   --->   Operation 64 'call' 'call_ln103' <Predicate = true> <Delay = 1.08> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 8 <SV = 7> <Delay = 0.00>
-ST_8 : Operation 65 [1/1] (0.00ns)   --->   "%speclooptripcount_ln39 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4" [src/conv3.cpp:39]   --->   Operation 65 'speclooptripcount' 'speclooptripcount_ln39' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 66 [1/1] (0.00ns)   --->   "%specloopname_ln39 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9" [src/conv3.cpp:39]   --->   Operation 66 'specloopname' 'specloopname_ln39' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 67 [1/2] (0.00ns)   --->   "%call_ln98 = call void @conv3_Pipeline_TY_TX, i12 %empty, i64 %conv3_weights_read, i12 %empty, i12 %phi_mul, i32 %gmem, i32 %output_fm_buffer_0, i32 %input_fm_buffer" [src/conv3.cpp:98->src/conv3.cpp:49]   --->   Operation 67 'call' 'call_ln98' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_8 : Operation 68 [1/1] (0.00ns)   --->   "%br_ln39 = br void %NOUT" [src/conv3.cpp:39]   --->   Operation 68 'br' 'br_ln39' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 65 [1/1] (0.00ns)   --->   "%speclooptripcount_ln40 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4" [src/conv3.cpp:40]   --->   Operation 65 'speclooptripcount' 'speclooptripcount_ln40' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 66 [1/1] (0.00ns)   --->   "%specloopname_ln40 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [src/conv3.cpp:40]   --->   Operation 66 'specloopname' 'specloopname_ln40' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 67 [1/2] (0.00ns)   --->   "%call_ln103 = call void @conv3_Pipeline_TY_TX, i12 %empty, i64 %conv3_weights_read, i12 %empty, i12 %phi_mul, i32 %gmem, i32 %output_fm_buffer_0, i32 %input_fm_buffer" [src/conv3.cpp:103->src/conv3.cpp:52]   --->   Operation 67 'call' 'call_ln103' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 68 [1/1] (0.00ns)   --->   "%br_ln40 = br void %NOUT" [src/conv3.cpp:40]   --->   Operation 68 'br' 'br_ln40' <Predicate = true> <Delay = 0.00>
 
 State 9 <SV = 3> <Delay = 0.00>
-ST_9 : Operation 69 [1/2] (0.00ns)   --->   "%call_ln31 = call void @conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3, i8 %select_ln31_1, i32 %conv3_biases_0_0_val_read, i4 %select_ln31, i8 %p_shl1, i64 %output_ftmap_read, i32 %gmem, i32 %output_fm_buffer_0" [src/conv3.cpp:31]   --->   Operation 69 'call' 'call_ln31' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 69 [1/2] (0.00ns)   --->   "%call_ln31 = call void @conv3_Pipeline_VITIS_LOOP_138_2_VITIS_LOOP_139_3, i8 %select_ln31_1, i32 %conv3_biases_0_0_val_read, i4 %select_ln31, i8 %p_shl1, i64 %output_ftmap_read, i32 %gmem, i32 %output_fm_buffer_0" [src/conv3.cpp:31]   --->   Operation 69 'call' 'call_ln31' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 10 <SV = 4> <Delay = 0.00>
 ST_10 : Operation 70 [2/2] (0.00ns)   --->   "%call_ln0 = call void @conv3_Pipeline_5, i32 %output_fm_buffer_0"   --->   Operation 70 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
@@ -230,21 +230,21 @@ specloopname_ln0          (specloopname     ) [ 000000000000]
 speclooptripcount_ln0     (speclooptripcount) [ 000000000000]
 icmp_ln32                 (icmp             ) [ 000000000000]
 select_ln31               (select           ) [ 000111111100]
-tmp_1_mid1                (bitconcatenate   ) [ 000000000000]
+tmp_3_mid1                (bitconcatenate   ) [ 000000000000]
 tmp_s                     (bitconcatenate   ) [ 000000000000]
 select_ln31_1             (select           ) [ 000111111100]
 select_ln31_2             (select           ) [ 000111111000]
 specloopname_ln32         (specloopname     ) [ 000000000000]
 p_shl1                    (bitconcatenate   ) [ 000111111100]
-br_ln39                   (br               ) [ 001111111111]
-ret_ln81                  (ret              ) [ 000000000000]
+br_ln40                   (br               ) [ 001111111111]
+ret_ln84                  (ret              ) [ 000000000000]
 tn                        (phi              ) [ 000100000000]
 phi_mul                   (phi              ) [ 000111111000]
-add_ln39_1                (add              ) [ 001111111111]
-icmp_ln39                 (icmp             ) [ 001111111111]
-add_ln39                  (add              ) [ 001111111111]
-br_ln39                   (br               ) [ 000000000000]
-trunc_ln98                (trunc            ) [ 000011000000]
+add_ln40_1                (add              ) [ 001111111111]
+icmp_ln40                 (icmp             ) [ 001111111111]
+add_ln40                  (add              ) [ 001111111111]
+br_ln40                   (br               ) [ 000000000000]
+trunc_ln103               (trunc            ) [ 000011000000]
 add_ln32                  (add              ) [ 000000000000]
 store_ln32                (store            ) [ 000000000000]
 store_ln32                (store            ) [ 000000000000]
@@ -253,13 +253,13 @@ call_ln0                  (call             ) [ 000000000000]
 shl_ln1                   (bitconcatenate   ) [ 000000100000]
 tmp1                      (bitconcatenate   ) [ 000000100000]
 call_ln31                 (call             ) [ 000000000000]
-or_ln98                   (or               ) [ 000000000000]
-or_ln98_cast              (zext             ) [ 000000000000]
+or_ln103                  (or               ) [ 000000000000]
+or_ln103_cast             (zext             ) [ 000000000000]
 empty                     (mul              ) [ 000000011000]
-speclooptripcount_ln39    (speclooptripcount) [ 000000000000]
-specloopname_ln39         (specloopname     ) [ 000000000000]
-call_ln98                 (call             ) [ 000000000000]
-br_ln39                   (br               ) [ 001111111111]
+speclooptripcount_ln40    (speclooptripcount) [ 000000000000]
+specloopname_ln40         (specloopname     ) [ 000000000000]
+call_ln103                (call             ) [ 000000000000]
+br_ln40                   (br               ) [ 001111111111]
 call_ln31                 (call             ) [ 000000000000]
 call_ln0                  (call             ) [ 000000000000]
 br_ln32                   (br               ) [ 000000000000]
@@ -356,7 +356,7 @@ br_ln32                   (br               ) [ 000000000000]
 <pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_17"/></StgValue>
+<StgValue><ssdm name="empty_1"/></StgValue>
 </bind>
 </comp>
 
@@ -374,7 +374,7 @@ br_ln32                   (br               ) [ 000000000000]
 <pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_2"/></StgValue>
+<StgValue><ssdm name="empty_9"/></StgValue>
 </bind>
 </comp>
 
@@ -392,7 +392,7 @@ br_ln32                   (br               ) [ 000000000000]
 <pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_11"/></StgValue>
+<StgValue><ssdm name="empty_12"/></StgValue>
 </bind>
 </comp>
 
@@ -401,7 +401,7 @@ br_ln32                   (br               ) [ 000000000000]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_12"/></StgValue>
+<StgValue><ssdm name="empty_13"/></StgValue>
 </bind>
 </comp>
 
@@ -545,7 +545,7 @@ br_ln32                   (br               ) [ 000000000000]
 <pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_23"/></StgValue>
+<StgValue><ssdm name="empty_5"/></StgValue>
 </bind>
 </comp>
 
@@ -608,7 +608,7 @@ br_ln32                   (br               ) [ 000000000000]
 <pin id="75" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3"/></StgValue>
+<StgValue><ssdm name="conv3_Pipeline_VITIS_LOOP_138_2_VITIS_LOOP_139_3"/></StgValue>
 </bind>
 </comp>
 
@@ -626,7 +626,7 @@ br_ln32                   (br               ) [ 000000000000]
 <pin id="79" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="conv3_Pipeline_VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3"/></StgValue>
+<StgValue><ssdm name="conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107_3"/></StgValue>
 </bind>
 </comp>
 
@@ -671,7 +671,7 @@ br_ln32                   (br               ) [ 000000000000]
 <pin id="89" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_9"/></StgValue>
+<StgValue><ssdm name="empty_3"/></StgValue>
 </bind>
 </comp>
 
@@ -825,7 +825,7 @@ br_ln32                   (br               ) [ 000000000000]
 </bind>
 </comp>
 
-<comp id="157" class="1004" name="grp_conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3_fu_157">
+<comp id="157" class="1004" name="grp_conv3_Pipeline_VITIS_LOOP_138_2_VITIS_LOOP_139_3_fu_157">
 <pin_list>
 <pin id="158" dir="0" index="0" bw="0" slack="0"/>
 <pin id="159" dir="0" index="1" bw="8" slack="1"/>
@@ -843,7 +843,7 @@ br_ln32                   (br               ) [ 000000000000]
 </bind>
 </comp>
 
-<comp id="170" class="1004" name="grp_conv3_Pipeline_VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3_fu_170">
+<comp id="170" class="1004" name="grp_conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107_3_fu_170">
 <pin_list>
 <pin id="171" dir="0" index="0" bw="0" slack="0"/>
 <pin id="172" dir="0" index="1" bw="8" slack="3"/>
@@ -875,7 +875,7 @@ br_ln32                   (br               ) [ 000000000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln98/7 "/>
+<opset="call_ln103/7 "/>
 </bind>
 </comp>
 
@@ -1021,7 +1021,7 @@ br_ln32                   (br               ) [ 000000000000]
 </bind>
 </comp>
 
-<comp id="260" class="1004" name="tmp_1_mid1_fu_260">
+<comp id="260" class="1004" name="tmp_3_mid1_fu_260">
 <pin_list>
 <pin id="261" dir="0" index="0" bw="8" slack="0"/>
 <pin id="262" dir="0" index="1" bw="4" slack="0"/>
@@ -1030,7 +1030,7 @@ br_ln32                   (br               ) [ 000000000000]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="tmp_1_mid1/2 "/>
+<opset="tmp_3_mid1/2 "/>
 </bind>
 </comp>
 
@@ -1086,7 +1086,7 @@ br_ln32                   (br               ) [ 000000000000]
 </bind>
 </comp>
 
-<comp id="300" class="1004" name="add_ln39_1_fu_300">
+<comp id="300" class="1004" name="add_ln40_1_fu_300">
 <pin_list>
 <pin id="301" dir="0" index="0" bw="12" slack="0"/>
 <pin id="302" dir="0" index="1" bw="11" slack="0"/>
@@ -1094,11 +1094,11 @@ br_ln32                   (br               ) [ 000000000000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln39_1/3 "/>
+<opset="add_ln40_1/3 "/>
 </bind>
 </comp>
 
-<comp id="306" class="1004" name="icmp_ln39_fu_306">
+<comp id="306" class="1004" name="icmp_ln40_fu_306">
 <pin_list>
 <pin id="307" dir="0" index="0" bw="3" slack="0"/>
 <pin id="308" dir="0" index="1" bw="3" slack="0"/>
@@ -1106,11 +1106,11 @@ br_ln32                   (br               ) [ 000000000000]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="icmp_ln39/3 "/>
+<opset="icmp_ln40/3 "/>
 </bind>
 </comp>
 
-<comp id="312" class="1004" name="add_ln39_fu_312">
+<comp id="312" class="1004" name="add_ln40_fu_312">
 <pin_list>
 <pin id="313" dir="0" index="0" bw="3" slack="0"/>
 <pin id="314" dir="0" index="1" bw="1" slack="0"/>
@@ -1118,18 +1118,18 @@ br_ln32                   (br               ) [ 000000000000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln39/3 "/>
+<opset="add_ln40/3 "/>
 </bind>
 </comp>
 
-<comp id="318" class="1004" name="trunc_ln98_fu_318">
+<comp id="318" class="1004" name="trunc_ln103_fu_318">
 <pin_list>
 <pin id="319" dir="0" index="0" bw="3" slack="0"/>
 <pin id="320" dir="1" index="1" bw="2" slack="2"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln98/3 "/>
+<opset="trunc_ln103/3 "/>
 </bind>
 </comp>
 
@@ -1207,7 +1207,7 @@ br_ln32                   (br               ) [ 000000000000]
 </bind>
 </comp>
 
-<comp id="355" class="1004" name="or_ln98_fu_355">
+<comp id="355" class="1004" name="or_ln103_fu_355">
 <pin_list>
 <pin id="356" dir="0" index="0" bw="5" slack="1"/>
 <pin id="357" dir="0" index="1" bw="4" slack="0"/>
@@ -1215,18 +1215,18 @@ br_ln32                   (br               ) [ 000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="or_ln98/6 "/>
+<opset="or_ln103/6 "/>
 </bind>
 </comp>
 
-<comp id="360" class="1004" name="or_ln98_cast_fu_360">
+<comp id="360" class="1004" name="or_ln103_cast_fu_360">
 <pin_list>
 <pin id="361" dir="0" index="0" bw="5" slack="0"/>
 <pin id="362" dir="1" index="1" bw="12" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="or_ln98_cast/6 "/>
+<opset="or_ln103_cast/6 "/>
 </bind>
 </comp>
 
@@ -1362,33 +1362,33 @@ br_ln32                   (br               ) [ 000000000000]
 </bind>
 </comp>
 
-<comp id="444" class="1005" name="add_ln39_1_reg_444">
+<comp id="444" class="1005" name="add_ln40_1_reg_444">
 <pin_list>
 <pin id="445" dir="0" index="0" bw="12" slack="0"/>
 <pin id="446" dir="1" index="1" bw="12" slack="0"/>
 </pin_list>
 <bind>
-<opset="add_ln39_1 "/>
+<opset="add_ln40_1 "/>
 </bind>
 </comp>
 
-<comp id="452" class="1005" name="add_ln39_reg_452">
+<comp id="452" class="1005" name="add_ln40_reg_452">
 <pin_list>
 <pin id="453" dir="0" index="0" bw="3" slack="0"/>
 <pin id="454" dir="1" index="1" bw="3" slack="0"/>
 </pin_list>
 <bind>
-<opset="add_ln39 "/>
+<opset="add_ln40 "/>
 </bind>
 </comp>
 
-<comp id="457" class="1005" name="trunc_ln98_reg_457">
+<comp id="457" class="1005" name="trunc_ln103_reg_457">
 <pin_list>
 <pin id="458" dir="0" index="0" bw="2" slack="2"/>
 <pin id="459" dir="1" index="1" bw="2" slack="2"/>
 </pin_list>
 <bind>
-<opset="trunc_ln98 "/>
+<opset="trunc_ln103 "/>
 </bind>
 </comp>
 
@@ -1709,17 +1709,17 @@ br_ln32                   (br               ) [ 000000000000]
 		add_ln31 : 1
 		icmp_ln32 : 1
 		select_ln31 : 2
-		tmp_1_mid1 : 2
+		tmp_3_mid1 : 2
 		tmp_s : 1
 		select_ln31_1 : 3
 		select_ln31_2 : 2
 		p_shl1 : 3
 	State 3
-		add_ln39_1 : 1
-		icmp_ln39 : 1
-		add_ln39 : 1
-		br_ln39 : 2
-		trunc_ln98 : 1
+		add_ln40_1 : 1
+		icmp_ln40 : 1
+		add_ln40 : 1
+		br_ln40 : 2
+		trunc_ln103 : 1
 		store_ln32 : 1
 	State 4
 	State 5
@@ -1742,22 +1742,22 @@ br_ln32                   (br               ) [ 000000000000]
 | Operation|                                Functional Unit                               |   DSP   |  Delay  |    FF   |   LUT   |
 |----------|------------------------------------------------------------------------------|---------|---------|---------|---------|
 |          |                          grp_conv3_Pipeline_1_fu_151                         |    0    |    0    |    12   |    38   |
-|          |          grp_conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3_fu_157         |    2    |  1.806  |   453   |   613   |
-|   call   | grp_conv3_Pipeline_VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3_fu_170 |    2    |  0.427  |   242   |   751   |
+|          |          grp_conv3_Pipeline_VITIS_LOOP_138_2_VITIS_LOOP_139_3_fu_157         |    2    |  1.806  |   453   |   613   |
+|   call   | grp_conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107_3_fu_170 |    2    |  0.427  |   242   |   751   |
 |          |                        grp_conv3_Pipeline_TY_TX_fu_183                       |    5    | 43.7765 |  38342  |  25533  |
 |          |                          grp_conv3_Pipeline_5_fu_198                         |    0    |    0    |    9    |    32   |
 |----------|------------------------------------------------------------------------------|---------|---------|---------|---------|
 |          |                               add_ln31_1_fu_228                              |    0    |    0    |    0    |    15   |
 |          |                                add_ln31_fu_240                               |    0    |    0    |    0    |    12   |
-|    add   |                               add_ln39_1_fu_300                              |    0    |    0    |    0    |    19   |
-|          |                                add_ln39_fu_312                               |    0    |    0    |    0    |    10   |
+|    add   |                               add_ln40_1_fu_300                              |    0    |    0    |    0    |    19   |
+|          |                                add_ln40_fu_312                               |    0    |    0    |    0    |    10   |
 |          |                                add_ln32_fu_322                               |    0    |    0    |    0    |    12   |
 |----------|------------------------------------------------------------------------------|---------|---------|---------|---------|
 |    mul   |                                 empty_fu_364                                 |    0    |    0    |    0    |    40   |
 |----------|------------------------------------------------------------------------------|---------|---------|---------|---------|
 |          |                               icmp_ln31_fu_222                               |    0    |    0    |    0    |    15   |
 |   icmp   |                               icmp_ln32_fu_246                               |    0    |    0    |    0    |    12   |
-|          |                               icmp_ln39_fu_306                               |    0    |    0    |    0    |    10   |
+|          |                               icmp_ln40_fu_306                               |    0    |    0    |    0    |    10   |
 |----------|------------------------------------------------------------------------------|---------|---------|---------|---------|
 |          |                              select_ln31_fu_252                              |    0    |    0    |    0    |    4    |
 |  select  |                             select_ln31_1_fu_276                             |    0    |    0    |    0    |    8    |
@@ -1768,17 +1768,17 @@ br_ln32                   (br               ) [ 000000000000]
 |          |                        conv3_weights_read_read_fu_116                        |    0    |    0    |    0    |    0    |
 |          |                         input_ftmap_read_read_fu_122                         |    0    |    0    |    0    |    0    |
 |----------|------------------------------------------------------------------------------|---------|---------|---------|---------|
-|          |                               tmp_1_mid1_fu_260                              |    0    |    0    |    0    |    0    |
+|          |                               tmp_3_mid1_fu_260                              |    0    |    0    |    0    |    0    |
 |          |                                 tmp_s_fu_268                                 |    0    |    0    |    0    |    0    |
 |bitconcatenate|                                 p_shl1_fu_292                                |    0    |    0    |    0    |    0    |
 |          |                                shl_ln1_fu_340                                |    0    |    0    |    0    |    0    |
 |          |                                  tmp1_fu_348                                 |    0    |    0    |    0    |    0    |
 |----------|------------------------------------------------------------------------------|---------|---------|---------|---------|
-|   trunc  |                               trunc_ln98_fu_318                              |    0    |    0    |    0    |    0    |
+|   trunc  |                              trunc_ln103_fu_318                              |    0    |    0    |    0    |    0    |
 |----------|------------------------------------------------------------------------------|---------|---------|---------|---------|
-|    or    |                                or_ln98_fu_355                                |    0    |    0    |    0    |    0    |
+|    or    |                                or_ln103_fu_355                               |    0    |    0    |    0    |    0    |
 |----------|------------------------------------------------------------------------------|---------|---------|---------|---------|
-|   zext   |                              or_ln98_cast_fu_360                             |    0    |    0    |    0    |    0    |
+|   zext   |                             or_ln103_cast_fu_360                             |    0    |    0    |    0    |    0    |
 |----------|------------------------------------------------------------------------------|---------|---------|---------|---------|
 |   Total  |                                                                              |    9    | 46.0095 |  39058  |  27128  |
 |----------|------------------------------------------------------------------------------|---------|---------|---------|---------|
@@ -1791,8 +1791,8 @@ N/A
 |                                 |   FF   |
 +---------------------------------+--------+
 |        add_ln31_1_reg_414       |    8   |
-|        add_ln39_1_reg_444       |   12   |
-|         add_ln39_reg_452        |    3   |
+|        add_ln40_1_reg_444       |   12   |
+|         add_ln40_reg_452        |    3   |
 |conv3_biases_0_0_val_read_reg_396|   32   |
 |    conv3_weights_read_reg_401   |   64   |
 |          empty_reg_473          |   12   |
@@ -1809,7 +1809,7 @@ N/A
 |            tj_reg_377           |    4   |
 |           tmp1_reg_468          |    8   |
 |            tn_reg_128           |    3   |
-|        trunc_ln98_reg_457       |    2   |
+|       trunc_ln103_reg_457       |    2   |
 +---------------------------------+--------+
 |              Total              |   329  |
 +---------------------------------+--------+
@@ -1819,8 +1819,8 @@ N/A
 |                                     Comp                                     |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
 |------------------------------------------------------------------------------|------|------|------|--------||---------||---------|
 |                                phi_mul_reg_139                               |  p0  |   2  |  12  |   24   ||    9    |
-| grp_conv3_Pipeline_VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3_fu_170 |  p2  |   2  |   8  |   16   ||    9    |
-| grp_conv3_Pipeline_VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3_fu_170 |  p3  |   2  |   5  |   10   ||    9    |
+| grp_conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107_3_fu_170 |  p2  |   2  |   8  |   16   ||    9    |
+| grp_conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107_3_fu_170 |  p3  |   2  |   5  |   10   ||    9    |
 |------------------------------------------------------------------------------|------|------|------|--------||---------||---------|
 |                                     Total                                    |      |      |      |   50   ||  1.281  ||    27   |
 |------------------------------------------------------------------------------|------|------|------|--------||---------||---------|

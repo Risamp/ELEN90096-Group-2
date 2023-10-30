@@ -70,7 +70,7 @@ newFuncRoot:2 %sext_ln36_cast = sext i62 %sext_ln36_read
 
 <Node id="6" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_17, i32 0, i32 0, void @empty_2, i32 0, i32 512, void @empty_11, void @empty_12, void @empty_2, i32 16, i32 16, i32 16, i32 16, void @empty_2, void @empty_2, i32 4294967295, i32 0
+newFuncRoot:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_1, i32 0, i32 0, void @empty_9, i32 0, i32 512, void @empty_12, void @empty_13, void @empty_9, i32 16, i32 16, i32 16, i32 16, void @empty_9, void @empty_9, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -175,10 +175,10 @@ memset.loop:3 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 
 
 <Node id="14" bw="1" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-memset.loop:4 %exitcond3 = icmp_eq  i16 %p_load, i16 65025
+memset.loop:4 %exitcond2411 = icmp_eq  i16 %p_load, i16 65025
 
 ]]></Node>
-<StgValue><ssdm name="exitcond3"/></StgValue>
+<StgValue><ssdm name="exitcond2411"/></StgValue>
 </operation>
 
 <operation id="16" st_id="1" stage="1" lat="1">
@@ -205,7 +205,7 @@ memset.loop:5 %empty_40 = add i16 %p_load, i16 1
 
 <Node id="16" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-memset.loop:6 %br_ln0 = br i1 %exitcond3, void %memset.loop.split, void %split.exitStub
+memset.loop:6 %br_ln0 = br i1 %exitcond2411, void %memset.loop.split, void %split.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -215,7 +215,7 @@ memset.loop:6 %br_ln0 = br i1 %exitcond3, void %memset.loop.split, void %split.e
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond3" val="0"/>
+<or_exp><and_exp><literal name="exitcond2411" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -231,7 +231,7 @@ memset.loop.split:2 %store_ln0 = store i16 %empty_40, i16 %empty
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond3" val="1"/>
+<or_exp><and_exp><literal name="exitcond2411" val="1"/>
 </and_exp></or_exp>
 </condition>
 

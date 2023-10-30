@@ -1,0 +1,4 @@
+src/conv1.cpp:10:20: warning: unused parameter 'conv1_weights' [-Wunused-parameter]
+           param_t conv1_weights[64][1][9][9],
+                   ^
+1 warning generated.

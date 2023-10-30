@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_VITIS_LOOP_118_4'
 ================================================================
-* Date:           Mon Oct 30 17:11:43 2023
+* Date:           Mon Oct 30 23:00:55 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -105,7 +105,7 @@ ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%nout = alloca i32 1"   --->   Oper
 ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln118_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %zext_ln118"   --->   Operation 22 'read' 'zext_ln118_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%conv2_weights_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %conv2_weights"   --->   Operation 23 'read' 'conv2_weights_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%zext_ln118_cast = zext i8 %zext_ln118_read"   --->   Operation 24 'zext' 'zext_ln118_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_17, i32 0, i32 0, void @empty_2, i32 0, i32 512, void @empty_11, void @empty_12, void @empty_2, i32 16, i32 16, i32 16, i32 16, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_1, i32 0, i32 0, void @empty_9, i32 0, i32 512, void @empty_12, void @empty_13, void @empty_9, i32 16, i32 16, i32 16, i32 16, void @empty_9, void @empty_9, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 26 [1/1] (0.42ns)   --->   "%store_ln0 = store i6 0, i6 %nout"   --->   Operation 26 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln0 = br void %VITIS_LOOP_119_5.i"   --->   Operation 27 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%nout_1 = load i6 %nout" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 28 'load' 'nout_1' <Predicate = true> <Delay = 0.00>
@@ -118,86 +118,86 @@ ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%shl_ln119_1 = bitconcatenate i13 @
 ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%zext_ln119 = zext i13 %shl_ln119_1" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 35 'zext' 'zext_ln119' <Predicate = (!icmp_ln118)> <Delay = 0.00>
 ST_1 : Operation 36 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln119 = add i64 %zext_ln119, i64 %conv2_weights_read" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 36 'add' 'add_ln119' <Predicate = (!icmp_ln118)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.40> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
 ST_1 : Operation 37 [1/1] (0.81ns) (root node of TernaryAdder)   --->   "%add_ln119_1 = add i64 %add_ln119, i64 %zext_ln118_cast" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 37 'add' 'add_ln119_1' <Predicate = (!icmp_ln118)> <Delay = 0.81> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.40> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%trunc_ln9 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln119_1, i32 2, i32 63" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 38 'partselect' 'trunc_ln9' <Predicate = (!icmp_ln118)> <Delay = 0.00>
-ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%sext_ln119 = sext i62 %trunc_ln9" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 39 'sext' 'sext_ln119' <Predicate = (!icmp_ln118)> <Delay = 0.00>
-ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%gmem_addr_14 = getelementptr i32 %gmem, i64 %sext_ln119" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 40 'getelementptr' 'gmem_addr_14' <Predicate = (!icmp_ln118)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln119_1, i32 2, i32 63" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 38 'partselect' 'trunc_ln' <Predicate = (!icmp_ln118)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%sext_ln119 = sext i62 %trunc_ln" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 39 'sext' 'sext_ln119' <Predicate = (!icmp_ln118)> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%gmem_addr_16 = getelementptr i32 %gmem, i64 %sext_ln119" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 40 'getelementptr' 'gmem_addr_16' <Predicate = (!icmp_ln118)> <Delay = 0.00>
 ST_1 : Operation 41 [1/1] (0.42ns)   --->   "%store_ln118 = store i6 %add_ln118, i6 %nout" [src/conv2.cpp:118->src/conv2.cpp:51]   --->   Operation 41 'store' 'store_ln118' <Predicate = (!icmp_ln118)> <Delay = 0.42>
 
 State 2 <SV = 1> <Delay = 7.30>
-ST_2 : Operation 42 [8/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_14, i32 8" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 42 'readreq' 'empty' <Predicate = (!icmp_ln118)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 42 [8/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_16, i32 8" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 42 'readreq' 'empty' <Predicate = (!icmp_ln118)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 3 <SV = 2> <Delay = 7.30>
-ST_3 : Operation 43 [7/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_14, i32 8" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 43 'readreq' 'empty' <Predicate = (!icmp_ln118)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 43 [7/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_16, i32 8" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 43 'readreq' 'empty' <Predicate = (!icmp_ln118)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 4 <SV = 3> <Delay = 7.30>
-ST_4 : Operation 44 [6/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_14, i32 8" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 44 'readreq' 'empty' <Predicate = (!icmp_ln118)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 44 [6/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_16, i32 8" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 44 'readreq' 'empty' <Predicate = (!icmp_ln118)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 5 <SV = 4> <Delay = 7.30>
-ST_5 : Operation 45 [5/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_14, i32 8" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 45 'readreq' 'empty' <Predicate = (!icmp_ln118)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 45 [5/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_16, i32 8" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 45 'readreq' 'empty' <Predicate = (!icmp_ln118)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 6 <SV = 5> <Delay = 7.30>
-ST_6 : Operation 46 [4/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_14, i32 8" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 46 'readreq' 'empty' <Predicate = (!icmp_ln118)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 46 [4/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_16, i32 8" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 46 'readreq' 'empty' <Predicate = (!icmp_ln118)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 7 <SV = 6> <Delay = 7.30>
-ST_7 : Operation 47 [3/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_14, i32 8" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 47 'readreq' 'empty' <Predicate = (!icmp_ln118)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 47 [3/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_16, i32 8" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 47 'readreq' 'empty' <Predicate = (!icmp_ln118)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 8 <SV = 7> <Delay = 7.30>
-ST_8 : Operation 48 [2/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_14, i32 8" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 48 'readreq' 'empty' <Predicate = (!icmp_ln118)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 48 [2/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_16, i32 8" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 48 'readreq' 'empty' <Predicate = (!icmp_ln118)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 9 <SV = 8> <Delay = 7.30>
-ST_9 : Operation 49 [1/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_14, i32 8" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 49 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 49 [1/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_16, i32 8" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 49 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 10 <SV = 9> <Delay = 7.30>
-ST_10 : Operation 50 [1/1] (7.30ns)   --->   "%gmem_addr_14_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_14" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 50 'read' 'gmem_addr_14_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 50 [1/1] (7.30ns)   --->   "%gmem_addr_16_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_16" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 50 'read' 'gmem_addr_16_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 ST_10 : Operation 86 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 86 'ret' 'ret_ln0' <Predicate = (icmp_ln118)> <Delay = 0.00>
 
 State 11 <SV = 10> <Delay = 7.30>
 ST_11 : Operation 51 [1/1] (0.00ns)   --->   "%nout_1_cast32 = zext i6 %nout_1" [src/conv2.cpp:119->src/conv2.cpp:51]   --->   Operation 51 'zext' 'nout_1_cast32' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 52 [1/1] (0.00ns)   --->   "%bitcast_ln122 = bitcast i32 %gmem_addr_14_read" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 52 'bitcast' 'bitcast_ln122' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 52 [1/1] (0.00ns)   --->   "%bitcast_ln122 = bitcast i32 %gmem_addr_16_read" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 52 'bitcast' 'bitcast_ln122' <Predicate = true> <Delay = 0.00>
 ST_11 : Operation 53 [1/1] (0.00ns)   --->   "%weights_buffer_0_0_0_addr = getelementptr i32 %weights_buffer_0_0_0, i64 0, i64 %nout_1_cast32" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 53 'getelementptr' 'weights_buffer_0_0_0_addr' <Predicate = true> <Delay = 0.00>
 ST_11 : Operation 54 [1/1] (1.23ns)   --->   "%store_ln122 = store i32 %bitcast_ln122, i5 %weights_buffer_0_0_0_addr" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 54 'store' 'store_ln122' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
-ST_11 : Operation 55 [1/1] (7.30ns)   --->   "%gmem_addr_14_read_1 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_14" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 55 'read' 'gmem_addr_14_read_1' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_11 : Operation 55 [1/1] (7.30ns)   --->   "%gmem_addr_16_read_1 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_16" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 55 'read' 'gmem_addr_16_read_1' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 12 <SV = 11> <Delay = 7.30>
-ST_12 : Operation 56 [1/1] (0.00ns)   --->   "%bitcast_ln122_1 = bitcast i32 %gmem_addr_14_read_1" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 56 'bitcast' 'bitcast_ln122_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 56 [1/1] (0.00ns)   --->   "%bitcast_ln122_1 = bitcast i32 %gmem_addr_16_read_1" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 56 'bitcast' 'bitcast_ln122_1' <Predicate = true> <Delay = 0.00>
 ST_12 : Operation 57 [1/1] (0.00ns)   --->   "%weights_buffer_0_0_1_addr = getelementptr i32 %weights_buffer_0_0_1, i64 0, i64 %nout_1_cast32" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 57 'getelementptr' 'weights_buffer_0_0_1_addr' <Predicate = true> <Delay = 0.00>
 ST_12 : Operation 58 [1/1] (1.23ns)   --->   "%store_ln122 = store i32 %bitcast_ln122_1, i5 %weights_buffer_0_0_1_addr" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 58 'store' 'store_ln122' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
-ST_12 : Operation 59 [1/1] (7.30ns)   --->   "%gmem_addr_14_read_2 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_14" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 59 'read' 'gmem_addr_14_read_2' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_12 : Operation 59 [1/1] (7.30ns)   --->   "%gmem_addr_16_read_2 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_16" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 59 'read' 'gmem_addr_16_read_2' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 13 <SV = 12> <Delay = 7.30>
-ST_13 : Operation 60 [1/1] (0.00ns)   --->   "%bitcast_ln122_2 = bitcast i32 %gmem_addr_14_read_2" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 60 'bitcast' 'bitcast_ln122_2' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 60 [1/1] (0.00ns)   --->   "%bitcast_ln122_2 = bitcast i32 %gmem_addr_16_read_2" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 60 'bitcast' 'bitcast_ln122_2' <Predicate = true> <Delay = 0.00>
 ST_13 : Operation 61 [1/1] (0.00ns)   --->   "%weights_buffer_0_0_2_addr = getelementptr i32 %weights_buffer_0_0_2, i64 0, i64 %nout_1_cast32" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 61 'getelementptr' 'weights_buffer_0_0_2_addr' <Predicate = true> <Delay = 0.00>
 ST_13 : Operation 62 [1/1] (1.23ns)   --->   "%store_ln122 = store i32 %bitcast_ln122_2, i5 %weights_buffer_0_0_2_addr" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 62 'store' 'store_ln122' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
-ST_13 : Operation 63 [1/1] (7.30ns)   --->   "%gmem_addr_14_read_3 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_14" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 63 'read' 'gmem_addr_14_read_3' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_13 : Operation 63 [1/1] (7.30ns)   --->   "%gmem_addr_16_read_3 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_16" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 63 'read' 'gmem_addr_16_read_3' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 14 <SV = 13> <Delay = 7.30>
-ST_14 : Operation 64 [1/1] (0.00ns)   --->   "%bitcast_ln122_3 = bitcast i32 %gmem_addr_14_read_3" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 64 'bitcast' 'bitcast_ln122_3' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 64 [1/1] (0.00ns)   --->   "%bitcast_ln122_3 = bitcast i32 %gmem_addr_16_read_3" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 64 'bitcast' 'bitcast_ln122_3' <Predicate = true> <Delay = 0.00>
 ST_14 : Operation 65 [1/1] (0.00ns)   --->   "%weights_buffer_0_0_3_addr = getelementptr i32 %weights_buffer_0_0_3, i64 0, i64 %nout_1_cast32" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 65 'getelementptr' 'weights_buffer_0_0_3_addr' <Predicate = true> <Delay = 0.00>
 ST_14 : Operation 66 [1/1] (1.23ns)   --->   "%store_ln122 = store i32 %bitcast_ln122_3, i5 %weights_buffer_0_0_3_addr" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 66 'store' 'store_ln122' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
-ST_14 : Operation 67 [1/1] (7.30ns)   --->   "%gmem_addr_14_read_4 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_14" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 67 'read' 'gmem_addr_14_read_4' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_14 : Operation 67 [1/1] (7.30ns)   --->   "%gmem_addr_16_read_4 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_16" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 67 'read' 'gmem_addr_16_read_4' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 15 <SV = 14> <Delay = 7.30>
-ST_15 : Operation 68 [1/1] (0.00ns)   --->   "%bitcast_ln122_4 = bitcast i32 %gmem_addr_14_read_4" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 68 'bitcast' 'bitcast_ln122_4' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 68 [1/1] (0.00ns)   --->   "%bitcast_ln122_4 = bitcast i32 %gmem_addr_16_read_4" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 68 'bitcast' 'bitcast_ln122_4' <Predicate = true> <Delay = 0.00>
 ST_15 : Operation 69 [1/1] (0.00ns)   --->   "%weights_buffer_0_0_4_addr = getelementptr i32 %weights_buffer_0_0_4, i64 0, i64 %nout_1_cast32" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 69 'getelementptr' 'weights_buffer_0_0_4_addr' <Predicate = true> <Delay = 0.00>
 ST_15 : Operation 70 [1/1] (1.23ns)   --->   "%store_ln122 = store i32 %bitcast_ln122_4, i5 %weights_buffer_0_0_4_addr" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 70 'store' 'store_ln122' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
-ST_15 : Operation 71 [1/1] (7.30ns)   --->   "%gmem_addr_14_read_5 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_14" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 71 'read' 'gmem_addr_14_read_5' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_15 : Operation 71 [1/1] (7.30ns)   --->   "%gmem_addr_16_read_5 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_16" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 71 'read' 'gmem_addr_16_read_5' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 16 <SV = 15> <Delay = 7.30>
-ST_16 : Operation 72 [1/1] (0.00ns)   --->   "%bitcast_ln122_5 = bitcast i32 %gmem_addr_14_read_5" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 72 'bitcast' 'bitcast_ln122_5' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 72 [1/1] (0.00ns)   --->   "%bitcast_ln122_5 = bitcast i32 %gmem_addr_16_read_5" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 72 'bitcast' 'bitcast_ln122_5' <Predicate = true> <Delay = 0.00>
 ST_16 : Operation 73 [1/1] (0.00ns)   --->   "%weights_buffer_0_0_5_addr = getelementptr i32 %weights_buffer_0_0_5, i64 0, i64 %nout_1_cast32" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 73 'getelementptr' 'weights_buffer_0_0_5_addr' <Predicate = true> <Delay = 0.00>
 ST_16 : Operation 74 [1/1] (1.23ns)   --->   "%store_ln122 = store i32 %bitcast_ln122_5, i5 %weights_buffer_0_0_5_addr" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 74 'store' 'store_ln122' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
-ST_16 : Operation 75 [1/1] (7.30ns)   --->   "%gmem_addr_14_read_6 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_14" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 75 'read' 'gmem_addr_14_read_6' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_16 : Operation 75 [1/1] (7.30ns)   --->   "%gmem_addr_16_read_6 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_16" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 75 'read' 'gmem_addr_16_read_6' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 17 <SV = 16> <Delay = 7.30>
-ST_17 : Operation 76 [1/1] (0.00ns)   --->   "%bitcast_ln122_6 = bitcast i32 %gmem_addr_14_read_6" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 76 'bitcast' 'bitcast_ln122_6' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 76 [1/1] (0.00ns)   --->   "%bitcast_ln122_6 = bitcast i32 %gmem_addr_16_read_6" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 76 'bitcast' 'bitcast_ln122_6' <Predicate = true> <Delay = 0.00>
 ST_17 : Operation 77 [1/1] (0.00ns)   --->   "%weights_buffer_0_0_6_addr = getelementptr i32 %weights_buffer_0_0_6, i64 0, i64 %nout_1_cast32" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 77 'getelementptr' 'weights_buffer_0_0_6_addr' <Predicate = true> <Delay = 0.00>
 ST_17 : Operation 78 [1/1] (1.23ns)   --->   "%store_ln122 = store i32 %bitcast_ln122_6, i5 %weights_buffer_0_0_6_addr" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 78 'store' 'store_ln122' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
-ST_17 : Operation 79 [1/1] (7.30ns)   --->   "%gmem_addr_14_read_7 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_14" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 79 'read' 'gmem_addr_14_read_7' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_17 : Operation 79 [1/1] (7.30ns)   --->   "%gmem_addr_16_read_7 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_16" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 79 'read' 'gmem_addr_16_read_7' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 18 <SV = 17> <Delay = 1.23>
 ST_18 : Operation 80 [1/1] (0.00ns)   --->   "%speclooptripcount_ln118 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 32, i64 32, i64 32" [src/conv2.cpp:118->src/conv2.cpp:51]   --->   Operation 80 'speclooptripcount' 'speclooptripcount_ln118' <Predicate = true> <Delay = 0.00>
-ST_18 : Operation 81 [1/1] (0.00ns)   --->   "%specloopname_ln118 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10" [src/conv2.cpp:118->src/conv2.cpp:51]   --->   Operation 81 'specloopname' 'specloopname_ln118' <Predicate = true> <Delay = 0.00>
-ST_18 : Operation 82 [1/1] (0.00ns)   --->   "%bitcast_ln122_7 = bitcast i32 %gmem_addr_14_read_7" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 82 'bitcast' 'bitcast_ln122_7' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 81 [1/1] (0.00ns)   --->   "%specloopname_ln118 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [src/conv2.cpp:118->src/conv2.cpp:51]   --->   Operation 81 'specloopname' 'specloopname_ln118' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 82 [1/1] (0.00ns)   --->   "%bitcast_ln122_7 = bitcast i32 %gmem_addr_16_read_7" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 82 'bitcast' 'bitcast_ln122_7' <Predicate = true> <Delay = 0.00>
 ST_18 : Operation 83 [1/1] (0.00ns)   --->   "%weights_buffer_0_0_7_addr = getelementptr i32 %weights_buffer_0_0_7, i64 0, i64 %nout_1_cast32" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 83 'getelementptr' 'weights_buffer_0_0_7_addr' <Predicate = true> <Delay = 0.00>
 ST_18 : Operation 84 [1/1] (1.23ns)   --->   "%store_ln122 = store i32 %bitcast_ln122_7, i5 %weights_buffer_0_0_7_addr" [src/conv2.cpp:122->src/conv2.cpp:51]   --->   Operation 84 'store' 'store_ln122' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_18 : Operation 85 [1/1] (0.00ns)   --->   "%br_ln118 = br void %VITIS_LOOP_119_5.i" [src/conv2.cpp:118->src/conv2.cpp:51]   --->   Operation 85 'br' 'br_ln118' <Predicate = true> <Delay = 0.00>
@@ -249,35 +249,35 @@ The critical path consists of the following:
 
  <State 10>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_14_read', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) [38]  (7.300 ns)
+	bus read operation ('gmem_addr_16_read', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) [38]  (7.300 ns)
 
  <State 11>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_14_read_1', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) [42]  (7.300 ns)
+	bus read operation ('gmem_addr_16_read_1', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) [42]  (7.300 ns)
 
  <State 12>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_14_read_2', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) [46]  (7.300 ns)
+	bus read operation ('gmem_addr_16_read_2', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) [46]  (7.300 ns)
 
  <State 13>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_14_read_3', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) [50]  (7.300 ns)
+	bus read operation ('gmem_addr_16_read_3', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) [50]  (7.300 ns)
 
  <State 14>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_14_read_4', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) [54]  (7.300 ns)
+	bus read operation ('gmem_addr_16_read_4', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) [54]  (7.300 ns)
 
  <State 15>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_14_read_5', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) [58]  (7.300 ns)
+	bus read operation ('gmem_addr_16_read_5', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) [58]  (7.300 ns)
 
  <State 16>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_14_read_6', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) [62]  (7.300 ns)
+	bus read operation ('gmem_addr_16_read_6', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) [62]  (7.300 ns)
 
  <State 17>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_14_read_7', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) [66]  (7.300 ns)
+	bus read operation ('gmem_addr_16_read_7', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) [66]  (7.300 ns)
 
  <State 18>: 1.237ns
 The critical path consists of the following:

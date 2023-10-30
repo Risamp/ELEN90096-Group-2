@@ -5772,10 +5772,12 @@ void export_buffer_tile_c2(ftmap_t output_fm_buffer[32][255 / 15][255 / 15],
          param_t conv2_biases[32]);
 
 void load_buffer_tile_c3(ftmap_t input_fm_buffer[8][255 / 15 + (2 * (5 - 1) / 2)][255 / 15 + (2 * (5 - 1) / 2)],
-                         ftmap_t input_fm[32][255][255],
-                         int tx0,
-                         int ty0,
-       int tn0);
+      ftmap_t input_fm[32][255][255],
+      param_t weights_buffer[1][8][5][5],
+      param_t conv3_weights[1][32][5][5],
+      int tx0,
+      int ty0,
+      int tn0);
 
 void export_buffer_tile_c3(ftmap_t output_fm_buffer[1][255 / 15][255 / 15],
                            ftmap_t output_ftmap[1][255][255],
@@ -33543,6 +33545,7 @@ void conv3(ftmap_t input_ftmap[32][255][255],
  TI: for (int ti = 0; ti < 15; ti++) {
 
   static ftmap_t output_fm_buffer[1][255 / 15][255 / 15] = {0};
+
   int ty0 = tj * 255 / 15;
   int tx0 = ti * 255 / 15;
 
@@ -33553,11 +33556,13 @@ void conv3(ftmap_t input_ftmap[32][255][255],
 
 
    static ftmap_t input_fm_buffer[8][255 / 15 + (2 * (5 - 1) / 2)][255 / 15 + (2 * (5 - 1) / 2)];
+   static param_t weights_buffer[1][8][5][5];
 
 
 
 
-   load_buffer_tile_c3(input_fm_buffer, input_ftmap, tx0, ty0, tn0);
+
+   load_buffer_tile_c3(input_fm_buffer, input_ftmap, weights_buffer, conv3_weights, tx0, ty0, tn0);
 
 
    NOUT: for (int nout = 0; nout < 1; nout++) {
@@ -33590,10 +33595,12 @@ void conv3(ftmap_t input_ftmap[32][255][255],
   export_buffer_tile_c3(output_fm_buffer, output_ftmap, tx0, ty0, conv3_biases);
  }}
 }
-# 90 "src/conv3.cpp"
+# 93 "src/conv3.cpp"
 void load_buffer_tile_c3(
  ftmap_t input_fm_buffer[8][255 / 15 + (2 * (5 - 1) / 2)][255 / 15 + (2 * (5 - 1) / 2)],
  ftmap_t input_fm[32][255][255],
+ param_t weights_buffer[1][8][5][5],
+ param_t conv3_weights[1][32][5][5],
  int tx0,
  int ty0,
  int tn0
@@ -33601,9 +33608,9 @@ void load_buffer_tile_c3(
 
  memset(input_fm_buffer, 0, 8 * (255 / 15 + (2 * (5 - 1) / 2)) * (255 / 15 + (2 * (5 - 1) / 2)) * sizeof(ftmap_t));
 
- VITIS_LOOP_100_1: for (int nin = 0; nin < 8; nin++) {
-  VITIS_LOOP_101_2: for (int by = 0; by < 255 / 15 + (2 * (5 - 1) / 2); by++) {
-   VITIS_LOOP_102_3: for (int bx = 0; bx < 255 / 15 + (2 * (5 - 1) / 2); bx++) {
+ VITIS_LOOP_105_1: for (int nin = 0; nin < 8; nin++) {
+  VITIS_LOOP_106_2: for (int by = 0; by < 255 / 15 + (2 * (5 - 1) / 2); by++) {
+   VITIS_LOOP_107_3: for (int bx = 0; bx < 255 / 15 + (2 * (5 - 1) / 2); bx++) {
 
 
     int xClamped = clamp(tx0 - (5 - 1) / 2 + bx, 0, 255 - 1);
@@ -33611,6 +33618,16 @@ void load_buffer_tile_c3(
 
 
     input_fm_buffer[nin][by][bx] = input_fm[tn0 + nin][yClamped][xClamped];
+   }
+  }
+ }
+
+ VITIS_LOOP_119_4: for (int nout = 0; nout < 1; nout++) {
+  VITIS_LOOP_120_5: for (int nin = 0; nin < 8; nin++) {
+   VITIS_LOOP_121_6: for (int ky = 0; ky < 5; ky++) {
+    VITIS_LOOP_122_7: for (int kx = 0; kx < 5; kx++) {
+     weights_buffer[nout][nin][ky][kx] = conv3_weights[nout][tn0 + nin][ky][kx];
+    }
    }
   }
  }
@@ -33623,9 +33640,9 @@ void export_buffer_tile_c3(
  int ty0,
  param_t conv3_biases[1]
 ) {
- VITIS_LOOP_122_1: for (int nout = 0; nout < 1; nout++) {
-  VITIS_LOOP_123_2: for (int ty = 0; ty < 255 / 15; ty++) {
-   VITIS_LOOP_124_3: for (int tx = 0; tx < 255 / 15; tx++) {
+ VITIS_LOOP_137_1: for (int nout = 0; nout < 1; nout++) {
+  VITIS_LOOP_138_2: for (int ty = 0; ty < 255 / 15; ty++) {
+   VITIS_LOOP_139_3: for (int tx = 0; tx < 255 / 15; tx++) {
 
     output_ftmap[nout][ty0 + ty][tx0 + tx] += output_fm_buffer[nout][ty][tx] + conv3_biases[nout];
 

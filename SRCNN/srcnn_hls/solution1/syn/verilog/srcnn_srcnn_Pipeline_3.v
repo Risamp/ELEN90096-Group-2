@@ -129,7 +129,7 @@ reg    ap_idle_pp0;
 wire    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state2_pp0_stage0_iter1;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] exitcond3_fu_83_p2;
+wire   [0:0] exitcond2411_fu_83_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
@@ -205,7 +205,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if (((exitcond3_fu_83_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if (((exitcond2411_fu_83_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
             empty_fu_46 <= empty_40_fu_89_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             empty_fu_46 <= 16'd0;
@@ -214,7 +214,7 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (*) begin
-    if (((exitcond3_fu_83_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((exitcond2411_fu_83_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -314,7 +314,7 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
 assign empty_40_fu_89_p2 = (ap_sig_allocacmp_p_load + 16'd1);
 
-assign exitcond3_fu_83_p2 = ((ap_sig_allocacmp_p_load == 16'd65025) ? 1'b1 : 1'b0);
+assign exitcond2411_fu_83_p2 = ((ap_sig_allocacmp_p_load == 16'd65025) ? 1'b1 : 1'b0);
 
 assign m_axi_gmem_ARADDR = 64'd0;
 

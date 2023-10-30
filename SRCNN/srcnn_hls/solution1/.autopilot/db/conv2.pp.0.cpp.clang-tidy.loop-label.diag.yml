@@ -52,7 +52,7 @@ Diagnostics:
     FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1742632
+        Offset:          1742658
         Length:          0
         ReplacementText: 'VITIS_LOOP_104_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -61,7 +61,7 @@ Diagnostics:
     FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1742670
+        Offset:          1742696
         Length:          0
         ReplacementText: 'VITIS_LOOP_105_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -70,7 +70,7 @@ Diagnostics:
     FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1742733
+        Offset:          1742759
         Length:          0
         ReplacementText: 'VITIS_LOOP_106_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -79,7 +79,7 @@ Diagnostics:
     FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1743011
+        Offset:          1743037
         Length:          0
         ReplacementText: 'VITIS_LOOP_118_4: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -88,7 +88,7 @@ Diagnostics:
     FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1743053
+        Offset:          1743079
         Length:          0
         ReplacementText: 'VITIS_LOOP_119_5: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -97,7 +97,7 @@ Diagnostics:
     FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1743092
+        Offset:          1743118
         Length:          0
         ReplacementText: 'VITIS_LOOP_120_6: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -106,7 +106,7 @@ Diagnostics:
     FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1743129
+        Offset:          1743155
         Length:          0
         ReplacementText: 'VITIS_LOOP_121_7: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -115,7 +115,7 @@ Diagnostics:
     FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1743431
+        Offset:          1743457
         Length:          0
         ReplacementText: 'VITIS_LOOP_136_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -124,7 +124,7 @@ Diagnostics:
     FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1743473
+        Offset:          1743499
         Length:          0
         ReplacementText: 'VITIS_LOOP_137_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -133,7 +133,7 @@ Diagnostics:
     FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1743516
+        Offset:          1743542
         Length:          0
         ReplacementText: 'VITIS_LOOP_138_3: '
 ...

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2'" level="0">
-<item name = "Date">Mon Oct 30 17:12:40 2023
+<item name = "Date">Mon Oct 30 23:01:49 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -66,7 +66,7 @@
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
-<column name="mac_muladd_6ns_18ns_19s_25_4_1_U53">mac_muladd_6ns_18ns_19s_25_4_1, i0 * i1 + i2</column>
+<column name="mac_muladd_6ns_18ns_19s_25_4_1_U22">mac_muladd_6ns_18ns_19s_25_4_1, i0 * i1 + i2</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
@@ -101,10 +101,10 @@
 <column name="add_ln113_8_fu_653_p2">+, 0, 0, 19, 12, 3</column>
 <column name="add_ln113_9_fu_668_p2">+, 0, 0, 19, 12, 4</column>
 <column name="add_ln113_fu_525_p2">+, 0, 0, 16, 9, 9</column>
-<column name="empty_97_fu_486_p2">+, 0, 0, 64, 64, 64</column>
+<column name="empty_99_fu_486_p2">+, 0, 0, 64, 64, 64</column>
 <column name="empty_fu_427_p2">+, 0, 0, 15, 8, 8</column>
 <column name="tmp1_fu_481_p2">+, 0, 0, 64, 64, 64</column>
-<column name="empty_96_fu_456_p2">-, 0, 0, 26, 19, 19</column>
+<column name="empty_98_fu_456_p2">-, 0, 0, 26, 19, 19</column>
 <column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp0_stage12_11001">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state13_pp0_stage12_iter0">and, 0, 0, 2, 1, 1</column>
@@ -144,7 +144,7 @@
 <column name="ap_enable_reg_pp0_iter0_reg">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="by_fu_132">5, 0, 5, 0</column>
-<column name="gmem_addr_15_reg_875">64, 0, 64, 0</column>
+<column name="gmem_addr_17_reg_875">64, 0, 64, 0</column>
 <column name="icmp_ln104_reg_849">1, 0, 1, 0</column>
 <column name="indvar_flatten_fu_140">8, 0, 8, 0</column>
 <column name="nin_fu_136">4, 0, 4, 0</column>
@@ -213,7 +213,7 @@
 <column name="m_axi_gmem_BID">in, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_BUSER">in, 1, m_axi, gmem, pointer</column>
 <column name="shl_ln3">in, 6, ap_none, shl_ln3, scalar</column>
-<column name="select_ln30_1">in, 8, ap_none, select_ln30_1, scalar</column>
+<column name="select_ln30_2">in, 8, ap_none, select_ln30_2, scalar</column>
 <column name="select_ln30">in, 4, ap_none, select_ln30, scalar</column>
 <column name="input_ftmap">in, 64, ap_none, input_ftmap, scalar</column>
 <column name="input_fm_buffer_1_address0">out, 12, ap_memory, input_fm_buffer_1, array</column>

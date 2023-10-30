@@ -18,7 +18,7 @@ set C_modelArgList {
 	{ p_cast37 int 12 regular  }
 	{ conv3_weights int 64 regular  }
 	{ p_cast27 int 12 regular  }
-	{ zext_ln55 int 12 regular  }
+	{ zext_ln58 int 12 regular  }
 	{ gmem int 32 regular {axi_master 0}  }
 	{ output_fm_buffer_0 float 32 regular {array 289 { 2 3 } 1 1 } {global 2}  }
 	{ input_fm_buffer float 32 regular {array 3528 { 1 1 } 1 1 } {global 0}  }
@@ -28,8 +28,8 @@ set C_modelArgMapList {[
 	{ "Name" : "p_cast37", "interface" : "wire", "bitwidth" : 12, "direction" : "READONLY"} , 
  	{ "Name" : "conv3_weights", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY"} , 
  	{ "Name" : "p_cast27", "interface" : "wire", "bitwidth" : 12, "direction" : "READONLY"} , 
- 	{ "Name" : "zext_ln55", "interface" : "wire", "bitwidth" : 12, "direction" : "READONLY"} , 
- 	{ "Name" : "gmem", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "input_ftmap","offset": { "type": "dynamic","port_name": "input_ftmap","bundle": "control"},"direction": "READONLY"},{"cName": "conv1_weights","offset": { "type": "dynamic","port_name": "conv1_weights","bundle": "control"},"direction": "READONLY"},{"cName": "conv1_biases","offset": { "type": "dynamic","port_name": "conv1_biases","bundle": "control"},"direction": "READONLY"},{"cName": "conv1_output_ftmap","offset": { "type": "dynamic","port_name": "conv1_output_ftmap","bundle": "control"},"direction": "READWRITE"},{"cName": "conv2_weights","offset": { "type": "dynamic","port_name": "conv2_weights","bundle": "control"},"direction": "READONLY"},{"cName": "conv2_biases","offset": { "type": "dynamic","port_name": "conv2_biases","bundle": "control"},"direction": "READONLY"},{"cName": "conv2_output_ftmap","offset": { "type": "dynamic","port_name": "conv2_output_ftmap","bundle": "control"},"direction": "READWRITE"},{"cName": "conv3_weights","offset": { "type": "dynamic","port_name": "conv3_weights","bundle": "control"},"direction": "READONLY"},{"cName": "conv3_biases","offset": { "type": "dynamic","port_name": "conv3_biases","bundle": "control"},"direction": "READONLY"},{"cName": "output_ftmap","offset": { "type": "dynamic","port_name": "output_ftmap","bundle": "control"},"direction": "READWRITE"}]}]} , 
+ 	{ "Name" : "zext_ln58", "interface" : "wire", "bitwidth" : 12, "direction" : "READONLY"} , 
+ 	{ "Name" : "gmem", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "input_ftmap","offset": { "type": "dynamic","port_name": "input_ftmap","bundle": "control"},},{"cName": "conv1_weights","offset": { "type": "dynamic","port_name": "conv1_weights","bundle": "control"},},{"cName": "conv1_biases","offset": { "type": "dynamic","port_name": "conv1_biases","bundle": "control"},"direction": "READONLY"},{"cName": "conv1_output_ftmap","offset": { "type": "dynamic","port_name": "conv1_output_ftmap","bundle": "control"},"direction": "READWRITE"},{"cName": "conv2_weights","offset": { "type": "dynamic","port_name": "conv2_weights","bundle": "control"},"direction": "READONLY"},{"cName": "conv2_biases","offset": { "type": "dynamic","port_name": "conv2_biases","bundle": "control"},"direction": "READONLY"},{"cName": "conv2_output_ftmap","offset": { "type": "dynamic","port_name": "conv2_output_ftmap","bundle": "control"},"direction": "READWRITE"},{"cName": "conv3_weights","offset": { "type": "dynamic","port_name": "conv3_weights","bundle": "control"},"direction": "READONLY"},{"cName": "conv3_biases","offset": { "type": "dynamic","port_name": "conv3_biases","bundle": "control"},"direction": "READONLY"},{"cName": "output_ftmap","offset": { "type": "dynamic","port_name": "output_ftmap","bundle": "control"},"direction": "READWRITE"}]}]} , 
  	{ "Name" : "output_fm_buffer_0", "interface" : "memory", "bitwidth" : 32, "direction" : "READWRITE", "extern" : 0} , 
  	{ "Name" : "input_fm_buffer", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "extern" : 0} ]}
 # RTL Port declarations: 
@@ -90,7 +90,7 @@ set portList {
 	{ p_cast37 sc_in sc_lv 12 signal 0 } 
 	{ conv3_weights sc_in sc_lv 64 signal 1 } 
 	{ p_cast27 sc_in sc_lv 12 signal 2 } 
-	{ zext_ln55 sc_in sc_lv 12 signal 3 } 
+	{ zext_ln58 sc_in sc_lv 12 signal 3 } 
 	{ output_fm_buffer_0_address0 sc_out sc_lv 9 signal 5 } 
 	{ output_fm_buffer_0_ce0 sc_out sc_logic 1 signal 5 } 
 	{ output_fm_buffer_0_we0 sc_out sc_logic 1 signal 5 } 
@@ -168,7 +168,7 @@ set NewPortList {[
  	{ "name": "p_cast37", "direction": "in", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "p_cast37", "role": "default" }} , 
  	{ "name": "conv3_weights", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "conv3_weights", "role": "default" }} , 
  	{ "name": "p_cast27", "direction": "in", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "p_cast27", "role": "default" }} , 
- 	{ "name": "zext_ln55", "direction": "in", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "zext_ln55", "role": "default" }} , 
+ 	{ "name": "zext_ln58", "direction": "in", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "zext_ln58", "role": "default" }} , 
  	{ "name": "output_fm_buffer_0_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "output_fm_buffer_0", "role": "address0" }} , 
  	{ "name": "output_fm_buffer_0_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "output_fm_buffer_0", "role": "ce0" }} , 
  	{ "name": "output_fm_buffer_0_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "output_fm_buffer_0", "role": "we0" }} , 
@@ -209,7 +209,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_cast37", "Type" : "None", "Direction" : "I"},
 			{"Name" : "conv3_weights", "Type" : "None", "Direction" : "I"},
 			{"Name" : "p_cast27", "Type" : "None", "Direction" : "I"},
-			{"Name" : "zext_ln55", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln58", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem_blk_n_AR", "Type" : "RtlSignal"},
@@ -219,11 +219,11 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "TY_TX", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "200", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage16", "LastStateIter" : "ap_enable_reg_pp0_iter4", "LastStateBlock" : "ap_block_pp0_stage16_subdone", "QuitState" : "ap_ST_fsm_pp0_stage16", "QuitStateIter" : "ap_enable_reg_pp0_iter4", "QuitStateBlock" : "ap_block_pp0_stage16_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_5ns_6ns_10_1_1_U125", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_5ns_6ns_10_1_1_U126", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_5ns_6ns_10_1_1_U127", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_5ns_6ns_10_1_1_U128", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_5ns_6ns_10_1_1_U129", "Parent" : "0"},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_5ns_6ns_10_1_1_U95", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_5ns_6ns_10_1_1_U96", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_5ns_6ns_10_1_1_U97", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_5ns_6ns_10_1_1_U98", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_5ns_6ns_10_1_1_U99", "Parent" : "0"},
 	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
 
 
@@ -232,7 +232,7 @@ set ArgLastReadFirstWriteLatency {
 		p_cast37 {Type I LastRead 0 FirstWrite -1}
 		conv3_weights {Type I LastRead 0 FirstWrite -1}
 		p_cast27 {Type I LastRead 0 FirstWrite -1}
-		zext_ln55 {Type I LastRead 0 FirstWrite -1}
+		zext_ln58 {Type I LastRead 0 FirstWrite -1}
 		gmem {Type I LastRead 208 FirstWrite -1}
 		output_fm_buffer_0 {Type IO LastRead 0 FirstWrite 816}
 		input_fm_buffer {Type I LastRead 100 FirstWrite -1}}}
@@ -252,7 +252,7 @@ set Spec2ImplPortList {
 	p_cast37 { ap_none {  { p_cast37 in_data 0 12 } } }
 	conv3_weights { ap_none {  { conv3_weights in_data 0 64 } } }
 	p_cast27 { ap_none {  { p_cast27 in_data 0 12 } } }
-	zext_ln55 { ap_none {  { zext_ln55 in_data 0 12 } } }
+	zext_ln58 { ap_none {  { zext_ln58 in_data 0 12 } } }
 	 { m_axi {  { m_axi_gmem_AWVALID VALID 1 1 }  { m_axi_gmem_AWREADY READY 0 1 }  { m_axi_gmem_AWADDR ADDR 1 64 }  { m_axi_gmem_AWID ID 1 1 }  { m_axi_gmem_AWLEN SIZE 1 32 }  { m_axi_gmem_AWSIZE BURST 1 3 }  { m_axi_gmem_AWBURST LOCK 1 2 }  { m_axi_gmem_AWLOCK CACHE 1 2 }  { m_axi_gmem_AWCACHE PROT 1 4 }  { m_axi_gmem_AWPROT QOS 1 3 }  { m_axi_gmem_AWQOS REGION 1 4 }  { m_axi_gmem_AWREGION USER 1 4 }  { m_axi_gmem_AWUSER DATA 1 1 }  { m_axi_gmem_WVALID VALID 1 1 }  { m_axi_gmem_WREADY READY 0 1 }  { m_axi_gmem_WDATA FIFONUM 1 32 }  { m_axi_gmem_WSTRB STRB 1 4 }  { m_axi_gmem_WLAST LAST 1 1 }  { m_axi_gmem_WID ID 1 1 }  { m_axi_gmem_WUSER DATA 1 1 }  { m_axi_gmem_ARVALID VALID 1 1 }  { m_axi_gmem_ARREADY READY 0 1 }  { m_axi_gmem_ARADDR ADDR 1 64 }  { m_axi_gmem_ARID ID 1 1 }  { m_axi_gmem_ARLEN SIZE 1 32 }  { m_axi_gmem_ARSIZE BURST 1 3 }  { m_axi_gmem_ARBURST LOCK 1 2 }  { m_axi_gmem_ARLOCK CACHE 1 2 }  { m_axi_gmem_ARCACHE PROT 1 4 }  { m_axi_gmem_ARPROT QOS 1 3 }  { m_axi_gmem_ARQOS REGION 1 4 }  { m_axi_gmem_ARREGION USER 1 4 }  { m_axi_gmem_ARUSER DATA 1 1 }  { m_axi_gmem_RVALID VALID 0 1 }  { m_axi_gmem_RREADY READY 1 1 }  { m_axi_gmem_RDATA FIFONUM 0 32 }  { m_axi_gmem_RLAST LAST 0 1 }  { m_axi_gmem_RID ID 0 1 }  { m_axi_gmem_RFIFONUM LEN 0 9 }  { m_axi_gmem_RUSER DATA 0 1 }  { m_axi_gmem_RRESP RESP 0 2 }  { m_axi_gmem_BVALID VALID 0 1 }  { m_axi_gmem_BREADY READY 1 1 }  { m_axi_gmem_BRESP RESP 0 2 }  { m_axi_gmem_BID ID 0 1 }  { m_axi_gmem_BUSER DATA 0 1 } } }
 	output_fm_buffer_0 { ap_memory {  { output_fm_buffer_0_address0 mem_address 1 9 }  { output_fm_buffer_0_ce0 mem_ce 1 1 }  { output_fm_buffer_0_we0 mem_we 1 1 }  { output_fm_buffer_0_d0 mem_din 1 32 }  { output_fm_buffer_0_q0 mem_dout 0 32 } } }
 	input_fm_buffer { ap_memory {  { input_fm_buffer_address0 mem_address 1 12 }  { input_fm_buffer_ce0 mem_ce 1 1 }  { input_fm_buffer_q0 mem_dout 0 32 }  { input_fm_buffer_address1 MemPortADDR2 1 12 }  { input_fm_buffer_ce1 MemPortCE2 1 1 }  { input_fm_buffer_q1 MemPortDOUT2 0 32 } } }

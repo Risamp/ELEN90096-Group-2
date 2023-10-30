@@ -32,6 +32,7 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 	TI: for (int ti = 0; ti < T; ti++) {
 
 		static ftmap_t output_fm_buffer[N3][TH][TW] = {0};
+		//#pragma HLS array_partition variable=output_fm_buffer type=complete
 		int ty0 = tj * TH;
 		int tx0 = ti * TW;
 
@@ -42,11 +43,13 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 
 			// initialise input and output buffers
 			static ftmap_t input_fm_buffer[UNROLL][TH + (2 * P3)][TW + (2 * P3)];
+			static param_t weights_buffer[N3][UNROLL][F3][F3];
 			// partitioning slows it down?
 			//#pragma HLS array_partition variable=input_fm_buffer type=complete
+			//#pragma HLS array_partition variable=weights_buffer type=complete
 
 			// load buffer-sized chunk
-			load_buffer_tile_c3(input_fm_buffer, input_ftmap, tx0, ty0, tn0);
+			load_buffer_tile_c3(input_fm_buffer, input_ftmap, weights_buffer, conv3_weights, tx0, ty0, tn0);
 
 			// for each output layer
 			NOUT: for (int nout = 0; nout < N3; nout++) {
@@ -90,6 +93,8 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 void load_buffer_tile_c3(
 	ftmap_t input_fm_buffer[UNROLL][TH + (2 * P3)][TW + (2 * P3)],
 	ftmap_t input_fm[N2][H][W],
+	param_t weights_buffer[N3][UNROLL][F3][F3],
+	param_t conv3_weights[N3][N2][F3][F3],
 	int tx0,
 	int ty0,
 	int tn0
@@ -107,6 +112,16 @@ void load_buffer_tile_c3(
 
 				//load value into input buffer
 				input_fm_buffer[nin][by][bx] = input_fm[tn0 + nin][yClamped][xClamped];
+			}
+		}
+	}
+
+	for (int nout = 0; nout < N3; nout++) {
+		for (int nin = 0; nin < UNROLL; nin++) {
+			for (int ky = 0; ky < F3; ky++) {
+				for (int kx = 0; kx < F3; kx++) {
+					weights_buffer[nout][nin][ky][kx] = conv3_weights[nout][tn0 + nin][ky][kx];
+				}
 			}
 		}
 	}

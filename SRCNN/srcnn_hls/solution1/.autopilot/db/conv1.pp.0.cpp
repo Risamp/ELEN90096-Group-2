@@ -5772,10 +5772,12 @@ void export_buffer_tile_c2(ftmap_t output_fm_buffer[32][255 / 15][255 / 15],
          param_t conv2_biases[32]);
 
 void load_buffer_tile_c3(ftmap_t input_fm_buffer[8][255 / 15 + (2 * (5 - 1) / 2)][255 / 15 + (2 * (5 - 1) / 2)],
-                         ftmap_t input_fm[32][255][255],
-                         int tx0,
-                         int ty0,
-       int tn0);
+      ftmap_t input_fm[32][255][255],
+      param_t weights_buffer[1][8][5][5],
+      param_t conv3_weights[1][32][5][5],
+      int tx0,
+      int ty0,
+      int tn0);
 
 void export_buffer_tile_c3(ftmap_t output_fm_buffer[1][255 / 15][255 / 15],
                            ftmap_t output_ftmap[1][255][255],
@@ -33532,7 +33534,7 @@ void conv1(ftmap_t input_ftmap[1][255][255],
 
 
       NIN: for (int nin = 0; nin < 1; nin++) {
-       output_fm_buffer[nout][ty][tx] += conv1_weights[nout][nin][ky][kx] * input_fm_buffer[nin][by][bx];
+
       }
      }}
 
