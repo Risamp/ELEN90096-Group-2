@@ -29,6 +29,7 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 	// for each tile (ti, tj) in our T x T grid
 	TJ: for (int tj = 0; tj < T; tj++) {
 	TI: for (int ti = 0; ti < T; ti++) {
+		static ftmap_t output_fm_buffer[N3][TH][TW] = {0};
 	TN: for (int tn = 0; tn < N1 / TD2; tn++) {
 
 		int ty0 = tj * TH;
@@ -36,11 +37,11 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 		int tn0 = tn * TD2;
 
 		// initialise input and output buffers
-		static ftmap_t input_fm_buffer[N2][TH + (2 * P3)][TW + (2 * P3)];
-		static ftmap_t output_fm_buffer[N3][TH][TW] = {0};
+		static ftmap_t input_fm_buffer[TD2][TH + (2 * P3)][TW + (2 * P3)];
+		
 
 		// load buffer-sized chunk
-		load_buffer_tile_c3(input_fm_buffer, input_ftmap, tx0, ty0);
+		load_buffer_tile_c3(input_fm_buffer, input_ftmap, tx0, ty0, tn0);
 
 		// for each output layer
 		for (int nout = 0; nout < N3; nout++) {
@@ -62,7 +63,7 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 					NIN: for (int nin = 0; nin < TD2; nin++) {
 // it's a yes from me (-56% runtime)
 //#pragma HLS UNROLL factor=8
-						output_fm_buffer[nout][ty][tx] += conv3_weights[nout][tn0 + nin][ky][kx] * input_fm_buffer[tn0 + nin][by][bx];
+						output_fm_buffer[nout][ty][tx] += conv3_weights[nout][tn0 + nin][ky][kx] * input_fm_buffer[nin][by][bx];
 					}
 				}}
 
@@ -70,24 +71,10 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 
 		}
 
+	}
 		// load output buffer back to DRAM
 		export_buffer_tile_c3(output_fm_buffer, output_ftmap, tx0, ty0);
-	}}}
-
-
-	// split relu from rest of loop
-	// nr = relu output layer
-	// xr, yr = relu coordinates within image
-	for (int nr = 0; nr < N3; nr++) {
-	for (int yr = 0; yr < H; yr++) {
-	for (int xr = 0; xr < W; xr++) {
-
-		output_ftmap[nr][yr][xr] += conv3_biases[nr];
-		if (output_ftmap[nr][yr][xr] < 0) {
-			output_ftmap[nr][yr][xr] = 0;
-		}
-
-	}}}
+	}}
 }
 
 
@@ -101,12 +88,13 @@ void load_buffer_tile_c3(
 	ftmap_t input_fm_buffer[N2][TH + (2 * P3)][TW + (2 * P3)],
 	ftmap_t input_fm[N2][H][W],
 	int tx0,
-	int ty0
+	int ty0,
+	int tn0
 ) {
 	// clear buffer
-	memset(input_fm_buffer, 0, N2 * (TH + (2 * P3)) * (TW + (2 * P3)) * sizeof(ftmap_t));
+	memset(input_fm_buffer, 0, TD2 * (TH + (2 * P3)) * (TW + (2 * P3)) * sizeof(ftmap_t));
 
-	for (int nin = 0; nin < N2; nin++) { // input layer
+	for (int nin = 0; nin < TD2; nin++) { // input layer
 		for (int by = 0; by < TH + (2 * P3); by++) { // buffer space y
 			for (int bx = 0; bx < TW + (2 * P3); bx++) { // buffer space x
 
@@ -115,7 +103,7 @@ void load_buffer_tile_c3(
 				int yClamped = clamp(ty0 - P3 + by, 0, H - 1);
 
 				//load value into input buffer
-				input_fm_buffer[nin][by][bx] = input_fm[nin][yClamped][xClamped];
+				input_fm_buffer[nin][by][bx] = input_fm[tn0 + nin][yClamped][xClamped];
 			}
 		}
 	}
@@ -131,7 +119,7 @@ void export_buffer_tile_c3(
 		for (int ty = 0; ty < TH; ty++) { // tile space y
 			for (int tx = 0; tx < TW; tx++) { // tile space x
 
-				output_ftmap[nout][ty0 + ty][tx0 + tx] = output_fm_buffer[nout][ty][tx];
+				output_ftmap[nout][ty0 + ty][tx0 + tx] = output_fm_buffer[nout][ty][tx] + conv3_biases[nout];
 
 			}
 		}
