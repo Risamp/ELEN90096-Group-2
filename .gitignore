@@ -3,3 +3,5 @@
 SRCNN/srcnn_hls/solution1/*
 
 */.autopilot/*
+
+*.DS_Store
