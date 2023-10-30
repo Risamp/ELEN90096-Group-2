@@ -5759,6 +5759,8 @@ void export_buffer_tile_c1(ftmap_t output_fm_buffer[64][255 / 15][255 / 15],
 
 void load_buffer_tile_c2(ftmap_t input_fm_buffer[8][255 / 15 + (2 * (1 - 1) / 2)][255 / 15 + (2 * (1 - 1) / 2)],
                          ftmap_t input_fm[64][255][255],
+       param_t weights_buffer[32][8][1][1],
+       param_t conv2_weights[32][64][1][1],
                          int tx0,
                          int ty0,
        int tn0);
@@ -33498,10 +33500,7 @@ void conv2(ftmap_t input_ftmap[64][255][255],
            param_t conv2_biases[32],
            ftmap_t output_ftmap[32][255][255])
 {
-# 27 "src/conv2.cpp"
-#pragma HLS PIPELINE off
-
-
+# 30 "src/conv2.cpp"
  TJ: for (int tj = 0; tj < 15; tj++) {
  TI: for (int ti = 0; ti < 15; ti++) {
 
@@ -33517,11 +33516,13 @@ void conv2(ftmap_t input_ftmap[64][255][255],
 
 
    static ftmap_t input_fm_buffer[8][255 / 15 + (2 * (1 - 1) / 2)][255 / 15 + (2 * (1 - 1) / 2)];
-#pragma HLS array_partition variable=input_fm_buffer type=complete
+   static param_t weights_buffer[32][8][1][1];
 
 
 
- load_buffer_tile_c2(input_fm_buffer, input_ftmap, tx0, ty0, tn0);
+
+
+   load_buffer_tile_c2(input_fm_buffer, input_ftmap, weights_buffer, conv2_weights, tx0, ty0, tn0);
 
 
 
@@ -33542,7 +33543,7 @@ void conv2(ftmap_t input_ftmap[64][255][255],
       NIN: for (int nin = 0; nin < 8; nin++) {
 
 #pragma HLS UNROLL factor=8
- output_fm_buffer[nout][ty][tx] += conv2_weights[nout][tn0 + nin][ky][kx] * input_fm_buffer[nin][by][bx];
+ output_fm_buffer[nout][ty][tx] += weights_buffer[nout][nin][ky][kx] * input_fm_buffer[nin][by][bx];
       }
      }}
     }}
@@ -33552,20 +33553,23 @@ void conv2(ftmap_t input_ftmap[64][255][255],
   export_buffer_tile_c2(output_fm_buffer, output_ftmap, tx0, ty0, conv2_biases);
  }}
 }
-# 89 "src/conv2.cpp"
+# 91 "src/conv2.cpp"
 void load_buffer_tile_c2(
  ftmap_t input_fm_buffer[8][255 / 15 + (2 * (1 - 1) / 2)][255 / 15 + (2 * (1 - 1) / 2)],
  ftmap_t input_fm[64][255][255],
+ param_t weights_buffer[32][8][1][1],
+ param_t conv2_weights[32][64][1][1],
  int tx0,
  int ty0,
  int tn0
 ) {
 
  memset(input_fm_buffer, 0, 8 * (255 / 15 + (2 * (1 - 1) / 2)) * (255 / 15 + (2 * (1 - 1) / 2)) * sizeof(ftmap_t));
+ memset(weights_buffer, 0, 32 * 8 * 1 * 1 * sizeof(param_t));
 
- VITIS_LOOP_99_1: for (int nin = 0; nin < 8; nin++) {
-  VITIS_LOOP_100_2: for (int by = 0; by < 255 / 15 + (2 * (1 - 1) / 2); by++) {
-   VITIS_LOOP_101_3: for (int bx = 0; bx < 255 / 15 + (2 * (1 - 1) / 2); bx++) {
+ VITIS_LOOP_104_1: for (int nin = 0; nin < 8; nin++) {
+  VITIS_LOOP_105_2: for (int by = 0; by < 255 / 15 + (2 * (1 - 1) / 2); by++) {
+   VITIS_LOOP_106_3: for (int bx = 0; bx < 255 / 15 + (2 * (1 - 1) / 2); bx++) {
 
 
     int xClamped = clamp(tx0 - (1 - 1) / 2 + bx, 0, 255 - 1);
@@ -33573,6 +33577,16 @@ void load_buffer_tile_c2(
 
 
     input_fm_buffer[nin][by][bx] = input_fm[tn0 + nin][yClamped][xClamped];
+   }
+  }
+ }
+
+ VITIS_LOOP_118_4: for (int nout = 0; nout < 32; nout++) {
+  VITIS_LOOP_119_5: for (int nin = 0; nin < 8; nin++) {
+   VITIS_LOOP_120_6: for (int ky = 0; ky < 1; ky++) {
+    VITIS_LOOP_121_7: for (int kx = 0; kx < 1; kx++) {
+     weights_buffer[nout][nin][ky][kx] = conv2_weights[nout][tn0 + nin][ky][kx];
+    }
    }
   }
  }
@@ -33585,9 +33599,9 @@ void export_buffer_tile_c2(
  int ty0,
  param_t conv2_biases[32]
 ) {
- VITIS_LOOP_121_1: for (int nout = 0; nout < 32; nout++) {
-  VITIS_LOOP_122_2: for (int ty = 0; ty < 255 / 15; ty++) {
-   VITIS_LOOP_123_3: for (int tx = 0; tx < 255 / 15; tx++) {
+ VITIS_LOOP_136_1: for (int nout = 0; nout < 32; nout++) {
+  VITIS_LOOP_137_2: for (int ty = 0; ty < 255 / 15; ty++) {
+   VITIS_LOOP_138_3: for (int tx = 0; tx < 255 / 15; tx++) {
 
     output_ftmap[nout][ty0 + ty][tx0 + tx] += output_fm_buffer[nout][ty][tx] + conv2_biases[nout];
     if (output_ftmap[nout][ty0 + ty][tx0 + tx] < 0) {

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2'" level="0">
-<item name = "Date">Mon Oct 30 16:43:07 2023
+<item name = "Date">Mon Oct 30 17:11:53 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,31 +24,26 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">711440131, 711440131, 7.114 sec, 7.114 sec, 711440131, 711440131, no</column>
+<column name="">121281526, 121281526, 1.213 sec, 1.213 sec, 121281526, 121281526, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_conv2_Pipeline_1_fu_157">conv2_Pipeline_1, 2314, 2314, 23.140 us, 23.140 us, 2314, 2314, no</column>
+<column name="grp_conv2_Pipeline_2_fu_163">conv2_Pipeline_2, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_conv2_Pipeline_VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3_fu_169">conv2_Pipeline_VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3, 194214, 194214, 1.942 ms, 1.942 ms, 194214, 194214, no</column>
+<column name="grp_conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2_fu_182">conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2, 2326, 2326, 23.260 us, 23.260 us, 2326, 2326, no</column>
+<column name="grp_conv2_Pipeline_VITIS_LOOP_118_4_fu_194">conv2_Pipeline_VITIS_LOOP_118_4, 267, 267, 2.670 us, 2.670 us, 267, 267, no</column>
+<column name="grp_conv2_Pipeline_NOUT_TY_TX_fu_218">conv2_Pipeline_NOUT_TY_TX, 37030, 37030, 0.370 ms, 0.370 ms, 37030, 37030, no</column>
+<column name="grp_conv2_Pipeline_7_fu_242">conv2_Pipeline_7, 9250, 9250, 92.500 us, 92.500 us, 9250, 9250, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TJ">711440130, 711440130, 47429342, -, -, 15, no</column>
-<column name=" + TI">47429340, 47429340, 3161956, -, -, 15, no</column>
-<column name="  ++ TN">2947808, 2947808, 368476, -, -, 8, no</column>
-<column name="   +++ TN.1">4624, 4624, 2, -, -, 2312, no</column>
-<column name="   +++ VITIS_LOOP_99_1">10760, 10760, 1345, -, -, 8, no</column>
-<column name="    ++++ VITIS_LOOP_100_2">1343, 1343, 79, -, -, 17, no</column>
-<column name="     +++++ VITIS_LOOP_101_3">69, 69, 4, -, -, 17, no</column>
-<column name="   +++ NOUT">353088, 353088, 11034, -, -, 32, no</column>
-<column name="    ++++ TY">11016, 11016, 648, -, -, 17, no</column>
-<column name="     +++++ TX">646, 646, 38, -, -, 17, no</column>
-<column name="  ++ VITIS_LOOP_121_1">204896, 204896, 6403, -, -, 32, no</column>
-<column name="   +++ VITIS_LOOP_122_2">6392, 6392, 376, -, -, 17, no</column>
-<column name="    ++++ VITIS_LOOP_123_3">374, 374, 22, -, -, 17, no</column>
-<column name="  ++ TI.3">9248, 9248, 1, -, -, 9248, no</column>
+<column name="- TJ_TI">121281525, 121281525, 539029, -, -, 225, no</column>
+<column name=" + TN">335560, 335560, 41945, -, -, 8, no</column>
 </table>
 </item>
 </section>

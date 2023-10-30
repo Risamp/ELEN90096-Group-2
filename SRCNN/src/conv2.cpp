@@ -24,7 +24,7 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 
 	*/
 
-	#pragma HLS PIPELINE off
+	//#pragma HLS PIPELINE off
 
 	// for each tile (ti, tj) in our T x T grid
 	TJ: for (int tj = 0; tj < T; tj++) {
@@ -40,14 +40,15 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 		
 			int tn0 = tn * UNROLL;
 
-			// initialise input and output buffers
+			// initialise input and weight buffers
 			static ftmap_t input_fm_buffer[UNROLL][TH + (2 * P2)][TW + (2 * P2)];
+			static param_t weights_buffer[N2][UNROLL][F2][F2];
 			// partitioning slows it down?
 			//#pragma HLS array_partition variable=input_fm_buffer type=complete
 			// TODO: need a buffer for weights too
 
 			// load buffer-sized chunk
-			load_buffer_tile_c2(input_fm_buffer, input_ftmap, tx0, ty0, tn0);
+			load_buffer_tile_c2(input_fm_buffer, input_ftmap, weights_buffer, conv2_weights, tx0, ty0, tn0);
 
 
 			// for each output layer
@@ -68,7 +69,7 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 						NIN: for (int nin = 0; nin < UNROLL; nin++) {
 						// it's a yes from me (-56% runtime)
 						#pragma HLS UNROLL factor=8
-							output_fm_buffer[nout][ty][tx] += conv2_weights[nout][tn0 + nin][ky][kx] * input_fm_buffer[nin][by][bx];
+							output_fm_buffer[nout][ty][tx] += weights_buffer[nout][nin][ky][kx] * input_fm_buffer[nin][by][bx];
 						}
 					}}
 				}}
@@ -90,12 +91,15 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 void load_buffer_tile_c2(
 	ftmap_t input_fm_buffer[UNROLL][TH + (2 * P2)][TW + (2 * P2)],
 	ftmap_t input_fm[N1][H][W],
+	param_t weights_buffer[N2][UNROLL][F2][F2],
+	param_t conv2_weights[N2][N1][F2][F2],
 	int tx0,
 	int ty0,
 	int tn0
 ) {
-	// clear buffer
+	// clear buffers
 	memset(input_fm_buffer, 0, UNROLL * (TH + (2 * P2)) * (TW + (2 * P2)) * sizeof(ftmap_t));
+	memset(weights_buffer, 0, N2 * UNROLL * F2 * F2 * sizeof(param_t));
 
 	for (int nin = 0; nin < UNROLL; nin++) { // input layer
 		for (int by = 0; by < TH + (2 * P2); by++) { // buffer space y
@@ -107,6 +111,16 @@ void load_buffer_tile_c2(
 
 				//load value into input buffer
 				input_fm_buffer[nin][by][bx] = input_fm[tn0 + nin][yClamped][xClamped];
+			}
+		}
+	}
+
+	for (int nout = 0; nout < N2; nout++) {
+		for (int nin = 0; nin < UNROLL; nin++) {
+			for (int ky = 0; ky < F2; ky++) {
+				for (int kx = 0; kx < F2; kx++) {
+					weights_buffer[nout][nin][ky][kx] = conv2_weights[nout][tn0 + nin][ky][kx];
+				}
 			}
 		}
 	}

@@ -5759,6 +5759,8 @@ void export_buffer_tile_c1(ftmap_t output_fm_buffer[64][255 / 15][255 / 15],
 
 void load_buffer_tile_c2(ftmap_t input_fm_buffer[8][255 / 15 + (2 * (1 - 1) / 2)][255 / 15 + (2 * (1 - 1) / 2)],
                          ftmap_t input_fm[64][255][255],
+       param_t weights_buffer[32][8][1][1],
+       param_t conv2_weights[32][64][1][1],
                          int tx0,
                          int ty0,
        int tn0);
@@ -33498,11 +33500,8 @@ void conv1(ftmap_t input_ftmap[1][255][255],
            param_t conv1_biases[64],
            ftmap_t output_ftmap[64][255][255])
 {
-# 27 "src/conv1.cpp"
-#pragma HLS PIPELINE off
-
-
- TILE_J: for (int tj = 0; tj < 15; tj++) {
+# 30 "src/conv1.cpp"
+  TILE_J: for (int tj = 0; tj < 15; tj++) {
   TILE_I: for (int ti = 0; ti < 15; ti++) {
 
    int ty0 = tj * 255 / 15;

@@ -25,7 +25,7 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 
 	*/
 
-	#pragma HLS PIPELINE off
+	//#pragma HLS PIPELINE off
 
 	// for each tile (ti, tj) in our T x T grid
 	TJ: for (int tj = 0; tj < T; tj++) {

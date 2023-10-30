@@ -5759,6 +5759,8 @@ void export_buffer_tile_c1(ftmap_t output_fm_buffer[64][255 / 15][255 / 15],
 
 void load_buffer_tile_c2(ftmap_t input_fm_buffer[8][255 / 15 + (2 * (1 - 1) / 2)][255 / 15 + (2 * (1 - 1) / 2)],
                          ftmap_t input_fm[64][255][255],
+       param_t weights_buffer[32][8][1][1],
+       param_t conv2_weights[32][64][1][1],
                          int tx0,
                          int ty0,
        int tn0);
@@ -31565,19 +31567,19 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][2
 
 
 
-#pragma HLS PIPELINE off
 
 
-#pragma HLS INTERFACE m_axi port=input_ftmap offset=slave depth=1
-#pragma HLS INTERFACE m_axi port=conv1_weights offset=slave depth=1
-#pragma HLS INTERFACE m_axi port=conv1_biases offset=slave depth=1
-#pragma HLS INTERFACE m_axi port=conv1_output_ftmap offset=slave depth=1
-#pragma HLS INTERFACE m_axi port=conv2_weights offset=slave depth=1
-#pragma HLS INTERFACE m_axi port=conv2_biases offset=slave depth=1
-#pragma HLS INTERFACE m_axi port=conv2_output_ftmap offset=slave depth=1
-#pragma HLS INTERFACE m_axi port=conv3_weights offset=slave depth=1
-#pragma HLS INTERFACE m_axi port=conv3_biases offset=slave depth=1
-#pragma HLS INTERFACE m_axi port=output_ftmap offset=slave depth=1
+
+#pragma HLS INTERFACE m_axi port=input_ftmap offset=slave depth=512
+#pragma HLS INTERFACE m_axi port=conv1_weights offset=slave depth=512
+#pragma HLS INTERFACE m_axi port=conv1_biases offset=slave depth=512
+#pragma HLS INTERFACE m_axi port=conv1_output_ftmap offset=slave depth=512
+#pragma HLS INTERFACE m_axi port=conv2_weights offset=slave depth=512
+#pragma HLS INTERFACE m_axi port=conv2_biases offset=slave depth=512
+#pragma HLS INTERFACE m_axi port=conv2_output_ftmap offset=slave depth=512
+#pragma HLS INTERFACE m_axi port=conv3_weights offset=slave depth=512
+#pragma HLS INTERFACE m_axi port=conv3_biases offset=slave depth=512
+#pragma HLS INTERFACE m_axi port=output_ftmap offset=slave depth=512
 #pragma HLS INTERFACE s_axilite port=return
 
  memset(conv1_output_ftmap, 0, 64 * 255 * 255 * sizeof(ftmap_t));

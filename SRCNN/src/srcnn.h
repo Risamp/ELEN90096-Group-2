@@ -85,6 +85,8 @@ void export_buffer_tile_c1(ftmap_t output_fm_buffer[N1][TH][TW],
 
 void load_buffer_tile_c2(ftmap_t input_fm_buffer[UNROLL][TH + (2 * P2)][TW + (2 * P2)],
                          ftmap_t input_fm[N1][H][W],
+						 param_t weights_buffer[N2][UNROLL][F2][F2],
+						 param_t conv2_weights[N2][N1][F2][F2],
                          int tx0,
                          int ty0,
 						 int tn0);

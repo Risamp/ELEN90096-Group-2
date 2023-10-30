@@ -2,7 +2,7 @@ ECHO is off.
 ECHO is off.
 NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'bcevans' on host '400p1t176rg0518' (Windows NT_amd64 version 6.2) on Mon Oct 30 16:42:32 +1100 2023
+INFO: [HLS 200-10] For user 'bcevans' on host '400p1t176rg0518' (Windows NT_amd64 version 6.2) on Mon Oct 30 17:11:00 +1100 2023
 INFO: [HLS 200-10] In directory 'C:/SPB_Data/ELEN90096-Group-2/SRCNN'
 Sourcing Tcl script 'C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl'
 INFO: [HLS 200-1510] Running: source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl
@@ -52,131 +52,742 @@ INFO: [HLS 200-1510] Running: create_clock -period 10 -name default
 INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.239 seconds; current allocated memory: 90.363 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.238 seconds; current allocated memory: 90.387 MB.
 INFO: [HLS 200-10] Analyzing design file 'src/conv1.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file 'src/conv2.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file 'src/conv3.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file 'src/srcnn.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 22.291 seconds; current allocated memory: 91.027 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 22.336 seconds; current allocated memory: 91.141 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 214-359] Unrolling loop 'NIN' (src/conv3.cpp:66:12) in function 'conv3': changing partial unrolling into complete unrolling since the unrolling factor (=8) is no less than the loop trip count (=8). (src/conv3.cpp:14:0)
-INFO: [HLS 214-186] Unrolling loop 'NIN' (src/conv3.cpp:66:12) in function 'conv3' completely with a factor of 8 (src/conv3.cpp:14:0)
-INFO: [HLS 214-359] Unrolling loop 'NIN' (src/conv2.cpp:67:12) in function 'conv2': changing partial unrolling into complete unrolling since the unrolling factor (=8) is no less than the loop trip count (=8). (src/conv2.cpp:13:0)
-INFO: [HLS 214-186] Unrolling loop 'NIN' (src/conv2.cpp:67:12) in function 'conv2' completely with a factor of 8 (src/conv2.cpp:13:0)
+INFO: [HLS 214-359] Unrolling loop 'NIN' (src/conv3.cpp:67:12) in function 'conv3': changing partial unrolling into complete unrolling since the unrolling factor (=8) is no less than the loop trip count (=8). (src/conv3.cpp:14:0)
+INFO: [HLS 214-186] Unrolling loop 'NIN' (src/conv3.cpp:67:12) in function 'conv3' completely with a factor of 8 (src/conv3.cpp:14:0)
+INFO: [HLS 214-359] Unrolling loop 'NIN' (src/conv2.cpp:69:12) in function 'conv2': changing partial unrolling into complete unrolling since the unrolling factor (=8) is no less than the loop trip count (=8). (src/conv2.cpp:13:0)
+INFO: [HLS 214-186] Unrolling loop 'NIN' (src/conv2.cpp:69:12) in function 'conv2' completely with a factor of 8 (src/conv2.cpp:13:0)
 INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_buffer_tile_c1(float (*) [25][25], float (*) [255][255], int, int)' (src/conv1.cpp:88:0)
 INFO: [HLS 214-178] Inlining function 'load_buffer_tile_c1(float (*) [25][25], float (*) [255][255], int, int)' into 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])' (src/conv1.cpp:13:0)
 INFO: [HLS 214-178] Inlining function 'export_buffer_tile_c1(float (*) [17][17], float (*) [255][255], int, int, float*)' into 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])' (src/conv1.cpp:13:0)
-INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_buffer_tile_c2(float (*) [17][17], float (*) [255][255], int, int, int)' (src/conv2.cpp:95:0)
-INFO: [HLS 214-178] Inlining function 'load_buffer_tile_c2(float (*) [17][17], float (*) [255][255], int, int, int)' into 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])' (src/conv2.cpp:13:0)
+INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_buffer_tile_c2(float (*) [17][17], float (*) [255][255], float (*) [8][1][1], float (*) [64][1][1], int, int, int)' (src/conv2.cpp:99:0)
+INFO: [HLS 214-178] Inlining function 'load_buffer_tile_c2(float (*) [17][17], float (*) [255][255], float (*) [8][1][1], float (*) [64][1][1], int, int, int)' into 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])' (src/conv2.cpp:13:0)
 INFO: [HLS 214-178] Inlining function 'export_buffer_tile_c2(float (*) [17][17], float (*) [255][255], int, int, float*)' into 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])' (src/conv2.cpp:13:0)
-INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_buffer_tile_c3(float (*) [21][21], float (*) [255][255], int, int, int)' (src/conv3.cpp:95:0)
+INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_buffer_tile_c3(float (*) [21][21], float (*) [255][255], int, int, int)' (src/conv3.cpp:96:0)
 INFO: [HLS 214-178] Inlining function 'load_buffer_tile_c3(float (*) [21][21], float (*) [255][255], int, int, int)' into 'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])' (src/conv3.cpp:14:0)
 INFO: [HLS 214-178] Inlining function 'export_buffer_tile_c3(float (*) [17][17], float (*) [255][255], int, int, float*)' into 'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])' (src/conv3.cpp:14:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E15input_fm_buffer': Complete partitioning on dimension 1. (src/conv3.cpp:44:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer': Complete partitioning on dimension 1. (src/conv2.cpp:44:0)
+WARNING: [HLS 214-167] The program may have out of bound array access
 INFO: [HLS 214-115] Multiple burst reads of length 81 and bit width 32 in loop 'KY'(src/conv1.cpp:51:10) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv1.cpp:51:10)
 INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 32 in loop 'OUT_BUFFER_NOUT'(src/conv1.cpp:114:19) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv1.cpp:114:19)
-INFO: [HLS 214-115] Multiple burst reads of length 17 and bit width 32 in loop 'VITIS_LOOP_101_3'(src/conv2.cpp:101:22) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv2.cpp:101:22)
-INFO: [HLS 214-115] Multiple burst reads of length 8 and bit width 32 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 214-115] Multiple burst reads of length 17 and bit width 32 in loop 'VITIS_LOOP_106_3'(src/conv2.cpp:106:22) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv2.cpp:106:22)
+INFO: [HLS 214-115] Multiple burst reads of length 8 and bit width 32 in loop 'VITIS_LOOP_119_5'(src/conv2.cpp:119:21) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv2.cpp:119:21)
 INFO: [HLS 214-115] Multiple burst writes of length 4161600 and bit width 32 in loop 'anonymous'(src/srcnn.cpp:34:2) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/srcnn.cpp:34:2)
 INFO: [HLS 214-115] Multiple burst writes of length 2080800 and bit width 32 in loop 'anonymous'(src/srcnn.cpp:35:2) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/srcnn.cpp:35:2)
 INFO: [HLS 214-115] Multiple burst writes of length 65025 and bit width 32 in loop 'anonymous'(src/srcnn.cpp:36:2) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/srcnn.cpp:36:2)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.608 seconds; current allocated memory: 91.027 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 91.027 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 4.613 seconds; current allocated memory: 91.141 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.011 seconds; current allocated memory: 91.141 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 91.027 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.072 seconds; current allocated memory: 91.141 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.088 seconds; current allocated memory: 91.027 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.074 seconds; current allocated memory: 91.141 MB.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.1.1' in function 'conv3' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_102_3' (src/conv3.cpp:102) in function 'conv3' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'TX' (src/conv3.cpp:56) in function 'conv3' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_124_3' (src/conv3.cpp:124) in function 'conv3' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.3' in function 'conv3' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.1.1' in function 'conv2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.1.2' in function 'conv2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_105_2' (src/conv2.cpp:105) in function 'conv2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_118_4' (src/conv2.cpp:118) in function 'conv2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'TX' (src/conv2.cpp:58) in function 'conv2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_138_3' (src/conv2.cpp:138) in function 'conv2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.3' in function 'conv2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.1' in function 'conv1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'IN_BUFFER_BX' (src/conv1.cpp:94) in function 'conv1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'KX' (src/conv1.cpp:52) in function 'conv1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'OUT_BUFFER_TX' (src/conv1.cpp:116) in function 'conv1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.5' in function 'conv1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'srcnn' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'srcnn' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-4' in function 'srcnn' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'TX' (src/conv3.cpp:56) in function 'conv3' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_105_2' (src/conv2.cpp:105) in function 'conv2' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_118_4' (src/conv2.cpp:118) in function 'conv2' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'KY' (src/conv3.cpp:59) in function 'conv3' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'KX' (src/conv3.cpp:60) in function 'conv3' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_106_3' (src/conv2.cpp:106) in function 'conv2' completely with a factor of 17.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_119_5' (src/conv2.cpp:119) in function 'conv2' completely with a factor of 8.
+INFO: [XFORM 203-102] Partitioning array 'weights_buffer' in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'weights_buffer.0' in dimension 3 automatically.
 INFO: [XFORM 203-102] Partitioning array 'output_fm_buffer' in dimension 1 automatically.
-INFO: [XFORM 203-102] Partitioning array 'input_fm_buffer' in dimension 1 automatically.
-INFO: [XFORM 203-11] Balancing expressions in function 'conv3' (src/conv3.cpp:31:10)...30 expression(s) balanced.
-INFO: [XFORM 203-11] Balancing expressions in function 'conv2' (src/conv2.cpp:30:22)...7 expression(s) balanced.
+INFO: [XFORM 203-102] Partitioning array 'input_fm_buffer.2' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'weights_buffer.0.0' in dimension 2 automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv3' (src/conv3.cpp:31:22)...12 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv2' (src/conv2.cpp:30:9)...7 expression(s) balanced.
 INFO: [XFORM 203-11] Balancing expressions in function 'conv1' (src/conv1.cpp:30:10)...12 expression(s) balanced.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.387 seconds; current allocated memory: 91.027 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.363 seconds; current allocated memory: 91.027 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.041 seconds; current allocated memory: 91.141 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_101_2' (src/conv3.cpp:101:21) in function 'conv3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_100_1' (src/conv3.cpp:100:20) in function 'conv3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'TY' (src/conv3.cpp:55:9) in function 'conv3'.
+WARNING: [HLS 200-960] Cannot flatten loop 'TN' (src/conv3.cpp:39:7) in function 'conv3' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_123_2' (src/conv3.cpp:123:21) in function 'conv3'.
+WARNING: [HLS 200-960] Cannot flatten loop 'TI' (src/conv3.cpp:32:6) in function 'conv3' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'TJ' (src/conv3.cpp:31:6) in function 'conv3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_104_1' (src/conv2.cpp:104:20) in function 'conv2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'TY' (src/conv2.cpp:57:9) in function 'conv2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'NOUT' (src/conv2.cpp:55:10) in function 'conv2'.
+WARNING: [HLS 200-960] Cannot flatten loop 'TN' (src/conv2.cpp:38:7) in function 'conv2' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_137_2' (src/conv2.cpp:137:21) in function 'conv2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_136_1' (src/conv2.cpp:136:20) in function 'conv2'.
+WARNING: [HLS 200-960] Cannot flatten loop 'TI' (src/conv2.cpp:31:6) in function 'conv2' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'TJ' (src/conv2.cpp:30:6) in function 'conv2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'IN_BUFFER_BY' (src/conv1.cpp:93:17) in function 'conv1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'KY' (src/conv1.cpp:51:10) in function 'conv1'.
+WARNING: [HLS 200-960] Cannot flatten loop 'TX' (src/conv1.cpp:48:9) in function 'conv1' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'TY' (src/conv1.cpp:47:9) in function 'conv1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'NOUT' (src/conv1.cpp:44:10) in function 'conv1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'OUT_BUFFER_TY' (src/conv1.cpp:115:18) in function 'conv1'.
+WARNING: [HLS 200-960] Cannot flatten loop 'OUT_BUFFER_NOUT' (src/conv1.cpp:114:19) in function 'conv1' the outer loop is not a perfect loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'TILE_I' (src/conv1.cpp:31:11) in function 'conv1' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'TILE_J' (src/conv1.cpp:30:11) in function 'conv1'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.153 seconds; current allocated memory: 196.543 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'srcnn' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'srcnn_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.837 seconds; current allocated memory: 203.996 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.059 seconds; current allocated memory: 205.820 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'srcnn_Pipeline_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.076 seconds; current allocated memory: 206.133 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.058 seconds; current allocated memory: 206.133 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'srcnn_Pipeline_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.074 seconds; current allocated memory: 206.465 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 206.531 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv1_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.079 seconds; current allocated memory: 206.867 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 206.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv1_Pipeline_IN_BUFFER_BY_IN_BUFFER_BX' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln101) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'IN_BUFFER_BY_IN_BUFFER_BX'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 11, loop 'IN_BUFFER_BY_IN_BUFFER_BX'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.265 seconds; current allocated memory: 207.680 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.165 seconds; current allocated memory: 207.750 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv1_Pipeline_KY_KX' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'KY_KX'.
+WARNING: [HLS 200-880] The II Violation in module 'conv1_Pipeline_KY_KX' (loop 'KY_KX'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('add51_lcssa17_write_ln52', src/conv1.cpp:52) of variable 'add', src/conv1.cpp:61 on local variable 'add51_lcssa17' and 'load' operation ('add51_lcssa17_load', src/conv1.cpp:61) on local variable 'add51_lcssa17'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv1_Pipeline_KY_KX' (loop 'KY_KX'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('add51_lcssa17_write_ln52', src/conv1.cpp:52) of variable 'add', src/conv1.cpp:61 on local variable 'add51_lcssa17' and 'load' operation ('add51_lcssa17_load', src/conv1.cpp:61) on local variable 'add51_lcssa17'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 12, loop 'KY_KX'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 5 seconds. CPU system time: 0 seconds. Elapsed time: 5.512 seconds; current allocated memory: 208.801 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.169 seconds; current allocated memory: 208.844 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv1_Pipeline_OUT_BUFFER_TY_OUT_BUFFER_TX' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'OUT_BUFFER_TY_OUT_BUFFER_TX'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 14, loop 'OUT_BUFFER_TY_OUT_BUFFER_TX'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 2.076 seconds; current allocated memory: 209.539 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.199 seconds; current allocated memory: 209.824 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv1_Pipeline_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.123 seconds; current allocated memory: 209.996 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.051 seconds; current allocated memory: 210.086 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.412 seconds; current allocated memory: 91.027 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.322 seconds; current allocated memory: 211.160 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.704 seconds; current allocated memory: 91.027 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.369 seconds; current allocated memory: 211.215 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.172 seconds; current allocated memory: 211.379 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.055 seconds; current allocated memory: 211.383 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 211.691 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.053 seconds; current allocated memory: 211.750 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln104) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_104_1_VITIS_LOOP_105_2'.
+WARNING: [HLS 200-880] The II Violation in module 'conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2' (loop 'VITIS_LOOP_104_1_VITIS_LOOP_105_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('gmem_addr_15_read_16', src/conv2.cpp:113->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:113->src/conv2.cpp:51) and bus read operation ('gmem_addr_15_read', src/conv2.cpp:113->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:113->src/conv2.cpp:51).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2' (loop 'VITIS_LOOP_104_1_VITIS_LOOP_105_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('gmem_addr_15_read_16', src/conv2.cpp:113->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:113->src/conv2.cpp:51) and bus read operation ('gmem_addr_15_read', src/conv2.cpp:113->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:113->src/conv2.cpp:51).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2' (loop 'VITIS_LOOP_104_1_VITIS_LOOP_105_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('gmem_addr_15_read_16', src/conv2.cpp:113->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:113->src/conv2.cpp:51) and bus read operation ('gmem_addr_15_read', src/conv2.cpp:113->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:113->src/conv2.cpp:51).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2' (loop 'VITIS_LOOP_104_1_VITIS_LOOP_105_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('gmem_addr_15_read_16', src/conv2.cpp:113->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:113->src/conv2.cpp:51) and bus read operation ('gmem_addr_15_read', src/conv2.cpp:113->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:113->src/conv2.cpp:51).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2' (loop 'VITIS_LOOP_104_1_VITIS_LOOP_105_2'): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1) between bus read operation ('gmem_addr_15_read_16', src/conv2.cpp:113->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:113->src/conv2.cpp:51) and bus read operation ('gmem_addr_15_read', src/conv2.cpp:113->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:113->src/conv2.cpp:51).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2' (loop 'VITIS_LOOP_104_1_VITIS_LOOP_105_2'): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1) between bus read operation ('gmem_addr_15_read_16', src/conv2.cpp:113->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:113->src/conv2.cpp:51) and bus read operation ('gmem_addr_15_read', src/conv2.cpp:113->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:113->src/conv2.cpp:51).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2' (loop 'VITIS_LOOP_104_1_VITIS_LOOP_105_2'): Unable to enforce a carried dependence constraint (II = 16, distance = 1, offset = 1) between bus read operation ('gmem_addr_15_read_16', src/conv2.cpp:113->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:113->src/conv2.cpp:51) and bus read operation ('gmem_addr_15_read', src/conv2.cpp:113->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:113->src/conv2.cpp:51).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 17, Depth = 30, loop 'VITIS_LOOP_104_1_VITIS_LOOP_105_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.548 seconds; current allocated memory: 212.949 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.382 seconds; current allocated memory: 213.168 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_VITIS_LOOP_118_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_118_4'.
+WARNING: [HLS 200-880] The II Violation in module 'conv2_Pipeline_VITIS_LOOP_118_4' (loop 'VITIS_LOOP_118_4'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('gmem_addr_14_read_7', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) and bus read operation ('gmem_addr_14_read', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2_Pipeline_VITIS_LOOP_118_4' (loop 'VITIS_LOOP_118_4'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('gmem_addr_14_read_7', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) and bus read operation ('gmem_addr_14_read', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2_Pipeline_VITIS_LOOP_118_4' (loop 'VITIS_LOOP_118_4'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('gmem_addr_14_read_7', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) and bus read operation ('gmem_addr_14_read', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2_Pipeline_VITIS_LOOP_118_4' (loop 'VITIS_LOOP_118_4'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('gmem_addr_14_read_7', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) and bus read operation ('gmem_addr_14_read', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2_Pipeline_VITIS_LOOP_118_4' (loop 'VITIS_LOOP_118_4'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between bus read operation ('gmem_addr_14_read_7', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51) and bus read operation ('gmem_addr_14_read', src/conv2.cpp:122->src/conv2.cpp:51) on port 'gmem' (src/conv2.cpp:122->src/conv2.cpp:51).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 18, loop 'VITIS_LOOP_118_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.339 seconds; current allocated memory: 213.617 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.243 seconds; current allocated memory: 213.746 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_NOUT_TY_TX' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'NOUT_TY_TX'.
+WARNING: [HLS 200-885] The II Violation in module 'conv2_Pipeline_NOUT_TY_TX' (loop 'NOUT_TY_TX'): Unable to schedule 'load' operation ('input_fm_buffer_1_load_1', src/conv2.cpp:72) on array 'input_fm_buffer_1' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'input_fm_buffer_1'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'conv2_Pipeline_NOUT_TY_TX' (loop 'NOUT_TY_TX'): Unable to schedule 'load' operation ('input_fm_buffer_1_load_3', src/conv2.cpp:72) on array 'input_fm_buffer_1' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'input_fm_buffer_1'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'conv2_Pipeline_NOUT_TY_TX' (loop 'NOUT_TY_TX'): Unable to schedule 'load' operation ('input_fm_buffer_1_load_5', src/conv2.cpp:72) on array 'input_fm_buffer_1' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'input_fm_buffer_1'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 42, loop 'NOUT_TY_TX'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 6 seconds. CPU system time: 0 seconds. Elapsed time: 5.972 seconds; current allocated memory: 215.039 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.508 seconds; current allocated memory: 215.496 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3'.
+WARNING: [HLS 200-880] The II Violation in module 'conv2_Pipeline_VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3' (loop 'VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus response operation ('gmem_addr_13_resp', src/conv2.cpp:140->src/conv2.cpp:79) on port 'gmem' (src/conv2.cpp:140->src/conv2.cpp:79) and bus request operation ('gmem_load_10_req', src/conv2.cpp:140->src/conv2.cpp:79) on port 'gmem' (src/conv2.cpp:140->src/conv2.cpp:79).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2_Pipeline_VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3' (loop 'VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus response operation ('gmem_addr_13_resp', src/conv2.cpp:140->src/conv2.cpp:79) on port 'gmem' (src/conv2.cpp:140->src/conv2.cpp:79) and bus request operation ('gmem_load_10_req', src/conv2.cpp:140->src/conv2.cpp:79) on port 'gmem' (src/conv2.cpp:140->src/conv2.cpp:79).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2_Pipeline_VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3' (loop 'VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus response operation ('gmem_addr_13_resp', src/conv2.cpp:140->src/conv2.cpp:79) on port 'gmem' (src/conv2.cpp:140->src/conv2.cpp:79) and bus request operation ('gmem_load_10_req', src/conv2.cpp:140->src/conv2.cpp:79) on port 'gmem' (src/conv2.cpp:140->src/conv2.cpp:79).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2_Pipeline_VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3' (loop 'VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus response operation ('gmem_addr_13_resp', src/conv2.cpp:140->src/conv2.cpp:79) on port 'gmem' (src/conv2.cpp:140->src/conv2.cpp:79) and bus request operation ('gmem_load_10_req', src/conv2.cpp:140->src/conv2.cpp:79) on port 'gmem' (src/conv2.cpp:140->src/conv2.cpp:79).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2_Pipeline_VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3' (loop 'VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between bus response operation ('gmem_addr_13_resp', src/conv2.cpp:140->src/conv2.cpp:79) on port 'gmem' (src/conv2.cpp:140->src/conv2.cpp:79) and bus request operation ('gmem_load_10_req', src/conv2.cpp:140->src/conv2.cpp:79) on port 'gmem' (src/conv2.cpp:140->src/conv2.cpp:79).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv2_Pipeline_VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3' (loop 'VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3'): Unable to enforce a carried dependence constraint (II = 20, distance = 1, offset = 1) between bus response operation ('gmem_addr_13_resp', src/conv2.cpp:140->src/conv2.cpp:79) on port 'gmem' (src/conv2.cpp:140->src/conv2.cpp:79) and bus request operation ('gmem_load_10_req', src/conv2.cpp:140->src/conv2.cpp:79) on port 'gmem' (src/conv2.cpp:140->src/conv2.cpp:79).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 21, Depth = 27, loop 'VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 2.461 seconds; current allocated memory: 216.969 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.357 seconds; current allocated memory: 217.059 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 217.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.061 seconds; current allocated memory: 217.180 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.537 seconds; current allocated memory: 91.027 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.157 seconds; current allocated memory: 217.633 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.201 seconds; current allocated memory: 91.027 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.214 seconds; current allocated memory: 217.695 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv3_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.187 seconds; current allocated memory: 218.012 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.063 seconds; current allocated memory: 218.121 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv3_Pipeline_VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln109_3) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 12, loop 'VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.407 seconds; current allocated memory: 218.824 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.204 seconds; current allocated memory: 218.887 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv3_Pipeline_TY_TX' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'TY_TX'.
+WARNING: [HLS 200-885] The II Violation in module 'conv3_Pipeline_TY_TX' (loop 'TY_TX'): Unable to schedule bus request operation ('gmem_load_3_req', src/conv3.cpp:69) on port 'gmem' (src/conv3.cpp:69) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'conv3_Pipeline_TY_TX' (loop 'TY_TX'): Unable to schedule bus request operation ('gmem_load_4_req', src/conv3.cpp:69) on port 'gmem' (src/conv3.cpp:69) due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'conv3_Pipeline_TY_TX' (loop 'TY_TX'): Unable to schedule bus request operation ('gmem_load_5_req', src/conv3.cpp:69) on port 'gmem' (src/conv3.cpp:69) due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'conv3_Pipeline_TY_TX' (loop 'TY_TX'): Unable to schedule bus request operation ('gmem_load_6_req', src/conv3.cpp:69) on port 'gmem' (src/conv3.cpp:69) due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'conv3_Pipeline_TY_TX' (loop 'TY_TX'): Unable to schedule bus request operation ('gmem_load_132_req', src/conv3.cpp:69) on port 'gmem' (src/conv3.cpp:69) due to limited memory ports (II = 130). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'conv3_Pipeline_TY_TX' (loop 'TY_TX'): Unable to schedule bus request operation ('gmem_load_195_req', src/conv3.cpp:69) on port 'gmem' (src/conv3.cpp:69) due to limited memory ports (II = 193). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'conv3_Pipeline_TY_TX' (loop 'TY_TX'): Unable to schedule bus request operation ('gmem_load_199_req', src/conv3.cpp:69) on port 'gmem' (src/conv3.cpp:69) due to limited memory ports (II = 197). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'conv3_Pipeline_TY_TX' (loop 'TY_TX'): Unable to schedule bus request operation ('gmem_load_201_req', src/conv3.cpp:69) on port 'gmem' (src/conv3.cpp:69) due to limited memory ports (II = 199). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 200, Depth = 817, loop 'TY_TX'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 26 seconds. CPU system time: 0 seconds. Elapsed time: 25.916 seconds; current allocated memory: 250.168 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 10 seconds. CPU system time: 0 seconds. Elapsed time: 10.135 seconds; current allocated memory: 252.941 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_123_2_VITIS_LOOP_124_3'.
+WARNING: [HLS 200-880] The II Violation in module 'conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3' (loop 'VITIS_LOOP_123_2_VITIS_LOOP_124_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus response operation ('gmem_addr_resp', src/conv3.cpp:126->src/conv3.cpp:79) on port 'gmem' (src/conv3.cpp:126->src/conv3.cpp:79) and bus request operation ('gmem_load_req', src/conv3.cpp:126->src/conv3.cpp:79) on port 'gmem' (src/conv3.cpp:126->src/conv3.cpp:79).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3' (loop 'VITIS_LOOP_123_2_VITIS_LOOP_124_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus response operation ('gmem_addr_resp', src/conv3.cpp:126->src/conv3.cpp:79) on port 'gmem' (src/conv3.cpp:126->src/conv3.cpp:79) and bus request operation ('gmem_load_req', src/conv3.cpp:126->src/conv3.cpp:79) on port 'gmem' (src/conv3.cpp:126->src/conv3.cpp:79).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3' (loop 'VITIS_LOOP_123_2_VITIS_LOOP_124_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus response operation ('gmem_addr_resp', src/conv3.cpp:126->src/conv3.cpp:79) on port 'gmem' (src/conv3.cpp:126->src/conv3.cpp:79) and bus request operation ('gmem_load_req', src/conv3.cpp:126->src/conv3.cpp:79) on port 'gmem' (src/conv3.cpp:126->src/conv3.cpp:79).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3' (loop 'VITIS_LOOP_123_2_VITIS_LOOP_124_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus response operation ('gmem_addr_resp', src/conv3.cpp:126->src/conv3.cpp:79) on port 'gmem' (src/conv3.cpp:126->src/conv3.cpp:79) and bus request operation ('gmem_load_req', src/conv3.cpp:126->src/conv3.cpp:79) on port 'gmem' (src/conv3.cpp:126->src/conv3.cpp:79).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3' (loop 'VITIS_LOOP_123_2_VITIS_LOOP_124_3'): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1) between bus response operation ('gmem_addr_resp', src/conv3.cpp:126->src/conv3.cpp:79) on port 'gmem' (src/conv3.cpp:126->src/conv3.cpp:79) and bus request operation ('gmem_load_req', src/conv3.cpp:126->src/conv3.cpp:79) on port 'gmem' (src/conv3.cpp:126->src/conv3.cpp:79).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3' (loop 'VITIS_LOOP_123_2_VITIS_LOOP_124_3'): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1) between bus response operation ('gmem_addr_resp', src/conv3.cpp:126->src/conv3.cpp:79) on port 'gmem' (src/conv3.cpp:126->src/conv3.cpp:79) and bus request operation ('gmem_load_req', src/conv3.cpp:126->src/conv3.cpp:79) on port 'gmem' (src/conv3.cpp:126->src/conv3.cpp:79).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3' (loop 'VITIS_LOOP_123_2_VITIS_LOOP_124_3'): Unable to enforce a carried dependence constraint (II = 17, distance = 1, offset = 1) between bus response operation ('gmem_addr_resp', src/conv3.cpp:126->src/conv3.cpp:79) on port 'gmem' (src/conv3.cpp:126->src/conv3.cpp:79) and bus request operation ('gmem_load_req', src/conv3.cpp:126->src/conv3.cpp:79) on port 'gmem' (src/conv3.cpp:126->src/conv3.cpp:79).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3' (loop 'VITIS_LOOP_123_2_VITIS_LOOP_124_3'): Unable to enforce a carried dependence constraint (II = 18, distance = 1, offset = 1) between bus response operation ('gmem_addr_resp', src/conv3.cpp:126->src/conv3.cpp:79) on port 'gmem' (src/conv3.cpp:126->src/conv3.cpp:79) and bus request operation ('gmem_load_req', src/conv3.cpp:126->src/conv3.cpp:79) on port 'gmem' (src/conv3.cpp:126->src/conv3.cpp:79).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 19, Depth = 20, loop 'VITIS_LOOP_123_2_VITIS_LOOP_124_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 4.1 seconds; current allocated memory: 254.691 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.29 seconds; current allocated memory: 254.691 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv3_Pipeline_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.151 seconds; current allocated memory: 254.734 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 254.734 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.756 seconds; current allocated memory: 91.027 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.173 seconds; current allocated memory: 254.809 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.016 seconds; current allocated memory: 91.027 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.222 seconds; current allocated memory: 255.094 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'srcnn' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.465 seconds; current allocated memory: 91.027 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.359 seconds; current allocated memory: 255.344 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.443 seconds; current allocated memory: 91.027 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.525 seconds; current allocated memory: 255.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'srcnn_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'srcnn_Pipeline_1' pipeline 'Loop 1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_1/m_axi_gmem_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_1/m_axi_gmem_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_1/m_axi_gmem_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_1/m_axi_gmem_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_1/m_axi_gmem_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_1/m_axi_gmem_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_1/m_axi_gmem_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_1/m_axi_gmem_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_1/m_axi_gmem_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_1/m_axi_gmem_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_1/m_axi_gmem_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_1/m_axi_gmem_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_1/m_axi_gmem_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'srcnn_Pipeline_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.556 seconds; current allocated memory: 257.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'srcnn_Pipeline_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'srcnn_Pipeline_2' pipeline 'Loop 1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_gmem_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_gmem_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_gmem_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_gmem_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_gmem_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_gmem_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_gmem_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_gmem_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_gmem_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_gmem_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_gmem_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_gmem_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_gmem_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'srcnn_Pipeline_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.323 seconds; current allocated memory: 259.816 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'srcnn_Pipeline_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'srcnn_Pipeline_3' pipeline 'Loop 1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_gmem_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_gmem_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_gmem_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_gmem_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_gmem_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_gmem_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_gmem_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_gmem_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_gmem_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_gmem_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_gmem_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_gmem_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_gmem_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'srcnn_Pipeline_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.447 seconds; current allocated memory: 260.535 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv1_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1_Pipeline_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.174 seconds; current allocated memory: 261.043 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv1_Pipeline_IN_BUFFER_BY_IN_BUFFER_BX' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv1_Pipeline_IN_BUFFER_BY_IN_BUFFER_BX' pipeline 'IN_BUFFER_BY_IN_BUFFER_BX' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_5ns_5ns_5ns_10_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1_Pipeline_IN_BUFFER_BY_IN_BUFFER_BX'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.145 seconds; current allocated memory: 262.434 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv1_Pipeline_KY_KX' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv1_Pipeline_KY_KX' pipeline 'KY_KX' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_KY_KX/m_axi_gmem_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_KY_KX/m_axi_gmem_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_KY_KX/m_axi_gmem_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_KY_KX/m_axi_gmem_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_KY_KX/m_axi_gmem_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_KY_KX/m_axi_gmem_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_KY_KX/m_axi_gmem_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_KY_KX/m_axi_gmem_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_KY_KX/m_axi_gmem_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_KY_KX/m_axi_gmem_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_KY_KX/m_axi_gmem_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_KY_KX/m_axi_gmem_ARUSER' to 0.
+INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_4ns_5ns_5ns_5ns_10_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1_Pipeline_KY_KX'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.616 seconds; current allocated memory: 264.680 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv1_Pipeline_OUT_BUFFER_TY_OUT_BUFFER_TX' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv1_Pipeline_OUT_BUFFER_TY_OUT_BUFFER_TX' pipeline 'OUT_BUFFER_TY_OUT_BUFFER_TX' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1_Pipeline_OUT_BUFFER_TY_OUT_BUFFER_TX'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.315 seconds; current allocated memory: 266.617 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv1_Pipeline_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1_Pipeline_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.425 seconds; current allocated memory: 268.316 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv1/grp_fu_493_p_opcode' to 0.
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_5ns_6ns_10_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_10ns_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1'.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_input_fm_buffer_0_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.252 seconds; current allocated memory: 91.027 MB.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_input_fm_buffer_2_0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.224 seconds; current allocated memory: 271.148 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.487 seconds; current allocated memory: 273.746 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 274.246 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2' pipeline 'VITIS_LOOP_104_1_VITIS_LOOP_105_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_6ns_18ns_19s_25_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 276.344 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_VITIS_LOOP_118_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2_Pipeline_VITIS_LOOP_118_4' pipeline 'VITIS_LOOP_118_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_VITIS_LOOP_118_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.593 seconds; current allocated memory: 279.137 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_NOUT_TY_TX' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'NOUT_TY_TX' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2_Pipeline_NOUT_TY_TX' pipeline 'NOUT_TY_TX' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_NOUT_TY_TX'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.389 seconds; current allocated memory: 281.641 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2_Pipeline_VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3' pipeline 'VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_6ns_19ns_24_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.741 seconds; current allocated memory: 286.145 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.575 seconds; current allocated memory: 288.074 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2/grp_fu_493_p_opcode' to 0.
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 8 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_6ns_19ns_24_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2'.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_i_7_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'srcnn_conv2_output_fm_buffer_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.875 seconds; current allocated memory: 91.027 MB.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv2_input_fm_buffer_1_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv2_weights_buffer_0_0_0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.231 seconds; current allocated memory: 290.777 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv3_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3_Pipeline_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.428 seconds; current allocated memory: 292.598 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv3_Pipeline_VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv3_Pipeline_VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3' pipeline 'VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_4ns_6ns_9_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_5ns_19ns_23_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3_Pipeline_VITIS_LOOP_100_1_VITIS_LOOP_101_2_VITIS_LOOP_102_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.198 seconds; current allocated memory: 294.484 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv3_Pipeline_TY_TX' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'TY_TX' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv3_Pipeline_TY_TX' pipeline 'TY_TX' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_5ns_6ns_10_1_1': 5 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3_Pipeline_TY_TX'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.081 seconds; current allocated memory: 334.730 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'VITIS_LOOP_123_2_VITIS_LOOP_124_3' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3' pipeline 'VITIS_LOOP_123_2_VITIS_LOOP_124_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3_Pipeline_VITIS_LOOP_123_2_VITIS_LOOP_124_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 8 seconds. CPU system time: 3 seconds. Elapsed time: 11.291 seconds; current allocated memory: 383.961 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv3_Pipeline_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3_Pipeline_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.474 seconds; current allocated memory: 383.961 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_493_p_opcode' to 0.
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 5 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_5ns_19ns_23_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_5ns_6ns_9_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_5ns_8ns_12_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3'.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv3_conv3_float_255_255_float_32_5_5_float_float_255_255_i_7_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.084 seconds; current allocated memory: 91.027 MB.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv3_output_fm_buffer_0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv3_input_fm_buffer_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.245 seconds; current allocated memory: 383.961 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'srcnn' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -193,18 +804,18 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv3_weights' to 's
 INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv3_biases' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/output_ftmap' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'srcnn' to 's_axilite & ap_ctrl_hs'.
-INFO: [RTGEN 206-100] Bundling port 'input_ftmap', 'conv1_weights', 'conv1_biases', 'conv1_output_ftmap', 'conv2_weights', 'conv2_biases', 'conv2_output_ftmap', 'conv3_weights', 'conv3_biases', 'output_ftmap' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Bundling port 'input_ftmap', 'conv1_weights', 'conv1_biases', 'conv1_output_ftmap', 'conv2_weights', 'conv2_biases', 'conv2_output_ftmap', 'conv3_weights', 'conv3_biases', 'output_ftmap' and 'return' to AXI-Lite port control.
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'srcnn'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.251 seconds; current allocated memory: 91.027 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.245 seconds; current allocated memory: 91.027 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.438 seconds; current allocated memory: 383.961 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.316 seconds; current allocated memory: 406.758 MB.
 INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.556 seconds; current allocated memory: 98.496 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.202 seconds; current allocated memory: 428.188 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for srcnn.
 INFO: [VLOG 209-307] Generating Verilog RTL for srcnn.
-INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 14 seconds. CPU system time: 3 seconds. Elapsed time: 42.952 seconds; current allocated memory: 8.430 MB.
-INFO: [HLS 200-112] Total CPU user time: 15 seconds. Total CPU system time: 4 seconds. Total elapsed time: 44.716 seconds; peak allocated memory: 98.816 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 132.58 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 87 seconds. CPU system time: 10 seconds. Elapsed time: 124.486 seconds; current allocated memory: 337.988 MB.
+INFO: [HLS 200-112] Total CPU user time: 88 seconds. Total CPU system time: 11 seconds. Total elapsed time: 126.293 seconds; peak allocated memory: 428.410 MB.
