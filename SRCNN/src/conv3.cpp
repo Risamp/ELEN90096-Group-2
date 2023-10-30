@@ -42,7 +42,8 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 
 			// initialise input and output buffers
 			static ftmap_t input_fm_buffer[UNROLL][TH + (2 * P3)][TW + (2 * P3)];
-
+			// partitioning slows it down?
+			//#pragma HLS array_partition variable=input_fm_buffer type=complete
 
 			// load buffer-sized chunk
 			load_buffer_tile_c3(input_fm_buffer, input_ftmap, tx0, ty0, tn0);
@@ -64,6 +65,7 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 
 						// for each input layer
 						NIN: for (int nin = 0; nin < UNROLL; nin++) {
+						#pragma HLS UNROLL factor=8
 							output_fm_buffer[nout][ty][tx] += conv3_weights[nout][tn0 + nin][ky][kx] * input_fm_buffer[nin][by][bx];
 						}
 					}}

@@ -1,7 +1,7 @@
 set ModuleHierarchy {[{
 "Name" : "srcnn","ID" : "0","Type" : "sequential",
 "SubInsts" : [
-	{"Name" : "grp_conv1_fu_279","ID" : "1","Type" : "sequential",
+	{"Name" : "grp_conv1_fu_307","ID" : "1","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "TILE_J","ID" : "2","Type" : "no",
 		"SubLoops" : [
@@ -26,7 +26,7 @@ set ModuleHierarchy {[{
 					"SubLoops" : [
 					{"Name" : "OUT_BUFFER_TX","ID" : "14","Type" : "no"},]},]},
 			{"Name" : "TILE_I.5","ID" : "15","Type" : "no"},]},]},]},
-	{"Name" : "grp_conv2_fu_293","ID" : "16","Type" : "sequential",
+	{"Name" : "grp_conv2_fu_321","ID" : "16","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "TJ","ID" : "17","Type" : "no",
 		"SubLoops" : [
@@ -35,23 +35,23 @@ set ModuleHierarchy {[{
 			{"Name" : "TN","ID" : "19","Type" : "no",
 				"SubLoops" : [
 				{"Name" : "TN.1","ID" : "20","Type" : "no"},
-				{"Name" : "VITIS_LOOP_98_1","ID" : "21","Type" : "no",
+				{"Name" : "VITIS_LOOP_99_1","ID" : "21","Type" : "no",
 					"SubLoops" : [
-					{"Name" : "VITIS_LOOP_99_2","ID" : "22","Type" : "no",
+					{"Name" : "VITIS_LOOP_100_2","ID" : "22","Type" : "no",
 						"SubLoops" : [
-						{"Name" : "VITIS_LOOP_100_3","ID" : "23","Type" : "no"},]},]},
+						{"Name" : "VITIS_LOOP_101_3","ID" : "23","Type" : "no"},]},]},
 				{"Name" : "NOUT","ID" : "24","Type" : "no",
 					"SubLoops" : [
 					{"Name" : "TY","ID" : "25","Type" : "no",
 						"SubLoops" : [
 						{"Name" : "TX","ID" : "26","Type" : "no"},]},]},]},
-			{"Name" : "VITIS_LOOP_120_1","ID" : "27","Type" : "no",
+			{"Name" : "VITIS_LOOP_121_1","ID" : "27","Type" : "no",
 				"SubLoops" : [
-				{"Name" : "VITIS_LOOP_121_2","ID" : "28","Type" : "no",
+				{"Name" : "VITIS_LOOP_122_2","ID" : "28","Type" : "no",
 					"SubLoops" : [
-					{"Name" : "VITIS_LOOP_122_3","ID" : "29","Type" : "no"},]},]},
+					{"Name" : "VITIS_LOOP_123_3","ID" : "29","Type" : "no"},]},]},
 			{"Name" : "TI.3","ID" : "30","Type" : "no"},]},]},]},
-	{"Name" : "grp_conv3_fu_307","ID" : "31","Type" : "sequential",
+	{"Name" : "grp_conv3_fu_349","ID" : "31","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "TJ","ID" : "32","Type" : "no",
 		"SubLoops" : [
@@ -60,26 +60,24 @@ set ModuleHierarchy {[{
 			{"Name" : "TN","ID" : "34","Type" : "no",
 				"SubLoops" : [
 				{"Name" : "TN.1","ID" : "35","Type" : "no"},
-				{"Name" : "VITIS_LOOP_98_1","ID" : "36","Type" : "no",
+				{"Name" : "VITIS_LOOP_99_1","ID" : "36","Type" : "no",
 					"SubLoops" : [
-					{"Name" : "VITIS_LOOP_99_2","ID" : "37","Type" : "no",
+					{"Name" : "VITIS_LOOP_100_2","ID" : "37","Type" : "no",
 						"SubLoops" : [
-						{"Name" : "VITIS_LOOP_100_3","ID" : "38","Type" : "no"},]},]},
+						{"Name" : "VITIS_LOOP_101_3","ID" : "38","Type" : "no"},]},]},
 				{"Name" : "TY","ID" : "39","Type" : "no",
 					"SubLoops" : [
 					{"Name" : "TX","ID" : "40","Type" : "no",
 						"SubLoops" : [
 						{"Name" : "KY","ID" : "41","Type" : "no",
 							"SubLoops" : [
-							{"Name" : "KX","ID" : "42","Type" : "no",
-								"SubLoops" : [
-								{"Name" : "NIN","ID" : "43","Type" : "no"},]},]},]},]},]},
-			{"Name" : "VITIS_LOOP_121_2","ID" : "44","Type" : "no",
+							{"Name" : "KX","ID" : "42","Type" : "no"},]},]},]},]},
+			{"Name" : "VITIS_LOOP_122_2","ID" : "43","Type" : "no",
 				"SubLoops" : [
-				{"Name" : "VITIS_LOOP_122_3","ID" : "45","Type" : "no"},]},
-			{"Name" : "TI.3","ID" : "46","Type" : "no"},]},]},]},],
+				{"Name" : "VITIS_LOOP_123_3","ID" : "44","Type" : "no"},]},
+			{"Name" : "TI.3","ID" : "45","Type" : "no"},]},]},]},],
 "SubLoops" : [
-	{"Name" : "Loop 1","ID" : "47","Type" : "no"},
-	{"Name" : "Loop 2","ID" : "48","Type" : "no"},
-	{"Name" : "Loop 3","ID" : "49","Type" : "no"},]
+	{"Name" : "Loop 1","ID" : "46","Type" : "no"},
+	{"Name" : "Loop 2","ID" : "47","Type" : "no"},
+	{"Name" : "Loop 3","ID" : "48","Type" : "no"},]
 }]}

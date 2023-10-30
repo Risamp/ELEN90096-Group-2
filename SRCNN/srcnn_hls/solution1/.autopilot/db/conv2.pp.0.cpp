@@ -33517,10 +33517,11 @@ void conv2(ftmap_t input_ftmap[64][255][255],
 
 
    static ftmap_t input_fm_buffer[8][255 / 15 + (2 * (1 - 1) / 2)][255 / 15 + (2 * (1 - 1) / 2)];
+#pragma HLS array_partition variable=input_fm_buffer type=complete
 
 
 
-   load_buffer_tile_c2(input_fm_buffer, input_ftmap, tx0, ty0, tn0);
+ load_buffer_tile_c2(input_fm_buffer, input_ftmap, tx0, ty0, tn0);
 
 
 
@@ -33551,7 +33552,7 @@ void conv2(ftmap_t input_ftmap[64][255][255],
   export_buffer_tile_c2(output_fm_buffer, output_ftmap, tx0, ty0, conv2_biases);
  }}
 }
-# 88 "src/conv2.cpp"
+# 89 "src/conv2.cpp"
 void load_buffer_tile_c2(
  ftmap_t input_fm_buffer[8][255 / 15 + (2 * (1 - 1) / 2)][255 / 15 + (2 * (1 - 1) / 2)],
  ftmap_t input_fm[64][255][255],
@@ -33562,9 +33563,9 @@ void load_buffer_tile_c2(
 
  memset(input_fm_buffer, 0, 8 * (255 / 15 + (2 * (1 - 1) / 2)) * (255 / 15 + (2 * (1 - 1) / 2)) * sizeof(ftmap_t));
 
- VITIS_LOOP_98_1: for (int nin = 0; nin < 8; nin++) {
-  VITIS_LOOP_99_2: for (int by = 0; by < 255 / 15 + (2 * (1 - 1) / 2); by++) {
-   VITIS_LOOP_100_3: for (int bx = 0; bx < 255 / 15 + (2 * (1 - 1) / 2); bx++) {
+ VITIS_LOOP_99_1: for (int nin = 0; nin < 8; nin++) {
+  VITIS_LOOP_100_2: for (int by = 0; by < 255 / 15 + (2 * (1 - 1) / 2); by++) {
+   VITIS_LOOP_101_3: for (int bx = 0; bx < 255 / 15 + (2 * (1 - 1) / 2); bx++) {
 
 
     int xClamped = clamp(tx0 - (1 - 1) / 2 + bx, 0, 255 - 1);
@@ -33584,9 +33585,9 @@ void export_buffer_tile_c2(
  int ty0,
  param_t conv2_biases[32]
 ) {
- VITIS_LOOP_120_1: for (int nout = 0; nout < 32; nout++) {
-  VITIS_LOOP_121_2: for (int ty = 0; ty < 255 / 15; ty++) {
-   VITIS_LOOP_122_3: for (int tx = 0; tx < 255 / 15; tx++) {
+ VITIS_LOOP_121_1: for (int nout = 0; nout < 32; nout++) {
+  VITIS_LOOP_122_2: for (int ty = 0; ty < 255 / 15; ty++) {
+   VITIS_LOOP_123_3: for (int tx = 0; tx < 255 / 15; tx++) {
 
     output_ftmap[nout][ty0 + ty][tx0 + tx] += output_fm_buffer[nout][ty][tx] + conv2_biases[nout];
     if (output_ftmap[nout][ty0 + ty][tx0 + tx] < 0) {

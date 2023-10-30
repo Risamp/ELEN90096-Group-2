@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2'" level="0">
-<item name = "Date">Mon Oct 30 16:35:27 2023
+<item name = "Date">Mon Oct 30 16:43:07 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">702872131, 702872131, 7.029 sec, 7.029 sec, 702872131, 702872131, no</column>
+<column name="">711440131, 711440131, 7.114 sec, 7.114 sec, 711440131, 711440131, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,19 +35,19 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TJ">702872130, 702872130, 46858142, -, -, 15, no</column>
-<column name=" + TI">46858140, 46858140, 3123876, -, -, 15, no</column>
-<column name="  ++ TN">2909728, 2909728, 363716, -, -, 8, no</column>
-<column name="   +++ TN.1">2312, 2312, 1, -, -, 2312, no</column>
-<column name="   +++ VITIS_LOOP_98_1">8312, 8312, 1039, -, -, 8, no</column>
-<column name="    ++++ VITIS_LOOP_99_2">1037, 1037, 61, -, -, 17, no</column>
-<column name="     +++++ VITIS_LOOP_100_3">51, 51, 3, -, -, 17, no</column>
+<column name="- TJ">711440130, 711440130, 47429342, -, -, 15, no</column>
+<column name=" + TI">47429340, 47429340, 3161956, -, -, 15, no</column>
+<column name="  ++ TN">2947808, 2947808, 368476, -, -, 8, no</column>
+<column name="   +++ TN.1">4624, 4624, 2, -, -, 2312, no</column>
+<column name="   +++ VITIS_LOOP_99_1">10760, 10760, 1345, -, -, 8, no</column>
+<column name="    ++++ VITIS_LOOP_100_2">1343, 1343, 79, -, -, 17, no</column>
+<column name="     +++++ VITIS_LOOP_101_3">69, 69, 4, -, -, 17, no</column>
 <column name="   +++ NOUT">353088, 353088, 11034, -, -, 32, no</column>
 <column name="    ++++ TY">11016, 11016, 648, -, -, 17, no</column>
 <column name="     +++++ TX">646, 646, 38, -, -, 17, no</column>
-<column name="  ++ VITIS_LOOP_120_1">204896, 204896, 6403, -, -, 32, no</column>
-<column name="   +++ VITIS_LOOP_121_2">6392, 6392, 376, -, -, 17, no</column>
-<column name="    ++++ VITIS_LOOP_122_3">374, 374, 22, -, -, 17, no</column>
+<column name="  ++ VITIS_LOOP_121_1">204896, 204896, 6403, -, -, 32, no</column>
+<column name="   +++ VITIS_LOOP_122_2">6392, 6392, 376, -, -, 17, no</column>
+<column name="    ++++ VITIS_LOOP_123_3">374, 374, 22, -, -, 17, no</column>
 <column name="  ++ TI.3">9248, 9248, 1, -, -, 9248, no</column>
 </table>
 </item>

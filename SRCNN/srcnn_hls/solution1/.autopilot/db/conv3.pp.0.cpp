@@ -33554,10 +33554,10 @@ void conv3(ftmap_t input_ftmap[32][255][255],
 
 
    static ftmap_t input_fm_buffer[8][255 / 15 + (2 * (5 - 1) / 2)][255 / 15 + (2 * (5 - 1) / 2)];
+#pragma HLS array_partition variable=input_fm_buffer type=complete
 
 
-
-   load_buffer_tile_c3(input_fm_buffer, input_ftmap, tx0, ty0, tn0);
+ load_buffer_tile_c3(input_fm_buffer, input_ftmap, tx0, ty0, tn0);
 
 
    NOUT: for (int nout = 0; nout < 1; nout++) {
@@ -33576,7 +33576,8 @@ void conv3(ftmap_t input_ftmap[32][255][255],
 
 
       NIN: for (int nin = 0; nin < 8; nin++) {
-       output_fm_buffer[nout][ty][tx] += conv3_weights[nout][tn0 + nin][ky][kx] * input_fm_buffer[nin][by][bx];
+#pragma HLS UNROLL factor=8
+ output_fm_buffer[nout][ty][tx] += conv3_weights[nout][tn0 + nin][ky][kx] * input_fm_buffer[nin][by][bx];
       }
      }}
 
@@ -33589,7 +33590,7 @@ void conv3(ftmap_t input_ftmap[32][255][255],
   export_buffer_tile_c3(output_fm_buffer, output_ftmap, tx0, ty0, conv3_biases);
  }}
 }
-# 88 "src/conv3.cpp"
+# 89 "src/conv3.cpp"
 void load_buffer_tile_c3(
  ftmap_t input_fm_buffer[8][255 / 15 + (2 * (5 - 1) / 2)][255 / 15 + (2 * (5 - 1) / 2)],
  ftmap_t input_fm[32][255][255],
@@ -33600,9 +33601,9 @@ void load_buffer_tile_c3(
 
  memset(input_fm_buffer, 0, 8 * (255 / 15 + (2 * (5 - 1) / 2)) * (255 / 15 + (2 * (5 - 1) / 2)) * sizeof(ftmap_t));
 
- VITIS_LOOP_98_1: for (int nin = 0; nin < 8; nin++) {
-  VITIS_LOOP_99_2: for (int by = 0; by < 255 / 15 + (2 * (5 - 1) / 2); by++) {
-   VITIS_LOOP_100_3: for (int bx = 0; bx < 255 / 15 + (2 * (5 - 1) / 2); bx++) {
+ VITIS_LOOP_99_1: for (int nin = 0; nin < 8; nin++) {
+  VITIS_LOOP_100_2: for (int by = 0; by < 255 / 15 + (2 * (5 - 1) / 2); by++) {
+   VITIS_LOOP_101_3: for (int bx = 0; bx < 255 / 15 + (2 * (5 - 1) / 2); bx++) {
 
 
     int xClamped = clamp(tx0 - (5 - 1) / 2 + bx, 0, 255 - 1);
@@ -33622,9 +33623,9 @@ void export_buffer_tile_c3(
  int ty0,
  param_t conv3_biases[1]
 ) {
- VITIS_LOOP_120_1: for (int nout = 0; nout < 1; nout++) {
-  VITIS_LOOP_121_2: for (int ty = 0; ty < 255 / 15; ty++) {
-   VITIS_LOOP_122_3: for (int tx = 0; tx < 255 / 15; tx++) {
+ VITIS_LOOP_121_1: for (int nout = 0; nout < 1; nout++) {
+  VITIS_LOOP_122_2: for (int ty = 0; ty < 255 / 15; ty++) {
+   VITIS_LOOP_123_3: for (int tx = 0; tx < 255 / 15; tx++) {
 
     output_ftmap[nout][ty0 + ty][tx0 + tx] += output_fm_buffer[nout][ty][tx] + conv3_biases[nout];
 

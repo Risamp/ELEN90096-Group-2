@@ -9,41 +9,41 @@
       "T": 1
     },
     "name": "srcnn",
-    "total_instructions": 489
+    "total_instructions": 660
   },
   "1": {
-    "basicblocks": 31,
+    "basicblocks": 49,
     "calls": "",
     "file": "conv2.cpp",
     "fileloc": 9,
-    "instructions": 157,
+    "instructions": 213,
     "loads": {
       "G": 10,
       "L": 1
     },
     "name": "conv2",
     "stores": {
-      "G": 4,
+      "G": 18,
       "L": 2
     },
-    "total_instructions": 157
+    "total_instructions": 213
   },
   "2": {
-    "basicblocks": 31,
+    "basicblocks": 47,
     "calls": "",
     "file": "conv3.cpp",
     "fileloc": 10,
-    "instructions": 134,
+    "instructions": 249,
     "loads": {
-      "G": 3,
-      "L": 3
+      "G": 10,
+      "L": 2
     },
     "name": "conv3",
     "stores": {
-      "G": 4,
+      "G": 18,
       "L": 1
     },
-    "total_instructions": 134
+    "total_instructions": 249
   },
   "3": {
     "basicblocks": 31,

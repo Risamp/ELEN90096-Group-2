@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'srcnn'
 ================================================================
 + General Information: 
-    * Date:           Mon Oct 30 16:35:34 2023
+    * Date:           Mon Oct 30 16:43:14 2023
     * Version:        2023.1 (Build 3854077 on May  4 2023)
     * Project:        srcnn_hls
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,61 +15,60 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +---------------------------+------+------+------------+-----------+-----------+------------+---------+----------+----------+----------+------------+------------+-----+
-    |          Modules          | Issue|      |  Latency   |  Latency  | Iteration |            |   Trip  |          |          |          |            |            |     |
-    |          & Loops          | Type | Slack|  (cycles)  |    (ns)   |  Latency  |  Interval  |  Count  | Pipelined|   BRAM   |    DSP   |     FF     |     LUT    | URAM|
-    +---------------------------+------+------+------------+-----------+-----------+------------+---------+----------+----------+----------+------------+------------+-----+
-    |+ srcnn                    |     -|  0.00|  5203176877|  5.203e+10|          -|  5203176878|        -|        no|  83 (28%)|  12 (~0%)|   7167 (3%)|  10025 (8%)|    -|
-    | + conv1                   |     -|  0.00|  3215508556|  3.216e+10|          -|  3215508556|        -|        no|  40 (13%)|         -|  1139 (~0%)|   1995 (1%)|    -|
-    |  o TILE_J                 |     -|  7.30|  3215508555|  3.216e+10|  214367237|           -|       15|        no|         -|         -|           -|           -|    -|
-    |   o TILE_I                |     -|  7.30|   214367235|  2.144e+09|   14291149|           -|       15|        no|         -|         -|           -|           -|    -|
-    |    o TILE_I.1             |     -|  7.30|         625|  6.250e+03|          1|           -|      625|        no|         -|         -|           -|           -|    -|
-    |    o IN_BUFFER_BY         |     -|  7.30|        6925|  6.925e+04|        277|           -|       25|        no|         -|         -|           -|           -|    -|
-    |     o IN_BUFFER_BX        |     -|  7.30|         275|  2.750e+03|         11|           -|       25|        no|         -|         -|           -|           -|    -|
-    |    o NOUT                 |     -|  7.30|    14003776|  1.400e+08|     218809|           -|       64|        no|         -|         -|           -|           -|    -|
-    |     o TY                  |     -|  7.30|      218807|  2.188e+06|      12871|           -|       17|        no|         -|         -|           -|           -|    -|
-    |      o TX                 |     -|  7.30|       12869|  1.287e+05|        757|           -|       17|        no|         -|         -|           -|           -|    -|
-    |       o KY                |     -|  7.30|         747|  7.470e+03|         83|           -|        9|        no|         -|         -|           -|           -|    -|
-    |        o KX               |     -|  7.30|          81|    810.000|          9|           -|        9|        no|         -|         -|           -|           -|    -|
-    |    o OUT_BUFFER_NOUT      |     -|  7.30|      261313|  2.613e+06|       4083|           -|       64|        no|         -|         -|           -|           -|    -|
-    |     o OUT_BUFFER_TY       |     -|  7.30|        4080|  4.080e+04|        240|           -|       17|        no|         -|         -|           -|           -|    -|
-    |      o OUT_BUFFER_TX      |     -|  7.30|         238|  2.380e+03|         14|           -|       17|        no|         -|         -|           -|           -|    -|
-    |    o TILE_I.5             |     -|  7.30|       18496|  1.850e+05|          1|           -|    18496|        no|         -|         -|           -|           -|    -|
-    | + conv2                   |     -|  0.00|   702872131|  7.029e+09|          -|   702872131|        -|        no|  30 (10%)|   4 (~0%)|  2181 (~0%)|   2838 (2%)|    -|
-    |  o TJ                     |     -|  7.30|   702872130|  7.029e+09|   46858142|           -|       15|        no|         -|         -|           -|           -|    -|
-    |   o TI                    |     -|  7.30|    46858140|  4.686e+08|    3123876|           -|       15|        no|         -|         -|           -|           -|    -|
-    |    o TN                   |     -|  7.30|     2909728|  2.910e+07|     363716|           -|        8|        no|         -|         -|           -|           -|    -|
-    |     o TN.1                |     -|  7.30|        2312|  2.312e+04|          1|           -|     2312|        no|         -|         -|           -|           -|    -|
-    |     o VITIS_LOOP_98_1     |     -|  7.30|        8312|  8.312e+04|       1039|           -|        8|        no|         -|         -|           -|           -|    -|
-    |      o VITIS_LOOP_99_2    |     -|  7.30|        1037|  1.037e+04|         61|           -|       17|        no|         -|         -|           -|           -|    -|
-    |       o VITIS_LOOP_100_3  |     -|  7.30|          51|    510.000|          3|           -|       17|        no|         -|         -|           -|           -|    -|
-    |     o NOUT                |     -|  7.30|      353088|  3.531e+06|      11034|           -|       32|        no|         -|         -|           -|           -|    -|
-    |      o TY                 |     -|  7.30|       11016|  1.102e+05|        648|           -|       17|        no|         -|         -|           -|           -|    -|
-    |       o TX                |     -|  7.30|         646|  6.460e+03|         38|           -|       17|        no|         -|         -|           -|           -|    -|
-    |    o VITIS_LOOP_120_1     |     -|  7.30|      204896|  2.049e+06|       6403|           -|       32|        no|         -|         -|           -|           -|    -|
-    |     o VITIS_LOOP_121_2    |     -|  7.30|        6392|  6.392e+04|        376|           -|       17|        no|         -|         -|           -|           -|    -|
-    |      o VITIS_LOOP_122_3   |     -|  7.30|         374|  3.740e+03|         22|           -|       17|        no|         -|         -|           -|           -|    -|
-    |    o TI.3                 |     -|  7.30|        9248|  9.248e+04|          1|           -|     9248|        no|         -|         -|           -|           -|    -|
-    | + conv3                   |     -|  0.00|  1272181306|  1.272e+10|          -|  1272181306|        -|        no|    9 (3%)|   3 (~0%)|   994 (~0%)|   1940 (1%)|    -|
-    |  o TJ                     |     -|  7.30|  1272181305|  1.272e+10|   84812087|           -|       15|        no|         -|         -|           -|           -|    -|
-    |   o TI                    |     -|  7.30|    84812085|  8.481e+08|    5654139|           -|       15|        no|         -|         -|           -|           -|    -|
-    |    o TN                   |     -|  7.30|     5648032|  5.648e+07|    1412008|           -|        4|        no|         -|         -|           -|           -|    -|
-    |     o TN.1                |     -|  7.30|        3528|  3.528e+04|          1|           -|     3528|        no|         -|         -|           -|           -|    -|
-    |     o VITIS_LOOP_98_1     |     -|  7.30|       39160|  3.916e+05|       4895|           -|        8|        no|         -|         -|           -|           -|    -|
-    |      o VITIS_LOOP_99_2    |     -|  7.30|        4893|  4.893e+04|        233|           -|       21|        no|         -|         -|           -|           -|    -|
-    |       o VITIS_LOOP_100_3  |     -|  7.30|         231|  2.310e+03|         11|           -|       21|        no|         -|         -|           -|           -|    -|
-    |     o TY                  |     -|  7.30|     1369316|  1.369e+07|      80548|           -|       17|        no|         -|         -|           -|           -|    -|
-    |      o TX                 |     -|  7.30|       80546|  8.055e+05|       4738|           -|       17|        no|         -|         -|           -|           -|    -|
-    |       o KY                |     -|  7.30|        4735|  4.735e+04|        947|           -|        5|        no|         -|         -|           -|           -|    -|
-    |        o KX               |     -|  7.30|         945|  9.450e+03|        189|           -|        5|        no|         -|         -|           -|           -|    -|
-    |         o NIN             |     -|  7.30|         187|  1.870e+03|         23|           -|        8|        no|         -|         -|           -|           -|    -|
-    |    o VITIS_LOOP_121_2     |     -|  7.30|        5814|  5.814e+04|        342|           -|       17|        no|         -|         -|           -|           -|    -|
-    |     o VITIS_LOOP_122_3    |     -|  7.30|         340|  3.400e+03|         20|           -|       17|        no|         -|         -|           -|           -|    -|
-    |    o TI.3                 |     -|  7.30|         289|  2.890e+03|          1|           -|      289|        no|         -|         -|           -|           -|    -|
-    | o Loop 1                  |     -|  7.30|     8323200|  8.323e+07|          2|           -|  4161600|        no|         -|         -|           -|           -|    -|
-    | o Loop 2                  |     -|  7.30|     4161600|  4.162e+07|          2|           -|  2080800|        no|         -|         -|           -|           -|    -|
-    | o Loop 3                  |     -|  7.30|      130050|  1.300e+06|          2|           -|    65025|        no|         -|         -|           -|           -|    -|
-    +---------------------------+------+------+------------+-----------+-----------+------------+---------+----------+----------+----------+------------+------------+-----+
+    +---------------------------+------+------+------------+-----------+-----------+------------+---------+----------+----------+----------+------------+-------------+-----+
+    |          Modules          | Issue|      |  Latency   |  Latency  | Iteration |            |   Trip  |          |          |          |            |             |     |
+    |          & Loops          | Type | Slack|  (cycles)  |    (ns)   |  Latency  |  Interval  |  Count  | Pipelined|   BRAM   |    DSP   |     FF     |     LUT     | URAM|
+    +---------------------------+------+------+------------+-----------+-----------+------------+---------+----------+----------+----------+------------+-------------+-----+
+    |+ srcnn                    |     -|  0.00|  4281735277|  4.282e+10|          -|  4281735278|        -|        no|  83 (28%)|   28 (2%)|   9849 (4%)|  12770 (10%)|    -|
+    | + conv1                   |     -|  0.00|  3215508556|  3.216e+10|          -|  3215508556|        -|        no|  40 (13%)|         -|  1139 (~0%)|    1995 (1%)|    -|
+    |  o TILE_J                 |     -|  7.30|  3215508555|  3.216e+10|  214367237|           -|       15|        no|         -|         -|           -|            -|    -|
+    |   o TILE_I                |     -|  7.30|   214367235|  2.144e+09|   14291149|           -|       15|        no|         -|         -|           -|            -|    -|
+    |    o TILE_I.1             |     -|  7.30|         625|  6.250e+03|          1|           -|      625|        no|         -|         -|           -|            -|    -|
+    |    o IN_BUFFER_BY         |     -|  7.30|        6925|  6.925e+04|        277|           -|       25|        no|         -|         -|           -|            -|    -|
+    |     o IN_BUFFER_BX        |     -|  7.30|         275|  2.750e+03|         11|           -|       25|        no|         -|         -|           -|            -|    -|
+    |    o NOUT                 |     -|  7.30|    14003776|  1.400e+08|     218809|           -|       64|        no|         -|         -|           -|            -|    -|
+    |     o TY                  |     -|  7.30|      218807|  2.188e+06|      12871|           -|       17|        no|         -|         -|           -|            -|    -|
+    |      o TX                 |     -|  7.30|       12869|  1.287e+05|        757|           -|       17|        no|         -|         -|           -|            -|    -|
+    |       o KY                |     -|  7.30|         747|  7.470e+03|         83|           -|        9|        no|         -|         -|           -|            -|    -|
+    |        o KX               |     -|  7.30|          81|    810.000|          9|           -|        9|        no|         -|         -|           -|            -|    -|
+    |    o OUT_BUFFER_NOUT      |     -|  7.30|      261313|  2.613e+06|       4083|           -|       64|        no|         -|         -|           -|            -|    -|
+    |     o OUT_BUFFER_TY       |     -|  7.30|        4080|  4.080e+04|        240|           -|       17|        no|         -|         -|           -|            -|    -|
+    |      o OUT_BUFFER_TX      |     -|  7.30|         238|  2.380e+03|         14|           -|       17|        no|         -|         -|           -|            -|    -|
+    |    o TILE_I.5             |     -|  7.30|       18496|  1.850e+05|          1|           -|    18496|        no|         -|         -|           -|            -|    -|
+    | + conv2                   |     -|  0.00|   711440131|  7.114e+09|          -|   711440131|        -|        no|  30 (10%)|  10 (~0%)|   2556 (1%)|    3031 (2%)|    -|
+    |  o TJ                     |     -|  7.30|   711440130|  7.114e+09|   47429342|           -|       15|        no|         -|         -|           -|            -|    -|
+    |   o TI                    |     -|  7.30|    47429340|  4.743e+08|    3161956|           -|       15|        no|         -|         -|           -|            -|    -|
+    |    o TN                   |     -|  7.30|     2947808|  2.948e+07|     368476|           -|        8|        no|         -|         -|           -|            -|    -|
+    |     o TN.1                |     -|  7.30|        4624|  4.624e+04|          2|           -|     2312|        no|         -|         -|           -|            -|    -|
+    |     o VITIS_LOOP_99_1     |     -|  7.30|       10760|  1.076e+05|       1345|           -|        8|        no|         -|         -|           -|            -|    -|
+    |      o VITIS_LOOP_100_2   |     -|  7.30|        1343|  1.343e+04|         79|           -|       17|        no|         -|         -|           -|            -|    -|
+    |       o VITIS_LOOP_101_3  |     -|  7.30|          69|    690.000|          4|           -|       17|        no|         -|         -|           -|            -|    -|
+    |     o NOUT                |     -|  7.30|      353088|  3.531e+06|      11034|           -|       32|        no|         -|         -|           -|            -|    -|
+    |      o TY                 |     -|  7.30|       11016|  1.102e+05|        648|           -|       17|        no|         -|         -|           -|            -|    -|
+    |       o TX                |     -|  7.30|         646|  6.460e+03|         38|           -|       17|        no|         -|         -|           -|            -|    -|
+    |    o VITIS_LOOP_121_1     |     -|  7.30|      204896|  2.049e+06|       6403|           -|       32|        no|         -|         -|           -|            -|    -|
+    |     o VITIS_LOOP_122_2    |     -|  7.30|        6392|  6.392e+04|        376|           -|       17|        no|         -|         -|           -|            -|    -|
+    |      o VITIS_LOOP_123_3   |     -|  7.30|         374|  3.740e+03|         22|           -|       17|        no|         -|         -|           -|            -|    -|
+    |    o TI.3                 |     -|  7.30|        9248|  9.248e+04|          1|           -|     9248|        no|         -|         -|           -|            -|    -|
+    | + conv3                   |     -|  0.00|   342171706|  3.422e+09|          -|   342171706|        -|        no|    9 (3%)|   1 (~0%)|   2789 (1%)|    3784 (3%)|    -|
+    |  o TJ                     |     -|  7.30|   342171705|  3.422e+09|   22811447|           -|       15|        no|         -|         -|           -|            -|    -|
+    |   o TI                    |     -|  7.30|    22811445|  2.281e+08|    1520763|           -|       15|        no|         -|         -|           -|            -|    -|
+    |    o TN                   |     -|  7.30|     1514656|  1.515e+07|     378664|           -|        4|        no|         -|         -|           -|            -|    -|
+    |     o TN.1                |     -|  7.30|        7056|  7.056e+04|          2|           -|     3528|        no|         -|         -|           -|            -|    -|
+    |     o VITIS_LOOP_99_1     |     -|  7.30|       42688|  4.269e+05|       5336|           -|        8|        no|         -|         -|           -|            -|    -|
+    |      o VITIS_LOOP_100_2   |     -|  7.30|        5334|  5.334e+04|        254|           -|       21|        no|         -|         -|           -|            -|    -|
+    |       o VITIS_LOOP_101_3  |     -|  7.30|         252|  2.520e+03|         12|           -|       21|        no|         -|         -|           -|            -|    -|
+    |     o TY                  |     -|  7.30|      328916|  3.289e+06|      19348|           -|       17|        no|         -|         -|           -|            -|    -|
+    |      o TX                 |     -|  7.30|       19346|  1.935e+05|       1138|           -|       17|        no|         -|         -|           -|            -|    -|
+    |       o KY                |     -|  7.30|        1135|  1.135e+04|        227|           -|        5|        no|         -|         -|           -|            -|    -|
+    |        o KX               |     -|  7.30|         225|  2.250e+03|         45|           -|        5|        no|         -|         -|           -|            -|    -|
+    |    o VITIS_LOOP_122_2     |     -|  7.30|        5814|  5.814e+04|        342|           -|       17|        no|         -|         -|           -|            -|    -|
+    |     o VITIS_LOOP_123_3    |     -|  7.30|         340|  3.400e+03|         20|           -|       17|        no|         -|         -|           -|            -|    -|
+    |    o TI.3                 |     -|  7.30|         289|  2.890e+03|          1|           -|      289|        no|         -|         -|           -|            -|    -|
+    | o Loop 1                  |     -|  7.30|     8323200|  8.323e+07|          2|           -|  4161600|        no|         -|         -|           -|            -|    -|
+    | o Loop 2                  |     -|  7.30|     4161600|  4.162e+07|          2|           -|  2080800|        no|         -|         -|           -|            -|    -|
+    | o Loop 3                  |     -|  7.30|      130050|  1.300e+06|          2|           -|    65025|        no|         -|         -|           -|            -|    -|
+    +---------------------------+------+------+------------+-----------+-----------+------------+---------+----------+----------+----------+------------+-------------+-----+
 
 
 ================================================================
@@ -199,256 +198,285 @@
 | m_axi_gmem   | read      | 8       | 32    |                  |                      |
 | m_axi_gmem   | read      | 81      | 32    | KY               | src/conv1.cpp:51:10  |
 | m_axi_gmem   | read      | 64      | 32    | OUT_BUFFER_NOUT  | src/conv1.cpp:114:19 |
-| m_axi_gmem   | read      | 17      | 32    | VITIS_LOOP_100_3 | src/conv2.cpp:100:22 |
+| m_axi_gmem   | read      | 17      | 32    | VITIS_LOOP_101_3 | src/conv2.cpp:101:22 |
 | m_axi_gmem   | write     | 4161600 | 32    | anonymous        | src/srcnn.cpp:34:2   |
 | m_axi_gmem   | write     | 2080800 | 32    | anonymous        | src/srcnn.cpp:35:2   |
 | m_axi_gmem   | write     | 65025   | 32    | anonymous        | src/srcnn.cpp:36:2   |
 +--------------+-----------+---------+-------+------------------+----------------------+
 
 * All M_AXI Variable Accesses
-+--------------+--------------------+----------------------+-----------+--------------+---------+------------------+----------------------+------------+---------------------------------------------------------------------------------------------------------+
-| HW Interface | Variable           | Access Location      | Direction | Burst Status | Length  | Loop             | Loop Location        | Resolution | Problem                                                                                                 |
-+--------------+--------------------+----------------------+-----------+--------------+---------+------------------+----------------------+------------+---------------------------------------------------------------------------------------------------------+
-| m_axi_gmem   | input_ftmap        | src/conv1.cpp:61:42  | read      | Widen Fail   |         | VITIS_LOOP_100_3 | src/conv2.cpp:100:22 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem   | conv1_weights      | src/conv1.cpp:61:42  | read      | Widen Fail   |         | KX               | src/conv1.cpp:52:10  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem   | input_ftmap        | src/conv1.cpp:61:42  | read      | Fail         |         | VITIS_LOOP_99_2  | src/conv2.cpp:99:20  | 214-230    | Stride is incompatible                                                                                  |
-| m_axi_gmem   | conv1_weights      | src/conv1.cpp:61:42  | read      | Fail         |         | TX               | src/conv1.cpp:48:9   | 214-230    | Stride is incompatible                                                                                  |
-| m_axi_gmem   | conv1_weights      | src/conv1.cpp:61:42  | read      | Inferred     | 81      | KY               | src/conv1.cpp:51:10  |            |                                                                                                         |
-| m_axi_gmem   | input_ftmap        | src/conv1.cpp:101:36 | read      | Fail         |         | VITIS_LOOP_100_3 | src/conv3.cpp:100:22 | 214-229    | Could not analyze pattern                                                                               |
-| m_axi_gmem   | input_ftmap        | src/conv1.cpp:101:36 | read      | Fail         |         | IN_BUFFER_BX     | src/conv1.cpp:94:18  | 214-229    | Could not analyze pattern                                                                               |
-| m_axi_gmem   | conv1_biases       | src/conv1.cpp:114:19 | read      | Widen Fail   |         | OUT_BUFFER_NOUT  | src/conv1.cpp:114:19 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem   | conv1_biases       | src/conv1.cpp:114:19 | read      | Fail         |         | TILE_I           | src/conv1.cpp:31:11  | 214-229    | Could not analyze pattern                                                                               |
-| m_axi_gmem   | conv1_biases       | src/conv1.cpp:114:19 | read      | Inferred     | 64      | OUT_BUFFER_NOUT  | src/conv1.cpp:114:19 |            |                                                                                                         |
-| m_axi_gmem   | output_ftmap       | src/conv1.cpp:118:44 | write     | Fail         |         |                  |                      | 214-231    | Access is clobbered by store                                                                            |
-| m_axi_gmem   | output_ftmap       | src/conv1.cpp:120:45 | write     | Fail         |         | VITIS_LOOP_122_3 | src/conv2.cpp:122:22 | 214-232    | Access store is in the conditional branch                                                               |
-| m_axi_gmem   | output_ftmap       | src/conv1.cpp:120:45 | write     | Fail         |         | OUT_BUFFER_TX    | src/conv1.cpp:116:19 | 214-232    | Access store is in the conditional branch                                                               |
-| m_axi_gmem   | input_ftmap        | src/conv2.cpp:107:36 | read      | Inferred     | 17      | VITIS_LOOP_100_3 | src/conv2.cpp:100:22 |            |                                                                                                         |
-| m_axi_gmem   |                    | src/conv2.cpp:120:20 | read      | Fail         |         |                  |                      | 214-224    | Could not burst due to multiple potential reads to the same bundle in the same region.                  |
-| m_axi_gmem   | conv2_biases       | src/conv2.cpp:120:20 | read      | Widen Fail   |         | VITIS_LOOP_120_1 | src/conv2.cpp:120:20 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem   | conv2_biases       | src/conv2.cpp:120:20 | read      | Fail         |         | TI               | src/conv2.cpp:31:6   | 214-229    | Could not analyze pattern                                                                               |
-| m_axi_gmem   | conv2_biases       | src/conv2.cpp:120:20 | read      | Inferred     | 32      | VITIS_LOOP_120_1 | src/conv2.cpp:120:20 |            |                                                                                                         |
-| m_axi_gmem   | output_ftmap       | src/conv2.cpp:124:44 | write     | Fail         |         |                  |                      | 214-231    | Access is clobbered by store                                                                            |
-| m_axi_gmem   | output_ftmap       | src/conv2.cpp:124:44 | read      | Fail         |         |                  |                      | 214-231    | Access is clobbered by store                                                                            |
-| m_axi_gmem   | conv3_weights      | src/conv3.cpp:67:42  | read      | Fail         |         | NIN              | src/conv3.cpp:66:12  | 214-230    | Stride is incompatible                                                                                  |
-| m_axi_gmem   | output_ftmap       | src/conv3.cpp:124:44 | write     | Fail         |         |                  |                      | 214-231    | Access is clobbered by load                                                                             |
-| m_axi_gmem   | output_ftmap       | src/conv3.cpp:124:44 | read      | Fail         |         |                  |                      | 214-231    | Access is clobbered by store                                                                            |
-| m_axi_gmem   | conv1_output_ftmap | src/srcnn.cpp:34:2   | write     | Widen Fail   |         | anonymous        | src/srcnn.cpp:34:2   | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem   | conv1_output_ftmap | src/srcnn.cpp:34:2   | write     | Inferred     | 4161600 | anonymous        | src/srcnn.cpp:34:2   |            |                                                                                                         |
-| m_axi_gmem   | conv2_output_ftmap | src/srcnn.cpp:35:2   | write     | Widen Fail   |         | anonymous        | src/srcnn.cpp:35:2   | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem   | conv2_output_ftmap | src/srcnn.cpp:35:2   | write     | Inferred     | 2080800 | anonymous        | src/srcnn.cpp:35:2   |            |                                                                                                         |
-| m_axi_gmem   | output_ftmap       | src/srcnn.cpp:36:2   | write     | Widen Fail   |         | anonymous        | src/srcnn.cpp:36:2   | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem   | output_ftmap       | src/srcnn.cpp:36:2   | write     | Inferred     | 65025   | anonymous        | src/srcnn.cpp:36:2   |            |                                                                                                         |
-+--------------+--------------------+----------------------+-----------+--------------+---------+------------------+----------------------+------------+---------------------------------------------------------------------------------------------------------+
++--------------+--------------------+----------------------+------------------------------------------------+--------------+---------+------------------+----------------------+------------+---------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable           | Access Location      | Direction                                      | Burst Status | Length  | Loop             | Loop Location        | Resolution | Problem                                                                                                 |
++--------------+--------------------+----------------------+------------------------------------------------+--------------+---------+------------------+----------------------+------------+---------------------------------------------------------------------------------------------------------+
+| m_axi_gmem   | conv3_weights      | src/conv1.cpp:61:42  | read                                           | Widen Fail   |         | KX               | src/conv3.cpp:59:10  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | input_ftmap        | src/conv1.cpp:61:42  | read                                           | Widen Fail   |         | VITIS_LOOP_101_3 | src/conv2.cpp:101:22 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | conv1_weights      | src/conv1.cpp:61:42  | read                                           | Widen Fail   |         | KX               | src/conv1.cpp:52:10  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | input_ftmap        | src/conv1.cpp:61:42  | read                                           | Fail         |         | VITIS_LOOP_100_2 | src/conv2.cpp:100:21 | 214-230    | Stride is incompatible                                                                                  |
+| m_axi_gmem   | conv1_weights      | src/conv1.cpp:61:42  | read                                           | Fail         |         | TX               | src/conv1.cpp:48:9   | 214-230    | Stride is incompatible                                                                                  |
+| m_axi_gmem   | conv1_weights      | src/conv1.cpp:61:42  | read                                           | Inferred     | 81      | KY               | src/conv1.cpp:51:10  |            |                                                                                                         |
+| m_axi_gmem   | input_ftmap        | src/conv1.cpp:101:36 | read                                           | Fail         |         | VITIS_LOOP_101_3 | src/conv3.cpp:101:22 | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem   | input_ftmap        | src/conv1.cpp:101:36 | read                                           | Fail         |         | IN_BUFFER_BX     | src/conv1.cpp:94:18  | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem   | conv1_biases       | src/conv1.cpp:114:19 | read                                           | Widen Fail   |         | OUT_BUFFER_NOUT  | src/conv1.cpp:114:19 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | conv1_biases       | src/conv1.cpp:114:19 | read                                           | Fail         |         | TILE_I           | src/conv1.cpp:31:11  | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem   | conv1_biases       | src/conv1.cpp:114:19 | read                                           | Inferred     | 64      | OUT_BUFFER_NOUT  | src/conv1.cpp:114:19 |            |                                                                                                         |
+| m_axi_gmem   | output_ftmap       | src/conv1.cpp:118:44 | write                                          | Fail         |         |                  |                      | 214-231    | Access is clobbered by store                                                                            |
+| m_axi_gmem   | output_ftmap       | src/conv1.cpp:120:45 | write                                          | Fail         |         | VITIS_LOOP_123_3 | src/conv2.cpp:123:22 | 214-232    | Access store is in the conditional branch                                                               |
+| m_axi_gmem   | output_ftmap       | src/conv1.cpp:120:45 | write                                          | Fail         |         | OUT_BUFFER_TX    | src/conv1.cpp:116:19 | 214-232    | Access store is in the conditional branch                                                               |
+| m_axi_gmem   | input_ftmap        | src/conv2.cpp:108:36 | read                                           | Inferred     | 17      | VITIS_LOOP_101_3 | src/conv2.cpp:101:22 |            |                                                                                                         |
+| m_axi_gmem   |                    | src/conv2.cpp:121:20 | read                                           | Fail         |         |                  |                      | 214-224    | Could not burst due to multiple potential reads to the same bundle in the same region.                  |
+| m_axi_gmem   | conv2_biases       | src/conv2.cpp:121:20 | read                                           | Widen Fail   |         | VITIS_LOOP_121_1 | src/conv2.cpp:121:20 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | conv2_biases       | src/conv2.cpp:121:20 | read                                           | Fail         |         | TI               | src/conv2.cpp:31:6   | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem   | conv2_biases       | src/conv2.cpp:121:20 | read                                           | Inferred     | 32      | VITIS_LOOP_121_1 | src/conv2.cpp:121:20 |            |                                                                                                         |
+| m_axi_gmem   | output_ftmap       | src/conv2.cpp:125:44 | write                                          | Fail         |         |                  |                      | 214-231    | Access is clobbered by store                                                                            |
+| m_axi_gmem   | output_ftmap       | src/conv2.cpp:125:44 | read                                           | Fail         |         |                  |                      | 214-231    | Access is clobbered by store                                                                            |
+| m_axi_gmem   |                    | src/conv3.cpp:59:10  | read                                           | Fail         |         |                  |                      | 214-224    | Could not burst due to multiple potential reads to the same bundle in the same region.                  |
+| m_axi_gmem   | conv3_weights      | src/conv3.cpp:68:36  | read                                           | Widen Fail   |         | KX               | src/conv3.cpp:59:10  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | conv2_weights      | src/conv3.cpp:68:36  | read                                           | Widen Fail   |         |                  |                      | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | conv3_weights      | src/conv3.cpp:68:36  | read                                           | Inferred     | 5       | KX               | src/conv3.cpp:59:10  |            |                                                                                                         |
+| m_axi_gmem   | conv2_weights      | src/conv3.cpp:68:36  | read                                           | Fail         |         | NOUT             | src/conv2.cpp:53:10  | 214-230    | Stride is incompatible                                                                                  |
+| m_axi_gmem   | conv2_weights      | src/conv3.cpp:68:36  | islist read read read read read read read read | Inferred     | 8       | NOUT             | src/conv2.cpp:53:10  |            |                                                                                                         |
+| m_axi_gmem   | output_ftmap       | src/conv3.cpp:125:44 | write                                          | Fail         |         |                  |                      | 214-231    | Access is clobbered by load                                                                             |
+| m_axi_gmem   | output_ftmap       | src/conv3.cpp:125:44 | read                                           | Fail         |         |                  |                      | 214-231    | Access is clobbered by store                                                                            |
+| m_axi_gmem   | conv1_output_ftmap | src/srcnn.cpp:34:2   | write                                          | Widen Fail   |         | anonymous        | src/srcnn.cpp:34:2   | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | conv1_output_ftmap | src/srcnn.cpp:34:2   | write                                          | Inferred     | 4161600 | anonymous        | src/srcnn.cpp:34:2   |            |                                                                                                         |
+| m_axi_gmem   | conv2_output_ftmap | src/srcnn.cpp:35:2   | write                                          | Widen Fail   |         | anonymous        | src/srcnn.cpp:35:2   | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | conv2_output_ftmap | src/srcnn.cpp:35:2   | write                                          | Inferred     | 2080800 | anonymous        | src/srcnn.cpp:35:2   |            |                                                                                                         |
+| m_axi_gmem   | output_ftmap       | src/srcnn.cpp:36:2   | write                                          | Widen Fail   |         | anonymous        | src/srcnn.cpp:36:2   | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | output_ftmap       | src/srcnn.cpp:36:2   | write                                          | Inferred     | 65025   | anonymous        | src/srcnn.cpp:36:2   |            |                                                                                                         |
++--------------+--------------------+----------------------+------------------------------------------------+--------------+---------+------------------+----------------------+------------+---------------------------------------------------------------------------------------------------------+
 
     * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
 
 ================================================================
 == Bind Op Report
 ================================================================
-+---------------------------------------------+-----+--------+--------------+------+--------+---------+
-| Name                                        | DSP | Pragma | Variable     | Op   | Impl   | Latency |
-+---------------------------------------------+-----+--------+--------------+------+--------+---------+
-| + srcnn                                     | 12  |        |              |      |        |         |
-|   empty_48_fu_355_p2                        | -   |        | empty_48     | add  | fabric | 0       |
-|   empty_52_fu_400_p2                        | -   |        | empty_52     | add  | fabric | 0       |
-|   empty_56_fu_445_p2                        | -   |        | empty_56     | add  | fabric | 0       |
-|  + conv1                                    | 0   |        |              |      |        |         |
-|    add_ln30_fu_570_p2                       | -   |        | add_ln30     | add  | fabric | 0       |
-|    add_ln31_fu_594_p2                       | -   |        | add_ln31     | add  | fabric | 0       |
-|    empty_97_fu_610_p2                       | -   |        | empty_97     | add  | fabric | 0       |
-|    add_ln93_1_fu_633_p2                     | -   |        | add_ln93_1   | add  | fabric | 0       |
-|    add_ln93_fu_649_p2                       | -   |        | add_ln93     | add  | fabric | 0       |
-|    tmp1_fu_655_p2                           | -   |        | tmp1         | add  | fabric | 0       |
-|    empty_98_fu_665_p2                       | -   |        | empty_98     | add  | fabric | 0       |
-|    sub_ln101_fu_734_p2                      | -   |        | sub_ln101    | sub  | fabric | 0       |
-|    add_ln101_2_fu_748_p2                    | -   |        | add_ln101_2  | add  | fabric | 0       |
-|    add_ln94_fu_769_p2                       | -   |        | add_ln94     | add  | fabric | 0       |
-|    add_ln97_1_fu_787_p2                     | -   |        | add_ln97_1   | add  | fabric | 0       |
-|    add_ln97_fu_797_p2                       | -   |        | add_ln97     | add  | fabric | 0       |
-|    add_ln44_1_fu_893_p2                     | -   |        | add_ln44_1   | add  | fabric | 0       |
-|    empty_99_fu_915_p2                       | -   |        | empty_99     | add  | fabric | 0       |
-|    add_ln44_fu_927_p2                       | -   |        | add_ln44     | add  | fabric | 0       |
-|    add_ln47_fu_937_p2                       | -   |        | add_ln47     | add  | fabric | 0       |
-|    empty_100_fu_966_p2                      | -   |        | empty_100    | add  | fabric | 0       |
-|    empty_102_fu_987_p2                      | -   |        | empty_102    | add  | fabric | 0       |
-|    add_ln47_1_fu_999_p2                     | -   |        | add_ln47_1   | add  | fabric | 0       |
-|    empty_103_fu_1009_p2                     | -   |        | empty_103    | add  | fabric | 0       |
-|    add_ln48_fu_1025_p2                      | -   |        | add_ln48     | add  | fabric | 0       |
-|    add_ln51_fu_1041_p2                      | -   |        | add_ln51     | add  | fabric | 0       |
-|    empty_105_fu_1047_p2                     | -   |        | empty_105    | add  | fabric | 0       |
-|    mul_5ns_6ns_10_1_1_U4                    | -   |        | mul_ln61     | mul  | auto   | 0       |
-|    add_ln52_fu_1073_p2                      | -   |        | add_ln52     | add  | fabric | 0       |
-|    add_ln56_fu_1079_p2                      | -   |        | add_ln56     | add  | fabric | 0       |
-|    add_ln61_fu_1089_p2                      | -   |        | add_ln61     | add  | fabric | 0       |
-|    add_ln114_1_fu_1115_p2                   | -   |        | add_ln114_1  | add  | fabric | 0       |
-|    add_ln118_5_fu_1137_p2                   | -   |        | add_ln118_5  | add  | fabric | 0       |
-|    add_ln114_fu_1109_p2                     | -   |        | add_ln114    | add  | fabric | 0       |
-|    add_ln118_2_fu_1151_p2                   | -   |        | add_ln118_2  | add  | fabric | 0       |
-|    add_ln118_6_fu_1160_p2                   | -   |        | add_ln118_6  | add  | fabric | 0       |
-|    add_ln118_7_fu_1181_p2                   | -   |        | add_ln118_7  | add  | fabric | 0       |
-|    add_ln115_fu_1197_p2                     | -   |        | add_ln115    | add  | fabric | 0       |
-|    empty_108_fu_1203_p2                     | -   |        | empty_108    | add  | fabric | 0       |
-|    sub_ln118_fu_1232_p2                     | -   |        | sub_ln118    | sub  | fabric | 0       |
-|    add_ln118_8_fu_1242_p2                   | -   |        | add_ln118_8  | add  | fabric | 0       |
-|    add_ln116_fu_1258_p2                     | -   |        | add_ln116    | add  | fabric | 0       |
-|    add_ln118_fu_1264_p2                     | -   |        | add_ln118    | add  | fabric | 0       |
-|    add_ln118_1_fu_1273_p2                   | -   |        | add_ln118_1  | add  | fabric | 0       |
-|    add_ln118_4_fu_1290_p2                   | -   |        | add_ln118_4  | add  | fabric | 0       |
-|    add_ln118_3_fu_1299_p2                   | -   |        | add_ln118_3  | add  | fabric | 0       |
-|    empty_110_fu_1379_p2                     | -   |        | empty_110    | add  | fabric | 0       |
-|  + conv2                                    | 4   |        |              |      |        |         |
-|    add_ln30_fu_616_p2                       | -   |        | add_ln30     | add  | fabric | 0       |
-|    add_ln31_fu_636_p2                       | -   |        | add_ln31     | add  | fabric | 0       |
-|    add_ln38_fu_664_p2                       | -   |        | add_ln38     | add  | fabric | 0       |
-|    empty_69_fu_676_p2                       | -   |        | empty_69     | add  | fabric | 0       |
-|    add_ln98_fu_721_p2                       | -   |        | add_ln98     | add  | fabric | 0       |
-|    empty_70_fu_727_p2                       | -   |        | empty_70     | add  | fabric | 0       |
-|    mul_6ns_19ns_24_1_1_U17                  | 1   |        | empty_71     | mul  | auto   | 0       |
-|    add_ln107_fu_761_p2                      | -   |        | add_ln107    | add  | fabric | 0       |
-|    add_ln107_5_fu_782_p2                    | -   |        | add_ln107_5  | add  | fabric | 0       |
-|    add_ln99_fu_798_p2                       | -   |        | add_ln99     | add  | fabric | 0       |
-|    empty_72_fu_804_p2                       | -   |        | empty_72     | add  | fabric | 0       |
-|    empty_73_fu_833_p2                       | -   |        | empty_73     | sub  | fabric | 0       |
-|    tmp2_fu_857_p2                           | -   |        | tmp2         | add  | fabric | 0       |
-|    add_ln107_6_fu_901_p2                    | -   |        | add_ln107_6  | add  | fabric | 0       |
-|    add_ln100_fu_917_p2                      | -   |        | add_ln100    | add  | fabric | 0       |
-|    empty_76_fu_943_p2                       | -   |        | empty_76     | add  | fabric | 0       |
-|    add_ln52_fu_955_p2                       | -   |        | add_ln52     | add  | fabric | 0       |
-|    add_ln69_fu_1054_p2                      | -   |        | add_ln69     | add  | fabric | 0       |
-|    add_ln69_1_fu_1068_p2                    | -   |        | add_ln69_1   | add  | fabric | 0       |
-|    add_ln69_2_fu_1074_p2                    | -   |        | add_ln69_2   | add  | fabric | 0       |
-|    add_ln69_3_fu_1080_p2                    | -   |        | add_ln69_3   | add  | fabric | 0       |
-|    add_ln69_4_fu_1086_p2                    | -   |        | add_ln69_4   | add  | fabric | 0       |
-|    add_ln69_5_fu_1092_p2                    | -   |        | add_ln69_5   | add  | fabric | 0       |
-|    add_ln69_6_fu_1098_p2                    | -   |        | add_ln69_6   | add  | fabric | 0       |
-|    add_ln69_7_fu_1104_p2                    | -   |        | add_ln69_7   | add  | fabric | 0       |
-|    empty_88_fu_1110_p2                      | -   |        | empty_88     | add  | fabric | 0       |
-|    empty_90_fu_1131_p2                      | -   |        | empty_90     | add  | fabric | 0       |
-|    add_ln54_fu_1143_p2                      | -   |        | add_ln54     | add  | fabric | 0       |
-|    add_ln69_8_fu_1165_p2                    | -   |        | add_ln69_8   | add  | fabric | 0       |
-|    add_ln69_9_fu_1175_p2                    | -   |        | add_ln69_9   | add  | fabric | 0       |
-|    add_ln69_10_fu_1185_p2                   | -   |        | add_ln69_10  | add  | fabric | 0       |
-|    add_ln69_11_fu_1195_p2                   | -   |        | add_ln69_11  | add  | fabric | 0       |
-|    add_ln69_12_fu_1205_p2                   | -   |        | add_ln69_12  | add  | fabric | 0       |
-|    add_ln69_13_fu_1215_p2                   | -   |        | add_ln69_13  | add  | fabric | 0       |
-|    add_ln69_14_fu_1225_p2                   | -   |        | add_ln69_14  | add  | fabric | 0       |
-|    add_ln69_15_fu_1235_p2                   | -   |        | add_ln69_15  | add  | fabric | 0       |
-|    empty_91_fu_1245_p2                      | -   |        | empty_91     | add  | fabric | 0       |
-|    add_ln55_fu_1261_p2                      | -   |        | add_ln55     | add  | fabric | 0       |
-|    fmul_32ns_32ns_32_3_max_dsp_1_U15        | 3   |        | mul50_1      | fmul | maxdsp | 2       |
-|    fmul_32ns_32ns_32_3_max_dsp_1_U15        | 3   |        | mul50_3      | fmul | maxdsp | 2       |
-|    fmul_32ns_32ns_32_3_max_dsp_1_U15        | 3   |        | mul50_5      | fmul | maxdsp | 2       |
-|    fmul_32ns_32ns_32_3_max_dsp_1_U15        | 3   |        | mul50_7      | fmul | maxdsp | 2       |
-|    add_ln120_1_fu_1267_p2                   | -   |        | add_ln120_1  | add  | fabric | 0       |
-|    add_ln124_8_fu_1289_p2                   | -   |        | add_ln124_8  | add  | fabric | 0       |
-|    add_ln120_fu_1305_p2                     | -   |        | add_ln120    | add  | fabric | 0       |
-|    empty_92_fu_1311_p2                      | -   |        | empty_92     | add  | fabric | 0       |
-|    add_ln124_6_fu_1330_p2                   | -   |        | add_ln124_6  | add  | fabric | 0       |
-|    add_ln124_9_fu_1343_p2                   | -   |        | add_ln124_9  | add  | fabric | 0       |
-|    add_ln124_10_fu_1364_p2                  | -   |        | add_ln124_10 | add  | fabric | 0       |
-|    add_ln121_fu_1380_p2                     | -   |        | add_ln121    | add  | fabric | 0       |
-|    empty_94_fu_1386_p2                      | -   |        | empty_94     | add  | fabric | 0       |
-|    sub_ln124_fu_1415_p2                     | -   |        | sub_ln124    | sub  | fabric | 0       |
-|    add_ln124_11_fu_1425_p2                  | -   |        | add_ln124_11 | add  | fabric | 0       |
-|    add_ln122_fu_1441_p2                     | -   |        | add_ln122    | add  | fabric | 0       |
-|    add_ln124_fu_1447_p2                     | -   |        | add_ln124    | add  | fabric | 0       |
-|    add_ln124_4_fu_1456_p2                   | -   |        | add_ln124_4  | add  | fabric | 0       |
-|    add_ln124_7_fu_1473_p2                   | -   |        | add_ln124_7  | add  | fabric | 0       |
-|    add_ln124_5_fu_1482_p2                   | -   |        | add_ln124_5  | add  | fabric | 0       |
-|    empty_96_fu_1567_p2                      | -   |        | empty_96     | add  | fabric | 0       |
-|  + conv3                                    | 3   |        |              |      |        |         |
-|    add_ln31_fu_554_p2                       | -   |        | add_ln31     | add  | fabric | 0       |
-|    add_ln32_fu_578_p2                       | -   |        | add_ln32     | add  | fabric | 0       |
-|    add_ln39_fu_606_p2                       | -   |        | add_ln39     | add  | fabric | 0       |
-|    empty_59_fu_618_p2                       | -   |        | empty_59     | add  | fabric | 0       |
-|    add_ln98_1_fu_641_p2                     | -   |        | add_ln98_1   | add  | fabric | 0       |
-|    add_ln98_fu_657_p2                       | -   |        | add_ln98     | add  | fabric | 0       |
-|    empty_60_fu_663_p2                       | -   |        | empty_60     | add  | fabric | 0       |
-|    mul_5ns_19ns_23_1_1_U28                  | 1   |        | mul_ln107    | mul  | auto   | 0       |
-|    add_ln107_fu_682_p2                      | -   |        | add_ln107    | add  | fabric | 0       |
-|    add_ln107_3_fu_691_p2                    | -   |        | add_ln107_3  | add  | fabric | 0       |
-|    mul_8ns_6ns_12_1_1_U29                   | -   |        | mul_ln99     | mul  | auto   | 0       |
-|    add_ln99_fu_717_p2                       | -   |        | add_ln99     | add  | fabric | 0       |
-|    tmp1_fu_723_p2                           | -   |        | tmp1         | add  | fabric | 0       |
-|    empty_61_fu_733_p2                       | -   |        | empty_61     | add  | fabric | 0       |
-|    sub_ln107_fu_802_p2                      | -   |        | sub_ln107    | sub  | fabric | 0       |
-|    add_ln107_4_fu_812_p2                    | -   |        | add_ln107_4  | add  | fabric | 0       |
-|    add_ln100_fu_832_p2                      | -   |        | add_ln100    | add  | fabric | 0       |
-|    add_ln103_1_fu_850_p2                    | -   |        | add_ln103_1  | add  | fabric | 0       |
-|    add_ln103_fu_860_p2                      | -   |        | add_ln103    | add  | fabric | 0       |
-|    add_ln107_1_fu_922_p2                    | -   |        | add_ln107_1  | add  | fabric | 0       |
-|    add_ln107_2_fu_931_p2                    | -   |        | add_ln107_2  | add  | fabric | 0       |
-|    empty_62_fu_972_p2                       | -   |        | empty_62     | add  | fabric | 0       |
-|    add_ln54_fu_984_p2                       | -   |        | add_ln54     | add  | fabric | 0       |
-|    empty_63_fu_994_p2                       | -   |        | empty_63     | add  | fabric | 0       |
-|    add_ln55_fu_1010_p2                      | -   |        | add_ln55     | add  | fabric | 0       |
-|    add_ln58_fu_1026_p2                      | -   |        | add_ln58     | add  | fabric | 0       |
-|    empty_64_fu_1032_p2                      | -   |        | empty_64     | add  | fabric | 0       |
-|    add_ln67_1_fu_1062_p2                    | -   |        | add_ln67_1   | add  | fabric | 0       |
-|    add_ln59_fu_1082_p2                      | -   |        | add_ln59     | add  | fabric | 0       |
-|    add_ln63_fu_1088_p2                      | -   |        | add_ln63     | add  | fabric | 0       |
-|    add_ln67_7_fu_1110_p2                    | -   |        | add_ln67_7   | add  | fabric | 0       |
-|    ama_addmuladd_8ns_5ns_5ns_5ns_12_4_1_U30 | 1   |        | add_ln67_5   | add  | dsp48  | 3       |
-|    ama_addmuladd_8ns_5ns_5ns_5ns_12_4_1_U30 | 1   |        | mul_ln67_1   | mul  | dsp48  | 3       |
-|    ama_addmuladd_8ns_5ns_5ns_5ns_12_4_1_U30 | 1   |        | add_ln67_6   | add  | dsp48  | 3       |
-|    add_ln66_fu_1130_p2                      | -   |        | add_ln66     | add  | fabric | 0       |
-|    ama_addmuladd_4ns_5ns_7ns_5ns_12_4_1_U31 | 1   |        | add_ln67     | add  | dsp48  | 3       |
-|    ama_addmuladd_4ns_5ns_7ns_5ns_12_4_1_U31 | 1   |        | mul_ln67     | mul  | dsp48  | 3       |
-|    ama_addmuladd_4ns_5ns_7ns_5ns_12_4_1_U31 | 1   |        | add_ln67_2   | add  | dsp48  | 3       |
-|    add_ln124_4_fu_1185_p2                   | -   |        | add_ln124_4  | add  | fabric | 0       |
-|    add_ln121_fu_1201_p2                     | -   |        | add_ln121    | add  | fabric | 0       |
-|    empty_66_fu_1207_p2                      | -   |        | empty_66     | add  | fabric | 0       |
-|    sub_ln124_fu_1236_p2                     | -   |        | sub_ln124    | sub  | fabric | 0       |
-|    add_ln124_5_fu_1250_p2                   | -   |        | add_ln124_5  | add  | fabric | 0       |
-|    add_ln122_fu_1266_p2                     | -   |        | add_ln122    | add  | fabric | 0       |
-|    add_ln124_fu_1272_p2                     | -   |        | add_ln124    | add  | fabric | 0       |
-|    add_ln124_1_fu_1281_p2                   | -   |        | add_ln124_1  | add  | fabric | 0       |
-|    empty_68_fu_1343_p2                      | -   |        | empty_68     | add  | fabric | 0       |
-+---------------------------------------------+-----+--------+--------------+------+--------+---------+
++--------------------------------------+-----+--------+--------------+------+--------+---------+
+| Name                                 | DSP | Pragma | Variable     | Op   | Impl   | Latency |
++--------------------------------------+-----+--------+--------------+------+--------+---------+
+| + srcnn                              | 28  |        |              |      |        |         |
+|   empty_49_fu_411_p2                 | -   |        | empty_49     | add  | fabric | 0       |
+|   empty_53_fu_456_p2                 | -   |        | empty_53     | add  | fabric | 0       |
+|   empty_57_fu_501_p2                 | -   |        | empty_57     | add  | fabric | 0       |
+|  + conv1                             | 0   |        |              |      |        |         |
+|    add_ln30_fu_570_p2                | -   |        | add_ln30     | add  | fabric | 0       |
+|    add_ln31_fu_594_p2                | -   |        | add_ln31     | add  | fabric | 0       |
+|    empty_110_fu_610_p2               | -   |        | empty_110    | add  | fabric | 0       |
+|    add_ln93_1_fu_633_p2              | -   |        | add_ln93_1   | add  | fabric | 0       |
+|    add_ln93_fu_649_p2                | -   |        | add_ln93     | add  | fabric | 0       |
+|    tmp1_fu_655_p2                    | -   |        | tmp1         | add  | fabric | 0       |
+|    empty_111_fu_665_p2               | -   |        | empty_111    | add  | fabric | 0       |
+|    sub_ln101_fu_734_p2               | -   |        | sub_ln101    | sub  | fabric | 0       |
+|    add_ln101_2_fu_748_p2             | -   |        | add_ln101_2  | add  | fabric | 0       |
+|    add_ln94_fu_769_p2                | -   |        | add_ln94     | add  | fabric | 0       |
+|    add_ln97_1_fu_787_p2              | -   |        | add_ln97_1   | add  | fabric | 0       |
+|    add_ln97_fu_797_p2                | -   |        | add_ln97     | add  | fabric | 0       |
+|    add_ln44_1_fu_893_p2              | -   |        | add_ln44_1   | add  | fabric | 0       |
+|    empty_112_fu_915_p2               | -   |        | empty_112    | add  | fabric | 0       |
+|    add_ln44_fu_927_p2                | -   |        | add_ln44     | add  | fabric | 0       |
+|    add_ln47_fu_937_p2                | -   |        | add_ln47     | add  | fabric | 0       |
+|    empty_113_fu_966_p2               | -   |        | empty_113    | add  | fabric | 0       |
+|    empty_115_fu_987_p2               | -   |        | empty_115    | add  | fabric | 0       |
+|    add_ln47_1_fu_999_p2              | -   |        | add_ln47_1   | add  | fabric | 0       |
+|    empty_116_fu_1009_p2              | -   |        | empty_116    | add  | fabric | 0       |
+|    add_ln48_fu_1025_p2               | -   |        | add_ln48     | add  | fabric | 0       |
+|    add_ln51_fu_1041_p2               | -   |        | add_ln51     | add  | fabric | 0       |
+|    empty_118_fu_1047_p2              | -   |        | empty_118    | add  | fabric | 0       |
+|    mul_5ns_6ns_10_1_1_U4             | -   |        | mul_ln61     | mul  | auto   | 0       |
+|    add_ln52_fu_1073_p2               | -   |        | add_ln52     | add  | fabric | 0       |
+|    add_ln56_fu_1079_p2               | -   |        | add_ln56     | add  | fabric | 0       |
+|    add_ln61_fu_1089_p2               | -   |        | add_ln61     | add  | fabric | 0       |
+|    add_ln114_1_fu_1115_p2            | -   |        | add_ln114_1  | add  | fabric | 0       |
+|    add_ln118_5_fu_1137_p2            | -   |        | add_ln118_5  | add  | fabric | 0       |
+|    add_ln114_fu_1109_p2              | -   |        | add_ln114    | add  | fabric | 0       |
+|    add_ln118_2_fu_1151_p2            | -   |        | add_ln118_2  | add  | fabric | 0       |
+|    add_ln118_6_fu_1160_p2            | -   |        | add_ln118_6  | add  | fabric | 0       |
+|    add_ln118_7_fu_1181_p2            | -   |        | add_ln118_7  | add  | fabric | 0       |
+|    add_ln115_fu_1197_p2              | -   |        | add_ln115    | add  | fabric | 0       |
+|    empty_121_fu_1203_p2              | -   |        | empty_121    | add  | fabric | 0       |
+|    sub_ln118_fu_1232_p2              | -   |        | sub_ln118    | sub  | fabric | 0       |
+|    add_ln118_8_fu_1242_p2            | -   |        | add_ln118_8  | add  | fabric | 0       |
+|    add_ln116_fu_1258_p2              | -   |        | add_ln116    | add  | fabric | 0       |
+|    add_ln118_fu_1264_p2              | -   |        | add_ln118    | add  | fabric | 0       |
+|    add_ln118_1_fu_1273_p2            | -   |        | add_ln118_1  | add  | fabric | 0       |
+|    add_ln118_4_fu_1290_p2            | -   |        | add_ln118_4  | add  | fabric | 0       |
+|    add_ln118_3_fu_1299_p2            | -   |        | add_ln118_3  | add  | fabric | 0       |
+|    empty_123_fu_1379_p2              | -   |        | empty_123    | add  | fabric | 0       |
+|  + conv2                             | 10  |        |              |      |        |         |
+|    add_ln30_fu_820_p2                | -   |        | add_ln30     | add  | fabric | 0       |
+|    add_ln31_fu_840_p2                | -   |        | add_ln31     | add  | fabric | 0       |
+|    add_ln38_fu_868_p2                | -   |        | add_ln38     | add  | fabric | 0       |
+|    empty_81_fu_880_p2                | -   |        | empty_81     | add  | fabric | 0       |
+|    next_mul_fu_886_p2                | -   |        | next_mul     | add  | fabric | 0       |
+|    next_urem_fu_930_p2               | -   |        | next_urem    | add  | fabric | 0       |
+|    add_ln99_1_fu_960_p2              | -   |        | add_ln99_1   | add  | fabric | 0       |
+|    add_ln99_fu_966_p2                | -   |        | add_ln99     | add  | fabric | 0       |
+|    mul_6ns_19ns_24_1_1_U23           | 1   |        | empty_84     | mul  | auto   | 0       |
+|    add_ln108_fu_1012_p2              | -   |        | add_ln108    | add  | fabric | 0       |
+|    add_ln100_fu_1028_p2              | -   |        | add_ln100    | add  | fabric | 0       |
+|    empty_85_fu_1034_p2               | -   |        | empty_85     | add  | fabric | 0       |
+|    empty_86_fu_1063_p2               | -   |        | empty_86     | sub  | fabric | 0       |
+|    tmp2_fu_1087_p2                   | -   |        | tmp2         | add  | fabric | 0       |
+|    add_ln108_4_fu_1131_p2            | -   |        | add_ln108_4  | add  | fabric | 0       |
+|    add_ln101_fu_1142_p2              | -   |        | add_ln101    | add  | fabric | 0       |
+|    empty_89_fu_1179_p2               | -   |        | empty_89     | add  | fabric | 0       |
+|    add_ln53_fu_1191_p2               | -   |        | add_ln53     | add  | fabric | 0       |
+|    add_ln70_fu_1284_p2               | -   |        | add_ln70     | add  | fabric | 0       |
+|    empty_101_fu_1290_p2              | -   |        | empty_101    | add  | fabric | 0       |
+|    empty_103_fu_1311_p2              | -   |        | empty_103    | add  | fabric | 0       |
+|    add_ln55_fu_1323_p2               | -   |        | add_ln55     | add  | fabric | 0       |
+|    add_ln70_1_fu_1337_p2             | -   |        | add_ln70_1   | add  | fabric | 0       |
+|    empty_104_fu_1354_p2              | -   |        | empty_104    | add  | fabric | 0       |
+|    add_ln56_fu_1370_p2               | -   |        | add_ln56     | add  | fabric | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U19 | 3   |        | mul50_5      | fmul | maxdsp | 2       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U20 | 3   |        | mul50_6      | fmul | maxdsp | 2       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U21 | 3   |        | mul50_7      | fmul | maxdsp | 2       |
+|    add_ln121_1_fu_1376_p2            | -   |        | add_ln121_1  | add  | fabric | 0       |
+|    add_ln125_8_fu_1398_p2            | -   |        | add_ln125_8  | add  | fabric | 0       |
+|    add_ln121_fu_1414_p2              | -   |        | add_ln121    | add  | fabric | 0       |
+|    empty_105_fu_1420_p2              | -   |        | empty_105    | add  | fabric | 0       |
+|    add_ln125_6_fu_1439_p2            | -   |        | add_ln125_6  | add  | fabric | 0       |
+|    add_ln125_9_fu_1452_p2            | -   |        | add_ln125_9  | add  | fabric | 0       |
+|    add_ln125_10_fu_1473_p2           | -   |        | add_ln125_10 | add  | fabric | 0       |
+|    add_ln122_fu_1489_p2              | -   |        | add_ln122    | add  | fabric | 0       |
+|    empty_107_fu_1495_p2              | -   |        | empty_107    | add  | fabric | 0       |
+|    sub_ln125_fu_1524_p2              | -   |        | sub_ln125    | sub  | fabric | 0       |
+|    add_ln125_11_fu_1534_p2           | -   |        | add_ln125_11 | add  | fabric | 0       |
+|    add_ln123_fu_1550_p2              | -   |        | add_ln123    | add  | fabric | 0       |
+|    add_ln125_fu_1556_p2              | -   |        | add_ln125    | add  | fabric | 0       |
+|    add_ln125_4_fu_1565_p2            | -   |        | add_ln125_4  | add  | fabric | 0       |
+|    add_ln125_7_fu_1582_p2            | -   |        | add_ln125_7  | add  | fabric | 0       |
+|    add_ln125_5_fu_1591_p2            | -   |        | add_ln125_5  | add  | fabric | 0       |
+|    empty_109_fu_1676_p2              | -   |        | empty_109    | add  | fabric | 0       |
+|  + conv3                             | 1   |        |              |      |        |         |
+|    add_ln31_fu_907_p2                | -   |        | add_ln31     | add  | fabric | 0       |
+|    add_ln32_fu_931_p2                | -   |        | add_ln32     | add  | fabric | 0       |
+|    add_ln39_1_fu_953_p2              | -   |        | add_ln39_1   | add  | fabric | 0       |
+|    add_ln39_fu_965_p2                | -   |        | add_ln39     | add  | fabric | 0       |
+|    empty_60_fu_977_p2                | -   |        | empty_60     | add  | fabric | 0       |
+|    next_mul_fu_983_p2                | -   |        | next_mul     | add  | fabric | 0       |
+|    next_urem_fu_1027_p2              | -   |        | next_urem    | add  | fabric | 0       |
+|    add_ln99_fu_1057_p2               | -   |        | add_ln99     | add  | fabric | 0       |
+|    empty_63_fu_1067_p2               | -   |        | empty_63     | add  | fabric | 0       |
+|    mul_5ns_19ns_23_1_1_U38           | 1   |        | mul_ln108    | mul  | auto   | 0       |
+|    add_ln108_fu_1086_p2              | -   |        | add_ln108    | add  | fabric | 0       |
+|    add_ln100_1_fu_1119_p2            | -   |        | add_ln100_1  | add  | fabric | 0       |
+|    add_ln100_fu_1135_p2              | -   |        | add_ln100    | add  | fabric | 0       |
+|    tmp1_fu_1141_p2                   | -   |        | tmp1         | add  | fabric | 0       |
+|    empty_64_fu_1151_p2               | -   |        | empty_64     | add  | fabric | 0       |
+|    sub_ln108_fu_1220_p2              | -   |        | sub_ln108    | sub  | fabric | 0       |
+|    add_ln108_3_fu_1230_p2            | -   |        | add_ln108_3  | add  | fabric | 0       |
+|    add_ln101_fu_1258_p2              | -   |        | add_ln101    | add  | fabric | 0       |
+|    add_ln104_1_fu_1276_p2            | -   |        | add_ln104_1  | add  | fabric | 0       |
+|    add_ln104_fu_1286_p2              | -   |        | add_ln104    | add  | fabric | 0       |
+|    add_ln108_1_fu_1348_p2            | -   |        | add_ln108_1  | add  | fabric | 0       |
+|    add_ln108_2_fu_1357_p2            | -   |        | add_ln108_2  | add  | fabric | 0       |
+|    mul_5ns_8ns_12_1_1_U39            | -   |        | empty_65     | mul  | auto   | 0       |
+|    tmp11_fu_1114_p2                  | -   |        | tmp11        | add  | fabric | 0       |
+|    empty_66_fu_1398_p2               | -   |        | empty_66     | add  | fabric | 0       |
+|    add_ln54_fu_1410_p2               | -   |        | add_ln54     | add  | fabric | 0       |
+|    empty_67_fu_1420_p2               | -   |        | empty_67     | add  | fabric | 0       |
+|    add_ln55_fu_1436_p2               | -   |        | add_ln55     | add  | fabric | 0       |
+|    add_ln58_fu_1452_p2               | -   |        | add_ln58     | add  | fabric | 0       |
+|    empty_68_fu_1478_p2               | -   |        | empty_68     | add  | fabric | 0       |
+|    tmp10_fu_1504_p2                  | -   |        | tmp10        | add  | fabric | 0       |
+|    empty_69_fu_1509_p2               | -   |        | empty_69     | add  | fabric | 0       |
+|    tmp12_fu_1514_p2                  | -   |        | tmp12        | add  | fabric | 0       |
+|    empty_70_fu_1524_p2               | -   |        | empty_70     | add  | fabric | 0       |
+|    tmp14_fu_1529_p2                  | -   |        | tmp14        | add  | fabric | 0       |
+|    empty_71_fu_1539_p2               | -   |        | empty_71     | add  | fabric | 0       |
+|    tmp16_fu_1544_p2                  | -   |        | tmp16        | add  | fabric | 0       |
+|    empty_72_fu_1554_p2               | -   |        | empty_72     | add  | fabric | 0       |
+|    tmp18_fu_1559_p2                  | -   |        | tmp18        | add  | fabric | 0       |
+|    empty_73_fu_1569_p2               | -   |        | empty_73     | add  | fabric | 0       |
+|    tmp20_fu_1574_p2                  | -   |        | tmp20        | add  | fabric | 0       |
+|    empty_74_fu_1584_p2               | -   |        | empty_74     | add  | fabric | 0       |
+|    tmp22_fu_1589_p2                  | -   |        | tmp22        | add  | fabric | 0       |
+|    empty_75_fu_1599_p2               | -   |        | empty_75     | add  | fabric | 0       |
+|    empty_76_fu_1604_p2               | -   |        | empty_76     | add  | fabric | 0       |
+|    empty_77_fu_1609_p2               | -   |        | empty_77     | add  | fabric | 0       |
+|    mul_5ns_6ns_9_1_1_U40             | -   |        | mul_ln59     | mul  | auto   | 0       |
+|    add_ln59_fu_1751_p2               | -   |        | add_ln59     | add  | fabric | 0       |
+|    add_ln63_fu_1757_p2               | -   |        | add_ln63     | add  | fabric | 0       |
+|    add_ln68_8_fu_1767_p2             | -   |        | add_ln68_8   | add  | fabric | 0       |
+|    add_ln68_fu_1772_p2               | -   |        | add_ln68     | add  | fabric | 0       |
+|    add_ln68_1_fu_1787_p2             | -   |        | add_ln68_1   | add  | fabric | 0       |
+|    add_ln68_2_fu_1802_p2             | -   |        | add_ln68_2   | add  | fabric | 0       |
+|    add_ln68_3_fu_1817_p2             | -   |        | add_ln68_3   | add  | fabric | 0       |
+|    add_ln68_4_fu_1832_p2             | -   |        | add_ln68_4   | add  | fabric | 0       |
+|    add_ln68_5_fu_1847_p2             | -   |        | add_ln68_5   | add  | fabric | 0       |
+|    add_ln68_6_fu_1862_p2             | -   |        | add_ln68_6   | add  | fabric | 0       |
+|    add_ln68_7_fu_1877_p2             | -   |        | add_ln68_7   | add  | fabric | 0       |
+|    add_ln125_4_fu_1940_p2            | -   |        | add_ln125_4  | add  | fabric | 0       |
+|    add_ln122_fu_1956_p2              | -   |        | add_ln122    | add  | fabric | 0       |
+|    empty_78_fu_1962_p2               | -   |        | empty_78     | add  | fabric | 0       |
+|    sub_ln125_fu_1991_p2              | -   |        | sub_ln125    | sub  | fabric | 0       |
+|    add_ln125_5_fu_2005_p2            | -   |        | add_ln125_5  | add  | fabric | 0       |
+|    add_ln123_fu_2021_p2              | -   |        | add_ln123    | add  | fabric | 0       |
+|    add_ln125_fu_2027_p2              | -   |        | add_ln125    | add  | fabric | 0       |
+|    add_ln125_1_fu_2036_p2            | -   |        | add_ln125_1  | add  | fabric | 0       |
+|    empty_80_fu_2098_p2               | -   |        | empty_80     | add  | fabric | 0       |
++--------------------------------------+-----+--------+--------------+------+--------+---------+
 
 
 ================================================================
 == Bind Storage Report
 ================================================================
-+--------------------------+------+------+--------+---------------------+---------+------+---------+
-| Name                     | BRAM | URAM | Pragma | Variable            | Storage | Impl | Latency |
-+--------------------------+------+------+--------+---------------------+---------+------+---------+
-| + srcnn                  | 83   | 0    |        |                     |         |      |         |
-|  + conv1                 | 40   | 0    |        |                     |         |      |         |
-|    input_fm_buffer_2_0_U | 2    | -    |        | input_fm_buffer_2_0 | ram_1p  | auto | 1       |
-|    output_fm_buffer_1_U  | 38   | -    |        | output_fm_buffer_1  | ram_1p  | auto | 1       |
-|  + conv2                 | 30   | 0    |        |                     |         |      |         |
-|    input_fm_buffer_1_U   | 8    | -    |        | input_fm_buffer_1   | ram_s2p | auto | 1       |
-|    output_fm_buffer_U    | 22   | -    |        | output_fm_buffer    | ram_1p  | auto | 1       |
-|  + conv3                 | 9    | 0    |        |                     |         |      |         |
-|    input_fm_buffer_U     | 8    | -    |        | input_fm_buffer     | ram_1p  | auto | 1       |
-|    output_fm_buffer_0_U  | 1    | -    |        | output_fm_buffer_0  | ram_1p  | auto | 1       |
-+--------------------------+------+------+--------+---------------------+---------+------+---------+
++---------------------------------------------------------------+------+------+--------+----------------------------------------------------------+---------+------+---------+
+| Name                                                          | BRAM | URAM | Pragma | Variable                                                 | Storage | Impl | Latency |
++---------------------------------------------------------------+------+------+--------+----------------------------------------------------------+---------+------+---------+
+| + srcnn                                                       | 83   | 0    |        |                                                          |         |      |         |
+|  + conv1                                                      | 40   | 0    |        |                                                          |         |      |         |
+|    input_fm_buffer_0_U                                        | 2    | -    |        | input_fm_buffer_0                                        | ram_1p  | auto | 1       |
+|    output_fm_buffer_1_U                                       | 38   | -    |        | output_fm_buffer_1                                       | ram_1p  | auto | 1       |
+|  + conv2                                                      | 30   | 0    |        |                                                          |         |      |         |
+|    conv2_float_255_255_float_64_1_1_float_float_255_255_i_7_U | 1    | -    |        | conv2_float_255_255_float_64_1_1_float_float_255_255_i_7 | ram_1p  | auto | 1       |
+|    conv2_float_255_255_float_64_1_1_float_float_255_255_i_6_U | 1    | -    |        | conv2_float_255_255_float_64_1_1_float_float_255_255_i_6 | ram_1p  | auto | 1       |
+|    conv2_float_255_255_float_64_1_1_float_float_255_255_i_5_U | 1    | -    |        | conv2_float_255_255_float_64_1_1_float_float_255_255_i_5 | ram_1p  | auto | 1       |
+|    conv2_float_255_255_float_64_1_1_float_float_255_255_i_4_U | 1    | -    |        | conv2_float_255_255_float_64_1_1_float_float_255_255_i_4 | ram_1p  | auto | 1       |
+|    conv2_float_255_255_float_64_1_1_float_float_255_255_i_3_U | 1    | -    |        | conv2_float_255_255_float_64_1_1_float_float_255_255_i_3 | ram_1p  | auto | 1       |
+|    conv2_float_255_255_float_64_1_1_float_float_255_255_i_2_U | 1    | -    |        | conv2_float_255_255_float_64_1_1_float_float_255_255_i_2 | ram_1p  | auto | 1       |
+|    conv2_float_255_255_float_64_1_1_float_float_255_255_i_1_U | 1    | -    |        | conv2_float_255_255_float_64_1_1_float_float_255_255_i_1 | ram_1p  | auto | 1       |
+|    conv2_float_255_255_float_64_1_1_float_float_255_255_i_U   | 1    | -    |        | conv2_float_255_255_float_64_1_1_float_float_255_255_i   | ram_1p  | auto | 1       |
+|    output_fm_buffer_U                                         | 22   | -    |        | output_fm_buffer                                         | ram_1p  | auto | 1       |
+|  + conv3                                                      | 9    | 0    |        |                                                          |         |      |         |
+|    conv3_float_255_255_float_32_5_5_float_float_255_255_i_7_U | 1    | -    |        | conv3_float_255_255_float_32_5_5_float_float_255_255_i_7 | ram_1p  | auto | 1       |
+|    conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_U | 1    | -    |        | conv3_float_255_255_float_32_5_5_float_float_255_255_i_1 | ram_1p  | auto | 1       |
+|    conv3_float_255_255_float_32_5_5_float_float_255_255_i_U   | 1    | -    |        | conv3_float_255_255_float_32_5_5_float_float_255_255_i   | ram_1p  | auto | 1       |
+|    conv3_float_255_255_float_32_5_5_float_float_255_255_i_6_U | 1    | -    |        | conv3_float_255_255_float_32_5_5_float_float_255_255_i_6 | ram_1p  | auto | 1       |
+|    conv3_float_255_255_float_32_5_5_float_float_255_255_i_5_U | 1    | -    |        | conv3_float_255_255_float_32_5_5_float_float_255_255_i_5 | ram_1p  | auto | 1       |
+|    conv3_float_255_255_float_32_5_5_float_float_255_255_i_4_U | 1    | -    |        | conv3_float_255_255_float_32_5_5_float_float_255_255_i_4 | ram_1p  | auto | 1       |
+|    conv3_float_255_255_float_32_5_5_float_float_255_255_i_3_U | 1    | -    |        | conv3_float_255_255_float_32_5_5_float_float_255_255_i_3 | ram_1p  | auto | 1       |
+|    conv3_float_255_255_float_32_5_5_float_float_255_255_i_2_U | 1    | -    |        | conv3_float_255_255_float_32_5_5_float_float_255_255_i_2 | ram_1p  | auto | 1       |
+|    output_fm_buffer_0_U                                       | 1    | -    |        | output_fm_buffer_0                                       | ram_1p  | auto | 1       |
++---------------------------------------------------------------+------+------+--------+----------------------------------------------------------+---------+------+---------+
 
 
 ================================================================
 == Pragma Report
 ================================================================
 * Valid Pragma Syntax
-+-----------+----------------------------------------------------+-----------------------------------------------+
-| Type      | Options                                            | Location                                      |
-+-----------+----------------------------------------------------+-----------------------------------------------+
-| pipeline  | off                                                | src/conv1.cpp:27 in conv1                     |
-| pipeline  | off                                                | src/conv2.cpp:27 in conv2                     |
-| unroll    | factor=8                                           | src/conv2.cpp:68 in conv2                     |
-| pipeline  | off                                                | src/conv3.cpp:28 in conv3                     |
-| pipeline  | off                                                | src/srcnn.cpp:19 in srcnn                     |
-| interface | m_axi port=input_ftmap offset=slave depth=1        | src/srcnn.cpp:22 in srcnn, input_ftmap        |
-| interface | m_axi port=conv1_weights offset=slave depth=1      | src/srcnn.cpp:23 in srcnn, conv1_weights      |
-| interface | m_axi port=conv1_biases offset=slave depth=1       | src/srcnn.cpp:24 in srcnn, conv1_biases       |
-| interface | m_axi port=conv1_output_ftmap offset=slave depth=1 | src/srcnn.cpp:25 in srcnn, conv1_output_ftmap |
-| interface | m_axi port=conv2_weights offset=slave depth=1      | src/srcnn.cpp:26 in srcnn, conv2_weights      |
-| interface | m_axi port=conv2_biases offset=slave depth=1       | src/srcnn.cpp:27 in srcnn, conv2_biases       |
-| interface | m_axi port=conv2_output_ftmap offset=slave depth=1 | src/srcnn.cpp:28 in srcnn, conv2_output_ftmap |
-| interface | m_axi port=conv3_weights offset=slave depth=1      | src/srcnn.cpp:29 in srcnn, conv3_weights      |
-| interface | m_axi port=conv3_biases offset=slave depth=1       | src/srcnn.cpp:30 in srcnn, conv3_biases       |
-| interface | m_axi port=output_ftmap offset=slave depth=1       | src/srcnn.cpp:31 in srcnn, output_ftmap       |
-| interface | s_axilite port=return                              | src/srcnn.cpp:32 in srcnn, return             |
-+-----------+----------------------------------------------------+-----------------------------------------------+
++-----------------+----------------------------------------------------+-----------------------------------------------+
+| Type            | Options                                            | Location                                      |
++-----------------+----------------------------------------------------+-----------------------------------------------+
+| pipeline        | off                                                | src/conv1.cpp:27 in conv1                     |
+| pipeline        | off                                                | src/conv2.cpp:27 in conv2                     |
+| array_partition | variable=input_fm_buffer type=complete             | src/conv2.cpp:45 in conv2, input_fm_buffer    |
+| unroll          | factor=8                                           | src/conv2.cpp:69 in conv2                     |
+| pipeline        | off                                                | src/conv3.cpp:28 in conv3                     |
+| array_partition | variable=input_fm_buffer type=complete             | src/conv3.cpp:45 in conv3, input_fm_buffer    |
+| unroll          | factor=8                                           | src/conv3.cpp:67 in conv3                     |
+| pipeline        | off                                                | src/srcnn.cpp:19 in srcnn                     |
+| interface       | m_axi port=input_ftmap offset=slave depth=1        | src/srcnn.cpp:22 in srcnn, input_ftmap        |
+| interface       | m_axi port=conv1_weights offset=slave depth=1      | src/srcnn.cpp:23 in srcnn, conv1_weights      |
+| interface       | m_axi port=conv1_biases offset=slave depth=1       | src/srcnn.cpp:24 in srcnn, conv1_biases       |
+| interface       | m_axi port=conv1_output_ftmap offset=slave depth=1 | src/srcnn.cpp:25 in srcnn, conv1_output_ftmap |
+| interface       | m_axi port=conv2_weights offset=slave depth=1      | src/srcnn.cpp:26 in srcnn, conv2_weights      |
+| interface       | m_axi port=conv2_biases offset=slave depth=1       | src/srcnn.cpp:27 in srcnn, conv2_biases       |
+| interface       | m_axi port=conv2_output_ftmap offset=slave depth=1 | src/srcnn.cpp:28 in srcnn, conv2_output_ftmap |
+| interface       | m_axi port=conv3_weights offset=slave depth=1      | src/srcnn.cpp:29 in srcnn, conv3_weights      |
+| interface       | m_axi port=conv3_biases offset=slave depth=1       | src/srcnn.cpp:30 in srcnn, conv3_biases       |
+| interface       | m_axi port=output_ftmap offset=slave depth=1       | src/srcnn.cpp:31 in srcnn, output_ftmap       |
+| interface       | s_axilite port=return                              | src/srcnn.cpp:32 in srcnn, return             |
++-----------------+----------------------------------------------------+-----------------------------------------------+
 
 
