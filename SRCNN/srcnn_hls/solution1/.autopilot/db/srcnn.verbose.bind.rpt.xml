@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'srcnn'" level="0">
+<item name = "Date">Mon Oct 30 14:36:27 2023
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">srcnn_hls</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">5587982288, 5587982288, 55.880 sec, 55.880 sec, 5587982289, 5587982289, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_conv1_fu_279">conv1, 3215508556, 3215508556, 32.155 sec, 32.155 sec, 3215508556, 3215508556, no</column>
+<column name="grp_conv2_fu_293">conv2, 1270335406, 1270335406, 12.703 sec, 12.703 sec, 1270335406, 1270335406, no</column>
+<column name="grp_conv3_fu_307">conv3, 1089523442, 1089523442, 10.895 sec, 10.895 sec, 1089523442, 1089523442, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">8323200, 8323200, 2, -, -, 4161600, no</column>
+<column name="- Loop 2">4161600, 4161600, 2, -, -, 2080800, no</column>
+<column name="- Loop 3">130050, 130050, 2, -, -, 65025, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -12,6 +12,8 @@ using namespace std;
 ftmap_t img_LR_set14[N0][H][W];  // low resolution input image
 ftmap_t img_HR_set14[N0][H][W];  // high-resolution output image
 ftmap_t img_GT_set14[N0][H][W];
+ftmap_t layer_1_output_set14[N1][H][W] = {0};
+ftmap_t layer_2_output_set14[N2][H][W] = {0};
 
 param_t conv1_weights_set14[N1][N0][F1][F1];
 param_t conv1_biases_set14[N1];
@@ -114,8 +116,10 @@ int tb_set14()
 				srcnn(img_LR_set14,
 					  conv1_weights_set14,
 					  conv1_biases_set14,
+					  layer_1_output_set14,
 					  conv2_weights_set14,
 					  conv2_biases_set14,
+					  layer_2_output_set14,
 					  conv3_weights_set14,
 					  conv3_biases_set14,
 					  img_HR_set14);
