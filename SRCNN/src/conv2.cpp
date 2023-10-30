@@ -27,71 +27,54 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 	#pragma HLS PIPELINE off
 
 	// for each tile (ti, tj) in our T x T grid
-
 	TJ: for (int tj = 0; tj < T; tj++) {
 	TI: for (int ti = 0; ti < T; ti++) {
-		static ftmap_t output_fm_buffer[N2][TH][TW] = {0};
-	TN: for (int tn = 0; tn < N1 / TD1; tn++) {
 
+		static ftmap_t output_fm_buffer[N2][TH][TW] = {0};
 		int ty0 = tj * TH;
 		int tx0 = ti * TW;
-		int tn0 = tn * TD1;
 
-		// initialise input and output buffers
-		static ftmap_t input_fm_buffer[TD1][TH + (2 * P2)][TW + (2 * P2)];
-		// TODO: need a buffer for weights too 
+		// break down the input layers into blocks
+		TN: for (int tn = 0; tn < TD1; tn++) {
+
 		
+			int tn0 = tn * UNROLL;
 
-		// load buffer-sized chunk
-		load_buffer_tile_c2(input_fm_buffer, input_ftmap, tx0, ty0, tn0);
+			// initialise input and output buffers
+			static ftmap_t input_fm_buffer[UNROLL][TH + (2 * P2)][TW + (2 * P2)];
+			// TODO: need a buffer for weights too
+
+			// load buffer-sized chunk
+			load_buffer_tile_c2(input_fm_buffer, input_ftmap, tx0, ty0, tn0);
 
 
-		// for each output layer
-		NOUT: for (int nout = 0; nout < N2; nout++) {
-			// for each pixel in tile
-			TY: for (int ty = 0; ty < TH; ty++) {
-			TX: for (int tx = 0; tx < TW; tx++) {
+			// for each output layer
+			NOUT: for (int nout = 0; nout < N2; nout++) {
+				// for each pixel in tile
+				TY: for (int ty = 0; ty < TH; ty++) {
+				TX: for (int tx = 0; tx < TW; tx++) {
 
-				// for each pixel in the kernel
-				KY: for (int ky = 0; ky < F2; ky++) {
-				KX: for (int kx = 0; kx < F2; kx++) {
+					// for each pixel in the kernel
+					KY: for (int ky = 0; ky < F2; ky++) {
+					KX: for (int kx = 0; kx < F2; kx++) {
 
-					// get buffer-space coordinates
-					int by = ty + ky;
-					int bx = tx + kx;
+						// get buffer-space coordinates
+						int by = ty + ky;
+						int bx = tx + kx;
 
-					// for each input layer
-					// TODO: PIPELINE THIS
-					NIN: for (int nin = 0; nin < TD1; nin++) {
-// it's a yes from me (-56% runtime)
-//#pragma HLS UNROLL factor=8
-						output_fm_buffer[nout][ty][tx] += conv2_weights[nout][tn0 + nin][ky][kx] * input_fm_buffer[nin][by][bx];
-					}
+						// for each input layer
+						NIN: for (int nin = 0; nin < UNROLL; nin++) {
+	// it's a yes from me (-56% runtime)
+	//#pragma HLS UNROLL factor=8
+							output_fm_buffer[nout][ty][tx] += conv2_weights[nout][tn0 + nin][ky][kx] * input_fm_buffer[nin][by][bx];
+						}
+					}}
 				}}
-
-			}}
-
-		}
-
+			}
 		}
 		// load output buffer back to DRAM
 		export_buffer_tile_c2(output_fm_buffer, output_ftmap, tx0, ty0, conv2_biases);
-	}}}
-
-
-	// split relu from rest of loop
-	// nr = relu output layer
-	// xr, yr = relu coordinates within image
-//	for (int nr = 0; nr < N2; nr++) {
-//	for (int yr = 0; yr < H; yr++) {
-//	for (int xr = 0; xr < W; xr++) {
-//
-//		output_ftmap[nr][yr][xr] += conv2_biases[nr];
-//		if (output_ftmap[nr][yr][xr] < 0) {
-//			output_ftmap[nr][yr][xr] = 0;
-//		}
-//
-//	}}}
+	}}
 }
 
 
@@ -100,18 +83,19 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
  * input_fm_buffer = the buffer to load the image features into
  * input_fm = the source image feature maps
  * tx0, ty0 = image space coordinates of tile top left
+ * tn0 = the layer depth to load from
 */
 void load_buffer_tile_c2(
-	ftmap_t input_fm_buffer[N1][TH + (2 * P2)][TW + (2 * P2)],
+	ftmap_t input_fm_buffer[UNROLL][TH + (2 * P2)][TW + (2 * P2)],
 	ftmap_t input_fm[N1][H][W],
 	int tx0,
 	int ty0,
 	int tn0
 ) {
 	// clear buffer
-	memset(input_fm_buffer, 0, TD1 * (TH + (2 * P2)) * (TW + (2 * P2)) * sizeof(ftmap_t));
+	memset(input_fm_buffer, 0, UNROLL * (TH + (2 * P2)) * (TW + (2 * P2)) * sizeof(ftmap_t));
 
-	for (int nin = 0; nin < TD1; nin++) { // input layer
+	for (int nin = 0; nin < UNROLL; nin++) { // input layer
 		for (int by = 0; by < TH + (2 * P2); by++) { // buffer space y
 			for (int bx = 0; bx < TW + (2 * P2); bx++) { // buffer space x
 

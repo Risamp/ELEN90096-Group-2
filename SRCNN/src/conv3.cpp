@@ -1,5 +1,6 @@
 #include "srcnn.h"
 #include <iostream>
+#include "util.h"
 #include <cmath>
 #include <cstring>
 
@@ -29,51 +30,51 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 	// for each tile (ti, tj) in our T x T grid
 	TJ: for (int tj = 0; tj < T; tj++) {
 	TI: for (int ti = 0; ti < T; ti++) {
-		static ftmap_t output_fm_buffer[N3][TH][TW] = {0};
-	TN: for (int tn = 0; tn < N1 / TD2; tn++) {
 
+		static ftmap_t output_fm_buffer[N3][TH][TW] = {0};
 		int ty0 = tj * TH;
 		int tx0 = ti * TW;
-		int tn0 = tn * TD2;
 
-		// initialise input and output buffers
-		static ftmap_t input_fm_buffer[TD2][TH + (2 * P3)][TW + (2 * P3)];
-		
+		// break down the input layers into blocks
+		TN: for (int tn = 0; tn < TD2; tn++) {
 
-		// load buffer-sized chunk
-		load_buffer_tile_c3(input_fm_buffer, input_ftmap, tx0, ty0, tn0);
+			int tn0 = tn * UNROLL;
 
-		// for each output layer
-		for (int nout = 0; nout < N3; nout++) {
+			// initialise input and output buffers
+			static ftmap_t input_fm_buffer[UNROLL][TH + (2 * P3)][TW + (2 * P3)];
 
-			// for each pixel in tile
-			for (int ty = 0; ty < TH; ty++) {
-			for (int tx = 0; tx < TW; tx++) {
 
-				// for each pixel in the kernel
-				for (int ky = 0; ky < F3; ky++) {
-				for (int kx = 0; kx < F3; kx++) {
+			// load buffer-sized chunk
+			load_buffer_tile_c3(input_fm_buffer, input_ftmap, tx0, ty0, tn0);
 
-					// get buffer-space coordinates
-					int by = ty + ky;
-					int bx = tx + kx;
+			// for each output layer
+			NOUT: for (int nout = 0; nout < N3; nout++) {
 
-					// for each input layer
-					// TODO: PIPELINE THIS
-					NIN: for (int nin = 0; nin < TD2; nin++) {
-// it's a yes from me (-56% runtime)
-//#pragma HLS UNROLL factor=8
-						output_fm_buffer[nout][ty][tx] += conv3_weights[nout][tn0 + nin][ky][kx] * input_fm_buffer[nin][by][bx];
-					}
+				// for each pixel in tile
+				TY: for (int ty = 0; ty < TH; ty++) {
+				TX: for (int tx = 0; tx < TW; tx++) {
+
+					// for each pixel in the kernel
+					KY: for (int ky = 0; ky < F3; ky++) {
+					KX: for (int kx = 0; kx < F3; kx++) {
+
+						// get buffer-space coordinates
+						int by = ty + ky;
+						int bx = tx + kx;
+
+						// for each input layer
+						NIN: for (int nin = 0; nin < UNROLL; nin++) {
+							output_fm_buffer[nout][ty][tx] += conv3_weights[nout][tn0 + nin][ky][kx] * input_fm_buffer[nin][by][bx];
+						}
+					}}
+
 				}}
 
-			}}
-
+			}
 		}
 
-	}
 		// load output buffer back to DRAM
-		export_buffer_tile_c3(output_fm_buffer, output_ftmap, tx0, ty0);
+		export_buffer_tile_c3(output_fm_buffer, output_ftmap, tx0, ty0, conv3_biases);
 	}}
 }
 
@@ -85,16 +86,16 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
  * tx0, ty0 = image space coordinates of tile top left
 */
 void load_buffer_tile_c3(
-	ftmap_t input_fm_buffer[N2][TH + (2 * P3)][TW + (2 * P3)],
+	ftmap_t input_fm_buffer[UNROLL][TH + (2 * P3)][TW + (2 * P3)],
 	ftmap_t input_fm[N2][H][W],
 	int tx0,
 	int ty0,
 	int tn0
 ) {
 	// clear buffer
-	memset(input_fm_buffer, 0, TD2 * (TH + (2 * P3)) * (TW + (2 * P3)) * sizeof(ftmap_t));
+	memset(input_fm_buffer, 0, UNROLL * (TH + (2 * P3)) * (TW + (2 * P3)) * sizeof(ftmap_t));
 
-	for (int nin = 0; nin < TD2; nin++) { // input layer
+	for (int nin = 0; nin < UNROLL; nin++) { // input layer
 		for (int by = 0; by < TH + (2 * P3); by++) { // buffer space y
 			for (int bx = 0; bx < TW + (2 * P3); bx++) { // buffer space x
 
@@ -113,13 +114,14 @@ void export_buffer_tile_c3(
 	ftmap_t output_fm_buffer[N3][TH][TW],
 	ftmap_t output_ftmap[N3][H][W],
 	int tx0,
-	int ty0
+	int ty0,
+	param_t conv3_biases[N3]
 ) {
 	for (int nout = 0; nout < N3; nout++) { // output layer
 		for (int ty = 0; ty < TH; ty++) { // tile space y
 			for (int tx = 0; tx < TW; tx++) { // tile space x
 
-				output_ftmap[nout][ty0 + ty][tx0 + tx] = output_fm_buffer[nout][ty][tx] + conv3_biases[nout];
+				output_ftmap[nout][ty0 + ty][tx0 + tx] += output_fm_buffer[nout][ty][tx] + conv3_biases[nout];
 
 			}
 		}

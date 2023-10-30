@@ -12,7 +12,7 @@ add_files src/conv3.cpp
 add_files src/srcnn.cpp
 add_files src/srcnn.h
 add_files -tb test/csim.cpp -cflags "-Isrc -Wno-unknown-pragmas"
-add_files -tb src/srcnn.h
+add_files -tb src/srcnn.h -cflags "-Wno-unknown-pragmas"
 add_files -tb test/tb_conv1.cpp -cflags "-Isrc -Wno-unknown-pragmas"
 add_files -tb test/tb_set14.cpp -cflags "-Isrc -Wno-unknown-pragmas"
 add_files -tb test/tb_srcnn.cpp -cflags "-Isrc -Wno-unknown-pragmas"

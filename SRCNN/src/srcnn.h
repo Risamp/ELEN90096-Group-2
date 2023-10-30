@@ -20,8 +20,9 @@
 #define T 15			// number of tiles in each dimension (width/height)
 #define TH H / T		// input tile height
 #define TW W / T		// input tile width
-#define TD1 N1 / 8		// N1 input tile depth
-#define TD2 N2 / 8		// N2 input tile depth
+#define UNROLL 8		// input tile unroll factor
+#define TD1 N1 / UNROLL		// number of N1 tile blocks
+#define TD2 N2 / UNROLL		// number of N2 tile blocks
 
 
 //Padding values
@@ -82,10 +83,11 @@ void export_buffer_tile_c1(ftmap_t output_fm_buffer[N1][TH][TW],
 						   param_t conv1_biases[N1]
 						   );
 
-void load_buffer_tile_c2(ftmap_t input_fm_buffer[N1][TH + (2 * P2)][TW + (2 * P2)],
+void load_buffer_tile_c2(ftmap_t input_fm_buffer[UNROLL][TH + (2 * P2)][TW + (2 * P2)],
                          ftmap_t input_fm[N1][H][W],
                          int tx0,
-                         int ty0);
+                         int ty0,
+						 int tn0);
 
 void export_buffer_tile_c2(ftmap_t output_fm_buffer[N2][TH][TW],
                            ftmap_t output_ftmap[N2][H][W],
@@ -93,14 +95,16 @@ void export_buffer_tile_c2(ftmap_t output_fm_buffer[N2][TH][TW],
                            int ty0,
 						   param_t conv2_biases[N2]);
 
-void load_buffer_tile_c3(ftmap_t input_fm_buffer[N2][TH + (2 * P3)][TW + (2 * P3)],
+void load_buffer_tile_c3(ftmap_t input_fm_buffer[UNROLL][TH + (2 * P3)][TW + (2 * P3)],
                          ftmap_t input_fm[N2][H][W],
                          int tx0,
-                         int ty0);
+                         int ty0,
+						 int tn0);
 
 void export_buffer_tile_c3(ftmap_t output_fm_buffer[N3][TH][TW],
                            ftmap_t output_ftmap[N3][H][W],
                            int tx0,
-                           int ty0);
+                           int ty0,
+						   param_t conv3_biases[N3]);
 
 #endif /* _SRCNN_H_ */

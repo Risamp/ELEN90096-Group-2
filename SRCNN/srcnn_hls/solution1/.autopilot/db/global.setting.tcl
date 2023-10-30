@@ -45,12 +45,12 @@ set TargetInfo xck26:-sfvc784:-2LV-c
 set SourceFiles {sc {} c {../../src/conv1.cpp ../../src/conv2.cpp ../../src/conv3.cpp ../../src/srcnn.cpp}}
 set SourceFlags {sc {} c {{} {} {} {}}}
 set DirectiveFile {}
-set TBFiles {verilog {../../test/csim.cpp ../../test/tb_conv1.cpp ../../test/tb_set14.cpp ../../test/tb_srcnn.cpp ../../test/util.cpp ../../test/util.h ../../test/output ../../test/set14 ../../test/set5 ../../src/weights} bc {../../test/csim.cpp ../../test/tb_conv1.cpp ../../test/tb_set14.cpp ../../test/tb_srcnn.cpp ../../test/util.cpp ../../test/util.h ../../test/output ../../test/set14 ../../test/set5 ../../src/weights} sc {../../test/csim.cpp ../../test/tb_conv1.cpp ../../test/tb_set14.cpp ../../test/tb_srcnn.cpp ../../test/util.cpp ../../test/util.h ../../test/output ../../test/set14 ../../test/set5 ../../src/weights} vhdl {../../test/csim.cpp ../../test/tb_conv1.cpp ../../test/tb_set14.cpp ../../test/tb_srcnn.cpp ../../test/util.cpp ../../test/util.h ../../test/output ../../test/set14 ../../test/set5 ../../src/weights} c {} cas {../../test/csim.cpp ../../test/tb_conv1.cpp ../../test/tb_set14.cpp ../../test/tb_srcnn.cpp ../../test/util.cpp ../../test/util.h ../../test/output ../../test/set14 ../../test/set5 ../../src/weights}}
+set TBFiles {verilog {../../test/csim.cpp ../../src/srcnn.h ../../test/tb_conv1.cpp ../../test/tb_set14.cpp ../../test/tb_srcnn.cpp ../../test/util.cpp ../../test/util.h ../../test/output ../../test/set14 ../../test/set5 ../../src/weights} bc {../../test/csim.cpp ../../src/srcnn.h ../../test/tb_conv1.cpp ../../test/tb_set14.cpp ../../test/tb_srcnn.cpp ../../test/util.cpp ../../test/util.h ../../test/output ../../test/set14 ../../test/set5 ../../src/weights} vhdl {../../test/csim.cpp ../../src/srcnn.h ../../test/tb_conv1.cpp ../../test/tb_set14.cpp ../../test/tb_srcnn.cpp ../../test/util.cpp ../../test/util.h ../../test/output ../../test/set14 ../../test/set5 ../../src/weights} sc {../../test/csim.cpp ../../src/srcnn.h ../../test/tb_conv1.cpp ../../test/tb_set14.cpp ../../test/tb_srcnn.cpp ../../test/util.cpp ../../test/util.h ../../test/output ../../test/set14 ../../test/set5 ../../src/weights} cas {../../test/csim.cpp ../../src/srcnn.h ../../test/tb_conv1.cpp ../../test/tb_set14.cpp ../../test/tb_srcnn.cpp ../../test/util.cpp ../../test/util.h ../../test/output ../../test/set14 ../../test/set5 ../../src/weights} c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
-set TBTops {verilog {} bc {} sc {} vhdl {} c {} cas {}}
-set TBInstNames {verilog {} bc {} sc {} vhdl {} c {} cas {}}
+set TBTops {verilog {} bc {} vhdl {} sc {} cas {} c {}}
+set TBInstNames {verilog {} bc {} vhdl {} sc {} cas {} c {}}
 set XDCFiles {}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set TBTVFileNotFound {}
