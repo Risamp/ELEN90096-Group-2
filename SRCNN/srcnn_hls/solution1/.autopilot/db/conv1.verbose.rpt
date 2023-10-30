@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv1'
 ================================================================
-* Date:           Mon Oct 30 14:36:27 2023
+* Date:           Mon Oct 30 15:46:59 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -478,7 +478,7 @@ IsGatedGlobalClock: 0
 
 State 1 <SV = 0> <Delay = 0.42>
 ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%tj = alloca i32 1"   --->   Operation 64 'alloca' 'tj' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_7, i32 0, i32 0, void @empty, i32 0, i32 1, void @empty_45, void @empty_32, void @empty, i32 16, i32 16, i32 16, i32 16, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 65 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_7, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty_45, void @empty_32, void @empty, i32 16, i32 16, i32 16, i32 16, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 65 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%output_ftmap_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %output_ftmap" [src/conv1.cpp:10]   --->   Operation 66 'read' 'output_ftmap_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%conv1_biases_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %conv1_biases" [src/conv1.cpp:10]   --->   Operation 67 'read' 'conv1_biases_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%conv1_weights_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %conv1_weights" [src/conv1.cpp:10]   --->   Operation 68 'read' 'conv1_weights_read' <Predicate = true> <Delay = 0.00>

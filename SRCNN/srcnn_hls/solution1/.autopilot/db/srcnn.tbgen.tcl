@@ -200,9 +200,9 @@ set RtlHierarchyInfo {[
 					{"Name" : "gmem_blk_n_AR", "Type" : "RtlSignal"},
 					{"Name" : "gmem_blk_n_R", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "5", "SubInstance" : "grp_conv2_fu_293", "Port" : "gmem", "Inst_start_state" : "26", "Inst_end_state" : "27"},
+					{"ID" : "8", "SubInstance" : "grp_conv3_fu_307", "Port" : "gmem", "Inst_start_state" : "37", "Inst_end_state" : "38"},
 					{"ID" : "1", "SubInstance" : "grp_conv1_fu_279", "Port" : "gmem", "Inst_start_state" : "24", "Inst_end_state" : "25"},
-					{"ID" : "8", "SubInstance" : "grp_conv3_fu_307", "Port" : "gmem", "Inst_start_state" : "37", "Inst_end_state" : "38"}]},
+					{"ID" : "5", "SubInstance" : "grp_conv2_fu_293", "Port" : "gmem", "Inst_start_state" : "26", "Inst_end_state" : "27"}]},
 			{"Name" : "input_ftmap", "Type" : "None", "Direction" : "I"},
 			{"Name" : "conv1_weights", "Type" : "None", "Direction" : "I"},
 			{"Name" : "conv1_biases", "Type" : "None", "Direction" : "I"},

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698636992057">
-  <ports id="1" name="gmem" type="PortType" coreId="695430704" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698641224495">
+  <ports id="1" name="gmem" type="PortType" coreId="1144791102" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataInputObjs>getelementptr</dataInputObjs>
@@ -16,34 +16,34 @@
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="input_ftmap" type="PortType" originalName="input_ftmap" coreId="0" bitwidth="64">
+  <ports id="2" name="input_ftmap" type="PortType" originalName="input_ftmap" coreId="1936028255" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="conv1_weights" type="PortType" originalName="conv1_weights" coreId="540876901" bitwidth="64">
+  <ports id="3" name="conv1_weights" type="PortType" originalName="conv1_weights" coreId="1852142702" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="conv1_biases" type="PortType" originalName="conv1_biases" coreId="0" bitwidth="64">
+  <ports id="4" name="conv1_biases" type="PortType" originalName="conv1_biases" coreId="4294967294" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="conv1_output_ftmap" type="PortType" originalName="conv1_output_ftmap" coreId="775042665" bitwidth="64">
+  <ports id="5" name="conv1_output_ftmap" type="PortType" originalName="conv1_output_ftmap" coreId="2036427877" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="6" name="conv2_weights" type="PortType" originalName="conv2_weights" coreId="538991921" bitwidth="64">
+  <ports id="6" name="conv2_weights" type="PortType" originalName="conv2_weights" coreId="1986948963" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="7" name="conv2_biases" type="PortType" originalName="conv2_biases" coreId="0" bitwidth="64">
+  <ports id="7" name="conv2_biases" type="PortType" originalName="conv2_biases" coreId="1043341373" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="8" name="conv2_output_ftmap" type="PortType" originalName="conv2_output_ftmap" coreId="4294967294" bitwidth="64">
+  <ports id="8" name="conv2_output_ftmap" type="PortType" originalName="conv2_output_ftmap" coreId="946760799" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="9" name="conv3_weights" type="PortType" originalName="conv3_weights" coreId="4294967265" bitwidth="64">
+  <ports id="9" name="conv3_weights" type="PortType" originalName="conv3_weights" coreId="1144791102" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="10" name="conv3_biases" type="PortType" originalName="conv3_biases" coreId="4294967294" bitwidth="64">
+  <ports id="10" name="conv3_biases" type="PortType" originalName="conv3_biases" coreId="695430704" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="11" name="output_ftmap" type="PortType" originalName="output_ftmap" coreId="1852142702" bitwidth="64">
+  <ports id="11" name="output_ftmap" type="PortType" originalName="output_ftmap" coreId="1633643815" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="124" source_obj="//@ports.10" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -372,7 +372,7 @@
       <dataOutputObjs>sext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="sext_ln35" lineNumber="35" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="sext_ln35_fu_380_p1" coreId="3319960144" contextFuncName="srcnn" bitwidth="64" opcode="sext" nodeLabel="8.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="sext_ln35" lineNumber="35" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="sext_ln35_fu_380_p1" coreId="0" contextFuncName="srcnn" bitwidth="64" opcode="sext" nodeLabel="8.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="35" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>

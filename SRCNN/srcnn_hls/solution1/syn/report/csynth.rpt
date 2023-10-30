@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'srcnn'
 ================================================================
 + General Information: 
-    * Date:           Mon Oct 30 14:36:31 2023
+    * Date:           Mon Oct 30 15:47:04 2023
     * Version:        2023.1 (Build 3854077 on May  4 2023)
     * Project:        srcnn_hls
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -415,24 +415,24 @@
 == Pragma Report
 ================================================================
 * Valid Pragma Syntax
-+-----------+----------------------------------------------------+-----------------------------------------------+
-| Type      | Options                                            | Location                                      |
-+-----------+----------------------------------------------------+-----------------------------------------------+
-| pipeline  | off                                                | src/conv1.cpp:28 in conv1                     |
-| pipeline  | off                                                | src/conv2.cpp:28 in conv2                     |
-| pipeline  | off                                                | src/conv3.cpp:28 in conv3                     |
-| pipeline  | off                                                | src/srcnn.cpp:19 in srcnn                     |
-| interface | m_axi port=input_ftmap offset=slave depth=1        | src/srcnn.cpp:22 in srcnn, input_ftmap        |
-| interface | m_axi port=conv1_weights offset=slave depth=1      | src/srcnn.cpp:23 in srcnn, conv1_weights      |
-| interface | m_axi port=conv1_biases offset=slave depth=1       | src/srcnn.cpp:24 in srcnn, conv1_biases       |
-| interface | m_axi port=conv1_output_ftmap offset=slave depth=1 | src/srcnn.cpp:25 in srcnn, conv1_output_ftmap |
-| interface | m_axi port=conv2_weights offset=slave depth=1      | src/srcnn.cpp:26 in srcnn, conv2_weights      |
-| interface | m_axi port=conv2_biases offset=slave depth=1       | src/srcnn.cpp:27 in srcnn, conv2_biases       |
-| interface | m_axi port=conv2_output_ftmap offset=slave depth=1 | src/srcnn.cpp:28 in srcnn, conv2_output_ftmap |
-| interface | m_axi port=conv3_weights offset=slave depth=1      | src/srcnn.cpp:29 in srcnn, conv3_weights      |
-| interface | m_axi port=conv3_biases offset=slave depth=1       | src/srcnn.cpp:30 in srcnn, conv3_biases       |
-| interface | m_axi port=output_ftmap offset=slave depth=1       | src/srcnn.cpp:31 in srcnn, output_ftmap       |
-| interface | s_axilite port=return                              | src/srcnn.cpp:32 in srcnn, return             |
-+-----------+----------------------------------------------------+-----------------------------------------------+
++-----------+-----------------------------------------------+-----------------------------------------------+
+| Type      | Options                                       | Location                                      |
++-----------+-----------------------------------------------+-----------------------------------------------+
+| pipeline  | off                                           | src/conv1.cpp:28 in conv1                     |
+| pipeline  | off                                           | src/conv2.cpp:28 in conv2                     |
+| pipeline  | off                                           | src/conv3.cpp:28 in conv3                     |
+| pipeline  | off                                           | src/srcnn.cpp:19 in srcnn                     |
+| interface | m_axi port=input_ftmap offset=slave           | src/srcnn.cpp:22 in srcnn, input_ftmap        |
+| interface | m_axi port=conv1_weights offset=slave depth=1 | src/srcnn.cpp:23 in srcnn, conv1_weights      |
+| interface | m_axi port=conv1_biases offset=slave depth=1  | src/srcnn.cpp:24 in srcnn, conv1_biases       |
+| interface | m_axi port=conv1_output_ftmap offset=slave    | src/srcnn.cpp:25 in srcnn, conv1_output_ftmap |
+| interface | m_axi port=conv2_weights offset=slave depth=1 | src/srcnn.cpp:26 in srcnn, conv2_weights      |
+| interface | m_axi port=conv2_biases offset=slave depth=1  | src/srcnn.cpp:27 in srcnn, conv2_biases       |
+| interface | m_axi port=conv2_output_ftmap offset=slave    | src/srcnn.cpp:28 in srcnn, conv2_output_ftmap |
+| interface | m_axi port=conv3_weights offset=slave depth=1 | src/srcnn.cpp:29 in srcnn, conv3_weights      |
+| interface | m_axi port=conv3_biases offset=slave depth=1  | src/srcnn.cpp:30 in srcnn, conv3_biases       |
+| interface | m_axi port=output_ftmap offset=slave          | src/srcnn.cpp:31 in srcnn, output_ftmap       |
+| interface | s_axilite port=return                         | src/srcnn.cpp:32 in srcnn, return             |
++-----------+-----------------------------------------------+-----------------------------------------------+
 
 

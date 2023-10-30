@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3'
 ================================================================
-* Date:           Mon Oct 30 14:36:24 2023
+* Date:           Mon Oct 30 15:46:57 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -171,7 +171,7 @@ IsGatedGlobalClock: 0
 
 State 1 <SV = 0> <Delay = 0.42>
 ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%tj = alloca i32 1"   --->   Operation 77 'alloca' 'tj' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_7, i32 0, i32 0, void @empty, i32 0, i32 1, void @empty_45, void @empty_32, void @empty, i32 16, i32 16, i32 16, i32 16, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 78 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_7, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty_45, void @empty_32, void @empty, i32 16, i32 16, i32 16, i32 16, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 78 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%output_ftmap_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %output_ftmap" [src/conv3.cpp:31]   --->   Operation 79 'read' 'output_ftmap_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%conv3_biases_0_0_val_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %conv3_biases_0_0_val" [src/conv3.cpp:31]   --->   Operation 80 'read' 'conv3_biases_0_0_val_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%conv3_weights_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %conv3_weights" [src/conv3.cpp:31]   --->   Operation 81 'read' 'conv3_weights_read' <Predicate = true> <Delay = 0.00>

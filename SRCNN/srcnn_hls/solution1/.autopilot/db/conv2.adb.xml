@@ -517,7 +517,7 @@ entry:0 %tj = alloca i32 1
 
 <Node id="9" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_7, i32 0, i32 0, void @empty, i32 0, i32 1, void @empty_45, void @empty_32, void @empty, i32 16, i32 16, i32 16, i32 16, void @empty, void @empty, i32 4294967295, i32 0
+entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_7, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty_45, void @empty_32, void @empty, i32 16, i32 16, i32 16, i32 16, void @empty, void @empty, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -5367,7 +5367,7 @@ _Z21export_buffer_tile_c2PA17_A17_fPA255_A255_fiiPf.exit:0 %br_ln33 = br void %N
 </dataflow>
 <dataflow id="466" from="StgValue_461" to="specinterface_ln0" fromId="461" toId="65">
 </dataflow>
-<dataflow id="467" from="StgValue_454" to="specinterface_ln0" fromId="454" toId="65">
+<dataflow id="467" from="StgValue_461" to="specinterface_ln0" fromId="461" toId="65">
 </dataflow>
 <dataflow id="469" from="empty_45" to="specinterface_ln0" fromId="468" toId="65">
 </dataflow>

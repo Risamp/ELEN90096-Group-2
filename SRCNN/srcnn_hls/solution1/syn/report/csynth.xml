@@ -2302,16 +2302,16 @@
         <Pragma type="pipeline" location="src/conv2.cpp:28" status="valid" parentFunction="conv2" variable="" isDirective="0" options="off"/>
         <Pragma type="pipeline" location="src/conv3.cpp:28" status="valid" parentFunction="conv3" variable="" isDirective="0" options="off"/>
         <Pragma type="pipeline" location="src/srcnn.cpp:19" status="valid" parentFunction="srcnn" variable="" isDirective="0" options="off"/>
-        <Pragma type="interface" location="src/srcnn.cpp:22" status="valid" parentFunction="srcnn" variable="input_ftmap" isDirective="0" options="m_axi port=input_ftmap offset=slave depth=1"/>
+        <Pragma type="interface" location="src/srcnn.cpp:22" status="valid" parentFunction="srcnn" variable="input_ftmap" isDirective="0" options="m_axi port=input_ftmap offset=slave"/>
         <Pragma type="interface" location="src/srcnn.cpp:23" status="valid" parentFunction="srcnn" variable="conv1_weights" isDirective="0" options="m_axi port=conv1_weights offset=slave depth=1"/>
         <Pragma type="interface" location="src/srcnn.cpp:24" status="valid" parentFunction="srcnn" variable="conv1_biases" isDirective="0" options="m_axi port=conv1_biases offset=slave depth=1"/>
-        <Pragma type="interface" location="src/srcnn.cpp:25" status="valid" parentFunction="srcnn" variable="conv1_output_ftmap" isDirective="0" options="m_axi port=conv1_output_ftmap offset=slave depth=1"/>
+        <Pragma type="interface" location="src/srcnn.cpp:25" status="valid" parentFunction="srcnn" variable="conv1_output_ftmap" isDirective="0" options="m_axi port=conv1_output_ftmap offset=slave"/>
         <Pragma type="interface" location="src/srcnn.cpp:26" status="valid" parentFunction="srcnn" variable="conv2_weights" isDirective="0" options="m_axi port=conv2_weights offset=slave depth=1"/>
         <Pragma type="interface" location="src/srcnn.cpp:27" status="valid" parentFunction="srcnn" variable="conv2_biases" isDirective="0" options="m_axi port=conv2_biases offset=slave depth=1"/>
-        <Pragma type="interface" location="src/srcnn.cpp:28" status="valid" parentFunction="srcnn" variable="conv2_output_ftmap" isDirective="0" options="m_axi port=conv2_output_ftmap offset=slave depth=1"/>
+        <Pragma type="interface" location="src/srcnn.cpp:28" status="valid" parentFunction="srcnn" variable="conv2_output_ftmap" isDirective="0" options="m_axi port=conv2_output_ftmap offset=slave"/>
         <Pragma type="interface" location="src/srcnn.cpp:29" status="valid" parentFunction="srcnn" variable="conv3_weights" isDirective="0" options="m_axi port=conv3_weights offset=slave depth=1"/>
         <Pragma type="interface" location="src/srcnn.cpp:30" status="valid" parentFunction="srcnn" variable="conv3_biases" isDirective="0" options="m_axi port=conv3_biases offset=slave depth=1"/>
-        <Pragma type="interface" location="src/srcnn.cpp:31" status="valid" parentFunction="srcnn" variable="output_ftmap" isDirective="0" options="m_axi port=output_ftmap offset=slave depth=1"/>
+        <Pragma type="interface" location="src/srcnn.cpp:31" status="valid" parentFunction="srcnn" variable="output_ftmap" isDirective="0" options="m_axi port=output_ftmap offset=slave"/>
         <Pragma type="interface" location="src/srcnn.cpp:32" status="valid" parentFunction="srcnn" variable="return" isDirective="0" options="s_axilite port=return"/>
     </PragmaReport>
 </profile>

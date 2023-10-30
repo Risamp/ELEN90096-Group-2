@@ -26002,7 +26002,7 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][2
            param_t conv3_biases[1],
            ftmap_t output_ftmap[1][255][255])
 {
-#line 28 "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl"
+#line 29 "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
 # 16 "src/srcnn.cpp"
 
@@ -26015,16 +26015,16 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][2
 #pragma HLS PIPELINE off
 
 
-#pragma HLS INTERFACE m_axi port=input_ftmap offset=slave depth=1
+#pragma HLS INTERFACE m_axi port=input_ftmap offset=slave
 #pragma HLS INTERFACE m_axi port=conv1_weights offset=slave depth=1
 #pragma HLS INTERFACE m_axi port=conv1_biases offset=slave depth=1
-#pragma HLS INTERFACE m_axi port=conv1_output_ftmap offset=slave depth=1
+#pragma HLS INTERFACE m_axi port=conv1_output_ftmap offset=slave
 #pragma HLS INTERFACE m_axi port=conv2_weights offset=slave depth=1
 #pragma HLS INTERFACE m_axi port=conv2_biases offset=slave depth=1
-#pragma HLS INTERFACE m_axi port=conv2_output_ftmap offset=slave depth=1
+#pragma HLS INTERFACE m_axi port=conv2_output_ftmap offset=slave
 #pragma HLS INTERFACE m_axi port=conv3_weights offset=slave depth=1
 #pragma HLS INTERFACE m_axi port=conv3_biases offset=slave depth=1
-#pragma HLS INTERFACE m_axi port=output_ftmap offset=slave depth=1
+#pragma HLS INTERFACE m_axi port=output_ftmap offset=slave
 #pragma HLS INTERFACE s_axilite port=return
 
  memset(conv1_output_ftmap, 0, 64 * 255 * 255 * sizeof(ftmap_t));
