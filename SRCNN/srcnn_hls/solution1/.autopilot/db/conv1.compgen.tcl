@@ -1,11 +1,5 @@
 # This script segment is generated automatically by AutoPilot
 
-set name srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fcmp} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
-}
-
-
 set name srcnn_mul_5ns_6ns_10_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
@@ -13,7 +7,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_conv1_input_fm_buffer_1_0_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler srcnn_conv1_input_fm_buffer_2_0_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
@@ -29,32 +23,13 @@ if {${::AESL::PGuard_autoexp_gen}} {
     AESL_LIB_XILADAPTER::native_axis_begin
 }
 
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 13 \
-    name conv1_output_ftmap \
-    reset_level 1 \
-    sync_rst true \
-    dir O \
-    corename conv1_output_ftmap \
-    op interface \
-    ports { conv1_output_ftmap_address0 { O 22 vector } conv1_output_ftmap_ce0 { O 1 bit } conv1_output_ftmap_we0 { O 1 bit } conv1_output_ftmap_d0 { O 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_output_ftmap'"
-}
-}
-
-
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 9 \
+    id 8 \
     name gmem \
     type other \
-    dir I \
+    dir IO \
     reset_level 1 \
     sync_rst true \
     corename dc_gmem \
@@ -66,7 +41,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 10 \
+    id 9 \
     name input_ftmap \
     type other \
     dir I \
@@ -81,7 +56,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 11 \
+    id 10 \
     name conv1_weights \
     type other \
     dir I \
@@ -96,7 +71,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 12 \
+    id 11 \
     name conv1_biases \
     type other \
     dir I \
@@ -105,6 +80,21 @@ eval "cg_default_interface_gen_dc { \
     corename dc_conv1_biases \
     op interface \
     ports { conv1_biases { I 64 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 12 \
+    name output_ftmap \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_output_ftmap \
+    op interface \
+    ports { output_ftmap { I 64 vector } } \
 } "
 }
 

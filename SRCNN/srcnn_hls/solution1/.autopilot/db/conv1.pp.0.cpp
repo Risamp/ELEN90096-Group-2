@@ -164,12 +164,14 @@ typedef float param_t;
 
 void srcnn(ftmap_t input_ftmap[1][255][255],
            param_t conv1_weights[64][1][9][9],
-           param_t conv1_biases[64],
-           param_t conv2_weights[32][64][1][1],
-           param_t conv2_biases[32],
-           param_t conv3_weights[1][32][5][5],
-           param_t conv3_biases[1],
-           ftmap_t output_ftmap[1][255][255]);
+     param_t conv1_biases[64],
+     ftmap_t conv1_output_ftmap[64][255][255],
+     param_t conv2_weights[32][64][1][1],
+     param_t conv2_biases[32],
+     ftmap_t conv2_output_ftmap[32][255][255],
+     param_t conv3_weights[1][32][5][5],
+     param_t conv3_biases[1],
+     ftmap_t output_ftmap[1][255][255]);
 
 
 void conv1(ftmap_t input_ftmap[1][255][255],

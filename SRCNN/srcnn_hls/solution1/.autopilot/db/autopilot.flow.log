@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1 opened at Sat Oct 28 18:17:59 +1100 2023
+INFO-FLOW: Workspace C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1 opened at Mon Oct 30 14:35:54 +1100 2023
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     set_part xck26-sfvc784-2LV-c 
@@ -7,7 +7,7 @@ DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2023.1\lib\win
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2023.1/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
-Command       create_platform done; 0.716 sec.
+Command       create_platform done; 0.762 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
@@ -20,13 +20,13 @@ Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/ut
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.133 sec.
+Command       ap_source done; 0.132 sec.
 Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 0.862 sec.
+Command     set_part done; 0.909 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
-Command   open_solution done; 1 sec.
+Command   open_solution done; 1.07 sec.
 Execute   set_part xck26-sfvc784-2LV-c 
 INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
 Execute     create_platform xck26-sfvc784-2LV-c -board  
@@ -42,10 +42,10 @@ Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.128 sec.
+Command     ap_source done; 0.125 sec.
 Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.156 sec.
+Command   set_part done; 0.149 sec.
 Execute   create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 Execute   source ./srcnn_hls/solution1/directives.tcl 
@@ -56,7 +56,7 @@ Execute   csynth_design
 INFO: [HLS 200-1510] Running: csynth_design 
 INFO-FLOW: Running SLX 'csynth' proc: ::SLX::run_csynth
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.317 seconds; current allocated memory: 91.969 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.329 seconds; current allocated memory: 91.957 MB.
 Execute       set_directive_top srcnn -name=srcnn 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
@@ -68,16 +68,16 @@ Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info
 INFO-FLOW: Running: GCC PP 39
 INFO-FLOW: Source preprocessing
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang src/conv1.cpp -foptimization-record-file=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -insert-hls-directive=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/all.directive.json -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.pp.0.cpp {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.cpp.clang.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.cpp.clang.err.log
-INFO-FLOW: Done: GCC PP 39 time: 0.7 seconds per iteration
+INFO-FLOW: Done: GCC PP 39 time: 0.6 seconds per iteration
 INFO-FLOW: Source syntax check for synthesis
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.pp.0.cpp {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/clang.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/clang.err.log
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/.systemc_flag -fix-errors C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.404 sec.
+Command       clang_tidy done; 0.423 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/all.directive.json -fix-errors C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.431 sec.
+Command       clang_tidy done; 0.412 sec.
 INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.4 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
@@ -95,23 +95,23 @@ Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info
 INFO-FLOW: Running: GCC PP 39
 INFO-FLOW: Source preprocessing
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang src/conv2.cpp -foptimization-record-file=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -insert-hls-directive=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/all.directive.json -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.pp.0.cpp {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.cpp.clang.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.cpp.clang.err.log
-INFO-FLOW: Done: GCC PP 39 time: 0.6 seconds per iteration
+INFO-FLOW: Done: GCC PP 39 time: 0.7 seconds per iteration
 INFO-FLOW: Source syntax check for synthesis
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.pp.0.cpp {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/clang.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/clang.err.log
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/.systemc_flag -fix-errors C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.429 sec.
+Command       clang_tidy done; 0.466 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/all.directive.json -fix-errors C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.413 sec.
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.4 seconds per iteration
+Command       clang_tidy done; 0.507 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.5 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.pp.0.cpp.clang-tidy.loop-label.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.pp.0.cpp.clang-tidy.loop-label.err.log
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Command       clang_tidy done; 0.704 sec.
+Command       clang_tidy done; 0.831 sec.
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.pp.0.cpp.xilinx-dataflow-lawyer.err.log
 Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
 INFO-FLOW: compiling source code to llvm bc
@@ -128,17 +128,17 @@ INFO-FLOW: Source syntax check for synthesis
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.pp.0.cpp {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/clang.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/clang.err.log
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/.systemc_flag -fix-errors C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.379 sec.
+Command       clang_tidy done; 0.394 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/all.directive.json -fix-errors C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.416 sec.
+Command       clang_tidy done; 0.392 sec.
 INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.4 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.pp.0.cpp.clang-tidy.loop-label.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.pp.0.cpp.clang-tidy.loop-label.err.log
-Command       clang_tidy done; 0.795 sec.
+Command       clang_tidy done; 0.772 sec.
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.pp.0.cpp.xilinx-dataflow-lawyer.err.log
 Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
 INFO-FLOW: compiling source code to llvm bc
@@ -155,55 +155,55 @@ INFO-FLOW: Source syntax check for synthesis
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/clang.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/clang.err.log
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/.systemc_flag -fix-errors C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.375 sec.
+Command       clang_tidy done; 0.381 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/all.directive.json -fix-errors C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.541 sec.
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.5 seconds per iteration
+Command       clang_tidy done; 0.566 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.6 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp.clang-tidy.loop-label.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp.clang-tidy.loop-label.err.log
-Command       clang_tidy done; 0.44 sec.
+Command       clang_tidy done; 0.432 sec.
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp.xilinx-dataflow-lawyer.err.log
 Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
 INFO-FLOW: compiling source code to llvm bc
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.bc {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp.clang.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp.clang.err.log
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 15.637 seconds; current allocated memory: 92.750 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 16.376 seconds; current allocated memory: 92.688 MB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
 Execute       run_link_or_opt -out C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.0.bc -args  "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.g.bc" "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.g.bc" "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.g.bc" "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.g.bc"  
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.g.bc C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.g.bc C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.g.bc C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.g.bc -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.0.bc > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log
 INFO-FLOW: 
-Command       run_link_or_opt done; 0.159 sec.
+Command       run_link_or_opt done; 0.151 sec.
 Execute       run_link_or_opt -opt -out C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.1.lower.bc -args C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.1.lower.bc > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log
 INFO-FLOW: 
 INFO-FLOW: Running: gen_design_size_report post-opt
 INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
-Command       run_link_or_opt done; 0.169 sec.
+Command       run_link_or_opt done; 0.159 sec.
 INFO-FLOW: Linking math bc lib
 Execute       run_link_or_opt -out C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.2.m1.bc -args C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libhlsmc++_39.bc 
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libhlsmc++_39.bc -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.2.m1.bc > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log
 INFO-FLOW: 
-Command       run_link_or_opt done; 1.91 sec.
+Command       run_link_or_opt done; 1.888 sec.
 Execute       run_link_or_opt -opt -out C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=srcnn -reflow-float-conversion 
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=srcnn -reflow-float-conversion -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log
 INFO-FLOW: 
 INFO-FLOW: Running: gen_design_size_report post-opt
 INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
-Command       run_link_or_opt done; 0.951 sec.
+Command       run_link_or_opt done; 0.959 sec.
 Execute       run_link_or_opt -out C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.4.m2.bc -args C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libfloatconversion_39.bc 
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libfloatconversion_39.bc -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.4.m2.bc > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log
 INFO-FLOW: 
-Command       run_link_or_opt done; 0.15 sec.
+Command       run_link_or_opt done; 0.157 sec.
 Execute       run_link_or_opt -opt -out C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=srcnn 
 INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=srcnn -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.5.gdce.bc > C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log
 INFO-FLOW: 
 INFO-FLOW: Running: gen_design_size_report post-opt
 INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
-Command       run_link_or_opt done; 0.156 sec.
+Command       run_link_or_opt done; 0.157 sec.
 Execute       send_msg_by_id INFO @200-777@%s Vivado 
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 Execute       is_m_axi_addr64 
@@ -215,47 +215,57 @@ INFO: [HLS 214-178] Inlining function 'export_buffer_tile_c1(float (*) [17][17],
 INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_buffer_tile_c2(float (*) [17][17], float (*) [255][255], int, int)' (src/conv2.cpp:105:0)
 INFO: [HLS 214-178] Inlining function 'load_buffer_tile_c2(float (*) [17][17], float (*) [255][255], int, int)' into 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])' (src/conv2.cpp:14:0)
 INFO: [HLS 214-178] Inlining function 'export_buffer_tile_c2(float (*) [17][17], float (*) [255][255], int, int, float*)' into 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])' (src/conv2.cpp:14:0)
+INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_buffer_tile_c3(float (*) [21][21], float (*) [255][255], int, int)' (src/conv3.cpp:102:0)
+INFO: [HLS 214-178] Inlining function 'load_buffer_tile_c3(float (*) [21][21], float (*) [255][255], int, int)' into 'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])' (src/conv3.cpp:14:0)
+INFO: [HLS 214-178] Inlining function 'export_buffer_tile_c3(float (*) [17][17], float (*) [255][255], int, int)' into 'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])' (src/conv3.cpp:14:0)
 INFO: [HLS 214-115] Multiple burst reads of length 81 and bit width 32 in loop 'KY'(src/conv1.cpp:52:10) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv1.cpp:52:10)
 INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 32 in loop 'OUT_BUFFER_NOUT'(src/conv1.cpp:115:19) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv1.cpp:115:19)
+INFO: [HLS 214-115] Multiple burst reads of length 17 and bit width 32 in loop 'VITIS_LOOP_111_3'(src/conv2.cpp:111:22) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv2.cpp:111:22)
 INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 32 in loop 'NIN'(src/conv2.cpp:62:11) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv2.cpp:62:11)
 INFO: [HLS 214-115] Multiple burst reads of length 32 and bit width 32 in loop 'VITIS_LOOP_131_1'(src/conv2.cpp:131:20) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv2.cpp:131:20)
+INFO: [HLS 214-115] Multiple burst writes of length 17 and bit width 32 in loop 'VITIS_LOOP_129_3'(src/conv3.cpp:129:22) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv3.cpp:129:22)
+INFO: [HLS 214-115] Multiple burst writes of length 4161600 and bit width 32 in loop 'anonymous'(src/srcnn.cpp:34:2) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/srcnn.cpp:34:2)
+INFO: [HLS 214-115] Multiple burst writes of length 2080800 and bit width 32 in loop 'anonymous'(src/srcnn.cpp:35:2) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/srcnn.cpp:35:2)
+INFO: [HLS 214-115] Multiple burst writes of length 65025 and bit width 32 in loop 'anonymous'(src/srcnn.cpp:36:2) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/srcnn.cpp:36:2)
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.328 seconds; current allocated memory: 92.750 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.014 seconds; current allocated memory: 92.750 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.868 seconds; current allocated memory: 92.688 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.013 seconds; current allocated memory: 92.688 MB.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top srcnn -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.0.bc -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 92.750 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.088 seconds; current allocated memory: 92.688 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.1.bc -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.2.prechk.bc -f 
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-WARNING: [SYNCHK 200-77] The top function 'srcnn' (src/srcnn.cpp:6) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
-INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.066 seconds; current allocated memory: 92.750 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.085 seconds; current allocated memory: 92.688 MB.
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.g.1.bc to C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
 Execute         transform -hls -tmp C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.o.1.bc -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.o.1.tmp.bc -f 
-INFO: [XFORM 203-102] Partitioning array 'input_fm_buffer.1' in dimension 1 automatically.
-Command         transform done; 0.155 sec.
+INFO: [XFORM 203-102] Partitioning array 'output_fm_buffer' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'input_fm_buffer.2' in dimension 1 automatically.
+Command         transform done; 0.251 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.o.1.tmp.bc -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [XFORM 203-11] Balancing expressions in function 'conv1' (src/conv1.cpp:31:10)...6 expression(s) balanced.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.245 seconds; current allocated memory: 92.750 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv3' (src/conv3.cpp:31:23)...19 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv2' (src/conv2.cpp:32:11)...7 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv1' (src/conv1.cpp:31:10)...12 expression(s) balanced.
+Command         transform done; 0.146 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.406 seconds; current allocated memory: 92.688 MB.
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg-lite -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg-lite -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg-lite -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg-lite -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg-lite -loop-simplify -mergereturn -inst-simplify -inst-rectify -globaldce -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dce -dump-loop-dep-to-ir -check-all-ssdm -dump-complexity-metric -cdfg-build C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.o.2.bc -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 Execute           auto_get_db
-Command         transform done; 0.208 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.211 seconds; current allocated memory: 92.750 MB.
+Command         transform done; 0.358 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 92.688 MB.
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 0.595 sec.
-Command     elaborate done; 21.736 sec.
+Command       opt_and_import_c done; 0.954 sec.
+Command     elaborate done; 23.378 sec.
 Execute     ap_eval exec zip -j C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
-Command     ap_eval done; 0.277 sec.
+Command     ap_eval done; 0.258 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -263,20 +273,24 @@ INFO: [HLS 200-10] Synthesizing 'srcnn' ...
 Execute       ap_set_top_model srcnn 
 Execute       get_model_list srcnn -filter all-wo-channel -topdown 
 Execute       preproc_iomode -model srcnn 
+Execute       preproc_iomode -model conv3 
 Execute       preproc_iomode -model conv2 
 Execute       preproc_iomode -model conv1 
 Execute       get_model_list srcnn -filter all-wo-channel 
-INFO-FLOW: Model list for configure: conv1 conv2 srcnn
+INFO-FLOW: Model list for configure: conv1 conv2 conv3 srcnn
 INFO-FLOW: Configuring Module : conv1 ...
 Execute       set_default_model conv1 
 Execute       apply_spec_resource_limit conv1 
 INFO-FLOW: Configuring Module : conv2 ...
 Execute       set_default_model conv2 
 Execute       apply_spec_resource_limit conv2 
+INFO-FLOW: Configuring Module : conv3 ...
+Execute       set_default_model conv3 
+Execute       apply_spec_resource_limit conv3 
 INFO-FLOW: Configuring Module : srcnn ...
 Execute       set_default_model srcnn 
 Execute       apply_spec_resource_limit srcnn 
-INFO-FLOW: Model list for preprocess: conv1 conv2 srcnn
+INFO-FLOW: Model list for preprocess: conv1 conv2 conv3 srcnn
 INFO-FLOW: Preprocessing Module: conv1 ...
 Execute       set_default_model conv1 
 Execute       cdfg_preprocess -model conv1 
@@ -285,11 +299,15 @@ INFO-FLOW: Preprocessing Module: conv2 ...
 Execute       set_default_model conv2 
 Execute       cdfg_preprocess -model conv2 
 Execute       rtl_gen_preprocess conv2 
+INFO-FLOW: Preprocessing Module: conv3 ...
+Execute       set_default_model conv3 
+Execute       cdfg_preprocess -model conv3 
+Execute       rtl_gen_preprocess conv3 
 INFO-FLOW: Preprocessing Module: srcnn ...
 Execute       set_default_model srcnn 
 Execute       cdfg_preprocess -model srcnn 
 Execute       rtl_gen_preprocess srcnn 
-INFO-FLOW: Model list for synthesis: conv1 conv2 srcnn
+INFO-FLOW: Model list for synthesis: conv1 conv2 conv3 srcnn
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -297,13 +315,13 @@ Execute       set_default_model conv1
 Execute       schedule -model conv1 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.966 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.279 seconds; current allocated memory: 92.750 MB.
+Command       schedule done; 1.075 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.378 seconds; current allocated memory: 92.688 MB.
 Execute       syn_report -verbosereport -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.verbose.sched.rpt 
 Execute         list_part -family xck26-sfvc784-2LV-c 
 Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
 Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
-Command       syn_report done; 0.639 sec.
+Command       syn_report done; 0.531 sec.
 Execute       db_write -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.sched.adb -f 
 INFO-FLOW: Finish scheduling conv1.
 Execute       set_default_model conv1 
@@ -313,13 +331,13 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.357 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.062 seconds; current allocated memory: 92.750 MB.
+Command       bind done; 0.335 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.927 seconds; current allocated memory: 92.688 MB.
 Execute       syn_report -verbosereport -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.verbose.bind.rpt 
 Execute         list_part -family xck26-sfvc784-2LV-c 
 Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
 Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
-Command       syn_report done; 0.185 sec.
+Command       syn_report done; 0.148 sec.
 Execute       db_write -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.bind.adb -f 
 INFO-FLOW: Finish binding conv1.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -329,13 +347,13 @@ Execute       set_default_model conv2
 Execute       schedule -model conv2 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.671 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.946 seconds; current allocated memory: 92.750 MB.
+Command       schedule done; 0.951 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.179 seconds; current allocated memory: 92.688 MB.
 Execute       syn_report -verbosereport -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.verbose.sched.rpt 
 Execute         list_part -family xck26-sfvc784-2LV-c 
 Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
 Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
-Command       syn_report done; 0.348 sec.
+Command       syn_report done; 0.534 sec.
 Execute       db_write -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.sched.adb -f 
 INFO-FLOW: Finish scheduling conv2.
 Execute       set_default_model conv2 
@@ -345,15 +363,48 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.223 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.615 seconds; current allocated memory: 92.750 MB.
+Command       bind done; 0.318 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.904 seconds; current allocated memory: 92.688 MB.
 Execute       syn_report -verbosereport -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.verbose.bind.rpt 
 Execute         list_part -family xck26-sfvc784-2LV-c 
 Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
 Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
-Command       syn_report done; 0.122 sec.
+Command       syn_report done; 0.171 sec.
 Execute       db_write -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.bind.adb -f 
 INFO-FLOW: Finish binding conv2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model conv3 
+Execute       schedule -model conv3 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln62_4) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 1.127 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.376 seconds; current allocated memory: 92.688 MB.
+Execute       syn_report -verbosereport -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.verbose.sched.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Command       syn_report done; 0.617 sec.
+Execute       db_write -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.sched.adb -f 
+INFO-FLOW: Finish scheduling conv3.
+Execute       set_default_model conv3 
+Execute       bind -model conv3 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.403 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.078 seconds; current allocated memory: 92.688 MB.
+Execute       syn_report -verbosereport -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.verbose.bind.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Command       syn_report done; 0.181 sec.
+Execute       db_write -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.bind.adb -f 
+INFO-FLOW: Finish binding conv3.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'srcnn' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -361,11 +412,13 @@ Execute       set_default_model srcnn
 Execute       schedule -model srcnn 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.223 seconds; current allocated memory: 92.750 MB.
+Command       schedule done; 0.272 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.541 seconds; current allocated memory: 92.688 MB.
 Execute       syn_report -verbosereport -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.verbose.sched.rpt 
 Execute         list_part -family xck26-sfvc784-2LV-c 
 Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
 Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Command       syn_report done; 0.312 sec.
 Execute       db_write -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.sched.adb -f 
 INFO-FLOW: Finish scheduling srcnn.
 Execute       set_default_model srcnn 
@@ -375,19 +428,22 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.132 seconds; current allocated memory: 92.750 MB.
+Command       bind done; 0.243 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.577 seconds; current allocated memory: 92.688 MB.
 Execute       syn_report -verbosereport -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.verbose.bind.rpt 
 Execute         list_part -family xck26-sfvc784-2LV-c 
 Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
 Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Command       syn_report done; 0.156 sec.
 Execute       db_write -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.bind.adb -f 
 INFO-FLOW: Finish binding srcnn.
 Execute       get_model_list srcnn -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
 Execute       rtl_gen_preprocess conv1 
 Execute       rtl_gen_preprocess conv2 
+Execute       rtl_gen_preprocess conv3 
 Execute       rtl_gen_preprocess srcnn 
-INFO-FLOW: Model list for RTL generation: conv1 conv2 srcnn
+INFO-FLOW: Model list for RTL generation: conv1 conv2 conv3 srcnn
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -397,10 +453,10 @@ INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 in
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_5ns_6ns_10_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1'.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_input_fm_buffer_1_0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_input_fm_buffer_2_0_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W' using auto RAMs.
-Command       create_rtl_model done; 0.136 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.245 seconds; current allocated memory: 92.750 MB.
+Command       create_rtl_model done; 0.12 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.336 seconds; current allocated memory: 92.688 MB.
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.rtl_wrap.cfg.tcl 
 Execute       gen_rtl conv1 -style xilinx -f -lang vhdl -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/syn/vhdl/srcnn_conv1 
 Execute       gen_rtl conv1 -style xilinx -f -lang vlog -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/syn/verilog/srcnn_conv1 
@@ -408,7 +464,7 @@ Execute       syn_report -csynth -model conv1 -o C:/SPB_Data/ELEN90096-Group-2/S
 Execute         list_part -family xck26-sfvc784-2LV-c 
 Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
 Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
-Command       syn_report done; 0.134 sec.
+Command       syn_report done; 0.108 sec.
 Execute       syn_report -rtlxml -model conv1 -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/syn/report/conv1_csynth.xml 
 Execute         list_part -family xck26-sfvc784-2LV-c 
 Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
@@ -417,9 +473,9 @@ Execute       syn_report -verbosereport -model conv1 -o C:/SPB_Data/ELEN90096-Gr
 Execute         list_part -family xck26-sfvc784-2LV-c 
 Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
 Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
-Command       syn_report done; 0.276 sec.
+Command       syn_report done; 0.264 sec.
 Execute       db_write -model conv1 -f -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.adb 
-Command       db_write done; 0.187 sec.
+Command       db_write done; 0.163 sec.
 Execute       db_write -model conv1 -bindview -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info conv1 -p C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -427,10 +483,11 @@ INFO: [HLS 200-10] -- Generating RTL for module 'conv2'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       create_rtl_model conv2 -top_prefix srcnn_ -sub_prefix srcnn_ -mg_file C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.compgen.tcl 
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2'.
 INFO: [RTMG 210-278] Implementing memory 'srcnn_conv2_output_fm_buffer_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.165 seconds; current allocated memory: 92.750 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.116 seconds; current allocated memory: 92.688 MB.
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.rtl_wrap.cfg.tcl 
 Execute       gen_rtl conv2 -style xilinx -f -lang vhdl -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/syn/vhdl/srcnn_conv2 
 Execute       gen_rtl conv2 -style xilinx -f -lang vlog -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/syn/verilog/srcnn_conv2 
@@ -438,6 +495,7 @@ Execute       syn_report -csynth -model conv2 -o C:/SPB_Data/ELEN90096-Group-2/S
 Execute         list_part -family xck26-sfvc784-2LV-c 
 Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
 Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Command       syn_report done; 0.132 sec.
 Execute       syn_report -rtlxml -model conv2 -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/syn/report/conv2_csynth.xml 
 Execute         list_part -family xck26-sfvc784-2LV-c 
 Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
@@ -446,11 +504,46 @@ Execute       syn_report -verbosereport -model conv2 -o C:/SPB_Data/ELEN90096-Gr
 Execute         list_part -family xck26-sfvc784-2LV-c 
 Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
 Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
-Command       syn_report done; 0.166 sec.
+Command       syn_report done; 0.27 sec.
 Execute       db_write -model conv2 -f -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.adb 
-Command       db_write done; 0.119 sec.
+Command       db_write done; 0.146 sec.
 Execute       db_write -model conv2 -bindview -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info conv2 -p C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model conv3 -top_prefix srcnn_ -sub_prefix srcnn_ -mg_file C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_10ns_6ns_14_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3'.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv3_input_fm_buffer_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv3_output_fm_buffer_0_RAM_AUTO_1R1W' using auto RAMs.
+Command       create_rtl_model done; 0.158 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.179 seconds; current allocated memory: 92.688 MB.
+Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.rtl_wrap.cfg.tcl 
+Execute       gen_rtl conv3 -style xilinx -f -lang vhdl -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/syn/vhdl/srcnn_conv3 
+Execute       gen_rtl conv3 -style xilinx -f -lang vlog -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/syn/verilog/srcnn_conv3 
+Execute       syn_report -csynth -model conv3 -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/syn/report/conv3_csynth.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Command       syn_report done; 0.115 sec.
+Execute       syn_report -rtlxml -model conv3 -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/syn/report/conv3_csynth.xml 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Execute       syn_report -verbosereport -model conv3 -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.verbose.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Command       syn_report done; 0.261 sec.
+Execute       db_write -model conv3 -f -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.adb 
+Command       db_write done; 0.164 sec.
+Execute       db_write -model conv3 -bindview -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info conv3 -p C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'srcnn' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -460,19 +553,21 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/gmem' to 'm_axi'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/input_ftmap' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv1_weights' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv1_biases' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv1_output_ftmap' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv2_weights' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv2_biases' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv2_output_ftmap' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv3_weights' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv3_biases' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/output_ftmap' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'srcnn' to 's_axilite & ap_ctrl_hs'.
-INFO: [RTGEN 206-100] Bundling port 'input_ftmap', 'conv1_weights', 'conv1_biases', 'conv2_weights', 'conv2_biases', 'conv3_weights', 'conv3_biases', 'output_ftmap' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Bundling port 'input_ftmap', 'conv1_weights', 'conv1_biases', 'conv1_output_ftmap', 'conv2_weights', 'conv2_biases', 'conv2_output_ftmap', 'conv3_weights', 'conv3_biases', 'output_ftmap' to AXI-Lite port control.
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'srcnn'.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_output_ftmap_RAM_AUTO_1R1W' using auto RAMs.
-Command       create_rtl_model done; 1.832 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.627 seconds; current allocated memory: 92.750 MB.
+Command       create_rtl_model done; 0.195 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.261 seconds; current allocated memory: 92.688 MB.
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.rtl_wrap.cfg.tcl 
 Execute       gen_rtl srcnn -istop -style xilinx -f -lang vhdl -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/syn/vhdl/srcnn 
 Execute       gen_rtl srcnn -istop -style xilinx -f -lang vlog -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/syn/verilog/srcnn 
@@ -488,13 +583,13 @@ Execute       syn_report -verbosereport -model srcnn -o C:/SPB_Data/ELEN90096-Gr
 Execute         list_part -family xck26-sfvc784-2LV-c 
 Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
 Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
-Command       syn_report done; 0.183 sec.
+Command       syn_report done; 0.398 sec.
 Execute       db_write -model srcnn -f -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.adb 
 Execute       db_write -model srcnn -bindview -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info srcnn -p C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn 
 Execute       export_constraint_db -f -tool general -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.constraint.tcl 
 Execute       syn_report -designview -model srcnn -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.design.xml 
-Command       syn_report done; 0.183 sec.
+Command       syn_report done; 0.345 sec.
 Execute       syn_report -csynthDesign -model srcnn -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/syn/report/csynth.rpt -MHOut C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/kernel_module_hierarchy.tcl 
 Execute         list_part -family xck26-sfvc784-2LV-c 
 Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
@@ -503,51 +598,64 @@ Execute       syn_report -wcfg -model srcnn -o C:/SPB_Data/ELEN90096-Group-2/SRC
 Execute       syn_report -protoinst -model srcnn -o C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.protoinst 
 Execute       sc_get_clocks srcnn 
 Execute       sc_get_portdomain srcnn 
-INFO-FLOW: Model list for RTL component generation: conv1 conv2 srcnn
+INFO-FLOW: Model list for RTL component generation: conv1 conv2 conv3 srcnn
 INFO-FLOW: Handling components in module [conv1] ... 
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.compgen.tcl 
-INFO-FLOW: Found component srcnn_fcmp_32ns_32ns_1_2_no_dsp_1.
-INFO-FLOW: Append model srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
 INFO-FLOW: Found component srcnn_mul_5ns_6ns_10_1_1.
 INFO-FLOW: Append model srcnn_mul_5ns_6ns_10_1_1
-INFO-FLOW: Found component srcnn_conv1_input_fm_buffer_1_0_RAM_AUTO_1R1W.
-INFO-FLOW: Append model srcnn_conv1_input_fm_buffer_1_0_RAM_AUTO_1R1W
+INFO-FLOW: Found component srcnn_conv1_input_fm_buffer_2_0_RAM_AUTO_1R1W.
+INFO-FLOW: Append model srcnn_conv1_input_fm_buffer_2_0_RAM_AUTO_1R1W
 INFO-FLOW: Found component srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W.
 INFO-FLOW: Append model srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W
 INFO-FLOW: Handling components in module [conv2] ... 
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.compgen.tcl 
 INFO-FLOW: Found component srcnn_conv2_output_fm_buffer_RAM_AUTO_1R1W.
 INFO-FLOW: Append model srcnn_conv2_output_fm_buffer_RAM_AUTO_1R1W
+INFO-FLOW: Handling components in module [conv3] ... 
+Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.compgen.tcl 
+INFO-FLOW: Found component srcnn_mul_10ns_6ns_14_1_1.
+INFO-FLOW: Append model srcnn_mul_10ns_6ns_14_1_1
+INFO-FLOW: Found component srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1.
+INFO-FLOW: Append model srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1
+INFO-FLOW: Found component srcnn_conv3_input_fm_buffer_RAM_AUTO_1R1W.
+INFO-FLOW: Append model srcnn_conv3_input_fm_buffer_RAM_AUTO_1R1W
+INFO-FLOW: Found component srcnn_conv3_output_fm_buffer_0_RAM_AUTO_1R1W.
+INFO-FLOW: Append model srcnn_conv3_output_fm_buffer_0_RAM_AUTO_1R1W
 INFO-FLOW: Handling components in module [srcnn] ... 
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.compgen.tcl 
 INFO-FLOW: Found component srcnn_fadd_32ns_32ns_32_4_full_dsp_1.
 INFO-FLOW: Append model srcnn_fadd_32ns_32ns_32_4_full_dsp_1
 INFO-FLOW: Found component srcnn_fmul_32ns_32ns_32_3_max_dsp_1.
 INFO-FLOW: Append model srcnn_fmul_32ns_32ns_32_3_max_dsp_1
-INFO-FLOW: Found component srcnn_conv1_output_ftmap_RAM_AUTO_1R1W.
-INFO-FLOW: Append model srcnn_conv1_output_ftmap_RAM_AUTO_1R1W
+INFO-FLOW: Found component srcnn_fcmp_32ns_32ns_1_2_no_dsp_1.
+INFO-FLOW: Append model srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
 INFO-FLOW: Found component srcnn_gmem_m_axi.
 INFO-FLOW: Append model srcnn_gmem_m_axi
 INFO-FLOW: Found component srcnn_control_s_axi.
 INFO-FLOW: Append model srcnn_control_s_axi
 INFO-FLOW: Append model conv1
 INFO-FLOW: Append model conv2
+INFO-FLOW: Append model conv3
 INFO-FLOW: Append model srcnn
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: srcnn_fcmp_32ns_32ns_1_2_no_dsp_1 srcnn_mul_5ns_6ns_10_1_1 srcnn_conv1_input_fm_buffer_1_0_RAM_AUTO_1R1W srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W srcnn_conv2_output_fm_buffer_RAM_AUTO_1R1W srcnn_fadd_32ns_32ns_32_4_full_dsp_1 srcnn_fmul_32ns_32ns_32_3_max_dsp_1 srcnn_conv1_output_ftmap_RAM_AUTO_1R1W srcnn_gmem_m_axi srcnn_control_s_axi conv1 conv2 srcnn
+INFO-FLOW: All models in this session: srcnn_mul_5ns_6ns_10_1_1 srcnn_conv1_input_fm_buffer_2_0_RAM_AUTO_1R1W srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W srcnn_conv2_output_fm_buffer_RAM_AUTO_1R1W srcnn_mul_10ns_6ns_14_1_1 srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1 srcnn_conv3_input_fm_buffer_RAM_AUTO_1R1W srcnn_conv3_output_fm_buffer_0_RAM_AUTO_1R1W srcnn_fadd_32ns_32ns_32_4_full_dsp_1 srcnn_fmul_32ns_32ns_32_3_max_dsp_1 srcnn_fcmp_32ns_32ns_1_2_no_dsp_1 srcnn_gmem_m_axi srcnn_control_s_axi conv1 conv2 conv3 srcnn
 INFO-FLOW: Generating C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/autopilot.rtl.models.txt file...
-INFO-FLOW: To file: write model srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
 INFO-FLOW: To file: write model srcnn_mul_5ns_6ns_10_1_1
-INFO-FLOW: To file: write model srcnn_conv1_input_fm_buffer_1_0_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model srcnn_conv1_input_fm_buffer_2_0_RAM_AUTO_1R1W
 INFO-FLOW: To file: write model srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W
 INFO-FLOW: To file: write model srcnn_conv2_output_fm_buffer_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model srcnn_mul_10ns_6ns_14_1_1
+INFO-FLOW: To file: write model srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1
+INFO-FLOW: To file: write model srcnn_conv3_input_fm_buffer_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model srcnn_conv3_output_fm_buffer_0_RAM_AUTO_1R1W
 INFO-FLOW: To file: write model srcnn_fadd_32ns_32ns_32_4_full_dsp_1
 INFO-FLOW: To file: write model srcnn_fmul_32ns_32ns_32_3_max_dsp_1
-INFO-FLOW: To file: write model srcnn_conv1_output_ftmap_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
 INFO-FLOW: To file: write model srcnn_gmem_m_axi
 INFO-FLOW: To file: write model srcnn_control_s_axi
 INFO-FLOW: To file: write model conv1
 INFO-FLOW: To file: write model conv2
+INFO-FLOW: To file: write model conv3
 INFO-FLOW: To file: write model srcnn
 INFO-FLOW: Generating C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
 INFO-FLOW: Finished generating RTL model list.
@@ -574,23 +682,26 @@ Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/inter
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.102 sec.
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.14 sec.
+Command       ap_source done; 0.12 sec.
 INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
-INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/vhdl' dstVlogDir='C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/vlog' tclDir='C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db' modelList='srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
-srcnn_mul_5ns_6ns_10_1_1
-srcnn_conv1_input_fm_buffer_1_0_RAM_AUTO_1R1W
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/vhdl' dstVlogDir='C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/vlog' tclDir='C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db' modelList='srcnn_mul_5ns_6ns_10_1_1
+srcnn_conv1_input_fm_buffer_2_0_RAM_AUTO_1R1W
 srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W
 srcnn_conv2_output_fm_buffer_RAM_AUTO_1R1W
+srcnn_mul_10ns_6ns_14_1_1
+srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1
+srcnn_conv3_input_fm_buffer_RAM_AUTO_1R1W
+srcnn_conv3_output_fm_buffer_0_RAM_AUTO_1R1W
 srcnn_fadd_32ns_32ns_32_4_full_dsp_1
 srcnn_fmul_32ns_32ns_32_3_max_dsp_1
-srcnn_conv1_output_ftmap_RAM_AUTO_1R1W
+srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
 srcnn_gmem_m_axi
 srcnn_control_s_axi
 conv1
 conv2
+conv3
 srcnn
 ' expOnly='0'
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/global.setting.tcl 
@@ -600,9 +711,13 @@ Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.au
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/global.setting.tcl 
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.compgen.tcl 
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.compgen.tcl 
+Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.compgen.tcl 
+Execute         ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute         ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute         ap_part_info -name xck26-sfvc784-2LV-c -data info 
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.compgen.tcl 
 Execute         source ./control.slave.tcl 
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 1.055 seconds; current allocated memory: 92.750 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.653 seconds; current allocated memory: 92.688 MB.
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='srcnn_' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
@@ -613,18 +728,22 @@ INFO-FLOW: Done: create_csynth_xml config info time: 0.5 seconds per iteration
 INFO-FLOW: Running: create_csynth_xml write xml
 INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/syn/report/csynth.xml
-INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
-srcnn_mul_5ns_6ns_10_1_1
-srcnn_conv1_input_fm_buffer_1_0_RAM_AUTO_1R1W
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='srcnn_mul_5ns_6ns_10_1_1
+srcnn_conv1_input_fm_buffer_2_0_RAM_AUTO_1R1W
 srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W
 srcnn_conv2_output_fm_buffer_RAM_AUTO_1R1W
+srcnn_mul_10ns_6ns_14_1_1
+srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1
+srcnn_conv3_input_fm_buffer_RAM_AUTO_1R1W
+srcnn_conv3_output_fm_buffer_0_RAM_AUTO_1R1W
 srcnn_fadd_32ns_32ns_32_4_full_dsp_1
 srcnn_fmul_32ns_32ns_32_3_max_dsp_1
-srcnn_conv1_output_ftmap_RAM_AUTO_1R1W
+srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
 srcnn_gmem_m_axi
 srcnn_control_s_axi
 conv1
 conv2
+conv3
 srcnn
 ' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/global.setting.tcl 
@@ -637,6 +756,7 @@ Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.au
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.compgen.dataonly.tcl 
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv1.tbgen.tcl 
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv2.tbgen.tcl 
+Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/conv3.tbgen.tcl 
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/srcnn.tbgen.tcl 
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/global.setting.tcl 
 Execute       ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
@@ -647,7 +767,7 @@ Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.au
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/impl/misc/srcnn_fadd_32ns_32ns_32_4_full_dsp_1_ip.tcl 
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/impl/misc/srcnn_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl 
 Execute       source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/impl/misc/srcnn_fmul_32ns_32ns_32_3_max_dsp_1_ip.tcl 
-INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_s_axi_U SOURCE {} VARIABLE {} MODULE srcnn LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_m_axi_U SOURCE {} VARIABLE {} MODULE srcnn LOOP {} BUNDLEDNAME gmem DSP 0 BRAM 4 URAM 0}} report_dict {TOPINST srcnn MODULE2INSTS {srcnn srcnn conv1 grp_conv1_fu_112 conv2 grp_conv2_fu_130} INST2MODULE {srcnn srcnn grp_conv1_fu_112 conv1 grp_conv2_fu_130 conv2} INSTDATA {srcnn {DEPTH 1 CHILDREN {grp_conv1_fu_112 grp_conv2_fu_130}} grp_conv1_fu_112 {DEPTH 2 CHILDREN {}} grp_conv2_fu_130 {DEPTH 2 CHILDREN {}}} MODULEDATA {conv1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln31_fu_542_p2 SOURCE src/conv1.cpp:31 VARIABLE add_ln31 LOOP TILE_J BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln32_fu_566_p2 SOURCE src/conv1.cpp:32 VARIABLE add_ln32 LOOP TILE_I BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_54_fu_582_p2 SOURCE {} VARIABLE empty_54 LOOP TILE_I.1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln94_1_fu_605_p2 SOURCE src/conv1.cpp:94 VARIABLE add_ln94_1 LOOP IN_BUFFER_BY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln94_fu_621_p2 SOURCE src/conv1.cpp:94 VARIABLE add_ln94 LOOP IN_BUFFER_BY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp_fu_627_p2 SOURCE src/conv1.cpp:94 VARIABLE tmp LOOP IN_BUFFER_BY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_55_fu_637_p2 SOURCE src/conv1.cpp:94 VARIABLE empty_55 LOOP IN_BUFFER_BY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln102_fu_706_p2 SOURCE src/conv1.cpp:102 VARIABLE sub_ln102 LOOP IN_BUFFER_BY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_2_fu_720_p2 SOURCE src/conv1.cpp:102 VARIABLE add_ln102_2 LOOP IN_BUFFER_BX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln95_fu_741_p2 SOURCE src/conv1.cpp:95 VARIABLE add_ln95 LOOP IN_BUFFER_BX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln98_1_fu_747_p2 SOURCE src/conv1.cpp:98 VARIABLE add_ln98_1 LOOP IN_BUFFER_BX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln98_fu_757_p2 SOURCE src/conv1.cpp:98 VARIABLE add_ln98 LOOP IN_BUFFER_BX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln45_1_fu_852_p2 SOURCE src/conv1.cpp:45 VARIABLE add_ln45_1 LOOP NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_56_fu_874_p2 SOURCE src/conv1.cpp:45 VARIABLE empty_56 LOOP NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln45_fu_886_p2 SOURCE src/conv1.cpp:45 VARIABLE add_ln45 LOOP NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln48_fu_896_p2 SOURCE src/conv1.cpp:48 VARIABLE add_ln48 LOOP NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_57_fu_925_p2 SOURCE src/conv1.cpp:45 VARIABLE empty_57 LOOP TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_59_fu_946_p2 SOURCE src/conv1.cpp:45 VARIABLE empty_59 LOOP TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln48_1_fu_958_p2 SOURCE src/conv1.cpp:48 VARIABLE add_ln48_1 LOOP TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_60_fu_968_p2 SOURCE src/conv1.cpp:45 VARIABLE empty_60 LOOP TX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln49_fu_984_p2 SOURCE src/conv1.cpp:49 VARIABLE add_ln49 LOOP TX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln52_fu_1000_p2 SOURCE src/conv1.cpp:52 VARIABLE add_ln52 LOOP KY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_62_fu_1006_p2 SOURCE src/conv1.cpp:52 VARIABLE empty_62 LOOP KY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_5ns_6ns_10_1_1_U4 SOURCE src/conv1.cpp:62 VARIABLE mul_ln62 LOOP KY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_fu_1032_p2 SOURCE src/conv1.cpp:53 VARIABLE add_ln53 LOOP KX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln57_fu_1038_p2 SOURCE src/conv1.cpp:57 VARIABLE add_ln57 LOOP KX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln62_fu_1048_p2 SOURCE src/conv1.cpp:62 VARIABLE add_ln62 LOOP KX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln119_fu_1094_p2 SOURCE src/conv1.cpp:119 VARIABLE sub_ln119 LOOP OUT_BUFFER_NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln119_1_fu_1116_p2 SOURCE src/conv1.cpp:119 VARIABLE add_ln119_1 LOOP OUT_BUFFER_NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln115_fu_1068_p2 SOURCE src/conv1.cpp:115 VARIABLE add_ln115 LOOP OUT_BUFFER_NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln119_2_fu_1130_p2 SOURCE src/conv1.cpp:119 VARIABLE add_ln119_2 LOOP OUT_BUFFER_TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln119_3_fu_1151_p2 SOURCE src/conv1.cpp:119 VARIABLE add_ln119_3 LOOP OUT_BUFFER_TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln116_fu_1167_p2 SOURCE src/conv1.cpp:116 VARIABLE add_ln116 LOOP OUT_BUFFER_TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_65_fu_1173_p2 SOURCE src/conv1.cpp:116 VARIABLE empty_65 LOOP OUT_BUFFER_TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln119_4_fu_1182_p2 SOURCE src/conv1.cpp:119 VARIABLE add_ln119_4 LOOP OUT_BUFFER_TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln119_1_fu_1203_p2 SOURCE src/conv1.cpp:119 VARIABLE sub_ln119_1 LOOP OUT_BUFFER_TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln119_5_fu_1213_p2 SOURCE src/conv1.cpp:119 VARIABLE add_ln119_5 LOOP OUT_BUFFER_TX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln117_fu_1233_p2 SOURCE src/conv1.cpp:117 VARIABLE add_ln117 LOOP OUT_BUFFER_TX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln119_fu_1239_p2 SOURCE src/conv1.cpp:119 VARIABLE add_ln119 LOOP OUT_BUFFER_TX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln119_6_fu_1248_p2 SOURCE src/conv1.cpp:119 VARIABLE add_ln119_6 LOOP OUT_BUFFER_TX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_67_fu_1312_p2 SOURCE {} VARIABLE empty_67 LOOP TILE_I.5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME input_fm_buffer_1_0_U SOURCE {} VARIABLE input_fm_buffer_1_0 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME output_fm_buffer_1_U SOURCE {} VARIABLE output_fm_buffer_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 38 URAM 0 DISPNAME {bind_storage ram_1p}}} AREA {DSP 0 BRAM 40 URAM 0}} conv2 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln32_fu_421_p2 SOURCE src/conv2.cpp:32 VARIABLE add_ln32 LOOP TJ BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln33_fu_445_p2 SOURCE src/conv2.cpp:33 VARIABLE add_ln33 LOOP TI BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_42_fu_461_p2 SOURCE {} VARIABLE empty_42 LOOP TI.1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln118_fu_504_p2 SOURCE src/conv2.cpp:118 VARIABLE sub_ln118 LOOP VITIS_LOOP_109_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_fu_526_p2 SOURCE src/conv2.cpp:118 VARIABLE add_ln118 LOOP VITIS_LOOP_109_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln109_fu_538_p2 SOURCE src/conv2.cpp:109 VARIABLE add_ln109 LOOP VITIS_LOOP_109_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_1_fu_548_p2 SOURCE src/conv2.cpp:118 VARIABLE add_ln118_1 LOOP VITIS_LOOP_110_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_2_fu_569_p2 SOURCE src/conv2.cpp:118 VARIABLE add_ln118_2 LOOP VITIS_LOOP_110_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln110_fu_581_p2 SOURCE src/conv2.cpp:110 VARIABLE add_ln110 LOOP VITIS_LOOP_110_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln54_fu_587_p2 SOURCE src/srcnn.cpp:54 VARIABLE add_ln54 LOOP VITIS_LOOP_110_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME yClamped_fu_596_p2 SOURCE src/srcnn.cpp:54 VARIABLE yClamped LOOP VITIS_LOOP_110_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_3_fu_605_p2 SOURCE src/conv2.cpp:118 VARIABLE add_ln118_3 LOOP VITIS_LOOP_110_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln118_1_fu_626_p2 SOURCE src/conv2.cpp:118 VARIABLE sub_ln118_1 LOOP VITIS_LOOP_110_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_4_fu_636_p2 SOURCE src/conv2.cpp:118 VARIABLE add_ln118_4 LOOP VITIS_LOOP_111_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln111_fu_652_p2 SOURCE src/conv2.cpp:111 VARIABLE add_ln111 LOOP VITIS_LOOP_111_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln54_2_fu_658_p2 SOURCE src/srcnn.cpp:54 VARIABLE add_ln54_2 LOOP VITIS_LOOP_111_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME xClamped_fu_667_p2 SOURCE src/srcnn.cpp:54 VARIABLE xClamped LOOP VITIS_LOOP_111_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_5_fu_676_p2 SOURCE src/conv2.cpp:118 VARIABLE add_ln118_5 LOOP VITIS_LOOP_111_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_43_fu_702_p2 SOURCE src/conv2.cpp:47 VARIABLE empty_43 LOOP NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln47_fu_714_p2 SOURCE src/conv2.cpp:47 VARIABLE add_ln47 LOOP NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln49_fu_736_p2 SOURCE src/conv2.cpp:49 VARIABLE add_ln49 LOOP NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_44_fu_769_p2 SOURCE src/conv2.cpp:47 VARIABLE empty_44 LOOP TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_46_fu_790_p2 SOURCE src/conv2.cpp:47 VARIABLE empty_46 LOOP TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln49_1_fu_802_p2 SOURCE src/conv2.cpp:49 VARIABLE add_ln49_1 LOOP TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_47_fu_812_p2 SOURCE src/conv2.cpp:47 VARIABLE empty_47 LOOP TX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln50_fu_828_p2 SOURCE src/conv2.cpp:50 VARIABLE add_ln50 LOOP TX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln62_fu_903_p2 SOURCE src/conv2.cpp:62 VARIABLE add_ln62 LOOP NIN BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln131_fu_919_p2 SOURCE src/conv2.cpp:131 VARIABLE add_ln131 LOOP VITIS_LOOP_131_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_53_fu_931_p2 SOURCE {} VARIABLE empty_53 LOOP TI.5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME input_fm_buffer_U SOURCE {} VARIABLE input_fm_buffer LOOP {} BUNDLEDNAME {} DSP 0 BRAM 38 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME output_fm_buffer_U SOURCE {} VARIABLE output_fm_buffer LOOP {} BUNDLEDNAME {} DSP 0 BRAM 22 URAM 0 DISPNAME {bind_storage ram_1p}}} AREA {DSP 0 BRAM 60 URAM 0}} srcnn {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME conv1_output_ftmap_U SOURCE {} VARIABLE conv1_output_ftmap LOOP {} BUNDLEDNAME {} DSP 0 BRAM 7374 URAM 0 DISPNAME {bind_storage ram_1p}}} AREA {DSP 5 BRAM 7478 URAM 0}}}}'
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_s_axi_U SOURCE {} VARIABLE {} MODULE srcnn LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_m_axi_U SOURCE {} VARIABLE {} MODULE srcnn LOOP {} BUNDLEDNAME gmem DSP 0 BRAM 4 URAM 0}} report_dict {TOPINST srcnn MODULE2INSTS {srcnn srcnn conv1 grp_conv1_fu_279 conv2 grp_conv2_fu_293 conv3 grp_conv3_fu_307} INST2MODULE {srcnn srcnn grp_conv1_fu_279 conv1 grp_conv2_fu_293 conv2 grp_conv3_fu_307 conv3} INSTDATA {srcnn {DEPTH 1 CHILDREN {grp_conv1_fu_279 grp_conv2_fu_293 grp_conv3_fu_307}} grp_conv1_fu_279 {DEPTH 2 CHILDREN {}} grp_conv2_fu_293 {DEPTH 2 CHILDREN {}} grp_conv3_fu_307 {DEPTH 2 CHILDREN {}}} MODULEDATA {conv1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln31_fu_570_p2 SOURCE src/conv1.cpp:31 VARIABLE add_ln31 LOOP TILE_J BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln32_fu_594_p2 SOURCE src/conv1.cpp:32 VARIABLE add_ln32 LOOP TILE_I BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_102_fu_610_p2 SOURCE {} VARIABLE empty_102 LOOP TILE_I.1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln94_1_fu_633_p2 SOURCE src/conv1.cpp:94 VARIABLE add_ln94_1 LOOP IN_BUFFER_BY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln94_fu_649_p2 SOURCE src/conv1.cpp:94 VARIABLE add_ln94 LOOP IN_BUFFER_BY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp1_fu_655_p2 SOURCE src/conv1.cpp:94 VARIABLE tmp1 LOOP IN_BUFFER_BY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_103_fu_665_p2 SOURCE src/conv1.cpp:94 VARIABLE empty_103 LOOP IN_BUFFER_BY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln102_fu_734_p2 SOURCE src/conv1.cpp:102 VARIABLE sub_ln102 LOOP IN_BUFFER_BY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_2_fu_748_p2 SOURCE src/conv1.cpp:102 VARIABLE add_ln102_2 LOOP IN_BUFFER_BX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln95_fu_769_p2 SOURCE src/conv1.cpp:95 VARIABLE add_ln95 LOOP IN_BUFFER_BX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln98_1_fu_787_p2 SOURCE src/conv1.cpp:98 VARIABLE add_ln98_1 LOOP IN_BUFFER_BX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln98_fu_797_p2 SOURCE src/conv1.cpp:98 VARIABLE add_ln98 LOOP IN_BUFFER_BX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln45_1_fu_893_p2 SOURCE src/conv1.cpp:45 VARIABLE add_ln45_1 LOOP NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_104_fu_915_p2 SOURCE src/conv1.cpp:45 VARIABLE empty_104 LOOP NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln45_fu_927_p2 SOURCE src/conv1.cpp:45 VARIABLE add_ln45 LOOP NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln48_fu_937_p2 SOURCE src/conv1.cpp:48 VARIABLE add_ln48 LOOP NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_105_fu_966_p2 SOURCE src/conv1.cpp:45 VARIABLE empty_105 LOOP TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_107_fu_987_p2 SOURCE src/conv1.cpp:45 VARIABLE empty_107 LOOP TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln48_1_fu_999_p2 SOURCE src/conv1.cpp:48 VARIABLE add_ln48_1 LOOP TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_108_fu_1009_p2 SOURCE src/conv1.cpp:45 VARIABLE empty_108 LOOP TX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln49_fu_1025_p2 SOURCE src/conv1.cpp:49 VARIABLE add_ln49 LOOP TX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln52_fu_1041_p2 SOURCE src/conv1.cpp:52 VARIABLE add_ln52 LOOP KY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_110_fu_1047_p2 SOURCE src/conv1.cpp:52 VARIABLE empty_110 LOOP KY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_5ns_6ns_10_1_1_U4 SOURCE src/conv1.cpp:62 VARIABLE mul_ln62 LOOP KY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_fu_1073_p2 SOURCE src/conv1.cpp:53 VARIABLE add_ln53 LOOP KX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln57_fu_1079_p2 SOURCE src/conv1.cpp:57 VARIABLE add_ln57 LOOP KX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln62_fu_1089_p2 SOURCE src/conv1.cpp:62 VARIABLE add_ln62 LOOP KX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln115_5_fu_1115_p2 SOURCE src/conv1.cpp:115 VARIABLE add_ln115_5 LOOP OUT_BUFFER_NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln119_5_fu_1137_p2 SOURCE src/conv1.cpp:119 VARIABLE add_ln119_5 LOOP OUT_BUFFER_NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln115_fu_1109_p2 SOURCE src/conv1.cpp:115 VARIABLE add_ln115 LOOP OUT_BUFFER_NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln119_2_fu_1151_p2 SOURCE src/conv1.cpp:119 VARIABLE add_ln119_2 LOOP OUT_BUFFER_NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln119_6_fu_1160_p2 SOURCE src/conv1.cpp:119 VARIABLE add_ln119_6 LOOP OUT_BUFFER_TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln119_7_fu_1181_p2 SOURCE src/conv1.cpp:119 VARIABLE add_ln119_7 LOOP OUT_BUFFER_TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln116_fu_1197_p2 SOURCE src/conv1.cpp:116 VARIABLE add_ln116 LOOP OUT_BUFFER_TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_113_fu_1203_p2 SOURCE src/conv1.cpp:116 VARIABLE empty_113 LOOP OUT_BUFFER_TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln119_fu_1232_p2 SOURCE src/conv1.cpp:119 VARIABLE sub_ln119 LOOP OUT_BUFFER_TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln119_8_fu_1242_p2 SOURCE src/conv1.cpp:119 VARIABLE add_ln119_8 LOOP OUT_BUFFER_TX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln117_fu_1258_p2 SOURCE src/conv1.cpp:117 VARIABLE add_ln117 LOOP OUT_BUFFER_TX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln119_fu_1264_p2 SOURCE src/conv1.cpp:119 VARIABLE add_ln119 LOOP OUT_BUFFER_TX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln119_1_fu_1273_p2 SOURCE src/conv1.cpp:119 VARIABLE add_ln119_1 LOOP OUT_BUFFER_TX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln119_4_fu_1290_p2 SOURCE src/conv1.cpp:119 VARIABLE add_ln119_4 LOOP OUT_BUFFER_TX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln119_3_fu_1299_p2 SOURCE src/conv1.cpp:119 VARIABLE add_ln119_3 LOOP OUT_BUFFER_TX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_115_fu_1379_p2 SOURCE {} VARIABLE empty_115 LOOP TILE_I.5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME input_fm_buffer_2_0_U SOURCE {} VARIABLE input_fm_buffer_2_0 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME output_fm_buffer_1_U SOURCE {} VARIABLE output_fm_buffer_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 38 URAM 0 DISPNAME {bind_storage ram_1p}}} AREA {DSP 0 BRAM 40 URAM 0}} conv2 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln32_fu_541_p2 SOURCE src/conv2.cpp:32 VARIABLE add_ln32 LOOP TJ BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln33_fu_561_p2 SOURCE src/conv2.cpp:33 VARIABLE add_ln33 LOOP TI BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_85_fu_577_p2 SOURCE {} VARIABLE empty_85 LOOP TI.1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln109_1_fu_604_p2 SOURCE src/conv2.cpp:109 VARIABLE add_ln109_1 LOOP VITIS_LOOP_109_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_fu_626_p2 SOURCE src/conv2.cpp:118 VARIABLE add_ln118 LOOP VITIS_LOOP_109_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln109_fu_638_p2 SOURCE src/conv2.cpp:109 VARIABLE add_ln109 LOOP VITIS_LOOP_109_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_1_fu_648_p2 SOURCE src/conv2.cpp:118 VARIABLE add_ln118_1 LOOP VITIS_LOOP_110_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_2_fu_669_p2 SOURCE src/conv2.cpp:118 VARIABLE add_ln118_2 LOOP VITIS_LOOP_110_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln110_fu_685_p2 SOURCE src/conv2.cpp:110 VARIABLE add_ln110 LOOP VITIS_LOOP_110_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_86_fu_691_p2 SOURCE src/conv2.cpp:110 VARIABLE empty_86 LOOP VITIS_LOOP_110_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME empty_87_fu_720_p2 SOURCE src/conv2.cpp:110 VARIABLE empty_87 LOOP VITIS_LOOP_110_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp2_fu_744_p2 SOURCE src/conv2.cpp:109 VARIABLE tmp2 LOOP VITIS_LOOP_110_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_3_fu_788_p2 SOURCE src/conv2.cpp:118 VARIABLE add_ln118_3 LOOP VITIS_LOOP_111_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln111_fu_804_p2 SOURCE src/conv2.cpp:111 VARIABLE add_ln111 LOOP VITIS_LOOP_111_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_90_fu_830_p2 SOURCE src/conv2.cpp:47 VARIABLE empty_90 LOOP NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln47_fu_842_p2 SOURCE src/conv2.cpp:47 VARIABLE add_ln47 LOOP NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln49_fu_864_p2 SOURCE src/conv2.cpp:49 VARIABLE add_ln49 LOOP NOUT BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_91_fu_897_p2 SOURCE src/conv2.cpp:47 VARIABLE empty_91 LOOP TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_93_fu_918_p2 SOURCE src/conv2.cpp:47 VARIABLE empty_93 LOOP TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln49_1_fu_930_p2 SOURCE src/conv2.cpp:49 VARIABLE add_ln49_1 LOOP TY BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_94_fu_940_p2 SOURCE src/conv2.cpp:47 VARIABLE empty_94 LOOP TX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln50_fu_956_p2 SOURCE src/conv2.cpp:50 VARIABLE add_ln50 LOOP TX BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln62_fu_1031_p2 SOURCE src/conv2.cpp:62 VARIABLE add_ln62 LOOP NIN BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln131_2_fu_1053_p2 SOURCE src/conv2.cpp:131 VARIABLE add_ln131_2 LOOP VITIS_LOOP_131_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln135_5_fu_1075_p2 SOURCE src/conv2.cpp:135 VARIABLE add_ln135_5 LOOP VITIS_LOOP_131_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln131_fu_1047_p2 SOURCE src/conv2.cpp:131 VARIABLE add_ln131 LOOP VITIS_LOOP_131_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln135_2_fu_1089_p2 SOURCE src/conv2.cpp:135 VARIABLE add_ln135_2 LOOP VITIS_LOOP_131_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln135_6_fu_1098_p2 SOURCE src/conv2.cpp:135 VARIABLE add_ln135_6 LOOP VITIS_LOOP_132_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln135_7_fu_1119_p2 SOURCE src/conv2.cpp:135 VARIABLE add_ln135_7 LOOP VITIS_LOOP_132_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln132_fu_1135_p2 SOURCE src/conv2.cpp:132 VARIABLE add_ln132 LOOP VITIS_LOOP_132_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_99_fu_1141_p2 SOURCE src/conv2.cpp:132 VARIABLE empty_99 LOOP VITIS_LOOP_132_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln135_fu_1170_p2 SOURCE src/conv2.cpp:135 VARIABLE sub_ln135 LOOP VITIS_LOOP_132_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln135_8_fu_1180_p2 SOURCE src/conv2.cpp:135 VARIABLE add_ln135_8 LOOP VITIS_LOOP_133_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln133_fu_1196_p2 SOURCE src/conv2.cpp:133 VARIABLE add_ln133 LOOP VITIS_LOOP_133_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln135_fu_1202_p2 SOURCE src/conv2.cpp:135 VARIABLE add_ln135 LOOP VITIS_LOOP_133_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln135_1_fu_1211_p2 SOURCE src/conv2.cpp:135 VARIABLE add_ln135_1 LOOP VITIS_LOOP_133_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln135_4_fu_1228_p2 SOURCE src/conv2.cpp:135 VARIABLE add_ln135_4 LOOP VITIS_LOOP_133_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln135_3_fu_1237_p2 SOURCE src/conv2.cpp:135 VARIABLE add_ln135_3 LOOP VITIS_LOOP_133_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_101_fu_1317_p2 SOURCE {} VARIABLE empty_101 LOOP TI.5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME input_fm_buffer_1_U SOURCE {} VARIABLE input_fm_buffer_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 38 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME output_fm_buffer_U SOURCE {} VARIABLE output_fm_buffer LOOP {} BUNDLEDNAME {} DSP 0 BRAM 22 URAM 0 DISPNAME {bind_storage ram_1p}}} AREA {DSP 0 BRAM 60 URAM 0}} conv3 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln31_fu_627_p2 SOURCE src/conv3.cpp:31 VARIABLE add_ln31 LOOP VITIS_LOOP_31_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln32_fu_656_p2 SOURCE src/conv3.cpp:32 VARIABLE add_ln32 LOOP VITIS_LOOP_32_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_72_fu_672_p2 SOURCE {} VARIABLE empty_72 LOOP VITIS_LOOP_32_2.1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln106_1_fu_683_p2 SOURCE src/conv3.cpp:106 VARIABLE add_ln106_1 LOOP VITIS_LOOP_106_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln106_2_fu_689_p2 SOURCE src/conv3.cpp:106 VARIABLE add_ln106_2 LOOP VITIS_LOOP_106_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln106_fu_701_p2 SOURCE src/conv3.cpp:106 VARIABLE add_ln106 LOOP VITIS_LOOP_106_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln115_fu_711_p2 SOURCE src/conv3.cpp:115 VARIABLE add_ln115 LOOP VITIS_LOOP_106_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln115_3_fu_720_p2 SOURCE src/conv3.cpp:115 VARIABLE add_ln115_3 LOOP VITIS_LOOP_107_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_10ns_6ns_14_1_1_U25 SOURCE src/conv3.cpp:107 VARIABLE mul_ln107 LOOP VITIS_LOOP_107_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln107_fu_746_p2 SOURCE src/conv3.cpp:107 VARIABLE add_ln107 LOOP VITIS_LOOP_107_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp1_fu_752_p2 SOURCE src/conv3.cpp:107 VARIABLE tmp1 LOOP VITIS_LOOP_107_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_73_fu_762_p2 SOURCE src/conv3.cpp:107 VARIABLE empty_73 LOOP VITIS_LOOP_107_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln115_fu_831_p2 SOURCE src/conv3.cpp:115 VARIABLE sub_ln115 LOOP VITIS_LOOP_107_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln115_4_fu_841_p2 SOURCE src/conv3.cpp:115 VARIABLE add_ln115_4 LOOP VITIS_LOOP_108_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln108_fu_861_p2 SOURCE src/conv3.cpp:108 VARIABLE add_ln108 LOOP VITIS_LOOP_108_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln111_1_fu_879_p2 SOURCE src/conv3.cpp:111 VARIABLE add_ln111_1 LOOP VITIS_LOOP_108_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln111_fu_889_p2 SOURCE src/conv3.cpp:111 VARIABLE add_ln111 LOOP VITIS_LOOP_108_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln115_1_fu_951_p2 SOURCE src/conv3.cpp:115 VARIABLE add_ln115_1 LOOP VITIS_LOOP_108_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln115_2_fu_960_p2 SOURCE src/conv3.cpp:115 VARIABLE add_ln115_2 LOOP VITIS_LOOP_108_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_74_fu_1001_p2 SOURCE src/conv3.cpp:48 VARIABLE empty_74 LOOP VITIS_LOOP_48_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln48_fu_1013_p2 SOURCE src/conv3.cpp:48 VARIABLE add_ln48 LOOP VITIS_LOOP_48_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_75_fu_1023_p2 SOURCE src/conv3.cpp:48 VARIABLE empty_75 LOOP VITIS_LOOP_49_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln49_fu_1039_p2 SOURCE src/conv3.cpp:49 VARIABLE add_ln49 LOOP VITIS_LOOP_49_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln52_fu_1055_p2 SOURCE src/conv3.cpp:52 VARIABLE add_ln52 LOOP VITIS_LOOP_52_6 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_76_fu_1061_p2 SOURCE src/conv3.cpp:52 VARIABLE empty_76 LOOP VITIS_LOOP_52_6 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln62_fu_1091_p2 SOURCE src/conv3.cpp:62 VARIABLE add_ln62 LOOP VITIS_LOOP_52_6 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_fu_1111_p2 SOURCE src/conv3.cpp:53 VARIABLE add_ln53 LOOP VITIS_LOOP_53_7 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln57_fu_1117_p2 SOURCE src/conv3.cpp:57 VARIABLE add_ln57 LOOP VITIS_LOOP_53_7 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln62_6_fu_1139_p2 SOURCE src/conv3.cpp:62 VARIABLE add_ln62_6 LOOP VITIS_LOOP_61_8 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1_U26 SOURCE src/conv3.cpp:62 VARIABLE add_ln62_4 LOOP VITIS_LOOP_61_8 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1_U26 SOURCE src/conv3.cpp:62 VARIABLE mul_ln62 LOOP VITIS_LOOP_61_8 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1_U26 SOURCE src/conv3.cpp:62 VARIABLE add_ln62_5 LOOP VITIS_LOOP_61_8 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln61_fu_1155_p2 SOURCE src/conv3.cpp:61 VARIABLE add_ln61 LOOP VITIS_LOOP_61_8 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln62_7_fu_1161_p2 SOURCE src/conv3.cpp:62 VARIABLE add_ln62_7 LOOP VITIS_LOOP_61_8 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln62_1_fu_1167_p2 SOURCE src/conv3.cpp:62 VARIABLE add_ln62_1 LOOP VITIS_LOOP_61_8 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln131_fu_1222_p2 SOURCE src/conv3.cpp:131 VARIABLE add_ln131 LOOP VITIS_LOOP_128_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln128_fu_1238_p2 SOURCE src/conv3.cpp:128 VARIABLE add_ln128 LOOP VITIS_LOOP_128_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_78_fu_1244_p2 SOURCE src/conv3.cpp:128 VARIABLE empty_78 LOOP VITIS_LOOP_128_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME empty_79_fu_1273_p2 SOURCE src/conv3.cpp:128 VARIABLE empty_79 LOOP VITIS_LOOP_128_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln131_1_fu_1332_p2 SOURCE src/conv3.cpp:131 VARIABLE add_ln131_1 LOOP VITIS_LOOP_129_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln129_fu_1348_p2 SOURCE src/conv3.cpp:129 VARIABLE add_ln129 LOOP VITIS_LOOP_129_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_84_fu_1364_p2 SOURCE {} VARIABLE empty_84 LOOP VITIS_LOOP_32_2.5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln79_fu_1384_p2 SOURCE src/conv3.cpp:79 VARIABLE add_ln79 LOOP VITIS_LOOP_79_10 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln82_fu_1414_p2 SOURCE src/conv3.cpp:82 VARIABLE sub_ln82 LOOP VITIS_LOOP_79_10 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln80_fu_1430_p2 SOURCE src/conv3.cpp:80 VARIABLE add_ln80 LOOP VITIS_LOOP_80_11 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME input_fm_buffer_U SOURCE {} VARIABLE input_fm_buffer LOOP {} BUNDLEDNAME {} DSP 0 BRAM 28 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME output_fm_buffer_0_U SOURCE {} VARIABLE output_fm_buffer_0 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage ram_1p}}} AREA {DSP 1 BRAM 29 URAM 0}} srcnn {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_61_fu_355_p2 SOURCE {} VARIABLE empty_61 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_65_fu_400_p2 SOURCE {} VARIABLE empty_65 LOOP {Loop 2} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_69_fu_445_p2 SOURCE {} VARIABLE empty_69 LOOP {Loop 3} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 6 BRAM 133 URAM 0}}}}'
 INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
 Execute       send_msg_by_id INFO @200-1603@%s  and missed bursts 
 INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
@@ -655,14 +775,14 @@ INFO-FLOW: Running: gen_csynth_sec_pragma
 INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.755 seconds; current allocated memory: 92.750 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.176 seconds; current allocated memory: 92.688 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for srcnn.
 INFO: [VLOG 209-307] Generating Verilog RTL for srcnn.
 Execute       syn_report -model srcnn -printsummary 
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
-Command     autosyn done; 10.894 sec.
-Command   csynth_design done; 33.069 sec.
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 9 seconds. CPU system time: 3 seconds. Elapsed time: 33.069 seconds; current allocated memory: 0.820 MB.
-Command ap_source done; 34.421 sec.
+Command     autosyn done; 15.518 sec.
+Command   csynth_design done; 39.323 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 14 seconds. CPU system time: 4 seconds. Elapsed time: 39.323 seconds; current allocated memory: 0.859 MB.
+Command ap_source done; 40.753 sec.
 Execute cleanup_all 

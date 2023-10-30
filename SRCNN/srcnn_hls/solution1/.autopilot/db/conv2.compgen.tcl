@@ -12,32 +12,13 @@ if {${::AESL::PGuard_autoexp_gen}} {
     AESL_LIB_XILADAPTER::native_axis_begin
 }
 
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 20 \
-    name conv1_output_ftmap \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename conv1_output_ftmap \
-    op interface \
-    ports { conv1_output_ftmap_address0 { O 22 vector } conv1_output_ftmap_ce0 { O 1 bit } conv1_output_ftmap_q0 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_output_ftmap'"
-}
-}
-
-
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 17 \
     name gmem \
     type other \
-    dir I \
+    dir IO \
     reset_level 1 \
     sync_rst true \
     corename dc_gmem \
@@ -50,6 +31,21 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 18 \
+    name input_ftmap \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_input_ftmap \
+    op interface \
+    ports { input_ftmap { I 64 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 19 \
     name conv2_weights \
     type other \
     dir I \
@@ -64,7 +60,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 19 \
+    id 20 \
     name conv2_biases \
     type other \
     dir I \
@@ -73,6 +69,21 @@ eval "cg_default_interface_gen_dc { \
     corename dc_conv2_biases \
     op interface \
     ports { conv2_biases { I 64 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 21 \
+    name output_ftmap \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_output_ftmap \
+    op interface \
+    ports { output_ftmap { I 64 vector } } \
 } "
 }
 

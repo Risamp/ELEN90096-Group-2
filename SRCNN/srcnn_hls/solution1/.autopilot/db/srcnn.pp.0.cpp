@@ -164,12 +164,14 @@ typedef float param_t;
 
 __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][255],
            param_t conv1_weights[64][1][9][9],
-           param_t conv1_biases[64],
-           param_t conv2_weights[32][64][1][1],
-           param_t conv2_biases[32],
-           param_t conv3_weights[1][32][5][5],
-           param_t conv3_biases[1],
-           ftmap_t output_ftmap[1][255][255]);
+     param_t conv1_biases[64],
+     ftmap_t conv1_output_ftmap[64][255][255],
+     param_t conv2_weights[32][64][1][1],
+     param_t conv2_biases[32],
+     ftmap_t conv2_output_ftmap[32][255][255],
+     param_t conv3_weights[1][32][5][5],
+     param_t conv3_biases[1],
+     ftmap_t output_ftmap[1][255][255]);
 
 
 void conv1(ftmap_t input_ftmap[1][255][255],
@@ -25992,19 +25994,21 @@ namespace std
 __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][255],
            param_t conv1_weights[64][1][9][9],
            param_t conv1_biases[64],
+     ftmap_t conv1_output_ftmap[64][255][255],
            param_t conv2_weights[32][64][1][1],
            param_t conv2_biases[32],
+     ftmap_t conv2_output_ftmap[32][255][255],
            param_t conv3_weights[1][32][5][5],
            param_t conv3_biases[1],
            ftmap_t output_ftmap[1][255][255])
 {
 #line 28 "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
-# 14 "src/srcnn.cpp"
+# 16 "src/srcnn.cpp"
 
 #line 7 "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
-# 14 "src/srcnn.cpp"
+# 16 "src/srcnn.cpp"
 
 
 
@@ -26014,22 +26018,18 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][2
 #pragma HLS INTERFACE m_axi port=input_ftmap offset=slave depth=1
 #pragma HLS INTERFACE m_axi port=conv1_weights offset=slave depth=1
 #pragma HLS INTERFACE m_axi port=conv1_biases offset=slave depth=1
+#pragma HLS INTERFACE m_axi port=conv1_output_ftmap offset=slave depth=1
 #pragma HLS INTERFACE m_axi port=conv2_weights offset=slave depth=1
 #pragma HLS INTERFACE m_axi port=conv2_biases offset=slave depth=1
+#pragma HLS INTERFACE m_axi port=conv2_output_ftmap offset=slave depth=1
 #pragma HLS INTERFACE m_axi port=conv3_weights offset=slave depth=1
 #pragma HLS INTERFACE m_axi port=conv3_biases offset=slave depth=1
 #pragma HLS INTERFACE m_axi port=output_ftmap offset=slave depth=1
 #pragma HLS INTERFACE s_axilite port=return
 
- std::cout << "Blah Blah";
-
-
- static ftmap_t conv1_output_ftmap[64][255][255] = {0};
- static ftmap_t conv2_output_ftmap[32][255][255] = {0};
-
-
-
-
+ memset(conv1_output_ftmap, 0, 64 * 255 * 255 * sizeof(ftmap_t));
+ memset(conv2_output_ftmap, 0, 32 * 255 * 255 * sizeof(ftmap_t));
+ memset(output_ftmap, 0, 1 * 255 * 255 * sizeof(ftmap_t));
 
 
     conv1(input_ftmap, conv1_weights, conv1_biases, conv1_output_ftmap);
@@ -26038,7 +26038,7 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][2
     conv2(conv1_output_ftmap, conv2_weights, conv2_biases, conv2_output_ftmap);
 
 
-
+    conv3(conv2_output_ftmap, conv3_weights, conv3_biases, output_ftmap);
 
 }
 

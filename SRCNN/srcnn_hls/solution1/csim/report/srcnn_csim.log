@@ -14,17 +14,18 @@ INFO: [SIM 4] CSIM will launch GCC as the compiler.
   - Butterfly MSE: 3.40524e-015
 
 Blah Blah***** SRCNN Golden Reference *****
-  - Butterfly MSE: 0.27515
+  - Butterfly MSE: 2.17875e-013
 
 ***** SRCNN - Set14 Test *****
 Image Name     PSNR GT vs HR (dB)  PSNR GT vs HR MATLAB (dB)  PSNR GT vs LR (dB)  MSE GT vs HR   MSE GT vs HR MATLAB        
-Blah Blahbaboon         6.16102             24.9898                    27.3618             0.242046       0.00161402                 
-Blah Blahbarbara        5.56792             26.2451                    24.8997             0.277465       0.00316839                 
-Blah Blahbridge         5.94049             26.8397                    25.2317             0.254654       0.00237435                 
-Blah Blahcoastguard     6.01363             33.4187                    26.3                0.250401       0.00206895                 
-Blah Blahface           8.80412             27.3319                    32.6794             0.131701       0.000454177                
-Blah Blahflowers        7.13983             35.727                     25.6995             0.193204       0.00184746                 
-Blah Blahforeman        3.90042             30.8413                    33.2014             0.407341       0.000266235                
-Blah Blahlenna          6.03272             27.1209                    29.1689             0.249303       0.000822304                
-Blah Blahman            7.03768             27.9822                    26.0613             0.197802       0.00193996                 
-Blah Blahmonarch        5.66056             33.4745                    24.5799             0.271609       0.00159023                 
+Blah Blahbaboon         27.9104             24.9898                    27.3618             0.00161402     0.00161402                 
+Blah Blahbarbara        24.9868             26.2451                    24.8997             0.00316839     0.00316839                 
+Blah Blahbridge         24.0522             26.8397                    25.2317             0.00237435     0.00237435                 
+Blah Blahcoastguard     26.8309             33.4187                    26.3                0.00206895     0.00206895                 
+Blah Blahface           33.3716             27.3319                    32.6794             0.000454178    0.000454177                
+Blah Blahflowers        27.322              35.727                     25.6995             0.00184747     0.00184746                 
+Blah Blahforeman        35.7021             30.8413                    33.2014             0.000266235    0.000266235                
+Blah Blahlenna          30.8275             27.1209                    29.1689             0.000822305    0.000822304                
+Blah Blahman            27.1089             27.9822                    26.0613             0.00193997     0.00193996                 
+ERR: [SIM 100] CSim failed with errors.
+INFO: [SIM 3] *************** CSIM finish ***************

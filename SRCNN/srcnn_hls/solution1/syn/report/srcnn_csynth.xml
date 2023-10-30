@@ -22,23 +22,52 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>4425370940</Best-caseLatency>
-<Average-caseLatency>4425370940</Average-caseLatency>
-<Worst-caseLatency>4425370940</Worst-caseLatency>
-<Best-caseRealTimeLatency>44.254 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>44.254 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>44.254 sec</Worst-caseRealTimeLatency>
-<Interval-min>4425370941</Interval-min>
-<Interval-max>4425370941</Interval-max>
+<Best-caseLatency>5587982288</Best-caseLatency>
+<Average-caseLatency>5587982288</Average-caseLatency>
+<Worst-caseLatency>5587982288</Worst-caseLatency>
+<Best-caseRealTimeLatency>55.880 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>55.880 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>55.880 sec</Worst-caseRealTimeLatency>
+<Interval-min>5587982289</Interval-min>
+<Interval-max>5587982289</Interval-max>
 </SummaryOfOverallLatency>
+<SummaryOfLoopLatency>
+<Loop1>
+<Slack>7.30</Slack>
+<TripCount>4161600</TripCount>
+<Latency>8323200</Latency>
+<AbsoluteTimeLatency>83232000</AbsoluteTimeLatency>
+<IterationLatency>2</IterationLatency>
+<InstanceList>
+</InstanceList>
+</Loop1>
+<Loop2>
+<Slack>7.30</Slack>
+<TripCount>2080800</TripCount>
+<Latency>4161600</Latency>
+<AbsoluteTimeLatency>41616000</AbsoluteTimeLatency>
+<IterationLatency>2</IterationLatency>
+<InstanceList>
+</InstanceList>
+</Loop2>
+<Loop3>
+<Slack>7.30</Slack>
+<TripCount>65025</TripCount>
+<Latency>130050</Latency>
+<AbsoluteTimeLatency>1300500</AbsoluteTimeLatency>
+<IterationLatency>2</IterationLatency>
+<InstanceList>
+</InstanceList>
+</Loop3>
+</SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>7478</BRAM_18K>
-<DSP>5</DSP>
-<FF>3663</FF>
-<LUT>5318</LUT>
+<BRAM_18K>133</BRAM_18K>
+<DSP>6</DSP>
+<FF>6297</FF>
+<LUT>9637</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -79,7 +108,7 @@
 <Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>8</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
 <HasCtrl>1</HasCtrl>
@@ -156,7 +185,7 @@
 <Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>8</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
 <HasCtrl>1</HasCtrl>

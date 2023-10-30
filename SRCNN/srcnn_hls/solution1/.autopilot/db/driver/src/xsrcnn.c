@@ -133,6 +133,25 @@ u64 XSrcnn_Get_conv1_biases(XSrcnn *InstancePtr) {
     return Data;
 }
 
+void XSrcnn_Set_conv1_output_ftmap(XSrcnn *InstancePtr, u64 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XSrcnn_WriteReg(InstancePtr->Control_BaseAddress, XSRCNN_CONTROL_ADDR_CONV1_OUTPUT_FTMAP_DATA, (u32)(Data));
+    XSrcnn_WriteReg(InstancePtr->Control_BaseAddress, XSRCNN_CONTROL_ADDR_CONV1_OUTPUT_FTMAP_DATA + 4, (u32)(Data >> 32));
+}
+
+u64 XSrcnn_Get_conv1_output_ftmap(XSrcnn *InstancePtr) {
+    u64 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XSrcnn_ReadReg(InstancePtr->Control_BaseAddress, XSRCNN_CONTROL_ADDR_CONV1_OUTPUT_FTMAP_DATA);
+    Data += (u64)XSrcnn_ReadReg(InstancePtr->Control_BaseAddress, XSRCNN_CONTROL_ADDR_CONV1_OUTPUT_FTMAP_DATA + 4) << 32;
+    return Data;
+}
+
 void XSrcnn_Set_conv2_weights(XSrcnn *InstancePtr, u64 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
@@ -168,6 +187,25 @@ u64 XSrcnn_Get_conv2_biases(XSrcnn *InstancePtr) {
 
     Data = XSrcnn_ReadReg(InstancePtr->Control_BaseAddress, XSRCNN_CONTROL_ADDR_CONV2_BIASES_DATA);
     Data += (u64)XSrcnn_ReadReg(InstancePtr->Control_BaseAddress, XSRCNN_CONTROL_ADDR_CONV2_BIASES_DATA + 4) << 32;
+    return Data;
+}
+
+void XSrcnn_Set_conv2_output_ftmap(XSrcnn *InstancePtr, u64 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XSrcnn_WriteReg(InstancePtr->Control_BaseAddress, XSRCNN_CONTROL_ADDR_CONV2_OUTPUT_FTMAP_DATA, (u32)(Data));
+    XSrcnn_WriteReg(InstancePtr->Control_BaseAddress, XSRCNN_CONTROL_ADDR_CONV2_OUTPUT_FTMAP_DATA + 4, (u32)(Data >> 32));
+}
+
+u64 XSrcnn_Get_conv2_output_ftmap(XSrcnn *InstancePtr) {
+    u64 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XSrcnn_ReadReg(InstancePtr->Control_BaseAddress, XSRCNN_CONTROL_ADDR_CONV2_OUTPUT_FTMAP_DATA);
+    Data += (u64)XSrcnn_ReadReg(InstancePtr->Control_BaseAddress, XSRCNN_CONTROL_ADDR_CONV2_OUTPUT_FTMAP_DATA + 4) << 32;
     return Data;
 }
 
