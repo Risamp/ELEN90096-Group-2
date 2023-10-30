@@ -27,11 +27,13 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 	#pragma HLS PIPELINE off
 
 	// for each tile (ti, tj) in our T x T grid
-	for (int tj = 0; tj < T; tj++) {
-	for (int ti = 0; ti < T; ti++) {
+	TJ: for (int tj = 0; tj < T; tj++) {
+	TI: for (int ti = 0; ti < T; ti++) {
+	TN: for (int tn = 0; tn < N1 / TD2; tn++) {
 
 		int ty0 = tj * TH;
 		int tx0 = ti * TW;
+		int tn0 = tn * TD2;
 
 		// initialise input and output buffers
 		static ftmap_t input_fm_buffer[N2][TH + (2 * P3)][TW + (2 * P3)];
@@ -57,8 +59,10 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 
 					// for each input layer
 					// TODO: PIPELINE THIS
-					for (int nin = 0; nin < N2; nin++) {
-						output_fm_buffer[nout][ty][tx] += conv3_weights[nout][nin][ky][kx] * input_fm_buffer[nin][by][bx];
+					NIN: for (int nin = 0; nin < TD2; nin++) {
+// it's a yes from me (-56% runtime)
+//#pragma HLS UNROLL factor=8
+						output_fm_buffer[nout][ty][tx] += conv3_weights[nout][tn0 + nin][ky][kx] * input_fm_buffer[tn0 + nin][by][bx];
 					}
 				}}
 
@@ -68,7 +72,7 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 
 		// load output buffer back to DRAM
 		export_buffer_tile_c3(output_fm_buffer, output_ftmap, tx0, ty0);
-	}}
+	}}}
 
 
 	// split relu from rest of loop
