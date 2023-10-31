@@ -47,93 +47,93 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_1247_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_104_1:  '
-    FileOffset:      104
-    FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
-    Replacements:    
-      - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1742658
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_104_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_105_2:  '
+    Message:         'Added loop label VITIS_LOOP_105_1:  '
     FileOffset:      105
     FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1742696
+        Offset:          1742679
         Length:          0
-        ReplacementText: 'VITIS_LOOP_105_2: '
+        ReplacementText: 'VITIS_LOOP_105_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_106_3:  '
-    FileOffset:      106
+    Message:         'Added loop label VITIS_LOOP_108_2:  '
+    FileOffset:      108
     FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1742759
+        Offset:          1742744
         Length:          0
-        ReplacementText: 'VITIS_LOOP_106_3: '
+        ReplacementText: 'VITIS_LOOP_108_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_118_4:  '
-    FileOffset:      118
+    Message:         'Added loop label VITIS_LOOP_109_3:  '
+    FileOffset:      109
     FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1743037
+        Offset:          1742807
         Length:          0
-        ReplacementText: 'VITIS_LOOP_118_4: '
+        ReplacementText: 'VITIS_LOOP_109_3: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_119_5:  '
-    FileOffset:      119
-    FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
-    Replacements:    
-      - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1743079
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_119_5: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_120_6:  '
-    FileOffset:      120
-    FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
-    Replacements:    
-      - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1743118
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_120_6: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_121_7:  '
+    Message:         'Added loop label VITIS_LOOP_121_4:  '
     FileOffset:      121
     FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1743155
+        Offset:          1743085
         Length:          0
-        ReplacementText: 'VITIS_LOOP_121_7: '
+        ReplacementText: 'VITIS_LOOP_121_4: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_136_1:  '
-    FileOffset:      136
+    Message:         'Added loop label VITIS_LOOP_123_5:  '
+    FileOffset:      123
     FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1743457
+        Offset:          1743152
         Length:          0
-        ReplacementText: 'VITIS_LOOP_136_1: '
+        ReplacementText: 'VITIS_LOOP_123_5: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_137_2:  '
-    FileOffset:      137
+    Message:         'Added loop label VITIS_LOOP_124_6:  '
+    FileOffset:      124
     FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1743499
+        Offset:          1743191
         Length:          0
-        ReplacementText: 'VITIS_LOOP_137_2: '
+        ReplacementText: 'VITIS_LOOP_124_6: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_138_3:  '
-    FileOffset:      138
+    Message:         'Added loop label VITIS_LOOP_126_7:  '
+    FileOffset:      126
     FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          1743542
+        Offset:          1743229
         Length:          0
-        ReplacementText: 'VITIS_LOOP_138_3: '
+        ReplacementText: 'VITIS_LOOP_126_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_141_1:  '
+    FileOffset:      141
+    FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
+    Replacements:    
+      - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
+        Offset:          1743531
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_141_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_143_2:  '
+    FileOffset:      143
+    FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
+    Replacements:    
+      - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
+        Offset:          1743597
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_143_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_145_3:  '
+    FileOffset:      145
+    FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv2.cpp'
+    Replacements:    
+      - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
+        Offset:          1743641
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_145_3: '
 ...

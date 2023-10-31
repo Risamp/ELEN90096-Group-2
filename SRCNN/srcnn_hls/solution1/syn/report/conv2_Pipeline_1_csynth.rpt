@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_1'
 ================================================================
-* Date:           Tue Oct 31 16:55:35 2023
+* Date:           Tue Oct 31 19:00:06 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  2.046 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  2.068 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
     |   min   |   max   |    min    |    max    |  min |  max |   Type  |
     +---------+---------+-----------+-----------+------+------+---------+
-    |     2314|     2314|  23.140 us|  23.140 us|  2314|  2314|       no|
+    |     9250|     9250|  92.500 us|  92.500 us|  9250|  9250|       no|
     +---------+---------+-----------+-----------+------+------+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +----------+---------+---------+----------+-----------+-----------+------+----------+
-        |- Loop 1  |     2312|     2312|         1|          1|          1|  2312|       yes|
+        |- Loop 1  |     9248|     9248|         1|          1|          1|  9248|       yes|
         +----------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -54,14 +54,14 @@
 |       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
 +-----------------+---------+------+--------+--------+-----+
 |DSP              |        -|     -|       -|       -|    -|
-|Expression       |        -|     -|       0|      38|    -|
+|Expression       |        -|     -|       0|      42|    -|
 |FIFO             |        -|     -|       -|       -|    -|
 |Instance         |        -|     -|       -|       -|    -|
 |Memory           |        -|     -|       -|       -|    -|
 |Multiplexer      |        -|     -|       -|      27|    -|
-|Register         |        -|     -|      14|       -|    -|
+|Register         |        -|     -|      16|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |        0|     0|      14|      65|    0|
+|Total            |        0|     0|      16|      69|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      288|  1248|  234240|  117120|   64|
 +-----------------+---------+------+--------+--------+-----+
@@ -82,24 +82,24 @@
     N/A
 
     * Expression: 
-    +--------------------+----------+----+---+----+------------+------------+
-    |    Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +--------------------+----------+----+---+----+------------+------------+
-    |empty_109_fu_58_p2  |         +|   0|  0|  19|          12|           1|
-    |exitcond4_fu_52_p2  |      icmp|   0|  0|  19|          12|          12|
-    +--------------------+----------+----+---+----+------------+------------+
-    |Total               |          |   0|  0|  38|          24|          13|
-    +--------------------+----------+----+---+----+------------+------------+
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |empty_75_fu_58_p2     |         +|   0|  0|  21|          14|           1|
+    |exitcond368_fu_52_p2  |      icmp|   0|  0|  21|          14|          14|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  42|          28|          15|
+    +----------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
     +-------------------------+----+-----------+-----+-----------+
     |           Name          | LUT| Input Size| Bits| Total Bits|
     +-------------------------+----+-----------+-----+-----------+
     |ap_done_int              |   9|          2|    1|          2|
-    |ap_sig_allocacmp_p_load  |   9|          2|   12|         24|
-    |empty_fu_26              |   9|          2|   12|         24|
+    |ap_sig_allocacmp_p_load  |   9|          2|   14|         28|
+    |empty_fu_26              |   9|          2|   14|         28|
     +-------------------------+----+-----------+-----+-----------+
-    |Total                    |  27|          6|   25|         50|
+    |Total                    |  27|          6|   29|         58|
     +-------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -108,9 +108,9 @@
     +-------------+----+----+-----+-----------+
     |ap_CS_fsm    |   1|   0|    1|          0|
     |ap_done_reg  |   1|   0|    1|          0|
-    |empty_fu_26  |  12|   0|   12|          0|
+    |empty_fu_26  |  14|   0|   14|          0|
     +-------------+----+----+-----+-----------+
-    |Total        |  14|   0|   14|          0|
+    |Total        |  16|   0|   16|          0|
     +-------------+----+----+-----+-----------+
 
 
@@ -119,18 +119,18 @@
 == Interface
 ================================================================
 * Summary: 
-+----------------------------+-----+-----+------------+-------------------+--------------+
-|          RTL Ports         | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
-+----------------------------+-----+-----+------------+-------------------+--------------+
-|ap_clk                      |   in|    1|  ap_ctrl_hs|   conv2_Pipeline_1|  return value|
-|ap_rst                      |   in|    1|  ap_ctrl_hs|   conv2_Pipeline_1|  return value|
-|ap_start                    |   in|    1|  ap_ctrl_hs|   conv2_Pipeline_1|  return value|
-|ap_done                     |  out|    1|  ap_ctrl_hs|   conv2_Pipeline_1|  return value|
-|ap_idle                     |  out|    1|  ap_ctrl_hs|   conv2_Pipeline_1|  return value|
-|ap_ready                    |  out|    1|  ap_ctrl_hs|   conv2_Pipeline_1|  return value|
-|input_fm_buffer_1_address0  |  out|   12|   ap_memory|  input_fm_buffer_1|         array|
-|input_fm_buffer_1_ce0       |  out|    1|   ap_memory|  input_fm_buffer_1|         array|
-|input_fm_buffer_1_we0       |  out|    1|   ap_memory|  input_fm_buffer_1|         array|
-|input_fm_buffer_1_d0        |  out|   32|   ap_memory|  input_fm_buffer_1|         array|
-+----------------------------+-----+-----+------------+-------------------+--------------+
++---------------------------+-----+-----+------------+------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++---------------------------+-----+-----+------------+------------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|  conv2_Pipeline_1|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|  conv2_Pipeline_1|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|  conv2_Pipeline_1|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|  conv2_Pipeline_1|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|  conv2_Pipeline_1|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|  conv2_Pipeline_1|  return value|
+|output_fm_buffer_address0  |  out|   14|   ap_memory|  output_fm_buffer|         array|
+|output_fm_buffer_ce0       |  out|    1|   ap_memory|  output_fm_buffer|         array|
+|output_fm_buffer_we0       |  out|    1|   ap_memory|  output_fm_buffer|         array|
+|output_fm_buffer_d0        |  out|   32|   ap_memory|  output_fm_buffer|         array|
++---------------------------+-----+-----+------------+------------------+--------------+
 

@@ -18,25 +18,25 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>2.046</EstimatedClockPeriod>
+<EstimatedClockPeriod>2.068</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>2314</Best-caseLatency>
-<Average-caseLatency>2314</Average-caseLatency>
-<Worst-caseLatency>2314</Worst-caseLatency>
-<Best-caseRealTimeLatency>23.140 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>23.140 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>23.140 us</Worst-caseRealTimeLatency>
-<Interval-min>2314</Interval-min>
-<Interval-max>2314</Interval-max>
+<Best-caseLatency>9250</Best-caseLatency>
+<Average-caseLatency>9250</Average-caseLatency>
+<Worst-caseLatency>9250</Worst-caseLatency>
+<Best-caseRealTimeLatency>92.500 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>92.500 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>92.500 us</Worst-caseRealTimeLatency>
+<Interval-min>9250</Interval-min>
+<Interval-max>9250</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <Loop1>
 <Slack>7.30</Slack>
-<TripCount>2312</TripCount>
-<Latency>2312</Latency>
-<AbsoluteTimeLatency>23120</AbsoluteTimeLatency>
+<TripCount>9248</TripCount>
+<Latency>9248</Latency>
+<AbsoluteTimeLatency>92480</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
 <PipelineDepth>1</PipelineDepth>
 <InstanceList>
@@ -47,8 +47,8 @@
 
 <AreaEstimates>
 <Resources>
-<FF>14</FF>
-<LUT>65</LUT>
+<FF>16</FF>
+<LUT>69</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
 <URAM>0</URAM>
@@ -130,19 +130,19 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>input_fm_buffer_1_address0</name>
-<Object>input_fm_buffer_1</Object>
+<name>output_fm_buffer_address0</name>
+<Object>output_fm_buffer</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>12</Bits>
+<Bits>14</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>input_fm_buffer_1_ce0</name>
-<Object>input_fm_buffer_1</Object>
+<name>output_fm_buffer_ce0</name>
+<Object>output_fm_buffer</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -152,8 +152,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>input_fm_buffer_1_we0</name>
-<Object>input_fm_buffer_1</Object>
+<name>output_fm_buffer_we0</name>
+<Object>output_fm_buffer</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -163,8 +163,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>input_fm_buffer_1_d0</name>
-<Object>input_fm_buffer_1</Object>
+<name>output_fm_buffer_d0</name>
+<Object>output_fm_buffer</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>

@@ -11,17 +11,17 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 19 \
-    name input_fm_buffer_1 \
+    id 90 \
+    name output_fm_buffer \
     reset_level 1 \
     sync_rst true \
     dir O \
-    corename input_fm_buffer_1 \
+    corename output_fm_buffer \
     op interface \
-    ports { input_fm_buffer_1_address0 { O 12 vector } input_fm_buffer_1_ce0 { O 1 bit } input_fm_buffer_1_we0 { O 1 bit } input_fm_buffer_1_d0 { O 32 vector } } \
+    ports { output_fm_buffer_address0 { O 14 vector } output_fm_buffer_ce0 { O 1 bit } output_fm_buffer_we0 { O 1 bit } output_fm_buffer_d0 { O 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_fm_buffer_1'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'output_fm_buffer'"
 }
 }
 

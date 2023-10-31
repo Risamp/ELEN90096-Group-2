@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3'" level="0">
-<item name = "Date">Tue Oct 31 16:55:31 2023
+<item name = "Date">Tue Oct 31 18:59:49 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.542 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">60247126, 60247126, 0.602 sec, 0.602 sec, 60247126, 60247126, no</column>
+<column name="">303766426, 303766426, 3.038 sec, 3.038 sec, 303766426, 303766426, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,14 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TJ_TI">60247125, 60247125, 267765, -, -, 225, no</column>
-<column name=" + TN">261976, 261976, 65494, -, -, 4, no</column>
+<column name="- TJ_TI">303766425, 303766425, 1350073, -, -, 225, no</column>
+<column name=" + TN">1343964, 1343964, 335991, -, -, 4, no</column>
+<column name="  ++ TY">328916, 328916, 19348, -, -, 17, no</column>
+<column name="   +++ TX">19346, 19346, 1138, -, -, 17, no</column>
+<column name="    ++++ KY">1135, 1135, 227, -, -, 5, no</column>
+<column name="     +++++ KX">225, 225, 45, -, -, 5, no</column>
+<column name=" + VITIS_LOOP_139_2">5814, 5814, 342, -, -, 17, no</column>
+<column name="  ++ VITIS_LOOP_141_3">340, 340, 20, -, -, 17, no</column>
 </table>
 </item>
 </section>

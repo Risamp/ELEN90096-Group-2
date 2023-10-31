@@ -16,7 +16,7 @@
 					<Obj class_id="5" tracking_level="0" version="0">
 						<type>1</type>
 						<id>1</id>
-						<name>gmem</name>
+						<name>output_r</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -52,7 +52,7 @@
 					<Obj>
 						<type>1</type>
 						<id>2</id>
-						<name>sext_ln38</name>
+						<name>sext_ln39</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -110,7 +110,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1835627552</coreId>
+						<coreId>4294967292</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -134,7 +134,7 @@
 					<Obj>
 						<type>0</type>
 						<id>4</id>
-						<name>sext_ln38_read</name>
+						<name>sext_ln39_read</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -152,7 +152,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852142702</coreId>
+						<coreId>1931812965</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>62</bitwidth>
@@ -177,7 +177,7 @@
 					<Obj>
 						<type>0</type>
 						<id>5</id>
-						<name>sext_ln38_cast</name>
+						<name>sext_ln39_cast</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -195,7 +195,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1918984052</coreId>
+						<coreId>1952671082</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -237,7 +237,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1868963955</coreId>
+						<coreId>1769235301</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -280,7 +280,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3407926</coreId>
+						<coreId>51</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -322,7 +322,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1734439795</coreId>
+						<coreId>1680156704</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -347,10 +347,10 @@
 					<Obj>
 						<type>0</type>
 						<id>12</id>
-						<name>gmem_addr</name>
+						<name>output_r_addr</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\SPB_Data\ELEN90096-Group-2\SRCNN</fileDirectory>
-						<lineNumber>38</lineNumber>
+						<lineNumber>39</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -366,7 +366,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>38</second>
+										<second>39</second>
 									</item>
 								</second>
 							</item>
@@ -379,7 +379,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2097261</coreId>
+						<coreId>1113522816</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -447,7 +447,7 @@
 					<Obj>
 						<type>0</type>
 						<id>15</id>
-						<name>empty_44</name>
+						<name>empty_49</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -508,7 +508,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702129263</coreId>
+						<coreId>1718511904</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -534,10 +534,10 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>gmem_addr_write_ln38</name>
+						<name>output_r_addr_write_ln39</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\SPB_Data\ELEN90096-Group-2\SRCNN</fileDirectory>
-						<lineNumber>38</lineNumber>
+						<lineNumber>39</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -553,7 +553,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>38</second>
+										<second>39</second>
 									</item>
 								</second>
 							</item>
@@ -611,7 +611,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1868963955</coreId>
+						<coreId>1953785203</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -656,7 +656,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1482367549</coreId>
+						<coreId>1634035310</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -698,7 +698,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1819045746</coreId>
+						<coreId>543450472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -774,7 +774,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852142702</coreId>
+						<coreId>1717920800</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -805,7 +805,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1931485194</coreId>
+						<coreId>1852142702</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -836,7 +836,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1717920800</coreId>
+						<coreId>1763730533</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -867,7 +867,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544239471</coreId>
+						<coreId>1869635878</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -898,7 +898,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1929406245</coreId>
+						<coreId>1031369833</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -932,7 +932,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2351901280</coreId>
+					<coreId>977738272</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -967,7 +967,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2351886720</coreId>
+					<coreId>627799424</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1002,7 +1002,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2351907120</coreId>
+					<coreId>627799424</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1035,7 +1035,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2351898560</coreId>
+					<coreId>627799424</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1729,7 +1729,7 @@
 		<count>5</count>
 		<item_version>0</item_version>
 		<item class_id="48" tracking_level="0" version="0">
-			<first>empty_44_fu_89</first>
+			<first>empty_49_fu_89</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -1753,7 +1753,7 @@
 			</second>
 		</item>
 		<item>
-			<first>gmem_addr_fu_77</first>
+			<first>output_r_addr_fu_77</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -1761,7 +1761,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sext_ln38_cast_fu_65</first>
+			<first>sext_ln39_cast_fu_65</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -1785,7 +1785,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sext_ln38_read_read_fu_50</first>
+			<first>sext_ln39_read_read_fu_50</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -1809,7 +1809,7 @@
 			</second>
 		</item>
 		<item>
-			<first>write_ln38_write_fu_56</first>
+			<first>write_ln39_write_fu_56</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -1857,7 +1857,7 @@
 			</second>
 		</item>
 		<item>
-			<first>gmem_addr_reg_107</first>
+			<first>output_r_addr_reg_107</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -1877,7 +1877,7 @@
 		<count>2</count>
 		<item_version>0</item_version>
 		<item class_id="51" tracking_level="0" version="0">
-			<first>gmem</first>
+			<first>output_r</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -1892,7 +1892,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sext_ln38</first>
+			<first>sext_ln39</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

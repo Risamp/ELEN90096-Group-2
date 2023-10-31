@@ -54,9 +54,10 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 			// for each output layer
 			NOUT: for (int nout = 0; nout < N2; nout++) {
 				// for each pixel in tile
+				//SLOW AF
 				TY: for (int ty = 0; ty < TH; ty++) {
 				TX: for (int tx = 0; tx < TW; tx++) {
-
+					#pragma HLS PIPELINE off
 					// for each pixel in the kernel
 					KY: for (int ky = 0; ky < F2; ky++) {
 					KX: for (int kx = 0; kx < F2; kx++) {
@@ -102,6 +103,8 @@ void load_buffer_tile_c2(
 	memset(weights_buffer, 0, N2 * UNROLL * F2 * F2 * sizeof(param_t));
 
 	for (int nin = 0; nin < UNROLL; nin++) { // input layer
+		//SLOW AF
+		#pragma HLS PIPELINE II=17
 		for (int by = 0; by < TH + (2 * P2); by++) { // buffer space y
 			for (int bx = 0; bx < TW + (2 * P2); bx++) { // buffer space x
 
@@ -116,8 +119,10 @@ void load_buffer_tile_c2(
 	}
 
 	for (int nout = 0; nout < N2; nout++) {
+		#pragma HLS PIPELINE II=8
 		for (int nin = 0; nin < UNROLL; nin++) {
 			for (int ky = 0; ky < F2; ky++) {
+				//SLOW AF
 				for (int kx = 0; kx < F2; kx++) {
 					weights_buffer[nout][nin][ky][kx] = conv2_weights[nout][tn0 + nin][ky][kx];
 				}
@@ -134,7 +139,9 @@ void export_buffer_tile_c2(
 	param_t conv2_biases[N2]
 ) {
 	for (int nout = 0; nout < N2; nout++) { // output layer
+		#pragma HLS PIPELINE off
 		for (int ty = 0; ty < TH; ty++) { // tile space y
+			//SLOW AF
 			for (int tx = 0; tx < TW; tx++) { // tile space x
 
 				output_ftmap[nout][ty0 + ty][tx0 + tx] += output_fm_buffer[nout][ty][tx] + conv2_biases[nout];

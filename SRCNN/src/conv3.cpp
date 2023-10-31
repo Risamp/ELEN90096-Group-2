@@ -57,6 +57,7 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 				// for each pixel in tile
 				TY: for (int ty = 0; ty < TH; ty++) {
 				TX: for (int tx = 0; tx < TW; tx++) {
+				#pragma HLS pipeline off
 
 					// for each pixel in the kernel
 					KY: for (int ky = 0; ky < F3; ky++) {
@@ -136,6 +137,7 @@ void export_buffer_tile_c3(
 ) {
 	for (int nout = 0; nout < N3; nout++) { // output layer
 		for (int ty = 0; ty < TH; ty++) { // tile space y
+			#pragma HLS pipeline off
 			for (int tx = 0; tx < TW; tx++) { // tile space x
 
 				output_ftmap[nout][ty0 + ty][tx0 + tx] += output_fm_buffer[nout][ty][tx] + conv3_biases[nout];

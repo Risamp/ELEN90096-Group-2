@@ -13,10 +13,10 @@ module srcnn_conv2_Pipeline_1 (
         ap_done,
         ap_idle,
         ap_ready,
-        input_fm_buffer_1_address0,
-        input_fm_buffer_1_ce0,
-        input_fm_buffer_1_we0,
-        input_fm_buffer_1_d0
+        output_fm_buffer_address0,
+        output_fm_buffer_ce0,
+        output_fm_buffer_we0,
+        output_fm_buffer_d0
 );
 
 parameter    ap_ST_fsm_state1 = 1'd1;
@@ -27,27 +27,27 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-output  [11:0] input_fm_buffer_1_address0;
-output   input_fm_buffer_1_ce0;
-output   input_fm_buffer_1_we0;
-output  [31:0] input_fm_buffer_1_d0;
+output  [13:0] output_fm_buffer_address0;
+output   output_fm_buffer_ce0;
+output   output_fm_buffer_we0;
+output  [31:0] output_fm_buffer_d0;
 
 reg ap_idle;
-reg input_fm_buffer_1_ce0;
-reg input_fm_buffer_1_we0;
+reg output_fm_buffer_ce0;
+reg output_fm_buffer_we0;
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    ap_block_state1_pp0_stage0_iter0;
-wire   [0:0] exitcond4_fu_52_p2;
+wire   [0:0] exitcond368_fu_52_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 wire   [63:0] p_cast_fu_64_p1;
-reg   [11:0] empty_fu_26;
-wire   [11:0] empty_109_fu_58_p2;
+reg   [13:0] empty_fu_26;
+wire   [13:0] empty_75_fu_58_p2;
 wire    ap_loop_init;
-reg   [11:0] ap_sig_allocacmp_p_load;
+reg   [13:0] ap_sig_allocacmp_p_load;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -99,10 +99,10 @@ end
 
 always @ (posedge ap_clk) begin
     if (((ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        if ((exitcond4_fu_52_p2 == 1'd0)) begin
-            empty_fu_26 <= empty_109_fu_58_p2;
+        if ((exitcond368_fu_52_p2 == 1'd0)) begin
+            empty_fu_26 <= empty_75_fu_58_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            empty_fu_26 <= 12'd0;
+            empty_fu_26 <= 14'd0;
         end
     end
 end
@@ -116,7 +116,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_start_int == 1'b1) & (exitcond4_fu_52_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1))) begin
+    if (((ap_start_int == 1'b1) & (exitcond368_fu_52_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -149,7 +149,7 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        ap_sig_allocacmp_p_load = 12'd0;
+        ap_sig_allocacmp_p_load = 14'd0;
     end else begin
         ap_sig_allocacmp_p_load = empty_fu_26;
     end
@@ -157,17 +157,17 @@ end
 
 always @ (*) begin
     if (((ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        input_fm_buffer_1_ce0 = 1'b1;
+        output_fm_buffer_ce0 = 1'b1;
     end else begin
-        input_fm_buffer_1_ce0 = 1'b0;
+        output_fm_buffer_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((ap_start_int == 1'b1) & (exitcond4_fu_52_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1))) begin
-        input_fm_buffer_1_we0 = 1'b1;
+    if (((ap_start_int == 1'b1) & (exitcond368_fu_52_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1))) begin
+        output_fm_buffer_we0 = 1'b1;
     end else begin
-        input_fm_buffer_1_we0 = 1'b0;
+        output_fm_buffer_we0 = 1'b0;
     end
 end
 
@@ -190,13 +190,13 @@ end
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign empty_109_fu_58_p2 = (ap_sig_allocacmp_p_load + 12'd1);
+assign empty_75_fu_58_p2 = (ap_sig_allocacmp_p_load + 14'd1);
 
-assign exitcond4_fu_52_p2 = ((ap_sig_allocacmp_p_load == 12'd2312) ? 1'b1 : 1'b0);
+assign exitcond368_fu_52_p2 = ((ap_sig_allocacmp_p_load == 14'd9248) ? 1'b1 : 1'b0);
 
-assign input_fm_buffer_1_address0 = p_cast_fu_64_p1;
+assign output_fm_buffer_address0 = p_cast_fu_64_p1;
 
-assign input_fm_buffer_1_d0 = 32'd0;
+assign output_fm_buffer_d0 = 32'd0;
 
 assign p_cast_fu_64_p1 = ap_sig_allocacmp_p_load;
 

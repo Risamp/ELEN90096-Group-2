@@ -33570,9 +33570,10 @@ void conv3(ftmap_t input_ftmap[32][255][255],
 
     TY: for (int ty = 0; ty < 255 / 15; ty++) {
     TX: for (int tx = 0; tx < 255 / 15; tx++) {
+#pragma HLS pipeline off
 
 
-     KY: for (int ky = 0; ky < 5; ky++) {
+ KY: for (int ky = 0; ky < 5; ky++) {
      KX: for (int kx = 0; kx < 5; kx++) {
 
 
@@ -33595,7 +33596,7 @@ void conv3(ftmap_t input_ftmap[32][255][255],
   export_buffer_tile_c3(output_fm_buffer, output_ftmap, tx0, ty0, conv3_biases);
  }}
 }
-# 93 "src/conv3.cpp"
+# 94 "src/conv3.cpp"
 void load_buffer_tile_c3(
  ftmap_t input_fm_buffer[8][255 / 15 + (2 * (5 - 1) / 2)][255 / 15 + (2 * (5 - 1) / 2)],
  ftmap_t input_fm[32][255][255],
@@ -33608,9 +33609,9 @@ void load_buffer_tile_c3(
 
  memset(input_fm_buffer, 0, 8 * (255 / 15 + (2 * (5 - 1) / 2)) * (255 / 15 + (2 * (5 - 1) / 2)) * sizeof(ftmap_t));
 
- VITIS_LOOP_105_1: for (int nin = 0; nin < 8; nin++) {
-  VITIS_LOOP_106_2: for (int by = 0; by < 255 / 15 + (2 * (5 - 1) / 2); by++) {
-   VITIS_LOOP_107_3: for (int bx = 0; bx < 255 / 15 + (2 * (5 - 1) / 2); bx++) {
+ VITIS_LOOP_106_1: for (int nin = 0; nin < 8; nin++) {
+  VITIS_LOOP_107_2: for (int by = 0; by < 255 / 15 + (2 * (5 - 1) / 2); by++) {
+   VITIS_LOOP_108_3: for (int bx = 0; bx < 255 / 15 + (2 * (5 - 1) / 2); bx++) {
 
 
     int xClamped = clamp(tx0 - (5 - 1) / 2 + bx, 0, 255 - 1);
@@ -33622,10 +33623,10 @@ void load_buffer_tile_c3(
   }
  }
 
- VITIS_LOOP_119_4: for (int nout = 0; nout < 1; nout++) {
-  VITIS_LOOP_120_5: for (int nin = 0; nin < 8; nin++) {
-   VITIS_LOOP_121_6: for (int ky = 0; ky < 5; ky++) {
-    VITIS_LOOP_122_7: for (int kx = 0; kx < 5; kx++) {
+ VITIS_LOOP_120_4: for (int nout = 0; nout < 1; nout++) {
+  VITIS_LOOP_121_5: for (int nin = 0; nin < 8; nin++) {
+   VITIS_LOOP_122_6: for (int ky = 0; ky < 5; ky++) {
+    VITIS_LOOP_123_7: for (int kx = 0; kx < 5; kx++) {
      weights_buffer[nout][nin][ky][kx] = conv3_weights[nout][tn0 + nin][ky][kx];
     }
    }
@@ -33640,9 +33641,10 @@ void export_buffer_tile_c3(
  int ty0,
  param_t conv3_biases[1]
 ) {
- VITIS_LOOP_137_1: for (int nout = 0; nout < 1; nout++) {
-  VITIS_LOOP_138_2: for (int ty = 0; ty < 255 / 15; ty++) {
-   VITIS_LOOP_139_3: for (int tx = 0; tx < 255 / 15; tx++) {
+ VITIS_LOOP_138_1: for (int nout = 0; nout < 1; nout++) {
+  VITIS_LOOP_139_2: for (int ty = 0; ty < 255 / 15; ty++) {
+#pragma HLS pipeline off
+ VITIS_LOOP_141_3: for (int tx = 0; tx < 255 / 15; tx++) {
 
     output_ftmap[nout][ty0 + ty][tx0 + tx] += output_fm_buffer[nout][ty][tx] + conv3_biases[nout];
 

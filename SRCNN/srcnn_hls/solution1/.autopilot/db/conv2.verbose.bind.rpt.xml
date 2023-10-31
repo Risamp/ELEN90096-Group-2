@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2'" level="0">
-<item name = "Date">Tue Oct 31 16:54:37 2023
+<item name = "Date">Tue Oct 31 18:59:47 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,26 +24,27 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">121280626, 121280626, 1.213 sec, 1.213 sec, 121280626, 121280626, no</column>
+<column name="">691303951, 691303951, 6.913 sec, 6.913 sec, 691303951, 691303951, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_conv2_Pipeline_1_fu_147">conv2_Pipeline_1, 2314, 2314, 23.140 us, 23.140 us, 2314, 2314, no</column>
-<column name="grp_conv2_Pipeline_2_fu_153">conv2_Pipeline_2, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
-<column name="grp_conv2_Pipeline_VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3_fu_159">conv2_Pipeline_VITIS_LOOP_136_1_VITIS_LOOP_137_2_VITIS_LOOP_138_3, 194210, 194210, 1.942 ms, 1.942 ms, 194210, 194210, no</column>
-<column name="grp_conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2_fu_173">conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2, 2326, 2326, 23.260 us, 23.260 us, 2326, 2326, no</column>
-<column name="grp_conv2_Pipeline_VITIS_LOOP_118_4_fu_185">conv2_Pipeline_VITIS_LOOP_118_4, 267, 267, 2.670 us, 2.670 us, 267, 267, no</column>
-<column name="grp_conv2_Pipeline_NOUT_TY_TX_fu_209">conv2_Pipeline_NOUT_TY_TX, 37030, 37030, 0.370 ms, 0.370 ms, 37030, 37030, no</column>
-<column name="grp_conv2_Pipeline_7_fu_233">conv2_Pipeline_7, 9250, 9250, 92.500 us, 92.500 us, 9250, 9250, no</column>
+<column name="grp_load_buffer_tile_c2_fu_528">load_buffer_tile_c2, 4710, 4710, 47.100 us, 47.100 us, 4710, 4710, no</column>
+<column name="grp_conv2_Pipeline_1_fu_559">conv2_Pipeline_1, 9250, 9250, 92.500 us, 92.500 us, 9250, 9250, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TJ_TI">121280625, 121280625, 539025, -, -, 225, no</column>
-<column name=" + TN">335560, 335560, 41945, -, -, 8, no</column>
+<column name="- TJ_TI">691303950, 691303950, 3072462, -, -, 225, no</column>
+<column name=" + TN">2858568, 2858568, 357321, -, -, 8, no</column>
+<column name="  ++ NOUT">352608, 352608, 11019, -, -, 32, no</column>
+<column name="   +++ TY">11016, 11016, 648, -, -, 17, no</column>
+<column name="    ++++ TX">646, 646, 38, -, -, 17, no</column>
+<column name=" + VITIS_LOOP_141_1">204640, 204640, 6395, -, -, 32, no</column>
+<column name="  ++ VITIS_LOOP_143_2">6392, 6392, 376, -, -, 17, no</column>
+<column name="   +++ VITIS_LOOP_145_3">374, 374, 22, -, -, 17, no</column>
 </table>
 </item>
 </section>

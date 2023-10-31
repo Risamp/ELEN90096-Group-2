@@ -1,45 +1,37 @@
 {
   "0": {
-    "basicblocks": 10,
-    "calls": "8 9 7",
+    "basicblocks": 7,
+    "calls": "5 9 1",
     "file": "srcnn.cpp",
     "fileloc": 6,
-    "instructions": 48,
+    "instructions": 45,
     "name": "srcnn",
     "stores": {
       "T": 3
     },
-    "total_instructions": 795
+    "total_instructions": 8610
   },
   "1": {
-    "basicblocks": 6,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 52,
-    "instructions": 9,
-    "name": "clamp",
-    "total_instructions": 9
+    "basicblocks": 20,
+    "calls": "8 4",
+    "file": "conv3.cpp",
+    "fileloc": 10,
+    "instructions": 141,
+    "loads": {
+      "G": 16,
+      "L": 8
+    },
+    "name": "conv3",
+    "stores": {
+      "G": 8
+    },
+    "total_instructions": 287
   },
   "10": {
-    "basicblocks": 9,
-    "calls": "1 1",
-    "file": "conv1.cpp",
-    "fileloc": 82,
-    "instructions": 34,
-    "loads": {
-      "L": 1
-    },
-    "name": "load_buffer_tile_c1",
-    "stores": {
-      "G": 1
-    },
-    "total_instructions": 52
-  },
-  "2": {
     "basicblocks": 13,
     "calls": "",
     "file": "conv2.cpp",
-    "fileloc": 129,
+    "fileloc": 134,
     "instructions": 64,
     "loads": {
       "G": 1,
@@ -52,54 +44,7 @@
     },
     "total_instructions": 64
   },
-  "3": {
-    "basicblocks": 21,
-    "calls": "1 1",
-    "file": "conv3.cpp",
-    "fileloc": 93,
-    "instructions": 81,
-    "loads": {
-      "L": 2
-    },
-    "name": "load_buffer_tile_c3",
-    "stores": {
-      "G": 3
-    },
-    "total_instructions": 99
-  },
-  "4": {
-    "basicblocks": 11,
-    "calls": "",
-    "file": "conv3.cpp",
-    "fileloc": 130,
-    "instructions": 47,
-    "loads": {
-      "G": 1,
-      "L": 2
-    },
-    "name": "export_buffer_tile_c3",
-    "stores": {
-      "G": 1,
-      "L": 1
-    },
-    "total_instructions": 47
-  },
-  "5": {
-    "basicblocks": 23,
-    "calls": "1 1",
-    "file": "conv2.cpp",
-    "fileloc": 91,
-    "instructions": 88,
-    "loads": {
-      "L": 2
-    },
-    "name": "load_buffer_tile_c2",
-    "stores": {
-      "G": 4
-    },
-    "total_instructions": 106
-  },
-  "6": {
+  "2": {
     "basicblocks": 11,
     "calls": "",
     "file": "conv1.cpp",
@@ -116,25 +61,41 @@
     },
     "total_instructions": 43
   },
-  "7": {
-    "basicblocks": 20,
-    "calls": "3 4",
-    "file": "conv3.cpp",
-    "fileloc": 10,
-    "instructions": 141,
+  "3": {
+    "basicblocks": 9,
+    "calls": "7 7",
+    "file": "conv1.cpp",
+    "fileloc": 82,
+    "instructions": 34,
     "loads": {
-      "G": 16,
-      "L": 8
+      "L": 1
     },
-    "name": "conv3",
+    "name": "load_buffer_tile_c1",
     "stores": {
-      "G": 8
+      "G": 1
     },
-    "total_instructions": 287
+    "total_instructions": 52
   },
-  "8": {
+  "4": {
+    "basicblocks": 11,
+    "calls": "",
+    "file": "conv3.cpp",
+    "fileloc": 131,
+    "instructions": 47,
+    "loads": {
+      "G": 1,
+      "L": 2
+    },
+    "name": "export_buffer_tile_c3",
+    "stores": {
+      "G": 1,
+      "L": 1
+    },
+    "total_instructions": 47
+  },
+  "5": {
     "basicblocks": 19,
-    "calls": "10 6",
+    "calls": "3 2",
     "file": "conv1.cpp",
     "fileloc": 9,
     "instructions": 70,
@@ -148,9 +109,48 @@
     },
     "total_instructions": 165
   },
+  "6": {
+    "basicblocks": 48,
+    "calls": "7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7",
+    "file": "conv2.cpp",
+    "fileloc": 92,
+    "instructions": 2722,
+    "loads": {
+      "L": 297
+    },
+    "name": "load_buffer_tile_c2",
+    "stores": {
+      "G": 299
+    },
+    "total_instructions": 7924
+  },
+  "7": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 53,
+    "instructions": 9,
+    "name": "clamp",
+    "total_instructions": 9
+  },
+  "8": {
+    "basicblocks": 21,
+    "calls": "7 7",
+    "file": "conv3.cpp",
+    "fileloc": 94,
+    "instructions": 81,
+    "loads": {
+      "L": 2
+    },
+    "name": "load_buffer_tile_c3",
+    "stores": {
+      "G": 3
+    },
+    "total_instructions": 99
+  },
   "9": {
     "basicblocks": 20,
-    "calls": "5 2",
+    "calls": "6 10",
     "file": "conv2.cpp",
     "fileloc": 9,
     "instructions": 125,
@@ -161,6 +161,6 @@
     "stores": {
       "G": 8
     },
-    "total_instructions": 295
+    "total_instructions": 8113
   }
 }

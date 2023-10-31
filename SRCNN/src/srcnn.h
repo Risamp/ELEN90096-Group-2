@@ -17,7 +17,7 @@
 #define N3 1            // conv3 output features
 #define F3 5            // conv3 kernel size
 
-#define T 15			// number of tiles in each dimension (width/height)
+#define T 10			// number of tiles in each dimension (width/height)
 #define TH H / T		// input tile height
 #define TW W / T		// input tile width
 #define UNROLL 8		// input tile unroll factor
