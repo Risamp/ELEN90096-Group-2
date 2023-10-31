@@ -60,7 +60,7 @@ module srcnn_conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2 (
         m_axi_gmem_BID,
         m_axi_gmem_BUSER,
         shl_ln3,
-        select_ln30_2,
+        select_ln30_1,
         select_ln30,
         input_ftmap,
         input_fm_buffer_1_address0,
@@ -140,7 +140,7 @@ input  [1:0] m_axi_gmem_BRESP;
 input  [0:0] m_axi_gmem_BID;
 input  [0:0] m_axi_gmem_BUSER;
 input  [5:0] shl_ln3;
-input  [7:0] select_ln30_2;
+input  [7:0] select_ln30_1;
 input  [3:0] select_ln30;
 input  [63:0] input_ftmap;
 output  [11:0] input_fm_buffer_1_address0;
@@ -256,7 +256,7 @@ wire   [4:0] select_ln104_fu_373_p3;
 reg   [4:0] select_ln104_reg_853;
 wire   [3:0] select_ln104_1_fu_381_p3;
 reg   [3:0] select_ln104_1_reg_859;
-reg   [63:0] gmem_addr_17_reg_875;
+reg   [63:0] gmem_addr_15_reg_875;
 wire   [11:0] add_ln113_1_fu_547_p2;
 reg   [11:0] add_ln113_1_reg_881;
 reg    ap_enable_reg_pp0_iter0_reg;
@@ -314,14 +314,14 @@ wire   [17:0] p_shl4_fu_432_p3;
 wire   [9:0] p_shl5_fu_444_p3;
 wire   [18:0] p_shl4_cast_fu_440_p1;
 wire   [18:0] p_shl5_cast_fu_452_p1;
-wire  signed [18:0] empty_98_fu_456_p2;
+wire  signed [18:0] empty_102_fu_456_p2;
 wire   [9:0] tmp_fu_466_p4;
 wire  signed [24:0] grp_fu_803_p3;
 wire  signed [63:0] tmp2_cast_fu_478_p1;
 wire   [63:0] tmp1_fu_481_p2;
 wire   [63:0] tmp_cast_fu_474_p1;
-wire   [63:0] empty_99_fu_486_p2;
-wire   [61:0] trunc_ln_fu_492_p4;
+wire   [63:0] empty_103_fu_486_p2;
+wire   [61:0] trunc_ln8_fu_492_p4;
 wire   [7:0] or_ln_fu_512_p3;
 wire   [8:0] zext_ln104_fu_518_p1;
 wire   [8:0] zext_ln113_fu_522_p1;
@@ -388,12 +388,12 @@ srcnn_mac_muladd_6ns_18ns_19s_25_4_1 #(
     .din1_WIDTH( 18 ),
     .din2_WIDTH( 19 ),
     .dout_WIDTH( 25 ))
-mac_muladd_6ns_18ns_19s_25_4_1_U22(
+mac_muladd_6ns_18ns_19s_25_4_1_U21(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_803_p0),
     .din1(grp_fu_803_p1),
-    .din2(empty_98_fu_456_p2),
+    .din2(empty_102_fu_456_p2),
     .ce(grp_fu_803_ce),
     .dout(grp_fu_803_p3)
 );
@@ -495,7 +495,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage3) & (1'b0 == ap_block_pp0_stage3_11001) & (icmp_ln104_reg_849 == 1'd0))) begin
-        gmem_addr_17_reg_875 <= sext_ln106_fu_502_p1;
+        gmem_addr_15_reg_875 <= sext_ln106_fu_502_p1;
     end
 end
 
@@ -1254,11 +1254,11 @@ assign bitcast_ln113_fu_558_p1 = reg_321;
 
 assign by_cast_fu_424_p1 = select_ln104_reg_853;
 
-assign empty_98_fu_456_p2 = (p_shl4_cast_fu_440_p1 - p_shl5_cast_fu_452_p1);
+assign empty_102_fu_456_p2 = (p_shl4_cast_fu_440_p1 - p_shl5_cast_fu_452_p1);
 
-assign empty_99_fu_486_p2 = (tmp1_fu_481_p2 + tmp_cast_fu_474_p1);
+assign empty_103_fu_486_p2 = (tmp1_fu_481_p2 + tmp_cast_fu_474_p1);
 
-assign empty_fu_427_p2 = (by_cast_fu_424_p1 + select_ln30_2);
+assign empty_fu_427_p2 = (by_cast_fu_424_p1 + select_ln30_1);
 
 assign grp_fu_803_p0 = grp_fu_803_p00;
 
@@ -1270,7 +1270,7 @@ assign icmp_ln104_fu_343_p2 = ((ap_sig_allocacmp_indvar_flatten_load == 8'd136) 
 
 assign icmp_ln105_fu_367_p2 = ((ap_sig_allocacmp_by_load == 5'd17) ? 1'b1 : 1'b0);
 
-assign m_axi_gmem_ARADDR = gmem_addr_17_reg_875;
+assign m_axi_gmem_ARADDR = gmem_addr_15_reg_875;
 
 assign m_axi_gmem_ARBURST = 2'd0;
 
@@ -1346,7 +1346,7 @@ assign select_ln104_1_fu_381_p3 = ((icmp_ln105_fu_367_p2[0:0] == 1'b1) ? add_ln1
 
 assign select_ln104_fu_373_p3 = ((icmp_ln105_fu_367_p2[0:0] == 1'b1) ? 5'd0 : ap_sig_allocacmp_by_load);
 
-assign sext_ln106_fu_502_p1 = $signed(trunc_ln_fu_492_p4);
+assign sext_ln106_fu_502_p1 = $signed(trunc_ln8_fu_492_p4);
 
 assign tmp1_fu_481_p2 = ($signed(tmp2_cast_fu_478_p1) + $signed(input_ftmap));
 
@@ -1358,7 +1358,7 @@ assign tmp_fu_466_p4 = {{{select_ln30}, {select_ln30}}, {2'd0}};
 
 assign trunc_ln113_fu_535_p1 = add_ln113_fu_525_p2[7:0];
 
-assign trunc_ln_fu_492_p4 = {{empty_99_fu_486_p2[63:2]}};
+assign trunc_ln8_fu_492_p4 = {{empty_103_fu_486_p2[63:2]}};
 
 assign zext_ln104_1_fu_389_p1 = select_ln104_1_fu_381_p3;
 

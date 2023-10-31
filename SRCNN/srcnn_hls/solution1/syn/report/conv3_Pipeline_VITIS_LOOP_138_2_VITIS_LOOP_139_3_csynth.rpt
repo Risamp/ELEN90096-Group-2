@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_VITIS_LOOP_138_2_VITIS_LOOP_139_3'
 ================================================================
-* Date:           Mon Oct 30 23:02:05 2023
+* Date:           Tue Oct 31 13:45:08 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -128,7 +128,7 @@
     |ap_enable_reg_pp0_iter1                  |    9|          2|    1|          2|
     |ap_sig_allocacmp_indvar_flatten280_load  |    9|          2|    9|         18|
     |ap_sig_allocacmp_tx_load                 |    9|          2|    5|         10|
-    |ap_sig_allocacmp_ty_2                    |    9|          2|    5|         10|
+    |ap_sig_allocacmp_ty_1                    |    9|          2|    5|         10|
     |gmem_blk_n_AR                            |    9|          2|    1|          2|
     |gmem_blk_n_AW                            |    9|          2|    1|          2|
     |gmem_blk_n_B                             |    9|          2|    1|          2|

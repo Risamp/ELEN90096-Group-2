@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698667327650">
-  <ports id="1" name="gmem" type="PortType" coreId="1635147636" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698720310890">
+  <ports id="1" name="gmem" type="PortType" coreId="1852142702" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
     <dataInputObjs>call</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
@@ -8,16 +8,16 @@
     <dataOutputObjs>call</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="input_ftmap" type="PortType" coreId="1852142702" bitwidth="64">
+  <ports id="2" name="input_ftmap" type="PortType" coreId="1702127986" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="conv3_weights" type="PortType" coreId="1717920800" bitwidth="64">
+  <ports id="3" name="conv3_weights" type="PortType" coreId="1702127986" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="conv3_biases_0_0_val" type="PortType" coreId="1968127008" bitwidth="32">
+  <ports id="4" name="conv3_biases_0_0_val" type="PortType" coreId="898723504" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="output_ftmap" type="PortType" coreId="1635147636" bitwidth="64">
+  <ports id="5" name="output_ftmap" type="PortType" coreId="1852142702" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="77" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.3"/>
@@ -274,7 +274,7 @@
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="tmp_3_mid1" lineNumber="31" fileName="src/conv3.cpp" fileDirectory="../." rtlName="tmp_3_mid1_fu_260_p3" coreId="0" contextFuncName="conv3" bitwidth="8" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="tmp_1_mid1" lineNumber="31" fileName="src/conv3.cpp" fileDirectory="../." rtlName="tmp_1_mid1_fu_260_p3" coreId="0" contextFuncName="conv3" bitwidth="8" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv3.cpp" linenumber="31" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>add</dataInputObjs>
@@ -428,7 +428,7 @@
       <dataInputObjs>or</dataInputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="empty" lineNumber="103" fileName="src/conv3.cpp" fileDirectory="../." rtlName="mul_5ns_8ns_12_1_1_U117" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="load_buffer_tile_c3" bitwidth="12" opcode="mul" nodeLabel="5.0" m_display="0" m_delay="1.65" m_topoIndex="46" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="empty" lineNumber="103" fileName="src/conv3.cpp" fileDirectory="../." rtlName="mul_5ns_8ns_12_1_1_U114" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="load_buffer_tile_c3" bitwidth="12" opcode="mul" nodeLabel="5.0" m_display="0" m_delay="1.65" m_topoIndex="46" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv3.cpp" linenumber="52" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
       <inlineStackInfo fileName="src/conv3.cpp" linenumber="103" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="load_buffer_tile_c3"/>
       <dataInputObjs>zext</dataInputObjs>
@@ -603,11 +603,11 @@
   <expressionNodes realName="icmp_ln40_fu_306">
     <nodeIds>44</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="tmp_3_mid1_fu_260">
-    <nodeIds>33</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="tj_fu_96">
     <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_1_mid1_fu_260">
+    <nodeIds>33</nodeIds>
   </expressionNodes>
   <expressionNodes realName="empty_fu_364">
     <nodeIds>57</nodeIds>

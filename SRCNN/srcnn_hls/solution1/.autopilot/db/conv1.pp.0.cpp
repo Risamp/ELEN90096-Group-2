@@ -33502,62 +33502,61 @@ void conv1(ftmap_t input_ftmap[1][255][255],
            param_t conv1_biases[64],
            ftmap_t output_ftmap[64][255][255])
 {
-# 30 "src/conv1.cpp"
-  TILE_J: for (int tj = 0; tj < 15; tj++) {
-  TILE_I: for (int ti = 0; ti < 15; ti++) {
+# 27 "src/conv1.cpp"
+#pragma HLS PIPELINE off
 
-   int ty0 = tj * 255 / 15;
-   int tx0 = ti * 255 / 15;
+ static ftmap_t output_fm_buffer[64][255 / 15][255 / 15] = {0};
 
 
-   static ftmap_t input_fm_buffer[1][255 / 15 + (2 * (9 - 1) / 2)][255 / 15 + (2 * (9 - 1) / 2)];
-   static ftmap_t output_fm_buffer[64][255 / 15][255 / 15] = {0};
+ TILE_J: for (int tj = 0; tj < 15; tj++) {
+ TILE_I: for (int ti = 0; ti < 15; ti++) {
+
+  int ty0 = tj * 255 / 15;
+  int tx0 = ti * 255 / 15;
 
 
-   load_buffer_tile_c1(input_fm_buffer, input_ftmap, tx0, ty0);
-
-
-   NOUT: for (int nout = 0; nout < 64; nout++) {
-
-
-    TY: for (int ty = 0; ty < 255 / 15; ty++) {
-    TX: for (int tx = 0; tx < 255 / 15; tx++) {
-
-
-     KY: for (int ky = 0; ky < 9; ky++) {
-     KX: for (int kx = 0; kx < 9; kx++) {
-
-
-      int by = ty + ky;
-      int bx = tx + kx;
+  static ftmap_t input_fm_buffer[1][255 / 15 + (2 * (9 - 1) / 2)][255 / 15 + (2 * (9 - 1) / 2)];
 
 
 
-      NIN: for (int nin = 0; nin < 1; nin++) {
+  load_buffer_tile_c1(input_fm_buffer, input_ftmap, tx0, ty0);
 
-      }
-     }}
 
+  NOUT: for (int nout = 0; nout < 64; nout++) {
+
+
+   TY: for (int ty = 0; ty < 255 / 15; ty++) {
+   TX: for (int tx = 0; tx < 255 / 15; tx++) {
+
+
+    KY: for (int ky = 0; ky < 9; ky++) {
+    KX: for (int kx = 0; kx < 9; kx++) {
+
+
+     int by = ty + ky;
+     int bx = tx + kx;
+
+
+     NIN: for (int nin = 0; nin < 1; nin++) {
+      output_fm_buffer[nout][ty][tx] += conv1_weights[nout][nin][ky][kx] * input_fm_buffer[nin][by][bx];
+     }
     }}
 
-   }
+   }}
+
+  }
 
 
-   export_buffer_tile_c1(output_fm_buffer, output_ftmap, tx0, ty0, conv1_biases);
-  }}
-
-
+  export_buffer_tile_c1(output_fm_buffer, output_ftmap, tx0, ty0, conv1_biases);
+ }}
 }
-# 83 "src/conv1.cpp"
+# 82 "src/conv1.cpp"
 void load_buffer_tile_c1(
  ftmap_t input_fm_buffer[1][255 / 15 + (2 * (9 - 1) / 2)][255 / 15 + (2 * (9 - 1) / 2)],
  ftmap_t input_fm[1][255][255],
  int tx0,
  int ty0
 ) {
-
- memset(input_fm_buffer, 0, 1 * (255 / 15 + (2 * (9 - 1) / 2)) * (255 / 15 + (2 * (9 - 1) / 2)) * sizeof(ftmap_t));
-
  IN_BUFFER_NIN: for (int nin = 0; nin < 1; nin++) {
   IN_BUFFER_BY: for (int by = 0; by < 255 / 15 + (2 * (9 - 1) / 2); by++) {
    IN_BUFFER_BX: for (int bx = 0; bx < 255 / 15 + (2 * (9 - 1) / 2); bx++) {
@@ -33584,15 +33583,17 @@ void export_buffer_tile_c1(
   OUT_BUFFER_TY: for (int ty = 0; ty < 255 / 15; ty++) {
    OUT_BUFFER_TX: for (int tx = 0; tx < 255 / 15; tx++) {
 
-    output_ftmap[nout][ty0 + ty][tx0 + tx] = output_fm_buffer[nout][ty][tx] + conv1_biases[nout];
-    if (output_ftmap[nout][ty0 + ty][tx0 + tx] < 0) {
-     output_ftmap[nout][ty0 + ty][tx0 + tx] = 0;
+    ftmap_t value = output_fm_buffer[nout][ty][tx] + conv1_biases[nout];
+
+    output_fm_buffer[nout][ty][tx] = 0;
+
+
+    if (value < 0) {
+     value = 0;
     }
 
+    output_ftmap[nout][ty0 + ty][tx0 + tx] = value;
    }
   }
  }
-
-
- memset(output_fm_buffer, 0, 64 * 255 / 15 * 255 / 15 * sizeof(ftmap_t));
 }

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698667326318">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698720309116">
   <ports id="1" name="select_ln31_1" type="PortType" coreId="1852142702" bitwidth="8">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="conv3_biases_0_0_val" type="PortType" coreId="859057718" bitwidth="32">
+  <ports id="2" name="conv3_biases_0_0_val" type="PortType" coreId="1852142702" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="ti_cast20" type="PortType" coreId="859057718" bitwidth="4">
+  <ports id="3" name="ti_cast20" type="PortType" coreId="1228677182" bitwidth="4">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="p_shl1" type="PortType" coreId="1008746033" bitwidth="8">
+  <ports id="4" name="p_shl1" type="PortType" coreId="1852142702" bitwidth="8">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="output_ftmap" type="PortType" coreId="859057718" bitwidth="64">
+  <ports id="5" name="output_ftmap" type="PortType" coreId="1852142702" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="6" name="gmem" type="PortType" coreId="1852142702" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="7" name="output_fm_buffer_0" type="PortType" coreName="RAM" coreId="1228677182" bitwidth="32" iftype="IfTypeRegister" arraysize="289">
+  <ports id="7" name="output_fm_buffer_0" type="PortType" coreName="RAM" coreId="1852142702" bitwidth="32" iftype="IfTypeRegister" arraysize="289">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
   <edges id="96" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.3"/>
@@ -144,7 +144,7 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="ty" originalName="ty" coreId="4294967295" bitwidth="5" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="ty" originalName="ty" coreId="0" bitwidth="5" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -177,7 +177,7 @@
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="ti_cast20_cast" rtlName="ti_cast20_cast_fu_186_p1" coreId="0" bitwidth="5" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="ti_cast20_cast" rtlName="ti_cast20_cast_fu_186_p1" coreId="4294967295" bitwidth="5" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
@@ -210,7 +210,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>memset.loop.i26.preheader.exitStub</controlOutputObjs>
       <controlOutputObjs>for.inc24.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="ty_2" lineNumber="138" originalName="ty" fileName="src/conv3.cpp" fileDirectory="../." coreId="0" contextFuncName="export_buffer_tile_c3" bitwidth="5" opcode="load" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="ty_1" lineNumber="138" originalName="ty" fileName="src/conv3.cpp" fileDirectory="../." coreId="0" contextFuncName="export_buffer_tile_c3" bitwidth="5" opcode="load" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="82" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="138" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_buffer_tile_c3"/>
         <dataInputObjs>alloca</dataInputObjs>
@@ -353,7 +353,7 @@
         <dataInputObjs>select</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="tmp_6" lineNumber="141" fileName="src/conv3.cpp" fileDirectory="../." rtlName="tmp_6_fu_298_p3" coreId="0" contextFuncName="export_buffer_tile_c3" bitwidth="9" opcode="bitconcatenate" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="tmp_2" lineNumber="141" fileName="src/conv3.cpp" fileDirectory="../." rtlName="tmp_2_fu_298_p3" coreId="0" contextFuncName="export_buffer_tile_c3" bitwidth="9" opcode="bitconcatenate" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="82" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="141" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_buffer_tile_c3"/>
         <dataInputObjs>select</dataInputObjs>
@@ -711,6 +711,9 @@
   <expressionNodes realName="add_ln139_fu_458">
     <nodeIds>82</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="tmp_2_fu_298">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="zext_ln141_fu_229">
     <nodeIds>28</nodeIds>
   </expressionNodes>
@@ -786,9 +789,6 @@
   <expressionNodes realName="shl_ln141_mid1_fu_322">
     <nodeIds>49</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="tmp_6_fu_298">
-    <nodeIds>45</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="zext_ln141_4_fu_385">
     <nodeIds>65</nodeIds>
   </expressionNodes>
@@ -844,9 +844,6 @@
   <ioNodes realName="p_shl1_read_read_fu_118">
     <nodeIds>12</nodeIds>
   </ioNodes>
-  <ioNodes realName="ty_2_load_fu_205">
-    <nodeIds>23</nodeIds>
-  </ioNodes>
   <ioNodes realName="conv3_biases_0_0_val_read_read_fu_130">
     <nodeIds>14</nodeIds>
   </ioNodes>
@@ -861,6 +858,9 @@
   </ioNodes>
   <ioNodes realName="store_ln0_store_fu_200">
     <nodeIds>20</nodeIds>
+  </ioNodes>
+  <ioNodes realName="ty_1_load_fu_205">
+    <nodeIds>23</nodeIds>
   </ioNodes>
   <ioNodes realName="store_ln0_store_fu_195">
     <nodeIds>19</nodeIds>

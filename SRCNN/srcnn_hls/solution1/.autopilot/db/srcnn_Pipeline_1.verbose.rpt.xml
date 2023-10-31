@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn_Pipeline_1'" level="0">
-<item name = "Date">Mon Oct 30 23:01:48 2023
+<item name = "Date">Tue Oct 31 13:44:44 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -78,9 +78,9 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="empty_42_fu_89_p2">+, 0, 0, 29, 22, 1</column>
+<column name="empty_48_fu_89_p2">+, 0, 0, 29, 22, 1</column>
 <column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
-<column name="exitcond2613_fu_83_p2">icmp, 0, 0, 29, 22, 16</column>
+<column name="exitcond65_fu_83_p2">icmp, 0, 0, 29, 22, 16</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>

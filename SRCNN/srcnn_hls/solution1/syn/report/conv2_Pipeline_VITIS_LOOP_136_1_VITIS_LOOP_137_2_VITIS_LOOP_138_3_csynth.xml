@@ -746,8 +746,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>select_ln30_2</name>
-<Object>select_ln30_2</Object>
+<name>select_ln30_1</name>
+<Object>select_ln30_1</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -779,8 +779,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>tmp_9</name>
-<Object>tmp_9</Object>
+<name>tmp_5</name>
+<Object>tmp_5</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

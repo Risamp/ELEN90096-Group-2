@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107_3'" level="0">
-<item name = "Date">Mon Oct 30 23:01:53 2023
+<item name = "Date">Tue Oct 31 13:44:51 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -62,13 +62,13 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mul_4ns_6ns_9_1_1_U80">mul_4ns_6ns_9_1_1, 0, 0, 0, 23, 0</column>
-<column name="mul_5ns_19ns_23_1_1_U81">mul_5ns_19ns_23_1_1, 0, 1, 0, 6, 0</column>
+<column name="mul_4ns_6ns_9_1_1_U78">mul_4ns_6ns_9_1_1, 0, 0, 0, 23, 0</column>
+<column name="mul_5ns_19ns_23_1_1_U79">mul_5ns_19ns_23_1_1, 0, 1, 0, 6, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
-<column name="ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_U82">ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1, (i0 + i1) * i2 + i3</column>
+<column name="ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_U80">ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1, (i0 + i1) * i2 + i3</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">

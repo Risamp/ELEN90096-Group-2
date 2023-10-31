@@ -268,7 +268,7 @@ newFuncRoot:8 %ti_cast20_cast = zext i4 %ti_cast20_read
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:9 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_1, i32 0, i32 0, void @empty_9, i32 0, i32 512, void @empty_12, void @empty_13, void @empty_9, i32 16, i32 16, i32 16, i32 16, void @empty_9, void @empty_9, i32 4294967295, i32 0
+newFuncRoot:9 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_15, i32 0, i32 0, void @empty_12, i32 0, i32 512, void @empty_20, void @empty_21, void @empty_12, i32 16, i32 16, i32 16, i32 16, void @empty_12, void @empty_12, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -343,10 +343,10 @@ newFuncRoot:13 %br_ln0 = br void %for.inc.i24
 
 <Node id="23" bw="5" op_0_bw="5" op_1_bw="0">
 <![CDATA[
-for.inc.i24:0 %ty_2 = load i5 %ty
+for.inc.i24:0 %ty_1 = load i5 %ty
 
 ]]></Node>
-<StgValue><ssdm name="ty_2"/></StgValue>
+<StgValue><ssdm name="ty_1"/></StgValue>
 </operation>
 
 <operation id="38" st_id="1" stage="1" lat="1">
@@ -373,7 +373,7 @@ for.inc.i24:1 %indvar_flatten280_load = load i9 %indvar_flatten280
 
 <Node id="25" bw="8" op_0_bw="5">
 <![CDATA[
-for.inc.i24:2 %zext_ln138 = zext i5 %ty_2
+for.inc.i24:2 %zext_ln138 = zext i5 %ty_1
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln138"/></StgValue>
@@ -555,7 +555,7 @@ for.inc24.i:0 %tx_load = load i5 %tx
 
 <Node id="38" bw="5" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-for.inc24.i:1 %add_ln138 = add i5 %ty_2, i5 1
+for.inc24.i:1 %add_ln138 = add i5 %ty_1, i5 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln138"/></StgValue>
@@ -603,7 +603,7 @@ for.inc24.i:5 %select_ln138 = select i1 %icmp_ln139, i5 0, i5 %tx_load
 
 <Node id="43" bw="5" op_0_bw="1" op_1_bw="5" op_2_bw="5">
 <![CDATA[
-for.inc24.i:6 %select_ln138_1 = select i1 %icmp_ln139, i5 %add_ln138, i5 %ty_2
+for.inc24.i:6 %select_ln138_1 = select i1 %icmp_ln139, i5 %add_ln138, i5 %ty_1
 
 ]]></Node>
 <StgValue><ssdm name="select_ln138_1"/></StgValue>
@@ -635,10 +635,10 @@ for.inc24.i:7 %zext_ln141_2 = zext i5 %select_ln138_1
 
 <Node id="45" bw="9" op_0_bw="9" op_1_bw="5" op_2_bw="4">
 <![CDATA[
-for.inc24.i:8 %tmp_6 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i5.i4, i5 %select_ln138_1, i4 0
+for.inc24.i:8 %tmp_2 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i5.i4, i5 %select_ln138_1, i4 0
 
 ]]></Node>
-<StgValue><ssdm name="tmp_6"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 
 <operation id="57" st_id="1" stage="1" lat="1">
@@ -651,7 +651,7 @@ for.inc24.i:8 %tmp_6 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i5.i4, i5 %
 
 <Node id="46" bw="9" op_0_bw="9" op_1_bw="9">
 <![CDATA[
-for.inc24.i:9 %add_ln141_4 = add i9 %tmp_6, i9 %zext_ln141_2
+for.inc24.i:9 %add_ln141_4 = add i9 %tmp_2, i9 %zext_ln141_2
 
 ]]></Node>
 <StgValue><ssdm name="add_ln141_4"/></StgValue>
@@ -1648,7 +1648,7 @@ for.inc24.i:19 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32
 
 <Node id="61" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc24.i:24 %specloopname_ln139 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2
+for.inc24.i:24 %specloopname_ln139 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln139"/></StgValue>
@@ -1746,23 +1746,23 @@ for.inc24.i:49 %br_ln139 = br void %for.inc.i24
 </dataflow>
 <dataflow id="192" from="gmem" to="specinterface_ln0" fromId="169" toId="32">
 </dataflow>
-<dataflow id="194" from="empty_1" to="specinterface_ln0" fromId="193" toId="32">
+<dataflow id="194" from="empty_15" to="specinterface_ln0" fromId="193" toId="32">
 </dataflow>
 <dataflow id="196" from="StgValue_195" to="specinterface_ln0" fromId="195" toId="32">
 </dataflow>
 <dataflow id="197" from="StgValue_195" to="specinterface_ln0" fromId="195" toId="32">
 </dataflow>
-<dataflow id="199" from="empty_9" to="specinterface_ln0" fromId="198" toId="32">
+<dataflow id="199" from="empty_12" to="specinterface_ln0" fromId="198" toId="32">
 </dataflow>
 <dataflow id="200" from="StgValue_195" to="specinterface_ln0" fromId="195" toId="32">
 </dataflow>
 <dataflow id="202" from="StgValue_201" to="specinterface_ln0" fromId="201" toId="32">
 </dataflow>
-<dataflow id="204" from="empty_12" to="specinterface_ln0" fromId="203" toId="32">
+<dataflow id="204" from="empty_20" to="specinterface_ln0" fromId="203" toId="32">
 </dataflow>
-<dataflow id="206" from="empty_13" to="specinterface_ln0" fromId="205" toId="32">
+<dataflow id="206" from="empty_21" to="specinterface_ln0" fromId="205" toId="32">
 </dataflow>
-<dataflow id="207" from="empty_9" to="specinterface_ln0" fromId="198" toId="32">
+<dataflow id="207" from="empty_12" to="specinterface_ln0" fromId="198" toId="32">
 </dataflow>
 <dataflow id="209" from="StgValue_208" to="specinterface_ln0" fromId="208" toId="32">
 </dataflow>
@@ -1772,9 +1772,9 @@ for.inc24.i:49 %br_ln139 = br void %for.inc.i24
 </dataflow>
 <dataflow id="212" from="StgValue_208" to="specinterface_ln0" fromId="208" toId="32">
 </dataflow>
-<dataflow id="213" from="empty_9" to="specinterface_ln0" fromId="198" toId="32">
+<dataflow id="213" from="empty_12" to="specinterface_ln0" fromId="198" toId="32">
 </dataflow>
-<dataflow id="214" from="empty_9" to="specinterface_ln0" fromId="198" toId="32">
+<dataflow id="214" from="empty_12" to="specinterface_ln0" fromId="198" toId="32">
 </dataflow>
 <dataflow id="216" from="StgValue_215" to="specinterface_ln0" fromId="215" toId="32">
 </dataflow>
@@ -1792,11 +1792,11 @@ for.inc24.i:49 %br_ln139 = br void %for.inc.i24
 </dataflow>
 <dataflow id="225" from="tx" to="store_ln0" fromId="23" toId="35">
 </dataflow>
-<dataflow id="226" from="ty" to="ty_2" fromId="24" toId="37">
+<dataflow id="226" from="ty" to="ty_1" fromId="24" toId="37">
 </dataflow>
 <dataflow id="227" from="indvar_flatten280" to="indvar_flatten280_load" fromId="25" toId="38">
 </dataflow>
-<dataflow id="228" from="ty_2" to="zext_ln138" fromId="37" toId="39">
+<dataflow id="228" from="ty_1" to="zext_ln138" fromId="37" toId="39">
 </dataflow>
 <dataflow id="229" from="zext_ln138" to="empty" fromId="39" toId="40">
 </dataflow>
@@ -1846,7 +1846,7 @@ for.inc24.i:49 %br_ln139 = br void %for.inc.i24
 </dataflow>
 <dataflow id="260" from="tx" to="tx_load" fromId="23" toId="50">
 </dataflow>
-<dataflow id="261" from="ty_2" to="add_ln138" fromId="37" toId="51">
+<dataflow id="261" from="ty_1" to="add_ln138" fromId="37" toId="51">
 </dataflow>
 <dataflow id="263" from="StgValue_262" to="add_ln138" fromId="262" toId="51">
 </dataflow>
@@ -1864,17 +1864,17 @@ for.inc24.i:49 %br_ln139 = br void %for.inc.i24
 </dataflow>
 <dataflow id="271" from="add_ln138" to="select_ln138_1" fromId="51" toId="54">
 </dataflow>
-<dataflow id="272" from="ty_2" to="select_ln138_1" fromId="37" toId="54">
+<dataflow id="272" from="ty_1" to="select_ln138_1" fromId="37" toId="54">
 </dataflow>
 <dataflow id="273" from="select_ln138_1" to="zext_ln141_2" fromId="54" toId="55">
 </dataflow>
-<dataflow id="275" from="_ssdm_op_BitConcatenate.i9.i5.i4" to="tmp_6" fromId="274" toId="56">
+<dataflow id="275" from="_ssdm_op_BitConcatenate.i9.i5.i4" to="tmp_2" fromId="274" toId="56">
 </dataflow>
-<dataflow id="276" from="select_ln138_1" to="tmp_6" fromId="54" toId="56">
+<dataflow id="276" from="select_ln138_1" to="tmp_2" fromId="54" toId="56">
 </dataflow>
-<dataflow id="278" from="StgValue_277" to="tmp_6" fromId="277" toId="56">
+<dataflow id="278" from="StgValue_277" to="tmp_2" fromId="277" toId="56">
 </dataflow>
-<dataflow id="279" from="tmp_6" to="add_ln141_4" fromId="56" toId="57">
+<dataflow id="279" from="tmp_2" to="add_ln141_4" fromId="56" toId="57">
 </dataflow>
 <dataflow id="280" from="zext_ln141_2" to="add_ln141_4" fromId="55" toId="57">
 </dataflow>
@@ -2130,7 +2130,7 @@ for.inc24.i:49 %br_ln139 = br void %for.inc.i24
 </dataflow>
 <dataflow id="420" from="_ssdm_op_SpecLoopName" to="specloopname_ln139" fromId="404" toId="115">
 </dataflow>
-<dataflow id="422" from="empty_2" to="specloopname_ln139" fromId="421" toId="115">
+<dataflow id="422" from="empty_10" to="specloopname_ln139" fromId="421" toId="115">
 </dataflow>
 <dataflow id="423" from="_ssdm_op_WriteResp.m_axi.i32P1A" to="gmem_addr_resp" fromId="391" toId="116">
 </dataflow>

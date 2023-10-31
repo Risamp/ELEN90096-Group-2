@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3'
 ================================================================
-* Date:           Mon Oct 30 23:01:46 2023
+* Date:           Tue Oct 31 13:44:42 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -103,7 +103,7 @@ State 1 <SV = 0> <Delay = 0.42>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%ti = alloca i32 1"   --->   Operation 12 'alloca' 'ti' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tj = alloca i32 1"   --->   Operation 13 'alloca' 'tj' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%indvar_flatten287 = alloca i32 1"   --->   Operation 14 'alloca' 'indvar_flatten287' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_1, i32 0, i32 0, void @empty_9, i32 0, i32 512, void @empty_12, void @empty_13, void @empty_9, i32 16, i32 16, i32 16, i32 16, void @empty_9, void @empty_9, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_15, i32 0, i32 0, void @empty_12, i32 0, i32 512, void @empty_20, void @empty_21, void @empty_12, i32 16, i32 16, i32 16, i32 16, void @empty_12, void @empty_12, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%output_ftmap_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %output_ftmap" [src/conv3.cpp:31]   --->   Operation 16 'read' 'output_ftmap_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%conv3_biases_0_0_val_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %conv3_biases_0_0_val" [src/conv3.cpp:31]   --->   Operation 17 'read' 'conv3_biases_0_0_val_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%conv3_weights_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %conv3_weights" [src/conv3.cpp:31]   --->   Operation 18 'read' 'conv3_weights_read' <Predicate = true> <Delay = 0.00>
@@ -125,11 +125,11 @@ ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname vo
 ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 225, i64 225, i64 225"   --->   Operation 32 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = (!icmp_ln31)> <Delay = 0.00>
 ST_2 : Operation 33 [1/1] (0.79ns)   --->   "%icmp_ln32 = icmp_eq  i4 %ti_load, i4 15" [src/conv3.cpp:32]   --->   Operation 33 'icmp' 'icmp_ln32' <Predicate = (!icmp_ln31)> <Delay = 0.79> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 34 [1/1] (0.39ns)   --->   "%select_ln31 = select i1 %icmp_ln32, i4 0, i4 %ti_load" [src/conv3.cpp:31]   --->   Operation 34 'select' 'select_ln31' <Predicate = (!icmp_ln31)> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_3_mid1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %add_ln31, i4 %add_ln31" [src/conv3.cpp:31]   --->   Operation 35 'bitconcatenate' 'tmp_3_mid1' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_1_mid1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %add_ln31, i4 %add_ln31" [src/conv3.cpp:31]   --->   Operation 35 'bitconcatenate' 'tmp_1_mid1' <Predicate = (!icmp_ln31)> <Delay = 0.00>
 ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %tj_load, i4 %tj_load" [src/conv3.cpp:31]   --->   Operation 36 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln31)> <Delay = 0.00>
-ST_2 : Operation 37 [1/1] (0.39ns)   --->   "%select_ln31_1 = select i1 %icmp_ln32, i8 %tmp_3_mid1, i8 %tmp_s" [src/conv3.cpp:31]   --->   Operation 37 'select' 'select_ln31_1' <Predicate = (!icmp_ln31)> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.39ns)   --->   "%select_ln31_1 = select i1 %icmp_ln32, i8 %tmp_1_mid1, i8 %tmp_s" [src/conv3.cpp:31]   --->   Operation 37 'select' 'select_ln31_1' <Predicate = (!icmp_ln31)> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_2 : Operation 38 [1/1] (0.39ns)   --->   "%select_ln31_2 = select i1 %icmp_ln32, i4 %add_ln31, i4 %tj_load" [src/conv3.cpp:31]   --->   Operation 38 'select' 'select_ln31_2' <Predicate = (!icmp_ln31)> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%specloopname_ln32 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5" [src/conv3.cpp:32]   --->   Operation 39 'specloopname' 'specloopname_ln32' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%specloopname_ln32 = specloopname void @_ssdm_op_SpecLoopName, void @empty_36" [src/conv3.cpp:32]   --->   Operation 39 'specloopname' 'specloopname_ln32' <Predicate = (!icmp_ln31)> <Delay = 0.00>
 ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%p_shl1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %select_ln31, i4 0" [src/conv3.cpp:31]   --->   Operation 40 'bitconcatenate' 'p_shl1' <Predicate = (!icmp_ln31)> <Delay = 0.00>
 ST_2 : Operation 41 [1/1] (0.42ns)   --->   "%br_ln40 = br void %NOUT" [src/conv3.cpp:40]   --->   Operation 41 'br' 'br_ln40' <Predicate = (!icmp_ln31)> <Delay = 0.42>
 ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%ret_ln84 = ret" [src/conv3.cpp:84]   --->   Operation 42 'ret' 'ret_ln84' <Predicate = (icmp_ln31)> <Delay = 0.00>
@@ -168,7 +168,7 @@ ST_7 : Operation 64 [2/2] (1.08ns)   --->   "%call_ln103 = call void @conv3_Pipe
 
 State 8 <SV = 7> <Delay = 0.00>
 ST_8 : Operation 65 [1/1] (0.00ns)   --->   "%speclooptripcount_ln40 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4" [src/conv3.cpp:40]   --->   Operation 65 'speclooptripcount' 'speclooptripcount_ln40' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 66 [1/1] (0.00ns)   --->   "%specloopname_ln40 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [src/conv3.cpp:40]   --->   Operation 66 'specloopname' 'specloopname_ln40' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 66 [1/1] (0.00ns)   --->   "%specloopname_ln40 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5" [src/conv3.cpp:40]   --->   Operation 66 'specloopname' 'specloopname_ln40' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 67 [1/2] (0.00ns)   --->   "%call_ln103 = call void @conv3_Pipeline_TY_TX, i12 %empty, i64 %conv3_weights_read, i12 %empty, i12 %phi_mul, i32 %gmem, i32 %output_fm_buffer_0, i32 %input_fm_buffer" [src/conv3.cpp:103->src/conv3.cpp:52]   --->   Operation 67 'call' 'call_ln103' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_8 : Operation 68 [1/1] (0.00ns)   --->   "%br_ln40 = br void %NOUT" [src/conv3.cpp:40]   --->   Operation 68 'br' 'br_ln40' <Predicate = true> <Delay = 0.00>
 
@@ -230,7 +230,7 @@ specloopname_ln0          (specloopname     ) [ 000000000000]
 speclooptripcount_ln0     (speclooptripcount) [ 000000000000]
 icmp_ln32                 (icmp             ) [ 000000000000]
 select_ln31               (select           ) [ 000111111100]
-tmp_3_mid1                (bitconcatenate   ) [ 000000000000]
+tmp_1_mid1                (bitconcatenate   ) [ 000000000000]
 tmp_s                     (bitconcatenate   ) [ 000000000000]
 select_ln31_1             (select           ) [ 000111111100]
 select_ln31_2             (select           ) [ 000111111000]
@@ -356,7 +356,7 @@ br_ln32                   (br               ) [ 000000000000]
 <pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_1"/></StgValue>
+<StgValue><ssdm name="empty_15"/></StgValue>
 </bind>
 </comp>
 
@@ -374,7 +374,7 @@ br_ln32                   (br               ) [ 000000000000]
 <pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_9"/></StgValue>
+<StgValue><ssdm name="empty_12"/></StgValue>
 </bind>
 </comp>
 
@@ -392,7 +392,7 @@ br_ln32                   (br               ) [ 000000000000]
 <pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_12"/></StgValue>
+<StgValue><ssdm name="empty_20"/></StgValue>
 </bind>
 </comp>
 
@@ -401,7 +401,7 @@ br_ln32                   (br               ) [ 000000000000]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_13"/></StgValue>
+<StgValue><ssdm name="empty_21"/></StgValue>
 </bind>
 </comp>
 
@@ -545,7 +545,7 @@ br_ln32                   (br               ) [ 000000000000]
 <pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_5"/></StgValue>
+<StgValue><ssdm name="empty_36"/></StgValue>
 </bind>
 </comp>
 
@@ -671,7 +671,7 @@ br_ln32                   (br               ) [ 000000000000]
 <pin id="89" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_3"/></StgValue>
+<StgValue><ssdm name="empty_5"/></StgValue>
 </bind>
 </comp>
 
@@ -1021,7 +1021,7 @@ br_ln32                   (br               ) [ 000000000000]
 </bind>
 </comp>
 
-<comp id="260" class="1004" name="tmp_3_mid1_fu_260">
+<comp id="260" class="1004" name="tmp_1_mid1_fu_260">
 <pin_list>
 <pin id="261" dir="0" index="0" bw="8" slack="0"/>
 <pin id="262" dir="0" index="1" bw="4" slack="0"/>
@@ -1030,7 +1030,7 @@ br_ln32                   (br               ) [ 000000000000]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="tmp_3_mid1/2 "/>
+<opset="tmp_1_mid1/2 "/>
 </bind>
 </comp>
 
@@ -1709,7 +1709,7 @@ br_ln32                   (br               ) [ 000000000000]
 		add_ln31 : 1
 		icmp_ln32 : 1
 		select_ln31 : 2
-		tmp_3_mid1 : 2
+		tmp_1_mid1 : 2
 		tmp_s : 1
 		select_ln31_1 : 3
 		select_ln31_2 : 2
@@ -1768,7 +1768,7 @@ br_ln32                   (br               ) [ 000000000000]
 |          |                        conv3_weights_read_read_fu_116                        |    0    |    0    |    0    |    0    |
 |          |                         input_ftmap_read_read_fu_122                         |    0    |    0    |    0    |    0    |
 |----------|------------------------------------------------------------------------------|---------|---------|---------|---------|
-|          |                               tmp_3_mid1_fu_260                              |    0    |    0    |    0    |    0    |
+|          |                               tmp_1_mid1_fu_260                              |    0    |    0    |    0    |    0    |
 |          |                                 tmp_s_fu_268                                 |    0    |    0    |    0    |    0    |
 |bitconcatenate|                                 p_shl1_fu_292                                |    0    |    0    |    0    |    0    |
 |          |                                shl_ln1_fu_340                                |    0    |    0    |    0    |    0    |

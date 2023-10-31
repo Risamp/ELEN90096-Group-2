@@ -139,7 +139,7 @@ entry:2 %indvar_flatten287 = alloca i32 1
 
 <Node id="11" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_1, i32 0, i32 0, void @empty_9, i32 0, i32 512, void @empty_12, void @empty_13, void @empty_9, i32 16, i32 16, i32 16, i32 16, void @empty_9, void @empty_9, i32 4294967295, i32 0
+entry:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_15, i32 0, i32 0, void @empty_12, i32 0, i32 512, void @empty_20, void @empty_21, void @empty_12, i32 16, i32 16, i32 16, i32 16, void @empty_12, void @empty_12, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -450,10 +450,10 @@ for.inc79:6 %select_ln31 = select i1 %icmp_ln32, i4 0, i4 %ti_load
 
 <Node id="33" bw="8" op_0_bw="8" op_1_bw="4" op_2_bw="4">
 <![CDATA[
-for.inc79:7 %tmp_3_mid1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %add_ln31, i4 %add_ln31
+for.inc79:7 %tmp_1_mid1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %add_ln31, i4 %add_ln31
 
 ]]></Node>
-<StgValue><ssdm name="tmp_3_mid1"/></StgValue>
+<StgValue><ssdm name="tmp_1_mid1"/></StgValue>
 </operation>
 
 <operation id="36" st_id="2" stage="1" lat="1">
@@ -482,7 +482,7 @@ for.inc79:8 %tmp_s = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %tj
 
 <Node id="35" bw="8" op_0_bw="1" op_1_bw="8" op_2_bw="8">
 <![CDATA[
-for.inc79:9 %select_ln31_1 = select i1 %icmp_ln32, i8 %tmp_3_mid1, i8 %tmp_s
+for.inc79:9 %select_ln31_1 = select i1 %icmp_ln32, i8 %tmp_1_mid1, i8 %tmp_s
 
 ]]></Node>
 <StgValue><ssdm name="select_ln31_1"/></StgValue>
@@ -514,7 +514,7 @@ for.inc79:10 %select_ln31_2 = select i1 %icmp_ln32, i4 %add_ln31, i4 %tj_load
 
 <Node id="37" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc79:11 %specloopname_ln32 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5
+for.inc79:11 %specloopname_ln32 = specloopname void @_ssdm_op_SpecLoopName, void @empty_36
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln32"/></StgValue>
@@ -947,7 +947,7 @@ NOUT.split:0 %speclooptripcount_ln40 = speclooptripcount void @_ssdm_op_SpecLoop
 
 <Node id="49" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-NOUT.split:1 %specloopname_ln40 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3
+NOUT.split:1 %specloopname_ln40 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln40"/></StgValue>
@@ -1093,23 +1093,23 @@ for.inc.i24.preheader:6 %br_ln32 = br void %TN
 </dataflow>
 <dataflow id="100" from="gmem" to="specinterface_ln0" fromId="87" toId="15">
 </dataflow>
-<dataflow id="102" from="empty_1" to="specinterface_ln0" fromId="101" toId="15">
+<dataflow id="102" from="empty_15" to="specinterface_ln0" fromId="101" toId="15">
 </dataflow>
 <dataflow id="104" from="StgValue_103" to="specinterface_ln0" fromId="103" toId="15">
 </dataflow>
 <dataflow id="105" from="StgValue_103" to="specinterface_ln0" fromId="103" toId="15">
 </dataflow>
-<dataflow id="107" from="empty_9" to="specinterface_ln0" fromId="106" toId="15">
+<dataflow id="107" from="empty_12" to="specinterface_ln0" fromId="106" toId="15">
 </dataflow>
 <dataflow id="108" from="StgValue_103" to="specinterface_ln0" fromId="103" toId="15">
 </dataflow>
 <dataflow id="110" from="StgValue_109" to="specinterface_ln0" fromId="109" toId="15">
 </dataflow>
-<dataflow id="112" from="empty_12" to="specinterface_ln0" fromId="111" toId="15">
+<dataflow id="112" from="empty_20" to="specinterface_ln0" fromId="111" toId="15">
 </dataflow>
-<dataflow id="114" from="empty_13" to="specinterface_ln0" fromId="113" toId="15">
+<dataflow id="114" from="empty_21" to="specinterface_ln0" fromId="113" toId="15">
 </dataflow>
-<dataflow id="115" from="empty_9" to="specinterface_ln0" fromId="106" toId="15">
+<dataflow id="115" from="empty_12" to="specinterface_ln0" fromId="106" toId="15">
 </dataflow>
 <dataflow id="117" from="StgValue_116" to="specinterface_ln0" fromId="116" toId="15">
 </dataflow>
@@ -1119,9 +1119,9 @@ for.inc.i24.preheader:6 %br_ln32 = br void %TN
 </dataflow>
 <dataflow id="120" from="StgValue_116" to="specinterface_ln0" fromId="116" toId="15">
 </dataflow>
-<dataflow id="121" from="empty_9" to="specinterface_ln0" fromId="106" toId="15">
+<dataflow id="121" from="empty_12" to="specinterface_ln0" fromId="106" toId="15">
 </dataflow>
-<dataflow id="122" from="empty_9" to="specinterface_ln0" fromId="106" toId="15">
+<dataflow id="122" from="empty_12" to="specinterface_ln0" fromId="106" toId="15">
 </dataflow>
 <dataflow id="124" from="StgValue_123" to="specinterface_ln0" fromId="123" toId="15">
 </dataflow>
@@ -1197,11 +1197,11 @@ for.inc.i24.preheader:6 %br_ln32 = br void %TN
 </dataflow>
 <dataflow id="172" from="ti_load" to="select_ln31" fromId="28" toId="34">
 </dataflow>
-<dataflow id="174" from="_ssdm_op_BitConcatenate.i8.i4.i4" to="tmp_3_mid1" fromId="173" toId="35">
+<dataflow id="174" from="_ssdm_op_BitConcatenate.i8.i4.i4" to="tmp_1_mid1" fromId="173" toId="35">
 </dataflow>
-<dataflow id="175" from="add_ln31" to="tmp_3_mid1" fromId="30" toId="35">
+<dataflow id="175" from="add_ln31" to="tmp_1_mid1" fromId="30" toId="35">
 </dataflow>
-<dataflow id="176" from="add_ln31" to="tmp_3_mid1" fromId="30" toId="35">
+<dataflow id="176" from="add_ln31" to="tmp_1_mid1" fromId="30" toId="35">
 </dataflow>
 <dataflow id="177" from="_ssdm_op_BitConcatenate.i8.i4.i4" to="tmp_s" fromId="173" toId="36">
 </dataflow>
@@ -1211,7 +1211,7 @@ for.inc.i24.preheader:6 %br_ln32 = br void %TN
 </dataflow>
 <dataflow id="180" from="icmp_ln32" to="select_ln31_1" fromId="33" toId="37">
 </dataflow>
-<dataflow id="181" from="tmp_3_mid1" to="select_ln31_1" fromId="35" toId="37">
+<dataflow id="181" from="tmp_1_mid1" to="select_ln31_1" fromId="35" toId="37">
 </dataflow>
 <dataflow id="182" from="tmp_s" to="select_ln31_1" fromId="36" toId="37">
 </dataflow>
@@ -1223,7 +1223,7 @@ for.inc.i24.preheader:6 %br_ln32 = br void %TN
 </dataflow>
 <dataflow id="186" from="_ssdm_op_SpecLoopName" to="specloopname_ln32" fromId="157" toId="39">
 </dataflow>
-<dataflow id="188" from="empty_5" to="specloopname_ln32" fromId="187" toId="39">
+<dataflow id="188" from="empty_36" to="specloopname_ln32" fromId="187" toId="39">
 </dataflow>
 <dataflow id="189" from="_ssdm_op_BitConcatenate.i8.i4.i4" to="p_shl1" fromId="173" toId="40">
 </dataflow>
@@ -1401,7 +1401,7 @@ for.inc.i24.preheader:6 %br_ln32 = br void %TN
 </dataflow>
 <dataflow id="280" from="_ssdm_op_SpecLoopName" to="specloopname_ln40" fromId="157" toId="66">
 </dataflow>
-<dataflow id="282" from="empty_3" to="specloopname_ln40" fromId="281" toId="66">
+<dataflow id="282" from="empty_5" to="specloopname_ln40" fromId="281" toId="66">
 </dataflow>
 <dataflow id="283" from="conv3_Pipeline_TY_TX" to="call_ln103" fromId="266" toId="67">
 </dataflow>

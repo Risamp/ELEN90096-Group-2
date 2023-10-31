@@ -271,7 +271,7 @@ reg   [5:0] nout_1_reg_346;
 reg   [5:0] nout_1_reg_346_pp0_iter1_reg;
 wire   [0:0] icmp_ln118_fu_230_p2;
 reg   [0:0] icmp_ln118_reg_351_pp0_iter1_reg;
-reg   [63:0] gmem_addr_16_reg_355;
+reg   [63:0] gmem_addr_14_reg_355;
 wire   [63:0] nout_1_cast32_fu_295_p1;
 reg   [63:0] nout_1_cast32_reg_361;
 reg    ap_enable_reg_pp0_iter0_reg;
@@ -287,7 +287,7 @@ wire   [63:0] zext_ln119_fu_254_p1;
 wire   [63:0] add_ln119_fu_258_p2;
 wire   [63:0] zext_ln118_cast_fu_218_p1;
 wire   [63:0] add_ln119_1_fu_264_p2;
-wire   [61:0] trunc_ln_fu_270_p4;
+wire   [61:0] trunc_ln9_fu_270_p4;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -404,7 +404,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((icmp_ln118_fu_230_p2 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
-        gmem_addr_16_reg_355 <= sext_ln119_fu_280_p1;
+        gmem_addr_14_reg_355 <= sext_ln119_fu_280_p1;
     end
 end
 
@@ -899,7 +899,7 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage7;
 
 assign icmp_ln118_fu_230_p2 = ((ap_sig_allocacmp_nout_1 == 6'd32) ? 1'b1 : 1'b0);
 
-assign m_axi_gmem_ARADDR = gmem_addr_16_reg_355;
+assign m_axi_gmem_ARADDR = gmem_addr_14_reg_355;
 
 assign m_axi_gmem_ARBURST = 2'd0;
 
@@ -961,13 +961,13 @@ assign m_axi_gmem_WVALID = 1'b0;
 
 assign nout_1_cast32_fu_295_p1 = nout_1_reg_346_pp0_iter1_reg;
 
-assign sext_ln119_fu_280_p1 = $signed(trunc_ln_fu_270_p4);
+assign sext_ln119_fu_280_p1 = $signed(trunc_ln9_fu_270_p4);
 
 assign shl_ln119_1_fu_246_p3 = {{trunc_ln119_fu_242_p1}, {8'd0}};
 
 assign trunc_ln119_fu_242_p1 = ap_sig_allocacmp_nout_1[4:0];
 
-assign trunc_ln_fu_270_p4 = {{add_ln119_1_fu_264_p2[63:2]}};
+assign trunc_ln9_fu_270_p4 = {{add_ln119_1_fu_264_p2[63:2]}};
 
 assign weights_buffer_0_0_0_address0 = nout_1_cast32_fu_295_p1;
 

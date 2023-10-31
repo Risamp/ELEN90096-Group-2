@@ -31,9 +31,9 @@ void srcnn(ftmap_t input_ftmap[N0][H][W],
 	#pragma HLS INTERFACE m_axi port=output_ftmap offset=slave depth=512
 	#pragma HLS INTERFACE s_axilite port=return
 
-	memset(conv1_output_ftmap, 0, N1 * H * W * sizeof(ftmap_t));
-	memset(conv2_output_ftmap, 0, N2 * H * W * sizeof(ftmap_t));
-	memset(output_ftmap, 0, N3 * H * W * sizeof(ftmap_t));
+	CLEAR_CONV1: memset(conv1_output_ftmap, 0, N1 * H * W * sizeof(ftmap_t));
+	CLEAR_CONV2: memset(conv2_output_ftmap, 0, N2 * H * W * sizeof(ftmap_t));
+	CLEAR_CONV3: memset(output_ftmap, 0, N3 * H * W * sizeof(ftmap_t));
 
     // apply convolutional layer 1
     conv1(input_ftmap, conv1_weights, conv1_biases, conv1_output_ftmap);

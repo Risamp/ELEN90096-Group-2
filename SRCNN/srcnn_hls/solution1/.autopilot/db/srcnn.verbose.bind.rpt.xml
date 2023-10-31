@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn'" level="0">
-<item name = "Date">Mon Oct 30 23:01:47 2023
+<item name = "Date">Tue Oct 31 13:44:43 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,26 +24,23 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">196421668, 196421668, 1.964 sec, 1.964 sec, 196421669, 196421669, no</column>
+<column name="">3379702801, 3379702801, 33.797 sec, 33.797 sec, 3379702802, 3379702802, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_srcnn_Pipeline_1_fu_316">srcnn_Pipeline_1, 4161602, 4161602, 41.616 ms, 41.616 ms, 4161602, 4161602, no</column>
-<column name="grp_srcnn_Pipeline_2_fu_323">srcnn_Pipeline_2, 2080802, 2080802, 20.808 ms, 20.808 ms, 2080802, 2080802, no</column>
-<column name="grp_srcnn_Pipeline_3_fu_330">srcnn_Pipeline_3, 65027, 65027, 0.650 ms, 0.650 ms, 65027, 65027, no</column>
-<column name="grp_conv2_fu_337">conv2, 121281526, 121281526, 1.213 sec, 1.213 sec, 121281526, 121281526, no</column>
-<column name="grp_srcnn_Pipeline_5_fu_367">srcnn_Pipeline_5, 18498, 18498, 0.185 ms, 0.185 ms, 18498, 18498, no</column>
-<column name="grp_srcnn_Pipeline_OUT_BUFFER_TY_OUT_BUFFER_TX_fu_373">srcnn_Pipeline_OUT_BUFFER_TY_OUT_BUFFER_TX, 303, 303, 3.030 us, 3.030 us, 303, 303, no</column>
-<column name="grp_conv3_fu_390">conv3, 60247126, 60247126, 0.602 sec, 0.602 sec, 60247126, 60247126, no</column>
+<column name="grp_srcnn_Pipeline_1_fu_234">srcnn_Pipeline_1, 4161602, 4161602, 41.616 ms, 41.616 ms, 4161602, 4161602, no</column>
+<column name="grp_srcnn_Pipeline_2_fu_241">srcnn_Pipeline_2, 2080802, 2080802, 20.808 ms, 20.808 ms, 2080802, 2080802, no</column>
+<column name="grp_srcnn_Pipeline_3_fu_248">srcnn_Pipeline_3, 65027, 65027, 0.650 ms, 0.650 ms, 65027, 65027, no</column>
+<column name="grp_conv1_fu_255">conv1, 3191866681, 3191866681, 31.919 sec, 31.919 sec, 3191866681, 3191866681, no</column>
+<column name="grp_conv2_fu_269">conv2, 121281526, 121281526, 1.213 sec, 1.213 sec, 121281526, 121281526, no</column>
+<column name="grp_conv3_fu_299">conv3, 60247126, 60247126, 0.602 sec, 0.602 sec, 60247126, 60247126, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILE_J_TILE_I">8585550, 8585550, 38158, -, -, 225, no</column>
-<column name=" + OUT_BUFFER_NOUT">19649, 19649, 307, -, -, 64, no</column>
 </table>
 </item>
 </section>

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2'
 ================================================================
-* Date:           Mon Oct 30 23:01:49 2023
+* Date:           Tue Oct 31 13:44:47 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -76,7 +76,7 @@
     +------------------------------------+--------------------------------+--------------+
     |              Instance              |             Module             |  Expression  |
     +------------------------------------+--------------------------------+--------------+
-    |mac_muladd_6ns_18ns_19s_25_4_1_U22  |mac_muladd_6ns_18ns_19s_25_4_1  |  i0 * i1 + i2|
+    |mac_muladd_6ns_18ns_19s_25_4_1_U21  |mac_muladd_6ns_18ns_19s_25_4_1  |  i0 * i1 + i2|
     +------------------------------------+--------------------------------+--------------+
 
     * Memory: 
@@ -111,10 +111,10 @@
     |add_ln113_8_fu_653_p2               |         +|   0|  0|  19|          12|           3|
     |add_ln113_9_fu_668_p2               |         +|   0|  0|  19|          12|           4|
     |add_ln113_fu_525_p2                 |         +|   0|  0|  16|           9|           9|
-    |empty_99_fu_486_p2                  |         +|   0|  0|  64|          64|          64|
+    |empty_103_fu_486_p2                 |         +|   0|  0|  64|          64|          64|
     |empty_fu_427_p2                     |         +|   0|  0|  15|           8|           8|
     |tmp1_fu_481_p2                      |         +|   0|  0|  64|          64|          64|
-    |empty_98_fu_456_p2                  |         -|   0|  0|  26|          19|          19|
+    |empty_102_fu_456_p2                 |         -|   0|  0|  26|          19|          19|
     |ap_block_pp0_stage0_11001           |       and|   0|  0|   2|           1|           1|
     |ap_block_pp0_stage12_11001          |       and|   0|  0|   2|           1|           1|
     |ap_block_state13_pp0_stage12_iter0  |       and|   0|  0|   2|           1|           1|
@@ -162,7 +162,7 @@
     |ap_enable_reg_pp0_iter0_reg  |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
     |by_fu_132                    |   5|   0|    5|          0|
-    |gmem_addr_17_reg_875         |  64|   0|   64|          0|
+    |gmem_addr_15_reg_875         |  64|   0|   64|          0|
     |icmp_ln104_reg_849           |   1|   0|    1|          0|
     |indvar_flatten_fu_140        |   8|   0|    8|          0|
     |nin_fu_136                   |   4|   0|    4|          0|
@@ -235,7 +235,7 @@
 |m_axi_gmem_BID              |   in|    1|       m_axi|                                              gmem|       pointer|
 |m_axi_gmem_BUSER            |   in|    1|       m_axi|                                              gmem|       pointer|
 |shl_ln3                     |   in|    6|     ap_none|                                           shl_ln3|        scalar|
-|select_ln30_2               |   in|    8|     ap_none|                                     select_ln30_2|        scalar|
+|select_ln30_1               |   in|    8|     ap_none|                                     select_ln30_1|        scalar|
 |select_ln30                 |   in|    4|     ap_none|                                       select_ln30|        scalar|
 |input_ftmap                 |   in|   64|     ap_none|                                       input_ftmap|        scalar|
 |input_fm_buffer_1_address0  |  out|   12|   ap_memory|                                 input_fm_buffer_1|         array|

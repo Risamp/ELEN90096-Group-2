@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 22
+set id 21
 set name srcnn_mac_muladd_6ns_18ns_19s_25_4_1
 set corename simcore_mac
 set op mac
@@ -70,7 +70,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 29 \
+    id 28 \
     name input_fm_buffer_1 \
     reset_level 1 \
     sync_rst true \
@@ -88,7 +88,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 24 \
+    id 23 \
     name shl_ln3 \
     type other \
     dir I \
@@ -103,22 +103,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 25 \
-    name select_ln30_2 \
+    id 24 \
+    name select_ln30_1 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_select_ln30_2 \
+    corename dc_select_ln30_1 \
     op interface \
-    ports { select_ln30_2 { I 8 vector } } \
+    ports { select_ln30_1 { I 8 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 26 \
+    id 25 \
     name select_ln30 \
     type other \
     dir I \
@@ -133,7 +133,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 27 \
+    id 26 \
     name input_ftmap \
     type other \
     dir I \
@@ -148,7 +148,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 28 \
+    id 27 \
     name gmem \
     type other \
     dir I \

@@ -12,65 +12,64 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
            ftmap_t output_ftmap[N1][H][W])
 {
 
-		/*
-			nin: current input layer
-			nout: current output layer
+	/*
+		nin: current input layer
+		nout: current output layer
 
-			(ti, tj): current tile index
-			(tx0, ty0): image space coordinates of tile origin
-			(tx, ty): current tile space coordinates
-			(kx, ky): current kernel space coordinates
-			(bx, by): current buffer space coordinates
+		(ti, tj): current tile index
+		(tx0, ty0): image space coordinates of tile origin
+		(tx, ty): current tile space coordinates
+		(kx, ky): current kernel space coordinates
+		(bx, by): current buffer space coordinates
 
-		*/
+	*/
 
-		//#pragma HLS PIPELINE off
+	#pragma HLS PIPELINE off
 
-		// for each tile (ti, tj) in our T x T grid
-		TILE_J: for (int tj = 0; tj < T; tj++) {
-		TILE_I: for (int ti = 0; ti < T; ti++) {
+	static ftmap_t output_fm_buffer[N1][TH][TW] = {0};
 
-			int ty0 = tj * TH;
-			int tx0 = ti * TW;
+	// for each tile (ti, tj) in our T x T grid
+	TILE_J: for (int tj = 0; tj < T; tj++) {
+	TILE_I: for (int ti = 0; ti < T; ti++) {
 
-			// initialise input and output buffers
-			static ftmap_t input_fm_buffer[N0][TH + (2 * P1)][TW + (2 * P1)];
-			static ftmap_t output_fm_buffer[N1][TH][TW] = {0};
+		int ty0 = tj * TH;
+		int tx0 = ti * TW;
 
-			// load buffer-sized chunk
-			load_buffer_tile_c1(input_fm_buffer, input_ftmap, tx0, ty0);
+		// initialise input and output buffers
+		static ftmap_t input_fm_buffer[N0][TH + (2 * P1)][TW + (2 * P1)];
 
-			// for each output layer
-			NOUT: for (int nout = 0; nout < N1; nout++) {
 
-				// for each pixel in tile
-				TY: for (int ty = 0; ty < TH; ty++) {
-				TX: for (int tx = 0; tx < TW; tx++) {
+		// load buffer-sized chunk
+		load_buffer_tile_c1(input_fm_buffer, input_ftmap, tx0, ty0);
 
-					// for each pixel in the kernel
-					KY: for (int ky = 0; ky < F1; ky++) {
-					KX: for (int kx = 0; kx < F1; kx++) {
+		// for each output layer
+		NOUT: for (int nout = 0; nout < N1; nout++) {
 
-						// get buffer-space coordinates
-						int by = ty + ky;
-						int bx = tx + kx;
+			// for each pixel in tile
+			TY: for (int ty = 0; ty < TH; ty++) {
+			TX: for (int tx = 0; tx < TW; tx++) {
 
-						// for each input layer
-						// TODO: PIPELINE THIS?
-						NIN: for (int nin = 0; nin < N0; nin++) {
-							output_fm_buffer[nout][ty][tx] += conv1_weights[nout][nin][ky][kx] * input_fm_buffer[nin][by][bx];
-						}
-					}}
+				// for each pixel in the kernel
+				KY: for (int ky = 0; ky < F1; ky++) {
+				KX: for (int kx = 0; kx < F1; kx++) {
 
+					// get buffer-space coordinates
+					int by = ty + ky;
+					int bx = tx + kx;
+
+					// for each input layer
+					NIN: for (int nin = 0; nin < N0; nin++) {
+						output_fm_buffer[nout][ty][tx] += conv1_weights[nout][nin][ky][kx] * input_fm_buffer[nin][by][bx];
+					}
 				}}
 
-			}
+			}}
 
-			// load output buffer back to DRAM
-			export_buffer_tile_c1(output_fm_buffer, output_ftmap, tx0, ty0, conv1_biases);
-		}}
+		}
 
-
+		// load output buffer back to DRAM
+		export_buffer_tile_c1(output_fm_buffer, output_ftmap, tx0, ty0, conv1_biases);
+	}}
 }
 
 
@@ -86,9 +85,6 @@ void load_buffer_tile_c1(
 	int tx0,
 	int ty0
 ) {
-	// clear buffer
-	memset(input_fm_buffer, 0, N0 * (TH + (2 * P1)) * (TW + (2 * P1)) * sizeof(ftmap_t));
-
 	IN_BUFFER_NIN: for (int nin = 0; nin < N0; nin++) { // input layer
 		IN_BUFFER_BY: for (int by = 0; by < TH + (2 * P1); by++) { // buffer space y
 			IN_BUFFER_BX: for (int bx = 0; bx < TW + (2 * P1); bx++) { // buffer space x
@@ -115,15 +111,17 @@ void export_buffer_tile_c1(
 		OUT_BUFFER_TY: for (int ty = 0; ty < TH; ty++) { // tile space y
 			OUT_BUFFER_TX: for (int tx = 0; tx < TW; tx++) { // tile space x
 
-				output_ftmap[nout][ty0 + ty][tx0 + tx] = output_fm_buffer[nout][ty][tx] + conv1_biases[nout];
-				if (output_ftmap[nout][ty0 + ty][tx0 + tx] < 0) {
-					output_ftmap[nout][ty0 + ty][tx0 + tx] = 0;
+				ftmap_t value = output_fm_buffer[nout][ty][tx] + conv1_biases[nout];
+				// clear buffer as we go
+				output_fm_buffer[nout][ty][tx] = 0;
+
+				// ReLU
+				if (value < 0) {
+					value = 0;
 				}
 
+				output_ftmap[nout][ty0 + ty][tx0 + tx] = value;
 			}
 		}
 	}
-
-	// clear buffer
-	memset(output_fm_buffer, 0, N1 * TH * TW * sizeof(ftmap_t));
 }

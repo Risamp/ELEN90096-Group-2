@@ -181,7 +181,7 @@ newFuncRoot:3 %zext_ln118_cast = zext i8 %zext_ln118_read
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_1, i32 0, i32 0, void @empty_9, i32 0, i32 512, void @empty_12, void @empty_13, void @empty_9, i32 16, i32 16, i32 16, i32 16, void @empty_9, void @empty_9, i32 4294967295, i32 0
+newFuncRoot:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_15, i32 0, i32 0, void @empty_12, i32 0, i32 512, void @empty_20, void @empty_21, void @empty_12, i32 16, i32 16, i32 16, i32 16, void @empty_12, void @empty_12, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -382,10 +382,10 @@ VITIS_LOOP_119_5.i.split:7 %add_ln119_1 = add i64 %add_ln119, i64 %zext_ln118_ca
 
 <Node id="34" bw="62" op_0_bw="62" op_1_bw="64" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:8 %trunc_ln = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln119_1, i32 2, i32 63
+VITIS_LOOP_119_5.i.split:8 %trunc_ln9 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln119_1, i32 2, i32 63
 
 ]]></Node>
-<StgValue><ssdm name="trunc_ln"/></StgValue>
+<StgValue><ssdm name="trunc_ln9"/></StgValue>
 </operation>
 
 <operation id="39" st_id="1" stage="1" lat="1">
@@ -398,7 +398,7 @@ VITIS_LOOP_119_5.i.split:8 %trunc_ln = partselect i62 @_ssdm_op_PartSelect.i62.i
 
 <Node id="35" bw="64" op_0_bw="62">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:9 %sext_ln119 = sext i62 %trunc_ln
+VITIS_LOOP_119_5.i.split:9 %sext_ln119 = sext i62 %trunc_ln9
 
 ]]></Node>
 <StgValue><ssdm name="sext_ln119"/></StgValue>
@@ -414,10 +414,10 @@ VITIS_LOOP_119_5.i.split:9 %sext_ln119 = sext i62 %trunc_ln
 
 <Node id="36" bw="32" op_0_bw="32" op_1_bw="64">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:10 %gmem_addr_16 = getelementptr i32 %gmem, i64 %sext_ln119
+VITIS_LOOP_119_5.i.split:10 %gmem_addr_14 = getelementptr i32 %gmem, i64 %sext_ln119
 
 ]]></Node>
-<StgValue><ssdm name="gmem_addr_16"/></StgValue>
+<StgValue><ssdm name="gmem_addr_14"/></StgValue>
 </operation>
 
 <operation id="41" st_id="1" stage="1" lat="1">
@@ -449,7 +449,7 @@ VITIS_LOOP_119_5.i.split:44 %store_ln118 = store i6 %add_ln118, i6 %nout
 
 <Node id="37" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_16, i32 8
+VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_14, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -468,7 +468,7 @@ VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i
 
 <Node id="37" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_16, i32 8
+VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_14, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -487,7 +487,7 @@ VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i
 
 <Node id="37" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_16, i32 8
+VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_14, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -506,7 +506,7 @@ VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i
 
 <Node id="37" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_16, i32 8
+VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_14, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -525,7 +525,7 @@ VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i
 
 <Node id="37" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_16, i32 8
+VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_14, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -544,7 +544,7 @@ VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i
 
 <Node id="37" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_16, i32 8
+VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_14, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -563,7 +563,7 @@ VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i
 
 <Node id="37" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_16, i32 8
+VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_14, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -581,7 +581,7 @@ VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i
 
 <Node id="37" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_16, i32 8
+VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_14, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -599,10 +599,10 @@ VITIS_LOOP_119_5.i.split:11 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i
 
 <Node id="38" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:12 %gmem_addr_16_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_16
+VITIS_LOOP_119_5.i.split:12 %gmem_addr_14_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_14
 
 ]]></Node>
-<StgValue><ssdm name="gmem_addr_16_read"/></StgValue>
+<StgValue><ssdm name="gmem_addr_14_read"/></StgValue>
 </operation>
 
 <operation id="86" st_id="10" stage="1" lat="1">
@@ -648,7 +648,7 @@ VITIS_LOOP_119_5.i.split:0 %nout_1_cast32 = zext i6 %nout_1
 
 <Node id="39" bw="32" op_0_bw="32">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:13 %bitcast_ln122 = bitcast i32 %gmem_addr_16_read
+VITIS_LOOP_119_5.i.split:13 %bitcast_ln122 = bitcast i32 %gmem_addr_14_read
 
 ]]></Node>
 <StgValue><ssdm name="bitcast_ln122"/></StgValue>
@@ -693,10 +693,10 @@ VITIS_LOOP_119_5.i.split:15 %store_ln122 = store i32 %bitcast_ln122, i5 %weights
 
 <Node id="42" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:16 %gmem_addr_16_read_1 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_16
+VITIS_LOOP_119_5.i.split:16 %gmem_addr_14_read_1 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_14
 
 ]]></Node>
-<StgValue><ssdm name="gmem_addr_16_read_1"/></StgValue>
+<StgValue><ssdm name="gmem_addr_14_read_1"/></StgValue>
 </operation>
 </state>
 
@@ -711,7 +711,7 @@ VITIS_LOOP_119_5.i.split:16 %gmem_addr_16_read_1 = read i32 @_ssdm_op_Read.m_axi
 
 <Node id="43" bw="32" op_0_bw="32">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:17 %bitcast_ln122_1 = bitcast i32 %gmem_addr_16_read_1
+VITIS_LOOP_119_5.i.split:17 %bitcast_ln122_1 = bitcast i32 %gmem_addr_14_read_1
 
 ]]></Node>
 <StgValue><ssdm name="bitcast_ln122_1"/></StgValue>
@@ -756,10 +756,10 @@ VITIS_LOOP_119_5.i.split:19 %store_ln122 = store i32 %bitcast_ln122_1, i5 %weigh
 
 <Node id="46" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:20 %gmem_addr_16_read_2 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_16
+VITIS_LOOP_119_5.i.split:20 %gmem_addr_14_read_2 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_14
 
 ]]></Node>
-<StgValue><ssdm name="gmem_addr_16_read_2"/></StgValue>
+<StgValue><ssdm name="gmem_addr_14_read_2"/></StgValue>
 </operation>
 </state>
 
@@ -774,7 +774,7 @@ VITIS_LOOP_119_5.i.split:20 %gmem_addr_16_read_2 = read i32 @_ssdm_op_Read.m_axi
 
 <Node id="47" bw="32" op_0_bw="32">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:21 %bitcast_ln122_2 = bitcast i32 %gmem_addr_16_read_2
+VITIS_LOOP_119_5.i.split:21 %bitcast_ln122_2 = bitcast i32 %gmem_addr_14_read_2
 
 ]]></Node>
 <StgValue><ssdm name="bitcast_ln122_2"/></StgValue>
@@ -819,10 +819,10 @@ VITIS_LOOP_119_5.i.split:23 %store_ln122 = store i32 %bitcast_ln122_2, i5 %weigh
 
 <Node id="50" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:24 %gmem_addr_16_read_3 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_16
+VITIS_LOOP_119_5.i.split:24 %gmem_addr_14_read_3 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_14
 
 ]]></Node>
-<StgValue><ssdm name="gmem_addr_16_read_3"/></StgValue>
+<StgValue><ssdm name="gmem_addr_14_read_3"/></StgValue>
 </operation>
 </state>
 
@@ -837,7 +837,7 @@ VITIS_LOOP_119_5.i.split:24 %gmem_addr_16_read_3 = read i32 @_ssdm_op_Read.m_axi
 
 <Node id="51" bw="32" op_0_bw="32">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:25 %bitcast_ln122_3 = bitcast i32 %gmem_addr_16_read_3
+VITIS_LOOP_119_5.i.split:25 %bitcast_ln122_3 = bitcast i32 %gmem_addr_14_read_3
 
 ]]></Node>
 <StgValue><ssdm name="bitcast_ln122_3"/></StgValue>
@@ -882,10 +882,10 @@ VITIS_LOOP_119_5.i.split:27 %store_ln122 = store i32 %bitcast_ln122_3, i5 %weigh
 
 <Node id="54" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:28 %gmem_addr_16_read_4 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_16
+VITIS_LOOP_119_5.i.split:28 %gmem_addr_14_read_4 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_14
 
 ]]></Node>
-<StgValue><ssdm name="gmem_addr_16_read_4"/></StgValue>
+<StgValue><ssdm name="gmem_addr_14_read_4"/></StgValue>
 </operation>
 </state>
 
@@ -900,7 +900,7 @@ VITIS_LOOP_119_5.i.split:28 %gmem_addr_16_read_4 = read i32 @_ssdm_op_Read.m_axi
 
 <Node id="55" bw="32" op_0_bw="32">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:29 %bitcast_ln122_4 = bitcast i32 %gmem_addr_16_read_4
+VITIS_LOOP_119_5.i.split:29 %bitcast_ln122_4 = bitcast i32 %gmem_addr_14_read_4
 
 ]]></Node>
 <StgValue><ssdm name="bitcast_ln122_4"/></StgValue>
@@ -945,10 +945,10 @@ VITIS_LOOP_119_5.i.split:31 %store_ln122 = store i32 %bitcast_ln122_4, i5 %weigh
 
 <Node id="58" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:32 %gmem_addr_16_read_5 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_16
+VITIS_LOOP_119_5.i.split:32 %gmem_addr_14_read_5 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_14
 
 ]]></Node>
-<StgValue><ssdm name="gmem_addr_16_read_5"/></StgValue>
+<StgValue><ssdm name="gmem_addr_14_read_5"/></StgValue>
 </operation>
 </state>
 
@@ -963,7 +963,7 @@ VITIS_LOOP_119_5.i.split:32 %gmem_addr_16_read_5 = read i32 @_ssdm_op_Read.m_axi
 
 <Node id="59" bw="32" op_0_bw="32">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:33 %bitcast_ln122_5 = bitcast i32 %gmem_addr_16_read_5
+VITIS_LOOP_119_5.i.split:33 %bitcast_ln122_5 = bitcast i32 %gmem_addr_14_read_5
 
 ]]></Node>
 <StgValue><ssdm name="bitcast_ln122_5"/></StgValue>
@@ -1008,10 +1008,10 @@ VITIS_LOOP_119_5.i.split:35 %store_ln122 = store i32 %bitcast_ln122_5, i5 %weigh
 
 <Node id="62" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:36 %gmem_addr_16_read_6 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_16
+VITIS_LOOP_119_5.i.split:36 %gmem_addr_14_read_6 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_14
 
 ]]></Node>
-<StgValue><ssdm name="gmem_addr_16_read_6"/></StgValue>
+<StgValue><ssdm name="gmem_addr_14_read_6"/></StgValue>
 </operation>
 </state>
 
@@ -1026,7 +1026,7 @@ VITIS_LOOP_119_5.i.split:36 %gmem_addr_16_read_6 = read i32 @_ssdm_op_Read.m_axi
 
 <Node id="63" bw="32" op_0_bw="32">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:37 %bitcast_ln122_6 = bitcast i32 %gmem_addr_16_read_6
+VITIS_LOOP_119_5.i.split:37 %bitcast_ln122_6 = bitcast i32 %gmem_addr_14_read_6
 
 ]]></Node>
 <StgValue><ssdm name="bitcast_ln122_6"/></StgValue>
@@ -1071,10 +1071,10 @@ VITIS_LOOP_119_5.i.split:39 %store_ln122 = store i32 %bitcast_ln122_6, i5 %weigh
 
 <Node id="66" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:40 %gmem_addr_16_read_7 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_16
+VITIS_LOOP_119_5.i.split:40 %gmem_addr_14_read_7 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_14
 
 ]]></Node>
-<StgValue><ssdm name="gmem_addr_16_read_7"/></StgValue>
+<StgValue><ssdm name="gmem_addr_14_read_7"/></StgValue>
 </operation>
 </state>
 
@@ -1104,7 +1104,7 @@ VITIS_LOOP_119_5.i.split:1 %speclooptripcount_ln118 = speclooptripcount void @_s
 
 <Node id="28" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:2 %specloopname_ln118 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11
+VITIS_LOOP_119_5.i.split:2 %specloopname_ln118 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln118"/></StgValue>
@@ -1119,7 +1119,7 @@ VITIS_LOOP_119_5.i.split:2 %specloopname_ln118 = specloopname void @_ssdm_op_Spe
 
 <Node id="67" bw="32" op_0_bw="32">
 <![CDATA[
-VITIS_LOOP_119_5.i.split:41 %bitcast_ln122_7 = bitcast i32 %gmem_addr_16_read_7
+VITIS_LOOP_119_5.i.split:41 %bitcast_ln122_7 = bitcast i32 %gmem_addr_14_read_7
 
 ]]></Node>
 <StgValue><ssdm name="bitcast_ln122_7"/></StgValue>

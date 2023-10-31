@@ -234,7 +234,7 @@ wire    ap_loop_init;
 reg   [4:0] ap_sig_allocacmp_tx_load;
 reg   [4:0] ty_fu_104;
 wire   [4:0] select_ln138_1_fu_286_p3;
-reg   [4:0] ap_sig_allocacmp_ty_2;
+reg   [4:0] ap_sig_allocacmp_ty_1;
 reg   [8:0] indvar_flatten280_fu_108;
 wire   [8:0] add_ln138_1_fu_257_p2;
 reg   [8:0] ap_sig_allocacmp_indvar_flatten280_load;
@@ -251,7 +251,7 @@ wire   [18:0] zext_ln141_fu_229_p1;
 wire   [18:0] zext_ln141_1_fu_241_p1;
 wire   [0:0] icmp_ln139_fu_272_p2;
 wire   [4:0] add_ln138_fu_266_p2;
-wire   [8:0] tmp_6_fu_298_p3;
+wire   [8:0] tmp_2_fu_298_p3;
 wire   [8:0] zext_ln141_2_fu_294_p1;
 wire   [7:0] zext_ln138_1_fu_312_p1;
 wire   [7:0] p_mid1278_fu_316_p2;
@@ -525,9 +525,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        ap_sig_allocacmp_ty_2 = 5'd0;
+        ap_sig_allocacmp_ty_1 = 5'd0;
     end else begin
-        ap_sig_allocacmp_ty_2 = ty_fu_104;
+        ap_sig_allocacmp_ty_1 = ty_fu_104;
     end
 end
 
@@ -800,7 +800,7 @@ end
 
 assign add_ln138_1_fu_257_p2 = (ap_sig_allocacmp_indvar_flatten280_load + 9'd1);
 
-assign add_ln138_fu_266_p2 = (ap_sig_allocacmp_ty_2 + 5'd1);
+assign add_ln138_fu_266_p2 = (ap_sig_allocacmp_ty_1 + 5'd1);
 
 assign add_ln139_fu_458_p2 = (select_ln138_reg_498 + 5'd1);
 
@@ -810,7 +810,7 @@ assign add_ln141_2_fu_413_p2 = ($signed(add_ln141_3_fu_407_p2) + $signed(sext_ln
 
 assign add_ln141_3_fu_407_p2 = (zext_ln141_6_fu_403_p1 + output_ftmap);
 
-assign add_ln141_4_fu_306_p2 = (tmp_6_fu_298_p3 + zext_ln141_2_fu_294_p1);
+assign add_ln141_4_fu_306_p2 = (tmp_2_fu_298_p3 + zext_ln141_2_fu_294_p1);
 
 assign add_ln141_5_fu_368_p2 = (add_ln141_4_fu_306_p2 + zext_ln141_7_fu_364_p1);
 
@@ -1082,7 +1082,7 @@ assign output_fm_buffer_0_address0 = zext_ln141_8_fu_374_p1;
 
 assign p_mid1278_fu_316_p2 = (zext_ln138_1_fu_312_p1 + select_ln31_1);
 
-assign select_ln138_1_fu_286_p3 = ((icmp_ln139_fu_272_p2[0:0] == 1'b1) ? add_ln138_fu_266_p2 : ap_sig_allocacmp_ty_2);
+assign select_ln138_1_fu_286_p3 = ((icmp_ln139_fu_272_p2[0:0] == 1'b1) ? add_ln138_fu_266_p2 : ap_sig_allocacmp_ty_1);
 
 assign select_ln138_2_fu_352_p3 = ((icmp_ln139_fu_272_p2[0:0] == 1'b1) ? sub_ln141_1_fu_346_p2 : sub_ln141_fu_245_p2);
 
@@ -1108,13 +1108,13 @@ assign sub_ln141_fu_245_p2 = (zext_ln141_fu_229_p1 - zext_ln141_1_fu_241_p1);
 
 assign ti_cast20_cast_fu_186_p1 = ti_cast20;
 
-assign tmp_6_fu_298_p3 = {{select_ln138_1_fu_286_p3}, {4'd0}};
+assign tmp_2_fu_298_p3 = {{select_ln138_1_fu_286_p3}, {4'd0}};
 
 assign trunc_ln_fu_419_p4 = {{add_ln141_2_fu_413_p2[63:2]}};
 
 assign zext_ln138_1_fu_312_p1 = add_ln138_fu_266_p2;
 
-assign zext_ln138_fu_211_p1 = ap_sig_allocacmp_ty_2;
+assign zext_ln138_fu_211_p1 = ap_sig_allocacmp_ty_1;
 
 assign zext_ln141_1_fu_241_p1 = shl_ln141_1_fu_233_p3;
 

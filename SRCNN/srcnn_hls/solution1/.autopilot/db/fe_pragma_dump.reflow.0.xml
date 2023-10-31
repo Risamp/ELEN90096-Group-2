@@ -1,6 +1,7 @@
 <pragmas>
-<pragma file="src/conv2.cpp" line="71" pragmaType="unroll" parentfunction="conv2" factor="8" skip_exit_check="0"/>
 <pragma file="src/conv3.cpp" line="71" pragmaType="unroll" parentfunction="conv3" factor="8" skip_exit_check="0"/>
+<pragma file="src/conv2.cpp" line="71" pragmaType="unroll" parentfunction="conv2" factor="8" skip_exit_check="0"/>
+<pragma file="src/conv1.cpp" line="27" pragmaType="pipeline" parentfunction="conv1" off="1" ii="0" style=""/>
 <pragma file="src/srcnn.cpp" line="22" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="input_ftmap" bundle="" offset="slave" name="" depth="512" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
 <pragma file="src/srcnn.cpp" line="23" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv1_weights" bundle="" offset="slave" name="" depth="512" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
 <pragma file="src/srcnn.cpp" line="24" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv1_biases" bundle="" offset="slave" name="" depth="512" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
