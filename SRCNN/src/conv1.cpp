@@ -14,21 +14,18 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 
 	#pragma HLS PIPELINE off
 
-	static ftmap_t output_fm_buffer[C1_OD][TH][TW];
-#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=block factor=4
-	static ftmap_t input_fm_buffer[C1_ID][TH][TW];
-#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=block factor=4
-	static param_t weight_buffer[C1_OD][N0][F1][F1];
+	static ftmap_t output_fm_buffer[C1_OD][C1_TH][C1_TW] = {0};
+	static ftmap_t input_fm_buffer[C1_ID][C1_TH + (2 * P1)][C1_TW + (2 * P1)];
+//#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=block factor=4
+	static param_t weight_buffer[C1_OD][C1_ID][F1][F1];
 #pragma HLS ARRAY_PARTITION variable=weight_buffer type=block factor=4
 
 	// output stationary
 	TILE_OUT: for (int out = 0; out < N1; out += C1_OD) {
-	TILE_ROW: for (int h = 0; h < H; h += TH) {
-	TILE_COL: for (int w = 0; w < W; w += TW) {
+	TILE_ROW: for (int h = 0; h < H; h += C1_TH) {
+	TILE_COL: for (int w = 0; w < W; w += C1_TW) {
 
-		// clear output buffer
-		//clear_buffer(output_fm_buffer);
-		memset(output_fm_buffer, 0, C1_OD * TH * TW * sizeof(ftmap_t));
+
 
 		TILE_IN: for (int in = 0; in < N0; in += C1_ID) {
 			load_input_buffer_c1(input_fm_buffer, input_ftmap, in, h, w);
@@ -43,24 +40,23 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 			KC: for (int kc = 0; kc < F1; kc++) { // kernel column
 #pragma HLS PIPELINE II=3
 
-				// don't pad the tiles, just extend edges for greater parallelisation opportunities
-				int rclamp = clamp(r + kr - P1, 0, TH - 1);
-				int cclamp = clamp(c + kc - P1, 0, TW - 1);
-
-				output_fm_buffer[o][r][c] += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][rclamp][cclamp];
+				output_fm_buffer[o][r][c] += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][r + kr][c + kc];
 
 			}}}}}}
 		}
 
 		export_output_buffer_c1(output_fm_buffer, output_ftmap, conv1_biases, out, h, w);
+		// clear output buffer
+		//clear_buffer(output_fm_buffer);
+		memset(output_fm_buffer, 0, C1_OD * C1_TH * C1_TW * sizeof(ftmap_t));
 	}}}
 }
 
 
-void clear_buffer(ftmap_t output_fm_buffer[C1_OD][TH][TW]) {
+void clear_buffer(ftmap_t output_fm_buffer[C1_OD][C1_TH][C1_TW]) {
 	for (int o = 0; o < C1_OD; o++) {
-		for (int h = 0; h < TH; h++) {
-			for (int w = 0; w < TW; w++) {
+		for (int h = 0; h < C1_TH; h++) {
+			for (int w = 0; w < C1_TW; w++) {
 #pragma HLS UNROLL factor=4
 				output_fm_buffer[o][h][w] = 0;
 			}
@@ -70,16 +66,20 @@ void clear_buffer(ftmap_t output_fm_buffer[C1_OD][TH][TW]) {
 
 
 void load_input_buffer_c1(
-	ftmap_t input_fm_buffer[N0][TH][TW],
+	ftmap_t input_fm_buffer[C1_ID][C1_TH + (2 * P1)][C1_TW + (2 * P1)],
 	ftmap_t input_ftmap[N0][H][W],
 	int in,
 	int h,
 	int w
 ) {
 	BUFF_IN: for (int bin = 0; bin < C1_ID; bin++) {
-		BUFF_H: for (int bh = 0; bh < TH; bh++) {
-			BUFF_W: for (int bw = 0; bw < TW; bw++) {
+		BUFF_H: for (int bh = 0; bh < TH + (2 * P1); bh++) {
+			BUFF_W: for (int bw = 0; bw < TW + (2 * P1); bw++) {
 #pragma HLS UNROLL factor=4
+
+				int hclamp = clamp(h + bh - P1 - P1, 0, H - 1);
+				int wclamp = clamp(w + bw - P1 - P1, 0, W - 1);
+
 				input_fm_buffer[bin][bh][bw] = input_ftmap[bin + in][bh + h][bw + w];
 			}
 		}
@@ -87,7 +87,7 @@ void load_input_buffer_c1(
 }
 
 void load_weight_buffer_c1(
-	param_t weight_buffer[C1_OD][N0][F1][F1],
+	param_t weight_buffer[C1_OD][C1_ID][F1][F1],
 	param_t conv1_weights[N1][N0][F1][F1],
 	int out,
 	int in
@@ -105,7 +105,7 @@ void load_weight_buffer_c1(
 }
 
 void export_output_buffer_c1(
-	ftmap_t output_fm_buffer[C1_OD][TH][TW],
+	ftmap_t output_fm_buffer[C1_OD][C1_TH][C1_TW],
 	ftmap_t output_ftmap[N1][H][W],
 	param_t biases[N1],
 	int out,
@@ -113,8 +113,8 @@ void export_output_buffer_c1(
 	int w
 ) {
 	BUFF_OUT: for (int bout = 0; bout < C1_OD; bout++) {
-		BUFF_H: for (int bh = 0; bh < TH; bh++) {
-			BUFF_W: for (int bw = 0; bw < TW; bw++) {
+		BUFF_H: for (int bh = 0; bh < C1_TH; bh++) {
+			BUFF_W: for (int bw = 0; bw < C1_TW; bw++) {
 #pragma HLS UNROLL factor=2
 #pragma HLS PIPELINE II=2
 				ftmap_t value = output_fm_buffer[bout][bh][bw] + biases[bout + out];

@@ -59,6 +59,8 @@
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
                                     									
+                                    <listOptionValue builtIn="false" value="C:/SPB_Data/ELEN90096-Group-2/SRCNN"/>
+                                    									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include"/>
@@ -96,6 +98,8 @@
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/etc"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/SPB_Data/ELEN90096-Group-2/SRCNN"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
                                     									
@@ -343,7 +347,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding=".apc|.settings|solution1|source/srcnn.h|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding=".apc|.settings|source/srcnn.h|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				
@@ -411,6 +415,8 @@
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
                                     									
+                                    <listOptionValue builtIn="false" value="C:/SPB_Data/ELEN90096-Group-2/SRCNN"/>
+                                    									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include"/>
@@ -438,6 +444,8 @@
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/etc"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/SPB_Data/ELEN90096-Group-2/SRCNN"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
                                     									
@@ -673,7 +681,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding=".apc|.settings|solution1|source/srcnn.h|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding=".apc|.settings|source/srcnn.h|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				
