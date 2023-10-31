@@ -17,7 +17,11 @@
 #define N3 1            // conv3 output features
 #define F3 5            // conv3 kernel size
 
-#define T 10			// number of tiles in each dimension (width/height)
+// CONV1
+#define C1_OD 8 // conv1 output tile depth
+#define C1_ID 1 // conv1 input tile depth
+
+#define T 15			// number of tiles in each dimension (width/height)
 #define TH H / T		// input tile height
 #define TW W / T		// input tile width
 #define UNROLL 8		// input tile unroll factor
@@ -71,17 +75,31 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 int clamp(int value, int min, int max);
 
 // load or ship buffer tiles (i.e. tile + padding for input, tile for output) into a given buffer
-void load_buffer_tile_c1(ftmap_t input_fm_buffer[N0][TH + (2 * P1)][TW + (2 * P1)],
-                         ftmap_t input_fm[N0][H][W],
-                         int tx0,
-                         int ty0);
+void load_input_buffer_c1(
+	ftmap_t input_fm_buffer[N0][TH][TW],
+	ftmap_t input_ftmap[N0][H][W],
+	int in,
+	int h,
+	int w
+);
 
-void export_buffer_tile_c1(ftmap_t output_fm_buffer[N1][TH][TW],
-                           ftmap_t output_ftmap[N1][H][W],
-                           int tx0,
-                           int ty0,
-						   param_t conv1_biases[N1]
-						   );
+void load_weight_buffer_c1(
+	param_t weight_buffer[C1_OD][N0][F1][F1],
+	param_t conv1_weights[N1][N0][F1][F1],
+	int out,
+	int in
+);
+
+void export_output_buffer_c1(
+	ftmap_t output_fm_buffer[C1_OD][TH][TW],
+	ftmap_t output_ftmap[N1][H][W],
+	param_t biases[N1],
+	int out,
+	int h,
+	int w
+);
+
+void clear_buffer(ftmap_t output_fm_buffer[C1_OD][TH][TW]);
 
 void load_buffer_tile_c2(ftmap_t input_fm_buffer[UNROLL][TH + (2 * P2)][TW + (2 * P2)],
                          ftmap_t input_fm[N1][H][W],
