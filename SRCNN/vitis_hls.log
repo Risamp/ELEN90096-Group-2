@@ -2,10 +2,10 @@ ECHO is off.
 ECHO is off.
 NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'bcevans' on host '400p1t176rg0520' (Windows NT_amd64 version 6.2) on Mon Oct 16 13:37:45 +1100 2023
+INFO: [HLS 200-10] For user 'rpais' on host '400p1l1760g0513' (Windows NT_amd64 version 6.2) on Mon Oct 30 16:07:15 +1100 2023
 INFO: [HLS 200-10] In directory 'C:/SPB_Data/ELEN90096-Group-2/SRCNN'
-Sourcing Tcl script 'C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl'
-INFO: [HLS 200-1510] Running: source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl
+Sourcing Tcl script 'C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/export.tcl
 INFO: [HLS 200-1510] Running: open_project srcnn_hls 
 INFO: [HLS 200-10] Opening project 'C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls'.
 INFO: [HLS 200-1510] Running: set_top srcnn 
@@ -45,189 +45,46 @@ INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/SPB_Data/ELEN90096-Group-2
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
 INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/SPB_Data/ELEN90096-Group-2 -rtl verilog 
 INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
-INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.237 seconds; current allocated memory: 90.137 MB.
-INFO: [HLS 200-10] Analyzing design file 'src/conv1.cpp' ... 
-INFO: [HLS 200-10] Analyzing design file 'src/conv2.cpp' ... 
-INFO: [HLS 200-10] Analyzing design file 'src/conv3.cpp' ... 
-INFO: [HLS 200-10] Analyzing design file 'src/srcnn.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.859 seconds; current allocated memory: 91.531 MB.
-INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_61_8' (src/conv3.cpp:61:23) in function 'conv3' partially with a factor of 8 (src/conv3.cpp:14:0)
-INFO: [HLS 214-359] Unrolling loop 'TI' (src/conv2.cpp:33:6) in function 'conv2': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3). (src/conv2.cpp:14:0)
-INFO: [HLS 214-186] Unrolling loop 'TI' (src/conv2.cpp:33:6) in function 'conv2' completely with a factor of 3 (src/conv2.cpp:14:0)
-INFO: [HLS 214-188] Unrolling loop 'NOUT' (src/conv1.cpp:47:10) in function 'conv1' partially with a factor of 8 (src/conv1.cpp:14:0)
-INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_buffer_tile_c1(float (*) [93][93], float (*) [255][255], int, int)' (src/conv1.cpp:105:0)
-INFO: [HLS 214-178] Inlining function 'load_buffer_tile_c1(float (*) [93][93], float (*) [255][255], int, int)' into 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])' (src/conv1.cpp:14:0)
-INFO: [HLS 214-178] Inlining function 'export_buffer_tile_c1(float (*) [85][85], float (*) [255][255], int, int)' into 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])' (src/conv1.cpp:14:0)
-INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_buffer_tile_c2(float (*) [85][85], float (*) [255][255], int, int)' (src/conv2.cpp:106:0)
-INFO: [HLS 214-178] Inlining function 'export_buffer_tile_c2(float (*) [85][85], float (*) [255][255], int, int)' into 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])' (src/conv2.cpp:14:0)
-INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_buffer_tile_c3(float (*) [89][89], float (*) [255][255], int, int)' (src/conv3.cpp:103:0)
-INFO: [HLS 214-178] Inlining function 'load_buffer_tile_c3(float (*) [89][89], float (*) [255][255], int, int)' into 'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])' (src/conv3.cpp:14:0)
-INFO: [HLS 214-178] Inlining function 'export_buffer_tile_c3(float (*) [85][85], float (*) [255][255], int, int)' into 'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])' (src/conv3.cpp:14:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E18conv2_output_ftmap': Block partitioning with factor 8 on dimension 1. (src/srcnn.cpp:20:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E18conv1_output_ftmap': Block partitioning with factor 8 on dimension 1. (src/srcnn.cpp:18:0)
-INFO: [HLS 214-248] Applying array_partition to 'input_fm_buffer': Cyclic partitioning with factor 8 on dimension 1. (src/conv1.cpp:38:12)
-INFO: [HLS 214-248] Applying array_partition to 'output_fm_buffer': Block partitioning with factor 8 on dimension 1. (src/conv1.cpp:40:10)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 4.366 seconds; current allocated memory: 91.531 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 91.531 MB.
-INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.163 seconds; current allocated memory: 91.531 MB.
-INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.169 seconds; current allocated memory: 91.531 MB.
-INFO: [XFORM 203-102] Partitioning array 'output_fm_buffer' in dimension 1 automatically.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.855 seconds; current allocated memory: 91.531 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.849 seconds; current allocated memory: 91.531 MB.
-INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'srcnn' ...
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'conv1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.001 seconds; current allocated memory: 91.531 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.712 seconds; current allocated memory: 91.531 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'load_buffer_tile_c2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.675 seconds; current allocated memory: 91.531 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.104 seconds; current allocated memory: 91.531 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'conv2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln66_1) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln66_4) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln66_7) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.804 seconds; current allocated memory: 91.531 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.018 seconds; current allocated memory: 91.531 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'conv3' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln63) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln63_40) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln63_34) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln63_28) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln63_22) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln63_16) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln63_10) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln63_5) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.699 seconds; current allocated memory: 91.531 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.798 seconds; current allocated memory: 91.531 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'srcnn' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.425 seconds; current allocated memory: 91.531 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.213 seconds; current allocated memory: 91.531 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'conv1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_10ns_8ns_16_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_3ns_8ns_10_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_7ns_8ns_14_1_1': 8 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_8_3_32_1_1': 3 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1'.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_input_fm_buffer_1_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_output_fm_buffer_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.421 seconds; current allocated memory: 91.531 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'load_buffer_tile_c2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'mul_13ns_8ns_19_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_8_3_32_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'load_buffer_tile_c2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 2.688 seconds; current allocated memory: 93.242 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'conv2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_13ns_7ns_7ns_7ns_19_4_1': 3 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_12ns_8ns_18_1_1': 6 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_8_3_32_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2'.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv2_input_fm_buffer_1_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv2_output_fm_buffer_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.377 seconds; current allocated memory: 94.898 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'conv3' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_12ns_7ns_7ns_7ns_18_4_1': 8 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_12ns_8ns_18_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_5ns_8ns_12_1_1': 7 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_6ns_8ns_12_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_8_3_32_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3'.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv3_input_fm_buffer_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv3_output_fm_buffer_0_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.568 seconds; current allocated memory: 108.871 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'srcnn' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/input_ftmap' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv1_weights' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv1_biases' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv2_weights' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv2_biases' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv3_weights' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv3_biases' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/output_ftmap' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'srcnn' to 'ap_ctrl_hs'.
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'srcnn'.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.588 seconds; current allocated memory: 119.555 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.77 seconds; current allocated memory: 141.645 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.528 seconds; current allocated memory: 155.145 MB.
-INFO: [VHDL 208-304] Generating VHDL RTL for srcnn.
-INFO: [VLOG 209-307] Generating Verilog RTL for srcnn.
-INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 142.53 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 19 seconds. CPU system time: 4 seconds. Elapsed time: 38.984 seconds; current allocated memory: 65.133 MB.
-INFO: [HLS 200-112] Total CPU user time: 21 seconds. Total CPU system time: 5 seconds. Total elapsed time: 40.721 seconds; peak allocated memory: 155.430 MB.
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/SPB_Data/ELEN90096-Group-2 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 432.691 ; gain = 164.395
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'srcnn_fadd_32ns_32ns_32_4_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'srcnn_fadd_32ns_32ns_32_4_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'srcnn_fadd_32ns_32ns_32_4_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'srcnn_fcmp_32ns_32ns_1_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'srcnn_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'srcnn_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'srcnn_fmul_32ns_32ns_32_3_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'srcnn_fmul_32ns_32ns_32_3_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'srcnn_fmul_32ns_32ns_32_3_max_dsp_1_ip'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 30 16:07:45 2023...
+INFO: [HLS 200-802] Generated output file C:/SPB_Data/ELEN90096-Group-2/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 27.754 seconds; current allocated memory: 10.574 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 2 seconds. Total elapsed time: 30.137 seconds; peak allocated memory: 101.598 MB.

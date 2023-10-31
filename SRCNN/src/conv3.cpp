@@ -59,7 +59,6 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 					// for each input layer
 					// TODO: PIPELINE THIS
 					for (int nin = 0; nin < N2; nin++) {
-#pragma HLS UNROLL factor=8
 						output_fm_buffer[nout][ty][tx] += conv3_weights[nout][nin][ky][kx] * input_fm_buffer[nin][by][bx];
 					}
 				}}
@@ -138,4 +137,3 @@ void export_buffer_tile_c3(
 	// clear buffer
 	memset(output_fm_buffer, 0, N3 * TH * TW * sizeof(ftmap_t));
 }
-

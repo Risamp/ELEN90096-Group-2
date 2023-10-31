@@ -12,8 +12,8 @@ entity srcnn_conv3_input_fm_buffer_RAM_AUTO_1R1W is
     generic(
         MEM_TYPE        : string    := "auto"; 
         DataWidth       : integer   := 32; 
-        AddressWidth    : integer   := 18;
-        AddressRange    : integer   := 253472
+        AddressWidth    : integer   := 14;
+        AddressRange    : integer   := 14112
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

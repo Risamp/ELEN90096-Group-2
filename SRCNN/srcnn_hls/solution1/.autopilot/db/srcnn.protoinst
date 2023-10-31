@@ -9,11 +9,11 @@
 						"AP_CLK": { "actual": "ap_clk"},
 						"AP_DONE": { "actual": "ap_done"},
 						"AP_READY": { "actual": "ap_ready"},
-						"AP_RESET": { "actual": "ap_rst"},
+						"AP_RESET": { "actual": "ap_rst_n"},
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv1_fu_406/grp_conv1_fu_406_activity": {
+				"grp_conv1_fu_279/grp_conv1_fu_279_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -23,7 +23,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv2_fu_432/grp_conv2_fu_432_activity": {
+				"grp_conv2_fu_293/grp_conv2_fu_293_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -33,17 +33,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv2_fu_432/grp_load_buffer_tile_c2_fu_1117/grp_load_buffer_tile_c2_fu_1117_activity": {
-					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
-					"ports": {
-						"AP_CLK": { "actual": "ap_clk"},
-						"AP_DONE": { "actual": "ap_done"},
-						"AP_READY": { "actual": "ap_ready"},
-						"AP_RESET": { "actual": "ap_rst"},
-						"AP_START": { "actual": "ap_start"}
-					}
-				},
-				"grp_conv3_fu_472/grp_conv3_fu_472_activity": {
+				"grp_conv3_fu_307/grp_conv3_fu_307_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

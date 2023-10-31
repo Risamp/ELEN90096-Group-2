@@ -9,6 +9,8 @@ using namespace std;
 ftmap_t img_LR[N0][H][W];  // low resolution input image
 ftmap_t img_HR[N0][H][W];  // high-resolution output image
 ftmap_t img_GR[N0][H][W];  // high-resolution golden reference
+ftmap_t layer_1_output[N1][H][W] = {0};
+ftmap_t layer_2_output[N2][H][W] = {0};
 
 // parameter dimensions
 //   weights: output features x input features x kernel height x kernel width
@@ -54,8 +56,10 @@ int tb_srcnn()
     srcnn(img_LR, 
           conv1_weights,
           conv1_biases,
+		  layer_1_output,
           conv2_weights,
           conv2_biases,
+		  layer_2_output,
           conv3_weights,
           conv3_biases,
           img_HR);
