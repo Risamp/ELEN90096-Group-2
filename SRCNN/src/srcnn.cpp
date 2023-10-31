@@ -3,16 +3,16 @@
 #include <cstring>
 #include <iostream>
 
-void srcnn(ftmap_t input_ftmap[N0][H][W],
-           param_t conv1_weights[N1][N0][F1][F1],
-           param_t conv1_biases[N1],
-		   ftmap_t conv1_output_ftmap[N1][H][W],
-           param_t conv2_weights[N2][N1][F2][F2],
-           param_t conv2_biases[N2],
-		   ftmap_t conv2_output_ftmap[N2][H][W],
-           param_t conv3_weights[N3][N2][F3][F3],
-           param_t conv3_biases[N3],
-           ftmap_t output_ftmap[N3][H][W])
+void srcnn(conv1_b input_ftmap[N0][H][W],
+		   conv1_w conv1_weights[N1][N0][F1][F1],
+           conv1_b conv1_biases[N1],
+		   conv1_b conv1_output_ftmap[N1][H][W],
+		   conv1_b conv2_weights[N2][N1][F2][F2],
+		   conv1_b conv2_biases[N2],
+		   conv1_b conv2_output_ftmap[N2][H][W],
+		   conv1_b conv3_weights[N3][N2][F3][F3],
+		   conv1_b conv3_biases[N3],
+		   conv1_b output_ftmap[N3][H][W])
 {
     // Implement end-to-end SRCNN here
     // Assuming image pre-processing is already completed

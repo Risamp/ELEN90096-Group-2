@@ -61,13 +61,13 @@
 <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>3215508556</Best-caseLatency>
-<Average-caseLatency>3215508556</Average-caseLatency>
-<Worst-caseLatency>3215508556</Worst-caseLatency>
-<Best-caseRealTimeLatency>32.155 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>32.155 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>32.155 sec</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>3215508556</PipelineInitiationInterval>
+<Best-caseLatency>6557273356</Best-caseLatency>
+<Average-caseLatency>6557273356</Average-caseLatency>
+<Worst-caseLatency>6557273356</Worst-caseLatency>
+<Best-caseRealTimeLatency>65.573 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>65.573 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>65.573 sec</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>6557273356</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -75,10 +75,10 @@
 <Name>TILE_J</Name>
 <Slack>7.30</Slack>
 <TripCount>15</TripCount>
-<Latency>3215508555</Latency>
-<AbsoluteTimeLatency>32.155 sec</AbsoluteTimeLatency>
-<IterationLatency>214367237</IterationLatency>
-<PipelineDepth>214367237</PipelineDepth>
+<Latency>6557273355</Latency>
+<AbsoluteTimeLatency>65.573 sec</AbsoluteTimeLatency>
+<IterationLatency>437151557</IterationLatency>
+<PipelineDepth>437151557</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
 </InstanceList>
@@ -86,10 +86,10 @@
 <Name>TILE_I</Name>
 <Slack>7.30</Slack>
 <TripCount>15</TripCount>
-<Latency>214367235</Latency>
-<AbsoluteTimeLatency>2.144 sec</AbsoluteTimeLatency>
-<IterationLatency>14291149</IterationLatency>
-<PipelineDepth>14291149</PipelineDepth>
+<Latency>437151555</Latency>
+<AbsoluteTimeLatency>4.372 sec</AbsoluteTimeLatency>
+<IterationLatency>29143437</IterationLatency>
+<PipelineDepth>29143437</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
 </InstanceList>
@@ -133,10 +133,10 @@
 <Name>NOUT</Name>
 <Slack>7.30</Slack>
 <TripCount>64</TripCount>
-<Latency>14003776</Latency>
-<AbsoluteTimeLatency>0.140 sec</AbsoluteTimeLatency>
-<IterationLatency>218809</IterationLatency>
-<PipelineDepth>218809</PipelineDepth>
+<Latency>28856064</Latency>
+<AbsoluteTimeLatency>0.289 sec</AbsoluteTimeLatency>
+<IterationLatency>450876</IterationLatency>
+<PipelineDepth>450876</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
 </InstanceList>
@@ -144,10 +144,10 @@
 <Name>TY</Name>
 <Slack>7.30</Slack>
 <TripCount>17</TripCount>
-<Latency>218807</Latency>
-<AbsoluteTimeLatency>2.188 ms</AbsoluteTimeLatency>
-<IterationLatency>12871</IterationLatency>
-<PipelineDepth>12871</PipelineDepth>
+<Latency>450874</Latency>
+<AbsoluteTimeLatency>4.509 ms</AbsoluteTimeLatency>
+<IterationLatency>26522</IterationLatency>
+<PipelineDepth>26522</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
 </InstanceList>
@@ -155,10 +155,10 @@
 <Name>TX</Name>
 <Slack>7.30</Slack>
 <TripCount>17</TripCount>
-<Latency>12869</Latency>
-<AbsoluteTimeLatency>0.129 ms</AbsoluteTimeLatency>
-<IterationLatency>757</IterationLatency>
-<PipelineDepth>757</PipelineDepth>
+<Latency>26520</Latency>
+<AbsoluteTimeLatency>0.265 ms</AbsoluteTimeLatency>
+<IterationLatency>1560</IterationLatency>
+<PipelineDepth>1560</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
 </InstanceList>
@@ -166,10 +166,10 @@
 <Name>KY</Name>
 <Slack>7.30</Slack>
 <TripCount>9</TripCount>
-<Latency>747</Latency>
-<AbsoluteTimeLatency>7.470 us</AbsoluteTimeLatency>
-<IterationLatency>83</IterationLatency>
-<PipelineDepth>83</PipelineDepth>
+<Latency>1557</Latency>
+<AbsoluteTimeLatency>15.570 us</AbsoluteTimeLatency>
+<IterationLatency>173</IterationLatency>
+<PipelineDepth>173</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
 </InstanceList>
@@ -177,10 +177,10 @@
 <Name>KX</Name>
 <Slack>7.30</Slack>
 <TripCount>9</TripCount>
-<Latency>81</Latency>
-<AbsoluteTimeLatency>0.810 us</AbsoluteTimeLatency>
-<IterationLatency>9</IterationLatency>
-<PipelineDepth>9</PipelineDepth>
+<Latency>171</Latency>
+<AbsoluteTimeLatency>1.710 us</AbsoluteTimeLatency>
+<IterationLatency>19</IterationLatency>
+<PipelineDepth>19</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
 </InstanceList>
@@ -249,12 +249,12 @@
 <DSP>0</DSP>
 <AVAIL_DSP>1248</AVAIL_DSP>
 <UTIL_DSP>0</UTIL_DSP>
-<FF>1139</FF>
+<FF>1293</FF>
 <AVAIL_FF>234240</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>1995</LUT>
+<LUT>3221</LUT>
 <AVAIL_LUT>117120</AVAIL_LUT>
-<UTIL_LUT>1</UTIL_LUT>
+<UTIL_LUT>2</UTIL_LUT>
 <URAM>0</URAM>
 <AVAIL_URAM>64</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>
@@ -3086,13 +3086,13 @@
 <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>5587982288</Best-caseLatency>
-<Average-caseLatency>5587982288</Average-caseLatency>
-<Worst-caseLatency>5587982288</Worst-caseLatency>
-<Best-caseRealTimeLatency>55.880 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>55.880 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>55.880 sec</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>5587982289</PipelineInitiationInterval>
+<Best-caseLatency>8929747088</Best-caseLatency>
+<Average-caseLatency>8929747088</Average-caseLatency>
+<Worst-caseLatency>8929747088</Worst-caseLatency>
+<Best-caseRealTimeLatency>89.297 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>89.297 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>89.297 sec</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>8929747089</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -3142,12 +3142,12 @@
 <DSP>6</DSP>
 <AVAIL_DSP>1248</AVAIL_DSP>
 <UTIL_DSP>~0</UTIL_DSP>
-<FF>6297</FF>
+<FF>6451</FF>
 <AVAIL_FF>234240</AVAIL_FF>
 <UTIL_FF>2</UTIL_FF>
-<LUT>9637</LUT>
+<LUT>10863</LUT>
 <AVAIL_LUT>117120</AVAIL_LUT>
-<UTIL_LUT>8</UTIL_LUT>
+<UTIL_LUT>9</UTIL_LUT>
 <URAM>0</URAM>
 <AVAIL_URAM>64</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>

@@ -7,10 +7,10 @@
 using namespace std;
 
 // implements conv1 layer of SRCNN
-void conv1(ftmap_t input_ftmap[N0][H][W],
-           param_t conv1_weights[N1][N0][F1][F1],
-           param_t conv1_biases[N1],
-           ftmap_t output_ftmap[N1][H][W])
+void conv1(conv1_b input_ftmap[N0][H][W],
+		   conv1_w conv1_weights[N1][N0][F1][F1],
+           conv1_b conv1_biases[N1],
+           conv1_b output_ftmap[N1][H][W])
 {
 
 		/*
@@ -35,8 +35,8 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 			int tx0 = ti * TW;
 
 			// initialise input and output buffers
-			static ftmap_t input_fm_buffer[N0][TH + (2 * P1)][TW + (2 * P1)];
-			static ftmap_t output_fm_buffer[N1][TH][TW] = {0};
+			static conv1_b input_fm_buffer[N0][TH + (2 * P1)][TW + (2 * P1)];
+			static conv1_b output_fm_buffer[N1][TH][TW] = {0};
 
 			// load buffer-sized chunk
 			load_buffer_tile_c1(input_fm_buffer, input_ftmap, tx0, ty0);
@@ -82,13 +82,13 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
  * tx0, ty0 = image space coordinates of tile top left
 */
 void load_buffer_tile_c1(
-	ftmap_t input_fm_buffer[N0][TH + (2 * P1)][TW + (2 * P1)],
-	ftmap_t input_fm[N0][H][W],
+	conv1_b input_fm_buffer[N0][TH + (2 * P1)][TW + (2 * P1)],
+	conv1_b input_fm[N0][H][W],
 	int tx0,
 	int ty0
 ) {
 	// clear buffer
-	memset(input_fm_buffer, 0, N0 * (TH + (2 * P1)) * (TW + (2 * P1)) * sizeof(ftmap_t));
+	memset(input_fm_buffer, 0, N0 * (TH + (2 * P1)) * (TW + (2 * P1)) * sizeof(conv1_b));
 
 	IN_BUFFER_NIN: for (int nin = 0; nin < N0; nin++) { // input layer
 		IN_BUFFER_BY: for (int by = 0; by < TH + (2 * P1); by++) { // buffer space y
@@ -106,11 +106,11 @@ void load_buffer_tile_c1(
 }
 
 void export_buffer_tile_c1(
-	ftmap_t output_fm_buffer[N1][TH][TW],
-	ftmap_t output_ftmap[N1][H][W],
-	int tx0,
-	int ty0,
-	param_t conv1_biases[N1]
+		conv1_b output_fm_buffer[N1][TH][TW],
+		conv1_b output_ftmap[N1][H][W],
+		int tx0,
+		int ty0,
+		conv1_b conv1_biases[N1]
 ) {
 	OUT_BUFFER_NOUT: for (int nout = 0; nout < N1; nout++) { // output layer
 		OUT_BUFFER_TY: for (int ty = 0; ty < TH; ty++) { // tile space y
@@ -126,5 +126,5 @@ void export_buffer_tile_c1(
 	}
 
 	// clear buffer
-	memset(output_fm_buffer, 0, N1 * TH * TW * sizeof(ftmap_t));
+	memset(output_fm_buffer, 0, N1 * TH * TW * sizeof(conv1_b));
 }

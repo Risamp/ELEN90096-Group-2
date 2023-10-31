@@ -1307,17 +1307,17 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
   };
   __xlx_offset_byte_param_input_ftmap = 0*4;
   __xlx_offset_byte_param_conv1_weights = 65025*4;
-  __xlx_offset_byte_param_conv1_biases = 70209*4;
-  __xlx_offset_byte_param_conv1_output_ftmap = 70273*4;
-  __xlx_offset_byte_param_conv2_weights = 4231873*4;
-  __xlx_offset_byte_param_conv2_biases = 4233921*4;
-  __xlx_offset_byte_param_conv2_output_ftmap = 4233953*4;
-  __xlx_offset_byte_param_conv3_weights = 6314753*4;
-  __xlx_offset_byte_param_conv3_biases = 6315553*4;
-  __xlx_offset_byte_param_output_ftmap = 6315554*4;
+  __xlx_offset_byte_param_conv1_biases = 67617*4;
+  __xlx_offset_byte_param_conv1_output_ftmap = 67681*4;
+  __xlx_offset_byte_param_conv2_weights = 4229281*4;
+  __xlx_offset_byte_param_conv2_biases = 4231329*4;
+  __xlx_offset_byte_param_conv2_output_ftmap = 4231361*4;
+  __xlx_offset_byte_param_conv3_weights = 6312161*4;
+  __xlx_offset_byte_param_conv3_biases = 6312961*4;
+  __xlx_offset_byte_param_output_ftmap = 6312962*4;
   port10.param = { __xlx_apatb_param_input_ftmap, __xlx_apatb_param_conv1_weights, __xlx_apatb_param_conv1_biases, __xlx_apatb_param_conv1_output_ftmap, __xlx_apatb_param_conv2_weights, __xlx_apatb_param_conv2_biases, __xlx_apatb_param_conv2_output_ftmap, __xlx_apatb_param_conv3_weights, __xlx_apatb_param_conv3_biases, __xlx_apatb_param_output_ftmap };
-  port10.nbytes = { 260100, 20736, 256, 16646400, 8192, 128, 8323200, 3200, 4, 260100 };
-  port10.offset = { 0, 65025, 70209, 70273, 4231873, 4233921, 4233953, 6314753, 6315553, 6315554 };
+  port10.nbytes = { 260100, 10368, 256, 16646400, 8192, 128, 8323200, 3200, 4, 260100 };
+  port10.offset = { 0, 65025, 67617, 67681, 4229281, 4231329, 4231361, 6312161, 6312961, 6312962 };
   port10.hasWrite = { true, true, true, true, true, true, true, true, true, true };
 
   try {

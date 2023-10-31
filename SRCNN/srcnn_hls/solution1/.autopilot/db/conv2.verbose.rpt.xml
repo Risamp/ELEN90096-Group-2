@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2'" level="0">
-<item name = "Date">Mon Oct 30 15:47:01 2023
+<item name = "Date">Wed Nov  1 01:02:27 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -125,18 +125,18 @@
 <column name="add_ln65_2_fu_1009_p2">+, 0, 0, 16, 15, 15</column>
 <column name="add_ln65_3_fu_1015_p2">+, 0, 0, 16, 15, 15</column>
 <column name="add_ln65_fu_982_p2">+, 0, 0, 17, 12, 12</column>
-<column name="empty_101_fu_1317_p2">+, 0, 0, 21, 14, 1</column>
-<column name="empty_85_fu_577_p2">+, 0, 0, 22, 15, 1</column>
-<column name="empty_86_fu_691_p2">+, 0, 0, 15, 8, 8</column>
-<column name="empty_88_fu_758_p2">+, 0, 0, 64, 64, 64</column>
-<column name="empty_90_fu_830_p2">+, 0, 0, 18, 11, 11</column>
-<column name="empty_91_fu_897_p2">+, 0, 0, 18, 11, 11</column>
-<column name="empty_93_fu_918_p2">+, 0, 0, 21, 14, 14</column>
-<column name="empty_94_fu_940_p2">+, 0, 0, 21, 14, 14</column>
-<column name="empty_99_fu_1141_p2">+, 0, 0, 15, 8, 8</column>
+<column name="empty_100_fu_940_p2">+, 0, 0, 21, 14, 14</column>
+<column name="empty_105_fu_1141_p2">+, 0, 0, 15, 8, 8</column>
+<column name="empty_107_fu_1317_p2">+, 0, 0, 21, 14, 1</column>
+<column name="empty_91_fu_577_p2">+, 0, 0, 22, 15, 1</column>
+<column name="empty_92_fu_691_p2">+, 0, 0, 15, 8, 8</column>
+<column name="empty_94_fu_758_p2">+, 0, 0, 64, 64, 64</column>
+<column name="empty_96_fu_830_p2">+, 0, 0, 18, 11, 11</column>
+<column name="empty_97_fu_897_p2">+, 0, 0, 18, 11, 11</column>
+<column name="empty_99_fu_918_p2">+, 0, 0, 21, 14, 14</column>
 <column name="tmp1_fu_753_p2">+, 0, 0, 64, 64, 64</column>
 <column name="tmp2_fu_744_p2">+, 0, 0, 32, 25, 25</column>
-<column name="empty_87_fu_720_p2">-, 0, 0, 26, 19, 19</column>
+<column name="empty_93_fu_720_p2">-, 0, 0, 26, 19, 19</column>
 <column name="sub_ln135_fu_1170_p2">-, 0, 0, 26, 19, 19</column>
 <column name="and_ln136_fu_1297_p2">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state21_io">and, 0, 0, 2, 1, 1</column>
@@ -166,8 +166,8 @@
 <column name="ap_NS_fsm">273, 64, 1, 64</column>
 <column name="bx_reg_370">9, 2, 5, 10</column>
 <column name="by_reg_359">9, 2, 5, 10</column>
-<column name="empty_100_reg_482">9, 2, 14, 28</column>
-<column name="empty_96_reg_426">9, 2, 32, 64</column>
+<column name="empty_102_reg_426">9, 2, 32, 64</column>
+<column name="empty_106_reg_482">9, 2, 14, 28</column>
 <column name="empty_reg_326">9, 2, 15, 30</column>
 <column name="gmem_blk_n_AR">9, 2, 1, 2</column>
 <column name="gmem_blk_n_AW">9, 2, 1, 2</column>
@@ -221,11 +221,11 @@
 <column name="ap_CS_fsm">63, 0, 63, 0</column>
 <column name="bx_reg_370">5, 0, 5, 0</column>
 <column name="by_reg_359">5, 0, 5, 0</column>
-<column name="empty_100_reg_482">14, 0, 14, 0</column>
-<column name="empty_90_reg_1456">11, 0, 11, 0</column>
-<column name="empty_93_reg_1480">14, 0, 14, 0</column>
-<column name="empty_96_reg_426">32, 0, 32, 0</column>
-<column name="empty_98_reg_1574">32, 0, 32, 0</column>
+<column name="empty_102_reg_426">32, 0, 32, 0</column>
+<column name="empty_104_reg_1574">32, 0, 32, 0</column>
+<column name="empty_106_reg_482">14, 0, 14, 0</column>
+<column name="empty_96_reg_1456">11, 0, 11, 0</column>
+<column name="empty_99_reg_1480">14, 0, 14, 0</column>
 <column name="empty_reg_326">15, 0, 15, 0</column>
 <column name="gmem_addr_7_read_reg_1530">32, 0, 32, 0</column>
 <column name="gmem_addr_7_reg_1469">64, 0, 64, 0</column>

@@ -9,7 +9,7 @@
       "T": 1
     },
     "name": "srcnn",
-    "total_instructions": 658
+    "total_instructions": 727
   },
   "1": {
     "basicblocks": 45,
@@ -28,21 +28,21 @@
     "total_instructions": 179
   },
   "2": {
-    "basicblocks": 45,
+    "basicblocks": 54,
     "calls": "",
     "file": "conv1.cpp",
     "fileloc": 10,
-    "instructions": 192,
+    "instructions": 261,
     "loads": {
       "G": 3,
-      "L": 1
+      "L": 2
     },
     "name": "conv1",
     "stores": {
       "G": 4,
       "L": 2
     },
-    "total_instructions": 192
+    "total_instructions": 261
   },
   "3": {
     "basicblocks": 51,

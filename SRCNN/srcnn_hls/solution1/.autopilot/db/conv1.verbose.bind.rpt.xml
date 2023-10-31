@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1'" level="0">
-<item name = "Date">Mon Oct 30 15:46:53 2023
+<item name = "Date">Wed Nov  1 01:02:21 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">3215508556, 3215508556, 32.155 sec, 32.155 sec, 3215508556, 3215508556, no</column>
+<column name="">6557273356, 6557273356, 65.573 sec, 65.573 sec, 6557273356, 6557273356, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,16 +35,16 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILE_J">3215508555, 3215508555, 214367237, -, -, 15, no</column>
-<column name=" + TILE_I">214367235, 214367235, 14291149, -, -, 15, no</column>
+<column name="- TILE_J">6557273355, 6557273355, 437151557, -, -, 15, no</column>
+<column name=" + TILE_I">437151555, 437151555, 29143437, -, -, 15, no</column>
 <column name="  ++ TILE_I.1">625, 625, 1, -, -, 625, no</column>
 <column name="  ++ IN_BUFFER_BY">6925, 6925, 277, -, -, 25, no</column>
 <column name="   +++ IN_BUFFER_BX">275, 275, 11, -, -, 25, no</column>
-<column name="  ++ NOUT">14003776, 14003776, 218809, -, -, 64, no</column>
-<column name="   +++ TY">218807, 218807, 12871, -, -, 17, no</column>
-<column name="    ++++ TX">12869, 12869, 757, -, -, 17, no</column>
-<column name="     +++++ KY">747, 747, 83, -, -, 9, no</column>
-<column name="      ++++++ KX">81, 81, 9, -, -, 9, no</column>
+<column name="  ++ NOUT">28856064, 28856064, 450876, -, -, 64, no</column>
+<column name="   +++ TY">450874, 450874, 26522, -, -, 17, no</column>
+<column name="    ++++ TX">26520, 26520, 1560, -, -, 17, no</column>
+<column name="     +++++ KY">1557, 1557, 173, -, -, 9, no</column>
+<column name="      ++++++ KX">171, 171, 19, -, -, 9, no</column>
 <column name="  ++ OUT_BUFFER_NOUT">261313, 261313, 4083, -, -, 64, no</column>
 <column name="   +++ OUT_BUFFER_TY">4080, 4080, 240, -, -, 17, no</column>
 <column name="    ++++ OUT_BUFFER_TX">238, 238, 14, -, -, 17, no</column>

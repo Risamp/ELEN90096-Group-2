@@ -5,27 +5,226 @@ INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../../test/tb_set14.cpp in debug mode
    Compiling ../../../../test/tb_srcnn.cpp in debug mode
    Compiling ../../../../test/util.cpp in debug mode
-   Compiling ../../../../src/conv1.cpp in debug mode
-   Compiling ../../../../src/conv2.cpp in debug mode
-   Compiling ../../../../src/conv3.cpp in debug mode
-   Compiling ../../../../src/srcnn.cpp in debug mode
-   Generating csim.exe
-***** CONV1 Golden Reference *****
-  - Butterfly MSE: 3.40524e-015
-
-Blah Blah***** SRCNN Golden Reference *****
-  - Butterfly MSE: 2.17875e-013
-
-***** SRCNN - Set14 Test *****
-Image Name     PSNR GT vs HR (dB)  PSNR GT vs HR MATLAB (dB)  PSNR GT vs LR (dB)  MSE GT vs HR   MSE GT vs HR MATLAB        
-Blah Blahbaboon         27.9104             24.9898                    27.3618             0.00161402     0.00161402                 
-Blah Blahbarbara        24.9868             26.2451                    24.8997             0.00316839     0.00316839                 
-Blah Blahbridge         24.0522             26.8397                    25.2317             0.00237435     0.00237435                 
-Blah Blahcoastguard     26.8309             33.4187                    26.3                0.00206895     0.00206895                 
-Blah Blahface           33.3716             27.3319                    32.6794             0.000454178    0.000454177                
-Blah Blahflowers        27.322              35.727                     25.6995             0.00184747     0.00184746                 
-Blah Blahforeman        35.7021             30.8413                    33.2014             0.000266235    0.000266235                
-Blah Blahlenna          30.8275             27.1209                    29.1689             0.000822305    0.000822304                
-Blah Blahman            27.1089             27.9822                    26.0613             0.00193997     0.00193996                 
-ERR: [SIM 100] CSim failed with errors.
+csim.mk:102: recipe for target 'obj/util.o' failed
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/tb_conv1.cpp:4:
+C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/tb_conv1.cpp:4:
+C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/tb_set14.cpp:6:
+C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/tb_set14.cpp:6:
+C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/tb_srcnn.cpp:4:
+C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/tb_srcnn.cpp:4:
+C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/util.h:6,
+                 from ../../../../test/util.cpp:4:
+C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/util.h:6,
+                 from ../../../../test/util.cpp:4:
+C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+../../../../test/util.cpp: In function 'double calculate_mse(conv1_b*, conv1_b*, int)':
+../../../../test/util.cpp:112:33: error: ambiguous overload for 'operator-' (operand types are 'conv1_b {aka ap_fixed<30, 2>}' and 'float')
+         mse += std::pow(img1[i] - (float)img2[i], 2);
+                         ~~~~~~~~^~~~~~~~~~~~~~~~
+../../../../test/util.cpp:112:33: note: candidate: operator-(long double, float) <built-in>
+../../../../test/util.cpp:112:33: note: candidate: operator-(double, float) <built-in>
+../../../../test/util.cpp:112:33: note: candidate: operator-(float, float) <built-in>
+../../../../test/util.cpp:112:33: note: candidate: operator-(int, float) <built-in>
+../../../../test/util.cpp:112:33: note: candidate: operator-(unsigned int, float) <built-in>
+../../../../test/util.cpp:112:33: note: candidate: operator-(long int, float) <built-in>
+../../../../test/util.cpp:112:33: note: candidate: operator-(long unsigned int, float) <built-in>
+../../../../test/util.cpp:112:33: note: candidate: operator-(ap_ulong {aka long long unsigned int}, float) <built-in>
+../../../../test/util.cpp:112:33: note: candidate: operator-(ap_slong {aka long long int}, float) <built-in>
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:10:0,
+                 from ../../../../src/srcnn.h:4,
+                 from ../../../../test/util.h:6,
+                 from ../../../../test/util.cpp:4:
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2293:3: note: candidate: typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<_AP_SIZE_ap_slong, _AP_SIZE_ap_slong, false>::minus operator-(const ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>&, ap_ulong) [with int _AP_W = 30; int _AP_I = 2; bool _AP_S = true; ap_q_mode _AP_Q = (ap_q_mode)5u; ap_o_mode _AP_O = (ap_o_mode)3u; int _AP_N = 0; typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<_AP_SIZE_ap_slong, _AP_SIZE_ap_slong, false>::minus = ap_fixed<94, 66, (ap_q_mode)5u, (ap_o_mode)3u, 0>; ap_ulong = long long unsigned int]
+   operator BIN_OP(                                                          \
+   ^
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2346:3: note: in expansion of macro 'AF_BIN_OP_WITH_INT'
+   AF_BIN_OP_WITH_INT(-, C_TYPE, (BITS), (SIGN), minus)    \
+   ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2383:1: note: in expansion of macro 'ALL_AF_OP_WITH_INT'
+ ALL_AF_OP_WITH_INT(ap_ulong, _AP_SIZE_ap_slong, false)
+ ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2293:3: note: candidate: typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<_AP_SIZE_ap_slong, _AP_SIZE_ap_slong, true>::minus operator-(const ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>&, ap_slong) [with int _AP_W = 30; int _AP_I = 2; bool _AP_S = true; ap_q_mode _AP_Q = (ap_q_mode)5u; ap_o_mode _AP_O = (ap_o_mode)3u; int _AP_N = 0; typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<_AP_SIZE_ap_slong, _AP_SIZE_ap_slong, true>::minus = ap_fixed<93, 65, (ap_q_mode)5u, (ap_o_mode)3u, 0>; ap_slong = long long int]
+   operator BIN_OP(                                                          \
+   ^
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2346:3: note: in expansion of macro 'AF_BIN_OP_WITH_INT'
+   AF_BIN_OP_WITH_INT(-, C_TYPE, (BITS), (SIGN), minus)    \
+   ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2382:1: note: in expansion of macro 'ALL_AF_OP_WITH_INT'
+ ALL_AF_OP_WITH_INT(ap_slong, _AP_SIZE_ap_slong, true)
+ ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2293:3: note: candidate: typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<_AP_SIZE_long, _AP_SIZE_long, false>::minus operator-(const ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>&, long unsigned int) [with int _AP_W = 30; int _AP_I = 2; bool _AP_S = true; ap_q_mode _AP_Q = (ap_q_mode)5u; ap_o_mode _AP_O = (ap_o_mode)3u; int _AP_N = 0; typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<_AP_SIZE_long, _AP_SIZE_long, false>::minus = ap_fixed<62, 34, (ap_q_mode)5u, (ap_o_mode)3u, 0>]
+   operator BIN_OP(                                                          \
+   ^
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2346:3: note: in expansion of macro 'AF_BIN_OP_WITH_INT'
+   AF_BIN_OP_WITH_INT(-, C_TYPE, (BITS), (SIGN), minus)    \
+   ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2381:1: note: in expansion of macro 'ALL_AF_OP_WITH_INT'
+ ALL_AF_OP_WITH_INT(unsigned long, _AP_SIZE_long, false)
+ ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2293:3: note: candidate: typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<_AP_SIZE_long, _AP_SIZE_long, true>::minus operator-(const ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>&, long int) [with int _AP_W = 30; int _AP_I = 2; bool _AP_S = true; ap_q_mode _AP_Q = (ap_q_mode)5u; ap_o_mode _AP_O = (ap_o_mode)3u; int _AP_N = 0; typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<_AP_SIZE_long, _AP_SIZE_long, true>::minus = ap_fixed<61, 33, (ap_q_mode)5u, (ap_o_mode)3u, 0>]
+   operator BIN_OP(                                                          \
+   ^
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2346:3: note: in expansion of macro 'AF_BIN_OP_WITH_INT'
+   AF_BIN_OP_WITH_INT(-, C_TYPE, (BITS), (SIGN), minus)    \
+   ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2380:1: note: in expansion of macro 'ALL_AF_OP_WITH_INT'
+ ALL_AF_OP_WITH_INT(long, _AP_SIZE_long, true)
+ ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2293:3: note: candidate: typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<_AP_SIZE_int, _AP_SIZE_int, false>::minus operator-(const ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>&, unsigned int) [with int _AP_W = 30; int _AP_I = 2; bool _AP_S = true; ap_q_mode _AP_Q = (ap_q_mode)5u; ap_o_mode _AP_O = (ap_o_mode)3u; int _AP_N = 0; typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<_AP_SIZE_int, _AP_SIZE_int, false>::minus = ap_fixed<62, 34, (ap_q_mode)5u, (ap_o_mode)3u, 0>]
+   operator BIN_OP(                                                          \
+   ^
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2346:3: note: in expansion of macro 'AF_BIN_OP_WITH_INT'
+   AF_BIN_OP_WITH_INT(-, C_TYPE, (BITS), (SIGN), minus)    \
+   ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2379:1: note: in expansion of macro 'ALL_AF_OP_WITH_INT'
+ ALL_AF_OP_WITH_INT(unsigned int, _AP_SIZE_int, false)
+ ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2293:3: note: candidate: typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<_AP_SIZE_int, _AP_SIZE_int, true>::minus operator-(const ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>&, int) [with int _AP_W = 30; int _AP_I = 2; bool _AP_S = true; ap_q_mode _AP_Q = (ap_q_mode)5u; ap_o_mode _AP_O = (ap_o_mode)3u; int _AP_N = 0; typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<_AP_SIZE_int, _AP_SIZE_int, true>::minus = ap_fixed<61, 33, (ap_q_mode)5u, (ap_o_mode)3u, 0>]
+   operator BIN_OP(                                                          \
+   ^
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2346:3: note: in expansion of macro 'AF_BIN_OP_WITH_INT'
+   AF_BIN_OP_WITH_INT(-, C_TYPE, (BITS), (SIGN), minus)    \
+   ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2378:1: note: in expansion of macro 'ALL_AF_OP_WITH_INT'
+ ALL_AF_OP_WITH_INT(int, _AP_SIZE_int, true)
+ ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2293:3: note: candidate: typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<_AP_SIZE_short, _AP_SIZE_short, false>::minus operator-(const ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>&, short unsigned int) [with int _AP_W = 30; int _AP_I = 2; bool _AP_S = true; ap_q_mode _AP_Q = (ap_q_mode)5u; ap_o_mode _AP_O = (ap_o_mode)3u; int _AP_N = 0; typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<_AP_SIZE_short, _AP_SIZE_short, false>::minus = ap_fixed<46, 18, (ap_q_mode)5u, (ap_o_mode)3u, 0>]
+   operator BIN_OP(                                                          \
+   ^
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2346:3: note: in expansion of macro 'AF_BIN_OP_WITH_INT'
+   AF_BIN_OP_WITH_INT(-, C_TYPE, (BITS), (SIGN), minus)    \
+   ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2377:1: note: in expansion of macro 'ALL_AF_OP_WITH_INT'
+ ALL_AF_OP_WITH_INT(unsigned short, _AP_SIZE_short, false)
+ ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2293:3: note: candidate: typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<_AP_SIZE_short, _AP_SIZE_short, true>::minus operator-(const ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>&, short int) [with int _AP_W = 30; int _AP_I = 2; bool _AP_S = true; ap_q_mode _AP_Q = (ap_q_mode)5u; ap_o_mode _AP_O = (ap_o_mode)3u; int _AP_N = 0; typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<_AP_SIZE_short, _AP_SIZE_short, true>::minus = ap_fixed<45, 17, (ap_q_mode)5u, (ap_o_mode)3u, 0>]
+   operator BIN_OP(                                                          \
+   ^
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2346:3: note: in expansion of macro 'AF_BIN_OP_WITH_INT'
+   AF_BIN_OP_WITH_INT(-, C_TYPE, (BITS), (SIGN), minus)    \
+   ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2376:1: note: in expansion of macro 'ALL_AF_OP_WITH_INT'
+ ALL_AF_OP_WITH_INT(short, _AP_SIZE_short, true)
+ ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2293:3: note: candidate: typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<8, 8, false>::minus operator-(const ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>&, unsigned char) [with int _AP_W = 30; int _AP_I = 2; bool _AP_S = true; ap_q_mode _AP_Q = (ap_q_mode)5u; ap_o_mode _AP_O = (ap_o_mode)3u; int _AP_N = 0; typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<8, 8, false>::minus = ap_fixed<38, 10, (ap_q_mode)5u, (ap_o_mode)3u, 0>]
+   operator BIN_OP(                                                          \
+   ^
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2346:3: note: in expansion of macro 'AF_BIN_OP_WITH_INT'
+   AF_BIN_OP_WITH_INT(-, C_TYPE, (BITS), (SIGN), minus)    \
+   ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2375:1: note: in expansion of macro 'ALL_AF_OP_WITH_INT'
+ ALL_AF_OP_WITH_INT(unsigned char, 8, false)
+ ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2293:3: note: candidate: typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<8, 8, true>::minus operator-(const ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>&, signed char) [with int _AP_W = 30; int _AP_I = 2; bool _AP_S = true; ap_q_mode _AP_Q = (ap_q_mode)5u; ap_o_mode _AP_O = (ap_o_mode)3u; int _AP_N = 0; typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<8, 8, true>::minus = ap_fixed<37, 9, (ap_q_mode)5u, (ap_o_mode)3u, 0>]
+   operator BIN_OP(                                                          \
+   ^
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2346:3: note: in expansion of macro 'AF_BIN_OP_WITH_INT'
+   AF_BIN_OP_WITH_INT(-, C_TYPE, (BITS), (SIGN), minus)    \
+   ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2374:1: note: in expansion of macro 'ALL_AF_OP_WITH_INT'
+ ALL_AF_OP_WITH_INT(signed char, 8, true)
+ ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2293:3: note: candidate: typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<8, 8, CHAR_IS_SIGNED>::minus operator-(const ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>&, char) [with int _AP_W = 30; int _AP_I = 2; bool _AP_S = true; ap_q_mode _AP_Q = (ap_q_mode)5u; ap_o_mode _AP_O = (ap_o_mode)3u; int _AP_N = 0; typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<8, 8, CHAR_IS_SIGNED>::minus = ap_fixed<37, 9, (ap_q_mode)5u, (ap_o_mode)3u, 0>]
+   operator BIN_OP(                                                          \
+   ^
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2346:3: note: in expansion of macro 'AF_BIN_OP_WITH_INT'
+   AF_BIN_OP_WITH_INT(-, C_TYPE, (BITS), (SIGN), minus)    \
+   ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2373:1: note: in expansion of macro 'ALL_AF_OP_WITH_INT'
+ ALL_AF_OP_WITH_INT(char, 8, CHAR_IS_SIGNED)
+ ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2293:3: note: candidate: typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<1, 1, false>::minus operator-(const ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>&, bool) [with int _AP_W = 30; int _AP_I = 2; bool _AP_S = true; ap_q_mode _AP_Q = (ap_q_mode)5u; ap_o_mode _AP_O = (ap_o_mode)3u; int _AP_N = 0; typename ap_fixed_base<_AP_W, _AP_I, _AP_S>::RType<1, 1, false>::minus = ap_fixed<31, 3, (ap_q_mode)5u, (ap_o_mode)3u, 0>]
+   operator BIN_OP(                                                          \
+   ^
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2346:3: note: in expansion of macro 'AF_BIN_OP_WITH_INT'
+   AF_BIN_OP_WITH_INT(-, C_TYPE, (BITS), (SIGN), minus)    \
+   ^~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_base.h:2372:1: note: in expansion of macro 'ALL_AF_OP_WITH_INT'
+ ALL_AF_OP_WITH_INT(bool, 1, false)
+ ^~~~~~~~~~~~~~~~~~
+make: *** [obj/util.o] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
 INFO: [SIM 3] *************** CSIM finish ***************
