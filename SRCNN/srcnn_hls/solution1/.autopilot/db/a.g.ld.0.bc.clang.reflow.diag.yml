@@ -76,7 +76,7 @@ Function:        _Z19load_buffer_tile_c1PA25_A25_fPA255_A255_fii
 Args:            
   - String:          'Inlining function '''
   - Callee:          'clamp(int, int, int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 50, Column: 0 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 52, Column: 0 }
   - String:          ''' into '''
   - Caller:          'load_buffer_tile_c1(float (*) [25][25], float (*) [255][255], int, int)'
     DebugLoc:        { File: src/conv1.cpp, Line: 87, Column: 0 }
@@ -118,7 +118,7 @@ Function:        _Z19load_buffer_tile_c2PA17_A17_fPA255_A255_fPA8_A1_A1_fPA64_S6
 Args:            
   - String:          'Inlining function '''
   - Callee:          'clamp(int, int, int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 50, Column: 0 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 52, Column: 0 }
   - String:          ''' into '''
   - Caller:          'load_buffer_tile_c2(float (*) [17][17], float (*) [255][255], float (*) [8][1][1], float (*) [64][1][1], int, int, int)'
     DebugLoc:        { File: src/conv2.cpp, Line: 99, Column: 0 }
@@ -160,7 +160,7 @@ Function:        _Z19load_buffer_tile_c3PA21_A21_fPA255_A255_fPA8_A5_A5_fPA32_S6
 Args:            
   - String:          'Inlining function '''
   - Callee:          'clamp(int, int, int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 50, Column: 0 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 52, Column: 0 }
   - String:          ''' into '''
   - Caller:          'load_buffer_tile_c3(float (*) [21][21], float (*) [255][255], float (*) [8][5][5], float (*) [32][5][5], int, int, int)'
     DebugLoc:        { File: src/conv3.cpp, Line: 101, Column: 0 }
@@ -204,7 +204,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/srcnn.cpp, Line: 34, Column: 15 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 36, Column: 15 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfS1_PA64_A1_A1_fS6_S1_PA32_A5_A5_fS6_S1_
 Args:            
   - String:          'Sequential '
@@ -220,7 +220,7 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:34:15'
+  - LoopLoc:         'src/srcnn.cpp:36:15'
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
     DebugLoc:        { File: src/srcnn.cpp, Line: 16, Column: 0 }
@@ -233,7 +233,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/srcnn.cpp, Line: 35, Column: 15 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 37, Column: 15 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfS1_PA64_A1_A1_fS6_S1_PA32_A5_A5_fS6_S1_
 Args:            
   - String:          'Sequential '
@@ -249,7 +249,7 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:35:15'
+  - LoopLoc:         'src/srcnn.cpp:37:15'
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
     DebugLoc:        { File: src/srcnn.cpp, Line: 16, Column: 0 }
@@ -262,7 +262,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/srcnn.cpp, Line: 36, Column: 15 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 38, Column: 15 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfS1_PA64_A1_A1_fS6_S1_PA32_A5_A5_fS6_S1_
 Args:            
   - String:          'Sequential '
@@ -278,7 +278,7 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:36:15'
+  - LoopLoc:         'src/srcnn.cpp:38:15'
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
     DebugLoc:        { File: src/srcnn.cpp, Line: 16, Column: 0 }
@@ -347,35 +347,6 @@ Args:
     DebugLoc:        { File: src/conv1.cpp, Line: 123, Column: 44 }
   - OrigDirection:   write
   - OrigID:          for.body8.i.store.14
-...
---- !Passed
-Pass:            reflow-burst-inference
-Name:            BurstInferred
-DebugLoc:        { File: src/conv1.cpp, Line: 110, Column: 19 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Sequential '
-  - Direction:       read
-  - String:          ' of length '
-  - Length:          '64'
-  - String:          ' has been inferred'
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        conv1_biases6seq
-  - ArrayName:       conv1_biases
-  - String:          ' '
-  - BundleName:      gmem
-  - String:          ' '
-  - LoopName:        OUT_BUFFER_NOUT
-  - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:110:19'
-  - String:          ' '
-  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
-    DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-  - String:          ' '
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          OUT_BUFFER_TY.i.load.6
 ...
 --- !Missed
 Pass:            reflow-burst-inference
@@ -449,30 +420,6 @@ Args:
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: src/conv1.cpp, Line: 110, Column: 19 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          Could not analyze pattern
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      call
-    DebugLoc:        { File: src/conv1.cpp, Line: 110, Column: 19 }
-  - OrigDirection:   read
-  - OrigID:          conv1_biases6seq
-  - ArrayName:       conv1_biases
-  - String:          ' '
-  - BundleName:      gmem
-  - String:          ' '
-  - LoopName:        TILE_I
-  - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:33:10'
-  - String:          ' '
-  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
-    DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-  - String:          ' '
-...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
@@ -532,35 +479,6 @@ Args:
     DebugLoc:        { File: src/conv2.cpp, Line: 122, Column: 42 }
   - OrigDirection:   read
   - OrigID:          VITIS_LOOP_120_6.i.load.11
-...
---- !Passed
-Pass:            reflow-burst-inference
-Name:            BurstInferred
-DebugLoc:        { File: src/conv2.cpp, Line: 136, Column: 20 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
-Args:            
-  - String:          'Sequential '
-  - Direction:       read
-  - String:          ' of length '
-  - Length:          '32'
-  - String:          ' has been inferred'
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        conv2_biases6seq
-  - ArrayName:       conv2_biases
-  - String:          ' '
-  - BundleName:      gmem
-  - String:          ' '
-  - LoopName:        VITIS_LOOP_136_1
-  - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:136:20'
-  - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
-    DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
-  - String:          ' '
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          VITIS_LOOP_137_2.i.load.6
 ...
 --- !Missed
 Pass:            reflow-burst-inference
@@ -676,30 +594,6 @@ Args:
   - LoopName:        VITIS_LOOP_138_3
   - String:          ' '
   - LoopLoc:         'src/conv2.cpp:138:22'
-  - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
-    DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: src/conv2.cpp, Line: 136, Column: 20 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
-Args:            
-  - String:          Could not analyze pattern
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      call
-    DebugLoc:        { File: src/conv2.cpp, Line: 136, Column: 20 }
-  - OrigDirection:   read
-  - OrigID:          conv2_biases6seq
-  - ArrayName:       conv2_biases
-  - String:          ' '
-  - BundleName:      gmem
-  - String:          ' '
-  - LoopName:        TI
-  - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:31:6'
   - String:          ' '
   - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
@@ -1016,6 +910,60 @@ Args:
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: src/srcnn.cpp, Line: 38, Column: 15 }
+Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfS1_PA64_A1_A1_fS6_S1_PA32_A5_A5_fS6_S1_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/srcnn.cpp, Line: 38, Column: 15 }
+  - OrigDirection:   write
+  - OrigID:          output_ftmap3seq
+  - ArrayName:       output_ftmap
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'src/srcnn.cpp:38:15'
+  - String:          ' '
+  - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/srcnn.cpp, Line: 16, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: src/srcnn.cpp, Line: 37, Column: 15 }
+Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfS1_PA64_A1_A1_fS6_S1_PA32_A5_A5_fS6_S1_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/srcnn.cpp, Line: 37, Column: 15 }
+  - OrigDirection:   write
+  - OrigID:          conv2_output_ftmap2seq
+  - ArrayName:       conv2_output_ftmap
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'src/srcnn.cpp:37:15'
+  - String:          ' '
+  - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/srcnn.cpp, Line: 16, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
 DebugLoc:        { File: src/srcnn.cpp, Line: 36, Column: 15 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfS1_PA64_A1_A1_fS6_S1_PA32_A5_A5_fS6_S1_
 Args:            
@@ -1027,60 +975,6 @@ Args:
   - OrigAccess:      call
     DebugLoc:        { File: src/srcnn.cpp, Line: 36, Column: 15 }
   - OrigDirection:   write
-  - OrigID:          output_ftmap3seq
-  - ArrayName:       output_ftmap
-  - String:          ' '
-  - BundleName:      gmem
-  - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:36:15'
-  - String:          ' '
-  - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 16, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-widen
-Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: src/srcnn.cpp, Line: 35, Column: 15 }
-Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfS1_PA64_A1_A1_fS6_S1_PA32_A5_A5_fS6_S1_
-Args:            
-  - String:          'Could not widen since type '
-  - Type:            float
-  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
-  - Threshold:       '0'
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      call
-    DebugLoc:        { File: src/srcnn.cpp, Line: 35, Column: 15 }
-  - OrigDirection:   write
-  - OrigID:          conv2_output_ftmap2seq
-  - ArrayName:       conv2_output_ftmap
-  - String:          ' '
-  - BundleName:      gmem
-  - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:35:15'
-  - String:          ' '
-  - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 16, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-widen
-Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: src/srcnn.cpp, Line: 34, Column: 15 }
-Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfS1_PA64_A1_A1_fS6_S1_PA32_A5_A5_fS6_S1_
-Args:            
-  - String:          'Could not widen since type '
-  - Type:            float
-  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
-  - Threshold:       '0'
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      call
-    DebugLoc:        { File: src/srcnn.cpp, Line: 34, Column: 15 }
-  - OrigDirection:   write
   - OrigID:          conv1_output_ftmap1seq
   - ArrayName:       conv1_output_ftmap
   - String:          ' '
@@ -1088,7 +982,7 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:34:15'
+  - LoopLoc:         'src/srcnn.cpp:36:15'
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
     DebugLoc:        { File: src/srcnn.cpp, Line: 16, Column: 0 }
@@ -1124,33 +1018,6 @@ Args:
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: src/conv1.cpp, Line: 110, Column: 19 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Could not widen since type '
-  - Type:            float
-  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
-  - Threshold:       '0'
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      call
-    DebugLoc:        { File: src/conv1.cpp, Line: 110, Column: 19 }
-  - OrigDirection:   read
-  - OrigID:          conv1_biases6seq
-  - ArrayName:       conv1_biases
-  - String:          ' '
-  - BundleName:      gmem
-  - String:          ' '
-  - LoopName:        OUT_BUFFER_NOUT
-  - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:110:19'
-  - String:          ' '
-  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
-    DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-widen
-Name:            GreaterOrEqualThreshold
 DebugLoc:        { File: src/conv1.cpp, Line: 53, Column: 9 }
 Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
 Args:            
@@ -1173,33 +1040,6 @@ Args:
   - String:          ' '
   - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-widen
-Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: src/conv2.cpp, Line: 136, Column: 20 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
-Args:            
-  - String:          'Could not widen since type '
-  - Type:            float
-  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
-  - Threshold:       '0'
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      call
-    DebugLoc:        { File: src/conv2.cpp, Line: 136, Column: 20 }
-  - OrigDirection:   read
-  - OrigID:          conv2_biases6seq
-  - ArrayName:       conv2_biases
-  - String:          ' '
-  - BundleName:      gmem
-  - String:          ' '
-  - LoopName:        VITIS_LOOP_136_1
-  - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:136:20'
-  - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
-    DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
@@ -1532,13 +1372,13 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/conv1.cpp, Line: 110, Column: 19 }
+DebugLoc:        { File: src/conv1.cpp, Line: 112, Column: 19 }
 Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_.1
 Args:            
   - String:          'Multiple burst '
-  - Direction:       reads
+  - Direction:       writes
   - String:          ' of length '
-  - Length:          '64'
+  - Length:          '17'
   - String:          ' and bit width '
   - Width:           '32'
   - String:          ' has been inferred.'
@@ -1549,56 +1389,6 @@ Args:
   - String:          ' '
   - BundleName:      gmem
   - String:          ' '
-  - LoopName:        OUT_BUFFER_NOUT
-  - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:110:19'
-  - String:          ' '
-  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255]) (.1)'
-    DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-burst-summary
-Name:            BurstInferredSummary
-DebugLoc:        { File: src/conv1.cpp, Line: 110, Column: 19 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_.1
-Args:            
-  - String:          'Multiple burst '
-  - Direction:       reads
-  - String:          ' of length '
-  - Length:          '64'
-  - String:          ' and bit width '
-  - Width:           '32'
-  - String:          ' in loop '''
-  - LoopName:        OUT_BUFFER_NOUT
-  - String:          '''('
-  - LoopLoc:         'src/conv1.cpp:110:19'
-  - String:          ')'
-  - String:          ' has been inferred on bundle '''
-  - BundleName:      gmem
-  - String:          '''.'
-  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
-...
---- !Passed
-Pass:            reflow-burst-summary
-Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/conv1.cpp, Line: 112, Column: 19 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_.1
-Args:            
-  - String:          'Multiple burst '
-  - Direction:       writes
-  - String:          ' of length '
-  - Length:          '17'
-  - String:          ' and bit width '
-  - Width:           '32'
-  - String:          ' has been inferred.'
-  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        seq2
-  - ArrayName:       ''
-  - String:          ' '
-  - BundleName:      gmem
-  - String:          ' '
   - LoopName:        OUT_BUFFER_TX
   - String:          ' '
   - LoopLoc:         'src/conv1.cpp:112:19'
@@ -1628,28 +1418,6 @@ Args:
   - BundleName:      gmem
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            BurstConflict
-DebugLoc:        { File: src/conv2.cpp, Line: 136, Column: 20 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_.1
-Args:            
-  - String:          'Could not burst due to multiple potential '
-  - Direction:       reads
-  - String:          ' to the same bundle in the same region.'
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      call
-    DebugLoc:        { File: src/conv2.cpp, Line: 136, Column: 20 }
-  - OrigDirection:   read
-  - OrigID:          seq2
-  - ArrayName:       ''
-  - String:          ' '
-  - BundleName:      gmem
-  - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255]) (.1)'
-    DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
-  - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
@@ -1908,7 +1676,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/srcnn.cpp, Line: 34, Column: 15 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 36, Column: 15 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfS1_PA64_A1_A1_fS6_S1_PA32_A5_A5_fS6_S1_
 Args:            
   - String:          'Multiple burst '
@@ -1927,7 +1695,7 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:34:15'
+  - LoopLoc:         'src/srcnn.cpp:36:15'
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
     DebugLoc:        { File: src/srcnn.cpp, Line: 16, Column: 0 }
@@ -1936,7 +1704,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/srcnn.cpp, Line: 34, Column: 15 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 36, Column: 15 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfS1_PA64_A1_A1_fS6_S1_PA32_A5_A5_fS6_S1_
 Args:            
   - String:          'Multiple burst '
@@ -1948,7 +1716,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        anonymous
   - String:          '''('
-  - LoopLoc:         'src/srcnn.cpp:34:15'
+  - LoopLoc:         'src/srcnn.cpp:36:15'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem
@@ -1958,7 +1726,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/srcnn.cpp, Line: 35, Column: 15 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 37, Column: 15 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfS1_PA64_A1_A1_fS6_S1_PA32_A5_A5_fS6_S1_
 Args:            
   - String:          'Multiple burst '
@@ -1977,7 +1745,7 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:35:15'
+  - LoopLoc:         'src/srcnn.cpp:37:15'
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
     DebugLoc:        { File: src/srcnn.cpp, Line: 16, Column: 0 }
@@ -1986,7 +1754,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/srcnn.cpp, Line: 35, Column: 15 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 37, Column: 15 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfS1_PA64_A1_A1_fS6_S1_PA32_A5_A5_fS6_S1_
 Args:            
   - String:          'Multiple burst '
@@ -1998,7 +1766,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        anonymous
   - String:          '''('
-  - LoopLoc:         'src/srcnn.cpp:35:15'
+  - LoopLoc:         'src/srcnn.cpp:37:15'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem
@@ -2008,7 +1776,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/srcnn.cpp, Line: 36, Column: 15 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 38, Column: 15 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfS1_PA64_A1_A1_fS6_S1_PA32_A5_A5_fS6_S1_
 Args:            
   - String:          'Multiple burst '
@@ -2027,7 +1795,7 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:36:15'
+  - LoopLoc:         'src/srcnn.cpp:38:15'
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
     DebugLoc:        { File: src/srcnn.cpp, Line: 16, Column: 0 }
@@ -2036,7 +1804,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/srcnn.cpp, Line: 36, Column: 15 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 38, Column: 15 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfS1_PA64_A1_A1_fS6_S1_PA32_A5_A5_fS6_S1_
 Args:            
   - String:          'Multiple burst '
@@ -2048,7 +1816,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        anonymous
   - String:          '''('
-  - LoopLoc:         'src/srcnn.cpp:36:15'
+  - LoopLoc:         'src/srcnn.cpp:38:15'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem

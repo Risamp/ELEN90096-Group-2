@@ -39,13 +39,13 @@ reg weights_buffer_0_0_0_we0;
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    ap_block_state1_pp0_stage0_iter0;
-wire   [0:0] exitcond276_fu_58_p2;
+wire   [0:0] exitcond275_fu_58_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-wire   [63:0] p_cast30_fu_80_p1;
+wire   [63:0] p_cast28_fu_80_p1;
 reg   [8:0] empty_fu_32;
-wire   [8:0] empty_110_fu_64_p2;
+wire   [8:0] empty_108_fu_64_p2;
 wire    ap_loop_init;
 reg   [8:0] ap_sig_allocacmp_p_load;
 wire   [4:0] tmp_9_fu_70_p4;
@@ -100,8 +100,8 @@ end
 
 always @ (posedge ap_clk) begin
     if (((ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        if ((exitcond276_fu_58_p2 == 1'd0)) begin
-            empty_fu_32 <= empty_110_fu_64_p2;
+        if ((exitcond275_fu_58_p2 == 1'd0)) begin
+            empty_fu_32 <= empty_108_fu_64_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             empty_fu_32 <= 9'd0;
         end
@@ -117,7 +117,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_start_int == 1'b1) & (exitcond276_fu_58_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1))) begin
+    if (((ap_start_int == 1'b1) & (exitcond275_fu_58_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -165,7 +165,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_start_int == 1'b1) & (exitcond276_fu_58_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1))) begin
+    if (((ap_start_int == 1'b1) & (exitcond275_fu_58_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1))) begin
         weights_buffer_0_0_0_we0 = 1'b1;
     end else begin
         weights_buffer_0_0_0_we0 = 1'b0;
@@ -191,15 +191,15 @@ end
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign empty_110_fu_64_p2 = (ap_sig_allocacmp_p_load + 9'd1);
+assign empty_108_fu_64_p2 = (ap_sig_allocacmp_p_load + 9'd1);
 
-assign exitcond276_fu_58_p2 = ((ap_sig_allocacmp_p_load == 9'd256) ? 1'b1 : 1'b0);
+assign exitcond275_fu_58_p2 = ((ap_sig_allocacmp_p_load == 9'd256) ? 1'b1 : 1'b0);
 
-assign p_cast30_fu_80_p1 = tmp_9_fu_70_p4;
+assign p_cast28_fu_80_p1 = tmp_9_fu_70_p4;
 
 assign tmp_9_fu_70_p4 = {{ap_sig_allocacmp_p_load[7:3]}};
 
-assign weights_buffer_0_0_0_address0 = p_cast30_fu_80_p1;
+assign weights_buffer_0_0_0_address0 = p_cast28_fu_80_p1;
 
 assign weights_buffer_0_0_0_d0 = 32'd0;
 

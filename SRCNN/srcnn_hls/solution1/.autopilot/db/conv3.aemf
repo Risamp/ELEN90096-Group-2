@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698720310890">
-  <ports id="1" name="gmem" type="PortType" coreId="1852142702" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698731760500">
+  <ports id="1" name="gmem" type="PortType" coreId="1702127986" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
     <dataInputObjs>call</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
@@ -8,16 +8,16 @@
     <dataOutputObjs>call</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="input_ftmap" type="PortType" coreId="1702127986" bitwidth="64">
+  <ports id="2" name="input_ftmap" type="PortType" coreId="1852142702" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="conv3_weights" type="PortType" coreId="1702127986" bitwidth="64">
+  <ports id="3" name="conv3_weights" type="PortType" coreId="1852793695" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="conv3_biases_0_0_val" type="PortType" coreId="898723504" bitwidth="32">
+  <ports id="4" name="conv3_biases_0_0_val" type="PortType" coreId="1852142702" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="output_ftmap" type="PortType" coreId="1852142702" bitwidth="64">
+  <ports id="5" name="output_ftmap" type="PortType" coreId="539455845" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="77" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.3"/>
@@ -396,10 +396,10 @@
       <dataOutputObjs>or</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="tmp1" lineNumber="52" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="tmp1_fu_348_p3" coreId="0" contextFuncName="clamp" bitwidth="8" opcode="bitconcatenate" nodeLabel="4.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="tmp1" lineNumber="54" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="tmp1_fu_348_p3" coreId="0" contextFuncName="clamp" bitwidth="8" opcode="bitconcatenate" nodeLabel="4.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv3.cpp" linenumber="52" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
       <inlineStackInfo fileName="src/conv3.cpp" linenumber="111" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="load_buffer_tile_c3"/>
-      <inlineStackInfo fileName="src/srcnn.cpp" linenumber="52" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="clamp"/>
+      <inlineStackInfo fileName="src/srcnn.cpp" linenumber="54" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="clamp"/>
       <dataInputObjs>select</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
@@ -452,7 +452,7 @@
       <controlInputObjs>NOUT</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="src/srcnn.cpp">
-      <validLinenumbers>52</validLinenumbers>
+      <validLinenumbers>54</validLinenumbers>
     </fileValidLineNumbers>
     <fileValidLineNumbers fileName="src/conv3.cpp">
       <validLinenumbers>103</validLinenumbers>

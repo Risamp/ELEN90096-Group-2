@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2_Pipeline_NOUT_TY_TX'" level="0">
-<item name = "Date">Tue Oct 31 13:44:48 2023
+<item name = "Date">Tue Oct 31 16:55:37 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -101,9 +101,9 @@
 <column name="add_ln72_408_fu_721_p2">+, 0, 0, 17, 12, 12</column>
 <column name="add_ln72_409_fu_731_p2">+, 0, 0, 17, 12, 12</column>
 <column name="add_ln72_fu_500_p2">+, 0, 0, 17, 10, 10</column>
-<column name="empty_105_fu_520_p2">+, 0, 0, 17, 11, 11</column>
-<column name="empty_107_fu_542_p2">+, 0, 0, 16, 14, 14</column>
-<column name="empty_108_fu_582_p2">+, 0, 0, 16, 14, 14</column>
+<column name="empty_103_fu_520_p2">+, 0, 0, 17, 11, 11</column>
+<column name="empty_105_fu_542_p2">+, 0, 0, 16, 14, 14</column>
+<column name="empty_106_fu_582_p2">+, 0, 0, 16, 14, 14</column>
 <column name="empty_fu_428_p2">+, 0, 0, 17, 11, 11</column>
 <column name="and_ln55_fu_446_p2">and, 0, 0, 2, 1, 1</column>
 <column name="icmp_ln55_fu_348_p2">icmp, 0, 0, 21, 14, 14</column>
@@ -144,8 +144,8 @@
 <column name="grp_fu_312_p1">26, 5, 32, 160</column>
 <column name="grp_fu_316_p0">26, 5, 32, 160</column>
 <column name="grp_fu_316_p1">26, 5, 32, 160</column>
-<column name="indvar_flatten11_fu_98">9, 2, 10, 20</column>
-<column name="indvar_flatten32_fu_106">9, 2, 14, 28</column>
+<column name="indvar_flatten10_fu_98">9, 2, 10, 20</column>
+<column name="indvar_flatten31_fu_106">9, 2, 14, 28</column>
 <column name="input_fm_buffer_1_address0">26, 5, 12, 60</column>
 <column name="input_fm_buffer_1_address1">26, 5, 12, 60</column>
 <column name="nout_fu_102">9, 2, 6, 12</column>
@@ -187,8 +187,8 @@
 <column name="ap_loop_exit_ready_pp0_iter9_reg">1, 0, 1, 0</column>
 <column name="bx_fu_90">5, 0, 5, 0</column>
 <column name="icmp_ln55_reg_776">1, 0, 1, 0</column>
-<column name="indvar_flatten11_fu_98">10, 0, 10, 0</column>
-<column name="indvar_flatten32_fu_106">14, 0, 14, 0</column>
+<column name="indvar_flatten10_fu_98">10, 0, 10, 0</column>
+<column name="indvar_flatten31_fu_106">14, 0, 14, 0</column>
 <column name="input_fm_buffer_1_load_1_reg_917">32, 0, 32, 0</column>
 <column name="input_fm_buffer_1_load_2_reg_938">32, 0, 32, 0</column>
 <column name="input_fm_buffer_1_load_3_reg_943">32, 0, 32, 0</column>
@@ -244,15 +244,15 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
-<column name="grp_fu_500_p_din0">out, 32, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
-<column name="grp_fu_500_p_din1">out, 32, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
-<column name="grp_fu_500_p_opcode">out, 2, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
-<column name="grp_fu_500_p_dout0">in, 32, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
-<column name="grp_fu_500_p_ce">out, 1, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
-<column name="grp_fu_504_p_din0">out, 32, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
-<column name="grp_fu_504_p_din1">out, 32, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
-<column name="grp_fu_504_p_dout0">in, 32, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
-<column name="grp_fu_504_p_ce">out, 1, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
+<column name="grp_fu_476_p_din0">out, 32, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
+<column name="grp_fu_476_p_din1">out, 32, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
+<column name="grp_fu_476_p_opcode">out, 2, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
+<column name="grp_fu_476_p_dout0">in, 32, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
+<column name="grp_fu_476_p_ce">out, 1, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
+<column name="grp_fu_480_p_din0">out, 32, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
+<column name="grp_fu_480_p_din1">out, 32, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
+<column name="grp_fu_480_p_dout0">in, 32, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
+<column name="grp_fu_480_p_ce">out, 1, ap_ctrl_hs, conv2_Pipeline_NOUT_TY_TX, return value</column>
 <column name="weights_buffer_0_0_0_address0">out, 5, ap_memory, weights_buffer_0_0_0, array</column>
 <column name="weights_buffer_0_0_0_ce0">out, 1, ap_memory, weights_buffer_0_0_0, array</column>
 <column name="weights_buffer_0_0_0_q0">in, 32, ap_memory, weights_buffer_0_0_0, array</column>

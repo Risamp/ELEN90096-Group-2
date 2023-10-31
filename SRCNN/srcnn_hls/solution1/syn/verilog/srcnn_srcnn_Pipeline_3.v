@@ -59,7 +59,7 @@ module srcnn_srcnn_Pipeline_3 (
         m_axi_gmem_BRESP,
         m_axi_gmem_BID,
         m_axi_gmem_BUSER,
-        sext_ln36
+        sext_ln38
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
@@ -116,7 +116,7 @@ output   m_axi_gmem_BREADY;
 input  [1:0] m_axi_gmem_BRESP;
 input  [0:0] m_axi_gmem_BID;
 input  [0:0] m_axi_gmem_BUSER;
-input  [61:0] sext_ln36;
+input  [61:0] sext_ln38;
 
 reg ap_idle;
 reg m_axi_gmem_WVALID;
@@ -138,7 +138,7 @@ wire    ap_block_pp0_stage0;
 reg    ap_block_pp0_stage0_11001;
 wire    ap_block_pp0_stage0_01001;
 reg   [15:0] empty_fu_46;
-wire   [15:0] empty_46_fu_89_p2;
+wire   [15:0] empty_44_fu_89_p2;
 wire    ap_loop_init;
 reg   [15:0] ap_sig_allocacmp_p_load;
 reg    ap_done_reg;
@@ -206,7 +206,7 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if (((exitcond3_fu_83_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            empty_fu_46 <= empty_46_fu_89_p2;
+            empty_fu_46 <= empty_44_fu_89_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             empty_fu_46 <= 16'd0;
         end
@@ -312,7 +312,7 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign empty_46_fu_89_p2 = (ap_sig_allocacmp_p_load + 16'd1);
+assign empty_44_fu_89_p2 = (ap_sig_allocacmp_p_load + 16'd1);
 
 assign exitcond3_fu_83_p2 = ((ap_sig_allocacmp_p_load == 16'd65025) ? 1'b1 : 1'b0);
 

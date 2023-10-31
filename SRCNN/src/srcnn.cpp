@@ -21,15 +21,17 @@ void srcnn(ftmap_t input_ftmap[N0][H][W],
 	//Interface definitions
 	#pragma HLS INTERFACE m_axi port=input_ftmap offset=slave depth=512
 	#pragma HLS INTERFACE m_axi port=conv1_weights offset=slave depth=512
-	#pragma HLS INTERFACE m_axi port=conv1_biases offset=slave depth=512
 	#pragma HLS INTERFACE m_axi port=conv1_output_ftmap offset=slave depth=512
 	#pragma HLS INTERFACE m_axi port=conv2_weights offset=slave depth=512
-	#pragma HLS INTERFACE m_axi port=conv2_biases offset=slave depth=512
 	#pragma HLS INTERFACE m_axi port=conv2_output_ftmap offset=slave depth=512
 	#pragma HLS INTERFACE m_axi port=conv3_weights offset=slave depth=512
-	#pragma HLS INTERFACE m_axi port=conv3_biases offset=slave depth=512
 	#pragma HLS INTERFACE m_axi port=output_ftmap offset=slave depth=512
 	#pragma HLS INTERFACE s_axilite port=return
+
+	// keep the biases on-board - they are small
+	//#pragma HLS INTERFACE m_axi port=conv1_biases offset=slave depth=512
+	//#pragma HLS INTERFACE m_axi port=conv2_biases offset=slave depth=512
+	//#pragma HLS INTERFACE m_axi port=conv3_biases offset=slave depth=512
 
 	CLEAR_CONV1: memset(conv1_output_ftmap, 0, N1 * H * W * sizeof(ftmap_t));
 	CLEAR_CONV2: memset(conv2_output_ftmap, 0, N2 * H * W * sizeof(ftmap_t));

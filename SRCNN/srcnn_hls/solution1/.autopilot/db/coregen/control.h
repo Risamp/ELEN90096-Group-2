@@ -27,46 +27,31 @@
 // 0x20 : Data signal of conv1_weights
 //        bit 31~0 - conv1_weights[63:32] (Read/Write)
 // 0x24 : reserved
-// 0x28 : Data signal of conv1_biases
-//        bit 31~0 - conv1_biases[31:0] (Read/Write)
-// 0x2c : Data signal of conv1_biases
-//        bit 31~0 - conv1_biases[63:32] (Read/Write)
-// 0x30 : reserved
-// 0x34 : Data signal of conv1_output_ftmap
+// 0x28 : Data signal of conv1_output_ftmap
 //        bit 31~0 - conv1_output_ftmap[31:0] (Read/Write)
-// 0x38 : Data signal of conv1_output_ftmap
+// 0x2c : Data signal of conv1_output_ftmap
 //        bit 31~0 - conv1_output_ftmap[63:32] (Read/Write)
-// 0x3c : reserved
-// 0x40 : Data signal of conv2_weights
+// 0x30 : reserved
+// 0x34 : Data signal of conv2_weights
 //        bit 31~0 - conv2_weights[31:0] (Read/Write)
-// 0x44 : Data signal of conv2_weights
+// 0x38 : Data signal of conv2_weights
 //        bit 31~0 - conv2_weights[63:32] (Read/Write)
-// 0x48 : reserved
-// 0x4c : Data signal of conv2_biases
-//        bit 31~0 - conv2_biases[31:0] (Read/Write)
-// 0x50 : Data signal of conv2_biases
-//        bit 31~0 - conv2_biases[63:32] (Read/Write)
-// 0x54 : reserved
-// 0x58 : Data signal of conv2_output_ftmap
+// 0x3c : reserved
+// 0x40 : Data signal of conv2_output_ftmap
 //        bit 31~0 - conv2_output_ftmap[31:0] (Read/Write)
-// 0x5c : Data signal of conv2_output_ftmap
+// 0x44 : Data signal of conv2_output_ftmap
 //        bit 31~0 - conv2_output_ftmap[63:32] (Read/Write)
-// 0x60 : reserved
-// 0x64 : Data signal of conv3_weights
+// 0x48 : reserved
+// 0x4c : Data signal of conv3_weights
 //        bit 31~0 - conv3_weights[31:0] (Read/Write)
-// 0x68 : Data signal of conv3_weights
+// 0x50 : Data signal of conv3_weights
 //        bit 31~0 - conv3_weights[63:32] (Read/Write)
-// 0x6c : reserved
-// 0x70 : Data signal of conv3_biases
-//        bit 31~0 - conv3_biases[31:0] (Read/Write)
-// 0x74 : Data signal of conv3_biases
-//        bit 31~0 - conv3_biases[63:32] (Read/Write)
-// 0x78 : reserved
-// 0x7c : Data signal of output_ftmap
+// 0x54 : reserved
+// 0x58 : Data signal of output_ftmap
 //        bit 31~0 - output_ftmap[31:0] (Read/Write)
-// 0x80 : Data signal of output_ftmap
+// 0x5c : Data signal of output_ftmap
 //        bit 31~0 - output_ftmap[63:32] (Read/Write)
-// 0x84 : reserved
+// 0x60 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 #define CONTROL_ADDR_AP_CTRL                 0x00
@@ -77,19 +62,13 @@
 #define CONTROL_BITS_INPUT_FTMAP_DATA        64
 #define CONTROL_ADDR_CONV1_WEIGHTS_DATA      0x1c
 #define CONTROL_BITS_CONV1_WEIGHTS_DATA      64
-#define CONTROL_ADDR_CONV1_BIASES_DATA       0x28
-#define CONTROL_BITS_CONV1_BIASES_DATA       64
-#define CONTROL_ADDR_CONV1_OUTPUT_FTMAP_DATA 0x34
+#define CONTROL_ADDR_CONV1_OUTPUT_FTMAP_DATA 0x28
 #define CONTROL_BITS_CONV1_OUTPUT_FTMAP_DATA 64
-#define CONTROL_ADDR_CONV2_WEIGHTS_DATA      0x40
+#define CONTROL_ADDR_CONV2_WEIGHTS_DATA      0x34
 #define CONTROL_BITS_CONV2_WEIGHTS_DATA      64
-#define CONTROL_ADDR_CONV2_BIASES_DATA       0x4c
-#define CONTROL_BITS_CONV2_BIASES_DATA       64
-#define CONTROL_ADDR_CONV2_OUTPUT_FTMAP_DATA 0x58
+#define CONTROL_ADDR_CONV2_OUTPUT_FTMAP_DATA 0x40
 #define CONTROL_BITS_CONV2_OUTPUT_FTMAP_DATA 64
-#define CONTROL_ADDR_CONV3_WEIGHTS_DATA      0x64
+#define CONTROL_ADDR_CONV3_WEIGHTS_DATA      0x4c
 #define CONTROL_BITS_CONV3_WEIGHTS_DATA      64
-#define CONTROL_ADDR_CONV3_BIASES_DATA       0x70
-#define CONTROL_BITS_CONV3_BIASES_DATA       64
-#define CONTROL_ADDR_OUTPUT_FTMAP_DATA       0x7c
+#define CONTROL_ADDR_OUTPUT_FTMAP_DATA       0x58
 #define CONTROL_BITS_OUTPUT_FTMAP_DATA       64

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3'
 ================================================================
-* Date:           Tue Oct 31 13:45:09 2023
+* Date:           Tue Oct 31 16:55:59 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -217,15 +217,15 @@
 |ap_done               |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
 |ap_idle               |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
 |ap_ready              |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_493_p_din0     |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_493_p_din1     |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_493_p_opcode   |  out|    2|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_493_p_dout0    |   in|   32|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_493_p_ce       |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_497_p_din0     |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_497_p_din1     |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_497_p_dout0    |   in|   32|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_497_p_ce       |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_423_p_din0     |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_423_p_din1     |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_423_p_opcode   |  out|    2|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_423_p_dout0    |   in|   32|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_423_p_ce       |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_427_p_din0     |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_427_p_din1     |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_427_p_dout0    |   in|   32|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_427_p_ce       |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
 |m_axi_gmem_AWVALID    |  out|    1|       m_axi|                  gmem|       pointer|
 |m_axi_gmem_AWREADY    |   in|    1|       m_axi|                  gmem|       pointer|
 |m_axi_gmem_AWADDR     |  out|   64|       m_axi|                  gmem|       pointer|

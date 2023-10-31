@@ -11,7 +11,7 @@ use IEEE.NUMERIC_STD.all;
 
 entity srcnn_control_s_axi is
 generic (
-    C_S_AXI_ADDR_WIDTH    : INTEGER := 8;
+    C_S_AXI_ADDR_WIDTH    : INTEGER := 7;
     C_S_AXI_DATA_WIDTH    : INTEGER := 32);
 port (
     ACLK                  :in   STD_LOGIC;
@@ -37,13 +37,10 @@ port (
     interrupt             :out  STD_LOGIC;
     input_ftmap           :out  STD_LOGIC_VECTOR(63 downto 0);
     conv1_weights         :out  STD_LOGIC_VECTOR(63 downto 0);
-    conv1_biases          :out  STD_LOGIC_VECTOR(63 downto 0);
     conv1_output_ftmap    :out  STD_LOGIC_VECTOR(63 downto 0);
     conv2_weights         :out  STD_LOGIC_VECTOR(63 downto 0);
-    conv2_biases          :out  STD_LOGIC_VECTOR(63 downto 0);
     conv2_output_ftmap    :out  STD_LOGIC_VECTOR(63 downto 0);
     conv3_weights         :out  STD_LOGIC_VECTOR(63 downto 0);
-    conv3_biases          :out  STD_LOGIC_VECTOR(63 downto 0);
     output_ftmap          :out  STD_LOGIC_VECTOR(63 downto 0);
     ap_start              :out  STD_LOGIC;
     ap_done               :in   STD_LOGIC;
@@ -82,46 +79,31 @@ end entity srcnn_control_s_axi;
 -- 0x20 : Data signal of conv1_weights
 --        bit 31~0 - conv1_weights[63:32] (Read/Write)
 -- 0x24 : reserved
--- 0x28 : Data signal of conv1_biases
---        bit 31~0 - conv1_biases[31:0] (Read/Write)
--- 0x2c : Data signal of conv1_biases
---        bit 31~0 - conv1_biases[63:32] (Read/Write)
--- 0x30 : reserved
--- 0x34 : Data signal of conv1_output_ftmap
+-- 0x28 : Data signal of conv1_output_ftmap
 --        bit 31~0 - conv1_output_ftmap[31:0] (Read/Write)
--- 0x38 : Data signal of conv1_output_ftmap
+-- 0x2c : Data signal of conv1_output_ftmap
 --        bit 31~0 - conv1_output_ftmap[63:32] (Read/Write)
--- 0x3c : reserved
--- 0x40 : Data signal of conv2_weights
+-- 0x30 : reserved
+-- 0x34 : Data signal of conv2_weights
 --        bit 31~0 - conv2_weights[31:0] (Read/Write)
--- 0x44 : Data signal of conv2_weights
+-- 0x38 : Data signal of conv2_weights
 --        bit 31~0 - conv2_weights[63:32] (Read/Write)
--- 0x48 : reserved
--- 0x4c : Data signal of conv2_biases
---        bit 31~0 - conv2_biases[31:0] (Read/Write)
--- 0x50 : Data signal of conv2_biases
---        bit 31~0 - conv2_biases[63:32] (Read/Write)
--- 0x54 : reserved
--- 0x58 : Data signal of conv2_output_ftmap
+-- 0x3c : reserved
+-- 0x40 : Data signal of conv2_output_ftmap
 --        bit 31~0 - conv2_output_ftmap[31:0] (Read/Write)
--- 0x5c : Data signal of conv2_output_ftmap
+-- 0x44 : Data signal of conv2_output_ftmap
 --        bit 31~0 - conv2_output_ftmap[63:32] (Read/Write)
--- 0x60 : reserved
--- 0x64 : Data signal of conv3_weights
+-- 0x48 : reserved
+-- 0x4c : Data signal of conv3_weights
 --        bit 31~0 - conv3_weights[31:0] (Read/Write)
--- 0x68 : Data signal of conv3_weights
+-- 0x50 : Data signal of conv3_weights
 --        bit 31~0 - conv3_weights[63:32] (Read/Write)
--- 0x6c : reserved
--- 0x70 : Data signal of conv3_biases
---        bit 31~0 - conv3_biases[31:0] (Read/Write)
--- 0x74 : Data signal of conv3_biases
---        bit 31~0 - conv3_biases[63:32] (Read/Write)
--- 0x78 : reserved
--- 0x7c : Data signal of output_ftmap
+-- 0x54 : reserved
+-- 0x58 : Data signal of output_ftmap
 --        bit 31~0 - output_ftmap[31:0] (Read/Write)
--- 0x80 : Data signal of output_ftmap
+-- 0x5c : Data signal of output_ftmap
 --        bit 31~0 - output_ftmap[63:32] (Read/Write)
--- 0x84 : reserved
+-- 0x60 : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of srcnn_control_s_axi is
@@ -139,31 +121,22 @@ architecture behave of srcnn_control_s_axi is
     constant ADDR_CONV1_WEIGHTS_DATA_0      : INTEGER := 16#1c#;
     constant ADDR_CONV1_WEIGHTS_DATA_1      : INTEGER := 16#20#;
     constant ADDR_CONV1_WEIGHTS_CTRL        : INTEGER := 16#24#;
-    constant ADDR_CONV1_BIASES_DATA_0       : INTEGER := 16#28#;
-    constant ADDR_CONV1_BIASES_DATA_1       : INTEGER := 16#2c#;
-    constant ADDR_CONV1_BIASES_CTRL         : INTEGER := 16#30#;
-    constant ADDR_CONV1_OUTPUT_FTMAP_DATA_0 : INTEGER := 16#34#;
-    constant ADDR_CONV1_OUTPUT_FTMAP_DATA_1 : INTEGER := 16#38#;
-    constant ADDR_CONV1_OUTPUT_FTMAP_CTRL   : INTEGER := 16#3c#;
-    constant ADDR_CONV2_WEIGHTS_DATA_0      : INTEGER := 16#40#;
-    constant ADDR_CONV2_WEIGHTS_DATA_1      : INTEGER := 16#44#;
-    constant ADDR_CONV2_WEIGHTS_CTRL        : INTEGER := 16#48#;
-    constant ADDR_CONV2_BIASES_DATA_0       : INTEGER := 16#4c#;
-    constant ADDR_CONV2_BIASES_DATA_1       : INTEGER := 16#50#;
-    constant ADDR_CONV2_BIASES_CTRL         : INTEGER := 16#54#;
-    constant ADDR_CONV2_OUTPUT_FTMAP_DATA_0 : INTEGER := 16#58#;
-    constant ADDR_CONV2_OUTPUT_FTMAP_DATA_1 : INTEGER := 16#5c#;
-    constant ADDR_CONV2_OUTPUT_FTMAP_CTRL   : INTEGER := 16#60#;
-    constant ADDR_CONV3_WEIGHTS_DATA_0      : INTEGER := 16#64#;
-    constant ADDR_CONV3_WEIGHTS_DATA_1      : INTEGER := 16#68#;
-    constant ADDR_CONV3_WEIGHTS_CTRL        : INTEGER := 16#6c#;
-    constant ADDR_CONV3_BIASES_DATA_0       : INTEGER := 16#70#;
-    constant ADDR_CONV3_BIASES_DATA_1       : INTEGER := 16#74#;
-    constant ADDR_CONV3_BIASES_CTRL         : INTEGER := 16#78#;
-    constant ADDR_OUTPUT_FTMAP_DATA_0       : INTEGER := 16#7c#;
-    constant ADDR_OUTPUT_FTMAP_DATA_1       : INTEGER := 16#80#;
-    constant ADDR_OUTPUT_FTMAP_CTRL         : INTEGER := 16#84#;
-    constant ADDR_BITS         : INTEGER := 8;
+    constant ADDR_CONV1_OUTPUT_FTMAP_DATA_0 : INTEGER := 16#28#;
+    constant ADDR_CONV1_OUTPUT_FTMAP_DATA_1 : INTEGER := 16#2c#;
+    constant ADDR_CONV1_OUTPUT_FTMAP_CTRL   : INTEGER := 16#30#;
+    constant ADDR_CONV2_WEIGHTS_DATA_0      : INTEGER := 16#34#;
+    constant ADDR_CONV2_WEIGHTS_DATA_1      : INTEGER := 16#38#;
+    constant ADDR_CONV2_WEIGHTS_CTRL        : INTEGER := 16#3c#;
+    constant ADDR_CONV2_OUTPUT_FTMAP_DATA_0 : INTEGER := 16#40#;
+    constant ADDR_CONV2_OUTPUT_FTMAP_DATA_1 : INTEGER := 16#44#;
+    constant ADDR_CONV2_OUTPUT_FTMAP_CTRL   : INTEGER := 16#48#;
+    constant ADDR_CONV3_WEIGHTS_DATA_0      : INTEGER := 16#4c#;
+    constant ADDR_CONV3_WEIGHTS_DATA_1      : INTEGER := 16#50#;
+    constant ADDR_CONV3_WEIGHTS_CTRL        : INTEGER := 16#54#;
+    constant ADDR_OUTPUT_FTMAP_DATA_0       : INTEGER := 16#58#;
+    constant ADDR_OUTPUT_FTMAP_DATA_1       : INTEGER := 16#5c#;
+    constant ADDR_OUTPUT_FTMAP_CTRL         : INTEGER := 16#60#;
+    constant ADDR_BITS         : INTEGER := 7;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
     signal wmask               : UNSIGNED(C_S_AXI_DATA_WIDTH-1 downto 0);
@@ -193,13 +166,10 @@ architecture behave of srcnn_control_s_axi is
     signal int_isr             : UNSIGNED(1 downto 0) := (others => '0');
     signal int_input_ftmap     : UNSIGNED(63 downto 0) := (others => '0');
     signal int_conv1_weights   : UNSIGNED(63 downto 0) := (others => '0');
-    signal int_conv1_biases    : UNSIGNED(63 downto 0) := (others => '0');
     signal int_conv1_output_ftmap : UNSIGNED(63 downto 0) := (others => '0');
     signal int_conv2_weights   : UNSIGNED(63 downto 0) := (others => '0');
-    signal int_conv2_biases    : UNSIGNED(63 downto 0) := (others => '0');
     signal int_conv2_output_ftmap : UNSIGNED(63 downto 0) := (others => '0');
     signal int_conv3_weights   : UNSIGNED(63 downto 0) := (others => '0');
-    signal int_conv3_biases    : UNSIGNED(63 downto 0) := (others => '0');
     signal int_output_ftmap    : UNSIGNED(63 downto 0) := (others => '0');
 
 
@@ -337,10 +307,6 @@ begin
                         rdata_data <= RESIZE(int_conv1_weights(31 downto 0), 32);
                     when ADDR_CONV1_WEIGHTS_DATA_1 =>
                         rdata_data <= RESIZE(int_conv1_weights(63 downto 32), 32);
-                    when ADDR_CONV1_BIASES_DATA_0 =>
-                        rdata_data <= RESIZE(int_conv1_biases(31 downto 0), 32);
-                    when ADDR_CONV1_BIASES_DATA_1 =>
-                        rdata_data <= RESIZE(int_conv1_biases(63 downto 32), 32);
                     when ADDR_CONV1_OUTPUT_FTMAP_DATA_0 =>
                         rdata_data <= RESIZE(int_conv1_output_ftmap(31 downto 0), 32);
                     when ADDR_CONV1_OUTPUT_FTMAP_DATA_1 =>
@@ -349,10 +315,6 @@ begin
                         rdata_data <= RESIZE(int_conv2_weights(31 downto 0), 32);
                     when ADDR_CONV2_WEIGHTS_DATA_1 =>
                         rdata_data <= RESIZE(int_conv2_weights(63 downto 32), 32);
-                    when ADDR_CONV2_BIASES_DATA_0 =>
-                        rdata_data <= RESIZE(int_conv2_biases(31 downto 0), 32);
-                    when ADDR_CONV2_BIASES_DATA_1 =>
-                        rdata_data <= RESIZE(int_conv2_biases(63 downto 32), 32);
                     when ADDR_CONV2_OUTPUT_FTMAP_DATA_0 =>
                         rdata_data <= RESIZE(int_conv2_output_ftmap(31 downto 0), 32);
                     when ADDR_CONV2_OUTPUT_FTMAP_DATA_1 =>
@@ -361,10 +323,6 @@ begin
                         rdata_data <= RESIZE(int_conv3_weights(31 downto 0), 32);
                     when ADDR_CONV3_WEIGHTS_DATA_1 =>
                         rdata_data <= RESIZE(int_conv3_weights(63 downto 32), 32);
-                    when ADDR_CONV3_BIASES_DATA_0 =>
-                        rdata_data <= RESIZE(int_conv3_biases(31 downto 0), 32);
-                    when ADDR_CONV3_BIASES_DATA_1 =>
-                        rdata_data <= RESIZE(int_conv3_biases(63 downto 32), 32);
                     when ADDR_OUTPUT_FTMAP_DATA_0 =>
                         rdata_data <= RESIZE(int_output_ftmap(31 downto 0), 32);
                     when ADDR_OUTPUT_FTMAP_DATA_1 =>
@@ -385,13 +343,10 @@ begin
     auto_restart_done    <= auto_restart_status and (ap_idle and not int_ap_idle);
     input_ftmap          <= STD_LOGIC_VECTOR(int_input_ftmap);
     conv1_weights        <= STD_LOGIC_VECTOR(int_conv1_weights);
-    conv1_biases         <= STD_LOGIC_VECTOR(int_conv1_biases);
     conv1_output_ftmap   <= STD_LOGIC_VECTOR(int_conv1_output_ftmap);
     conv2_weights        <= STD_LOGIC_VECTOR(int_conv2_weights);
-    conv2_biases         <= STD_LOGIC_VECTOR(int_conv2_biases);
     conv2_output_ftmap   <= STD_LOGIC_VECTOR(int_conv2_output_ftmap);
     conv3_weights        <= STD_LOGIC_VECTOR(int_conv3_weights);
-    conv3_biases         <= STD_LOGIC_VECTOR(int_conv3_biases);
     output_ftmap         <= STD_LOGIC_VECTOR(int_output_ftmap);
 
     process (ACLK)
@@ -612,28 +567,6 @@ begin
     begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
-                if (w_hs = '1' and waddr = ADDR_CONV1_BIASES_DATA_0) then
-                    int_conv1_biases(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_conv1_biases(31 downto 0));
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
-                if (w_hs = '1' and waddr = ADDR_CONV1_BIASES_DATA_1) then
-                    int_conv1_biases(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_conv1_biases(63 downto 32));
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_CONV1_OUTPUT_FTMAP_DATA_0) then
                     int_conv1_output_ftmap(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_conv1_output_ftmap(31 downto 0));
                 end if;
@@ -678,28 +611,6 @@ begin
     begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
-                if (w_hs = '1' and waddr = ADDR_CONV2_BIASES_DATA_0) then
-                    int_conv2_biases(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_conv2_biases(31 downto 0));
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
-                if (w_hs = '1' and waddr = ADDR_CONV2_BIASES_DATA_1) then
-                    int_conv2_biases(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_conv2_biases(63 downto 32));
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_CONV2_OUTPUT_FTMAP_DATA_0) then
                     int_conv2_output_ftmap(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_conv2_output_ftmap(31 downto 0));
                 end if;
@@ -735,28 +646,6 @@ begin
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_CONV3_WEIGHTS_DATA_1) then
                     int_conv3_weights(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_conv3_weights(63 downto 32));
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
-                if (w_hs = '1' and waddr = ADDR_CONV3_BIASES_DATA_0) then
-                    int_conv3_biases(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_conv3_biases(31 downto 0));
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
-                if (w_hs = '1' and waddr = ADDR_CONV3_BIASES_DATA_1) then
-                    int_conv3_biases(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_conv3_biases(63 downto 32));
                 end if;
             end if;
         end if;

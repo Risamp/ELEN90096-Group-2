@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107_3'" level="0">
-<item name = "Date">Tue Oct 31 13:44:51 2023
+<item name = "Date">Tue Oct 31 16:55:40 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -92,9 +92,9 @@
 <column name="add_ln114_1_fu_770_p2">+, 0, 0, 27, 20, 20</column>
 <column name="add_ln114_2_fu_780_p2">+, 0, 0, 64, 64, 64</column>
 <column name="add_ln114_fu_765_p2">+, 0, 0, 64, 64, 64</column>
-<column name="add_ln52_1_fu_463_p2">+, 0, 0, 16, 9, 3</column>
-<column name="add_ln52_2_fu_610_p2">+, 0, 0, 17, 10, 10</column>
-<column name="add_ln52_fu_330_p2">+, 0, 0, 17, 10, 10</column>
+<column name="add_ln54_1_fu_463_p2">+, 0, 0, 16, 9, 3</column>
+<column name="add_ln54_2_fu_610_p2">+, 0, 0, 17, 10, 10</column>
+<column name="add_ln54_fu_330_p2">+, 0, 0, 17, 10, 10</column>
 <column name="empty_fu_311_p2">+, 0, 0, 17, 10, 10</column>
 <column name="p_mid1223_fu_450_p2">+, 0, 0, 16, 9, 3</column>
 <column name="p_mid1_fu_591_p2">+, 0, 0, 17, 10, 10</column>
@@ -107,14 +107,14 @@
 <column name="icmp_ln105_fu_249_p2">icmp, 0, 0, 19, 12, 11</column>
 <column name="icmp_ln106_fu_264_p2">icmp, 0, 0, 17, 10, 9</column>
 <column name="icmp_ln107_fu_534_p2">icmp, 0, 0, 12, 5, 5</column>
-<column name="icmp_ln52_1_fu_717_p2">icmp, 0, 0, 17, 10, 8</column>
-<column name="icmp_ln52_2_fu_604_p2">icmp, 0, 0, 17, 10, 8</column>
-<column name="icmp_ln52_fu_324_p2">icmp, 0, 0, 17, 10, 8</column>
+<column name="icmp_ln54_1_fu_717_p2">icmp, 0, 0, 17, 10, 8</column>
+<column name="icmp_ln54_2_fu_604_p2">icmp, 0, 0, 17, 10, 8</column>
+<column name="icmp_ln54_fu_324_p2">icmp, 0, 0, 17, 10, 8</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
 <column name="or_ln106_fu_552_p2">or, 0, 0, 2, 1, 1</column>
-<column name="or_ln51_1_fu_731_p2">or, 0, 0, 2, 1, 1</column>
-<column name="or_ln51_2_fu_631_p2">or, 0, 0, 2, 1, 1</column>
-<column name="or_ln51_fu_351_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln53_1_fu_731_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln53_2_fu_631_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln53_fu_351_p2">or, 0, 0, 2, 1, 1</column>
 <column name="select_ln105_1_fu_410_p3">select, 0, 0, 4, 1, 4</column>
 <column name="select_ln105_2_fu_522_p3">select, 0, 0, 19, 1, 20</column>
 <column name="select_ln105_fu_403_p3">select, 0, 0, 5, 1, 1</column>
@@ -122,13 +122,13 @@
 <column name="select_ln106_2_fu_671_p3">select, 0, 0, 19, 1, 20</column>
 <column name="select_ln106_3_fu_276_p3">select, 0, 0, 10, 1, 1</column>
 <column name="select_ln106_fu_557_p3">select, 0, 0, 5, 1, 1</column>
-<column name="select_ln51_2_fu_476_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln51_3_fu_484_p3">select, 0, 0, 9, 1, 9</column>
-<column name="select_ln51_4_fu_623_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln51_5_fu_637_p3">select, 0, 0, 10, 1, 10</column>
-<column name="select_ln51_6_fu_737_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln51_7_fu_745_p3">select, 0, 0, 10, 1, 10</column>
-<column name="select_ln51_fu_343_p3">select, 0, 0, 8, 1, 1</column>
+<column name="select_ln53_2_fu_476_p3">select, 0, 0, 8, 1, 1</column>
+<column name="select_ln53_3_fu_484_p3">select, 0, 0, 9, 1, 9</column>
+<column name="select_ln53_4_fu_623_p3">select, 0, 0, 8, 1, 1</column>
+<column name="select_ln53_5_fu_637_p3">select, 0, 0, 10, 1, 10</column>
+<column name="select_ln53_6_fu_737_p3">select, 0, 0, 8, 1, 1</column>
+<column name="select_ln53_7_fu_745_p3">select, 0, 0, 10, 1, 10</column>
+<column name="select_ln53_fu_343_p3">select, 0, 0, 8, 1, 1</column>
 <column name="yClamped_fu_357_p3">select, 0, 0, 10, 1, 10</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 <column name="xor_ln105_fu_529_p2">xor, 0, 0, 2, 1, 2</column>
@@ -188,8 +188,8 @@
 <column name="select_ln106_reg_934_pp0_iter2_reg">5, 0, 5, 0</column>
 <column name="zext_ln31_cast1_reg_905">8, 0, 10, 2</column>
 <column name="zext_ln31_cast_reg_916">8, 0, 9, 1</column>
-<column name="zext_ln52_cast2_reg_899">8, 0, 10, 2</column>
-<column name="zext_ln52_cast_reg_911">8, 0, 9, 1</column>
+<column name="zext_ln54_cast2_reg_899">8, 0, 10, 2</column>
+<column name="zext_ln54_cast_reg_911">8, 0, 9, 1</column>
 <column name="add_ln114_4_reg_950">64, 32, 12, 0</column>
 </table>
 </item>
@@ -253,7 +253,7 @@
 <column name="m_axi_gmem_BID">in, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_BUSER">in, 1, m_axi, gmem, pointer</column>
 <column name="zext_ln31">in, 8, ap_none, zext_ln31, scalar</column>
-<column name="zext_ln52">in, 8, ap_none, zext_ln52, scalar</column>
+<column name="zext_ln54">in, 8, ap_none, zext_ln54, scalar</column>
 <column name="shl_ln1">in, 5, ap_none, shl_ln1, scalar</column>
 <column name="select_ln31">in, 4, ap_none, select_ln31, scalar</column>
 <column name="input_ftmap">in, 64, ap_none, input_ftmap, scalar</column>

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_VITIS_LOOP_138_2_VITIS_LOOP_139_3'
 ================================================================
-* Date:           Tue Oct 31 13:44:41 2023
+* Date:           Tue Oct 31 16:55:30 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -112,7 +112,7 @@ ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%ti_cast20_read = read i4 @_ssdm_op
 ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%conv3_biases_0_0_val_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %conv3_biases_0_0_val"   --->   Operation 29 'read' 'conv3_biases_0_0_val_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%select_ln31_1_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %select_ln31_1"   --->   Operation 30 'read' 'select_ln31_1_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%ti_cast20_cast = zext i4 %ti_cast20_read"   --->   Operation 31 'zext' 'ti_cast20_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_15, i32 0, i32 0, void @empty_12, i32 0, i32 512, void @empty_20, void @empty_21, void @empty_12, i32 16, i32 16, i32 16, i32 16, void @empty_12, void @empty_12, i32 4294967295, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_15, i32 0, i32 0, void @empty_10, i32 0, i32 512, void @empty_19, void @empty_20, void @empty_10, i32 16, i32 16, i32 16, i32 16, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 33 [1/1] (0.42ns)   --->   "%store_ln0 = store i9 0, i9 %indvar_flatten280"   --->   Operation 33 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 34 [1/1] (0.42ns)   --->   "%store_ln0 = store i5 0, i5 %ty"   --->   Operation 34 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 35 [1/1] (0.42ns)   --->   "%store_ln0 = store i5 0, i5 %tx"   --->   Operation 35 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
@@ -236,7 +236,7 @@ State 20 <SV = 19> <Delay = 7.30>
 ST_20 : Operation 112 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_138_2_VITIS_LOOP_139_3_str"   --->   Operation 112 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
 ST_20 : Operation 113 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 289, i64 289, i64 289"   --->   Operation 113 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
 ST_20 : Operation 114 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 114 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_20 : Operation 115 [1/1] (0.00ns)   --->   "%specloopname_ln139 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10" [src/conv3.cpp:139->src/conv3.cpp:82]   --->   Operation 115 'specloopname' 'specloopname_ln139' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 115 [1/1] (0.00ns)   --->   "%specloopname_ln139 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [src/conv3.cpp:139->src/conv3.cpp:82]   --->   Operation 115 'specloopname' 'specloopname_ln139' <Predicate = true> <Delay = 0.00>
 ST_20 : Operation 116 [1/5] (7.30ns)   --->   "%gmem_addr_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %gmem_addr" [src/conv3.cpp:141->src/conv3.cpp:82]   --->   Operation 116 'writeresp' 'gmem_addr_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 ST_20 : Operation 117 [1/1] (0.00ns)   --->   "%br_ln139 = br void %for.inc.i24" [src/conv3.cpp:139->src/conv3.cpp:82]   --->   Operation 117 'br' 'br_ln139' <Predicate = true> <Delay = 0.00>
 

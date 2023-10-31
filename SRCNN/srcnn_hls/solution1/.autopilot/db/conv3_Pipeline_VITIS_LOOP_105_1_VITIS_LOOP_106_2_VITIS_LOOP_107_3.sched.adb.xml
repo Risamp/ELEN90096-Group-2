@@ -205,10 +205,10 @@ newFuncRoot:7 %shl_ln1_read = read i5 @_ssdm_op_Read.ap_auto.i5, i5 %shl_ln1
 
 <Node id="16" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-newFuncRoot:8 %zext_ln52_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %zext_ln52
+newFuncRoot:8 %zext_ln54_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %zext_ln54
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln52_read"/></StgValue>
+<StgValue><ssdm name="zext_ln54_read"/></StgValue>
 </operation>
 
 <operation id="24" st_id="1" stage="1" lat="1">
@@ -235,10 +235,10 @@ newFuncRoot:9 %zext_ln31_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %zext_ln31
 
 <Node id="18" bw="10" op_0_bw="8">
 <![CDATA[
-newFuncRoot:10 %zext_ln52_cast2 = zext i8 %zext_ln52_read
+newFuncRoot:10 %zext_ln54_cast2 = zext i8 %zext_ln54_read
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln52_cast2"/></StgValue>
+<StgValue><ssdm name="zext_ln54_cast2"/></StgValue>
 </operation>
 
 <operation id="26" st_id="1" stage="1" lat="1">
@@ -265,10 +265,10 @@ newFuncRoot:11 %zext_ln31_cast1 = zext i8 %zext_ln31_read
 
 <Node id="20" bw="9" op_0_bw="8">
 <![CDATA[
-newFuncRoot:12 %zext_ln52_cast = zext i8 %zext_ln52_read
+newFuncRoot:12 %zext_ln54_cast = zext i8 %zext_ln54_read
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln52_cast"/></StgValue>
+<StgValue><ssdm name="zext_ln54_cast"/></StgValue>
 </operation>
 
 <operation id="28" st_id="1" stage="1" lat="1">
@@ -295,7 +295,7 @@ newFuncRoot:13 %zext_ln31_cast = zext i8 %zext_ln31_read
 
 <Node id="22" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:14 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_15, i32 0, i32 0, void @empty_12, i32 0, i32 512, void @empty_20, void @empty_21, void @empty_12, i32 16, i32 16, i32 16, i32 16, void @empty_12, void @empty_12, i32 4294967295, i32 0
+newFuncRoot:14 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_15, i32 0, i32 0, void @empty_10, i32 0, i32 512, void @empty_19, void @empty_20, void @empty_10, i32 16, i32 16, i32 16, i32 16, void @empty_10, void @empty_10, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -655,10 +655,10 @@ for.inc.i:6 %tmp_1 = bitselect i1 @_ssdm_op_BitSelect.i1.i10.i32, i10 %empty, i3
 
 <Node id="37" bw="1" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-for.inc.i:7 %icmp_ln52 = icmp_sgt  i10 %empty, i10 254
+for.inc.i:7 %icmp_ln54 = icmp_sgt  i10 %empty, i10 254
 
 ]]></Node>
-<StgValue><ssdm name="icmp_ln52"/></StgValue>
+<StgValue><ssdm name="icmp_ln54"/></StgValue>
 </operation>
 
 <operation id="53" st_id="2" stage="1" lat="1">
@@ -671,10 +671,10 @@ for.inc.i:7 %icmp_ln52 = icmp_sgt  i10 %empty, i10 254
 
 <Node id="38" bw="10" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-for.inc.i:8 %add_ln52 = add i10 %tmp_cast, i10 %zext_ln52_cast2
+for.inc.i:8 %add_ln54 = add i10 %tmp_cast, i10 %zext_ln54_cast2
 
 ]]></Node>
-<StgValue><ssdm name="add_ln52"/></StgValue>
+<StgValue><ssdm name="add_ln54"/></StgValue>
 </operation>
 
 <operation id="54" st_id="2" stage="1" lat="1">
@@ -703,10 +703,10 @@ for.inc.i:9 %tmp_2 = bitselect i1 @_ssdm_op_BitSelect.i1.i10.i32, i10 %empty, i3
 
 <Node id="40" bw="10" op_0_bw="1" op_1_bw="10" op_2_bw="10">
 <![CDATA[
-for.inc.i:10 %select_ln51 = select i1 %tmp_2, i10 0, i10 254
+for.inc.i:10 %select_ln53 = select i1 %tmp_2, i10 0, i10 254
 
 ]]></Node>
-<StgValue><ssdm name="select_ln51"/></StgValue>
+<StgValue><ssdm name="select_ln53"/></StgValue>
 </operation>
 
 <operation id="56" st_id="2" stage="1" lat="1">
@@ -719,10 +719,10 @@ for.inc.i:10 %select_ln51 = select i1 %tmp_2, i10 0, i10 254
 
 <Node id="41" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-for.inc.i:11 %or_ln51 = or i1 %tmp_1, i1 %icmp_ln52
+for.inc.i:11 %or_ln53 = or i1 %tmp_1, i1 %icmp_ln54
 
 ]]></Node>
-<StgValue><ssdm name="or_ln51"/></StgValue>
+<StgValue><ssdm name="or_ln53"/></StgValue>
 </operation>
 
 <operation id="57" st_id="2" stage="1" lat="1">
@@ -735,7 +735,7 @@ for.inc.i:11 %or_ln51 = or i1 %tmp_1, i1 %icmp_ln52
 
 <Node id="42" bw="10" op_0_bw="1" op_1_bw="10" op_2_bw="10">
 <![CDATA[
-for.inc.i:12 %yClamped = select i1 %or_ln51, i10 %select_ln51, i10 %add_ln52
+for.inc.i:12 %yClamped = select i1 %or_ln53, i10 %select_ln53, i10 %add_ln54
 
 ]]></Node>
 <StgValue><ssdm name="yClamped"/></StgValue>
@@ -1058,10 +1058,10 @@ for.inc26.i:17 %tmp_3 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %p_mid122
 
 <Node id="70" bw="9" op_0_bw="9" op_1_bw="9">
 <![CDATA[
-for.inc26.i:18 %add_ln52_1 = add i9 %zext_ln52_cast, i9 510
+for.inc26.i:18 %add_ln54_1 = add i9 %zext_ln54_cast, i9 510
 
 ]]></Node>
-<StgValue><ssdm name="add_ln52_1"/></StgValue>
+<StgValue><ssdm name="add_ln54_1"/></StgValue>
 </operation>
 
 <operation id="78" st_id="2" stage="1" lat="1">
@@ -1092,10 +1092,10 @@ for.inc26.i:19 %tmp_4 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %p_mid122
 
 <Node id="72" bw="9" op_0_bw="1" op_1_bw="9" op_2_bw="9">
 <![CDATA[
-for.inc26.i:20 %select_ln51_2 = select i1 %tmp_4, i9 0, i9 254
+for.inc26.i:20 %select_ln53_2 = select i1 %tmp_4, i9 0, i9 254
 
 ]]></Node>
-<StgValue><ssdm name="select_ln51_2"/></StgValue>
+<StgValue><ssdm name="select_ln53_2"/></StgValue>
 </operation>
 
 <operation id="80" st_id="2" stage="1" lat="1">
@@ -1109,10 +1109,10 @@ for.inc26.i:20 %select_ln51_2 = select i1 %tmp_4, i9 0, i9 254
 
 <Node id="73" bw="9" op_0_bw="1" op_1_bw="9" op_2_bw="9">
 <![CDATA[
-for.inc26.i:21 %select_ln51_3 = select i1 %tmp_3, i9 %select_ln51_2, i9 %add_ln52_1
+for.inc26.i:21 %select_ln53_3 = select i1 %tmp_3, i9 %select_ln53_2, i9 %add_ln54_1
 
 ]]></Node>
-<StgValue><ssdm name="select_ln51_3"/></StgValue>
+<StgValue><ssdm name="select_ln53_3"/></StgValue>
 </operation>
 
 <operation id="81" st_id="2" stage="1" lat="1">
@@ -1126,7 +1126,7 @@ for.inc26.i:21 %select_ln51_3 = select i1 %tmp_3, i9 %select_ln51_2, i9 %add_ln5
 
 <Node id="74" bw="19" op_0_bw="19" op_1_bw="9" op_2_bw="10">
 <![CDATA[
-for.inc26.i:22 %shl_ln114_mid = bitconcatenate i19 @_ssdm_op_BitConcatenate.i19.i9.i10, i9 %select_ln51_3, i10 0
+for.inc26.i:22 %shl_ln114_mid = bitconcatenate i19 @_ssdm_op_BitConcatenate.i19.i9.i10, i9 %select_ln53_3, i10 0
 
 ]]></Node>
 <StgValue><ssdm name="shl_ln114_mid"/></StgValue>
@@ -1160,7 +1160,7 @@ for.inc26.i:23 %sext_ln114_6 = sext i19 %shl_ln114_mid
 
 <Node id="76" bw="11" op_0_bw="11" op_1_bw="9" op_2_bw="2">
 <![CDATA[
-for.inc26.i:24 %shl_ln114_1_mid = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i9.i2, i9 %select_ln51_3, i2 0
+for.inc26.i:24 %shl_ln114_1_mid = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i9.i2, i9 %select_ln53_3, i2 0
 
 ]]></Node>
 <StgValue><ssdm name="shl_ln114_1_mid"/></StgValue>
@@ -1482,10 +1482,10 @@ for.inc26.i:45 %tmp_5 = bitselect i1 @_ssdm_op_BitSelect.i1.i10.i32, i10 %p_mid1
 
 <Node id="98" bw="1" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-for.inc26.i:46 %icmp_ln52_2 = icmp_sgt  i10 %p_mid1, i10 254
+for.inc26.i:46 %icmp_ln54_2 = icmp_sgt  i10 %p_mid1, i10 254
 
 ]]></Node>
-<StgValue><ssdm name="icmp_ln52_2"/></StgValue>
+<StgValue><ssdm name="icmp_ln54_2"/></StgValue>
 </operation>
 
 <operation id="104" st_id="2" stage="1" lat="1">
@@ -1498,10 +1498,10 @@ for.inc26.i:46 %icmp_ln52_2 = icmp_sgt  i10 %p_mid1, i10 254
 
 <Node id="99" bw="10" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-for.inc26.i:47 %add_ln52_2 = add i10 %tmp_cast_mid1, i10 %zext_ln52_cast2
+for.inc26.i:47 %add_ln54_2 = add i10 %tmp_cast_mid1, i10 %zext_ln54_cast2
 
 ]]></Node>
-<StgValue><ssdm name="add_ln52_2"/></StgValue>
+<StgValue><ssdm name="add_ln54_2"/></StgValue>
 </operation>
 
 <operation id="105" st_id="2" stage="1" lat="1">
@@ -1530,10 +1530,10 @@ for.inc26.i:48 %tmp_6 = bitselect i1 @_ssdm_op_BitSelect.i1.i10.i32, i10 %p_mid1
 
 <Node id="101" bw="10" op_0_bw="1" op_1_bw="10" op_2_bw="10">
 <![CDATA[
-for.inc26.i:49 %select_ln51_4 = select i1 %tmp_6, i10 0, i10 254
+for.inc26.i:49 %select_ln53_4 = select i1 %tmp_6, i10 0, i10 254
 
 ]]></Node>
-<StgValue><ssdm name="select_ln51_4"/></StgValue>
+<StgValue><ssdm name="select_ln53_4"/></StgValue>
 </operation>
 
 <operation id="107" st_id="2" stage="1" lat="1">
@@ -1546,10 +1546,10 @@ for.inc26.i:49 %select_ln51_4 = select i1 %tmp_6, i10 0, i10 254
 
 <Node id="102" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-for.inc26.i:50 %or_ln51_2 = or i1 %tmp_5, i1 %icmp_ln52_2
+for.inc26.i:50 %or_ln53_2 = or i1 %tmp_5, i1 %icmp_ln54_2
 
 ]]></Node>
-<StgValue><ssdm name="or_ln51_2"/></StgValue>
+<StgValue><ssdm name="or_ln53_2"/></StgValue>
 </operation>
 
 <operation id="108" st_id="2" stage="1" lat="1">
@@ -1562,10 +1562,10 @@ for.inc26.i:50 %or_ln51_2 = or i1 %tmp_5, i1 %icmp_ln52_2
 
 <Node id="103" bw="10" op_0_bw="1" op_1_bw="10" op_2_bw="10">
 <![CDATA[
-for.inc26.i:51 %select_ln51_5 = select i1 %or_ln51_2, i10 %select_ln51_4, i10 %add_ln52_2
+for.inc26.i:51 %select_ln53_5 = select i1 %or_ln53_2, i10 %select_ln53_4, i10 %add_ln54_2
 
 ]]></Node>
-<StgValue><ssdm name="select_ln51_5"/></StgValue>
+<StgValue><ssdm name="select_ln53_5"/></StgValue>
 </operation>
 
 <operation id="109" st_id="2" stage="1" lat="1">
@@ -1578,7 +1578,7 @@ for.inc26.i:51 %select_ln51_5 = select i1 %or_ln51_2, i10 %select_ln51_4, i10 %a
 
 <Node id="104" bw="20" op_0_bw="20" op_1_bw="10" op_2_bw="10">
 <![CDATA[
-for.inc26.i:52 %shl_ln114_mid1 = bitconcatenate i20 @_ssdm_op_BitConcatenate.i20.i10.i10, i10 %select_ln51_5, i10 0
+for.inc26.i:52 %shl_ln114_mid1 = bitconcatenate i20 @_ssdm_op_BitConcatenate.i20.i10.i10, i10 %select_ln53_5, i10 0
 
 ]]></Node>
 <StgValue><ssdm name="shl_ln114_mid1"/></StgValue>
@@ -1594,7 +1594,7 @@ for.inc26.i:52 %shl_ln114_mid1 = bitconcatenate i20 @_ssdm_op_BitConcatenate.i20
 
 <Node id="105" bw="12" op_0_bw="12" op_1_bw="10" op_2_bw="2">
 <![CDATA[
-for.inc26.i:53 %shl_ln114_1_mid1 = bitconcatenate i12 @_ssdm_op_BitConcatenate.i12.i10.i2, i10 %select_ln51_5, i2 0
+for.inc26.i:53 %shl_ln114_1_mid1 = bitconcatenate i12 @_ssdm_op_BitConcatenate.i12.i10.i2, i10 %select_ln53_5, i2 0
 
 ]]></Node>
 <StgValue><ssdm name="shl_ln114_1_mid1"/></StgValue>
@@ -1770,10 +1770,10 @@ for.inc26.i:69 %tmp_7 = bitselect i1 @_ssdm_op_BitSelect.i1.i10.i32, i10 %add_ln
 
 <Node id="122" bw="1" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-for.inc26.i:70 %icmp_ln52_1 = icmp_sgt  i10 %add_ln110, i10 254
+for.inc26.i:70 %icmp_ln54_1 = icmp_sgt  i10 %add_ln110, i10 254
 
 ]]></Node>
-<StgValue><ssdm name="icmp_ln52_1"/></StgValue>
+<StgValue><ssdm name="icmp_ln54_1"/></StgValue>
 </operation>
 
 <operation id="122" st_id="2" stage="1" lat="1">
@@ -1802,10 +1802,10 @@ for.inc26.i:71 %tmp_8 = bitselect i1 @_ssdm_op_BitSelect.i1.i10.i32, i10 %add_ln
 
 <Node id="124" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-for.inc26.i:72 %or_ln51_1 = or i1 %tmp_7, i1 %icmp_ln52_1
+for.inc26.i:72 %or_ln53_1 = or i1 %tmp_7, i1 %icmp_ln54_1
 
 ]]></Node>
-<StgValue><ssdm name="or_ln51_1"/></StgValue>
+<StgValue><ssdm name="or_ln53_1"/></StgValue>
 </operation>
 
 <operation id="124" st_id="2" stage="1" lat="1">
@@ -1818,10 +1818,10 @@ for.inc26.i:72 %or_ln51_1 = or i1 %tmp_7, i1 %icmp_ln52_1
 
 <Node id="125" bw="10" op_0_bw="1" op_1_bw="10" op_2_bw="10">
 <![CDATA[
-for.inc26.i:73 %select_ln51_6 = select i1 %tmp_8, i10 0, i10 254
+for.inc26.i:73 %select_ln53_6 = select i1 %tmp_8, i10 0, i10 254
 
 ]]></Node>
-<StgValue><ssdm name="select_ln51_6"/></StgValue>
+<StgValue><ssdm name="select_ln53_6"/></StgValue>
 </operation>
 
 <operation id="125" st_id="2" stage="1" lat="1">
@@ -1834,10 +1834,10 @@ for.inc26.i:73 %select_ln51_6 = select i1 %tmp_8, i10 0, i10 254
 
 <Node id="126" bw="10" op_0_bw="1" op_1_bw="10" op_2_bw="10">
 <![CDATA[
-for.inc26.i:74 %select_ln51_7 = select i1 %or_ln51_1, i10 %select_ln51_6, i10 %add_ln110
+for.inc26.i:74 %select_ln53_7 = select i1 %or_ln53_1, i10 %select_ln53_6, i10 %add_ln110
 
 ]]></Node>
-<StgValue><ssdm name="select_ln51_7"/></StgValue>
+<StgValue><ssdm name="select_ln53_7"/></StgValue>
 </operation>
 
 <operation id="126" st_id="2" stage="1" lat="1">
@@ -1850,7 +1850,7 @@ for.inc26.i:74 %select_ln51_7 = select i1 %or_ln51_1, i10 %select_ln51_6, i10 %a
 
 <Node id="127" bw="12" op_0_bw="12" op_1_bw="10" op_2_bw="2">
 <![CDATA[
-for.inc26.i:75 %shl_ln114_2 = bitconcatenate i12 @_ssdm_op_BitConcatenate.i12.i10.i2, i10 %select_ln51_7, i2 0
+for.inc26.i:75 %shl_ln114_2 = bitconcatenate i12 @_ssdm_op_BitConcatenate.i12.i10.i2, i10 %select_ln53_7, i2 0
 
 ]]></Node>
 <StgValue><ssdm name="shl_ln114_2"/></StgValue>
@@ -2418,7 +2418,7 @@ for.inc26.i:61 %input_fm_buffer_addr = getelementptr i32 %input_fm_buffer, i64 0
 
 <Node id="115" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc26.i:63 %specloopname_ln107 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9
+for.inc26.i:63 %specloopname_ln107 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln107"/></StgValue>

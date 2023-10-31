@@ -94,10 +94,10 @@ memset.loop12.i:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, 
 
 <Node id="8" bw="1" op_0_bw="12" op_1_bw="12">
 <![CDATA[
-memset.loop12.i:2 %exitcond5 = icmp_eq  i12 %p_load, i12 2312
+memset.loop12.i:2 %exitcond4 = icmp_eq  i12 %p_load, i12 2312
 
 ]]></Node>
-<StgValue><ssdm name="exitcond5"/></StgValue>
+<StgValue><ssdm name="exitcond4"/></StgValue>
 </operation>
 
 <operation id="10" st_id="1" stage="1" lat="1">
@@ -109,10 +109,10 @@ memset.loop12.i:2 %exitcond5 = icmp_eq  i12 %p_load, i12 2312
 
 <Node id="9" bw="12" op_0_bw="12" op_1_bw="12">
 <![CDATA[
-memset.loop12.i:3 %empty_111 = add i12 %p_load, i12 1
+memset.loop12.i:3 %empty_109 = add i12 %p_load, i12 1
 
 ]]></Node>
-<StgValue><ssdm name="empty_111"/></StgValue>
+<StgValue><ssdm name="empty_109"/></StgValue>
 </operation>
 
 <operation id="11" st_id="1" stage="1" lat="1">
@@ -124,7 +124,7 @@ memset.loop12.i:3 %empty_111 = add i12 %p_load, i12 1
 
 <Node id="10" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-memset.loop12.i:4 %br_ln0 = br i1 %exitcond5, void %memset.loop12.i.split, void %memset.loop.i.preheader.exitStub
+memset.loop12.i:4 %br_ln0 = br i1 %exitcond4, void %memset.loop12.i.split, void %memset.loop.i.preheader.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -134,7 +134,7 @@ memset.loop12.i:4 %br_ln0 = br i1 %exitcond5, void %memset.loop12.i.split, void 
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond5" val="0"/>
+<or_exp><and_exp><literal name="exitcond4" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -150,7 +150,7 @@ memset.loop12.i.split:0 %speclooptripcount_ln0 = speclooptripcount void @_ssdm_o
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond5" val="0"/>
+<or_exp><and_exp><literal name="exitcond4" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -166,7 +166,7 @@ memset.loop12.i.split:1 %p_cast = zext i12 %p_load
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond5" val="0"/>
+<or_exp><and_exp><literal name="exitcond4" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -182,7 +182,7 @@ memset.loop12.i.split:2 %input_fm_buffer_1_addr = getelementptr i32 %input_fm_bu
 <core>RAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond5" val="0"/>
+<or_exp><and_exp><literal name="exitcond4" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -198,13 +198,13 @@ memset.loop12.i.split:3 %store_ln0 = store i32 0, i12 %input_fm_buffer_1_addr
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond5" val="0"/>
+<or_exp><and_exp><literal name="exitcond4" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="16" bw="0" op_0_bw="12" op_1_bw="12" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-memset.loop12.i.split:4 %store_ln0 = store i12 %empty_111, i12 %empty
+memset.loop12.i.split:4 %store_ln0 = store i12 %empty_109, i12 %empty
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -214,7 +214,7 @@ memset.loop12.i.split:4 %store_ln0 = store i12 %empty_111, i12 %empty
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond5" val="0"/>
+<or_exp><and_exp><literal name="exitcond4" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -230,7 +230,7 @@ memset.loop12.i.split:5 %br_ln0 = br void %memset.loop12.i
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond5" val="1"/>
+<or_exp><and_exp><literal name="exitcond4" val="1"/>
 </and_exp></or_exp>
 </condition>
 

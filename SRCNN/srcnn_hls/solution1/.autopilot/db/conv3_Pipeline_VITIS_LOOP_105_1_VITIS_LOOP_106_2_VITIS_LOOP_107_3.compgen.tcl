@@ -120,14 +120,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 85 \
-    name zext_ln52 \
+    name zext_ln54 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_zext_ln52 \
+    corename dc_zext_ln54 \
     op interface \
-    ports { zext_ln52 { I 8 vector } } \
+    ports { zext_ln54 { I 8 vector } } \
 } "
 }
 

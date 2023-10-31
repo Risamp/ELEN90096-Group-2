@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3'" level="0">
-<item name = "Date">Tue Oct 31 13:45:09 2023
+<item name = "Date">Tue Oct 31 16:55:59 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -184,15 +184,15 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, conv3, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv3, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv3, return value</column>
-<column name="grp_fu_493_p_din0">out, 32, ap_ctrl_hs, conv3, return value</column>
-<column name="grp_fu_493_p_din1">out, 32, ap_ctrl_hs, conv3, return value</column>
-<column name="grp_fu_493_p_opcode">out, 2, ap_ctrl_hs, conv3, return value</column>
-<column name="grp_fu_493_p_dout0">in, 32, ap_ctrl_hs, conv3, return value</column>
-<column name="grp_fu_493_p_ce">out, 1, ap_ctrl_hs, conv3, return value</column>
-<column name="grp_fu_497_p_din0">out, 32, ap_ctrl_hs, conv3, return value</column>
-<column name="grp_fu_497_p_din1">out, 32, ap_ctrl_hs, conv3, return value</column>
-<column name="grp_fu_497_p_dout0">in, 32, ap_ctrl_hs, conv3, return value</column>
-<column name="grp_fu_497_p_ce">out, 1, ap_ctrl_hs, conv3, return value</column>
+<column name="grp_fu_423_p_din0">out, 32, ap_ctrl_hs, conv3, return value</column>
+<column name="grp_fu_423_p_din1">out, 32, ap_ctrl_hs, conv3, return value</column>
+<column name="grp_fu_423_p_opcode">out, 2, ap_ctrl_hs, conv3, return value</column>
+<column name="grp_fu_423_p_dout0">in, 32, ap_ctrl_hs, conv3, return value</column>
+<column name="grp_fu_423_p_ce">out, 1, ap_ctrl_hs, conv3, return value</column>
+<column name="grp_fu_427_p_din0">out, 32, ap_ctrl_hs, conv3, return value</column>
+<column name="grp_fu_427_p_din1">out, 32, ap_ctrl_hs, conv3, return value</column>
+<column name="grp_fu_427_p_dout0">in, 32, ap_ctrl_hs, conv3, return value</column>
+<column name="grp_fu_427_p_ce">out, 1, ap_ctrl_hs, conv3, return value</column>
 <column name="m_axi_gmem_AWVALID">out, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_AWREADY">in, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_AWADDR">out, 64, m_axi, gmem, pointer</column>

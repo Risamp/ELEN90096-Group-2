@@ -109,10 +109,10 @@ memset.loop.i26:2 %exitcond7019 = icmp_eq  i9 %p_load, i9 289
 
 <Node id="9" bw="9" op_0_bw="9" op_1_bw="9">
 <![CDATA[
-memset.loop.i26:3 %empty_100 = add i9 %p_load, i9 1
+memset.loop.i26:3 %empty_98 = add i9 %p_load, i9 1
 
 ]]></Node>
-<StgValue><ssdm name="empty_100"/></StgValue>
+<StgValue><ssdm name="empty_98"/></StgValue>
 </operation>
 
 <operation id="11" st_id="1" stage="1" lat="1">
@@ -204,7 +204,7 @@ memset.loop.i26.split:3 %store_ln0 = store i32 0, i9 %output_fm_buffer_0_addr
 
 <Node id="16" bw="0" op_0_bw="9" op_1_bw="9" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-memset.loop.i26.split:4 %store_ln0 = store i9 %empty_100, i9 %empty
+memset.loop.i26.split:4 %store_ln0 = store i9 %empty_98, i9 %empty
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>

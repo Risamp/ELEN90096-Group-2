@@ -16,7 +16,7 @@ set C_modelName {conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ zext_ln31 int 8 regular  }
-	{ zext_ln52 int 8 regular  }
+	{ zext_ln54 int 8 regular  }
 	{ shl_ln1 int 5 regular  }
 	{ select_ln31 int 4 regular  }
 	{ input_ftmap int 64 regular  }
@@ -26,11 +26,11 @@ set C_modelArgList {
 set hasAXIMCache 0
 set C_modelArgMapList {[ 
 	{ "Name" : "zext_ln31", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY"} , 
- 	{ "Name" : "zext_ln52", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY"} , 
+ 	{ "Name" : "zext_ln54", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY"} , 
  	{ "Name" : "shl_ln1", "interface" : "wire", "bitwidth" : 5, "direction" : "READONLY"} , 
  	{ "Name" : "select_ln31", "interface" : "wire", "bitwidth" : 4, "direction" : "READONLY"} , 
  	{ "Name" : "input_ftmap", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY"} , 
- 	{ "Name" : "gmem", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "input_ftmap","offset": { "type": "dynamic","port_name": "input_ftmap","bundle": "control"},"direction": "READONLY"},{"cName": "conv1_weights","offset": { "type": "dynamic","port_name": "conv1_weights","bundle": "control"},"direction": "READONLY"},{"cName": "conv1_biases","offset": { "type": "dynamic","port_name": "conv1_biases","bundle": "control"},"direction": "READONLY"},{"cName": "conv1_output_ftmap","offset": { "type": "dynamic","port_name": "conv1_output_ftmap","bundle": "control"},"direction": "READWRITE"},{"cName": "conv2_weights","offset": { "type": "dynamic","port_name": "conv2_weights","bundle": "control"},"direction": "READONLY"},{"cName": "conv2_biases","offset": { "type": "dynamic","port_name": "conv2_biases","bundle": "control"},"direction": "READONLY"},{"cName": "conv2_output_ftmap","offset": { "type": "dynamic","port_name": "conv2_output_ftmap","bundle": "control"},"direction": "READWRITE"},{"cName": "conv3_weights","offset": { "type": "dynamic","port_name": "conv3_weights","bundle": "control"},"direction": "READONLY"},{"cName": "conv3_biases","offset": { "type": "dynamic","port_name": "conv3_biases","bundle": "control"},"direction": "READONLY"},{"cName": "output_ftmap","offset": { "type": "dynamic","port_name": "output_ftmap","bundle": "control"},"direction": "READWRITE"}]}]} , 
+ 	{ "Name" : "gmem", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "input_ftmap","offset": { "type": "dynamic","port_name": "input_ftmap","bundle": "control"},"direction": "READONLY"},{"cName": "conv1_weights","offset": { "type": "dynamic","port_name": "conv1_weights","bundle": "control"},"direction": "READONLY"},{"cName": "conv1_output_ftmap","offset": { "type": "dynamic","port_name": "conv1_output_ftmap","bundle": "control"},"direction": "READWRITE"},{"cName": "conv2_weights","offset": { "type": "dynamic","port_name": "conv2_weights","bundle": "control"},"direction": "READONLY"},{"cName": "conv2_output_ftmap","offset": { "type": "dynamic","port_name": "conv2_output_ftmap","bundle": "control"},"direction": "READWRITE"},{"cName": "conv3_weights","offset": { "type": "dynamic","port_name": "conv3_weights","bundle": "control"},"direction": "READONLY"},{"cName": "output_ftmap","offset": { "type": "dynamic","port_name": "output_ftmap","bundle": "control"},"direction": "READWRITE"}]}]} , 
  	{ "Name" : "input_fm_buffer", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} ]}
 # RTL Port declarations: 
 set portNum 61
@@ -88,7 +88,7 @@ set portList {
 	{ m_axi_gmem_BID sc_in sc_lv 1 signal 5 } 
 	{ m_axi_gmem_BUSER sc_in sc_lv 1 signal 5 } 
 	{ zext_ln31 sc_in sc_lv 8 signal 0 } 
-	{ zext_ln52 sc_in sc_lv 8 signal 1 } 
+	{ zext_ln54 sc_in sc_lv 8 signal 1 } 
 	{ shl_ln1 sc_in sc_lv 5 signal 2 } 
 	{ select_ln31 sc_in sc_lv 4 signal 3 } 
 	{ input_ftmap sc_in sc_lv 64 signal 4 } 
@@ -151,7 +151,7 @@ set NewPortList {[
  	{ "name": "m_axi_gmem_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "BID" }} , 
  	{ "name": "m_axi_gmem_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "BUSER" }} , 
  	{ "name": "zext_ln31", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "zext_ln31", "role": "default" }} , 
- 	{ "name": "zext_ln52", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "zext_ln52", "role": "default" }} , 
+ 	{ "name": "zext_ln54", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "zext_ln54", "role": "default" }} , 
  	{ "name": "shl_ln1", "direction": "in", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "shl_ln1", "role": "default" }} , 
  	{ "name": "select_ln31", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "select_ln31", "role": "default" }} , 
  	{ "name": "input_ftmap", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "input_ftmap", "role": "default" }} , 
@@ -177,7 +177,7 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "zext_ln31", "Type" : "None", "Direction" : "I"},
-			{"Name" : "zext_ln52", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln54", "Type" : "None", "Direction" : "I"},
 			{"Name" : "shl_ln1", "Type" : "None", "Direction" : "I"},
 			{"Name" : "select_ln31", "Type" : "None", "Direction" : "I"},
 			{"Name" : "input_ftmap", "Type" : "None", "Direction" : "I"},
@@ -198,7 +198,7 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107_3 {
 		zext_ln31 {Type I LastRead 0 FirstWrite -1}
-		zext_ln52 {Type I LastRead 0 FirstWrite -1}
+		zext_ln54 {Type I LastRead 0 FirstWrite -1}
 		shl_ln1 {Type I LastRead 0 FirstWrite -1}
 		select_ln31 {Type I LastRead 0 FirstWrite -1}
 		input_ftmap {Type I LastRead 0 FirstWrite -1}
@@ -218,7 +218,7 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	zext_ln31 { ap_none {  { zext_ln31 in_data 0 8 } } }
-	zext_ln52 { ap_none {  { zext_ln52 in_data 0 8 } } }
+	zext_ln54 { ap_none {  { zext_ln54 in_data 0 8 } } }
 	shl_ln1 { ap_none {  { shl_ln1 in_data 0 5 } } }
 	select_ln31 { ap_none {  { select_ln31 in_data 0 4 } } }
 	input_ftmap { ap_none {  { input_ftmap in_data 0 64 } } }

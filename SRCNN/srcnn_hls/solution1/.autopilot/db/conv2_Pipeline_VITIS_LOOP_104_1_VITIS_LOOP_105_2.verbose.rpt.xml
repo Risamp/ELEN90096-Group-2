@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2'" level="0">
-<item name = "Date">Tue Oct 31 13:44:47 2023
+<item name = "Date">Tue Oct 31 16:55:36 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -101,10 +101,10 @@
 <column name="add_ln113_8_fu_653_p2">+, 0, 0, 19, 12, 3</column>
 <column name="add_ln113_9_fu_668_p2">+, 0, 0, 19, 12, 4</column>
 <column name="add_ln113_fu_525_p2">+, 0, 0, 16, 9, 9</column>
-<column name="empty_103_fu_486_p2">+, 0, 0, 64, 64, 64</column>
+<column name="empty_101_fu_486_p2">+, 0, 0, 64, 64, 64</column>
 <column name="empty_fu_427_p2">+, 0, 0, 15, 8, 8</column>
 <column name="tmp1_fu_481_p2">+, 0, 0, 64, 64, 64</column>
-<column name="empty_102_fu_456_p2">-, 0, 0, 26, 19, 19</column>
+<column name="empty_100_fu_456_p2">-, 0, 0, 26, 19, 19</column>
 <column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp0_stage12_11001">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state13_pp0_stage12_iter0">and, 0, 0, 2, 1, 1</column>
@@ -144,7 +144,7 @@
 <column name="ap_enable_reg_pp0_iter0_reg">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="by_fu_132">5, 0, 5, 0</column>
-<column name="gmem_addr_15_reg_875">64, 0, 64, 0</column>
+<column name="gmem_addr_13_reg_875">64, 0, 64, 0</column>
 <column name="icmp_ln104_reg_849">1, 0, 1, 0</column>
 <column name="indvar_flatten_fu_140">8, 0, 8, 0</column>
 <column name="nin_fu_136">4, 0, 4, 0</column>

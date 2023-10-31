@@ -169,6 +169,8 @@
                         					
                     </folderInfo>
                     					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1615943918.183990296" name="srcnn.h" rcbsApplicability="disable" resourcePath="testbench/srcnn.h" toolsToInvoke=""/>
+                    					
                     <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1615943918.870084415" name="tb_conv1.cpp" rcbsApplicability="disable" resourcePath="testbench/tb_conv1.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.128810414.21568986">
                         						
                         <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.128810414.21568986" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.128810414">
@@ -502,6 +504,8 @@
                         </toolChain>
                         					
                     </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.1190695715.1128351474" name="srcnn.h" rcbsApplicability="disable" resourcePath="testbench/srcnn.h" toolsToInvoke=""/>
                     					
                     <fileInfo id="cdt.managedbuild.config.gnu.exe.release.1190695715.675358484" name="tb_conv1.cpp" rcbsApplicability="disable" resourcePath="testbench/tb_conv1.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.71501281.192512604">
                         						

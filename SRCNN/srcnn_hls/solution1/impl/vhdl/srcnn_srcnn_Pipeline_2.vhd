@@ -62,7 +62,7 @@ port (
     m_axi_gmem_BRESP : IN STD_LOGIC_VECTOR (1 downto 0);
     m_axi_gmem_BID : IN STD_LOGIC_VECTOR (0 downto 0);
     m_axi_gmem_BUSER : IN STD_LOGIC_VECTOR (0 downto 0);
-    sext_ln35 : IN STD_LOGIC_VECTOR (61 downto 0) );
+    sext_ln37 : IN STD_LOGIC_VECTOR (61 downto 0) );
 end;
 
 
@@ -105,7 +105,7 @@ attribute shreg_extract : string;
     signal ap_block_pp0_stage0_11001 : BOOLEAN;
     signal ap_block_pp0_stage0_01001 : BOOLEAN;
     signal empty_fu_46 : STD_LOGIC_VECTOR (20 downto 0);
-    signal empty_47_fu_89_p2 : STD_LOGIC_VECTOR (20 downto 0);
+    signal empty_45_fu_89_p2 : STD_LOGIC_VECTOR (20 downto 0);
     signal ap_loop_init : STD_LOGIC;
     signal ap_sig_allocacmp_p_load : STD_LOGIC_VECTOR (20 downto 0);
     signal ap_done_reg : STD_LOGIC := '0';
@@ -203,7 +203,7 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
                 if (((exitcond54_fu_83_p2 = ap_const_lv1_0) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1))) then 
-                    empty_fu_46 <= empty_47_fu_89_p2;
+                    empty_fu_46 <= empty_45_fu_89_p2;
                 elsif ((ap_loop_init = ap_const_logic_1)) then 
                     empty_fu_46 <= ap_const_lv21_0;
                 end if;
@@ -300,7 +300,7 @@ begin
         end if; 
     end process;
 
-    empty_47_fu_89_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_p_load) + unsigned(ap_const_lv21_1));
+    empty_45_fu_89_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_p_load) + unsigned(ap_const_lv21_1));
     exitcond54_fu_83_p2 <= "1" when (ap_sig_allocacmp_p_load = ap_const_lv21_1FC020) else "0";
 
     gmem_blk_n_W_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, m_axi_gmem_WREADY, ap_block_pp0_stage0)

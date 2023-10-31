@@ -31574,15 +31574,17 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][2
 
 #pragma HLS INTERFACE m_axi port=input_ftmap offset=slave depth=512
 #pragma HLS INTERFACE m_axi port=conv1_weights offset=slave depth=512
-#pragma HLS INTERFACE m_axi port=conv1_biases offset=slave depth=512
 #pragma HLS INTERFACE m_axi port=conv1_output_ftmap offset=slave depth=512
 #pragma HLS INTERFACE m_axi port=conv2_weights offset=slave depth=512
-#pragma HLS INTERFACE m_axi port=conv2_biases offset=slave depth=512
 #pragma HLS INTERFACE m_axi port=conv2_output_ftmap offset=slave depth=512
 #pragma HLS INTERFACE m_axi port=conv3_weights offset=slave depth=512
-#pragma HLS INTERFACE m_axi port=conv3_biases offset=slave depth=512
 #pragma HLS INTERFACE m_axi port=output_ftmap offset=slave depth=512
 #pragma HLS INTERFACE s_axilite port=return
+
+
+
+
+
 
  CLEAR_CONV1: memset(conv1_output_ftmap, 0, 64 * 255 * 255 * sizeof(ftmap_t));
  CLEAR_CONV2: memset(conv2_output_ftmap, 0, 32 * 255 * 255 * sizeof(ftmap_t));

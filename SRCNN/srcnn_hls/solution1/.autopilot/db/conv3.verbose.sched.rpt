@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3'
 ================================================================
-* Date:           Tue Oct 31 13:44:42 2023
+* Date:           Tue Oct 31 16:55:31 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -94,7 +94,7 @@ State 1 <SV = 0> <Delay = 0.42>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%ti = alloca i32 1"   --->   Operation 12 'alloca' 'ti' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tj = alloca i32 1"   --->   Operation 13 'alloca' 'tj' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%indvar_flatten287 = alloca i32 1"   --->   Operation 14 'alloca' 'indvar_flatten287' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_15, i32 0, i32 0, void @empty_12, i32 0, i32 512, void @empty_20, void @empty_21, void @empty_12, i32 16, i32 16, i32 16, i32 16, void @empty_12, void @empty_12, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_15, i32 0, i32 0, void @empty_10, i32 0, i32 512, void @empty_19, void @empty_20, void @empty_10, i32 16, i32 16, i32 16, i32 16, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%output_ftmap_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %output_ftmap" [src/conv3.cpp:31]   --->   Operation 16 'read' 'output_ftmap_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%conv3_biases_0_0_val_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %conv3_biases_0_0_val" [src/conv3.cpp:31]   --->   Operation 17 'read' 'conv3_biases_0_0_val_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%conv3_weights_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %conv3_weights" [src/conv3.cpp:31]   --->   Operation 18 'read' 'conv3_weights_read' <Predicate = true> <Delay = 0.00>
@@ -120,7 +120,7 @@ ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_1_mid1 = bitconcatenate i8 @_s
 ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %tj_load, i4 %tj_load" [src/conv3.cpp:31]   --->   Operation 36 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln31)> <Delay = 0.00>
 ST_2 : Operation 37 [1/1] (0.39ns)   --->   "%select_ln31_1 = select i1 %icmp_ln32, i8 %tmp_1_mid1, i8 %tmp_s" [src/conv3.cpp:31]   --->   Operation 37 'select' 'select_ln31_1' <Predicate = (!icmp_ln31)> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_2 : Operation 38 [1/1] (0.39ns)   --->   "%select_ln31_2 = select i1 %icmp_ln32, i4 %add_ln31, i4 %tj_load" [src/conv3.cpp:31]   --->   Operation 38 'select' 'select_ln31_2' <Predicate = (!icmp_ln31)> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%specloopname_ln32 = specloopname void @_ssdm_op_SpecLoopName, void @empty_36" [src/conv3.cpp:32]   --->   Operation 39 'specloopname' 'specloopname_ln32' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%specloopname_ln32 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5" [src/conv3.cpp:32]   --->   Operation 39 'specloopname' 'specloopname_ln32' <Predicate = (!icmp_ln31)> <Delay = 0.00>
 ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%p_shl1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %select_ln31, i4 0" [src/conv3.cpp:31]   --->   Operation 40 'bitconcatenate' 'p_shl1' <Predicate = (!icmp_ln31)> <Delay = 0.00>
 ST_2 : Operation 41 [1/1] (0.42ns)   --->   "%br_ln40 = br void %NOUT" [src/conv3.cpp:40]   --->   Operation 41 'br' 'br_ln40' <Predicate = (!icmp_ln31)> <Delay = 0.42>
 ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%ret_ln84 = ret" [src/conv3.cpp:84]   --->   Operation 42 'ret' 'ret_ln84' <Predicate = (icmp_ln31)> <Delay = 0.00>
@@ -145,7 +145,7 @@ ST_4 : Operation 56 [1/2] (0.00ns)   --->   "%call_ln0 = call void @conv3_Pipeli
 
 State 5 <SV = 4> <Delay = 0.00>
 ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%shl_ln1 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i2.i3, i2 %trunc_ln103, i3 0" [src/conv3.cpp:103->src/conv3.cpp:52]   --->   Operation 57 'bitconcatenate' 'shl_ln1' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%tmp1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %select_ln31_2, i4 %select_ln31_2" [src/srcnn.cpp:52->src/conv3.cpp:111->src/conv3.cpp:52]   --->   Operation 58 'bitconcatenate' 'tmp1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%tmp1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %select_ln31_2, i4 %select_ln31_2" [src/srcnn.cpp:54->src/conv3.cpp:111->src/conv3.cpp:52]   --->   Operation 58 'bitconcatenate' 'tmp1' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 59 [2/2] (0.00ns)   --->   "%call_ln31 = call void @conv3_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_VITIS_LOOP_107_3, i8 %select_ln31_1, i8 %tmp1, i5 %shl_ln1, i4 %select_ln31, i64 %input_ftmap_read, i32 %gmem, i32 %input_fm_buffer" [src/conv3.cpp:31]   --->   Operation 59 'call' 'call_ln31' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 6 <SV = 5> <Delay = 1.65>
@@ -159,7 +159,7 @@ ST_7 : Operation 64 [2/2] (1.08ns)   --->   "%call_ln103 = call void @conv3_Pipe
 
 State 8 <SV = 7> <Delay = 0.00>
 ST_8 : Operation 65 [1/1] (0.00ns)   --->   "%speclooptripcount_ln40 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4" [src/conv3.cpp:40]   --->   Operation 65 'speclooptripcount' 'speclooptripcount_ln40' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 66 [1/1] (0.00ns)   --->   "%specloopname_ln40 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5" [src/conv3.cpp:40]   --->   Operation 66 'specloopname' 'specloopname_ln40' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 66 [1/1] (0.00ns)   --->   "%specloopname_ln40 = specloopname void @_ssdm_op_SpecLoopName, void @empty_13" [src/conv3.cpp:40]   --->   Operation 66 'specloopname' 'specloopname_ln40' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 67 [1/2] (0.00ns)   --->   "%call_ln103 = call void @conv3_Pipeline_TY_TX, i12 %empty, i64 %conv3_weights_read, i12 %empty, i12 %phi_mul, i32 %gmem, i32 %output_fm_buffer_0, i32 %input_fm_buffer" [src/conv3.cpp:103->src/conv3.cpp:52]   --->   Operation 67 'call' 'call_ln103' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_8 : Operation 68 [1/1] (0.00ns)   --->   "%br_ln40 = br void %NOUT" [src/conv3.cpp:40]   --->   Operation 68 'br' 'br_ln40' <Predicate = true> <Delay = 0.00>
 

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_NOUT_TY_TX'
 ================================================================
-* Date:           Tue Oct 31 13:43:44 2023
+* Date:           Tue Oct 31 16:54:33 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -127,28 +127,28 @@ IsGatedGlobalClock: 0
 State 1 <SV = 0> <Delay = 0.42>
 ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%bx = alloca i32 1"   --->   Operation 44 'alloca' 'bx' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%ty = alloca i32 1"   --->   Operation 45 'alloca' 'ty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%indvar_flatten11 = alloca i32 1"   --->   Operation 46 'alloca' 'indvar_flatten11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%indvar_flatten10 = alloca i32 1"   --->   Operation 46 'alloca' 'indvar_flatten10' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%nout = alloca i32 1"   --->   Operation 47 'alloca' 'nout' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%indvar_flatten32 = alloca i32 1"   --->   Operation 48 'alloca' 'indvar_flatten32' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 49 [1/1] (0.42ns)   --->   "%store_ln0 = store i14 0, i14 %indvar_flatten32"   --->   Operation 49 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%indvar_flatten31 = alloca i32 1"   --->   Operation 48 'alloca' 'indvar_flatten31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.42ns)   --->   "%store_ln0 = store i14 0, i14 %indvar_flatten31"   --->   Operation 49 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 50 [1/1] (0.42ns)   --->   "%store_ln0 = store i6 0, i6 %nout"   --->   Operation 50 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
-ST_1 : Operation 51 [1/1] (0.42ns)   --->   "%store_ln0 = store i10 0, i10 %indvar_flatten11"   --->   Operation 51 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 51 [1/1] (0.42ns)   --->   "%store_ln0 = store i10 0, i10 %indvar_flatten10"   --->   Operation 51 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 52 [1/1] (0.42ns)   --->   "%store_ln0 = store i5 0, i5 %ty"   --->   Operation 52 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 53 [1/1] (0.42ns)   --->   "%store_ln0 = store i5 0, i5 %bx"   --->   Operation 53 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%br_ln0 = br void %KY"   --->   Operation 54 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 6.00>
-ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%indvar_flatten32_load = load i14 %indvar_flatten32" [src/conv2.cpp:55]   --->   Operation 55 'load' 'indvar_flatten32_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%indvar_flatten31_load = load i14 %indvar_flatten31" [src/conv2.cpp:55]   --->   Operation 55 'load' 'indvar_flatten31_load' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 56 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 57 [1/1] (0.83ns)   --->   "%icmp_ln55 = icmp_eq  i14 %indvar_flatten32_load, i14 9248" [src/conv2.cpp:55]   --->   Operation 57 'icmp' 'icmp_ln55' <Predicate = true> <Delay = 0.83> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 58 [1/1] (0.83ns)   --->   "%add_ln55_1 = add i14 %indvar_flatten32_load, i14 1" [src/conv2.cpp:55]   --->   Operation 58 'add' 'add_ln55_1' <Predicate = true> <Delay = 0.83> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 57 [1/1] (0.83ns)   --->   "%icmp_ln55 = icmp_eq  i14 %indvar_flatten31_load, i14 9248" [src/conv2.cpp:55]   --->   Operation 57 'icmp' 'icmp_ln55' <Predicate = true> <Delay = 0.83> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [1/1] (0.83ns)   --->   "%add_ln55_1 = add i14 %indvar_flatten31_load, i14 1" [src/conv2.cpp:55]   --->   Operation 58 'add' 'add_ln55_1' <Predicate = true> <Delay = 0.83> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln55 = br i1 %icmp_ln55, void %for.inc69, void %for.inc72.exitStub" [src/conv2.cpp:55]   --->   Operation 59 'br' 'br_ln55' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%bx_load = load i5 %bx" [src/conv2.cpp:58]   --->   Operation 60 'load' 'bx_load' <Predicate = (!icmp_ln55)> <Delay = 0.00>
 ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%ty_load = load i5 %ty" [src/conv2.cpp:55]   --->   Operation 61 'load' 'ty_load' <Predicate = (!icmp_ln55)> <Delay = 0.00>
-ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%indvar_flatten11_load = load i10 %indvar_flatten11" [src/conv2.cpp:57]   --->   Operation 62 'load' 'indvar_flatten11_load' <Predicate = (!icmp_ln55)> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%indvar_flatten10_load = load i10 %indvar_flatten10" [src/conv2.cpp:57]   --->   Operation 62 'load' 'indvar_flatten10_load' <Predicate = (!icmp_ln55)> <Delay = 0.00>
 ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%nout_load = load i6 %nout" [src/conv2.cpp:55]   --->   Operation 63 'load' 'nout_load' <Predicate = (!icmp_ln55)> <Delay = 0.00>
 ST_2 : Operation 64 [1/1] (0.78ns)   --->   "%add_ln55 = add i6 %nout_load, i6 1" [src/conv2.cpp:55]   --->   Operation 64 'add' 'add_ln55' <Predicate = (!icmp_ln55)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 65 [1/1] (0.78ns)   --->   "%icmp_ln57 = icmp_eq  i10 %indvar_flatten11_load, i10 289" [src/conv2.cpp:57]   --->   Operation 65 'icmp' 'icmp_ln57' <Predicate = (!icmp_ln55)> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 65 [1/1] (0.78ns)   --->   "%icmp_ln57 = icmp_eq  i10 %indvar_flatten10_load, i10 289" [src/conv2.cpp:57]   --->   Operation 65 'icmp' 'icmp_ln57' <Predicate = (!icmp_ln55)> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 66 [1/1] (0.41ns)   --->   "%select_ln55 = select i1 %icmp_ln57, i5 0, i5 %ty_load" [src/conv2.cpp:55]   --->   Operation 66 'select' 'select_ln55' <Predicate = (!icmp_ln55)> <Delay = 0.41> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_2 : Operation 67 [1/1] (0.38ns)   --->   "%select_ln55_1 = select i1 %icmp_ln57, i6 %add_ln55, i6 %nout_load" [src/conv2.cpp:55]   --->   Operation 67 'select' 'select_ln55_1' <Predicate = (!icmp_ln55)> <Delay = 0.38> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.38> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%zext_ln55 = zext i6 %select_ln55_1" [src/conv2.cpp:55]   --->   Operation 68 'zext' 'zext_ln55' <Predicate = (!icmp_ln55)> <Delay = 0.00>
@@ -187,11 +187,11 @@ ST_2 : Operation 100 [1/1] (0.77ns)   --->   "%add_ln72 = add i10 %zext_ln72_233
 ST_2 : Operation 101 [1/1] (0.00ns)   --->   "%zext_ln72_235 = zext i10 %add_ln72" [src/conv2.cpp:72]   --->   Operation 101 'zext' 'zext_ln72_235' <Predicate = (!icmp_ln55)> <Delay = 0.00>
 ST_2 : Operation 102 [1/1] (0.78ns)   --->   "%add_ln72_395 = add i11 %zext_ln72_235, i11 289" [src/conv2.cpp:72]   --->   Operation 102 'add' 'add_ln72_395' <Predicate = (!icmp_ln55)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%zext_ln72_236 = zext i11 %add_ln72_395" [src/conv2.cpp:72]   --->   Operation 103 'zext' 'zext_ln72_236' <Predicate = (!icmp_ln55)> <Delay = 0.00>
-ST_2 : Operation 104 [1/1] (0.91ns) (root node of TernaryAdder)   --->   "%empty_105 = add i11 %empty, i11 %zext_ln72" [src/conv2.cpp:55]   --->   Operation 104 'add' 'empty_105' <Predicate = (!icmp_ln55)> <Delay = 0.91> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.43> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 105 [1/1] (0.00ns)   --->   "%p_cast = zext i11 %empty_105" [src/conv2.cpp:55]   --->   Operation 105 'zext' 'p_cast' <Predicate = (!icmp_ln55)> <Delay = 0.00>
-ST_2 : Operation 106 [1/1] (0.00ns)   --->   "%empty_106 = trunc i11 %empty_105" [src/conv2.cpp:55]   --->   Operation 106 'trunc' 'empty_106' <Predicate = (!icmp_ln55)> <Delay = 0.00>
-ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%p_shl3 = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i10.i4, i10 %empty_106, i4 0" [src/conv2.cpp:55]   --->   Operation 107 'bitconcatenate' 'p_shl3' <Predicate = (!icmp_ln55)> <Delay = 0.00>
-ST_2 : Operation 108 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%empty_107 = add i14 %p_shl3, i14 %p_cast" [src/conv2.cpp:55]   --->   Operation 108 'add' 'empty_107' <Predicate = (!icmp_ln55)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.43> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 104 [1/1] (0.91ns) (root node of TernaryAdder)   --->   "%empty_103 = add i11 %empty, i11 %zext_ln72" [src/conv2.cpp:55]   --->   Operation 104 'add' 'empty_103' <Predicate = (!icmp_ln55)> <Delay = 0.91> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.43> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 105 [1/1] (0.00ns)   --->   "%p_cast = zext i11 %empty_103" [src/conv2.cpp:55]   --->   Operation 105 'zext' 'p_cast' <Predicate = (!icmp_ln55)> <Delay = 0.00>
+ST_2 : Operation 106 [1/1] (0.00ns)   --->   "%empty_104 = trunc i11 %empty_103" [src/conv2.cpp:55]   --->   Operation 106 'trunc' 'empty_104' <Predicate = (!icmp_ln55)> <Delay = 0.00>
+ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%p_shl3 = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i10.i4, i10 %empty_104, i4 0" [src/conv2.cpp:55]   --->   Operation 107 'bitconcatenate' 'p_shl3' <Predicate = (!icmp_ln55)> <Delay = 0.00>
+ST_2 : Operation 108 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%empty_105 = add i14 %p_shl3, i14 %p_cast" [src/conv2.cpp:55]   --->   Operation 108 'add' 'empty_105' <Predicate = (!icmp_ln55)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.43> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
 ST_2 : Operation 109 [1/1] (0.00ns)   --->   "%zext_ln72_239 = zext i5 %select_ln57" [src/conv2.cpp:72]   --->   Operation 109 'zext' 'zext_ln72_239' <Predicate = (!icmp_ln55)> <Delay = 0.00>
 ST_2 : Operation 110 [1/1] (0.00ns)   --->   "%zext_ln72_240 = zext i5 %select_ln57" [src/conv2.cpp:72]   --->   Operation 110 'zext' 'zext_ln72_240' <Predicate = (!icmp_ln55)> <Delay = 0.00>
 ST_2 : Operation 111 [1/1] (0.00ns)   --->   "%zext_ln72_241 = zext i5 %select_ln57" [src/conv2.cpp:72]   --->   Operation 111 'zext' 'zext_ln72_241' <Predicate = (!icmp_ln55)> <Delay = 0.00>
@@ -201,18 +201,18 @@ ST_2 : Operation 114 [1/1] (0.00ns)   --->   "%input_fm_buffer_1_addr = geteleme
 ST_2 : Operation 115 [1/1] (0.79ns)   --->   "%add_ln72_403 = add i12 %zext_ln72_236, i12 %zext_ln72_240" [src/conv2.cpp:72]   --->   Operation 115 'add' 'add_ln72_403' <Predicate = (!icmp_ln55)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 116 [1/1] (0.00ns)   --->   "%zext_ln72_243 = zext i12 %add_ln72_403" [src/conv2.cpp:72]   --->   Operation 116 'zext' 'zext_ln72_243' <Predicate = (!icmp_ln55)> <Delay = 0.00>
 ST_2 : Operation 117 [1/1] (0.00ns)   --->   "%input_fm_buffer_1_addr_17 = getelementptr i32 %input_fm_buffer_1, i64 0, i64 %zext_ln72_243" [src/conv2.cpp:72]   --->   Operation 117 'getelementptr' 'input_fm_buffer_1_addr_17' <Predicate = (!icmp_ln55)> <Delay = 0.00>
-ST_2 : Operation 118 [1/1] (0.77ns) (root node of TernaryAdder)   --->   "%empty_108 = add i14 %empty_107, i14 %zext_ln72_239" [src/conv2.cpp:55]   --->   Operation 118 'add' 'empty_108' <Predicate = (!icmp_ln55)> <Delay = 0.77> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.43> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 119 [1/1] (0.00ns)   --->   "%p_cast6 = zext i14 %empty_108" [src/conv2.cpp:55]   --->   Operation 119 'zext' 'p_cast6' <Predicate = (!icmp_ln55)> <Delay = 0.00>
+ST_2 : Operation 118 [1/1] (0.77ns) (root node of TernaryAdder)   --->   "%empty_106 = add i14 %empty_105, i14 %zext_ln72_239" [src/conv2.cpp:55]   --->   Operation 118 'add' 'empty_106' <Predicate = (!icmp_ln55)> <Delay = 0.77> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.43> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 119 [1/1] (0.00ns)   --->   "%p_cast6 = zext i14 %empty_106" [src/conv2.cpp:55]   --->   Operation 119 'zext' 'p_cast6' <Predicate = (!icmp_ln55)> <Delay = 0.00>
 ST_2 : Operation 120 [1/1] (0.00ns)   --->   "%output_fm_buffer_addr = getelementptr i32 %output_fm_buffer, i64 0, i64 %p_cast6" [src/conv2.cpp:55]   --->   Operation 120 'getelementptr' 'output_fm_buffer_addr' <Predicate = (!icmp_ln55)> <Delay = 0.00>
 ST_2 : Operation 121 [2/2] (1.23ns)   --->   "%output_fm_buffer_load = load i14 %output_fm_buffer_addr" [src/conv2.cpp:72]   --->   Operation 121 'load' 'output_fm_buffer_load' <Predicate = (!icmp_ln55)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9248> <RAM>
 ST_2 : Operation 122 [2/2] (1.23ns)   --->   "%input_fm_buffer_1_load = load i12 %input_fm_buffer_1_addr" [src/conv2.cpp:72]   --->   Operation 122 'load' 'input_fm_buffer_1_load' <Predicate = (!icmp_ln55)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2312> <RAM>
 ST_2 : Operation 123 [2/2] (1.23ns)   --->   "%input_fm_buffer_1_load_1 = load i12 %input_fm_buffer_1_addr_17" [src/conv2.cpp:72]   --->   Operation 123 'load' 'input_fm_buffer_1_load_1' <Predicate = (!icmp_ln55)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2312> <RAM>
 ST_2 : Operation 124 [1/1] (0.78ns)   --->   "%add_ln58 = add i5 %select_ln57, i5 1" [src/conv2.cpp:58]   --->   Operation 124 'add' 'add_ln58' <Predicate = (!icmp_ln55)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 125 [1/1] (0.78ns)   --->   "%add_ln57_1 = add i10 %indvar_flatten11_load, i10 1" [src/conv2.cpp:57]   --->   Operation 125 'add' 'add_ln57_1' <Predicate = (!icmp_ln55)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 125 [1/1] (0.78ns)   --->   "%add_ln57_1 = add i10 %indvar_flatten10_load, i10 1" [src/conv2.cpp:57]   --->   Operation 125 'add' 'add_ln57_1' <Predicate = (!icmp_ln55)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 126 [1/1] (0.40ns)   --->   "%select_ln57_2 = select i1 %icmp_ln57, i10 1, i10 %add_ln57_1" [src/conv2.cpp:57]   --->   Operation 126 'select' 'select_ln57_2' <Predicate = (!icmp_ln55)> <Delay = 0.40> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.40> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_2 : Operation 127 [1/1] (0.42ns)   --->   "%store_ln58 = store i14 %add_ln55_1, i14 %indvar_flatten32" [src/conv2.cpp:58]   --->   Operation 127 'store' 'store_ln58' <Predicate = (!icmp_ln55)> <Delay = 0.42>
+ST_2 : Operation 127 [1/1] (0.42ns)   --->   "%store_ln58 = store i14 %add_ln55_1, i14 %indvar_flatten31" [src/conv2.cpp:58]   --->   Operation 127 'store' 'store_ln58' <Predicate = (!icmp_ln55)> <Delay = 0.42>
 ST_2 : Operation 128 [1/1] (0.42ns)   --->   "%store_ln58 = store i6 %select_ln55_1, i6 %nout" [src/conv2.cpp:58]   --->   Operation 128 'store' 'store_ln58' <Predicate = (!icmp_ln55)> <Delay = 0.42>
-ST_2 : Operation 129 [1/1] (0.42ns)   --->   "%store_ln58 = store i10 %select_ln57_2, i10 %indvar_flatten11" [src/conv2.cpp:58]   --->   Operation 129 'store' 'store_ln58' <Predicate = (!icmp_ln55)> <Delay = 0.42>
+ST_2 : Operation 129 [1/1] (0.42ns)   --->   "%store_ln58 = store i10 %select_ln57_2, i10 %indvar_flatten10" [src/conv2.cpp:58]   --->   Operation 129 'store' 'store_ln58' <Predicate = (!icmp_ln55)> <Delay = 0.42>
 ST_2 : Operation 130 [1/1] (0.42ns)   --->   "%store_ln58 = store i5 %select_ln57_1, i5 %ty" [src/conv2.cpp:58]   --->   Operation 130 'store' 'store_ln58' <Predicate = (!icmp_ln55)> <Delay = 0.42>
 ST_2 : Operation 131 [1/1] (0.42ns)   --->   "%store_ln58 = store i5 %add_ln58, i5 %bx" [src/conv2.cpp:58]   --->   Operation 131 'store' 'store_ln58' <Predicate = (!icmp_ln55)> <Delay = 0.42>
 
@@ -423,7 +423,7 @@ ST_42 : Operation 239 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = specloop
 ST_42 : Operation 240 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 240 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
 ST_42 : Operation 241 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @TY_TX_str"   --->   Operation 241 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
 ST_42 : Operation 242 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 242 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_42 : Operation 243 [1/1] (0.00ns)   --->   "%specloopname_ln58 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [src/conv2.cpp:58]   --->   Operation 243 'specloopname' 'specloopname_ln58' <Predicate = true> <Delay = 0.00>
+ST_42 : Operation 243 [1/1] (0.00ns)   --->   "%specloopname_ln58 = specloopname void @_ssdm_op_SpecLoopName, void @empty_1" [src/conv2.cpp:58]   --->   Operation 243 'specloopname' 'specloopname_ln58' <Predicate = true> <Delay = 0.00>
 ST_42 : Operation 244 [1/1] (1.23ns)   --->   "%store_ln72 = store i32 %add56_7, i14 %output_fm_buffer_addr" [src/conv2.cpp:72]   --->   Operation 244 'store' 'store_ln72' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9248> <RAM>
 ST_42 : Operation 245 [1/1] (0.00ns)   --->   "%br_ln58 = br void %KY" [src/conv2.cpp:58]   --->   Operation 245 'br' 'br_ln58' <Predicate = true> <Delay = 0.00>
 
@@ -457,23 +457,23 @@ Port [ input_fm_buffer_1]:  wired=1; compound=1; hidden=0; nouse=0; global=1; st
 <method=bitvector/>
 bx                        (alloca           ) [ 0110000000000000000000000000000000000000000]
 ty                        (alloca           ) [ 0110000000000000000000000000000000000000000]
-indvar_flatten11          (alloca           ) [ 0110000000000000000000000000000000000000000]
+indvar_flatten10          (alloca           ) [ 0110000000000000000000000000000000000000000]
 nout                      (alloca           ) [ 0110000000000000000000000000000000000000000]
-indvar_flatten32          (alloca           ) [ 0110000000000000000000000000000000000000000]
+indvar_flatten31          (alloca           ) [ 0110000000000000000000000000000000000000000]
 store_ln0                 (store            ) [ 0000000000000000000000000000000000000000000]
 store_ln0                 (store            ) [ 0000000000000000000000000000000000000000000]
 store_ln0                 (store            ) [ 0000000000000000000000000000000000000000000]
 store_ln0                 (store            ) [ 0000000000000000000000000000000000000000000]
 store_ln0                 (store            ) [ 0000000000000000000000000000000000000000000]
 br_ln0                    (br               ) [ 0000000000000000000000000000000000000000000]
-indvar_flatten32_load     (load             ) [ 0000000000000000000000000000000000000000000]
+indvar_flatten31_load     (load             ) [ 0000000000000000000000000000000000000000000]
 specpipeline_ln0          (specpipeline     ) [ 0000000000000000000000000000000000000000000]
 icmp_ln55                 (icmp             ) [ 0111111111111111111111111111111111111110000]
 add_ln55_1                (add              ) [ 0000000000000000000000000000000000000000000]
 br_ln55                   (br               ) [ 0000000000000000000000000000000000000000000]
 bx_load                   (load             ) [ 0000000000000000000000000000000000000000000]
 ty_load                   (load             ) [ 0000000000000000000000000000000000000000000]
-indvar_flatten11_load     (load             ) [ 0000000000000000000000000000000000000000000]
+indvar_flatten10_load     (load             ) [ 0000000000000000000000000000000000000000000]
 nout_load                 (load             ) [ 0000000000000000000000000000000000000000000]
 add_ln55                  (add              ) [ 0000000000000000000000000000000000000000000]
 icmp_ln57                 (icmp             ) [ 0000000000000000000000000000000000000000000]
@@ -507,11 +507,11 @@ add_ln72                  (add              ) [ 00011000000000000000000000000000
 zext_ln72_235             (zext             ) [ 0001000000000000000000000000000000000000000]
 add_ln72_395              (add              ) [ 0000000000000000000000000000000000000000000]
 zext_ln72_236             (zext             ) [ 0000000000000000000000000000000000000000000]
-empty_105                 (add              ) [ 0000000000000000000000000000000000000000000]
+empty_103                 (add              ) [ 0000000000000000000000000000000000000000000]
 p_cast                    (zext             ) [ 0000000000000000000000000000000000000000000]
-empty_106                 (trunc            ) [ 0000000000000000000000000000000000000000000]
+empty_104                 (trunc            ) [ 0000000000000000000000000000000000000000000]
 p_shl3                    (bitconcatenate   ) [ 0000000000000000000000000000000000000000000]
-empty_107                 (add              ) [ 0000000000000000000000000000000000000000000]
+empty_105                 (add              ) [ 0000000000000000000000000000000000000000000]
 zext_ln72_239             (zext             ) [ 0000000000000000000000000000000000000000000]
 zext_ln72_240             (zext             ) [ 0101110000000000000000000000000000000000000]
 zext_ln72_241             (zext             ) [ 0000000000000000000000000000000000000000000]
@@ -521,7 +521,7 @@ input_fm_buffer_1_addr    (getelementptr    ) [ 00010000000000000000000000000000
 add_ln72_403              (add              ) [ 0000000000000000000000000000000000000000000]
 zext_ln72_243             (zext             ) [ 0000000000000000000000000000000000000000000]
 input_fm_buffer_1_addr_17 (getelementptr    ) [ 0001000000000000000000000000000000000000000]
-empty_108                 (add              ) [ 0000000000000000000000000000000000000000000]
+empty_106                 (add              ) [ 0000000000000000000000000000000000000000000]
 p_cast6                   (zext             ) [ 0000000000000000000000000000000000000000000]
 output_fm_buffer_addr     (getelementptr    ) [ 0111111111111111111111111111111111111111111]
 add_ln58                  (add              ) [ 0000000000000000000000000000000000000000000]
@@ -1017,7 +1017,7 @@ ret_ln0                   (ret              ) [ 00000000000000000000000000000000
 <pin id="89" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_3"/></StgValue>
+<StgValue><ssdm name="empty_1"/></StgValue>
 </bind>
 </comp>
 
@@ -1043,14 +1043,14 @@ ret_ln0                   (ret              ) [ 00000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="98" class="1004" name="indvar_flatten11_fu_98">
+<comp id="98" class="1004" name="indvar_flatten10_fu_98">
 <pin_list>
 <pin id="99" dir="0" index="0" bw="1" slack="0"/>
 <pin id="100" dir="1" index="1" bw="10" slack="0"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
-<opset="indvar_flatten11/1 "/>
+<opset="indvar_flatten10/1 "/>
 </bind>
 </comp>
 
@@ -1065,14 +1065,14 @@ ret_ln0                   (ret              ) [ 00000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="106" class="1004" name="indvar_flatten32_fu_106">
+<comp id="106" class="1004" name="indvar_flatten31_fu_106">
 <pin_list>
 <pin id="107" dir="0" index="0" bw="1" slack="0"/>
 <pin id="108" dir="1" index="1" bw="14" slack="0"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
-<opset="indvar_flatten32/1 "/>
+<opset="indvar_flatten31/1 "/>
 </bind>
 </comp>
 
@@ -1543,14 +1543,14 @@ ret_ln0                   (ret              ) [ 00000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="345" class="1004" name="indvar_flatten32_load_load_fu_345">
+<comp id="345" class="1004" name="indvar_flatten31_load_load_fu_345">
 <pin_list>
 <pin id="346" dir="0" index="0" bw="14" slack="1"/>
 <pin id="347" dir="1" index="1" bw="14" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
-<opset="indvar_flatten32_load/2 "/>
+<opset="indvar_flatten31_load/2 "/>
 </bind>
 </comp>
 
@@ -1600,14 +1600,14 @@ ret_ln0                   (ret              ) [ 00000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="366" class="1004" name="indvar_flatten11_load_load_fu_366">
+<comp id="366" class="1004" name="indvar_flatten10_load_load_fu_366">
 <pin_list>
 <pin id="367" dir="0" index="0" bw="10" slack="1"/>
 <pin id="368" dir="1" index="1" bw="10" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
-<opset="indvar_flatten11_load/2 "/>
+<opset="indvar_flatten10_load/2 "/>
 </bind>
 </comp>
 
@@ -1908,7 +1908,7 @@ ret_ln0                   (ret              ) [ 00000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="520" class="1004" name="empty_105_fu_520">
+<comp id="520" class="1004" name="empty_103_fu_520">
 <pin_list>
 <pin id="521" dir="0" index="0" bw="11" slack="0"/>
 <pin id="522" dir="0" index="1" bw="5" slack="0"/>
@@ -1916,7 +1916,7 @@ ret_ln0                   (ret              ) [ 00000000000000000000000000000000
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="empty_105/2 "/>
+<opset="empty_103/2 "/>
 </bind>
 </comp>
 
@@ -1931,14 +1931,14 @@ ret_ln0                   (ret              ) [ 00000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="530" class="1004" name="empty_106_fu_530">
+<comp id="530" class="1004" name="empty_104_fu_530">
 <pin_list>
 <pin id="531" dir="0" index="0" bw="11" slack="0"/>
 <pin id="532" dir="1" index="1" bw="10" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="empty_106/2 "/>
+<opset="empty_104/2 "/>
 </bind>
 </comp>
 
@@ -1955,7 +1955,7 @@ ret_ln0                   (ret              ) [ 00000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="542" class="1004" name="empty_107_fu_542">
+<comp id="542" class="1004" name="empty_105_fu_542">
 <pin_list>
 <pin id="543" dir="0" index="0" bw="14" slack="0"/>
 <pin id="544" dir="0" index="1" bw="11" slack="0"/>
@@ -1963,7 +1963,7 @@ ret_ln0                   (ret              ) [ 00000000000000000000000000000000
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="empty_107/2 "/>
+<opset="empty_105/2 "/>
 </bind>
 </comp>
 
@@ -2046,7 +2046,7 @@ ret_ln0                   (ret              ) [ 00000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="582" class="1004" name="empty_108_fu_582">
+<comp id="582" class="1004" name="empty_106_fu_582">
 <pin_list>
 <pin id="583" dir="0" index="0" bw="14" slack="0"/>
 <pin id="584" dir="0" index="1" bw="5" slack="0"/>
@@ -2054,7 +2054,7 @@ ret_ln0                   (ret              ) [ 00000000000000000000000000000000
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="empty_108/2 "/>
+<opset="empty_106/2 "/>
 </bind>
 </comp>
 
@@ -2429,13 +2429,13 @@ ret_ln0                   (ret              ) [ 00000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="755" class="1005" name="indvar_flatten11_reg_755">
+<comp id="755" class="1005" name="indvar_flatten10_reg_755">
 <pin_list>
 <pin id="756" dir="0" index="0" bw="10" slack="0"/>
 <pin id="757" dir="1" index="1" bw="10" slack="0"/>
 </pin_list>
 <bind>
-<opset="indvar_flatten11 "/>
+<opset="indvar_flatten10 "/>
 </bind>
 </comp>
 
@@ -2449,13 +2449,13 @@ ret_ln0                   (ret              ) [ 00000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="769" class="1005" name="indvar_flatten32_reg_769">
+<comp id="769" class="1005" name="indvar_flatten31_reg_769">
 <pin_list>
 <pin id="770" dir="0" index="0" bw="14" slack="0"/>
 <pin id="771" dir="1" index="1" bw="14" slack="0"/>
 </pin_list>
 <bind>
-<opset="indvar_flatten32 "/>
+<opset="indvar_flatten31 "/>
 </bind>
 </comp>
 
@@ -3722,11 +3722,11 @@ ret_ln0                   (ret              ) [ 00000000000000000000000000000000
 		zext_ln72_235 : 6
 		add_ln72_395 : 7
 		zext_ln72_236 : 8
-		empty_105 : 6
+		empty_103 : 6
 		p_cast : 7
-		empty_106 : 7
+		empty_104 : 7
 		p_shl3 : 8
-		empty_107 : 9
+		empty_105 : 9
 		zext_ln72_239 : 3
 		zext_ln72_240 : 3
 		zext_ln72_241 : 3
@@ -3736,7 +3736,7 @@ ret_ln0                   (ret              ) [ 00000000000000000000000000000000
 		add_ln72_403 : 9
 		zext_ln72_243 : 10
 		input_fm_buffer_1_addr_17 : 11
-		empty_108 : 10
+		empty_106 : 10
 		p_cast6 : 11
 		output_fm_buffer_addr : 12
 		output_fm_buffer_load : 13
@@ -3840,11 +3840,11 @@ ret_ln0                   (ret              ) [ 00000000000000000000000000000000
 |          |      add_ln57_fu_452      |    0    |    0    |    12   |
 |          |      add_ln72_fu_500      |    0    |    0    |    16   |
 |          |    add_ln72_395_fu_510    |    0    |    0    |    17   |
-|          |      empty_105_fu_520     |    0    |    0    |    17   |
-|          |      empty_107_fu_542     |    0    |    0    |    16   |
+|          |      empty_103_fu_520     |    0    |    0    |    17   |
+|          |      empty_105_fu_542     |    0    |    0    |    16   |
 |          |    add_ln72_402_fu_560    |    0    |    0    |    17   |
 |          |    add_ln72_403_fu_571    |    0    |    0    |    18   |
-|          |      empty_108_fu_582     |    0    |    0    |    16   |
+|          |      empty_106_fu_582     |    0    |    0    |    16   |
 |          |      add_ln58_fu_593      |    0    |    0    |    12   |
 |    add   |     add_ln57_1_fu_599     |    0    |    0    |    17   |
 |          |    add_ln72_396_fu_638    |    0    |    0    |    18   |
@@ -3905,7 +3905,7 @@ ret_ln0                   (ret              ) [ 00000000000000000000000000000000
 |bitconcatenate|       p_shl2_fu_488       |    0    |    0    |    0    |
 |          |       p_shl3_fu_534       |    0    |    0    |    0    |
 |----------|---------------------------|---------|---------|---------|
-|   trunc  |      empty_106_fu_530     |    0    |    0    |    0    |
+|   trunc  |      empty_104_fu_530     |    0    |    0    |    0    |
 |----------|---------------------------|---------|---------|---------|
 |   Total  |                           |    10   |   710   |   1203  |
 |----------|---------------------------|---------|---------|---------|
@@ -3928,8 +3928,8 @@ N/A
 |           add_reg_1018          |   32   |
 |            bx_reg_741           |    5   |
 |        icmp_ln55_reg_776        |    1   |
-|     indvar_flatten11_reg_755    |   10   |
-|     indvar_flatten32_reg_769    |   14   |
+|     indvar_flatten10_reg_755    |   10   |
+|     indvar_flatten31_reg_769    |   14   |
 |input_fm_buffer_1_addr_17_reg_846|   12   |
 |input_fm_buffer_1_addr_18_reg_897|   12   |
 |input_fm_buffer_1_addr_19_reg_902|   12   |

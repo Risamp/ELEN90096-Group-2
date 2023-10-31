@@ -268,7 +268,7 @@ newFuncRoot:8 %ti_cast20_cast = zext i4 %ti_cast20_read
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:9 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_15, i32 0, i32 0, void @empty_12, i32 0, i32 512, void @empty_20, void @empty_21, void @empty_12, i32 16, i32 16, i32 16, i32 16, void @empty_12, void @empty_12, i32 4294967295, i32 0
+newFuncRoot:9 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_15, i32 0, i32 0, void @empty_10, i32 0, i32 512, void @empty_19, void @empty_20, void @empty_10, i32 16, i32 16, i32 16, i32 16, void @empty_10, void @empty_10, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -1648,7 +1648,7 @@ for.inc24.i:19 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32
 
 <Node id="61" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc24.i:24 %specloopname_ln139 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10
+for.inc24.i:24 %specloopname_ln139 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln139"/></StgValue>
@@ -1752,17 +1752,17 @@ for.inc24.i:49 %br_ln139 = br void %for.inc.i24
 </dataflow>
 <dataflow id="197" from="StgValue_195" to="specinterface_ln0" fromId="195" toId="32">
 </dataflow>
-<dataflow id="199" from="empty_12" to="specinterface_ln0" fromId="198" toId="32">
+<dataflow id="199" from="empty_10" to="specinterface_ln0" fromId="198" toId="32">
 </dataflow>
 <dataflow id="200" from="StgValue_195" to="specinterface_ln0" fromId="195" toId="32">
 </dataflow>
 <dataflow id="202" from="StgValue_201" to="specinterface_ln0" fromId="201" toId="32">
 </dataflow>
-<dataflow id="204" from="empty_20" to="specinterface_ln0" fromId="203" toId="32">
+<dataflow id="204" from="empty_19" to="specinterface_ln0" fromId="203" toId="32">
 </dataflow>
-<dataflow id="206" from="empty_21" to="specinterface_ln0" fromId="205" toId="32">
+<dataflow id="206" from="empty_20" to="specinterface_ln0" fromId="205" toId="32">
 </dataflow>
-<dataflow id="207" from="empty_12" to="specinterface_ln0" fromId="198" toId="32">
+<dataflow id="207" from="empty_10" to="specinterface_ln0" fromId="198" toId="32">
 </dataflow>
 <dataflow id="209" from="StgValue_208" to="specinterface_ln0" fromId="208" toId="32">
 </dataflow>
@@ -1772,9 +1772,9 @@ for.inc24.i:49 %br_ln139 = br void %for.inc.i24
 </dataflow>
 <dataflow id="212" from="StgValue_208" to="specinterface_ln0" fromId="208" toId="32">
 </dataflow>
-<dataflow id="213" from="empty_12" to="specinterface_ln0" fromId="198" toId="32">
+<dataflow id="213" from="empty_10" to="specinterface_ln0" fromId="198" toId="32">
 </dataflow>
-<dataflow id="214" from="empty_12" to="specinterface_ln0" fromId="198" toId="32">
+<dataflow id="214" from="empty_10" to="specinterface_ln0" fromId="198" toId="32">
 </dataflow>
 <dataflow id="216" from="StgValue_215" to="specinterface_ln0" fromId="215" toId="32">
 </dataflow>
@@ -2130,7 +2130,7 @@ for.inc24.i:49 %br_ln139 = br void %for.inc.i24
 </dataflow>
 <dataflow id="420" from="_ssdm_op_SpecLoopName" to="specloopname_ln139" fromId="404" toId="115">
 </dataflow>
-<dataflow id="422" from="empty_10" to="specloopname_ln139" fromId="421" toId="115">
+<dataflow id="422" from="empty_8" to="specloopname_ln139" fromId="421" toId="115">
 </dataflow>
 <dataflow id="423" from="_ssdm_op_WriteResp.m_axi.i32P1A" to="gmem_addr_resp" fromId="391" toId="116">
 </dataflow>

@@ -23,6 +23,25 @@ if {${::AESL::PGuard_autoexp_gen}} {
     AESL_LIB_XILADAPTER::native_axis_begin
 }
 
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 17 \
+    name conv1_biases \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename conv1_biases \
+    op interface \
+    ports { conv1_biases_address0 { O 6 vector } conv1_biases_ce0 { O 1 bit } conv1_biases_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_biases'"
+}
+}
+
+
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
@@ -65,21 +84,6 @@ eval "cg_default_interface_gen_dc { \
     corename dc_conv1_weights \
     op interface \
     ports { conv1_weights { I 64 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 17 \
-    name conv1_biases \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_conv1_biases \
-    op interface \
-    ports { conv1_biases { I 64 vector } } \
 } "
 }
 

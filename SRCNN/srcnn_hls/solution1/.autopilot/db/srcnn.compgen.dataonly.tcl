@@ -18,7 +18,7 @@ conv1_weights {
 	offset 28
 	offset_end 39
 }
-conv1_biases { 
+conv1_output_ftmap { 
 	dir I
 	width 64
 	depth 1
@@ -26,7 +26,7 @@ conv1_biases {
 	offset 40
 	offset_end 51
 }
-conv1_output_ftmap { 
+conv2_weights { 
 	dir I
 	width 64
 	depth 1
@@ -34,7 +34,7 @@ conv1_output_ftmap {
 	offset 52
 	offset_end 63
 }
-conv2_weights { 
+conv2_output_ftmap { 
 	dir I
 	width 64
 	depth 1
@@ -42,7 +42,7 @@ conv2_weights {
 	offset 64
 	offset_end 75
 }
-conv2_biases { 
+conv3_weights { 
 	dir I
 	width 64
 	depth 1
@@ -50,37 +50,13 @@ conv2_biases {
 	offset 76
 	offset_end 87
 }
-conv2_output_ftmap { 
+output_ftmap { 
 	dir I
 	width 64
 	depth 1
 	mode ap_none
 	offset 88
 	offset_end 99
-}
-conv3_weights { 
-	dir I
-	width 64
-	depth 1
-	mode ap_none
-	offset 100
-	offset_end 111
-}
-conv3_biases { 
-	dir I
-	width 64
-	depth 1
-	mode ap_none
-	offset 112
-	offset_end 123
-}
-output_ftmap { 
-	dir I
-	width 64
-	depth 1
-	mode ap_none
-	offset 124
-	offset_end 135
 }
 ap_start { }
 ap_done { }
