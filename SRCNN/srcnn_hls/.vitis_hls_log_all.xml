@@ -3,22 +3,45 @@
   <errorLogs>
     <logs>
       <synLog/>
-      <csimLog>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-31T23:51:26.003+1100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-31T23:47:09.343+1100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-31T19:21:14.836+1100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-10-31T19:20:08.185+1100"/>
-      </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="srcnn_hls" solutionName="solution1" date="2023-10-31T19:00:09.264+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_output_r_BREADY' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-10-31T18:59:52.287+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_output_r_AWUSER' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-10-31T18:59:52.274+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:33:00.350+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv1/grp_fu_471_p_opcode' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:37.112+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'export_output_buffer_c1/grp_fu_1605_p_opcode' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:36.273+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_output_r_BREADY' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:32.061+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_output_r_AWUSER' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:32.024+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_output_r_AWREGION' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.982+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_output_r_AWQOS' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.947+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_output_r_AWPROT' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.928+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_output_r_AWCACHE' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.895+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_output_r_AWLOCK' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.858+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_output_r_AWBURST' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.821+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_output_r_AWSIZE' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.794+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_output_r_AWLEN' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.750+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_output_r_AWID' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.732+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_output_r_AWADDR' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.694+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_3/m_axi_output_r_AWVALID' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.673+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_output_r_BREADY' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.357+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_output_r_AWUSER' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.338+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_output_r_AWREGION' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.324+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_output_r_AWQOS' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.309+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_output_r_AWPROT' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.291+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_output_r_AWCACHE' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.275+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_output_r_AWLOCK' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.258+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_output_r_AWBURST' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.243+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_output_r_AWSIZE' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.226+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_output_r_AWLEN' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.208+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_output_r_AWID' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.185+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_output_r_AWADDR' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.167+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_output_r_AWVALID' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:31.155+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_1/m_axi_output_r_BREADY' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:30.925+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_1/m_axi_output_r_AWUSER' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:30.914+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_1/m_axi_output_r_AWREGION' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:30.901+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_1/m_axi_output_r_AWQOS' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T03:32:30.889+1100" type="Warning"/>
       </synLog>
-      <csimLog/>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

@@ -1,0 +1,12 @@
+***** CONV1 Golden Reference *****
+  - Butterfly MSE: 0.000546374
+
+***** SRCNN Golden Reference *****
+  - Butterfly MSE: 0.00304942
+
+***** SRCNN - Set14 Test *****
+Image Name     PSNR GT vs HR (dB)  PSNR GT vs HR MATLAB (dB)  PSNR GT vs LR (dB)  MSE GT vs HR   MSE GT vs HR MATLAB        
+baboon         21.8751             24.9898                    27.3618             0.00343864     0.00161402                 
+barbara        21.0382             26.2451                    24.8997             0.00599174     0.00316839                 
+bridge         20.2446             26.8397                    25.2317             0.00534007     0.00237435                 
+coastguard     21.9782             33.4187                    26.3                0.00573536     0.00206895                 

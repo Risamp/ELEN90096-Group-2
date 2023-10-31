@@ -1,0 +1,118 @@
+{
+  "0": {
+    "basicblocks": 10,
+    "calls": "1 7 4",
+    "file": "srcnn.cpp",
+    "fileloc": 6,
+    "instructions": 74,
+    "loads": {
+      "T": 1
+    },
+    "name": "srcnn",
+    "total_instructions": 3582
+  },
+  "1": {
+    "basicblocks": 68,
+    "calls": "6 5",
+    "file": "conv1.cpp",
+    "fileloc": 9,
+    "instructions": 349,
+    "loads": {
+      "G": 36
+    },
+    "name": "conv1",
+    "stores": {
+      "G": 14
+    },
+    "total_instructions": 629
+  },
+  "2": {
+    "basicblocks": 13,
+    "calls": "3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3",
+    "file": "conv2.cpp",
+    "fileloc": 92,
+    "instructions": 2260,
+    "loads": {
+      "L": 289
+    },
+    "name": "load_buffer_tile_c2",
+    "stores": {
+      "G": 299
+    },
+    "total_instructions": 2430
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 53,
+    "instructions": 5,
+    "name": "clamp",
+    "total_instructions": 5
+  },
+  "4": {
+    "basicblocks": 43,
+    "calls": "",
+    "file": "conv3.cpp",
+    "fileloc": 10,
+    "instructions": 277,
+    "loads": {
+      "G": 10,
+      "L": 10
+    },
+    "name": "conv3",
+    "stores": {
+      "G": 4,
+      "L": 1
+    },
+    "total_instructions": 277
+  },
+  "5": {
+    "basicblocks": 34,
+    "calls": "",
+    "file": "conv1.cpp",
+    "fileloc": 117,
+    "instructions": 154,
+    "loads": {
+      "G": 8,
+      "L": 1
+    },
+    "name": "export_output_buffer_c1",
+    "stores": {
+      "G": 8
+    },
+    "total_instructions": 154
+  },
+  "6": {
+    "basicblocks": 12,
+    "calls": "",
+    "file": "conv1.cpp",
+    "fileloc": 68,
+    "instructions": 126,
+    "loads": {
+      "L": 2
+    },
+    "name": "load_input_buffer_c1",
+    "stores": {
+      "G": 12
+    },
+    "total_instructions": 126
+  },
+  "7": {
+    "basicblocks": 33,
+    "calls": "2",
+    "file": "conv2.cpp",
+    "fileloc": 9,
+    "instructions": 172,
+    "loads": {
+      "G": 18,
+      "L": 2
+    },
+    "name": "conv2",
+    "stores": {
+      "G": 2,
+      "L": 2
+    },
+    "total_instructions": 2602
+  }
+}

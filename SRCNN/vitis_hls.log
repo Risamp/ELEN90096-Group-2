@@ -2,7 +2,7 @@ ECHO is off.
 ECHO is off.
 NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'bcevans' on host '400p1l1760g0508' (Windows NT_amd64 version 6.2) on Wed Nov 01 00:20:22 +1100 2023
+INFO: [HLS 200-10] For user 'bcevans' on host '400p1l1760g0508' (Windows NT_amd64 version 6.2) on Wed Nov 01 03:35:18 +1100 2023
 INFO: [HLS 200-10] In directory 'C:/SPB_Data/ELEN90096-Group-2/SRCNN'
 Sourcing Tcl script 'C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim.tcl'
 INFO: [HLS 200-1510] Running: source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim.tcl
@@ -250,27 +250,14 @@ C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: no
  #define __GMP_LIBGMP_DLL 1
  
 ***** CONV1 Golden Reference *****
-  - Butterfly MSE: 0.0883496
+  - Butterfly MSE: 0.000546374
 
 ***** SRCNN Golden Reference *****
-  - Butterfly MSE: 0.262412
+  - Butterfly MSE: 0.00304942
 
 ***** SRCNN - Set14 Test *****
 Image Name     PSNR GT vs HR (dB)  PSNR GT vs HR MATLAB (dB)  PSNR GT vs LR (dB)  MSE GT vs HR   MSE GT vs HR MATLAB        
-baboon         6.54006             24.9898                    27.3618             0.23421        0.00161402                 
-barbara        6.07253             26.2451                    24.8997             0.267636       0.00316839                 
-bridge         6.42394             26.8397                    25.2317             0.240849       0.00237435                 
-coastguard     6.52229             33.4187                    26.3                0.240873       0.00206895                 
-face           9.02188             27.3319                    32.6794             0.120051       0.000454177                
-flowers        7.64154             35.727                     25.6995             0.186993       0.00184746                 
-foreman        4.48654             30.8413                    33.2014             0.400221       0.000266235                
-lenna          6.50419             27.1209                    29.1689             0.233301       0.000822304                
-man            7.49846             27.9822                    26.0613             0.189492       0.00193996                 
-monarch        6.06639             33.4745                    24.5799             0.259013       0.00159023                 
-pepper         6.09675             29.4367                    32.0454             0.283114       0.000447919                
-ppt3           3.46348             27.6649                    26.6842             0.521364       0.0011378                  
-zebra          6.64183             0                          24.7423             0.221575       0.00171134                 
-INFO: [SIM 211-1] CSim done with 0 errors.
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 47.532 seconds; current allocated memory: 0.762 MB.
-INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 2 seconds. Total elapsed time: 49.918 seconds; peak allocated memory: 92.633 MB.
+baboon         21.8751             24.9898                    27.3618             0.00343864     0.00161402                 
+barbara        21.0382             26.2451                    24.8997             0.00599174     0.00316839                 
+bridge         20.2446             26.8397                    25.2317             0.00534007     0.00237435                 
+coastguard     21.9782             33.4187                    26.3                0.00573536     0.00206895                 

@@ -20,7 +20,7 @@
 // CONV1
 #define C1_OD 8 // conv1 output tile depth
 #define C1_ID 1 // conv1 input tile depth
-#define C1_TH 5 // conv1 tile height
+#define C1_TH 15 // conv1 tile height
 #define C1_TW W // conv1 tile width
 
 #define T 15			// number of tiles in each dimension (width/height)
@@ -81,8 +81,7 @@ void load_input_buffer_c1(
 	ftmap_t input_fm_buffer[C1_ID][C1_TH + (2 * P1)][C1_TW + (2 * P1)],
 	ftmap_t input_ftmap[N0][H][W],
 	int in,
-	int h,
-	int w
+	int h
 );
 
 void load_weight_buffer_c1(
@@ -97,8 +96,7 @@ void export_output_buffer_c1(
 	ftmap_t output_ftmap[N1][H][W],
 	param_t biases[N1],
 	int out,
-	int h,
-	int w
+	int h
 );
 
 void clear_buffer(ftmap_t output_fm_buffer[C1_OD][C1_TH][C1_TW]);
