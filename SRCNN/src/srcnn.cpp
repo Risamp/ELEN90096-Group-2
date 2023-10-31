@@ -34,7 +34,7 @@ void srcnn(ftmap_t input_ftmap[N0][H][W],
 	//#pragma HLS INTERFACE m_axi port=conv3_biases offset=slave depth=512
 
 
-	memset(conv1_output_ftmap, 0, N1 * H * W * sizeof(ftmap_t));
+	//memset(conv1_output_ftmap, 0, N1 * H * W * sizeof(ftmap_t));
 	memset(conv2_output_ftmap, 0, N2 * H * W * sizeof(ftmap_t));
 	memset(output_ftmap, 0, N3 * H * W * sizeof(ftmap_t));
 

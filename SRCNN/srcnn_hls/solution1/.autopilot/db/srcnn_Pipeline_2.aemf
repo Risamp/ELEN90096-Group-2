@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698769951569">
-  <ports id="1" name="output_r" type="PortType" coreId="1852142702" bitwidth="32" direction="DirOut" iftype="IfTypeFifo">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698772441429">
+  <ports id="1" name="output_r" type="PortType" coreId="1935424067" bitwidth="32" direction="DirOut" iftype="IfTypeFifo">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
-  <ports id="2" name="sext_ln38" type="PortType" coreId="1852142702" bitwidth="62">
+  <ports id="2" name="sext_ln39" type="PortType" coreId="1852142702" bitwidth="62">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="29" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -30,90 +30,90 @@
   <edges id="106" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
   <edges id="107" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
   <blocks id="9" name="newFuncRoot" type="BlockType">
-    <controlOutputObjs>memset.loop2</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="empty" coreId="507" bitwidth="21" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <controlOutputObjs>memset.loop</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="empty" coreId="8" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="sext_ln38_read" coreId="0" bitwidth="62" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
-      <dataInputObjs>sext_ln38</dataInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="sext_ln39_read" coreId="17" bitwidth="62" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>sext_ln39</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="sext_ln38_cast" coreId="0" bitwidth="64" opcode="sext" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="sext_ln39_cast" coreId="20" bitwidth="64" opcode="sext" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="empty_write_ln0" coreId="2966374992" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="empty_write_ln0" coreId="6881399" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="br_ln0" coreId="1701978212" opcode="br" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
-      <controlInputObjs>memset.loop2</controlInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="br_ln0" coreId="0" opcode="br" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <controlInputObjs>memset.loop</controlInputObjs>
     </node_objs>
   </blocks>
-  <blocks id="24" name="split1.exitStub" type="BlockType">
-    <controlInputObjs>memset.loop2</controlInputObjs>
+  <blocks id="24" name="split.exitStub" type="BlockType">
+    <controlInputObjs>memset.loop</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="_ln0" coreId="1684369007" opcode="ret" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="_ln0" coreId="745300333" opcode="ret" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1"/>
   </blocks>
   <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="83" pipe_depth="2" RegionName="Loop 1">
-    <basic_blocks id="17" name="memset.loop2" type="BlockType">
+    <basic_blocks id="17" name="memset.loop" type="BlockType">
       <controlInputObjs>newFuncRoot</controlInputObjs>
-      <controlInputObjs>memset.loop2.split</controlInputObjs>
+      <controlInputObjs>memset.loop.split</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
-      <controlOutputObjs>split1.exitStub</controlOutputObjs>
-      <controlOutputObjs>memset.loop2.split</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="p_load" coreId="1579882064" bitwidth="21" opcode="load" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <controlOutputObjs>split.exitStub</controlOutputObjs>
+      <controlOutputObjs>memset.loop.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="p_load" coreId="1718511904" bitwidth="16" opcode="load" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="output_r_addr" lineNumber="38" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1869570592" contextFuncName="srcnn" bitwidth="32" opcode="getelementptr" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="src/srcnn.cpp" linenumber="38" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="output_r_addr" lineNumber="39" fileName="src/srcnn.cpp" fileDirectory="../." coreId="0" contextFuncName="srcnn" bitwidth="32" opcode="getelementptr" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/srcnn.cpp" linenumber="39" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
         <dataInputObjs>sext</dataInputObjs>
         <dataOutputObjs>output_r</dataOutputObjs>
         <dataOutputObjs>write</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="exitcond54" rtlName="exitcond54_fu_83_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.9" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="exitcond2" rtlName="exitcond2_fu_83_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.85" m_topoIndex="8" m_clusterGroupNumber="-1">
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="empty_71" rtlName="empty_71_fu_89_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="21" opcode="add" m_display="0" m_delay="0.9" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="empty_63" rtlName="empty_63_fu_89_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="16" opcode="add" m_display="0" m_delay="0.85" m_topoIndex="9" m_clusterGroupNumber="-1">
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="br_ln0" coreId="0" opcode="br" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="br_ln0" coreId="510" opcode="br" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
         <dataInputObjs>icmp</dataInputObjs>
-        <controlInputObjs>memset.loop2.split</controlInputObjs>
-        <controlInputObjs>split1.exitStub</controlInputObjs>
+        <controlInputObjs>memset.loop.split</controlInputObjs>
+        <controlInputObjs>split.exitStub</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="src/srcnn.cpp">
-        <validLinenumbers>38</validLinenumbers>
+        <validLinenumbers>39</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
-    <basic_blocks id="22" name="memset.loop2.split" type="BlockType">
-      <controlInputObjs>memset.loop2</controlInputObjs>
+    <basic_blocks id="22" name="memset.loop.split" type="BlockType">
+      <controlInputObjs>memset.loop</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
-      <controlOutputObjs>memset.loop2</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="output_r_addr_write_ln38" lineNumber="38" fileName="src/srcnn.cpp" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="srcnn" opcode="write" nodeLabel="1.0" m_display="0" m_delay="7.3" m_topoIndex="13" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="src/srcnn.cpp" linenumber="38" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
+      <controlOutputObjs>memset.loop</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="output_r_addr_write_ln39" lineNumber="39" fileName="src/srcnn.cpp" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="srcnn" opcode="write" nodeLabel="1.0" m_display="0" m_delay="7.3" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/srcnn.cpp" linenumber="39" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="empty_write_ln0" coreId="1852796513" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="empty_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="11" m_clusterGroupNumber="-1">
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="br_ln0" coreId="1667854949" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
-        <controlInputObjs>memset.loop2</controlInputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="br_ln0" coreId="1701867631" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <controlInputObjs>memset.loop</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="src/srcnn.cpp">
-        <validLinenumbers>38</validLinenumbers>
+        <validLinenumbers>39</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
   </regions>
@@ -128,39 +128,39 @@
   <expressionNodes realName="empty_fu_46">
     <nodeIds>3</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="exitcond54_fu_83">
+  <expressionNodes realName="exitcond2_fu_83">
     <nodeIds>14</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="empty_71_fu_89">
+  <expressionNodes realName="empty_63_fu_89">
     <nodeIds>15</nodeIds>
   </expressionNodes>
   <expressionNodes realName="output_r_addr_fu_77">
     <nodeIds>12</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="sext_ln38_cast_fu_65">
+  <expressionNodes realName="sext_ln39_cast_fu_65">
     <nodeIds>5</nodeIds>
   </expressionNodes>
   <ioNodes realName="p_load_load_fu_74">
     <nodeIds>10</nodeIds>
   </ioNodes>
-  <ioNodes realName="sext_ln38_read_read_fu_50">
-    <nodeIds>4</nodeIds>
-  </ioNodes>
   <ioNodes realName="store_ln0_store_fu_95">
     <nodeIds>20</nodeIds>
   </ioNodes>
-  <ioNodes realName="write_ln38_write_fu_56">
-    <nodeIds>19</nodeIds>
-  </ioNodes>
   <ioNodes realName="store_ln0_store_fu_69">
     <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioNodes realName="sext_ln39_read_read_fu_50">
+    <nodeIds>4</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln39_write_fu_56">
+    <nodeIds>19</nodeIds>
   </ioNodes>
   <ioPorts name="output_r">
     <contents name="write">
       <nodeIds>19</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="sext_ln38">
+  <ioPorts name="sext_ln39">
     <contents name="read">
       <nodeIds>4</nodeIds>
     </contents>
@@ -193,7 +193,7 @@
     </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="srcnn_Pipeline_2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="2080802" mMaxLatency="2080802">
+    <cfgRegions mId="1" mTag="srcnn_Pipeline_2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="65027" mMaxLatency="65027">
       <subRegions>2</subRegions>
       <subRegions>3</subRegions>
       <subRegions>4</subRegions>
@@ -203,7 +203,7 @@
       <basicBlocks>9</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="3" mTag="Loop_1" mII="1" mDepth="2" mMinTripCount="2080800" mMaxTripCount="2080800" mMinLatency="2080800" mMaxLatency="2080800" mType="1">
+    <cfgRegions mId="3" mTag="Loop_1" mII="1" mDepth="2" mMinTripCount="65025" mMaxTripCount="65025" mMinLatency="65025" mMaxLatency="65025" mType="1">
       <basicBlocks>17</basicBlocks>
       <basicBlocks>22</basicBlocks>
       <mDfPipe/>

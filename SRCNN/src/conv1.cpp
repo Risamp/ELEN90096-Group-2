@@ -16,7 +16,7 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 
 	static ftmap_t output_fm_buffer[C1_OD][C1_TH][W] = {0};
 	static ftmap_t input_fm_buffer[C1_ID][C1_TH + (2 * P1)][W + (2 * P1)];
-	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=block factor=4 dim=3
+	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=block factor=8 dim=3
 	static param_t weight_buffer[C1_OD][C1_ID][F1][F1];
 	#pragma HLS ARRAY_PARTITION variable=weight_buffer type=block factor=4
 
@@ -49,15 +49,14 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 		export_output_buffer_c1(output_fm_buffer, output_ftmap, conv1_biases, out, h);
 		// clear output buffer
 		clear_buffer(output_fm_buffer);
-		//memset(output_fm_buffer, 0, C1_OD * C1_TH * W * sizeof(ftmap_t));
 	}}
 }
 
 
 void clear_buffer(ftmap_t output_fm_buffer[C1_OD][C1_TH][W]) {
 	CLEAR: for (int o = 0; o < C1_OD; o++) {
-	for (int h = 0; h < C1_TH; h++) {
-	for (int w = 0; w < W; w++) {
+	BH: for (int h = 0; h < C1_TH; h++) {
+	BW: for (int w = 0; w < W; w++) {
 		#pragma HLS UNROLL factor=4
 
 		output_fm_buffer[o][h][w] = 0;
@@ -72,12 +71,12 @@ void load_input_buffer_c1(
 	int h
 ) {
 	LOAD_INPUT: for (int bin = 0; bin < C1_ID; bin++) {
-	for (int bh = 0; bh < C1_TH + (2 * P1); bh++) {
+	BH:for (int bh = 0; bh < C1_TH + (2 * P1); bh++) {
 
 		int hclamp = clamp(h + bh - P1, 0, H - 1);
 
 		int left = input_ftmap[bin + in][hclamp][0];
-		int right = input_ftmap[bin + in][hclamp][W];
+		int right = input_ftmap[bin + in][hclamp][W - 1];
 
 		// load in left padding
 		PAD_LEFT: for (int pl = 0; pl < P1; pl++) {
@@ -105,9 +104,9 @@ void load_weight_buffer_c1(
 	int in
 ) {
 	LOAD_WEIGHTS: for (int bout = 0; bout < C1_OD; bout++) {
-	for (int bin = 0; bin < C1_ID; bin++) {
-	for (int kh = 0; kh < F1; kh++) {
-	for (int kw = 0; kw < F1; kw++) {
+	IN: for (int bin = 0; bin < C1_ID; bin++) {
+	KH: for (int kh = 0; kh < F1; kh++) {
+	KW: for (int kw = 0; kw < F1; kw++) {
 		#pragma HLS UNROLL factor=2
 
 		weight_buffer[bout][bin][kh][kw] = conv1_weights[bout + out][bin + in][kh][kw];
@@ -123,8 +122,8 @@ void export_output_buffer_c1(
 ) {
 	// apply biases and ReLU
 	RELU1: for (int bout = 0; bout < C1_OD; bout++) {
-	for (int bh = 0; bh < C1_TH; bh++) {
-	for (int bw = 0; bw < W; bw++) {
+	BH: for (int bh = 0; bh < C1_TH; bh++) {
+	BW: for (int bw = 0; bw < W; bw++) {
 		#pragma HLS UNROLL factor=4
 		#pragma HLS PIPELINE II=2
 
@@ -137,7 +136,7 @@ void export_output_buffer_c1(
 
 	EXPORT: for (int bout = 0; bout < C1_OD; bout++) {
 	#pragma HLS UNROLL factor=2
-	for (int bh = 0; bh < C1_TH; bh++) {
+	ROW: for (int bh = 0; bh < C1_TH; bh++) {
 
 		memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], W * sizeof(ftmap_t));
 	}}

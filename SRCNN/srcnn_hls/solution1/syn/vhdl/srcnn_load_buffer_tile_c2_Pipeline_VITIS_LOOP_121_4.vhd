@@ -221,7 +221,7 @@ attribute shreg_extract : string;
     signal add_ln127_fu_268_p2 : STD_LOGIC_VECTOR (63 downto 0);
     signal zext_ln127_1_fu_264_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal add_ln127_1_fu_274_p2 : STD_LOGIC_VECTOR (63 downto 0);
-    signal trunc_ln5_fu_280_p4 : STD_LOGIC_VECTOR (61 downto 0);
+    signal trunc_ln4_fu_280_p4 : STD_LOGIC_VECTOR (61 downto 0);
     signal ap_done_reg : STD_LOGIC := '0';
     signal ap_continue_int : STD_LOGIC;
     signal ap_done_int : STD_LOGIC;
@@ -824,12 +824,12 @@ begin
         end if; 
     end process;
 
-        sext_ln127_fu_290_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln5_fu_280_p4),64));
+        sext_ln127_fu_290_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln4_fu_280_p4),64));
 
     shl_ln127_1_fu_256_p3 <= (tn0 & ap_const_lv2_0);
     shl_ln1_fu_244_p3 <= (trunc_ln127_fu_240_p1 & ap_const_lv8_0);
     trunc_ln127_fu_240_p1 <= ap_sig_allocacmp_nout_1(5 - 1 downto 0);
-    trunc_ln5_fu_280_p4 <= add_ln127_1_fu_274_p2(63 downto 2);
+    trunc_ln4_fu_280_p4 <= add_ln127_1_fu_274_p2(63 downto 2);
     weights_buffer_0_0_0_address0 <= zext_ln121_fu_305_p1(5 - 1 downto 0);
 
     weights_buffer_0_0_0_ce0_assign_proc : process(ap_enable_reg_pp0_iter1, ap_CS_fsm_pp0_stage2, ap_block_pp0_stage2_11001)

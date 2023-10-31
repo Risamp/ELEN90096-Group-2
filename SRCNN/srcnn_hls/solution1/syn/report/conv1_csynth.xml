@@ -22,14 +22,14 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>1532463233</Best-caseLatency>
-<Average-caseLatency>1532544833</Average-caseLatency>
-<Worst-caseLatency>1532593793</Worst-caseLatency>
-<Best-caseRealTimeLatency>15.325 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>15.325 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>15.326 sec</Worst-caseRealTimeLatency>
-<Interval-min>1532463233</Interval-min>
-<Interval-max>1532593793</Interval-max>
+<Best-caseLatency>1466940609</Best-caseLatency>
+<Average-caseLatency>1467022209</Average-caseLatency>
+<Worst-caseLatency>1467071169</Worst-caseLatency>
+<Best-caseRealTimeLatency>14.669 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>14.670 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>14.671 sec</Worst-caseRealTimeLatency>
+<Interval-min>1466940609</Interval-min>
+<Interval-max>1467071169</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <TILE_OUT_TILE_ROW>
@@ -37,20 +37,20 @@
 <TripCount>136</TripCount>
 <Latency>
 <range>
-<min>1532463232</min>
-<max>1532593792</max>
+<min>1466940608</min>
+<max>1467071168</max>
 </range>
 </Latency>
 <AbsoluteTimeLatency>
 <range>
-<min>15324632320</min>
-<max>15325937920</max>
+<min>14669406080</min>
+<max>14670711680</max>
 </range>
 </AbsoluteTimeLatency>
 <IterationLatency>
 <range>
-<min>11268112</min>
-<max>11269072</max>
+<min>10786328</min>
+<max>10787288</max>
 </range>
 </IterationLatency>
 <InstanceList>
@@ -63,7 +63,7 @@
 <IterationLatency>209</IterationLatency>
 <InstanceList>
 </InstanceList>
-<VITIS_LOOP_109_2>
+<KH>
 <Slack>7.30</Slack>
 <TripCount>9</TripCount>
 <Latency>207</Latency>
@@ -71,7 +71,7 @@
 <IterationLatency>23</IterationLatency>
 <InstanceList>
 </InstanceList>
-<VITIS_LOOP_110_3>
+<KW>
 <Slack>7.30</Slack>
 <TripCount>5</TripCount>
 <Latency>21</Latency>
@@ -79,8 +79,8 @@
 <IterationLatency>4</IterationLatency>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_110_3>
-</VITIS_LOOP_109_2>
+</KW>
+</KH>
 </LOAD_WEIGHTS>
 <OUT_ROW>
 <Slack>7.30</Slack>
@@ -125,15 +125,33 @@
 </InstanceList>
 </COL>
 </OUT_ROW>
-<TILE_OUT_TILE_ROW.3>
+<CLEAR>
 <Slack>7.30</Slack>
-<TripCount>30600</TripCount>
-<Latency>489600</Latency>
-<AbsoluteTimeLatency>4896000</AbsoluteTimeLatency>
-<IterationLatency>16</IterationLatency>
+<TripCount>8</TripCount>
+<Latency>7816</Latency>
+<AbsoluteTimeLatency>78160</AbsoluteTimeLatency>
+<IterationLatency>977</IterationLatency>
 <InstanceList>
 </InstanceList>
-</TILE_OUT_TILE_ROW.3>
+<BH>
+<Slack>7.30</Slack>
+<TripCount>15</TripCount>
+<Latency>975</Latency>
+<AbsoluteTimeLatency>9750</AbsoluteTimeLatency>
+<IterationLatency>65</IterationLatency>
+<InstanceList>
+</InstanceList>
+<BW>
+<Slack>7.30</Slack>
+<TripCount>63</TripCount>
+<Latency>63</Latency>
+<AbsoluteTimeLatency>630</AbsoluteTimeLatency>
+<IterationLatency>1</IterationLatency>
+<InstanceList>
+</InstanceList>
+</BW>
+</BH>
+</CLEAR>
 </TILE_OUT_TILE_ROW>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
@@ -141,9 +159,9 @@
 <AreaEstimates>
 <Resources>
 <BRAM_18K>80</BRAM_18K>
-<DSP>10</DSP>
-<FF>5555</FF>
-<LUT>8818</LUT>
+<DSP>9</DSP>
+<FF>5317</FF>
+<LUT>9079</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -223,7 +241,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_471_p_din0</name>
+<name>grp_fu_437_p_din0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -234,7 +252,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_471_p_din1</name>
+<name>grp_fu_437_p_din1</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -245,7 +263,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_471_p_opcode</name>
+<name>grp_fu_437_p_opcode</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -256,7 +274,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_471_p_dout0</name>
+<name>grp_fu_437_p_dout0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -267,7 +285,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_471_p_ce</name>
+<name>grp_fu_437_p_ce</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -278,7 +296,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_475_p_din0</name>
+<name>grp_fu_441_p_din0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -289,7 +307,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_475_p_din1</name>
+<name>grp_fu_441_p_din1</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -300,7 +318,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_475_p_dout0</name>
+<name>grp_fu_441_p_dout0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -311,7 +329,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_475_p_ce</name>
+<name>grp_fu_441_p_ce</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -322,7 +340,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_479_p_din0</name>
+<name>grp_fu_445_p_din0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -333,7 +351,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_479_p_din1</name>
+<name>grp_fu_445_p_din1</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -344,7 +362,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_479_p_opcode</name>
+<name>grp_fu_445_p_opcode</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -355,7 +373,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_479_p_dout0</name>
+<name>grp_fu_445_p_dout0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -366,7 +384,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_479_p_ce</name>
+<name>grp_fu_445_p_ce</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>

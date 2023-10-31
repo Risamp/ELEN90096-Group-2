@@ -12,7 +12,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set id 233
+set id 248
 set name srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1
 set corename simcore_ama
 set op ama
@@ -86,7 +86,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 243 \
+    id 258 \
     name input_fm_buffer \
     reset_level 1 \
     sync_rst true \
@@ -104,7 +104,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 237 \
+    id 252 \
     name zext_ln31 \
     type other \
     dir I \
@@ -119,7 +119,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 238 \
+    id 253 \
     name zext_ln55 \
     type other \
     dir I \
@@ -134,7 +134,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 239 \
+    id 254 \
     name shl_ln2 \
     type other \
     dir I \
@@ -149,7 +149,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 240 \
+    id 255 \
     name select_ln31 \
     type other \
     dir I \
@@ -164,7 +164,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 241 \
+    id 256 \
     name input_ftmap \
     type other \
     dir I \
@@ -179,7 +179,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 242 \
+    id 257 \
     name output_r \
     type other \
     dir I \

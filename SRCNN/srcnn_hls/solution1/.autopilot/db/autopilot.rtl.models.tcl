@@ -5,24 +5,24 @@ set SynModuleInfo {
     }
   }
   {SRCNAME srcnn_Pipeline_2 MODELNAME srcnn_Pipeline_2 RTLNAME srcnn_srcnn_Pipeline_2}
-  {SRCNAME srcnn_Pipeline_3 MODELNAME srcnn_Pipeline_3 RTLNAME srcnn_srcnn_Pipeline_3}
   {SRCNAME load_input_buffer_c1 MODELNAME load_input_buffer_c1 RTLNAME srcnn_load_input_buffer_c1
     SUBMODULES {
       {MODELNAME srcnn_sitofp_32ns_32_4_no_dsp_1 RTLNAME srcnn_sitofp_32ns_32_4_no_dsp_1 BINDTYPE op TYPE sitofp IMPL auto LATENCY 3 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_urem_9ns_8ns_9_13_seq_1 RTLNAME srcnn_urem_9ns_8ns_9_13_seq_1 BINDTYPE op TYPE urem IMPL auto_seq LATENCY 12 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_urem_9ns_7ns_9_13_seq_1 RTLNAME srcnn_urem_9ns_7ns_9_13_seq_1 BINDTYPE op TYPE urem IMPL auto_seq LATENCY 12 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_mul_9ns_11ns_19_1_1 RTLNAME srcnn_mul_9ns_11ns_19_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
     }
   }
   {SRCNAME conv1_Pipeline_KR_KC MODELNAME conv1_Pipeline_KR_KC RTLNAME srcnn_conv1_Pipeline_KR_KC
     SUBMODULES {
-      {MODELNAME srcnn_urem_9ns_8ns_9_13_1 RTLNAME srcnn_urem_9ns_8ns_9_13_1 BINDTYPE op TYPE urem IMPL auto LATENCY 12 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_urem_9ns_7ns_9_13_1 RTLNAME srcnn_urem_9ns_7ns_9_13_1 BINDTYPE op TYPE urem IMPL auto LATENCY 12 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_mux_4_2_32_1_1 RTLNAME srcnn_mux_4_2_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_mux_8_3_32_1_1 RTLNAME srcnn_mux_8_3_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
     }
   }
   {SRCNAME conv1_Pipeline_KR_KC1 MODELNAME conv1_Pipeline_KR_KC1 RTLNAME srcnn_conv1_Pipeline_KR_KC1}
   {SRCNAME conv1_Pipeline_KR_KC2 MODELNAME conv1_Pipeline_KR_KC2 RTLNAME srcnn_conv1_Pipeline_KR_KC2}
   {SRCNAME conv1_Pipeline_KR_KC3 MODELNAME conv1_Pipeline_KR_KC3 RTLNAME srcnn_conv1_Pipeline_KR_KC3}
-  {SRCNAME export_output_buffer_c1_Pipeline_VITIS_LOOP_127_2 MODELNAME export_output_buffer_c1_Pipeline_VITIS_LOOP_127_2 RTLNAME srcnn_export_output_buffer_c1_Pipeline_VITIS_LOOP_127_2
+  {SRCNAME export_output_buffer_c1_Pipeline_BW MODELNAME export_output_buffer_c1_Pipeline_BW RTLNAME srcnn_export_output_buffer_c1_Pipeline_BW
     SUBMODULES {
       {MODELNAME srcnn_fcmp_32ns_32ns_1_2_no_dsp_1 RTLNAME srcnn_fcmp_32ns_32ns_1_2_no_dsp_1 BINDTYPE op TYPE fcmp IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
     }
@@ -36,12 +36,10 @@ set SynModuleInfo {
   {SRCNAME conv1 MODELNAME conv1 RTLNAME srcnn_conv1
     SUBMODULES {
       {MODELNAME srcnn_mul_7ns_10ns_16_1_1 RTLNAME srcnn_mul_7ns_10ns_16_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_mul_12ns_14ns_25_1_1 RTLNAME srcnn_mul_12ns_14ns_25_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_urem_12ns_9ns_12_16_seq_1 RTLNAME srcnn_urem_12ns_9ns_12_16_seq_1 BINDTYPE op TYPE urem IMPL auto_seq LATENCY 15 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_we_3_RAM_AUTO_1R1W RTLNAME srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_we_3_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_RAM_AUTO_1R1W RTLNAME srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_RAM_AUTO_1R1W RTLNAME srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_RAM_AUTO_1R1W RTLNAME srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_in_7_RAM_AUTO_1R1W RTLNAME srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_in_7_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_in_6_RAM_AUTO_1R1W RTLNAME srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_in_6_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
     }
   }
   {SRCNAME load_buffer_tile_c2_Pipeline_1 MODELNAME load_buffer_tile_c2_Pipeline_1 RTLNAME srcnn_load_buffer_tile_c2_Pipeline_1}

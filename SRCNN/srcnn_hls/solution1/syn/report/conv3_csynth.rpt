@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3'
 ================================================================
-* Date:           Wed Nov  1 03:32:58 2023
+* Date:           Wed Nov  1 04:14:27 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -90,8 +90,8 @@
     |grp_conv3_Pipeline_1_fu_534                                                   |conv3_Pipeline_1                                                   |        0|   0|   14|   65|    0|
     |grp_conv3_Pipeline_3_fu_553                                                   |conv3_Pipeline_3                                                   |        0|   0|   11|   59|    0|
     |grp_conv3_Pipeline_VITIS_LOOP_106_1_VITIS_LOOP_107_2_VITIS_LOOP_108_3_fu_540  |conv3_Pipeline_VITIS_LOOP_106_1_VITIS_LOOP_107_2_VITIS_LOOP_108_3  |        0|   2|  275|  889|    0|
-    |mul_5ns_6ns_10_1_1_U248                                                       |mul_5ns_6ns_10_1_1                                                 |        0|   0|    0|   23|    0|
-    |mul_5ns_8ns_12_1_1_U247                                                       |mul_5ns_8ns_12_1_1                                                 |        0|   0|    0|   40|    0|
+    |mul_5ns_6ns_10_1_1_U263                                                       |mul_5ns_6ns_10_1_1                                                 |        0|   0|    0|   23|    0|
+    |mul_5ns_8ns_12_1_1_U262                                                       |mul_5ns_8ns_12_1_1                                                 |        0|   0|    0|   40|    0|
     +------------------------------------------------------------------------------+-------------------------------------------------------------------+---------+----+-----+-----+-----+
     |Total                                                                         |                                                                   |        0|   2|  300| 1076|    0|
     +------------------------------------------------------------------------------+-------------------------------------------------------------------+---------+----+-----+-----+-----+
@@ -157,19 +157,19 @@
     |add_ln73_8_fu_1006_p2    |         +|   0|  0|  18|          11|           9|
     |add_ln73_9_fu_1012_p2    |         +|   0|  0|  18|          11|          10|
     |add_ln73_fu_1238_p2      |         +|   0|  0|  70|          63|          63|
-    |empty_109_fu_771_p2      |         +|   0|  0|  16|           9|           9|
-    |empty_110_fu_793_p2      |         +|   0|  0|  16|           9|           9|
-    |empty_111_fu_851_p2      |         +|   0|  0|  14|           7|           7|
-    |empty_112_fu_882_p2      |         +|   0|  0|  71|          64|          64|
-    |empty_113_fu_897_p2      |         +|   0|  0|  71|          64|          64|
-    |empty_114_fu_912_p2      |         +|   0|  0|  71|          64|          64|
-    |empty_115_fu_927_p2      |         +|   0|  0|  71|          64|          64|
-    |empty_116_fu_942_p2      |         +|   0|  0|  71|          64|          64|
-    |empty_117_fu_957_p2      |         +|   0|  0|  71|          64|          64|
-    |empty_118_fu_972_p2      |         +|   0|  0|  71|          64|          64|
-    |empty_119_fu_977_p2      |         +|   0|  0|  71|          64|          64|
-    |empty_120_fu_982_p2      |         +|   0|  0|  12|           5|           5|
-    |empty_121_fu_1460_p2     |         +|   0|  0|  15|           8|           8|
+    |empty_100_fu_793_p2      |         +|   0|  0|  16|           9|           9|
+    |empty_101_fu_851_p2      |         +|   0|  0|  14|           7|           7|
+    |empty_102_fu_882_p2      |         +|   0|  0|  71|          64|          64|
+    |empty_103_fu_897_p2      |         +|   0|  0|  71|          64|          64|
+    |empty_104_fu_912_p2      |         +|   0|  0|  71|          64|          64|
+    |empty_105_fu_927_p2      |         +|   0|  0|  71|          64|          64|
+    |empty_106_fu_942_p2      |         +|   0|  0|  71|          64|          64|
+    |empty_107_fu_957_p2      |         +|   0|  0|  71|          64|          64|
+    |empty_108_fu_972_p2      |         +|   0|  0|  71|          64|          64|
+    |empty_109_fu_977_p2      |         +|   0|  0|  71|          64|          64|
+    |empty_110_fu_982_p2      |         +|   0|  0|  12|           5|           5|
+    |empty_111_fu_1460_p2     |         +|   0|  0|  15|           8|           8|
+    |empty_99_fu_771_p2       |         +|   0|  0|  16|           9|           9|
     |tmp10_fu_877_p2          |         +|   0|  0|  71|          64|          64|
     |tmp11_fu_754_p2          |         +|   0|  0|  71|          64|          64|
     |tmp12_fu_887_p2          |         +|   0|  0|  15|           8|           8|
@@ -283,7 +283,7 @@
     |add_ln73_8_reg_1780                                                                        |  11|   0|   11|          0|
     |add_ln73_9_reg_1785                                                                        |  11|   0|   11|          0|
     |ap_CS_fsm                                                                                  |  77|   0|   77|          0|
-    |empty_109_reg_1736                                                                         |   9|   0|    9|          0|
+    |empty_99_reg_1736                                                                          |   9|   0|    9|          0|
     |grp_conv3_Pipeline_1_fu_534_ap_start_reg                                                   |   1|   0|    1|          0|
     |grp_conv3_Pipeline_3_fu_553_ap_start_reg                                                   |   1|   0|    1|          0|
     |grp_conv3_Pipeline_VITIS_LOOP_106_1_VITIS_LOOP_107_2_VITIS_LOOP_108_3_fu_540_ap_start_reg  |   1|   0|    1|          0|
@@ -369,15 +369,15 @@
 |ap_done                  |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
 |ap_idle                  |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
 |ap_ready                 |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_471_p_din0        |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_471_p_din1        |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_471_p_opcode      |  out|    2|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_471_p_dout0       |   in|   32|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_471_p_ce          |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_475_p_din0        |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_475_p_din1        |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_475_p_dout0       |   in|   32|  ap_ctrl_hs|                 conv3|  return value|
-|grp_fu_475_p_ce          |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_437_p_din0        |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_437_p_din1        |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_437_p_opcode      |  out|    2|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_437_p_dout0       |   in|   32|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_437_p_ce          |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_441_p_din0        |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_441_p_din1        |  out|   32|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_441_p_dout0       |   in|   32|  ap_ctrl_hs|                 conv3|  return value|
+|grp_fu_441_p_ce          |  out|    1|  ap_ctrl_hs|                 conv3|  return value|
 |m_axi_output_r_AWVALID   |  out|    1|       m_axi|              output_r|       pointer|
 |m_axi_output_r_AWREADY   |   in|    1|       m_axi|              output_r|       pointer|
 |m_axi_output_r_AWADDR    |  out|   64|       m_axi|              output_r|       pointer|

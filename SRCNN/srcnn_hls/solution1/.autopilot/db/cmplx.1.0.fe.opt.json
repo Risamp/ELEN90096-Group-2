@@ -1,132 +1,29 @@
 {
   "0": {
     "basicblocks": 1,
-    "calls": "5 14 11",
+    "calls": "17 15 7",
     "file": "srcnn.cpp",
     "fileloc": 6,
-    "instructions": 18,
+    "instructions": 16,
     "name": "srcnn",
-    "total_instructions": 5353
+    "total_instructions": 5386
   },
   "1": {
-    "basicblocks": 1,
-    "calls": "9",
-    "file": "hls_case_IEEE754.h",
+    "basicblocks": 33,
+    "calls": "",
+    "file": "conv1.cpp",
     "fileloc": 116,
-    "instructions": 2,
-    "name": "generic_cast_IEEE754<int, float>",
-    "total_instructions": 2179
-  },
-  "10": {
-    "basicblocks": 43,
-    "calls": "15 15",
-    "file": "conv3.cpp",
-    "fileloc": 94,
-    "instructions": 106,
-    "loads": {
-      "L": 2
-    },
-    "name": "load_buffer_tile_c3",
-    "stores": {
-      "L": 2
-    },
-    "total_instructions": 124
-  },
-  "11": {
-    "basicblocks": 55,
-    "calls": "10 17",
-    "file": "conv3.cpp",
-    "fileloc": 10,
-    "instructions": 118,
-    "loads": {
-      "G": 2,
-      "L": 1
-    },
-    "name": "conv3",
-    "stores": {
-      "G": 1
-    },
-    "total_instructions": 294
-  },
-  "12": {
-    "basicblocks": 21,
-    "calls": "",
-    "file": "conv2.cpp",
-    "fileloc": 134,
-    "instructions": 73,
-    "loads": {
-      "L": 4
-    },
-    "name": "export_buffer_tile_c2",
-    "stores": {
-      "L": 2
-    },
-    "total_instructions": 73
-  },
-  "13": {
-    "basicblocks": 43,
-    "calls": "15 15",
-    "file": "conv2.cpp",
-    "fileloc": 92,
-    "instructions": 108,
-    "loads": {
-      "L": 2
-    },
-    "name": "load_buffer_tile_c2",
-    "stores": {
-      "L": 2
-    },
-    "total_instructions": 126
-  },
-  "14": {
-    "basicblocks": 55,
-    "calls": "13 12",
-    "file": "conv2.cpp",
-    "fileloc": 9,
-    "instructions": 117,
-    "loads": {
-      "G": 3
-    },
-    "name": "conv2",
-    "stores": {
-      "G": 1
-    },
-    "total_instructions": 316
-  },
-  "15": {
-    "basicblocks": 6,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 53,
-    "instructions": 9,
-    "name": "clamp",
-    "total_instructions": 9
-  },
-  "16": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "x_hls_utils.h",
-    "fileloc": 378,
-    "instructions": 4,
-    "name": "__signbit",
-    "total_instructions": 9
-  },
-  "17": {
-    "basicblocks": 19,
-    "calls": "",
-    "file": "conv3.cpp",
-    "fileloc": 131,
-    "instructions": 52,
+    "instructions": 95,
     "loads": {
       "L": 3
     },
-    "name": "export_buffer_tile_c3",
+    "name": "export_output_buffer_c1",
     "stores": {
-      "L": 1
+      "L": 2
     },
-    "total_instructions": 52
+    "total_instructions": 95
   },
-  "18": {
+  "10": {
     "basicblocks": 1,
     "calls": "",
     "file": "x_hls_utils.h",
@@ -141,48 +38,78 @@
     },
     "total_instructions": 349
   },
-  "2": {
-    "basicblocks": 33,
-    "calls": "",
-    "file": "conv1.cpp",
-    "fileloc": 117,
-    "instructions": 95,
+  "11": {
+    "basicblocks": 43,
+    "calls": "2 2",
+    "file": "conv3.cpp",
+    "fileloc": 94,
+    "instructions": 106,
     "loads": {
-      "L": 3
+      "L": 2
     },
-    "name": "export_output_buffer_c1",
+    "name": "load_buffer_tile_c3",
     "stores": {
       "L": 2
     },
-    "total_instructions": 95
+    "total_instructions": 124
   },
-  "3": {
+  "12": {
     "basicblocks": 1,
-    "calls": "1",
-    "file": "lib_floatconversion.cpp",
-    "fileloc": 51,
+    "calls": "19",
+    "file": "hls_case_IEEE754.h",
+    "fileloc": 116,
     "instructions": 2,
-    "name": "__hls_fptosi_float_i32",
-    "total_instructions": 2181
+    "name": "generic_cast_IEEE754<int, float>",
+    "total_instructions": 2179
   },
-  "4": {
-    "basicblocks": 25,
+  "13": {
+    "basicblocks": 19,
     "calls": "",
     "file": "conv1.cpp",
-    "fileloc": 101,
-    "instructions": 57,
-    "loads": {
-      "L": 1
-    },
-    "name": "load_weight_buffer_c1",
+    "fileloc": 56,
+    "instructions": 35,
+    "name": "clear_buffer",
     "stores": {
       "L": 1
     },
-    "total_instructions": 57
+    "total_instructions": 35
   },
-  "5": {
+  "14": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 345,
+    "instructions": 8,
+    "name": "expv",
+    "total_instructions": 109
+  },
+  "15": {
     "basicblocks": 55,
-    "calls": "6 4 2",
+    "calls": "18 5",
+    "file": "conv2.cpp",
+    "fileloc": 9,
+    "instructions": 117,
+    "loads": {
+      "G": 3
+    },
+    "name": "conv2",
+    "stores": {
+      "G": 1
+    },
+    "total_instructions": 316
+  },
+  "16": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 369,
+    "instructions": 24,
+    "name": "mantissa",
+    "total_instructions": 188
+  },
+  "17": {
+    "basicblocks": 55,
+    "calls": "6 3 1 13",
     "file": "conv1.cpp",
     "fileloc": 9,
     "instructions": 116,
@@ -193,44 +120,26 @@
     "stores": {
       "G": 1
     },
-    "total_instructions": 4725
+    "total_instructions": 4760
   },
-  "6": {
-    "basicblocks": 25,
-    "calls": "15 3 3",
-    "file": "conv1.cpp",
-    "fileloc": 68,
-    "instructions": 86,
+  "18": {
+    "basicblocks": 43,
+    "calls": "2 2",
+    "file": "conv2.cpp",
+    "fileloc": 92,
+    "instructions": 108,
     "loads": {
       "L": 2
     },
-    "name": "load_input_buffer_c1",
+    "name": "load_buffer_tile_c2",
     "stores": {
       "L": 2
     },
-    "total_instructions": 4457
+    "total_instructions": 126
   },
-  "7": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "x_hls_utils.h",
-    "fileloc": 369,
-    "instructions": 24,
-    "name": "mantissa",
-    "total_instructions": 188
-  },
-  "8": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "x_hls_utils.h",
-    "fileloc": 345,
-    "instructions": 8,
-    "name": "expv",
-    "total_instructions": 109
-  },
-  "9": {
+  "19": {
     "basicblocks": 16,
-    "calls": "18 7 8 8 16 16",
+    "calls": "10 16 14 14 9 9",
     "file": "hls_case_IEEE754.h",
     "fileloc": 12,
     "instructions": 133,
@@ -242,5 +151,108 @@
       "L": 1
     },
     "total_instructions": 2177
+  },
+  "2": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 53,
+    "instructions": 9,
+    "name": "clamp",
+    "total_instructions": 9
+  },
+  "3": {
+    "basicblocks": 25,
+    "calls": "",
+    "file": "conv1.cpp",
+    "fileloc": 100,
+    "instructions": 57,
+    "loads": {
+      "L": 1
+    },
+    "name": "load_weight_buffer_c1",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 57
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "12",
+    "file": "lib_floatconversion.cpp",
+    "fileloc": 51,
+    "instructions": 2,
+    "name": "__hls_fptosi_float_i32",
+    "total_instructions": 2181
+  },
+  "5": {
+    "basicblocks": 21,
+    "calls": "",
+    "file": "conv2.cpp",
+    "fileloc": 134,
+    "instructions": 73,
+    "loads": {
+      "L": 4
+    },
+    "name": "export_buffer_tile_c2",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 73
+  },
+  "6": {
+    "basicblocks": 25,
+    "calls": "2 4 4",
+    "file": "conv1.cpp",
+    "fileloc": 67,
+    "instructions": 86,
+    "loads": {
+      "L": 2
+    },
+    "name": "load_input_buffer_c1",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 4457
+  },
+  "7": {
+    "basicblocks": 55,
+    "calls": "11 8",
+    "file": "conv3.cpp",
+    "fileloc": 10,
+    "instructions": 118,
+    "loads": {
+      "G": 2,
+      "L": 1
+    },
+    "name": "conv3",
+    "stores": {
+      "G": 1
+    },
+    "total_instructions": 294
+  },
+  "8": {
+    "basicblocks": 19,
+    "calls": "",
+    "file": "conv3.cpp",
+    "fileloc": 131,
+    "instructions": 52,
+    "loads": {
+      "L": 3
+    },
+    "name": "export_buffer_tile_c3",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 52
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 378,
+    "instructions": 4,
+    "name": "__signbit",
+    "total_instructions": 9
   }
 }

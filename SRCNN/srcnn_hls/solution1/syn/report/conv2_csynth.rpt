@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2'
 ================================================================
-* Date:           Wed Nov  1 03:32:56 2023
+* Date:           Wed Nov  1 04:14:25 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -87,7 +87,7 @@
     |              Instance              |             Module            | BRAM_18K| DSP|   FF  |  LUT  | URAM|
     +------------------------------------+-------------------------------+---------+----+-------+-------+-----+
     |grp_conv2_Pipeline_1_fu_559         |conv2_Pipeline_1               |        0|   0|     16|     69|    0|
-    |fmul_32ns_32ns_32_3_max_dsp_1_U219  |fmul_32ns_32ns_32_3_max_dsp_1  |        0|   3|    128|    135|    0|
+    |fmul_32ns_32ns_32_3_max_dsp_1_U234  |fmul_32ns_32ns_32_3_max_dsp_1  |        0|   3|    128|    135|    0|
     |grp_load_buffer_tile_c2_fu_528      |load_buffer_tile_c2            |        0|   1|  29679|  35056|    0|
     +------------------------------------+-------------------------------+---------+----+-------+-------+-----+
     |Total                               |                               |        0|   4|  29823|  35260|    0|
@@ -156,10 +156,10 @@
     |add_ln73_36_fu_987_p2    |         +|   0|  0|  19|          12|          12|
     |add_ln73_37_fu_997_p2    |         +|   0|  0|  19|          12|          12|
     |add_ln73_fu_816_p2       |         +|   0|  0|  17|          10|          10|
-    |empty_123_fu_872_p2      |         +|   0|  0|  18|          11|          11|
-    |empty_125_fu_893_p2      |         +|   0|  0|  21|          14|          14|
-    |empty_126_fu_1007_p2     |         +|   0|  0|  21|          14|          14|
-    |empty_128_fu_1157_p2     |         +|   0|  0|  15|           8|           8|
+    |empty_113_fu_872_p2      |         +|   0|  0|  18|          11|          11|
+    |empty_115_fu_893_p2      |         +|   0|  0|  21|          14|          14|
+    |empty_116_fu_1007_p2     |         +|   0|  0|  21|          14|          14|
+    |empty_118_fu_1157_p2     |         +|   0|  0|  15|           8|           8|
     |empty_fu_778_p2          |         +|   0|  0|  18|          11|          11|
     |tmp_fu_1148_p2           |         +|   0|  0|  12|           5|           5|
     |tn_1_fu_731_p2           |         +|   0|  0|  12|           4|           1|
@@ -287,8 +287,8 @@
     |add_ln73_29_reg_1557                         |  12|   0|   12|          0|
     |add_ln73_reg_1522                            |  10|   0|   10|          0|
     |ap_CS_fsm                                    |  71|   0|   71|          0|
-    |empty_125_reg_1562                           |  14|   0|   14|          0|
-    |empty_127_reg_1716                           |  32|   0|   32|          0|
+    |empty_115_reg_1562                           |  14|   0|   14|          0|
+    |empty_117_reg_1716                           |  32|   0|   32|          0|
     |empty_reg_1429                               |  11|   0|   11|          0|
     |grp_conv2_Pipeline_1_fu_559_ap_start_reg     |   1|   0|    1|          0|
     |grp_load_buffer_tile_c2_fu_528_ap_start_reg  |   1|   0|    1|          0|
@@ -367,20 +367,20 @@
 |ap_done                  |  out|    1|  ap_ctrl_hs|          conv2|  return value|
 |ap_idle                  |  out|    1|  ap_ctrl_hs|          conv2|  return value|
 |ap_ready                 |  out|    1|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_471_p_din0        |  out|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_471_p_din1        |  out|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_471_p_opcode      |  out|    2|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_471_p_dout0       |   in|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_471_p_ce          |  out|    1|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_475_p_din0        |  out|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_475_p_din1        |  out|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_475_p_dout0       |   in|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_475_p_ce          |  out|    1|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_479_p_din0        |  out|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_479_p_din1        |  out|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_479_p_opcode      |  out|    5|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_479_p_dout0       |   in|    1|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_479_p_ce          |  out|    1|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_437_p_din0        |  out|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_437_p_din1        |  out|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_437_p_opcode      |  out|    2|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_437_p_dout0       |   in|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_437_p_ce          |  out|    1|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_441_p_din0        |  out|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_441_p_din1        |  out|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_441_p_dout0       |   in|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_441_p_ce          |  out|    1|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_445_p_din0        |  out|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_445_p_din1        |  out|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_445_p_opcode      |  out|    5|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_445_p_dout0       |   in|    1|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_445_p_ce          |  out|    1|  ap_ctrl_hs|          conv2|  return value|
 |m_axi_output_r_AWVALID   |  out|    1|       m_axi|       output_r|       pointer|
 |m_axi_output_r_AWREADY   |   in|    1|       m_axi|       output_r|       pointer|
 |m_axi_output_r_AWADDR    |  out|   64|       m_axi|       output_r|       pointer|

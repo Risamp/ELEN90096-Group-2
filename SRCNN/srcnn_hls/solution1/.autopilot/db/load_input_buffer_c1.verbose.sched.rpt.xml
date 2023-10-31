@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'load_input_buffer_c1'" level="0">
-<item name = "Date">Wed Nov  1 03:31:38 2023
+<item name = "Date">Wed Nov  1 04:13:07 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -35,8 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_75_1">76728, 76728, 3336, -, -, 23, no</column>
-<column name=" + VITIS_LOOP_75_1.1">3315, 3315, 13, -, -, 255, no</column>
+<column name="- BH">76728, 76728, 3336, -, -, 23, no</column>
+<column name=" + BH.1">3315, 3315, 13, -, -, 255, no</column>
 </table>
 </item>
 </section>

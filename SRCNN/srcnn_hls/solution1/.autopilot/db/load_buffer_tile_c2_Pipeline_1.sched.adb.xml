@@ -109,10 +109,10 @@ memset.loop12:2 %exitcond13912 = icmp_eq  i12 %p_load, i12 2312
 
 <Node id="9" bw="12" op_0_bw="12" op_1_bw="12">
 <![CDATA[
-memset.loop12:3 %empty_84 = add i12 %p_load, i12 1
+memset.loop12:3 %empty_74 = add i12 %p_load, i12 1
 
 ]]></Node>
-<StgValue><ssdm name="empty_84"/></StgValue>
+<StgValue><ssdm name="empty_74"/></StgValue>
 </operation>
 
 <operation id="11" st_id="1" stage="1" lat="1">
@@ -204,7 +204,7 @@ memset.loop12.split:3 %store_ln0 = store i32 0, i12 %input_fm_buffer_1_addr
 
 <Node id="16" bw="0" op_0_bw="12" op_1_bw="12" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-memset.loop12.split:4 %store_ln0 = store i12 %empty_84, i12 %empty
+memset.loop12.split:4 %store_ln0 = store i12 %empty_74, i12 %empty
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>

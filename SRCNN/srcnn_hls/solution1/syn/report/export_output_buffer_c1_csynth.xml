@@ -32,7 +32,7 @@
 <Interval-max>109138</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<RELU1_VITIS_LOOP_126_1>
+<RELU1_BH>
 <Slack>7.30</Slack>
 <TripCount>120</TripCount>
 <Latency>17040</Latency>
@@ -40,7 +40,7 @@
 <IterationLatency>142</IterationLatency>
 <InstanceList>
 </InstanceList>
-</RELU1_VITIS_LOOP_126_1>
+</RELU1_BH>
 <EXPORT>
 <Slack>7.30</Slack>
 <TripCount>4</TripCount>
@@ -49,7 +49,7 @@
 <IterationLatency>23024</IterationLatency>
 <InstanceList>
 </InstanceList>
-<VITIS_LOOP_140_3>
+<ROW>
 <Slack>7.30</Slack>
 <TripCount>15</TripCount>
 <Latency>11505</Latency>
@@ -57,7 +57,7 @@
 <IterationLatency>767</IterationLatency>
 <InstanceList>
 </InstanceList>
-<VITIS_LOOP_140_3.1>
+<ROW.1>
 <Slack>7.30</Slack>
 <TripCount>255</TripCount>
 <Latency>765</Latency>
@@ -65,9 +65,9 @@
 <IterationLatency>3</IterationLatency>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_140_3.1>
-</VITIS_LOOP_140_3>
-<VITIS_LOOP_140_3>
+</ROW.1>
+</ROW>
+<ROW>
 <Slack>7.30</Slack>
 <TripCount>15</TripCount>
 <Latency>11505</Latency>
@@ -75,7 +75,7 @@
 <IterationLatency>767</IterationLatency>
 <InstanceList>
 </InstanceList>
-<VITIS_LOOP_140_3.1>
+<ROW.1>
 <Slack>7.30</Slack>
 <TripCount>255</TripCount>
 <Latency>765</Latency>
@@ -83,8 +83,8 @@
 <IterationLatency>3</IterationLatency>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_140_3.1>
-</VITIS_LOOP_140_3>
+</ROW.1>
+</ROW>
 </EXPORT>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
@@ -174,7 +174,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1605_p_din0</name>
+<name>grp_fu_1632_p_din0</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -185,7 +185,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1605_p_din1</name>
+<name>grp_fu_1632_p_din1</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -196,7 +196,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1605_p_opcode</name>
+<name>grp_fu_1632_p_opcode</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -207,7 +207,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1605_p_dout0</name>
+<name>grp_fu_1632_p_dout0</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -218,7 +218,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1605_p_ce</name>
+<name>grp_fu_1632_p_ce</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -229,7 +229,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1613_p_din0</name>
+<name>grp_fu_1640_p_din0</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -240,7 +240,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1613_p_din1</name>
+<name>grp_fu_1640_p_din1</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -251,7 +251,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1613_p_opcode</name>
+<name>grp_fu_1640_p_opcode</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -262,7 +262,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1613_p_dout0</name>
+<name>grp_fu_1640_p_dout0</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -273,7 +273,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1613_p_ce</name>
+<name>grp_fu_1640_p_ce</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>

@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698769975742">
-  <ports id="1" name="output_r" type="PortType" coreId="1920411424" bitwidth="32" iftype="IfTypeFifo">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698772464700">
+  <ports id="1" name="output_r" type="PortType" coreId="1635147636" bitwidth="32" iftype="IfTypeFifo">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="2" name="input_fm" type="PortType" coreId="1852142702" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="params" type="PortType" coreId="540946720" bitwidth="32" iftype="IfTypeFifo">
+  <ports id="3" name="params" type="PortType" coreId="1380681504" bitwidth="32" iftype="IfTypeFifo">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="4" name="conv2_weights" type="PortType" coreId="0" bitwidth="64">
+  <ports id="4" name="conv2_weights" type="PortType" coreId="1819310149" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="tx0" type="PortType" coreId="1852142702" bitwidth="8">
+  <ports id="5" name="tx0" type="PortType" coreId="1380662448" bitwidth="8">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="6" name="ty0" type="PortType" coreId="740766002" bitwidth="8">
+  <ports id="6" name="ty0" type="PortType" coreId="1149997232" bitwidth="8">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="7" name="tn0" type="PortType" coreId="1852142702" bitwidth="6">
+  <ports id="7" name="tn0" type="PortType" coreId="1374226384" bitwidth="6">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="8" name="input_fm_buffer_1" type="PortType" coreName="RAM" coreId="50" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="2312">
+  <ports id="8" name="input_fm_buffer_1" type="PortType" coreName="RAM" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="2312">
     <dataInputObjs>call</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="9" name="weights_buffer_0_0_0" type="PortType" coreName="RAM" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
+  <ports id="9" name="weights_buffer_0_0_0" type="PortType" coreName="RAM" coreId="1313818964" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
     <dataInputObjs>call</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="10" name="weights_buffer_0_0_1" type="PortType" coreName="RAM" coreId="101" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
+  <ports id="10" name="weights_buffer_0_0_1" type="PortType" coreName="RAM" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="11" name="weights_buffer_0_0_2" type="PortType" coreName="RAM" coreId="1852142702" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
+  <ports id="11" name="weights_buffer_0_0_2" type="PortType" coreName="RAM" coreId="1431261768" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="12" name="weights_buffer_0_0_3" type="PortType" coreName="RAM" coreId="1852142702" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
+  <ports id="12" name="weights_buffer_0_0_3" type="PortType" coreName="RAM" coreId="544825708" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="13" name="weights_buffer_0_0_4" type="PortType" coreName="RAM" coreId="540876915" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
+  <ports id="13" name="weights_buffer_0_0_4" type="PortType" coreName="RAM" coreId="1374226384" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="14" name="weights_buffer_0_0_5" type="PortType" coreName="RAM" coreId="1931485194" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
+  <ports id="14" name="weights_buffer_0_0_5" type="PortType" coreName="RAM" coreId="544433525" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="15" name="weights_buffer_0_0_6" type="PortType" coreName="RAM" coreId="544433525" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
+  <ports id="15" name="weights_buffer_0_0_6" type="PortType" coreName="RAM" coreId="1717920800" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="16" name="weights_buffer_0_0_7" type="PortType" coreName="RAM" coreId="1931485194" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
+  <ports id="16" name="weights_buffer_0_0_7" type="PortType" coreName="RAM" coreId="1852142702" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
     <dataInputObjs>call</dataInputObjs>
   </ports>
   <edges id="64" source_obj="//@ports.6" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -142,12 +142,12 @@
   <edges id="263" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.39"/>
   <edges id="264" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.39"/>
   <blocks id="61" name="load_buffer_tile_c2" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="tn0_read" coreId="11863" bitwidth="6" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="tn0_read" coreId="7028" bitwidth="6" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>tn0</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="ty0_read" coreId="11438" bitwidth="8" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="ty0_read" coreId="14329" bitwidth="8" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataInputObjs>ty0</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -167,7 +167,7 @@
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="tx0_read" coreId="0" bitwidth="8" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="tx0_read" coreId="15589" bitwidth="8" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <dataInputObjs>tx0</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -187,19 +187,19 @@
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="conv2_weights_read" coreId="0" bitwidth="64" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="conv2_weights_read" coreId="10204" bitwidth="64" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
       <dataInputObjs>conv2_weights</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="input_fm_read" coreId="0" bitwidth="64" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="input_fm_read" coreId="16289" bitwidth="64" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <dataInputObjs>input_fm</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="_ln0" rtlName="grp_load_buffer_tile_c2_Pipeline_1_fu_128" coreId="0" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="_ln0" rtlName="grp_load_buffer_tile_c2_Pipeline_1_fu_128" coreId="17549" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>input_fm_buffer_1</dataOutputObjs>
       <constName>load_buffer_tile_c2_Pipeline_1</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="_ln0" rtlName="grp_load_buffer_tile_c2_Pipeline_2_fu_134" coreId="0" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="_ln0" rtlName="grp_load_buffer_tile_c2_Pipeline_2_fu_134" coreId="14049" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>weights_buffer_0_0_0</dataOutputObjs>
       <constName>load_buffer_tile_c2_Pipeline_2</constName>
     </node_objs>
@@ -363,7 +363,7 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="_ln0" rtlName="grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1_fu_140" coreId="0" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="_ln0" rtlName="grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1_fu_140" coreId="15309" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
@@ -404,7 +404,7 @@
       <dataOutputObjs>input_fm_buffer_1</dataOutputObjs>
       <constName>load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="_ln0" rtlName="grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_188" coreId="0" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="0.81" m_topoIndex="41" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="_ln0" rtlName="grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_188" coreId="17969" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="0.81" m_topoIndex="41" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>params</dataInputObjs>
@@ -418,7 +418,7 @@
       <dataOutputObjs>weights_buffer_0_0_7</dataOutputObjs>
       <constName>load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="_ln132" lineNumber="132" fileName="src/conv2.cpp" fileDirectory="../." coreId="0" contextFuncName="load_buffer_tile_c2" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="_ln132" lineNumber="132" fileName="src/conv2.cpp" fileDirectory="../." coreId="14469" contextFuncName="load_buffer_tile_c2" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv2.cpp" linenumber="132" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="load_buffer_tile_c2"/>
     </node_objs>
     <fileValidLineNumbers fileName="src/conv2.cpp">

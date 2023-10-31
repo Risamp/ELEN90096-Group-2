@@ -293,7 +293,7 @@ wire   [19:0] add_ln115_1_fu_770_p2;
 wire  signed [63:0] sext_ln115_3_fu_776_p1;
 wire   [63:0] add_ln115_fu_765_p2;
 wire   [63:0] add_ln115_2_fu_780_p2;
-wire   [61:0] trunc_ln_fu_786_p4;
+wire   [61:0] trunc_ln9_fu_786_p4;
 wire   [8:0] mul_ln115_fu_421_p2;
 wire   [4:0] grp_fu_838_p1;
 wire   [4:0] grp_fu_838_p2;
@@ -344,7 +344,7 @@ srcnn_mul_4ns_6ns_9_1_1 #(
     .din0_WIDTH( 4 ),
     .din1_WIDTH( 6 ),
     .dout_WIDTH( 9 ))
-mul_4ns_6ns_9_1_1_U231(
+mul_4ns_6ns_9_1_1_U246(
     .din0(mul_ln115_fu_421_p0),
     .din1(mul_ln115_fu_421_p1),
     .dout(mul_ln115_fu_421_p2)
@@ -356,7 +356,7 @@ srcnn_mul_5ns_19ns_23_1_1 #(
     .din0_WIDTH( 5 ),
     .din1_WIDTH( 19 ),
     .dout_WIDTH( 23 ))
-mul_5ns_19ns_23_1_1_U232(
+mul_5ns_19ns_23_1_1_U247(
     .din0(mul_ln106_fu_440_p0),
     .din1(mul_ln106_fu_440_p1),
     .dout(mul_ln106_fu_440_p2)
@@ -370,7 +370,7 @@ srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1 #(
     .din2_WIDTH( 5 ),
     .din3_WIDTH( 5 ),
     .dout_WIDTH( 12 ))
-ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_U233(
+ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_U248(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(mul_ln115_fu_421_p2),
@@ -977,7 +977,7 @@ assign select_ln54_fu_343_p3 = ((tmp_9_fu_335_p3[0:0] == 1'b1) ? 10'd0 : 10'd254
 
 assign sext_ln111_fu_699_p1 = $signed(add_ln111_1_fu_693_p2);
 
-assign sext_ln115_1_fu_796_p1 = $signed(trunc_ln_fu_786_p4);
+assign sext_ln115_1_fu_796_p1 = $signed(trunc_ln9_fu_786_p4);
 
 assign sext_ln115_2_fu_761_p1 = $signed(shl_ln115_2_fu_753_p3);
 
@@ -1039,7 +1039,7 @@ assign tmp_mid1_fu_581_p2 = ($signed(zext_ln107_2_fu_577_p1) + $signed(6'd62));
 
 assign trunc_ln111_cast_fu_679_p1 = select_ln107_fu_557_p3;
 
-assign trunc_ln_fu_786_p4 = {{add_ln115_2_fu_780_p2[63:2]}};
+assign trunc_ln9_fu_786_p4 = {{add_ln115_2_fu_780_p2[63:2]}};
 
 assign xor_ln106_fu_529_p2 = (icmp_ln107_reg_925 ^ 1'd1);
 

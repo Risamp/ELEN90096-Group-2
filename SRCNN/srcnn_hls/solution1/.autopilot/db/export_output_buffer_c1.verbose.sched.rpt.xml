@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'export_output_buffer_c1'" level="0">
-<item name = "Date">Wed Nov  1 03:31:46 2023
+<item name = "Date">Wed Nov  1 04:13:15 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -35,12 +35,12 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- RELU1_VITIS_LOOP_126_1">17040, 17040, 142, -, -, 120, no</column>
+<column name="- RELU1_BH">17040, 17040, 142, -, -, 120, no</column>
 <column name="- EXPORT">92096, 92096, 23024, -, -, 4, no</column>
-<column name=" + VITIS_LOOP_140_3">11505, 11505, 767, -, -, 15, no</column>
-<column name="  ++ VITIS_LOOP_140_3.1">765, 765, 3, -, -, 255, no</column>
-<column name=" + VITIS_LOOP_140_3">11505, 11505, 767, -, -, 15, no</column>
-<column name="  ++ VITIS_LOOP_140_3.1">765, 765, 3, -, -, 255, no</column>
+<column name=" + ROW">11505, 11505, 767, -, -, 15, no</column>
+<column name="  ++ ROW.1">765, 765, 3, -, -, 255, no</column>
+<column name=" + ROW">11505, 11505, 767, -, -, 15, no</column>
+<column name="  ++ ROW.1">765, 765, 3, -, -, 255, no</column>
 </table>
 </item>
 </section>

@@ -45,7 +45,7 @@ wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 wire   [63:0] p_cast_fu_64_p1;
 reg   [13:0] empty_fu_26;
-wire   [13:0] empty_122_fu_58_p2;
+wire   [13:0] empty_112_fu_58_p2;
 wire    ap_loop_init;
 reg   [13:0] ap_sig_allocacmp_p_load;
 reg    ap_done_reg;
@@ -100,7 +100,7 @@ end
 always @ (posedge ap_clk) begin
     if (((ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         if ((exitcond368_fu_52_p2 == 1'd0)) begin
-            empty_fu_26 <= empty_122_fu_58_p2;
+            empty_fu_26 <= empty_112_fu_58_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             empty_fu_26 <= 14'd0;
         end
@@ -190,7 +190,7 @@ end
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign empty_122_fu_58_p2 = (ap_sig_allocacmp_p_load + 14'd1);
+assign empty_112_fu_58_p2 = (ap_sig_allocacmp_p_load + 14'd1);
 
 assign exitcond368_fu_52_p2 = ((ap_sig_allocacmp_p_load == 14'd9248) ? 1'b1 : 1'b0);
 

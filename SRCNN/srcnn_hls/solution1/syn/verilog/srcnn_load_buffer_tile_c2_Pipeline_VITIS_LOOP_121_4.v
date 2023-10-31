@@ -288,7 +288,7 @@ wire   [63:0] zext_ln127_fu_252_p1;
 wire   [63:0] add_ln127_fu_268_p2;
 wire   [63:0] zext_ln127_1_fu_264_p1;
 wire   [63:0] add_ln127_1_fu_274_p2;
-wire   [61:0] trunc_ln5_fu_280_p4;
+wire   [61:0] trunc_ln4_fu_280_p4;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -960,7 +960,7 @@ assign m_axi_params_WUSER = 1'd0;
 
 assign m_axi_params_WVALID = 1'b0;
 
-assign sext_ln127_fu_290_p1 = $signed(trunc_ln5_fu_280_p4);
+assign sext_ln127_fu_290_p1 = $signed(trunc_ln4_fu_280_p4);
 
 assign shl_ln127_1_fu_256_p3 = {{tn0}, {2'd0}};
 
@@ -968,7 +968,7 @@ assign shl_ln1_fu_244_p3 = {{trunc_ln127_fu_240_p1}, {8'd0}};
 
 assign trunc_ln127_fu_240_p1 = ap_sig_allocacmp_nout_1[4:0];
 
-assign trunc_ln5_fu_280_p4 = {{add_ln127_1_fu_274_p2[63:2]}};
+assign trunc_ln4_fu_280_p4 = {{add_ln127_1_fu_274_p2[63:2]}};
 
 assign weights_buffer_0_0_0_address0 = zext_ln121_fu_305_p1;
 

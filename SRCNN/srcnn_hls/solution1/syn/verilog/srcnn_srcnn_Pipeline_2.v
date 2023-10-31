@@ -59,7 +59,7 @@ module srcnn_srcnn_Pipeline_2 (
         m_axi_output_r_BRESP,
         m_axi_output_r_BID,
         m_axi_output_r_BUSER,
-        sext_ln38
+        sext_ln39
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
@@ -116,7 +116,7 @@ output   m_axi_output_r_BREADY;
 input  [1:0] m_axi_output_r_BRESP;
 input  [0:0] m_axi_output_r_BID;
 input  [0:0] m_axi_output_r_BUSER;
-input  [61:0] sext_ln38;
+input  [61:0] sext_ln39;
 
 reg ap_idle;
 reg m_axi_output_r_WVALID;
@@ -129,7 +129,7 @@ reg    ap_idle_pp0;
 wire    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state2_pp0_stage0_iter1;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] exitcond54_fu_83_p2;
+wire   [0:0] exitcond2_fu_83_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
@@ -137,10 +137,10 @@ reg    output_r_blk_n_W;
 wire    ap_block_pp0_stage0;
 reg    ap_block_pp0_stage0_11001;
 wire    ap_block_pp0_stage0_01001;
-reg   [20:0] empty_fu_46;
-wire   [20:0] empty_71_fu_89_p2;
+reg   [15:0] empty_fu_46;
+wire   [15:0] empty_63_fu_89_p2;
 wire    ap_loop_init;
-reg   [20:0] ap_sig_allocacmp_p_load;
+reg   [15:0] ap_sig_allocacmp_p_load;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -205,16 +205,16 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if (((exitcond54_fu_83_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            empty_fu_46 <= empty_71_fu_89_p2;
+        if (((exitcond2_fu_83_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+            empty_fu_46 <= empty_63_fu_89_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            empty_fu_46 <= 21'd0;
+            empty_fu_46 <= 16'd0;
         end
     end
 end
 
 always @ (*) begin
-    if (((exitcond54_fu_83_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((exitcond2_fu_83_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -255,7 +255,7 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
-        ap_sig_allocacmp_p_load = 21'd0;
+        ap_sig_allocacmp_p_load = 16'd0;
     end else begin
         ap_sig_allocacmp_p_load = empty_fu_46;
     end
@@ -312,9 +312,9 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign empty_71_fu_89_p2 = (ap_sig_allocacmp_p_load + 21'd1);
+assign empty_63_fu_89_p2 = (ap_sig_allocacmp_p_load + 16'd1);
 
-assign exitcond54_fu_83_p2 = ((ap_sig_allocacmp_p_load == 21'd2080800) ? 1'b1 : 1'b0);
+assign exitcond2_fu_83_p2 = ((ap_sig_allocacmp_p_load == 16'd65025) ? 1'b1 : 1'b0);
 
 assign m_axi_output_r_ARADDR = 64'd0;
 

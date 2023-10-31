@@ -31595,7 +31595,7 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][2
 
 
 
- memset(conv1_output_ftmap, 0, 64 * 255 * 255 * sizeof(ftmap_t));
+
  memset(conv2_output_ftmap, 0, 32 * 255 * 255 * sizeof(ftmap_t));
  memset(output_ftmap, 0, 1 * 255 * 255 * sizeof(ftmap_t));
 

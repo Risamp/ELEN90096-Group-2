@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_VITIS_LOOP_106_1_VITIS_LOOP_107_2_VITIS_LOOP_108_3'
 ================================================================
-* Date:           Wed Nov  1 03:32:57 2023
+* Date:           Wed Nov  1 04:14:27 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -73,8 +73,8 @@
     +--------------------------+---------------------+---------+----+---+----+-----+
     |         Instance         |        Module       | BRAM_18K| DSP| FF| LUT| URAM|
     +--------------------------+---------------------+---------+----+---+----+-----+
-    |mul_4ns_6ns_9_1_1_U231    |mul_4ns_6ns_9_1_1    |        0|   0|  0|  23|    0|
-    |mul_5ns_19ns_23_1_1_U232  |mul_5ns_19ns_23_1_1  |        0|   1|  0|   6|    0|
+    |mul_4ns_6ns_9_1_1_U246    |mul_4ns_6ns_9_1_1    |        0|   0|  0|  23|    0|
+    |mul_5ns_19ns_23_1_1_U247  |mul_5ns_19ns_23_1_1  |        0|   1|  0|   6|    0|
     +--------------------------+---------------------+---------+----+---+----+-----+
     |Total                     |                     |        0|   1|  0|  29|    0|
     +--------------------------+---------------------+---------+----+---+----+-----+
@@ -83,7 +83,7 @@
     +-------------------------------------------+--------------------------------------+---------------------+
     |                  Instance                 |                Module                |      Expression     |
     +-------------------------------------------+--------------------------------------+---------------------+
-    |ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_U233  |ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1  |  (i0 + i1) * i2 + i3|
+    |ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_U248  |ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1  |  (i0 + i1) * i2 + i3|
     +-------------------------------------------+--------------------------------------+---------------------+
 
     * Memory: 
@@ -355,7 +355,7 @@ ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%zext_ln55_cast2 = zext i8 %zext_ln
 ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%zext_ln31_cast1 = zext i8 %zext_ln31_read"   --->   Operation 26 'zext' 'zext_ln31_cast1' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%zext_ln55_cast = zext i8 %zext_ln55_read"   --->   Operation 27 'zext' 'zext_ln55_cast' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%zext_ln31_cast = zext i8 %zext_ln31_read"   --->   Operation 28 'zext' 'zext_ln31_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %output_r, void @empty_23, i32 0, i32 0, void @empty_22, i32 0, i32 512, void @empty_26, void @empty_6, void @empty_22, i32 16, i32 16, i32 16, i32 16, void @empty_22, void @empty_22, i32 4294967295, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %output_r, void @empty_18, i32 0, i32 0, void @empty_19, i32 0, i32 512, void @empty_21, void @empty_10, void @empty_19, i32 16, i32 16, i32 16, i32 16, void @empty_19, void @empty_19, i32 4294967295, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 30 [1/1] (0.42ns)   --->   "%store_ln0 = store i12 0, i12 %indvar_flatten63"   --->   Operation 30 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 31 [1/1] (0.42ns)   --->   "%store_ln0 = store i4 0, i4 %nin"   --->   Operation 31 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 32 [1/1] (0.42ns)   --->   "%store_ln0 = store i10 0, i10 %indvar_flatten"   --->   Operation 32 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
@@ -460,8 +460,8 @@ ST_2 : Operation 128 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_l
 ST_2 : Operation 129 [1/1] (0.89ns) (out node of the LUT)   --->   "%add_ln115_1 = add i20 %select_ln107_2, i20 %sext_ln115_2" [src/conv3.cpp:115->src/conv3.cpp:52]   --->   Operation 129 'add' 'add_ln115_1' <Predicate = (!icmp_ln106)> <Delay = 0.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 130 [1/1] (0.00ns)   --->   "%sext_ln115_3 = sext i20 %add_ln115_1" [src/conv3.cpp:115->src/conv3.cpp:52]   --->   Operation 130 'sext' 'sext_ln115_3' <Predicate = (!icmp_ln106)> <Delay = 0.00>
 ST_2 : Operation 131 [1/1] (0.81ns) (root node of TernaryAdder)   --->   "%add_ln115_2 = add i64 %sext_ln115_3, i64 %add_ln115" [src/conv3.cpp:115->src/conv3.cpp:52]   --->   Operation 131 'add' 'add_ln115_2' <Predicate = (!icmp_ln106)> <Delay = 0.81> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.40> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 132 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln115_2, i32 2, i32 63" [src/conv3.cpp:115->src/conv3.cpp:52]   --->   Operation 132 'partselect' 'trunc_ln' <Predicate = (!icmp_ln106)> <Delay = 0.00>
-ST_2 : Operation 133 [1/1] (0.00ns)   --->   "%sext_ln115_1 = sext i62 %trunc_ln" [src/conv3.cpp:115->src/conv3.cpp:52]   --->   Operation 133 'sext' 'sext_ln115_1' <Predicate = (!icmp_ln106)> <Delay = 0.00>
+ST_2 : Operation 132 [1/1] (0.00ns)   --->   "%trunc_ln9 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln115_2, i32 2, i32 63" [src/conv3.cpp:115->src/conv3.cpp:52]   --->   Operation 132 'partselect' 'trunc_ln9' <Predicate = (!icmp_ln106)> <Delay = 0.00>
+ST_2 : Operation 133 [1/1] (0.00ns)   --->   "%sext_ln115_1 = sext i62 %trunc_ln9" [src/conv3.cpp:115->src/conv3.cpp:52]   --->   Operation 133 'sext' 'sext_ln115_1' <Predicate = (!icmp_ln106)> <Delay = 0.00>
 ST_2 : Operation 134 [1/1] (0.00ns)   --->   "%output_r_addr = getelementptr i32 %output_r, i64 %sext_ln115_1" [src/conv3.cpp:115->src/conv3.cpp:52]   --->   Operation 134 'getelementptr' 'output_r_addr' <Predicate = (!icmp_ln106)> <Delay = 0.00>
 ST_2 : Operation 135 [1/1] (0.78ns)   --->   "%add_ln108 = add i5 %select_ln107, i5 1" [src/conv3.cpp:108->src/conv3.cpp:52]   --->   Operation 135 'add' 'add_ln108' <Predicate = (!icmp_ln106)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 136 [1/1] (0.42ns)   --->   "%store_ln108 = store i4 %select_ln106_1, i4 %nin" [src/conv3.cpp:108->src/conv3.cpp:52]   --->   Operation 136 'store' 'store_ln108' <Predicate = (!icmp_ln106)> <Delay = 0.42>
@@ -509,7 +509,7 @@ ST_12 : Operation 156 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname 
 ST_12 : Operation 157 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 157 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
 ST_12 : Operation 158 [1/1] (0.00ns)   --->   "%zext_ln115_3 = zext i12 %add_ln115_4" [src/conv3.cpp:115->src/conv3.cpp:52]   --->   Operation 158 'zext' 'zext_ln115_3' <Predicate = true> <Delay = 0.00>
 ST_12 : Operation 159 [1/1] (0.00ns)   --->   "%input_fm_buffer_addr = getelementptr i32 %input_fm_buffer, i64 0, i64 %zext_ln115_3" [src/conv3.cpp:115->src/conv3.cpp:52]   --->   Operation 159 'getelementptr' 'input_fm_buffer_addr' <Predicate = true> <Delay = 0.00>
-ST_12 : Operation 160 [1/1] (0.00ns)   --->   "%specloopname_ln108 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9" [src/conv3.cpp:108->src/conv3.cpp:52]   --->   Operation 160 'specloopname' 'specloopname_ln108' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 160 [1/1] (0.00ns)   --->   "%specloopname_ln108 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [src/conv3.cpp:108->src/conv3.cpp:52]   --->   Operation 160 'specloopname' 'specloopname_ln108' <Predicate = true> <Delay = 0.00>
 ST_12 : Operation 161 [1/1] (0.00ns)   --->   "%bitcast_ln115 = bitcast i32 %output_r_addr_read" [src/conv3.cpp:115->src/conv3.cpp:52]   --->   Operation 161 'bitcast' 'bitcast_ln115' <Predicate = true> <Delay = 0.00>
 ST_12 : Operation 162 [1/1] (1.23ns)   --->   "%store_ln115 = store i32 %bitcast_ln115, i12 %input_fm_buffer_addr" [src/conv3.cpp:115->src/conv3.cpp:52]   --->   Operation 162 'store' 'store_ln115' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3528> <RAM>
 ST_12 : Operation 163 [1/1] (0.00ns)   --->   "%br_ln108 = br void %for.inc.i" [src/conv3.cpp:108->src/conv3.cpp:52]   --->   Operation 163 'br' 'br_ln108' <Predicate = true> <Delay = 0.00>
@@ -655,7 +655,7 @@ add_ln115             (add              ) [ 0000000000000]
 add_ln115_1           (add              ) [ 0000000000000]
 sext_ln115_3          (sext             ) [ 0000000000000]
 add_ln115_2           (add              ) [ 0000000000000]
-trunc_ln              (partselect       ) [ 0000000000000]
+trunc_ln9             (partselect       ) [ 0000000000000]
 sext_ln115_1          (sext             ) [ 0000000000000]
 output_r_addr         (getelementptr    ) [ 0101111111110]
 add_ln108             (add              ) [ 0000000000000]
@@ -807,7 +807,7 @@ ret_ln0               (ret              ) [ 0000000000000]
 <pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_23"/></StgValue>
+<StgValue><ssdm name="empty_18"/></StgValue>
 </bind>
 </comp>
 
@@ -825,7 +825,7 @@ ret_ln0               (ret              ) [ 0000000000000]
 <pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_22"/></StgValue>
+<StgValue><ssdm name="empty_19"/></StgValue>
 </bind>
 </comp>
 
@@ -843,7 +843,7 @@ ret_ln0               (ret              ) [ 0000000000000]
 <pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_26"/></StgValue>
+<StgValue><ssdm name="empty_21"/></StgValue>
 </bind>
 </comp>
 
@@ -852,7 +852,7 @@ ret_ln0               (ret              ) [ 0000000000000]
 <pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_6"/></StgValue>
+<StgValue><ssdm name="empty_10"/></StgValue>
 </bind>
 </comp>
 
@@ -1266,7 +1266,7 @@ ret_ln0               (ret              ) [ 0000000000000]
 <pin id="129" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_9"/></StgValue>
+<StgValue><ssdm name="empty_8"/></StgValue>
 </bind>
 </comp>
 
@@ -2640,7 +2640,7 @@ ret_ln0               (ret              ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="786" class="1004" name="trunc_ln_fu_786">
+<comp id="786" class="1004" name="trunc_ln9_fu_786">
 <pin_list>
 <pin id="787" dir="0" index="0" bw="62" slack="0"/>
 <pin id="788" dir="0" index="1" bw="64" slack="0"/>
@@ -2650,7 +2650,7 @@ ret_ln0               (ret              ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="trunc_ln/2 "/>
+<opset="trunc_ln9/2 "/>
 </bind>
 </comp>
 
@@ -3620,7 +3620,7 @@ ret_ln0               (ret              ) [ 0000000000000]
 		add_ln115_1 : 12
 		sext_ln115_3 : 13
 		add_ln115_2 : 14
-		trunc_ln : 15
+		trunc_ln9 : 15
 		sext_ln115_1 : 16
 		output_r_addr : 17
 		add_ln108 : 3
@@ -3765,7 +3765,7 @@ ret_ln0               (ret              ) [ 0000000000000]
 |          |           tmp4_fu_683          |    0    |    0    |    0    |
 |          |       shl_ln115_2_fu_753       |    0    |    0    |    0    |
 |----------|--------------------------------|---------|---------|---------|
-|partselect|         trunc_ln_fu_786        |    0    |    0    |    0    |
+|partselect|        trunc_ln9_fu_786        |    0    |    0    |    0    |
 |----------|--------------------------------|---------|---------|---------|
 |   Total  |                                |    2    |    0    |   745   |
 |----------|--------------------------------|---------|---------|---------|

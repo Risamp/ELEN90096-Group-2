@@ -22,13 +22,17 @@ set C_modelArgList {
 	{ c int 8 regular  }
 	{ p_out float 32 regular {pointer 1}  }
 	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_3 float 32 regular {array 162 { 1 3 } 1 1 } {global 0}  }
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_2 float 32 regular {array 162 { 1 3 } 1 1 } {global 0}  }
 	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_1 float 32 regular {array 162 { 1 3 } 1 1 } {global 0}  }
 	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we float 32 regular {array 162 { 1 3 } 1 1 } {global 0}  }
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_3 float 32 regular {array 1518 { 1 3 } 1 1 } {global 0}  }
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_2 float 32 regular {array 1518 { 1 3 } 1 1 } {global 0}  }
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_1 float 32 regular {array 1518 { 1 3 } 1 1 } {global 0}  }
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in float 32 regular {array 1518 { 1 3 } 1 1 } {global 0}  }
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_2 float 32 regular {array 162 { 1 3 } 1 1 } {global 0}  }
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_7 float 32 regular {array 759 { 1 3 } 1 1 } {global 0}  }
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_6 float 32 regular {array 759 { 1 3 } 1 1 } {global 0}  }
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_5 float 32 regular {array 759 { 1 3 } 1 1 } {global 0}  }
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_4 float 32 regular {array 759 { 1 3 } 1 1 } {global 0}  }
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_3 float 32 regular {array 759 { 1 3 } 1 1 } {global 0}  }
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_2 float 32 regular {array 759 { 1 3 } 1 1 } {global 0}  }
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_1 float 32 regular {array 759 { 1 3 } 1 1 } {global 0}  }
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in float 32 regular {array 759 { 1 3 } 1 1 } {global 0}  }
 }
 set hasAXIMCache 0
 set C_modelArgMapList {[ 
@@ -39,15 +43,19 @@ set C_modelArgMapList {[
  	{ "Name" : "c", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY"} , 
  	{ "Name" : "p_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
  	{ "Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_we_3", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "extern" : 0} , 
- 	{ "Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_we_2", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "extern" : 0} , 
  	{ "Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_we_1", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "extern" : 0} , 
  	{ "Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_we", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "extern" : 0} , 
+ 	{ "Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_we_2", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "extern" : 0} , 
+ 	{ "Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_in_7", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "extern" : 0} , 
+ 	{ "Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_in_6", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "extern" : 0} , 
+ 	{ "Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_in_5", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "extern" : 0} , 
+ 	{ "Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_in_4", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "extern" : 0} , 
  	{ "Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_in_3", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "extern" : 0} , 
  	{ "Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_in_2", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "extern" : 0} , 
  	{ "Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_in_1", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "extern" : 0} , 
  	{ "Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_in", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "extern" : 0} ]}
 # RTL Port declarations: 
-set portNum 46
+set portNum 58
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -65,36 +73,48 @@ set portList {
 	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_3_address0 sc_out sc_lv 8 signal 6 } 
 	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_3_ce0 sc_out sc_logic 1 signal 6 } 
 	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_3_q0 sc_in sc_lv 32 signal 6 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_address0 sc_out sc_lv 8 signal 7 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_ce0 sc_out sc_logic 1 signal 7 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_q0 sc_in sc_lv 32 signal 7 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_1_address0 sc_out sc_lv 8 signal 8 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_1_ce0 sc_out sc_logic 1 signal 8 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_1_q0 sc_in sc_lv 32 signal 8 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_address0 sc_out sc_lv 8 signal 9 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_ce0 sc_out sc_logic 1 signal 9 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_q0 sc_in sc_lv 32 signal 9 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_address0 sc_out sc_lv 11 signal 10 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_ce0 sc_out sc_logic 1 signal 10 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_q0 sc_in sc_lv 32 signal 10 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_address0 sc_out sc_lv 11 signal 11 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_ce0 sc_out sc_logic 1 signal 11 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_q0 sc_in sc_lv 32 signal 11 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_address0 sc_out sc_lv 11 signal 12 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_ce0 sc_out sc_logic 1 signal 12 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_q0 sc_in sc_lv 32 signal 12 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_address0 sc_out sc_lv 11 signal 13 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_ce0 sc_out sc_logic 1 signal 13 } 
-	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_q0 sc_in sc_lv 32 signal 13 } 
-	{ grp_fu_1605_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1605_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1605_p_opcode sc_out sc_lv 2 signal -1 } 
-	{ grp_fu_1605_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1605_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_1609_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1609_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_1609_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_1609_p_ce sc_out sc_logic 1 signal -1 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_1_address0 sc_out sc_lv 8 signal 7 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_1_ce0 sc_out sc_logic 1 signal 7 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_1_q0 sc_in sc_lv 32 signal 7 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_address0 sc_out sc_lv 8 signal 8 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_ce0 sc_out sc_logic 1 signal 8 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_q0 sc_in sc_lv 32 signal 8 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_address0 sc_out sc_lv 8 signal 9 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_ce0 sc_out sc_logic 1 signal 9 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_q0 sc_in sc_lv 32 signal 9 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_7_address0 sc_out sc_lv 10 signal 10 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_7_ce0 sc_out sc_logic 1 signal 10 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_7_q0 sc_in sc_lv 32 signal 10 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_6_address0 sc_out sc_lv 10 signal 11 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_6_ce0 sc_out sc_logic 1 signal 11 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_6_q0 sc_in sc_lv 32 signal 11 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_5_address0 sc_out sc_lv 10 signal 12 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_5_ce0 sc_out sc_logic 1 signal 12 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_5_q0 sc_in sc_lv 32 signal 12 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_4_address0 sc_out sc_lv 10 signal 13 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_4_ce0 sc_out sc_logic 1 signal 13 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_4_q0 sc_in sc_lv 32 signal 13 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_address0 sc_out sc_lv 10 signal 14 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_ce0 sc_out sc_logic 1 signal 14 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_q0 sc_in sc_lv 32 signal 14 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_address0 sc_out sc_lv 10 signal 15 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_ce0 sc_out sc_logic 1 signal 15 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_q0 sc_in sc_lv 32 signal 15 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_address0 sc_out sc_lv 10 signal 16 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_ce0 sc_out sc_logic 1 signal 16 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_q0 sc_in sc_lv 32 signal 16 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_address0 sc_out sc_lv 10 signal 17 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_ce0 sc_out sc_logic 1 signal 17 } 
+	{ conv1_float_255_255_float_1_9_9_float_float_255_255_in_q0 sc_in sc_lv 32 signal 17 } 
+	{ grp_fu_1632_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_1632_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_1632_p_opcode sc_out sc_lv 2 signal -1 } 
+	{ grp_fu_1632_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_1632_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_1636_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_1636_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_1636_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_1636_p_ce sc_out sc_logic 1 signal -1 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -113,36 +133,48 @@ set NewPortList {[
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_3_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_3", "role": "address0" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_3_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_3", "role": "ce0" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_3_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_3", "role": "q0" }} , 
- 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_2", "role": "address0" }} , 
- 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_2", "role": "ce0" }} , 
- 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_2", "role": "q0" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_1_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_1", "role": "address0" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_1_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_1", "role": "ce0" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_1_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_1", "role": "q0" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we", "role": "address0" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we", "role": "ce0" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we", "role": "q0" }} , 
- 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_3", "role": "address0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_2", "role": "address0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_2", "role": "ce0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_we_2", "role": "q0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_7_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_7", "role": "address0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_7_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_7", "role": "ce0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_7_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_7", "role": "q0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_6_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_6", "role": "address0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_6_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_6", "role": "ce0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_6_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_6", "role": "q0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_5_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_5", "role": "address0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_5_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_5", "role": "ce0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_5_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_5", "role": "q0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_4_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_4", "role": "address0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_4_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_4", "role": "ce0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_4_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_4", "role": "q0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_3", "role": "address0" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_3", "role": "ce0" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_3", "role": "q0" }} , 
- 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_2", "role": "address0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_2", "role": "address0" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_2", "role": "ce0" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_2", "role": "q0" }} , 
- 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_1", "role": "address0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_1", "role": "address0" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_1", "role": "ce0" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_1", "role": "q0" }} , 
- 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in", "role": "address0" }} , 
+ 	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in", "role": "address0" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in", "role": "ce0" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_in", "role": "q0" }} , 
- 	{ "name": "grp_fu_1605_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1605_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1605_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1605_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1605_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "grp_fu_1605_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_1605_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1605_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1605_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1605_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_1609_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1609_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_1609_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1609_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_1609_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1609_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_1609_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1609_p_ce", "role": "default" }}  ]}
+ 	{ "name": "grp_fu_1632_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1632_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_1632_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1632_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_1632_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "grp_fu_1632_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_1632_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1632_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_1632_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1632_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_1636_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1636_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_1636_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1636_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_1636_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1636_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_1636_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1636_p_ce", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5"],
@@ -167,9 +199,13 @@ set RtlHierarchyInfo {[
 			{"Name" : "c", "Type" : "None", "Direction" : "I"},
 			{"Name" : "p_out", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_we_3", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_we_2", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_we_1", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_we", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_we_2", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_in_7", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_in_6", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_in_5", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_in_4", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_in_3", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_in_2", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_in_1", "Type" : "Memory", "Direction" : "I"},
@@ -177,10 +213,10 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "KR_KC", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "4", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter5", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter5", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.urem_9ns_8ns_9_13_1_U22", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_9ns_11ns_19_1_1_U23", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_4_2_32_1_1_U24", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_4_2_32_1_1_U25", "Parent" : "0"},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.urem_9ns_7ns_9_13_1_U24", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_9ns_11ns_19_1_1_U25", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_4_2_32_1_1_U26", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_8_3_32_1_1_U27", "Parent" : "0"},
 	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
 
 
@@ -193,9 +229,13 @@ set ArgLastReadFirstWriteLatency {
 		c {Type I LastRead 0 FirstWrite -1}
 		p_out {Type O LastRead -1 FirstWrite 16}
 		conv1_float_255_255_float_1_9_9_float_float_255_255_we_3 {Type I LastRead 12 FirstWrite -1}
-		conv1_float_255_255_float_1_9_9_float_float_255_255_we_2 {Type I LastRead 12 FirstWrite -1}
 		conv1_float_255_255_float_1_9_9_float_float_255_255_we_1 {Type I LastRead 12 FirstWrite -1}
 		conv1_float_255_255_float_1_9_9_float_float_255_255_we {Type I LastRead 12 FirstWrite -1}
+		conv1_float_255_255_float_1_9_9_float_float_255_255_we_2 {Type I LastRead 12 FirstWrite -1}
+		conv1_float_255_255_float_1_9_9_float_float_255_255_in_7 {Type I LastRead 12 FirstWrite -1}
+		conv1_float_255_255_float_1_9_9_float_float_255_255_in_6 {Type I LastRead 12 FirstWrite -1}
+		conv1_float_255_255_float_1_9_9_float_float_255_255_in_5 {Type I LastRead 12 FirstWrite -1}
+		conv1_float_255_255_float_1_9_9_float_float_255_255_in_4 {Type I LastRead 12 FirstWrite -1}
 		conv1_float_255_255_float_1_9_9_float_float_255_255_in_3 {Type I LastRead 12 FirstWrite -1}
 		conv1_float_255_255_float_1_9_9_float_float_255_255_in_2 {Type I LastRead 12 FirstWrite -1}
 		conv1_float_255_255_float_1_9_9_float_float_255_255_in_1 {Type I LastRead 12 FirstWrite -1}
@@ -220,11 +260,15 @@ set Spec2ImplPortList {
 	c { ap_none {  { c in_data 0 8 } } }
 	p_out { ap_vld {  { p_out out_data 1 32 }  { p_out_ap_vld out_vld 1 1 } } }
 	conv1_float_255_255_float_1_9_9_float_float_255_255_we_3 { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_we_3_address0 mem_address 1 8 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_we_3_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_we_3_q0 in_data 0 32 } } }
-	conv1_float_255_255_float_1_9_9_float_float_255_255_we_2 { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_address0 mem_address 1 8 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_q0 in_data 0 32 } } }
 	conv1_float_255_255_float_1_9_9_float_float_255_255_we_1 { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_we_1_address0 mem_address 1 8 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_we_1_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_we_1_q0 in_data 0 32 } } }
 	conv1_float_255_255_float_1_9_9_float_float_255_255_we { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_we_address0 mem_address 1 8 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_we_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_we_q0 in_data 0 32 } } }
-	conv1_float_255_255_float_1_9_9_float_float_255_255_in_3 { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_address0 mem_address 1 11 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_q0 in_data 0 32 } } }
-	conv1_float_255_255_float_1_9_9_float_float_255_255_in_2 { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_address0 mem_address 1 11 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_q0 in_data 0 32 } } }
-	conv1_float_255_255_float_1_9_9_float_float_255_255_in_1 { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_address0 mem_address 1 11 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_q0 in_data 0 32 } } }
-	conv1_float_255_255_float_1_9_9_float_float_255_255_in { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_address0 mem_address 1 11 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_q0 in_data 0 32 } } }
+	conv1_float_255_255_float_1_9_9_float_float_255_255_we_2 { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_address0 mem_address 1 8 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_q0 in_data 0 32 } } }
+	conv1_float_255_255_float_1_9_9_float_float_255_255_in_7 { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_7_address0 mem_address 1 10 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_7_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_7_q0 in_data 0 32 } } }
+	conv1_float_255_255_float_1_9_9_float_float_255_255_in_6 { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_6_address0 mem_address 1 10 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_6_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_6_q0 in_data 0 32 } } }
+	conv1_float_255_255_float_1_9_9_float_float_255_255_in_5 { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_5_address0 mem_address 1 10 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_5_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_5_q0 in_data 0 32 } } }
+	conv1_float_255_255_float_1_9_9_float_float_255_255_in_4 { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_4_address0 mem_address 1 10 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_4_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_4_q0 in_data 0 32 } } }
+	conv1_float_255_255_float_1_9_9_float_float_255_255_in_3 { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_address0 mem_address 1 10 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_q0 in_data 0 32 } } }
+	conv1_float_255_255_float_1_9_9_float_float_255_255_in_2 { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_address0 mem_address 1 10 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_q0 in_data 0 32 } } }
+	conv1_float_255_255_float_1_9_9_float_float_255_255_in_1 { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_address0 mem_address 1 10 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_q0 in_data 0 32 } } }
+	conv1_float_255_255_float_1_9_9_float_float_255_255_in { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_address0 mem_address 1 10 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_in_q0 in_data 0 32 } } }
 }

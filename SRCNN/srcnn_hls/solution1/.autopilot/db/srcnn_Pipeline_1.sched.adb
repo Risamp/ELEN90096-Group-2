@@ -34,7 +34,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852142702</coreId>
+						<coreId>544433525</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -52,7 +52,7 @@
 					<Obj>
 						<type>1</type>
 						<id>2</id>
-						<name>sext_ln37</name>
+						<name>sext_ln38</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -110,10 +110,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2729289224</coreId>
+						<coreId>1119452112</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>22</bitwidth>
+					<bitwidth>21</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -134,7 +134,7 @@
 					<Obj>
 						<type>0</type>
 						<id>4</id>
-						<name>sext_ln37_read</name>
+						<name>sext_ln38_read</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -152,7 +152,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2729284744</coreId>
+						<coreId>865332440</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>62</bitwidth>
@@ -177,7 +177,7 @@
 					<Obj>
 						<type>0</type>
 						<id>5</id>
-						<name>sext_ln37_cast</name>
+						<name>sext_ln38_cast</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -195,7 +195,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2729285864</coreId>
+						<coreId>865330760</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -237,7 +237,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852776549</coreId>
+						<coreId>865333000</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -280,7 +280,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2729289784</coreId>
+						<coreId>865325720</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -322,10 +322,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2729288104</coreId>
+						<coreId>1119452112</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>22</bitwidth>
+					<bitwidth>21</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -350,7 +350,7 @@
 						<name>output_r_addr</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\SPB_Data\ELEN90096-Group-2\SRCNN</fileDirectory>
-						<lineNumber>37</lineNumber>
+						<lineNumber>38</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -366,7 +366,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>37</second>
+										<second>38</second>
 									</item>
 								</second>
 							</item>
@@ -379,7 +379,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2729287544</coreId>
+						<coreId>865326840</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -404,7 +404,7 @@
 					<Obj>
 						<type>0</type>
 						<id>14</id>
-						<name>exitcond65</name>
+						<name>exitcond33</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -422,7 +422,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2729288664</coreId>
+						<coreId>865327400</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -438,7 +438,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.91</m_delay>
+				<m_delay>0.90</m_delay>
 				<m_topoIndex>8</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -447,7 +447,7 @@
 					<Obj>
 						<type>0</type>
 						<id>15</id>
-						<name>empty_72</name>
+						<name>empty_64</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -465,10 +465,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3080244</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>22</bitwidth>
+					<bitwidth>21</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -481,7 +481,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.91</m_delay>
+				<m_delay>0.90</m_delay>
 				<m_topoIndex>9</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -508,7 +508,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3019681568</coreId>
+						<coreId>1680154734</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -534,10 +534,10 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>output_r_addr_write_ln37</name>
+						<name>output_r_addr_write_ln38</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\SPB_Data\ELEN90096-Group-2\SRCNN</fileDirectory>
-						<lineNumber>37</lineNumber>
+						<lineNumber>38</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -553,7 +553,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>37</second>
+										<second>38</second>
 									</item>
 								</second>
 							</item>
@@ -566,7 +566,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2991297472</coreId>
+						<coreId>38</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -611,7 +611,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2991302880</coreId>
+						<coreId>1701080941</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -656,7 +656,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1701080941</coreId>
+						<coreId>3276848</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -698,7 +698,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>745300333</coreId>
+						<coreId>6001</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -743,7 +743,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2965309394</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -774,10 +774,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852142702</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>22</bitwidth>
+					<bitwidth>21</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -805,13 +805,13 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852142702</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>22</bitwidth>
+					<bitwidth>21</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>4161600</content>
+				<content>2080800</content>
 			</item>
 			<item class_id_reference="16" object_id="_20">
 				<Value>
@@ -836,10 +836,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>6619219</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>22</bitwidth>
+					<bitwidth>21</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>1</content>
@@ -867,7 +867,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3276847</coreId>
+						<coreId>1852142702</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -898,7 +898,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3211310</coreId>
+						<coreId>1852142702</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -932,7 +932,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2991297264</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -949,7 +949,7 @@
 				<Obj>
 					<type>3</type>
 					<id>17</id>
-					<name>memset.loop4</name>
+					<name>memset.loop2</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -967,7 +967,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2991294352</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -984,7 +984,7 @@
 				<Obj>
 					<type>3</type>
 					<id>22</id>
-					<name>memset.loop4.split</name>
+					<name>memset.loop2.split</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1017,7 +1017,7 @@
 				<Obj>
 					<type>3</type>
 					<id>24</id>
-					<name>split3.exitStub</name>
+					<name>split1.exitStub</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1035,7 +1035,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2984593680</coreId>
+					<coreId>4294967292</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1276,8 +1276,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>4161602</mMinLatency>
-			<mMaxLatency>4161602</mMaxLatency>
+			<mMinLatency>2080802</mMinLatency>
+			<mMaxLatency>2080802</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -1321,10 +1321,10 @@
 			</basic_blocks>
 			<mII>1</mII>
 			<mDepth>2</mDepth>
-			<mMinTripCount>4161600</mMinTripCount>
-			<mMaxTripCount>4161600</mMaxTripCount>
-			<mMinLatency>4161600</mMinLatency>
-			<mMaxLatency>4161600</mMaxLatency>
+			<mMinTripCount>2080800</mMinTripCount>
+			<mMaxTripCount>2080800</mMaxTripCount>
+			<mMinLatency>2080800</mMinLatency>
+			<mMaxLatency>2080800</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>

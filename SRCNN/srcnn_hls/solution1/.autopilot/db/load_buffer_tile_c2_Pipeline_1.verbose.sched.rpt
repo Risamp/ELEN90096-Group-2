@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'load_buffer_tile_c2_Pipeline_1'
 ================================================================
-* Date:           Wed Nov  1 03:31:49 2023
+* Date:           Wed Nov  1 04:13:17 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -90,13 +90,13 @@ ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%br_ln0 = br void %memset.loop12"   
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_load = load i12 %empty"   --->   Operation 7 'load' 'p_load' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 8 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.80ns)   --->   "%exitcond13912 = icmp_eq  i12 %p_load, i12 2312"   --->   Operation 9 'icmp' 'exitcond13912' <Predicate = true> <Delay = 0.80> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 10 [1/1] (0.80ns)   --->   "%empty_84 = add i12 %p_load, i12 1"   --->   Operation 10 'add' 'empty_84' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (0.80ns)   --->   "%empty_74 = add i12 %p_load, i12 1"   --->   Operation 10 'add' 'empty_74' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln0 = br i1 %exitcond13912, void %memset.loop12.split, void %memset.loop.preheader.exitStub"   --->   Operation 11 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 2312, i64 2312, i64 2312"   --->   Operation 12 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = (!exitcond13912)> <Delay = 0.00>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%p_cast = zext i12 %p_load"   --->   Operation 13 'zext' 'p_cast' <Predicate = (!exitcond13912)> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%input_fm_buffer_1_addr = getelementptr i32 %input_fm_buffer_1, i64 0, i64 %p_cast"   --->   Operation 14 'getelementptr' 'input_fm_buffer_1_addr' <Predicate = (!exitcond13912)> <Delay = 0.00>
 ST_1 : Operation 15 [1/1] (1.23ns)   --->   "%store_ln0 = store i32 0, i12 %input_fm_buffer_1_addr"   --->   Operation 15 'store' 'store_ln0' <Predicate = (!exitcond13912)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2312> <RAM>
-ST_1 : Operation 16 [1/1] (0.42ns)   --->   "%store_ln0 = store i12 %empty_84, i12 %empty"   --->   Operation 16 'store' 'store_ln0' <Predicate = (!exitcond13912)> <Delay = 0.42>
+ST_1 : Operation 16 [1/1] (0.42ns)   --->   "%store_ln0 = store i12 %empty_74, i12 %empty"   --->   Operation 16 'store' 'store_ln0' <Predicate = (!exitcond13912)> <Delay = 0.42>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln0 = br void %memset.loop12"   --->   Operation 17 'br' 'br_ln0' <Predicate = (!exitcond13912)> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 18 'ret' 'ret_ln0' <Predicate = (exitcond13912)> <Delay = 0.00>
 
