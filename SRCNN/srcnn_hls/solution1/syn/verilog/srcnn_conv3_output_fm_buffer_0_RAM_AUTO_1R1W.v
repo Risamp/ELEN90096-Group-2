@@ -13,8 +13,8 @@ module srcnn_conv3_output_fm_buffer_0_RAM_AUTO_1R1W (
     reset, clk);
 
 parameter DataWidth = 32;
-parameter AddressWidth = 9;
-parameter AddressRange = 289;
+parameter AddressWidth = 11;
+parameter AddressRange = 1275;
  
 input[AddressWidth-1:0] address0;
 input ce0;

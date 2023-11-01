@@ -1,12 +1,24 @@
 # This script segment is generated automatically by AutoPilot
 
+set name srcnn_mul_6ns_19ns_24_1_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_mul_5ns_19ns_23_1_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+}
+
+
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler srcnn_conv2_input_fm_buffer_1_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_conv2_weights_buffer_0_0_0_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler srcnn_conv2_weight_buffer_3_0_0_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
@@ -26,7 +38,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 195 \
+    id 71 \
     name conv2_biases \
     reset_level 1 \
     sync_rst true \
@@ -44,7 +56,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 191 \
+    id 67 \
     name i2 \
     type other \
     dir I \
@@ -59,7 +71,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 192 \
+    id 68 \
     name input_ftmap \
     type other \
     dir I \
@@ -74,7 +86,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 193 \
+    id 69 \
     name w2 \
     type other \
     dir I \
@@ -89,7 +101,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 194 \
+    id 70 \
     name conv2_weights \
     type other \
     dir I \
@@ -104,10 +116,10 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 196 \
+    id 72 \
     name i3 \
     type other \
-    dir IO \
+    dir O \
     reset_level 1 \
     sync_rst true \
     corename dc_i3 \
@@ -119,7 +131,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 197 \
+    id 73 \
     name output_ftmap \
     type other \
     dir I \

@@ -11,74 +11,17 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 61 \
-    name conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7 \
+    id 16 \
+    name output_fm_buffer_1 \
     reset_level 1 \
     sync_rst true \
     dir IO \
-    corename conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7 \
+    corename output_fm_buffer_1 \
     op interface \
-    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_address0 { O 12 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_we0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_d0 { O 32 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_address1 { O 12 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_ce1 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_q1 { I 32 vector } } \
+    ports { output_fm_buffer_1_address0 { O 16 vector } output_fm_buffer_1_ce0 { O 1 bit } output_fm_buffer_1_we0 { O 1 bit } output_fm_buffer_1_d0 { O 32 vector } output_fm_buffer_1_q0 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 62 \
-    name conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5 \
-    reset_level 1 \
-    sync_rst true \
-    dir IO \
-    corename conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5 \
-    op interface \
-    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5_address0 { O 12 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5_we0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5_d0 { O 32 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5_address1 { O 12 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5_ce1 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5_q1 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 63 \
-    name conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3 \
-    reset_level 1 \
-    sync_rst true \
-    dir IO \
-    corename conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3 \
-    op interface \
-    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_address0 { O 12 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_we0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_d0 { O 32 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_address1 { O 12 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_ce1 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_q1 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 64 \
-    name conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1 \
-    reset_level 1 \
-    sync_rst true \
-    dir IO \
-    corename conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1 \
-    op interface \
-    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0 { O 12 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_d0 { O 32 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address1 { O 12 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce1 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_q1 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'output_fm_buffer_1'"
 }
 }
 
@@ -86,37 +29,22 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 58 \
-    name sub_ln132 \
+    id 14 \
+    name sub_ln140 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_sub_ln132 \
+    corename dc_sub_ln140 \
     op interface \
-    ports { sub_ln132 { I 12 vector } } \
+    ports { sub_ln140 { I 16 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 59 \
-    name trunc_ln126_1 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_trunc_ln126_1 \
-    op interface \
-    ports { trunc_ln126_1 { I 3 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 60 \
+    id 15 \
     name empty \
     type other \
     dir I \

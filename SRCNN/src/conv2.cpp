@@ -12,7 +12,7 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
            ftmap_t output_ftmap[N2][H][W])
 {
 
-	#pragma HLS PIPELINE off
+	//#pragma HLS PIPELINE off
 
 	static ftmap_t output_fm_buffer[C2_OD][C2_TH][W] = {0};
 	//#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=cyclic factor=8 dim=2
@@ -42,19 +42,8 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 				ROW: for (int r = 0; r < C2_TH; r++) {
 				COL: for (int c = 0; c < W; c++) {
 
-					KR: for (int kr = 0; kr < F2; kr++) { // kernel row
-					KC: for (int kc = 0; kc < F2; kc++) { // kernel column
-						//#pragma HLS UNROLL factor=2
-						#pragma HLS PIPELINE II=3
+						output_fm_buffer[o][r][c] += weight_buffer[o][i][0][0] * input_fm_buffer[i][r][c];
 
-						int rtarget = r + kr;
-						int ctarget = c + kc;
-
-						output_fm_buffer[o][r][c] += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][rtarget][ctarget];
-
-						//cout << "\n " << output_fm_buffer[o][r][c] << " result";
-
-					}}
 				}}
 			}}
 
@@ -81,28 +70,13 @@ void load_input_buffer_c2(
 	int in,
 	int h
 ) {
+
 	LOAD_INPUT: for (int bin = 0; bin < C2_ID; bin++) {
-	BH: for (int bh = 0; bh < C2_TH + (2 * P2); bh++) {
-		#pragma HLS PIPELINE OFF
+	BH: for (int bh = 0; bh < C2_TH; bh++) {
 
-		int hclamp = clamp(h + bh - P2, 0, H - 1);
+		memcpy(&input_fm_buffer[bin][bh], &input_ftmap[in + bin][h + bh], W * sizeof(ftmap_t));
 
-		ftmap_t left = input_ftmap[bin + in][hclamp][0];
-		ftmap_t right = input_ftmap[bin + in][hclamp][W - 1];
-
-		// load in left and right padding
-		PAD: for (int p = 0; p < P2; p++) {
-
-			input_fm_buffer[bin][bh][p] = left;
-			input_fm_buffer[bin][bh][P2 + W + p] = right;
-		}
-
-		// burst in main image area
-		memcpy(&input_fm_buffer[bin][bh][P2], &input_ftmap[in + bin][hclamp], W * sizeof(ftmap_t));
 	}}
-
-	//cout << "\n " << input_fm_buffer[0][0][0] << " conv1 input_fm_buffer";
-	//cout << "\n " << input_ftmap[0][0][0] << " conv1 input_ftmap";
 }
 
 void load_weight_buffer_c2(
@@ -113,13 +87,10 @@ void load_weight_buffer_c2(
 ) {
 	LOAD_WEIGHTS: for (int bout = 0; bout < C2_OD; bout++) {
 	IN: for (int bin = 0; bin < C2_ID; bin++) {
-	K: for (int k = 0; k < F2; k++) {
 
-		memcpy(&weight_buffer[bout][bin][k], &conv2_weights[bout + out][bin + in][k], F2 * sizeof(param_t));
+		memcpy(&weight_buffer[bout][bin][0], &conv2_weights[bout + out][bin + in][0], F2 * sizeof(param_t));
 
-	}}}
-
-	//cout << "\n " << weight_buffer[0][0][0][0] << " conv1 weights";
+	}}
 }
 
 void export_output_buffer_c2(

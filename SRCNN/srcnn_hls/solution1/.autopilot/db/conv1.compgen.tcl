@@ -1,101 +1,23 @@
 # This script segment is generated automatically by AutoPilot
 
-set name srcnn_mul_3ns_10ns_11_1_1
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
-}
-
-
 set name srcnn_mul_7ns_10ns_15_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
 }
 
 
-set id 96
-set name srcnn_mux_8_3_32_1_1
-set corename simcore_mux
-set op mux
-set stage_num 1
-set din0_width 32
-set din0_signed 0
-set din1_width 32
-set din1_signed 0
-set din2_width 32
-set din2_signed 0
-set din3_width 32
-set din3_signed 0
-set din4_width 32
-set din4_signed 0
-set din5_width 32
-set din5_signed 0
-set din6_width 32
-set din6_signed 0
-set din7_width 32
-set din7_signed 0
-set din8_width 3
-set din8_signed 0
-set dout_width 32
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mux} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
-}
-
-
-set op mux
-set corename Multiplexer
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_pipemux] == "::AESL_LIB_VIRTEX::xil_gen_pipemux"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_pipemux { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${stage_num} \
-    din0_width ${din0_width} \
-    din0_signed ${din0_signed} \
-    din1_width ${din1_width} \
-    din1_signed ${din1_signed} \
-    din2_width ${din2_width} \
-    din2_signed ${din2_signed} \
-    din3_width ${din3_width} \
-    din3_signed ${din3_signed} \
-    din4_width ${din4_width} \
-    din4_signed ${din4_signed} \
-    din5_width ${din5_width} \
-    din5_signed ${din5_signed} \
-    din6_width ${din6_width} \
-    din6_signed ${din6_signed} \
-    din7_width ${din7_width} \
-    din7_signed ${din7_signed} \
-    din8_width ${din8_width} \
-    din8_signed ${din8_signed} \
-    dout_width ${dout_width} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipemux, check your platform lib"
-}
+	::AP::rtl_comp_handler srcnn_conv1_input_fm_buffer_2_0_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler srcnn_conv1_weight_buffer_2_0_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_conv1_p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0_0_RAM_AUTO_1bkb BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_conv1_p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_1_0_RAM_AUTO_1cud BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
@@ -110,7 +32,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 111 \
+    id 44 \
     name conv1_biases \
     reset_level 1 \
     sync_rst true \
@@ -128,7 +50,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 107 \
+    id 40 \
     name i1 \
     type other \
     dir I \
@@ -143,7 +65,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 108 \
+    id 41 \
     name input_ftmap \
     type other \
     dir I \
@@ -158,7 +80,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 109 \
+    id 42 \
     name w1 \
     type other \
     dir I \
@@ -173,7 +95,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 110 \
+    id 43 \
     name conv1_weights \
     type other \
     dir I \
@@ -188,7 +110,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 112 \
+    id 45 \
     name i2 \
     type other \
     dir O \
@@ -203,7 +125,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 113 \
+    id 46 \
     name output_ftmap \
     type other \
     dir I \

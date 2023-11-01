@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3'" level="0">
-<item name = "Date">Wed Nov  1 18:49:08 2023
+<item name = "Date">Thu Nov  2 02:40:11 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">303766426, 303766426, 3.038 sec, 3.038 sec, 303766426, 303766426, no</column>
+<column name="">197384332, 197384893, 1.974 sec, 1.974 sec, 197384332, 197384893, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,14 +35,22 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TJ_TI">303766425, 303766425, 1350073, -, -, 225, no</column>
-<column name=" + TN">1343964, 1343964, 335991, -, -, 4, no</column>
-<column name="  ++ TY">328916, 328916, 19348, -, -, 17, no</column>
-<column name="   +++ TX">19346, 19346, 1138, -, -, 17, no</column>
-<column name="    ++++ KY">1135, 1135, 227, -, -, 5, no</column>
-<column name="     +++++ KX">225, 225, 45, -, -, 5, no</column>
-<column name=" + VITIS_LOOP_139_2">5814, 5814, 342, -, -, 17, no</column>
-<column name="  ++ VITIS_LOOP_141_3">340, 340, 20, -, -, 17, no</column>
+<column name="- TILE_ROW">197384331, 197384892, 3870281 ~ 3870292, -, -, 51, no</column>
+<column name=" + LOAD_INPUT">227008, 227008, 7094, -, -, 32, no</column>
+<column name="  ++ BH">7092, 7092, 788, -, -, 9, no</column>
+<column name="   +++ PAD">2, 2, 1, -, -, 2, no</column>
+<column name="   +++ BH.2">765, 765, 3, -, -, 255, no</column>
+<column name=" + IN">2784, 2784, 87, -, -, 32, no</column>
+<column name="  ++ K">85, 85, 17, -, -, 5, no</column>
+<column name="   +++ K.1">15, 15, 3, -, -, 5, no</column>
+<column name=" + IN_ROW_COL">3631200, 3631200, 89, -, -, 40800, no</column>
+<column name=" + BH">7737, 7744, 2579, -, -, 3, no</column>
+<column name="  ++ BH.1">765, 765, 3, -, -, 255, no</column>
+<column name="  ++ BH.2">765, 765, 3, -, -, 255, no</column>
+<column name=" + BH">1538, 1540, 769, -, -, 2, no</column>
+<column name="  ++ BW">255, 255, 1, -, -, 255, no</column>
+<column name="  ++ BW">255, 255, 1, -, -, 255, no</column>
+<column name="  ++ BW">255, 255, 1, -, -, 255, no</column>
 </table>
 </item>
 </section>

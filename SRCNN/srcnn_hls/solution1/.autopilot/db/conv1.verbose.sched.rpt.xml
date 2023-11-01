@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1'" level="0">
-<item name = "Date">Wed Nov  1 18:48:31 2023
+<item name = "Date">Thu Nov  2 02:40:04 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 13.323 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1446427134, 1446435838, 19.271 sec, 19.271 sec, 1446427134, 1446435838, no</column>
+<column name="">1096798456, 1096809016, 10.968 sec, 10.968 sec, 1096798456, 1096809016, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,15 +35,15 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILE_ROW">1446427133, 1446435837, 85083949 ~ 85084461, -, -, 17, no</column>
-<column name=" + BH">18170, 18170, 790, -, -, 23, no</column>
+<column name="- TILE_ROW">1096798455, 1096809015, 73119897 ~ 73120601, -, -, 15, no</column>
+<column name=" + BH">19750, 19750, 790, -, -, 25, no</column>
 <column name="  ++ PAD">4, 4, 1, -, -, 4, no</column>
 <column name="  ++ BH.2">765, 765, 3, -, -, 255, no</column>
-<column name=" + TILE_OUT">85065776, 85066288, 10633222 ~ 10633286, -, -, 8, no</column>
-<column name="  ++ LOAD_WEIGHTS">2752, 2752, 344, -, -, 8, no</column>
-<column name="   +++ K">342, 342, 38, -, -, 9, no</column>
-<column name="    ++++ K.1">36, 36, 4, -, -, 9, no</column>
-<column name="  ++ OUT_ROW_COL">10434600, 10434600, 341, -, -, 30600, no</column>
+<column name=" + TILE_OUT">73100144, 73100848, 9137518 ~ 9137606, -, -, 8, no</column>
+<column name="  ++ LOAD_WEIGHTS">2104, 2104, 263, -, -, 8, no</column>
+<column name="   +++ K">261, 261, 29, -, -, 9, no</column>
+<column name="    ++++ K.1">27, 27, 3, -, -, 9, no</column>
+<column name="  ++ OUT_ROW_COL">8912760, 8912760, 257, -, -, 34680, no</column>
 </table>
 </item>
 </section>

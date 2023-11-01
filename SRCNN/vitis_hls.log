@@ -2,10 +2,10 @@ ECHO is off.
 ECHO is off.
 NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'bcevans' on host '400p1l1760g0508' (Windows NT_amd64 version 6.2) on Thu Nov 02 01:25:54 +1100 2023
+INFO: [HLS 200-10] For user 'bcevans' on host '400p1l1760g0508' (Windows NT_amd64 version 6.2) on Thu Nov 02 02:39:21 +1100 2023
 INFO: [HLS 200-10] In directory 'C:/SPB_Data/ELEN90096-Group-2/SRCNN'
-Sourcing Tcl script 'C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim.tcl'
-INFO: [HLS 200-1510] Running: source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim.tcl
+Sourcing Tcl script 'C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl
 INFO: [HLS 200-1510] Running: open_project srcnn_hls 
 INFO: [HLS 200-10] Opening project 'C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls'.
 INFO: [HLS 200-1510] Running: set_top srcnn 
@@ -51,261 +51,418 @@ INFO: [HLS 200-1510] Running: set_part xck24-ubva530-2LV-c
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
-INFO: [HLS 200-1510] Running: csim_design -ldflags -I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include -clean -quiet 
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-INFO: [HLS 200-2036] Building debug C Simulation binaries
-   Compiling ../../../../test/csim.cpp in debug mode
-   Compiling ../../../../test/tb_conv1.cpp in debug mode
-   Compiling ../../../../test/tb_set14.cpp in debug mode
-   Compiling ../../../../test/tb_srcnn.cpp in debug mode
-   Compiling ../../../../test/util.cpp in debug mode
-   Compiling ../../../../src/conv1.cpp in debug mode
-   Compiling ../../../../src/conv2.cpp in debug mode
-   Compiling ../../../../src/conv3.cpp in debug mode
-   Compiling ../../../../src/srcnn.cpp in debug mode
-   Generating csim.exe
-In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
-                 from ../../../../src/srcnn.h:4,
-                 from ../../../../test/tb_conv1.cpp:4:
-C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
- #define __GMP_LIBGMP_DLL  0
- 
-In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
-                 from ../../../../src/srcnn.h:4,
-                 from ../../../../test/tb_conv1.cpp:4:
-C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
- #define __GMP_LIBGMP_DLL 1
- 
-In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
-                 from ../../../../src/srcnn.h:4,
-                 from ../../../../test/tb_set14.cpp:6:
-C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
- #define __GMP_LIBGMP_DLL  0
- 
-In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
-                 from ../../../../src/srcnn.h:4,
-                 from ../../../../test/tb_set14.cpp:6:
-C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
- #define __GMP_LIBGMP_DLL 1
- 
-In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
-                 from ../../../../src/srcnn.h:4,
-                 from ../../../../test/tb_srcnn.cpp:4:
-C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
- #define __GMP_LIBGMP_DLL  0
- 
-In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
-                 from ../../../../src/srcnn.h:4,
-                 from ../../../../test/tb_srcnn.cpp:4:
-C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
- #define __GMP_LIBGMP_DLL 1
- 
-In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
-                 from ../../../../src/srcnn.h:4,
-                 from ../../../../test/util.h:4,
-                 from ../../../../test/util.cpp:3:
-C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
- #define __GMP_LIBGMP_DLL  0
- 
-In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
-                 from ../../../../src/srcnn.h:4,
-                 from ../../../../test/util.h:4,
-                 from ../../../../test/util.cpp:3:
-C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
- #define __GMP_LIBGMP_DLL 1
- 
-In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
-                 from ../../../../src/srcnn.h:4,
-                 from ../../../../src/conv1.cpp:1:
-C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
- #define __GMP_LIBGMP_DLL  0
- 
-In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
-                 from ../../../../src/srcnn.h:4,
-                 from ../../../../src/conv1.cpp:1:
-C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
- #define __GMP_LIBGMP_DLL 1
- 
-In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
-                 from ../../../../src/srcnn.h:4,
-                 from ../../../../src/conv2.cpp:1:
-C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
- #define __GMP_LIBGMP_DLL  0
- 
-In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
-                 from ../../../../src/srcnn.h:4,
-                 from ../../../../src/conv2.cpp:1:
-C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
- #define __GMP_LIBGMP_DLL 1
- 
-In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
-                 from ../../../../src/srcnn.h:4,
-                 from ../../../../src/conv3.cpp:1:
-C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
- #define __GMP_LIBGMP_DLL  0
- 
-In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
-                 from ../../../../src/srcnn.h:4,
-                 from ../../../../src/conv3.cpp:1:
-C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
- #define __GMP_LIBGMP_DLL 1
- 
-In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
-                 from ../../../../src/srcnn.h:4,
-                 from ../../../../src/srcnn.cpp:1:
-C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
- #define __GMP_LIBGMP_DLL  0
- 
-In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
-                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h:9,
-                 from ../../../../src/srcnn.h:4,
-                 from ../../../../src/srcnn.cpp:1:
-C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
- #define __GMP_LIBGMP_DLL 1
- 
-***** SRCNN - Set14 Test *****
-Image Name     PSNR GT vs HR (dB)  PSNR GT vs HR MATLAB (dB)  PSNR GT vs LR (dB)  MSE GT vs HR   MSE GT vs HR MATLAB        
-0.316708 ######## CONV1 -> CONV2 OUT
- 0 ######## CONV2 -> CONV3 OUT
- 0.0652312 ######## FINAL
- baboon         8.38784             24.9898                    27.3618             0.143518       0.00161402                 
-0.642986 ######## CONV1 -> CONV2 OUT
- 0.00694887 ######## CONV2 -> CONV3 OUT
- 0.0891966 ######## FINAL
- barbara        7.76669             26.2451                    24.8997             0.165753       0.00316839                 
-1.06921 ######## CONV1 -> CONV2 OUT
- 0.164847 ######## CONV2 -> CONV3 OUT
- 0.174518 ######## FINAL
- bridge         8.07841             26.8397                    25.2317             0.154323       0.00237435                 
-0.357396 ######## CONV1 -> CONV2 OUT
- 0 ######## CONV2 -> CONV3 OUT
- 0.0744118 ######## FINAL
- coastguard     8.21444             33.4187                    26.3                0.149451       0.00206895                 
-0.0832457 ######## CONV1 -> CONV2 OUT
- 0 ######## CONV2 -> CONV3 OUT
- 0.0277299 ######## FINAL
- face           11.0448             27.3319                    32.6794             0.0777052      0.000454177                
-0.38174 ######## CONV1 -> CONV2 OUT
- 0 ######## CONV2 -> CONV3 OUT
- 0.0760315 ######## FINAL
- flowers        9.27901             35.727                     25.6995             0.116919       0.00184746                 
-1.07848 ######## CONV1 -> CONV2 OUT
- 0.183099 ######## CONV2 -> CONV3 OUT
- 0.17709 ######## FINAL
- foreman        6.08924             30.8413                    33.2014             0.244226       0.000266235                
-0.707334 ######## CONV1 -> CONV2 OUT
- 0.0293751 ######## CONV2 -> CONV3 OUT
- 0.11038 ######## FINAL
- lenna          8.23852             27.1209                    29.1689             0.148607       0.000822304                
-0.231513 ######## CONV1 -> CONV2 OUT
- 0 ######## CONV2 -> CONV3 OUT
- 0.0271906 ######## FINAL
- man            9.21806             27.9822                    26.0613             0.118543       0.00193996                 
-0.397524 ######## CONV1 -> CONV2 OUT
- 0 ######## CONV2 -> CONV3 OUT
- 0.0765752 ######## FINAL
- monarch        7.76457             33.4745                    24.5799             0.165873       0.00159023                 
-0.61752 ######## CONV1 -> CONV2 OUT
- 0.0546095 ######## CONV2 -> CONV3 OUT
- 0.116454 ######## FINAL
- pepper         7.64253             29.4367                    32.0454             0.170535       0.000447919                
-0.922331 ######## CONV1 -> CONV2 OUT
- 0.159906 ######## CONV2 -> CONV3 OUT
- 0.164621 ######## FINAL
- ppt3           5.01793             27.6649                    26.6842             0.313072       0.0011378                  
-0.85219 ######## CONV1 -> CONV2 OUT
- 0.0282823 ######## CONV2 -> CONV3 OUT
- 0.110359 ######## FINAL
- zebra          8.39767             0                          24.7423             0.143352       0.00171134                 
-INFO: [SIM 211-1] CSim done with 0 errors.
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 90.176 seconds; current allocated memory: 0.797 MB.
-INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 2 seconds. Total elapsed time: 106.638 seconds; peak allocated memory: 92.703 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.334 seconds; current allocated memory: 91.855 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/conv1.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/conv2.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/conv3.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/srcnn.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 29.172 seconds; current allocated memory: 94.207 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-188] Unrolling loop 'BH' (src/conv3.cpp:130:6) in function 'export_output_buffer_c3' partially with a factor of 2 (src/conv3.cpp:127:0)
+INFO: [HLS 214-188] Unrolling loop 'BH' (src/conv3.cpp:65:6) in function 'clear_buffer_c3' partially with a factor of 3 (src/conv3.cpp:63:0)
+INFO: [HLS 214-188] Unrolling loop 'BH' (src/conv2.cpp:105:6) in function 'export_output_buffer_c2' partially with a factor of 2 (src/conv2.cpp:102:0)
+INFO: [HLS 214-359] Unrolling loop 'BH' (src/conv2.cpp:58:6) in function 'clear_buffer_c2': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3). (src/conv2.cpp:56:0)
+INFO: [HLS 214-186] Unrolling loop 'BH' (src/conv2.cpp:58:6) in function 'clear_buffer_c2' completely with a factor of 3 (src/conv2.cpp:56:0)
+INFO: [HLS 214-188] Unrolling loop 'BH' (src/conv1.cpp:134:6) in function 'export_output_buffer_c1' partially with a factor of 2 (src/conv1.cpp:131:0)
+INFO: [HLS 214-188] Unrolling loop 'BH' (src/conv1.cpp:69:6) in function 'clear_buffer_c1' partially with a factor of 3 (src/conv1.cpp:67:0)
+INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_input_buffer_c1(float (*) [25][263], float (*) [255][255], int, int)' (src/conv1.cpp:83:0)
+INFO: [HLS 214-178] Inlining function 'clear_buffer_c1(float (*) [17][255])' into 'export_output_buffer_c1(float (*) [17][255], float (*) [255][255], float*, int, int)' (src/conv1.cpp:131:0)
+INFO: [HLS 214-178] Inlining function 'load_input_buffer_c1(float (*) [25][263], float (*) [255][255], int, int)' into 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])' (src/conv1.cpp:13:0)
+INFO: [HLS 214-178] Inlining function 'load_weight_buffer_c1(float (*) [1][9][9], float (*) [1][9][9], int, int)' into 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])' (src/conv1.cpp:13:0)
+INFO: [HLS 214-178] Inlining function 'clear_buffer_c2(float (*) [3][255])' into 'export_output_buffer_c2(float (*) [3][255], float (*) [255][255], float*, int, int)' (src/conv2.cpp:102:0)
+INFO: [HLS 214-178] Inlining function 'load_input_buffer_c2(float (*) [3][255], float (*) [255][255], int, int)' into 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])' (src/conv2.cpp:13:0)
+INFO: [HLS 214-178] Inlining function 'load_weight_buffer_c2(float (*) [32][1][1], float (*) [64][1][1], int, int)' into 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])' (src/conv2.cpp:13:0)
+INFO: [HLS 214-178] Inlining function 'export_output_buffer_c2(float (*) [3][255], float (*) [255][255], float*, int, int)' into 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])' (src/conv2.cpp:13:0)
+INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_input_buffer_c3(float (*) [9][259], float (*) [255][255], int, int)' (src/conv3.cpp:79:0)
+INFO: [HLS 214-178] Inlining function 'clear_buffer_c3(float (*) [5][255])' into 'export_output_buffer_c3(float (*) [5][255], float (*) [255][255], float*, int, int)' (src/conv3.cpp:127:0)
+INFO: [HLS 214-178] Inlining function 'load_input_buffer_c3(float (*) [9][259], float (*) [255][255], int, int)' into 'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])' (src/conv3.cpp:14:0)
+INFO: [HLS 214-178] Inlining function 'load_weight_buffer_c3(float (*) [32][5][5], float (*) [32][5][5], int, int)' into 'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])' (src/conv3.cpp:14:0)
+INFO: [HLS 214-178] Inlining function 'export_output_buffer_c3(float (*) [5][255], float (*) [255][255], float*, int, int)' into 'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])' (src/conv3.cpp:14:0)
+INFO: [HLS 214-115] Multiple burst writes of length 255 and bit width 32 in loop 'anonymous'(src/conv1.cpp:147:3) has been inferred on bundle 'i2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv1.cpp:147:3)
+INFO: [HLS 214-115] Multiple burst reads of length 255 and bit width 32 in loop 'anonymous'(src/conv1.cpp:101:3) has been inferred on bundle 'i1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv1.cpp:101:3)
+INFO: [HLS 214-115] Multiple burst reads of length 648 and bit width 32 in loop 'LOAD_WEIGHTS'(src/conv1.cpp:114:16) has been inferred on bundle 'w1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv1.cpp:114:16)
+INFO: [HLS 214-115] Multiple burst reads of length 765 and bit width 32 in loop 'BH'(src/conv2.cpp:75:6) has been inferred on bundle 'i2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv2.cpp:75:6)
+INFO: [HLS 214-115] Multiple burst reads of length 32 and bit width 32 in loop 'IN'(src/conv2.cpp:89:6) has been inferred on bundle 'w2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv2.cpp:89:6)
+INFO: [HLS 214-115] Multiple burst writes of length 255 and bit width 32 in loop 'anonymous'(src/conv2.cpp:118:3) has been inferred on bundle 'i3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv2.cpp:118:3)
+INFO: [HLS 214-115] Multiple burst reads of length 255 and bit width 32 in loop 'anonymous'(src/conv3.cpp:97:3) has been inferred on bundle 'i3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv3.cpp:97:3)
+INFO: [HLS 214-115] Multiple burst reads of length 800 and bit width 32 in loop 'IN'(src/conv3.cpp:111:6) has been inferred on bundle 'w3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv3.cpp:111:6)
+INFO: [HLS 214-115] Multiple burst writes of length 255 and bit width 32 in loop 'anonymous'(src/conv3.cpp:143:3) has been inferred on bundle 'o'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv3.cpp:143:3)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 6.097 seconds; current allocated memory: 97.066 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.015 seconds; current allocated memory: 97.074 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 105.223 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.109 seconds; current allocated memory: 108.965 MB.
+INFO: [XFORM 203-102] Partitioning array 'weight_buffer.3' in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'weight_buffer.3.0' in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'weight_buffer.2' in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'weight_buffer' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'output_fm_buffer' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'input_fm_buffer.2' in dimension 1 automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.51 seconds; current allocated memory: 134.332 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'BH' (src/conv1.cpp:134:6) in function 'export_output_buffer_c1' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'EXPORT' (src/conv1.cpp:133:10) in function 'export_output_buffer_c1' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'KR' (src/conv3.cpp:45:10) in function 'conv3'.
+WARNING: [HLS 200-960] Cannot flatten loop 'COL' (src/conv3.cpp:43:10) in function 'conv3' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'ROW' (src/conv3.cpp:42:10) in function 'conv3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'IN' (src/conv3.cpp:40:8) in function 'conv3'.
+WARNING: [HLS 200-960] Cannot flatten loop 'BH' (src/conv3.cpp:130:6) in function 'conv3' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'TILE_ROW' (src/conv3.cpp:33:12) in function 'conv3' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'BH' (src/conv2.cpp:105:6) in function 'conv2' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'EXPORT' (src/conv2.cpp:104:10) in function 'conv2' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'TILE_OUT' (src/conv2.cpp:35:13) in function 'conv2' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'TILE_ROW' (src/conv2.cpp:31:12) in function 'conv2' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'TILE_IN' (src/conv2.cpp:30:11) in function 'conv2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'KR' (src/conv1.cpp:45:10) in function 'conv1'.
+WARNING: [HLS 200-960] Cannot flatten loop 'COL' (src/conv1.cpp:43:10) in function 'conv1' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'ROW' (src/conv1.cpp:42:10) in function 'conv1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'OUT' (src/conv1.cpp:39:9) in function 'conv1'.
+WARNING: [HLS 200-960] Cannot flatten loop 'TILE_OUT' (src/conv1.cpp:35:13) in function 'conv1' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'TILE_ROW' (src/conv1.cpp:31:12) in function 'conv1' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.636 seconds; current allocated memory: 239.066 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'srcnn' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv1_Pipeline_KR_KC' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln45_6) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'KR_KC'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 3, Final II = 3, Depth = 12, loop 'KR_KC'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.733 seconds; current allocated memory: 244.523 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.268 seconds; current allocated memory: 245.770 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'export_output_buffer_c1_Pipeline_RELU' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'RELU'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 8, loop 'RELU'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.317 seconds; current allocated memory: 246.148 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.163 seconds; current allocated memory: 246.148 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'export_output_buffer_c1_Pipeline_RELU1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'RELU'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 8, loop 'RELU'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.303 seconds; current allocated memory: 246.527 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.199 seconds; current allocated memory: 246.535 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'export_output_buffer_c1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.644 seconds; current allocated memory: 248.391 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.525 seconds; current allocated memory: 248.520 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.787 seconds; current allocated memory: 249.855 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.673 seconds; current allocated memory: 250.219 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_RELU' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'RELU'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 8, loop 'RELU'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.417 seconds; current allocated memory: 250.766 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.182 seconds; current allocated memory: 250.766 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_RELU3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'RELU'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 8, loop 'RELU'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.286 seconds; current allocated memory: 251.004 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.158 seconds; current allocated memory: 251.012 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.243 seconds; current allocated memory: 254.422 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.028 seconds; current allocated memory: 254.652 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv3_Pipeline_KR_KC' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln53_4) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'KR_KC'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 3, Final II = 3, Depth = 12, loop 'KR_KC'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.635 seconds; current allocated memory: 255.102 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.238 seconds; current allocated memory: 255.117 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv3_Pipeline_RELU' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'RELU'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 8, loop 'RELU'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.352 seconds; current allocated memory: 255.449 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.181 seconds; current allocated memory: 255.465 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv3_Pipeline_RELU2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'RELU'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 8, loop 'RELU'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.296 seconds; current allocated memory: 255.566 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.171 seconds; current allocated memory: 255.566 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.103 seconds; current allocated memory: 258.516 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.008 seconds; current allocated memory: 258.742 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'srcnn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.351 seconds; current allocated memory: 259.066 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.182 seconds; current allocated memory: 259.410 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv1_Pipeline_KR_KC' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv1_Pipeline_KR_KC' pipeline 'KR_KC' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_4ns_5ns_9ns_9ns_13_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1_Pipeline_KR_KC'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.232 seconds; current allocated memory: 261.301 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'export_output_buffer_c1_Pipeline_RELU' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'RELU' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'export_output_buffer_c1_Pipeline_RELU' pipeline 'RELU' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'export_output_buffer_c1_Pipeline_RELU'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.348 seconds; current allocated memory: 263.895 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'export_output_buffer_c1_Pipeline_RELU1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'RELU' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'export_output_buffer_c1_Pipeline_RELU1' pipeline 'RELU' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'export_output_buffer_c1_Pipeline_RELU1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.287 seconds; current allocated memory: 264.945 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'export_output_buffer_c1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'export_output_buffer_c1/grp_fu_1352_p_opcode' to 0.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_19ns_25_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'export_output_buffer_c1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.337 seconds; current allocated memory: 267.043 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv1/grp_fu_284_p_opcode' to 0.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_10ns_15_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1'.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_input_fm_buffer_2_0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_weight_buffer_2_0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.027 seconds; current allocated memory: 272.875 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_RELU' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'RELU' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2_Pipeline_RELU' pipeline 'RELU' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_RELU'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.096 seconds; current allocated memory: 276.922 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_RELU3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'RELU' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2_Pipeline_RELU3' pipeline 'RELU' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_RELU3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.345 seconds; current allocated memory: 277.656 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_5ns_19ns_23_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_6ns_19ns_24_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2'.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv2_input_fm_buffer_1_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv2_weight_buffer_3_0_0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv2_output_fm_buffer_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.49 seconds; current allocated memory: 282.027 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv3_Pipeline_KR_KC' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv3_Pipeline_KR_KC' pipeline 'KR_KC' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3_Pipeline_KR_KC'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.724 seconds; current allocated memory: 288.707 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv3_Pipeline_RELU' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'RELU' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv3_Pipeline_RELU' pipeline 'RELU' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3_Pipeline_RELU'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.434 seconds; current allocated memory: 289.418 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv3_Pipeline_RELU2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'RELU' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv3_Pipeline_RELU2' pipeline 'RELU' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3_Pipeline_RELU2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.393 seconds; current allocated memory: 290.723 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_284_p_opcode' to 0.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_10ns_10ns_17_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3'.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv3_input_fm_buffer_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv3_weight_buffer_0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv3_output_fm_buffer_0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.514 seconds; current allocated memory: 294.773 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'srcnn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/i1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/w1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/i2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/w2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/i3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/w3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/o' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/input_ftmap' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv1_weights' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv1_biases' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv1_output_ftmap' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv2_weights' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv2_biases' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv2_output_ftmap' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv3_weights' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv3_biases' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/output_ftmap' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'srcnn' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'input_ftmap', 'conv1_weights', 'conv1_output_ftmap', 'conv2_weights', 'conv2_output_ftmap', 'conv3_weights', 'output_ftmap' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'srcnn'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.994 seconds; current allocated memory: 304.141 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.561 seconds; current allocated memory: 309.355 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.65 seconds; current allocated memory: 327.500 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for srcnn.
+INFO: [VLOG 209-307] Generating Verilog RTL for srcnn.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 24 seconds. CPU system time: 7 seconds. Elapsed time: 66.273 seconds; current allocated memory: 235.680 MB.
+INFO: [HLS 200-112] Total CPU user time: 26 seconds. Total CPU system time: 9 seconds. Total elapsed time: 68.655 seconds; peak allocated memory: 327.551 MB.

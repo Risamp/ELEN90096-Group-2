@@ -20,7 +20,7 @@ set C_modelArgList {
 	{ w2 int 32 regular {axi_master 0}  }
 	{ conv2_weights int 64 regular  }
 	{ conv2_biases int 32 regular {array 32 { 1 3 } 1 1 }  }
-	{ i3 int 32 regular {axi_master 2}  }
+	{ i3 int 32 regular {axi_master 1}  }
 	{ output_ftmap int 64 regular  }
 }
 set hasAXIMCache 0
@@ -30,7 +30,7 @@ set C_modelArgMapList {[
  	{ "Name" : "w2", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "conv2_weights","offset": { "type": "dynamic","port_name": "conv2_weights","bundle": "control"},"direction": "READONLY"}]}]} , 
  	{ "Name" : "conv2_weights", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY"} , 
  	{ "Name" : "conv2_biases", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY"} , 
- 	{ "Name" : "i3", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READWRITE", "bitSlice":[ {"cElement": [{"cName": "conv2_output_ftmap","offset": { "type": "dynamic","port_name": "conv2_output_ftmap","bundle": "control"},"direction": "READWRITE"}]}]} , 
+ 	{ "Name" : "i3", "interface" : "axi_master", "bitwidth" : 32, "direction" : "WRITEONLY", "bitSlice":[ {"cElement": [{"cName": "conv2_output_ftmap","offset": { "type": "dynamic","port_name": "conv2_output_ftmap","bundle": "control"},"direction": "READWRITE"}]}]} , 
  	{ "Name" : "output_ftmap", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY"} ]}
 # RTL Port declarations: 
 set portNum 164
@@ -185,20 +185,20 @@ set portList {
 	{ m_axi_i3_BID sc_in sc_lv 1 signal 5 } 
 	{ m_axi_i3_BUSER sc_in sc_lv 1 signal 5 } 
 	{ output_ftmap sc_in sc_lv 64 signal 6 } 
-	{ grp_fu_523_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_523_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_523_p_opcode sc_out sc_lv 2 signal -1 } 
-	{ grp_fu_523_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_523_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_527_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_527_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_527_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_527_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_531_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_531_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_531_p_opcode sc_out sc_lv 5 signal -1 } 
-	{ grp_fu_531_p_dout0 sc_in sc_lv 1 signal -1 } 
-	{ grp_fu_531_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_292_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_292_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_292_p_opcode sc_out sc_lv 5 signal -1 } 
+	{ grp_fu_292_p_dout0 sc_in sc_lv 1 signal -1 } 
+	{ grp_fu_292_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_284_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_284_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_284_p_opcode sc_out sc_lv 2 signal -1 } 
+	{ grp_fu_284_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_284_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_288_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_288_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_288_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_288_p_ce sc_out sc_logic 1 signal -1 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -351,29 +351,29 @@ set NewPortList {[
  	{ "name": "m_axi_i3_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "i3", "role": "BID" }} , 
  	{ "name": "m_axi_i3_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "i3", "role": "BUSER" }} , 
  	{ "name": "output_ftmap", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "output_ftmap", "role": "default" }} , 
- 	{ "name": "grp_fu_523_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_523_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_523_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_523_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_523_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "grp_fu_523_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_523_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_523_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_523_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_523_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_527_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_527_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_527_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_527_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_527_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_527_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_527_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_527_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_531_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_531_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_531_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_531_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_531_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "grp_fu_531_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_531_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_531_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_531_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_531_p_ce", "role": "default" }}  ]}
+ 	{ "name": "grp_fu_292_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_292_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_292_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_292_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_292_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "grp_fu_292_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_292_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_292_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_292_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_292_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_284_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_284_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_284_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_284_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_284_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "grp_fu_284_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_284_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_284_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_284_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_284_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_288_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_288_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_288_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_288_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_288_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_288_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_288_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_288_p_ce", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "20", "22"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "6", "8", "9"],
 		"CDFG" : "conv2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "691303951", "EstimateLatencyMax" : "691303951",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1378701191", "EstimateLatencyMax" : "1378744711",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -382,275 +382,78 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "i2", "Type" : "MAXI", "Direction" : "I",
-				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "grp_load_buffer_tile_c2_fu_534", "Port" : "i2", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "input_ftmap", "Type" : "None", "Direction" : "I"},
-			{"Name" : "w2", "Type" : "MAXI", "Direction" : "I",
-				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "grp_load_buffer_tile_c2_fu_534", "Port" : "w2", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "conv2_weights", "Type" : "None", "Direction" : "I"},
-			{"Name" : "conv2_biases", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "i3", "Type" : "MAXI", "Direction" : "IO",
-				"BlockSignal" : [
-					{"Name" : "i3_blk_n_AR", "Type" : "RtlSignal"},
-					{"Name" : "i3_blk_n_R", "Type" : "RtlSignal"},
-					{"Name" : "i3_blk_n_AW", "Type" : "RtlSignal"},
-					{"Name" : "i3_blk_n_W", "Type" : "RtlSignal"},
-					{"Name" : "i3_blk_n_B", "Type" : "RtlSignal"}]},
-			{"Name" : "output_ftmap", "Type" : "None", "Direction" : "I"},
-			{"Name" : "input_fm_buffer_1", "Type" : "Memory", "Direction" : "IO",
-				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "grp_load_buffer_tile_c2_fu_534", "Port" : "input_fm_buffer_1", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "weights_buffer_0_0_0", "Type" : "Memory", "Direction" : "IO",
-				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "grp_load_buffer_tile_c2_fu_534", "Port" : "weights_buffer_0_0_0", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "weights_buffer_0_0_1", "Type" : "Memory", "Direction" : "IO",
-				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "grp_load_buffer_tile_c2_fu_534", "Port" : "weights_buffer_0_0_1", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "weights_buffer_0_0_2", "Type" : "Memory", "Direction" : "IO",
-				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "grp_load_buffer_tile_c2_fu_534", "Port" : "weights_buffer_0_0_2", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "weights_buffer_0_0_3", "Type" : "Memory", "Direction" : "IO",
-				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "grp_load_buffer_tile_c2_fu_534", "Port" : "weights_buffer_0_0_3", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "weights_buffer_0_0_4", "Type" : "Memory", "Direction" : "IO",
-				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "grp_load_buffer_tile_c2_fu_534", "Port" : "weights_buffer_0_0_4", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "weights_buffer_0_0_5", "Type" : "Memory", "Direction" : "IO",
-				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "grp_load_buffer_tile_c2_fu_534", "Port" : "weights_buffer_0_0_5", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "weights_buffer_0_0_6", "Type" : "Memory", "Direction" : "IO",
-				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "grp_load_buffer_tile_c2_fu_534", "Port" : "weights_buffer_0_0_6", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "weights_buffer_0_0_7", "Type" : "Memory", "Direction" : "IO",
-				"SubConnect" : [
-					{"ID" : "11", "SubInstance" : "grp_load_buffer_tile_c2_fu_534", "Port" : "weights_buffer_0_0_7", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "output_fm_buffer", "Type" : "Memory", "Direction" : "IO",
-				"SubConnect" : [
-					{"ID" : "20", "SubInstance" : "grp_conv2_Pipeline_1_fu_565", "Port" : "output_fm_buffer", "Inst_start_state" : "46", "Inst_end_state" : "71"}]}],
-		"Loop" : [
-			{"Name" : "TX", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "71", "FirstState" : "ap_ST_fsm_state8", "LastState" : ["ap_ST_fsm_state45"], "QuitState" : ["ap_ST_fsm_state8"], "PreState" : ["ap_ST_fsm_state7"], "PostState" : ["ap_ST_fsm_state7"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
-			{"Name" : "TY", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "71", "FirstState" : "ap_ST_fsm_state7", "LastState" : ["ap_ST_fsm_state8"], "QuitState" : ["ap_ST_fsm_state7"], "PreState" : ["ap_ST_fsm_state6"], "PostState" : ["ap_ST_fsm_state5"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
-			{"Name" : "NOUT", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "71", "FirstState" : "ap_ST_fsm_state5", "LastState" : ["ap_ST_fsm_state7"], "QuitState" : ["ap_ST_fsm_state5"], "PreState" : ["ap_ST_fsm_state4"], "PostState" : ["ap_ST_fsm_state3"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
-			{"Name" : "TN", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "71", "FirstState" : "ap_ST_fsm_state3", "LastState" : ["ap_ST_fsm_state5"], "QuitState" : ["ap_ST_fsm_state3"], "PreState" : ["ap_ST_fsm_state2"], "PostState" : ["ap_ST_fsm_state46"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
-			{"Name" : "VITIS_LOOP_145_3", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "71", "FirstState" : "ap_ST_fsm_state49", "LastState" : ["ap_ST_fsm_state70"], "QuitState" : ["ap_ST_fsm_state49"], "PreState" : ["ap_ST_fsm_state48"], "PostState" : ["ap_ST_fsm_state48"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
-			{"Name" : "VITIS_LOOP_143_2", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "71", "FirstState" : "ap_ST_fsm_state48", "LastState" : ["ap_ST_fsm_state49"], "QuitState" : ["ap_ST_fsm_state48"], "PreState" : ["ap_ST_fsm_state47"], "PostState" : ["ap_ST_fsm_state46"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
-			{"Name" : "VITIS_LOOP_141_1", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "71", "FirstState" : "ap_ST_fsm_state46", "LastState" : ["ap_ST_fsm_state48"], "QuitState" : ["ap_ST_fsm_state46"], "PreState" : ["ap_ST_fsm_state3"], "PostState" : ["ap_ST_fsm_state71"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
-			{"Name" : "TJ_TI", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "71", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state71"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.input_fm_buffer_1_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.weights_buffer_0_0_0_U", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.weights_buffer_0_0_1_U", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.weights_buffer_0_0_2_U", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.weights_buffer_0_0_3_U", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.weights_buffer_0_0_4_U", "Parent" : "0"},
-	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.weights_buffer_0_0_5_U", "Parent" : "0"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.weights_buffer_0_0_6_U", "Parent" : "0"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.weights_buffer_0_0_7_U", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.output_fm_buffer_U", "Parent" : "0"},
-	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_load_buffer_tile_c2_fu_534", "Parent" : "0", "Child" : ["12", "14", "16", "18"],
-		"CDFG" : "load_buffer_tile_c2",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "4710", "EstimateLatencyMax" : "4710",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"IsBlackBox" : "0",
-		"Port" : [
-			{"Name" : "i2", "Type" : "MAXI", "Direction" : "I",
-				"SubConnect" : [
-					{"ID" : "16", "SubInstance" : "grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1_fu_142", "Port" : "i2", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "input_fm", "Type" : "None", "Direction" : "I"},
-			{"Name" : "w2", "Type" : "MAXI", "Direction" : "I",
-				"SubConnect" : [
-					{"ID" : "18", "SubInstance" : "grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_190", "Port" : "w2", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "conv2_weights", "Type" : "None", "Direction" : "I"},
-			{"Name" : "tx0", "Type" : "None", "Direction" : "I"},
-			{"Name" : "ty0", "Type" : "None", "Direction" : "I"},
-			{"Name" : "tn0", "Type" : "None", "Direction" : "I"},
-			{"Name" : "input_fm_buffer_1", "Type" : "Memory", "Direction" : "O",
-				"SubConnect" : [
-					{"ID" : "16", "SubInstance" : "grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1_fu_142", "Port" : "input_fm_buffer_1", "Inst_start_state" : "3", "Inst_end_state" : "4"},
-					{"ID" : "12", "SubInstance" : "grp_load_buffer_tile_c2_Pipeline_1_fu_130", "Port" : "input_fm_buffer_1", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
-			{"Name" : "weights_buffer_0_0_0", "Type" : "Memory", "Direction" : "O",
-				"SubConnect" : [
-					{"ID" : "18", "SubInstance" : "grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_190", "Port" : "weights_buffer_0_0_0", "Inst_start_state" : "3", "Inst_end_state" : "4"},
-					{"ID" : "14", "SubInstance" : "grp_load_buffer_tile_c2_Pipeline_2_fu_136", "Port" : "weights_buffer_0_0_0", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
-			{"Name" : "weights_buffer_0_0_1", "Type" : "Memory", "Direction" : "O",
-				"SubConnect" : [
-					{"ID" : "18", "SubInstance" : "grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_190", "Port" : "weights_buffer_0_0_1", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "weights_buffer_0_0_2", "Type" : "Memory", "Direction" : "O",
-				"SubConnect" : [
-					{"ID" : "18", "SubInstance" : "grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_190", "Port" : "weights_buffer_0_0_2", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "weights_buffer_0_0_3", "Type" : "Memory", "Direction" : "O",
-				"SubConnect" : [
-					{"ID" : "18", "SubInstance" : "grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_190", "Port" : "weights_buffer_0_0_3", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "weights_buffer_0_0_4", "Type" : "Memory", "Direction" : "O",
-				"SubConnect" : [
-					{"ID" : "18", "SubInstance" : "grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_190", "Port" : "weights_buffer_0_0_4", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "weights_buffer_0_0_5", "Type" : "Memory", "Direction" : "O",
-				"SubConnect" : [
-					{"ID" : "18", "SubInstance" : "grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_190", "Port" : "weights_buffer_0_0_5", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "weights_buffer_0_0_6", "Type" : "Memory", "Direction" : "O",
-				"SubConnect" : [
-					{"ID" : "18", "SubInstance" : "grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_190", "Port" : "weights_buffer_0_0_6", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "weights_buffer_0_0_7", "Type" : "Memory", "Direction" : "O",
-				"SubConnect" : [
-					{"ID" : "18", "SubInstance" : "grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_190", "Port" : "weights_buffer_0_0_7", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}]},
-	{"ID" : "12", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_load_buffer_tile_c2_fu_534.grp_load_buffer_tile_c2_Pipeline_1_fu_130", "Parent" : "11", "Child" : ["13"],
-		"CDFG" : "load_buffer_tile_c2_Pipeline_1",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "2314", "EstimateLatencyMax" : "2314",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"IsBlackBox" : "0",
-		"Port" : [
-			{"Name" : "input_fm_buffer_1", "Type" : "Memory", "Direction" : "O"}],
-		"Loop" : [
-			{"Name" : "Loop 1", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_state1", "FirstStateIter" : "", "FirstStateBlock" : "ap_ST_fsm_state1_blk", "LastState" : "ap_ST_fsm_state1", "LastStateIter" : "", "LastStateBlock" : "ap_ST_fsm_state1_blk", "QuitState" : "ap_ST_fsm_state1", "QuitStateIter" : "", "QuitStateBlock" : "ap_ST_fsm_state1_blk", "OneDepthLoop" : "1", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "13", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_load_buffer_tile_c2_fu_534.grp_load_buffer_tile_c2_Pipeline_1_fu_130.flow_control_loop_pipe_sequential_init_U", "Parent" : "12"},
-	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_load_buffer_tile_c2_fu_534.grp_load_buffer_tile_c2_Pipeline_2_fu_136", "Parent" : "11", "Child" : ["15"],
-		"CDFG" : "load_buffer_tile_c2_Pipeline_2",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "258", "EstimateLatencyMax" : "258",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"IsBlackBox" : "0",
-		"Port" : [
-			{"Name" : "weights_buffer_0_0_0", "Type" : "Memory", "Direction" : "O"}],
-		"Loop" : [
-			{"Name" : "Loop 1", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_state1", "FirstStateIter" : "", "FirstStateBlock" : "ap_ST_fsm_state1_blk", "LastState" : "ap_ST_fsm_state1", "LastStateIter" : "", "LastStateBlock" : "ap_ST_fsm_state1_blk", "QuitState" : "ap_ST_fsm_state1", "QuitStateIter" : "", "QuitStateBlock" : "ap_ST_fsm_state1_blk", "OneDepthLoop" : "1", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "15", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_load_buffer_tile_c2_fu_534.grp_load_buffer_tile_c2_Pipeline_2_fu_136.flow_control_loop_pipe_sequential_init_U", "Parent" : "14"},
-	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_load_buffer_tile_c2_fu_534.grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1_fu_142", "Parent" : "11", "Child" : ["17"],
-		"CDFG" : "load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "2393", "EstimateLatencyMax" : "2393",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"IsBlackBox" : "0",
-		"Port" : [
-			{"Name" : "tn0", "Type" : "None", "Direction" : "I"},
-			{"Name" : "input_fm", "Type" : "None", "Direction" : "I"},
-			{"Name" : "ty0", "Type" : "None", "Direction" : "I"},
-			{"Name" : "tx0", "Type" : "None", "Direction" : "I"},
 			{"Name" : "i2", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "i2_blk_n_AR", "Type" : "RtlSignal"},
 					{"Name" : "i2_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "xClamped", "Type" : "None", "Direction" : "I"},
-			{"Name" : "xClamped_1", "Type" : "None", "Direction" : "I"},
-			{"Name" : "xClamped_2", "Type" : "None", "Direction" : "I"},
-			{"Name" : "xClamped_3", "Type" : "None", "Direction" : "I"},
-			{"Name" : "xClamped_4", "Type" : "None", "Direction" : "I"},
-			{"Name" : "xClamped_5", "Type" : "None", "Direction" : "I"},
-			{"Name" : "xClamped_6", "Type" : "None", "Direction" : "I"},
-			{"Name" : "xClamped_7", "Type" : "None", "Direction" : "I"},
-			{"Name" : "xClamped_8", "Type" : "None", "Direction" : "I"},
-			{"Name" : "xClamped_9", "Type" : "None", "Direction" : "I"},
-			{"Name" : "xClamped_10", "Type" : "None", "Direction" : "I"},
-			{"Name" : "xClamped_11", "Type" : "None", "Direction" : "I"},
-			{"Name" : "xClamped_12", "Type" : "None", "Direction" : "I"},
-			{"Name" : "xClamped_13", "Type" : "None", "Direction" : "I"},
-			{"Name" : "xClamped_14", "Type" : "None", "Direction" : "I"},
-			{"Name" : "xClamped_15", "Type" : "None", "Direction" : "I"},
-			{"Name" : "yClamped", "Type" : "None", "Direction" : "I"},
-			{"Name" : "yClamped_1", "Type" : "None", "Direction" : "I"},
-			{"Name" : "yClamped_2", "Type" : "None", "Direction" : "I"},
-			{"Name" : "yClamped_3", "Type" : "None", "Direction" : "I"},
-			{"Name" : "yClamped_4", "Type" : "None", "Direction" : "I"},
-			{"Name" : "yClamped_5", "Type" : "None", "Direction" : "I"},
-			{"Name" : "yClamped_6", "Type" : "None", "Direction" : "I"},
-			{"Name" : "yClamped_7", "Type" : "None", "Direction" : "I"},
-			{"Name" : "yClamped_8", "Type" : "None", "Direction" : "I"},
-			{"Name" : "yClamped_9", "Type" : "None", "Direction" : "I"},
-			{"Name" : "yClamped_10", "Type" : "None", "Direction" : "I"},
-			{"Name" : "yClamped_11", "Type" : "None", "Direction" : "I"},
-			{"Name" : "yClamped_12", "Type" : "None", "Direction" : "I"},
-			{"Name" : "yClamped_13", "Type" : "None", "Direction" : "I"},
-			{"Name" : "yClamped_14", "Type" : "None", "Direction" : "I"},
-			{"Name" : "yClamped_15", "Type" : "None", "Direction" : "I"},
-			{"Name" : "input_fm_buffer_1", "Type" : "Memory", "Direction" : "O"}],
-		"Loop" : [
-			{"Name" : "VITIS_LOOP_105_1", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "300", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state300"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "17", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_load_buffer_tile_c2_fu_534.grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1_fu_142.mul_6ns_19ns_24_1_1_U116", "Parent" : "16"},
-	{"ID" : "18", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_load_buffer_tile_c2_fu_534.grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_190", "Parent" : "11", "Child" : ["19"],
-		"CDFG" : "load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "267", "EstimateLatencyMax" : "267",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"IsBlackBox" : "0",
-		"Port" : [
-			{"Name" : "tn0", "Type" : "None", "Direction" : "I"},
-			{"Name" : "conv2_weights", "Type" : "None", "Direction" : "I"},
+			{"Name" : "input_ftmap", "Type" : "None", "Direction" : "I"},
 			{"Name" : "w2", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "w2_blk_n_AR", "Type" : "RtlSignal"},
 					{"Name" : "w2_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "weights_buffer_0_0_0", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "weights_buffer_0_0_1", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "weights_buffer_0_0_2", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "weights_buffer_0_0_3", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "weights_buffer_0_0_4", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "weights_buffer_0_0_5", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "weights_buffer_0_0_6", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "weights_buffer_0_0_7", "Type" : "Memory", "Direction" : "O"}],
+			{"Name" : "conv2_weights", "Type" : "None", "Direction" : "I"},
+			{"Name" : "conv2_biases", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "i3", "Type" : "MAXI", "Direction" : "O",
+				"BlockSignal" : [
+					{"Name" : "i3_blk_n_AW", "Type" : "RtlSignal"},
+					{"Name" : "i3_blk_n_W", "Type" : "RtlSignal"},
+					{"Name" : "i3_blk_n_B", "Type" : "RtlSignal"}]},
+			{"Name" : "output_ftmap", "Type" : "None", "Direction" : "I"},
+			{"Name" : "input_fm_buffer_1", "Type" : "Memory", "Direction" : "IO"},
+			{"Name" : "weight_buffer_3_0_0", "Type" : "Memory", "Direction" : "IO"},
+			{"Name" : "output_fm_buffer", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "4", "SubInstance" : "grp_conv2_Pipeline_RELU_fu_617", "Port" : "output_fm_buffer", "Inst_start_state" : "45", "Inst_end_state" : "46"},
+					{"ID" : "6", "SubInstance" : "grp_conv2_Pipeline_RELU3_fu_625", "Port" : "output_fm_buffer", "Inst_start_state" : "54", "Inst_end_state" : "55"}]}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_121_4", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "8", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage1", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage1_subdone", "QuitState" : "ap_ST_fsm_pp0_stage1", "QuitStateIter" : "ap_enable_reg_pp0_iter2", "QuitStateBlock" : "ap_block_pp0_stage1_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "19", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_load_buffer_tile_c2_fu_534.grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_190.flow_control_loop_pipe_sequential_init_U", "Parent" : "18"},
-	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_conv2_Pipeline_1_fu_565", "Parent" : "0", "Child" : ["21"],
-		"CDFG" : "conv2_Pipeline_1",
+			{"Name" : "BH.1", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state13", "LastState" : ["ap_ST_fsm_state15"], "QuitState" : ["ap_ST_fsm_state13"], "PreState" : ["ap_ST_fsm_state12"], "PostState" : ["ap_ST_fsm_state12"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+			{"Name" : "BH", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state12", "LastState" : ["ap_ST_fsm_state13"], "QuitState" : ["ap_ST_fsm_state12"], "PreState" : ["ap_ST_fsm_state11"], "PostState" : ["ap_ST_fsm_state3"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+			{"Name" : "LOAD_INPUT", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state3", "LastState" : ["ap_ST_fsm_state12"], "QuitState" : ["ap_ST_fsm_state3"], "PreState" : ["ap_ST_fsm_state2"], "PostState" : ["ap_ST_fsm_state16"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+			{"Name" : "IN", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state26", "LastState" : ["ap_ST_fsm_state28"], "QuitState" : ["ap_ST_fsm_state26"], "PreState" : ["ap_ST_fsm_state25"], "PostState" : ["ap_ST_fsm_state17"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+			{"Name" : "LOAD_WEIGHTS", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state17", "LastState" : ["ap_ST_fsm_state26"], "QuitState" : ["ap_ST_fsm_state17"], "PreState" : ["ap_ST_fsm_state16"], "PostState" : ["ap_ST_fsm_state29"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+			{"Name" : "COL", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state33", "LastState" : ["ap_ST_fsm_state42"], "QuitState" : ["ap_ST_fsm_state33"], "PreState" : ["ap_ST_fsm_state32"], "PostState" : ["ap_ST_fsm_state32"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+			{"Name" : "ROW", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state32", "LastState" : ["ap_ST_fsm_state33"], "QuitState" : ["ap_ST_fsm_state32"], "PreState" : ["ap_ST_fsm_state31"], "PostState" : ["ap_ST_fsm_state30"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+			{"Name" : "IN", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state30", "LastState" : ["ap_ST_fsm_state32"], "QuitState" : ["ap_ST_fsm_state30"], "PreState" : ["ap_ST_fsm_state29"], "PostState" : ["ap_ST_fsm_state29"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+			{"Name" : "OUT", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state29", "LastState" : ["ap_ST_fsm_state30"], "QuitState" : ["ap_ST_fsm_state29"], "PreState" : ["ap_ST_fsm_state17"], "PostState" : ["ap_ST_fsm_state43"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+			{"Name" : "BH.1", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state47", "LastState" : ["ap_ST_fsm_state49"], "QuitState" : ["ap_ST_fsm_state47"], "PreState" : ["ap_ST_fsm_state46"], "PostState" : ["ap_ST_fsm_state50"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+			{"Name" : "BH.2", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state56", "LastState" : ["ap_ST_fsm_state58"], "QuitState" : ["ap_ST_fsm_state56"], "PreState" : ["ap_ST_fsm_state55"], "PostState" : ["ap_ST_fsm_state59"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+			{"Name" : "BH", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state45", "LastState" : ["ap_ST_fsm_state63"], "QuitState" : ["ap_ST_fsm_state54"], "PreState" : ["ap_ST_fsm_state44"], "PostState" : ["ap_ST_fsm_state43"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+			{"Name" : "EXPORT", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state43", "LastState" : ["ap_ST_fsm_state54"], "QuitState" : ["ap_ST_fsm_state43"], "PreState" : ["ap_ST_fsm_state29"], "PostState" : ["ap_ST_fsm_state64"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+			{"Name" : "BW", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state65", "LastState" : ["ap_ST_fsm_state65"], "QuitState" : ["ap_ST_fsm_state65"], "PreState" : ["ap_ST_fsm_state64"], "PostState" : ["ap_ST_fsm_state66"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state65_blk"}},
+			{"Name" : "BW", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state66", "LastState" : ["ap_ST_fsm_state66"], "QuitState" : ["ap_ST_fsm_state66"], "PreState" : ["ap_ST_fsm_state65"], "PostState" : ["ap_ST_fsm_state67"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state66_blk"}},
+			{"Name" : "BW", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state67", "LastState" : ["ap_ST_fsm_state67"], "QuitState" : ["ap_ST_fsm_state67"], "PreState" : ["ap_ST_fsm_state66"], "PostState" : ["ap_ST_fsm_state64"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state67_blk"}},
+			{"Name" : "CLEAR", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state64", "LastState" : ["ap_ST_fsm_state67"], "QuitState" : ["ap_ST_fsm_state64"], "PreState" : ["ap_ST_fsm_state43"], "PostState" : ["ap_ST_fsm_state16"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+			{"Name" : "TILE_OUT", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state16", "LastState" : ["ap_ST_fsm_state64"], "QuitState" : ["ap_ST_fsm_state16"], "PreState" : ["ap_ST_fsm_state3"], "PostState" : ["ap_ST_fsm_state2"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+			{"Name" : "TILE_IN_TILE_ROW", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "67", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state16"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.input_fm_buffer_1_U", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.weight_buffer_3_0_0_U", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.output_fm_buffer_U", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_conv2_Pipeline_RELU_fu_617", "Parent" : "0", "Child" : ["5"],
+		"CDFG" : "conv2_Pipeline_RELU",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "9250", "EstimateLatencyMax" : "9250",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "517", "EstimateLatencyMax" : "517",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -659,113 +462,65 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "output_fm_buffer", "Type" : "Memory", "Direction" : "O"}],
+			{"Name" : "sub_ln111_1", "Type" : "None", "Direction" : "I"},
+			{"Name" : "empty", "Type" : "None", "Direction" : "I"},
+			{"Name" : "output_fm_buffer", "Type" : "Memory", "Direction" : "IO"}],
 		"Loop" : [
-			{"Name" : "Loop 1", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_state1", "FirstStateIter" : "", "FirstStateBlock" : "ap_ST_fsm_state1_blk", "LastState" : "ap_ST_fsm_state1", "LastStateIter" : "", "LastStateBlock" : "ap_ST_fsm_state1_blk", "QuitState" : "ap_ST_fsm_state1", "QuitStateIter" : "", "QuitStateBlock" : "ap_ST_fsm_state1_blk", "OneDepthLoop" : "1", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "21", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2_Pipeline_1_fu_565.flow_control_loop_pipe_sequential_init_U", "Parent" : "20"},
-	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fmul_32ns_32ns_32_3_max_dsp_1_U186", "Parent" : "0"}]}
+			{"Name" : "RELU", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage1", "LastStateIter" : "ap_enable_reg_pp0_iter3", "LastStateBlock" : "ap_block_pp0_stage1_subdone", "QuitState" : "ap_ST_fsm_pp0_stage1", "QuitStateIter" : "ap_enable_reg_pp0_iter3", "QuitStateBlock" : "ap_block_pp0_stage1_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2_Pipeline_RELU_fu_617.flow_control_loop_pipe_sequential_init_U", "Parent" : "4"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_conv2_Pipeline_RELU3_fu_625", "Parent" : "0", "Child" : ["7"],
+		"CDFG" : "conv2_Pipeline_RELU3",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "517", "EstimateLatencyMax" : "517",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "sub_ln111_2", "Type" : "None", "Direction" : "I"},
+			{"Name" : "empty", "Type" : "None", "Direction" : "I"},
+			{"Name" : "output_fm_buffer", "Type" : "Memory", "Direction" : "IO"}],
+		"Loop" : [
+			{"Name" : "RELU", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage1", "LastStateIter" : "ap_enable_reg_pp0_iter3", "LastStateBlock" : "ap_block_pp0_stage1_subdone", "QuitState" : "ap_ST_fsm_pp0_stage1", "QuitStateIter" : "ap_enable_reg_pp0_iter3", "QuitStateBlock" : "ap_block_pp0_stage1_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_conv2_Pipeline_RELU3_fu_625.flow_control_loop_pipe_sequential_init_U", "Parent" : "6"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_6ns_19ns_24_1_1_U59", "Parent" : "0"},
+	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_5ns_19ns_23_1_1_U60", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	conv2 {
-		i2 {Type I LastRead 298 FirstWrite -1}
+		i2 {Type I LastRead 13 FirstWrite -1}
 		input_ftmap {Type I LastRead 0 FirstWrite -1}
-		w2 {Type I LastRead 16 FirstWrite -1}
+		w2 {Type I LastRead 14 FirstWrite -1}
 		conv2_weights {Type I LastRead 0 FirstWrite -1}
-		conv2_biases {Type I LastRead 3 FirstWrite -1}
-		i3 {Type IO LastRead 23 FirstWrite 22}
+		conv2_biases {Type I LastRead 6 FirstWrite -1}
+		i3 {Type O LastRead 18 FirstWrite 12}
 		output_ftmap {Type I LastRead 0 FirstWrite -1}
 		input_fm_buffer_1 {Type IO LastRead -1 FirstWrite -1}
-		weights_buffer_0_0_0 {Type IO LastRead -1 FirstWrite -1}
-		weights_buffer_0_0_1 {Type IO LastRead -1 FirstWrite -1}
-		weights_buffer_0_0_2 {Type IO LastRead -1 FirstWrite -1}
-		weights_buffer_0_0_3 {Type IO LastRead -1 FirstWrite -1}
-		weights_buffer_0_0_4 {Type IO LastRead -1 FirstWrite -1}
-		weights_buffer_0_0_5 {Type IO LastRead -1 FirstWrite -1}
-		weights_buffer_0_0_6 {Type IO LastRead -1 FirstWrite -1}
-		weights_buffer_0_0_7 {Type IO LastRead -1 FirstWrite -1}
+		weight_buffer_3_0_0 {Type IO LastRead -1 FirstWrite -1}
 		output_fm_buffer {Type IO LastRead -1 FirstWrite -1}}
-	load_buffer_tile_c2 {
-		i2 {Type I LastRead 298 FirstWrite -1}
-		input_fm {Type I LastRead 2 FirstWrite -1}
-		w2 {Type I LastRead 16 FirstWrite -1}
-		conv2_weights {Type I LastRead 2 FirstWrite -1}
-		tx0 {Type I LastRead 2 FirstWrite -1}
-		ty0 {Type I LastRead 2 FirstWrite -1}
-		tn0 {Type I LastRead 2 FirstWrite -1}
-		input_fm_buffer_1 {Type O LastRead -1 FirstWrite 0}
-		weights_buffer_0_0_0 {Type O LastRead -1 FirstWrite 0}
-		weights_buffer_0_0_1 {Type O LastRead -1 FirstWrite 11}
-		weights_buffer_0_0_2 {Type O LastRead -1 FirstWrite 12}
-		weights_buffer_0_0_3 {Type O LastRead -1 FirstWrite 13}
-		weights_buffer_0_0_4 {Type O LastRead -1 FirstWrite 14}
-		weights_buffer_0_0_5 {Type O LastRead -1 FirstWrite 15}
-		weights_buffer_0_0_6 {Type O LastRead -1 FirstWrite 16}
-		weights_buffer_0_0_7 {Type O LastRead -1 FirstWrite 17}}
-	load_buffer_tile_c2_Pipeline_1 {
-		input_fm_buffer_1 {Type O LastRead -1 FirstWrite 0}}
-	load_buffer_tile_c2_Pipeline_2 {
-		weights_buffer_0_0_0 {Type O LastRead -1 FirstWrite 0}}
-	load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1 {
-		tn0 {Type I LastRead 0 FirstWrite -1}
-		input_fm {Type I LastRead 0 FirstWrite -1}
-		ty0 {Type I LastRead 0 FirstWrite -1}
-		tx0 {Type I LastRead 0 FirstWrite -1}
-		i2 {Type I LastRead 298 FirstWrite -1}
-		xClamped {Type I LastRead 0 FirstWrite -1}
-		xClamped_1 {Type I LastRead 0 FirstWrite -1}
-		xClamped_2 {Type I LastRead 0 FirstWrite -1}
-		xClamped_3 {Type I LastRead 0 FirstWrite -1}
-		xClamped_4 {Type I LastRead 0 FirstWrite -1}
-		xClamped_5 {Type I LastRead 0 FirstWrite -1}
-		xClamped_6 {Type I LastRead 0 FirstWrite -1}
-		xClamped_7 {Type I LastRead 0 FirstWrite -1}
-		xClamped_8 {Type I LastRead 0 FirstWrite -1}
-		xClamped_9 {Type I LastRead 0 FirstWrite -1}
-		xClamped_10 {Type I LastRead 0 FirstWrite -1}
-		xClamped_11 {Type I LastRead 0 FirstWrite -1}
-		xClamped_12 {Type I LastRead 0 FirstWrite -1}
-		xClamped_13 {Type I LastRead 0 FirstWrite -1}
-		xClamped_14 {Type I LastRead 0 FirstWrite -1}
-		xClamped_15 {Type I LastRead 0 FirstWrite -1}
-		yClamped {Type I LastRead 0 FirstWrite -1}
-		yClamped_1 {Type I LastRead 0 FirstWrite -1}
-		yClamped_2 {Type I LastRead 0 FirstWrite -1}
-		yClamped_3 {Type I LastRead 0 FirstWrite -1}
-		yClamped_4 {Type I LastRead 0 FirstWrite -1}
-		yClamped_5 {Type I LastRead 0 FirstWrite -1}
-		yClamped_6 {Type I LastRead 0 FirstWrite -1}
-		yClamped_7 {Type I LastRead 0 FirstWrite -1}
-		yClamped_8 {Type I LastRead 0 FirstWrite -1}
-		yClamped_9 {Type I LastRead 0 FirstWrite -1}
-		yClamped_10 {Type I LastRead 0 FirstWrite -1}
-		yClamped_11 {Type I LastRead 0 FirstWrite -1}
-		yClamped_12 {Type I LastRead 0 FirstWrite -1}
-		yClamped_13 {Type I LastRead 0 FirstWrite -1}
-		yClamped_14 {Type I LastRead 0 FirstWrite -1}
-		yClamped_15 {Type I LastRead 0 FirstWrite -1}
-		input_fm_buffer_1 {Type O LastRead -1 FirstWrite 11}}
-	load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4 {
-		tn0 {Type I LastRead 0 FirstWrite -1}
-		conv2_weights {Type I LastRead 0 FirstWrite -1}
-		w2 {Type I LastRead 16 FirstWrite -1}
-		weights_buffer_0_0_0 {Type O LastRead -1 FirstWrite 10}
-		weights_buffer_0_0_1 {Type O LastRead -1 FirstWrite 11}
-		weights_buffer_0_0_2 {Type O LastRead -1 FirstWrite 12}
-		weights_buffer_0_0_3 {Type O LastRead -1 FirstWrite 13}
-		weights_buffer_0_0_4 {Type O LastRead -1 FirstWrite 14}
-		weights_buffer_0_0_5 {Type O LastRead -1 FirstWrite 15}
-		weights_buffer_0_0_6 {Type O LastRead -1 FirstWrite 16}
-		weights_buffer_0_0_7 {Type O LastRead -1 FirstWrite 17}}
-	conv2_Pipeline_1 {
-		output_fm_buffer {Type O LastRead -1 FirstWrite 0}}}
+	conv2_Pipeline_RELU {
+		sub_ln111_1 {Type I LastRead 0 FirstWrite -1}
+		empty {Type I LastRead 0 FirstWrite -1}
+		output_fm_buffer {Type IO LastRead 0 FirstWrite 7}}
+	conv2_Pipeline_RELU3 {
+		sub_ln111_2 {Type I LastRead 0 FirstWrite -1}
+		empty {Type I LastRead 0 FirstWrite -1}
+		output_fm_buffer {Type IO LastRead 0 FirstWrite 7}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "691303951", "Max" : "691303951"}
-	, {"Name" : "Interval", "Min" : "691303951", "Max" : "691303951"}
+	{"Name" : "Latency", "Min" : "1378701191", "Max" : "1378744711"}
+	, {"Name" : "Interval", "Min" : "1378701191", "Max" : "1378744711"}
 ]}
 
 set PipelineEnableSignalInfo {[

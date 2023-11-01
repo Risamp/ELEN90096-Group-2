@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'export_output_buffer_c1'" level="0">
-<item name = "Date">Wed Nov  1 18:48:30 2023
+<item name = "Date">Thu Nov  2 02:40:03 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,25 +24,25 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">195858, 195922, 1.959 ms, 1.959 ms, 195858, 195922, no</column>
+<column name="">222642, 222730, 2.226 ms, 2.227 ms, 222642, 222730, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_export_output_buffer_c1_Pipeline_RELU_fu_592">export_output_buffer_c1_Pipeline_RELU, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
-<column name="grp_export_output_buffer_c1_Pipeline_RELU1_fu_607">export_output_buffer_c1_Pipeline_RELU1, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_export_output_buffer_c1_Pipeline_RELU_fu_318">export_output_buffer_c1_Pipeline_RELU, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_export_output_buffer_c1_Pipeline_RELU1_fu_326">export_output_buffer_c1_Pipeline_RELU1, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- EXPORT">165080, 165144, 20635 ~ 20643, -, -, 8, no</column>
-<column name=" + BH">20632, 20639, 2579, -, -, 8, no</column>
+<column name="- EXPORT">185712, 185776, 23214 ~ 23222, -, -, 8, no</column>
+<column name=" + BH">23211, 23218, 2579, -, -, 9, no</column>
 <column name="  ++ BH.1">765, 765, 3, -, -, 255, no</column>
 <column name="  ++ BH.2">765, 765, 3, -, -, 255, no</column>
-<column name="- CLEAR">30776, 30776, 3847, -, -, 8, no</column>
-<column name=" + BH">3845, 3845, 769, -, -, 5, no</column>
+<column name="- CLEAR">36928, 36952, 4616 ~ 4619, -, -, 8, no</column>
+<column name=" + BH">4614, 4616, 769, -, -, 6, no</column>
 <column name="  ++ BW">255, 255, 1, -, -, 255, no</column>
 <column name="  ++ BW">255, 255, 1, -, -, 255, no</column>
 <column name="  ++ BW">255, 255, 1, -, -, 255, no</column>

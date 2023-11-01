@@ -13,7 +13,7 @@ entity srcnn_conv1_input_fm_buffer_2_0_RAM_AUTO_1R1W is
         MEM_TYPE        : string    := "auto"; 
         DataWidth       : integer   := 32; 
         AddressWidth    : integer   := 13;
-        AddressRange    : integer   := 6049
+        AddressRange    : integer   := 6575
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

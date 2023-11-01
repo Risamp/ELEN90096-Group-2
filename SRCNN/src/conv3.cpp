@@ -13,7 +13,7 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
            ftmap_t output_ftmap[N3][H][W])
 {
 
-	#pragma HLS PIPELINE off
+	//#pragma HLS PIPELINE off
 
 	static ftmap_t output_fm_buffer[C3_OD][C3_TH][W] = {0};
 	//#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=cyclic factor=8 dim=2

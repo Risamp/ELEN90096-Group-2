@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2'" level="0">
-<item name = "Date">Wed Nov  1 18:49:04 2023
+<item name = "Date">Thu Nov  2 02:40:07 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">691303951, 691303951, 6.913 sec, 6.913 sec, 691303951, 691303951, no</column>
+<column name="">1378701191, 1378744711, 13.787 sec, 13.787 sec, 1378701191, 1378744711, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,14 +35,25 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TJ_TI">691303950, 691303950, 3072462, -, -, 225, no</column>
-<column name=" + TN">2858568, 2858568, 357321, -, -, 8, no</column>
-<column name="  ++ NOUT">352608, 352608, 11019, -, -, 32, no</column>
-<column name="   +++ TY">11016, 11016, 648, -, -, 17, no</column>
-<column name="    ++++ TX">646, 646, 38, -, -, 17, no</column>
-<column name=" + VITIS_LOOP_141_1">204640, 204640, 6395, -, -, 32, no</column>
-<column name="  ++ VITIS_LOOP_143_2">6392, 6392, 376, -, -, 17, no</column>
-<column name="   +++ VITIS_LOOP_145_3">374, 374, 22, -, -, 17, no</column>
+<column name="- TILE_IN_TILE_ROW">1378701190, 1378744710, 8110007 ~ 8110263, -, -, 170, no</column>
+<column name=" + LOAD_INPUT">73952, 73952, 2311, -, -, 32, no</column>
+<column name="  ++ BH">2301, 2301, 767, -, -, 3, no</column>
+<column name="   +++ BH.1">765, 765, 3, -, -, 255, no</column>
+<column name=" + TILE_OUT">8036052, 8036308, 2009013 ~ 2009077, -, -, 4, no</column>
+<column name="  ++ LOAD_WEIGHTS">848, 848, 106, -, -, 8, no</column>
+<column name="   +++ IN">96, 96, 3, -, -, 32, no</column>
+<column name="  ++ OUT">1960720, 1960720, 245090, -, -, 8, no</column>
+<column name="   +++ IN">245088, 245088, 7659, -, -, 32, no</column>
+<column name="    ++++ ROW">7656, 7656, 2552, -, -, 3, no</column>
+<column name="     +++++ COL">2550, 2550, 10, -, -, 255, no</column>
+<column name="  ++ EXPORT">41288, 41352, 5161 ~ 5169, -, -, 8, no</column>
+<column name="   +++ BH">5158, 5165, 2579, -, -, 2, no</column>
+<column name="    ++++ BH.1">765, 765, 3, -, -, 255, no</column>
+<column name="    ++++ BH.2">765, 765, 3, -, -, 255, no</column>
+<column name="  ++ CLEAR">6152, 6152, 769, -, -, 8, no</column>
+<column name="   +++ BW">255, 255, 1, -, -, 255, no</column>
+<column name="   +++ BW">255, 255, 1, -, -, 255, no</column>
+<column name="   +++ BW">255, 255, 1, -, -, 255, no</column>
 </table>
 </item>
 </section>

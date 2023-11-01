@@ -5707,7 +5707,7 @@ inline __attribute__((nodebug)) bool operator!=(
 }
 # 366 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\\ap_fixed.h" 2
 # 5 "src/srcnn.h" 2
-# 43 "src/srcnn.h"
+# 44 "src/srcnn.h"
 typedef float ftmap_t;
 typedef float param_t;
 
@@ -5745,8 +5745,10 @@ void conv3(ftmap_t input_ftmap[32][255][255],
 int clamp(int value, int min, int max);
 
 
+
+
 void load_input_buffer_c1(
- ftmap_t input_fm_buffer[1][15 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)],
+ ftmap_t input_fm_buffer[1][17 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)],
  ftmap_t input_ftmap[1][255][255],
  int in,
  int h
@@ -5760,42 +5762,74 @@ void load_weight_buffer_c1(
 );
 
 void export_output_buffer_c1(
- ftmap_t output_fm_buffer[8][15][255],
+ ftmap_t output_fm_buffer[8][17][255],
  ftmap_t output_ftmap[64][255][255],
  param_t biases[64],
  int out,
  int h
 );
 
-void clear_buffer(ftmap_t output_fm_buffer[8][15][255]);
+void clear_buffer_c1(
+ ftmap_t output_fm_buffer[8][17][255]
+);
 
-void load_buffer_tile_c2(ftmap_t input_fm_buffer[8][255 / 15 + (2 * (1 - 1) / 2)][255 / 15 + (2 * (1 - 1) / 2)],
-                         ftmap_t input_fm[64][255][255],
-       param_t weights_buffer[32][8][1][1],
-       param_t conv2_weights[32][64][1][1],
-                         int tx0,
-                         int ty0,
-       int tn0);
 
-void export_buffer_tile_c2(ftmap_t output_fm_buffer[32][255 / 15][255 / 15],
-                           ftmap_t output_ftmap[32][255][255],
-                           int tx0,
-                           int ty0,
-         param_t conv2_biases[32]);
 
-void load_buffer_tile_c3(ftmap_t input_fm_buffer[8][255 / 15 + (2 * (5 - 1) / 2)][255 / 15 + (2 * (5 - 1) / 2)],
-      ftmap_t input_fm[32][255][255],
-      param_t weights_buffer[1][8][5][5],
-      param_t conv3_weights[1][32][5][5],
-      int tx0,
-      int ty0,
-      int tn0);
 
-void export_buffer_tile_c3(ftmap_t output_fm_buffer[1][255 / 15][255 / 15],
-                           ftmap_t output_ftmap[1][255][255],
-                           int tx0,
-                           int ty0,
-         param_t conv3_biases[1]);
+void load_input_buffer_c2(
+ ftmap_t input_fm_buffer[32][3 + (2 * (1 - 1) / 2)][255 + (2 * (1 - 1) / 2)],
+ ftmap_t input_ftmap[64][255][255],
+ int in,
+ int h
+);
+
+void load_weight_buffer_c2(
+ param_t weight_buffer[8][32][1][1],
+ param_t conv2_weights[32][64][1][1],
+ int out,
+ int in
+);
+
+void export_output_buffer_c2(
+ ftmap_t output_fm_buffer[8][3][255],
+ ftmap_t output_ftmap[32][255][255],
+ param_t biases[32],
+ int out,
+ int h
+);
+
+void clear_buffer_c2(
+ ftmap_t output_fm_buffer[8][3][255]
+);
+
+
+
+
+void load_input_buffer_c3(
+ ftmap_t input_fm_buffer[32][5 + (2 * (5 - 1) / 2)][255 + (2 * (5 - 1) / 2)],
+ ftmap_t input_ftmap[32][255][255],
+ int in,
+ int h
+);
+
+void load_weight_buffer_c3(
+ param_t weight_buffer[1][32][5][5],
+ param_t conv1_weights[1][32][5][5],
+ int out,
+ int in
+);
+
+void export_output_buffer_c3(
+ ftmap_t output_fm_buffer[1][5][255],
+ ftmap_t output_ftmap[1][255][255],
+ param_t biases[1],
+ int out,
+ int h
+);
+
+void clear_buffer_c3(
+ ftmap_t output_fm_buffer[1][5][255]
+);
 # 2 "src/conv3.cpp" 2
 # 1 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\iostream" 1 3
 # 37 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\iostream" 3
@@ -33552,118 +33586,139 @@ void conv3(ftmap_t input_ftmap[32][255][255],
            param_t conv3_biases[1],
            ftmap_t output_ftmap[1][255][255])
 {
-# 31 "src/conv3.cpp"
- TJ: for (int tj = 0; tj < 15; tj++) {
- TI: for (int ti = 0; ti < 15; ti++) {
 
-  static ftmap_t output_fm_buffer[1][255 / 15][255 / 15] = {0};
+#pragma HLS PIPELINE off
 
-  int ty0 = tj * 255 / 15;
-  int tx0 = ti * 255 / 15;
+ static ftmap_t output_fm_buffer[1][5][255] = {0};
 
 
-  TN: for (int tn = 0; tn < 32 / 8; tn++) {
-
-   int tn0 = tn * 8;
+ static ftmap_t input_fm_buffer[32][5 + (2 * (5 - 1) / 2)][255 + (2 * (5 - 1) / 2)];
 
 
-   static ftmap_t input_fm_buffer[8][255 / 15 + (2 * (5 - 1) / 2)][255 / 15 + (2 * (5 - 1) / 2)];
-   static param_t weights_buffer[1][8][5][5];
+ static param_t weight_buffer[1][32][5][5];
 
 
 
 
 
-   load_buffer_tile_c3(input_fm_buffer, input_ftmap, weights_buffer, conv3_weights, tx0, ty0, tn0);
 
 
-   NOUT: for (int nout = 0; nout < 1; nout++) {
+ TILE_OUT: for (int out = 0; out < 1; out += 1) {
+ TILE_ROW: for (int h = 0; h < 255; h += 5) {
+ TILE_IN: for (int in = 0; in < 32; in += 32) {
 
+  load_input_buffer_c3(input_fm_buffer, input_ftmap, in, h);
+  load_weight_buffer_c3(weight_buffer, conv3_weights, out, in);
 
-    TY: for (int ty = 0; ty < 255 / 15; ty++) {
-    TX: for (int tx = 0; tx < 255 / 15; tx++) {
-#pragma HLS pipeline off
+   OUT: for (int o = 0; o < 1; o++) {
+   IN: for (int i = 0; i < 32; i++) {
 
+    ROW: for (int r = 0; r < 5; r++) {
+    COL: for (int c = 0; c < 255; c++) {
 
- KY: for (int ky = 0; ky < 5; ky++) {
-     KX: for (int kx = 0; kx < 5; kx++) {
+     KR: for (int kr = 0; kr < 5; kr++) {
+     KC: for (int kc = 0; kc < 5; kc++) {
 
+#pragma HLS PIPELINE II=3
 
-      int by = ty + ky;
-      int bx = tx + kx;
+ int rtarget = r + kr;
+      int ctarget = c + kc;
 
-
-      NIN: for (int nin = 0; nin < 8; nin++) {
-#pragma HLS UNROLL factor=8
- output_fm_buffer[nout][ty][tx] += conv3_weights[nout][tn0 + nin][ky][kx] * input_fm_buffer[nin][by][bx];
-      }
+      output_fm_buffer[o][r][c] += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][rtarget][ctarget];
      }}
-
     }}
+   }}
 
-   }
+   export_output_buffer_c3(output_fm_buffer, output_ftmap, conv3_biases, out, h);
   }
-
-
-  export_buffer_tile_c3(output_fm_buffer, output_ftmap, tx0, ty0, conv3_biases);
  }}
 }
-# 94 "src/conv3.cpp"
-void load_buffer_tile_c3(
- ftmap_t input_fm_buffer[8][255 / 15 + (2 * (5 - 1) / 2)][255 / 15 + (2 * (5 - 1) / 2)],
- ftmap_t input_fm[32][255][255],
- param_t weights_buffer[1][8][5][5],
- param_t conv3_weights[1][32][5][5],
- int tx0,
- int ty0,
- int tn0
-) {
 
- memset(input_fm_buffer, 0, 8 * (255 / 15 + (2 * (5 - 1) / 2)) * (255 / 15 + (2 * (5 - 1) / 2)) * sizeof(ftmap_t));
+void clear_buffer_c3(ftmap_t output_fm_buffer[1][5][255]) {
+ CLEAR: for (int o = 0; o < 1; o++) {
+ BH: for (int h = 0; h < 5; h++) {
+#pragma HLS UNROLL factor=3
+ BW: for (int w = 0; w < 255; w++) {
 
- VITIS_LOOP_106_1: for (int nin = 0; nin < 8; nin++) {
-  VITIS_LOOP_107_2: for (int by = 0; by < 255 / 15 + (2 * (5 - 1) / 2); by++) {
-   VITIS_LOOP_108_3: for (int bx = 0; bx < 255 / 15 + (2 * (5 - 1) / 2); bx++) {
-
-
-    int xClamped = clamp(tx0 - (5 - 1) / 2 + bx, 0, 255 - 1);
-    int yClamped = clamp(ty0 - (5 - 1) / 2 + by, 0, 255 - 1);
-
-
-    input_fm_buffer[nin][by][bx] = input_fm[tn0 + nin][yClamped][xClamped];
-   }
-  }
- }
-
- VITIS_LOOP_120_4: for (int nout = 0; nout < 1; nout++) {
-  VITIS_LOOP_121_5: for (int nin = 0; nin < 8; nin++) {
-   VITIS_LOOP_122_6: for (int ky = 0; ky < 5; ky++) {
-    VITIS_LOOP_123_7: for (int kx = 0; kx < 5; kx++) {
-     weights_buffer[nout][nin][ky][kx] = conv3_weights[nout][tn0 + nin][ky][kx];
-    }
-   }
-  }
- }
+  output_fm_buffer[o][h][w] = 0;
+ }}}
 }
 
-void export_buffer_tile_c3(
- ftmap_t output_fm_buffer[1][255 / 15][255 / 15],
- ftmap_t output_ftmap[1][255][255],
- int tx0,
- int ty0,
- param_t conv3_biases[1]
+
+void load_input_buffer_c3(
+ ftmap_t input_fm_buffer[32][5 + (2 * (5 - 1) / 2)][255 + (2 * (5 - 1) / 2)],
+ ftmap_t input_ftmap[32][255][255],
+ int in,
+ int h
 ) {
- VITIS_LOOP_138_1: for (int nout = 0; nout < 1; nout++) {
-  VITIS_LOOP_139_2: for (int ty = 0; ty < 255 / 15; ty++) {
-#pragma HLS pipeline off
- VITIS_LOOP_141_3: for (int tx = 0; tx < 255 / 15; tx++) {
+ LOAD_INPUT: for (int bin = 0; bin < 32; bin++) {
+ BH: for (int bh = 0; bh < 5 + (2 * (5 - 1) / 2); bh++) {
+#pragma HLS PIPELINE OFF
 
-    output_ftmap[nout][ty0 + ty][tx0 + tx] += output_fm_buffer[nout][ty][tx] + conv3_biases[nout];
+ int hclamp = clamp(h + bh - (5 - 1) / 2, 0, 255 - 1);
 
+  ftmap_t left = input_ftmap[bin + in][hclamp][0];
+  ftmap_t right = input_ftmap[bin + in][hclamp][255 - 1];
+
+
+  PAD: for (int p = 0; p < (5 - 1) / 2; p++) {
+
+   input_fm_buffer[bin][bh][p] = left;
+   input_fm_buffer[bin][bh][(5 - 1) / 2 + 255 + p] = right;
+  }
+
+
+  memcpy(&input_fm_buffer[bin][bh][(5 - 1) / 2], &input_ftmap[in + bin][hclamp], 255 * sizeof(ftmap_t));
+ }}
+
+
+
+}
+
+void load_weight_buffer_c3(
+ param_t weight_buffer[1][32][5][5],
+ param_t conv3_weights[1][32][5][5],
+ int out,
+ int in
+) {
+ LOAD_WEIGHTS: for (int bout = 0; bout < 1; bout++) {
+ IN: for (int bin = 0; bin < 32; bin++) {
+ K: for (int k = 0; k < 5; k++) {
+
+  memcpy(&weight_buffer[bout][bin][k], &conv3_weights[bout + out][bin + in][k], 5 * sizeof(param_t));
+
+ }}}
+
+
+}
+
+void export_output_buffer_c3(
+ ftmap_t output_fm_buffer[1][5][255],
+ ftmap_t output_ftmap[1][255][255],
+ param_t biases[1],
+ int out,
+ int h
+) {
+
+ EXPORT: for (int bout = 0; bout < 1; bout++) {
+ BH: for (int bh = 0; bh < 5; bh++) {
+#pragma HLS UNROLL factor=2
+
+ RELU: for (int bw = 0; bw < 255; bw++) {
+#pragma HLS PIPELINE II=2
+
+ output_fm_buffer[bout][bh][bw] = output_fm_buffer[bout][bh][bw] + biases[bout + out];
+
+   if (output_fm_buffer[bout][bh][bw] < 0) {
+    output_fm_buffer[bout][bh][bw] = 0;
    }
   }
- }
+
+  memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], 255 * sizeof(ftmap_t));
+ }}
 
 
- memset(output_fm_buffer, 0, 1 * 255 / 15 * 255 / 15 * sizeof(ftmap_t));
+
+
+ clear_buffer_c3(output_fm_buffer);
 }

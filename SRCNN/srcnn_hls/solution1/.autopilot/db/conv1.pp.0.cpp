@@ -5707,7 +5707,7 @@ inline __attribute__((nodebug)) bool operator!=(
 }
 # 366 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\\ap_fixed.h" 2
 # 5 "src/srcnn.h" 2
-# 43 "src/srcnn.h"
+# 44 "src/srcnn.h"
 typedef float ftmap_t;
 typedef float param_t;
 
@@ -5745,8 +5745,10 @@ void conv3(ftmap_t input_ftmap[32][255][255],
 int clamp(int value, int min, int max);
 
 
+
+
 void load_input_buffer_c1(
- ftmap_t input_fm_buffer[1][15 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)],
+ ftmap_t input_fm_buffer[1][17 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)],
  ftmap_t input_ftmap[1][255][255],
  int in,
  int h
@@ -5760,42 +5762,74 @@ void load_weight_buffer_c1(
 );
 
 void export_output_buffer_c1(
- ftmap_t output_fm_buffer[8][15][255],
+ ftmap_t output_fm_buffer[8][17][255],
  ftmap_t output_ftmap[64][255][255],
  param_t biases[64],
  int out,
  int h
 );
 
-void clear_buffer(ftmap_t output_fm_buffer[8][15][255]);
+void clear_buffer_c1(
+ ftmap_t output_fm_buffer[8][17][255]
+);
 
-void load_buffer_tile_c2(ftmap_t input_fm_buffer[8][255 / 15 + (2 * (1 - 1) / 2)][255 / 15 + (2 * (1 - 1) / 2)],
-                         ftmap_t input_fm[64][255][255],
-       param_t weights_buffer[32][8][1][1],
-       param_t conv2_weights[32][64][1][1],
-                         int tx0,
-                         int ty0,
-       int tn0);
 
-void export_buffer_tile_c2(ftmap_t output_fm_buffer[32][255 / 15][255 / 15],
-                           ftmap_t output_ftmap[32][255][255],
-                           int tx0,
-                           int ty0,
-         param_t conv2_biases[32]);
 
-void load_buffer_tile_c3(ftmap_t input_fm_buffer[8][255 / 15 + (2 * (5 - 1) / 2)][255 / 15 + (2 * (5 - 1) / 2)],
-      ftmap_t input_fm[32][255][255],
-      param_t weights_buffer[1][8][5][5],
-      param_t conv3_weights[1][32][5][5],
-      int tx0,
-      int ty0,
-      int tn0);
 
-void export_buffer_tile_c3(ftmap_t output_fm_buffer[1][255 / 15][255 / 15],
-                           ftmap_t output_ftmap[1][255][255],
-                           int tx0,
-                           int ty0,
-         param_t conv3_biases[1]);
+void load_input_buffer_c2(
+ ftmap_t input_fm_buffer[32][3 + (2 * (1 - 1) / 2)][255 + (2 * (1 - 1) / 2)],
+ ftmap_t input_ftmap[64][255][255],
+ int in,
+ int h
+);
+
+void load_weight_buffer_c2(
+ param_t weight_buffer[8][32][1][1],
+ param_t conv2_weights[32][64][1][1],
+ int out,
+ int in
+);
+
+void export_output_buffer_c2(
+ ftmap_t output_fm_buffer[8][3][255],
+ ftmap_t output_ftmap[32][255][255],
+ param_t biases[32],
+ int out,
+ int h
+);
+
+void clear_buffer_c2(
+ ftmap_t output_fm_buffer[8][3][255]
+);
+
+
+
+
+void load_input_buffer_c3(
+ ftmap_t input_fm_buffer[32][5 + (2 * (5 - 1) / 2)][255 + (2 * (5 - 1) / 2)],
+ ftmap_t input_ftmap[32][255][255],
+ int in,
+ int h
+);
+
+void load_weight_buffer_c3(
+ param_t weight_buffer[1][32][5][5],
+ param_t conv1_weights[1][32][5][5],
+ int out,
+ int in
+);
+
+void export_output_buffer_c3(
+ ftmap_t output_fm_buffer[1][5][255],
+ ftmap_t output_ftmap[1][255][255],
+ param_t biases[1],
+ int out,
+ int h
+);
+
+void clear_buffer_c3(
+ ftmap_t output_fm_buffer[1][5][255]
+);
 # 2 "src/conv1.cpp" 2
 # 1 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\iostream" 1 3
 # 37 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\iostream" 3
@@ -33517,21 +33551,21 @@ void conv1(ftmap_t input_ftmap[1][255][255],
 
 #pragma HLS PIPELINE off
 
- static ftmap_t output_fm_buffer[8][15][255] = {0};
-#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=cyclic factor=8 dim=2
+ static ftmap_t output_fm_buffer[8][17][255] = {0};
 
- static ftmap_t input_fm_buffer[1][15 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)];
-#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=cyclic factor=4 dim=2
+
+ static ftmap_t input_fm_buffer[1][17 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)];
+
 
  static param_t weight_buffer[8][1][9][9];
 
 
 
-#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=3
-#pragma HLS ARRAY_PARTITION variable=weight_buffer type=complete dim=4
+
+
 
  TILE_IN: for (int in = 0; in < 1; in += 1) {
- TILE_ROW: for (int h = 0; h < 255; h += 15) {
+ TILE_ROW: for (int h = 0; h < 255; h += 17) {
 
   load_input_buffer_c1(input_fm_buffer, input_ftmap, in, h);
 
@@ -33542,12 +33576,12 @@ void conv1(ftmap_t input_ftmap[1][255][255],
    OUT: for (int o = 0; o < 8; o++) {
    IN: for (int i = 0; i < 1; i++) {
 
-    ROW: for (int r = 0; r < 15; r++) {
+    ROW: for (int r = 0; r < 17; r++) {
     COL: for (int c = 0; c < 255; c++) {
 
      KR: for (int kr = 0; kr < 9; kr++) {
      KC: for (int kc = 0; kc < 9; kc++) {
-#pragma HLS UNROLL factor=2
+
 #pragma HLS PIPELINE II=3
 
  int rtarget = r + kr;
@@ -33555,18 +33589,21 @@ void conv1(ftmap_t input_ftmap[1][255][255],
 
       output_fm_buffer[o][r][c] += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][rtarget][ctarget];
 
+
+
      }}
     }}
    }}
+
    export_output_buffer_c1(output_fm_buffer, output_ftmap, conv1_biases, out, h);
   }
  }}
 }
 
 
-void clear_buffer(ftmap_t output_fm_buffer[8][15][255]) {
+void clear_buffer_c1(ftmap_t output_fm_buffer[8][17][255]) {
  CLEAR: for (int o = 0; o < 8; o++) {
- BH: for (int h = 0; h < 15; h++) {
+ BH: for (int h = 0; h < 17; h++) {
 #pragma HLS UNROLL factor=3
  BW: for (int w = 0; w < 255; w++) {
 
@@ -33576,13 +33613,13 @@ void clear_buffer(ftmap_t output_fm_buffer[8][15][255]) {
 
 
 void load_input_buffer_c1(
- ftmap_t input_fm_buffer[1][15 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)],
+ ftmap_t input_fm_buffer[1][17 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)],
  ftmap_t input_ftmap[1][255][255],
  int in,
  int h
 ) {
  LOAD_INPUT: for (int bin = 0; bin < 1; bin++) {
- BH: for (int bh = 0; bh < 15 + (2 * (9 - 1) / 2); bh++) {
+ BH: for (int bh = 0; bh < 17 + (2 * (9 - 1) / 2); bh++) {
 #pragma HLS PIPELINE OFF
 
  int hclamp = clamp(h + bh - (9 - 1) / 2, 0, 255 - 1);
@@ -33600,6 +33637,9 @@ void load_input_buffer_c1(
 
   memcpy(&input_fm_buffer[bin][bh][(9 - 1) / 2], &input_ftmap[in + bin][hclamp], 255 * sizeof(ftmap_t));
  }}
+
+
+
 }
 
 void load_weight_buffer_c1(
@@ -33615,10 +33655,12 @@ void load_weight_buffer_c1(
   memcpy(&weight_buffer[bout][bin][k], &conv1_weights[bout + out][bin + in][k], 9 * sizeof(param_t));
 
  }}}
+
+
 }
 
 void export_output_buffer_c1(
- ftmap_t output_fm_buffer[8][15][255],
+ ftmap_t output_fm_buffer[8][17][255],
  ftmap_t output_ftmap[64][255][255],
  param_t biases[64],
  int out,
@@ -33626,7 +33668,7 @@ void export_output_buffer_c1(
 ) {
 
  EXPORT: for (int bout = 0; bout < 8; bout++) {
- BH: for (int bh = 0; bh < 15; bh++) {
+ BH: for (int bh = 0; bh < 17; bh++) {
 #pragma HLS UNROLL factor=2
 
  RELU: for (int bw = 0; bw < 255; bw++) {
@@ -33642,5 +33684,8 @@ void export_output_buffer_c1(
   memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], 255 * sizeof(ftmap_t));
  }}
 
- clear_buffer(output_fm_buffer);
+
+
+
+ clear_buffer_c1(output_fm_buffer);
 }

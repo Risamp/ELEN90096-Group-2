@@ -1,12 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set name srcnn_mul_5ns_8ns_12_1_1
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
-}
-
-
-set name srcnn_mul_5ns_6ns_10_1_1
+set name srcnn_mul_10ns_10ns_17_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
 }
@@ -14,6 +8,11 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler srcnn_conv3_input_fm_buffer_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler srcnn_conv3_weight_buffer_0_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
@@ -32,7 +31,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 221 \
+    id 104 \
     name i3 \
     type other \
     dir I \
@@ -47,7 +46,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 222 \
+    id 105 \
     name input_ftmap \
     type other \
     dir I \
@@ -62,7 +61,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 223 \
+    id 106 \
     name w3 \
     type other \
     dir I \
@@ -77,7 +76,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 224 \
+    id 107 \
     name conv3_weights \
     type other \
     dir I \
@@ -92,7 +91,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 225 \
+    id 108 \
     name conv3_biases_0_0_val \
     type other \
     dir I \
@@ -107,10 +106,10 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 226 \
+    id 109 \
     name o \
     type other \
-    dir IO \
+    dir O \
     reset_level 1 \
     sync_rst true \
     corename dc_o \
@@ -122,7 +121,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 227 \
+    id 110 \
     name output_ftmap \
     type other \
     dir I \

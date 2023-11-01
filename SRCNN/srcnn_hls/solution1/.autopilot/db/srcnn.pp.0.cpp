@@ -5707,7 +5707,7 @@ inline __attribute__((nodebug)) bool operator!=(
 }
 # 366 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\\ap_fixed.h" 2
 # 5 "src/srcnn.h" 2
-# 43 "src/srcnn.h"
+# 44 "src/srcnn.h"
 typedef float ftmap_t;
 typedef float param_t;
 
@@ -5745,8 +5745,10 @@ void conv3(ftmap_t input_ftmap[32][255][255],
 int clamp(int value, int min, int max);
 
 
+
+
 void load_input_buffer_c1(
- ftmap_t input_fm_buffer[1][15 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)],
+ ftmap_t input_fm_buffer[1][17 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)],
  ftmap_t input_ftmap[1][255][255],
  int in,
  int h
@@ -5760,42 +5762,74 @@ void load_weight_buffer_c1(
 );
 
 void export_output_buffer_c1(
- ftmap_t output_fm_buffer[8][15][255],
+ ftmap_t output_fm_buffer[8][17][255],
  ftmap_t output_ftmap[64][255][255],
  param_t biases[64],
  int out,
  int h
 );
 
-void clear_buffer(ftmap_t output_fm_buffer[8][15][255]);
+void clear_buffer_c1(
+ ftmap_t output_fm_buffer[8][17][255]
+);
 
-void load_buffer_tile_c2(ftmap_t input_fm_buffer[8][255 / 15 + (2 * (1 - 1) / 2)][255 / 15 + (2 * (1 - 1) / 2)],
-                         ftmap_t input_fm[64][255][255],
-       param_t weights_buffer[32][8][1][1],
-       param_t conv2_weights[32][64][1][1],
-                         int tx0,
-                         int ty0,
-       int tn0);
 
-void export_buffer_tile_c2(ftmap_t output_fm_buffer[32][255 / 15][255 / 15],
-                           ftmap_t output_ftmap[32][255][255],
-                           int tx0,
-                           int ty0,
-         param_t conv2_biases[32]);
 
-void load_buffer_tile_c3(ftmap_t input_fm_buffer[8][255 / 15 + (2 * (5 - 1) / 2)][255 / 15 + (2 * (5 - 1) / 2)],
-      ftmap_t input_fm[32][255][255],
-      param_t weights_buffer[1][8][5][5],
-      param_t conv3_weights[1][32][5][5],
-      int tx0,
-      int ty0,
-      int tn0);
 
-void export_buffer_tile_c3(ftmap_t output_fm_buffer[1][255 / 15][255 / 15],
-                           ftmap_t output_ftmap[1][255][255],
-                           int tx0,
-                           int ty0,
-         param_t conv3_biases[1]);
+void load_input_buffer_c2(
+ ftmap_t input_fm_buffer[32][3 + (2 * (1 - 1) / 2)][255 + (2 * (1 - 1) / 2)],
+ ftmap_t input_ftmap[64][255][255],
+ int in,
+ int h
+);
+
+void load_weight_buffer_c2(
+ param_t weight_buffer[8][32][1][1],
+ param_t conv2_weights[32][64][1][1],
+ int out,
+ int in
+);
+
+void export_output_buffer_c2(
+ ftmap_t output_fm_buffer[8][3][255],
+ ftmap_t output_ftmap[32][255][255],
+ param_t biases[32],
+ int out,
+ int h
+);
+
+void clear_buffer_c2(
+ ftmap_t output_fm_buffer[8][3][255]
+);
+
+
+
+
+void load_input_buffer_c3(
+ ftmap_t input_fm_buffer[32][5 + (2 * (5 - 1) / 2)][255 + (2 * (5 - 1) / 2)],
+ ftmap_t input_ftmap[32][255][255],
+ int in,
+ int h
+);
+
+void load_weight_buffer_c3(
+ param_t weight_buffer[1][32][5][5],
+ param_t conv1_weights[1][32][5][5],
+ int out,
+ int in
+);
+
+void export_output_buffer_c3(
+ ftmap_t output_fm_buffer[1][5][255],
+ ftmap_t output_ftmap[1][255][255],
+ param_t biases[1],
+ int out,
+ int h
+);
+
+void clear_buffer_c3(
+ ftmap_t output_fm_buffer[1][5][255]
+);
 # 2 "src/srcnn.cpp" 2
 # 1 "src/util.h" 1
 
@@ -31560,6 +31594,8 @@ namespace std
 }
 # 5 "src/srcnn.cpp" 2
 
+using namespace std;
+
 __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][255],
            param_t conv1_weights[64][1][9][9],
            param_t conv1_biases[64],
@@ -31573,11 +31609,11 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][2
 {
 #line 29 "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
-# 16 "src/srcnn.cpp"
+# 18 "src/srcnn.cpp"
 
 #line 7 "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
-# 16 "src/srcnn.cpp"
+# 18 "src/srcnn.cpp"
 
 
 
@@ -31592,26 +31628,14 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][2
 #pragma HLS INTERFACE m_axi port=conv3_weights offset=slave depth=512 bundle=w3 max_read_burst_length=256 max_write_burst_length=256 max_widen_bitwidth=512
 #pragma HLS INTERFACE m_axi port=output_ftmap offset=slave depth=512 bundle=o max_read_burst_length=256 max_write_burst_length=256 max_widen_bitwidth=512
 #pragma HLS INTERFACE s_axilite port=return
-
-
-
-
-
-
-
-
- memset(conv2_output_ftmap, 0, 32 * 255 * 255 * sizeof(ftmap_t));
- memset(output_ftmap, 0, 1 * 255 * 255 * sizeof(ftmap_t));
-
-
-    conv1(input_ftmap, conv1_weights, conv1_biases, conv1_output_ftmap);
+# 44 "src/srcnn.cpp"
+ conv1(input_ftmap, conv1_weights, conv1_biases, conv1_output_ftmap);
 
 
     conv2(conv1_output_ftmap, conv2_weights, conv2_biases, conv2_output_ftmap);
 
 
     conv3(conv2_output_ftmap, conv3_weights, conv3_biases, output_ftmap);
-
 }
 
 
