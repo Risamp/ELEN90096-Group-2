@@ -8,7 +8,7 @@ using namespace std;
 
 input_ft input_ftmap[N0][H][W];    // low resolution input image
 output_conv1 output_ftmap[N1][H][W];   // output feature map
-test golden_ftmap[N1][H][W];   // golden reference output feature map
+output_conv3 golden_ftmap[N1][H][W];   // golden reference output feature map
 
 // parameter dimensions
 //   weights: output features x input features x kernel height x kernel width

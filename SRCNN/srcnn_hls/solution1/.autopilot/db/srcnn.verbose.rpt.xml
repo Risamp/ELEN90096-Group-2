@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn'" level="0">
-<item name = "Date">Thu Nov  2 02:24:37 2023
+<item name = "Date">Thu Nov  2 03:05:41 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -55,7 +55,7 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 256, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">133, 6, 4927, 8690, 0</column>
+<column name="Instance">133, 6, 4935, 8688, 0</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 553, -</column>
 <column name="Register">-, -, 917, -, -</column>
@@ -68,9 +68,9 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="control_s_axi_U">control_s_axi, 0, 0, 736, 1320, 0</column>
-<column name="grp_conv1_fu_283">conv1, 40, 1, 1038, 2306, 0</column>
-<column name="grp_conv2_fu_297">conv2, 60, 2, 1171, 1993, 0</column>
-<column name="grp_conv3_fu_311">conv3, 29, 3, 1152, 2377, 0</column>
+<column name="grp_conv1_fu_283">conv1, 40, 1, 1042, 2306, 0</column>
+<column name="grp_conv2_fu_297">conv2, 60, 2, 1175, 1993, 0</column>
+<column name="grp_conv3_fu_311">conv3, 29, 3, 1152, 2375, 0</column>
 <column name="gmem_m_axi_U">gmem_m_axi, 4, 0, 830, 694, 0</column>
 </table>
 </item>

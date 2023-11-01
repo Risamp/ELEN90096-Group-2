@@ -12,17 +12,17 @@ void load_input_image(std::string  fname,
 
 // load image from uint8_t file and normalize to interval [0, 1]
 void load_image(std::string  fname,
-                test     *image,
+                output_conv3     *image,
                 int          count);
 
 // load feature map from single precision FLP file
 void load_ftmap(std::string  fname,
-                test     *ftmap,
+                output_conv3     *ftmap,
                 int          count);
 
 // load conv layer parameters from single precision FLP file
 void load_param(std::string  fname,
-                test     *param,
+                output_conv3     *param,
                 int          count);
 
 // load conv1 layer weights from single precision FLP file
@@ -58,37 +58,37 @@ void load_conv3_b(std::string  fname,
 
 // load test from single precision FLP file
 void load_test(std::string  fname,
-                test     *param,
+                output_conv3     *param,
                 int          count);
 
 //generic function
 void load_param_gen(std::string  fname,
-                test     *param,
+                output_conv3     *param,
                 int          count);
 
 // returns MSE between two images
-double calculate_mse(test *img1,
-                     test *img2,
+double calculate_mse(output_conv3 *img1,
+                     output_conv3 *img2,
                      int      count);
 
 // returns MSE between two images
-double calculate_mse_conv1(test *img1,
+double calculate_mse_conv1(output_conv3 *img1,
                      output_conv1 *img2,
                      int      count);
 
 // return PSNR between two images
-double calculate_PSNR(test *img1,
-					  test *img2,
+double calculate_PSNR(output_conv3 *img1,
+					  output_conv3 *img2,
 					  int      count);
 
 // return PSNR between two images (one input)
-double calculate_PSNR_input(test *img1,
+double calculate_PSNR_input(output_conv3 *img1,
 					  input_ft *img2,
 					  int      count);
 
 // write ftmap image to output file
 void write_bin(std::string    fname,
-			   test       *ftmap,
+			   output_conv3       *ftmap,
 			   int            count);
 
 #endif

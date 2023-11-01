@@ -28,7 +28,7 @@
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="40"/>
         </hw>
       </arg>
-      <arg id="3" access_type="rw" src_name="conv1_output_ftmap" src_type="ap_fixed&lt;32, 1, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="32" src_size_or_depth="4161600">
+      <arg id="3" access_type="rw" src_name="conv1_output_ftmap" src_type="ap_fixed&lt;32, 3, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="32" src_size_or_depth="4161600">
         <hw hw_usage="data" hw_interface="MAXI" hw_name="gmem" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0"/>
           <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32"/>
@@ -55,7 +55,7 @@
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="76"/>
         </hw>
       </arg>
-      <arg id="6" access_type="rw" src_name="conv2_output_ftmap" src_type="ap_fixed&lt;32, 1, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="32" src_size_or_depth="2080800">
+      <arg id="6" access_type="rw" src_name="conv2_output_ftmap" src_type="ap_fixed&lt;32, 3, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="32" src_size_or_depth="2080800">
         <hw hw_usage="data" hw_interface="MAXI" hw_name="gmem" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0"/>
           <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32"/>

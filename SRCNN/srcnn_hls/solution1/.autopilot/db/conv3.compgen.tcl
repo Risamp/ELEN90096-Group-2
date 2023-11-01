@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set name srcnn_mul_32s_20s_52_1_1
+set name srcnn_mul_32s_20s_51_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
 }

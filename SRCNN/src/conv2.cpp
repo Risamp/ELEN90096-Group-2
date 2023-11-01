@@ -10,7 +10,7 @@ using namespace std;
 void conv2(output_conv1 input_ftmap[N1][H][W],
 		   conv2_w conv2_weights[N2][N1][F2][F2],
            conv2_b conv2_biases[N2],
-           output_conv3 output_ftmap[N2][H][W])
+           output_conv2 output_ftmap[N2][H][W])
 {
 
 	/*

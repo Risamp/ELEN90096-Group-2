@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698852277997">
-  <ports id="1" name="gmem" type="PortType" coreId="959984160" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698854742462">
+  <ports id="1" name="gmem" type="PortType" coreId="1852142702" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataInputObjs>getelementptr</dataInputObjs>
@@ -16,34 +16,34 @@
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="input_ftmap" type="PortType" coreId="807419168" bitwidth="64">
+  <ports id="2" name="input_ftmap" type="PortType" coreId="576532529" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="conv1_weights" type="PortType" coreId="1684367475" bitwidth="64">
+  <ports id="3" name="conv1_weights" type="PortType" coreId="1953656656" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="conv1_biases" type="PortType" originalName="conv1_biases" coreId="1701999221" bitwidth="64">
+  <ports id="4" name="conv1_biases" type="PortType" originalName="conv1_biases" coreId="1702127986" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="conv1_output_ftmap" type="PortType" coreId="1913273933" bitwidth="64">
+  <ports id="5" name="conv1_output_ftmap" type="PortType" coreId="1785997088" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="6" name="conv2_weights" type="PortType" coreId="1953845052" bitwidth="64">
+  <ports id="6" name="conv2_weights" type="PortType" coreId="808334898" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="7" name="conv2_biases" type="PortType" originalName="conv2_biases" coreId="1852142702" bitwidth="64">
+  <ports id="7" name="conv2_biases" type="PortType" originalName="conv2_biases" coreId="0" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="8" name="conv2_output_ftmap" type="PortType" coreId="1937011311" bitwidth="64">
+  <ports id="8" name="conv2_output_ftmap" type="PortType" coreId="4294967295" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="9" name="conv3_weights" type="PortType" coreId="1668184403" bitwidth="64">
+  <ports id="9" name="conv3_weights" type="PortType" coreId="1919251561" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="10" name="conv3_biases" type="PortType" originalName="conv3_biases" coreId="0" bitwidth="64">
+  <ports id="10" name="conv3_biases" type="PortType" originalName="conv3_biases" coreId="1668184403" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="11" name="output_ftmap" type="PortType" coreId="1867543669" bitwidth="64">
+  <ports id="11" name="output_ftmap" type="PortType" coreId="1853444924" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="128" source_obj="//@ports.10" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -497,12 +497,12 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="empty_70_write_ln36" lineNumber="36" fileName="src/srcnn.cpp" fileDirectory="../." coreId="2579227664" contextFuncName="srcnn" opcode="store" nodeLabel="11.0" m_display="0" m_delay="0.42" m_topoIndex="42" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="empty_70_write_ln36" lineNumber="36" fileName="src/srcnn.cpp" fileDirectory="../." coreId="0" contextFuncName="srcnn" opcode="store" nodeLabel="11.0" m_display="0" m_delay="0.42" m_topoIndex="42" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="36" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="br_ln36" lineNumber="36" fileName="src/srcnn.cpp" fileDirectory="../." coreId="2585200080" contextFuncName="srcnn" opcode="br" nodeLabel="15.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="br_ln36" lineNumber="36" fileName="src/srcnn.cpp" fileDirectory="../." coreId="0" contextFuncName="srcnn" opcode="br" nodeLabel="15.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="36" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <controlInputObjs>memset.loop</controlInputObjs>
     </node_objs>
@@ -517,7 +517,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>split</controlOutputObjs>
     <controlOutputObjs>memset.loop.split</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="p_load14" coreId="2585198592" bitwidth="16" opcode="load" nodeLabel="16.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="p_load14" coreId="0" bitwidth="16" opcode="load" nodeLabel="16.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -532,7 +532,7 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="br_ln0" coreId="2585203456" opcode="br" nodeLabel="16.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="br_ln0" coreId="0" opcode="br" nodeLabel="16.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>memset.loop.split</controlInputObjs>
       <controlInputObjs>split</controlInputObjs>
@@ -551,7 +551,7 @@
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="br_ln0" coreId="2585320568" opcode="br" nodeLabel="17.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="br_ln0" coreId="0" opcode="br" nodeLabel="17.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
       <controlInputObjs>memset.loop</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="src/srcnn.cpp">
@@ -565,7 +565,7 @@
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="39" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="_ln39" lineNumber="39" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="grp_conv1_fu_283" coreId="4294967295" contextFuncName="srcnn" opcode="call" nodeLabel="23.0" nodeLatency="1" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="_ln39" lineNumber="39" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="grp_conv1_fu_283" coreId="0" contextFuncName="srcnn" opcode="call" nodeLabel="23.0" nodeLatency="1" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="39" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
@@ -575,7 +575,7 @@
       <dataOutputObjs>gmem</dataOutputObjs>
       <constName>conv1</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="_ln42" lineNumber="42" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="grp_conv2_fu_297" coreId="2585330424" contextFuncName="srcnn" opcode="call" nodeLabel="25.0" nodeLatency="1" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="_ln42" lineNumber="42" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="grp_conv2_fu_297" coreId="0" contextFuncName="srcnn" opcode="call" nodeLabel="25.0" nodeLatency="1" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="42" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
@@ -591,12 +591,12 @@
       <dataOutputObjs>sext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="112" name="p_cast_cast" lineNumber="8" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="p_cast_cast_fu_469_p1" coreId="2585336312" contextFuncName="srcnn" bitwidth="64" opcode="sext" nodeLabel="16.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="112" name="p_cast_cast" lineNumber="8" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="p_cast_cast_fu_469_p1" coreId="0" contextFuncName="srcnn" bitwidth="64" opcode="sext" nodeLabel="16.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="8" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="113" name="gmem_addr_3" lineNumber="8" fileName="src/srcnn.cpp" fileDirectory="../." coreId="2585202944" contextFuncName="srcnn" bitwidth="32" opcode="getelementptr" nodeLabel="16.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="113" name="gmem_addr_3" lineNumber="8" fileName="src/srcnn.cpp" fileDirectory="../." coreId="0" contextFuncName="srcnn" bitwidth="32" opcode="getelementptr" nodeLabel="16.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="8" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>sext</dataInputObjs>
@@ -625,7 +625,7 @@
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="p_cast2" lineNumber="8" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="p_cast2_fu_489_p1" coreId="2585211696" contextFuncName="srcnn" bitwidth="32" opcode="zext" nodeLabel="36.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="p_cast2" lineNumber="8" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="p_cast2_fu_489_p1" coreId="0" contextFuncName="srcnn" bitwidth="32" opcode="zext" nodeLabel="36.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="8" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>lshr</dataOutputObjs>
@@ -636,12 +636,12 @@
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="empty_77" lineNumber="8" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="empty_77_fu_498_p1" coreId="2585205600" contextFuncName="srcnn" bitwidth="15" opcode="trunc" nodeLabel="36.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="empty_77" lineNumber="8" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="empty_77_fu_498_p1" coreId="0" contextFuncName="srcnn" bitwidth="15" opcode="trunc" nodeLabel="36.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="8" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>lshr</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="_ln45" lineNumber="45" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="grp_conv3_fu_311" coreId="4294967295" contextFuncName="srcnn" opcode="call" nodeLabel="36.0" nodeLatency="1" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="_ln45" lineNumber="45" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="grp_conv3_fu_311" coreId="0" contextFuncName="srcnn" opcode="call" nodeLabel="36.0" nodeLatency="1" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="45" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>

@@ -101,7 +101,7 @@ void load_buffer_tile_c3(
 	int ty0
 ) {
 	// clear buffer
-	memset(input_fm_buffer, 0, N2 * (TH + (2 * P3)) * (TW + (2 * P3)) * sizeof(test));
+	memset(input_fm_buffer, 0, N2 * (TH + (2 * P3)) * (TW + (2 * P3)) * sizeof(output_conv2));
 
 	for (int nin = 0; nin < N2; nin++) { // input layer
 		for (int by = 0; by < TH + (2 * P3); by++) { // buffer space y
@@ -135,5 +135,5 @@ void export_buffer_tile_c3(
 	}
 
 	// clear buffer
-	memset(output_fm_buffer, 0, N3 * TH * TW * sizeof(test));
+	memset(output_fm_buffer, 0, N3 * TH * TW * sizeof(output_conv3));
 }

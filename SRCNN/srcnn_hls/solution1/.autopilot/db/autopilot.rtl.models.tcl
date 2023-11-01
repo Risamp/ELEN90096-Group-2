@@ -2,7 +2,7 @@ set SynModuleInfo {
   {SRCNAME conv1 MODELNAME conv1 RTLNAME srcnn_conv1
     SUBMODULES {
       {MODELNAME srcnn_mul_5ns_6ns_10_1_1 RTLNAME srcnn_mul_5ns_6ns_10_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_mac_muladd_24s_12s_34ns_34_4_1 RTLNAME srcnn_mac_muladd_24s_12s_34ns_34_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_mac_muladd_24s_12s_36ns_36_4_1 RTLNAME srcnn_mac_muladd_24s_12s_36ns_36_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_conv1_input_fm_buffer_2_0_RAM_AUTO_1R1W RTLNAME srcnn_conv1_input_fm_buffer_2_0_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W RTLNAME srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
     }
@@ -15,7 +15,7 @@ set SynModuleInfo {
   }
   {SRCNAME conv3 MODELNAME conv3 RTLNAME srcnn_conv3
     SUBMODULES {
-      {MODELNAME srcnn_mul_32s_20s_52_1_1 RTLNAME srcnn_mul_32s_20s_52_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_mul_32s_20s_51_1_1 RTLNAME srcnn_mul_32s_20s_51_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_mul_10ns_6ns_14_1_1 RTLNAME srcnn_mul_10ns_6ns_14_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1 RTLNAME srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_conv3_input_fm_buffer_RAM_AUTO_1R1W RTLNAME srcnn_conv3_input_fm_buffer_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}

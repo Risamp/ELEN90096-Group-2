@@ -50,7 +50,7 @@ void srcnn(input_ft input_ftmap[N0][H][W],
 		   output_conv2 conv2_output_ftmap[N2][H][W],
 		   conv3_w conv3_weights[N3][N2][F3][F3],
 		   conv3_b conv3_biases[N3],
-		   test output_ftmap[N3][H][W]);
+		   output_conv3 output_ftmap[N3][H][W]);
 
 // implements first convolutional layer of SRCNN
 void conv1(input_ft input_ftmap[N0][H][W],
@@ -68,7 +68,7 @@ void conv2(output_conv1 input_ftmap[N1][H][W],
 void conv3(output_conv2 input_ftmap[N2][H][W],
 		   conv3_w conv3_weights[N3][N2][F3][F3],
 		   conv3_b conv3_biases[N3],
-		   test output_ftmap[N3][H][W]);
+		   output_conv3 output_ftmap[N3][H][W]);
 
 //clamp for extending edge values
 int clamp(int value, int min, int max);
@@ -102,8 +102,8 @@ void load_buffer_tile_c3(output_conv2 input_fm_buffer[N2][TH + (2 * P3)][TW + (2
                          int tx0,
                          int ty0);
 
-void export_buffer_tile_c3(test output_fm_buffer[N3][TH][TW],
-						   test output_ftmap[N3][H][W],
+void export_buffer_tile_c3(output_conv3 output_fm_buffer[N3][TH][TW],
+						   output_conv3 output_ftmap[N3][H][W],
                            int tx0,
                            int ty0);
 

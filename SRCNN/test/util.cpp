@@ -26,7 +26,7 @@ void load_input_image(std::string  fname,
 }
 // load image from uint8_t file and normalize to interval [0, 1]
 void load_image(std::string  fname,
-                test     *image,
+                output_conv3     *image,
                 int          count)
 {
     uint8_t p;
@@ -39,7 +39,7 @@ void load_image(std::string  fname,
     for (int i = 0; i < count; i++) {
         ifs.read((char *) &p, sizeof(uint8_t));
         p_flp = ((float) p) / 255;
-        image[i] = (test) p_flp;
+        image[i] = (output_conv3) p_flp;
     }
 
     ifs.close();
@@ -47,7 +47,7 @@ void load_image(std::string  fname,
 
 // load feature map from single precision FLP file
 void load_ftmap(std::string  fname,
-                test     *ftmap,
+                output_conv3     *ftmap,
                 int          count)
 {
     float f;
@@ -58,7 +58,7 @@ void load_ftmap(std::string  fname,
 
     for (int i = 0; i < count; i++) {
         ifs.read((char *) &f, sizeof(float));
-        ftmap[i] = (test) f;
+        ftmap[i] = (output_conv3) f;
     }
 
     ifs.close();
@@ -200,7 +200,7 @@ void load_conv3_b(std::string  fname,
 
 // load test type from flp file
 void load_test(std::string  fname,
-                test     *param,
+		output_conv3     *param,
                 int          count)
 {
     float p;
@@ -211,7 +211,7 @@ void load_test(std::string  fname,
 
     for (int i = 0; i < count; i++) {
         ifs.read((char *) &p, sizeof(float));
-        param[i] = (test) p;
+        param[i] = (output_conv3) p;
     }
 
     ifs.close();
@@ -220,7 +220,7 @@ void load_test(std::string  fname,
 
 // load gen fixed point layer parameters from flp file
 void load_param_gen(std::string  fname,
-                test     *param,
+		output_conv3     *param,
                 int          count)
 {
     float p;
@@ -231,15 +231,15 @@ void load_param_gen(std::string  fname,
 
     for (int i = 0; i < count; i++) {
         ifs.read((char *) &p, sizeof(float));
-        param[i] = (test) p;
+        param[i] = (output_conv3) p;
     }
 
     ifs.close();
 }
 
 // returns MSE between two images
-double calculate_mse(test *img1,
-                     test *img2,
+double calculate_mse(output_conv3 *img1,
+		output_conv3 *img2,
                      int      count)
 {
     double mse = 0.0;
@@ -253,7 +253,7 @@ double calculate_mse(test *img1,
 }
 
 // returns MSE between two images
-double calculate_mse_conv1(test *img1,
+double calculate_mse_conv1(output_conv3 *img1,
                      output_conv1 *img2,
                      int      count)
 {
@@ -268,8 +268,8 @@ double calculate_mse_conv1(test *img1,
 }
 
 // return PSNR between two images
-double calculate_PSNR(test *img1,
-					  test *img2,
+double calculate_PSNR(output_conv3 *img1,
+		output_conv3 *img2,
 					  int      count)
 {
 	double rmse = 0.0;
@@ -283,7 +283,7 @@ double calculate_PSNR(test *img1,
 }
 
 // return PSNR between two images (one input)
-double calculate_PSNR_input(test *img1,
+double calculate_PSNR_input(output_conv3 *img1,
 					  input_ft *img2,
 					  int      count)
 {
@@ -299,7 +299,7 @@ double calculate_PSNR_input(test *img1,
 
 // write ftmap image to output file
 void write_bin(std::string    fname,
-			   test       *ftmap,
+			   output_conv3       *ftmap,
 			   int            count)
 {
     std::ofstream outputFile(fname, std::ios::binary);

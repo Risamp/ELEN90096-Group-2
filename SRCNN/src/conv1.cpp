@@ -126,5 +126,5 @@ void export_buffer_tile_c1(
 	}
 
 	// clear buffer
-	memset(output_fm_buffer, 0, N1 * TH * TW * sizeof(test));
+	memset(output_fm_buffer, 0, N1 * TH * TW * sizeof(output_conv1));
 }

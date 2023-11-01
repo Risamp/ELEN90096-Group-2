@@ -7,8 +7,8 @@
 using namespace std;
 
 input_ft img_LR[N0][H][W];  // low resolution input image
-test img_HR[N0][H][W];  // high-resolution output image
-test img_GR[N0][H][W];  // high-resolution golden reference
+output_conv3 img_HR[N0][H][W];  // high-resolution output image
+output_conv3 img_GR[N0][H][W];  // high-resolution golden reference
 output_conv1 layer_1_output[N1][H][W] = {0};
 output_conv2 layer_2_output[N2][H][W] = {0};
 

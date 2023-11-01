@@ -9,8 +9,8 @@
 using namespace std;
 
 input_ft img_LR_set14[N0][H][W];  // low resolution input image
-test img_HR_set14[N0][H][W];  // high-resolution output image
-test img_GT_set14[N0][H][W];
+output_conv3 img_HR_set14[N0][H][W];  // high-resolution output image
+output_conv3 img_GT_set14[N0][H][W];
 output_conv1 layer_1_output_set14[N1][H][W] = {0};
 output_conv2 layer_2_output_set14[N2][H][W] = {0};
 
@@ -123,7 +123,7 @@ int tb_set14()
 					  conv3_biases_set14,
 					  img_HR_set14);
 
-				write_bin("output_" + GT_filename, (test*) img_HR_set14, H * W);
+				write_bin("output_" + GT_filename, (output_conv3*) img_HR_set14, H * W);
 
                 std::cout << std::setw(15) << std::left << filename.substr(0,(filename).find("_")) 
                     << std::setw(20) << std::left <<  calculate_PSNR(&img_GT_set14[0][0][0], &img_HR_set14[0][0][0], H*W)
