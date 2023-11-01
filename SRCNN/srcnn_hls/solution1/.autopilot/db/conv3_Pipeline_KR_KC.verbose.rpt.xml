@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3_Pipeline_KR_KC'" level="0">
-<item name = "Date">Thu Nov  2 02:40:19 2023
+<item name = "Date">Thu Nov  2 03:20:26 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -66,7 +66,7 @@
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
-<column name="ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1_U76">ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1, (i0 + i1) * i2 + i3</column>
+<column name="ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1_U121">ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1, (i0 + i1) * i2 + i3</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
@@ -100,12 +100,12 @@
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter0">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
-<column name="ap_sig_allocacmp_indvar_flatten_load">9, 2, 5, 10</column>
+<column name="ap_sig_allocacmp_indvar_flatten20_load">9, 2, 5, 10</column>
 <column name="ap_sig_allocacmp_kc_load">9, 2, 3, 6</column>
 <column name="ap_sig_allocacmp_kr_load">9, 2, 3, 6</column>
 <column name="ap_sig_allocacmp_p_load">9, 2, 32, 64</column>
 <column name="empty_fu_68">9, 2, 32, 64</column>
-<column name="indvar_flatten_fu_80">9, 2, 5, 10</column>
+<column name="indvar_flatten20_fu_80">9, 2, 5, 10</column>
 <column name="kc_fu_72">9, 2, 3, 6</column>
 <column name="kr_fu_76">9, 2, 3, 6</column>
 </table>
@@ -122,7 +122,7 @@
 <column name="ap_loop_exit_ready_pp0_iter2_reg">1, 0, 1, 0</column>
 <column name="empty_fu_68">32, 0, 32, 0</column>
 <column name="icmp_ln45_reg_390">1, 0, 1, 0</column>
-<column name="indvar_flatten_fu_80">5, 0, 5, 0</column>
+<column name="indvar_flatten20_fu_80">5, 0, 5, 0</column>
 <column name="input_fm_buffer_load_reg_425">32, 0, 32, 0</column>
 <column name="kc_fu_72">3, 0, 3, 0</column>
 <column name="kr_fu_76">3, 0, 3, 0</column>
@@ -147,15 +147,15 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
-<column name="grp_fu_2116_p_din0">out, 32, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
-<column name="grp_fu_2116_p_din1">out, 32, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
-<column name="grp_fu_2116_p_opcode">out, 2, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
-<column name="grp_fu_2116_p_dout0">in, 32, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
-<column name="grp_fu_2116_p_ce">out, 1, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
-<column name="grp_fu_2120_p_din0">out, 32, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
-<column name="grp_fu_2120_p_din1">out, 32, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
-<column name="grp_fu_2120_p_dout0">in, 32, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
-<column name="grp_fu_2120_p_ce">out, 1, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
+<column name="grp_fu_1675_p_din0">out, 32, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
+<column name="grp_fu_1675_p_din1">out, 32, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
+<column name="grp_fu_1675_p_opcode">out, 2, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
+<column name="grp_fu_1675_p_dout0">in, 32, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
+<column name="grp_fu_1675_p_ce">out, 1, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
+<column name="grp_fu_1679_p_din0">out, 32, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
+<column name="grp_fu_1679_p_din1">out, 32, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
+<column name="grp_fu_1679_p_dout0">in, 32, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
+<column name="grp_fu_1679_p_ce">out, 1, ap_ctrl_hs, conv3_Pipeline_KR_KC, return value</column>
 <column name="output_fm_buffer_0_load_1">in, 32, ap_none, output_fm_buffer_0_load_1, scalar</column>
 <column name="add_ln53_1">in, 9, ap_none, add_ln53_1, scalar</column>
 <column name="select_ln42_2">in, 3, ap_none, select_ln42_2, scalar</column>

@@ -11,14 +11,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 21 \
+    id 28 \
     name output_fm_buffer_1 \
     reset_level 1 \
     sync_rst true \
     dir IO \
     corename output_fm_buffer_1 \
     op interface \
-    ports { output_fm_buffer_1_address0 { O 16 vector } output_fm_buffer_1_ce0 { O 1 bit } output_fm_buffer_1_we0 { O 1 bit } output_fm_buffer_1_d0 { O 32 vector } output_fm_buffer_1_q0 { I 32 vector } } \
+    ports { output_fm_buffer_1_address0 { O 15 vector } output_fm_buffer_1_ce0 { O 1 bit } output_fm_buffer_1_we0 { O 1 bit } output_fm_buffer_1_d0 { O 32 vector } output_fm_buffer_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'output_fm_buffer_1'"
@@ -29,22 +29,22 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 19 \
-    name sub_ln140_1 \
+    id 26 \
+    name sub_ln140_2 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_sub_ln140_1 \
+    corename dc_sub_ln140_2 \
     op interface \
-    ports { sub_ln140_1 { I 16 vector } } \
+    ports { sub_ln140_2 { I 15 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 20 \
+    id 27 \
     name empty \
     type other \
     dir I \

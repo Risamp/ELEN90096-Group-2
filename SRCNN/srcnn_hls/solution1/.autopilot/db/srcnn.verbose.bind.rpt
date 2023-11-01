@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'srcnn'
 ================================================================
-* Date:           Thu Nov  2 02:40:13 2023
+* Date:           Thu Nov  2 03:20:12 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -29,7 +29,7 @@
     |     Latency (cycles)    |    Latency (absolute)   |         Interval        | Pipeline|
     |     min    |     max    |     min    |     max    |     min    |     max    |   Type  |
     +------------+------------+------------+------------+------------+------------+---------+
-    |  2672883984|  2672938625|  26.729 sec|  26.729 sec|  2672883985|  2672938626|       no|
+    |  1433097033|  1433131968|  14.331 sec|  14.331 sec|  1433097034|  1433131969|       no|
     +------------+------------+------------+------------+------------+------------+---------+
 
     + Detail: 
@@ -38,9 +38,9 @@
         |                  |       |     Latency (cycles)    |    Latency (absolute)   |         Interval        | Pipeline|
         |     Instance     | Module|     min    |     max    |     min    |     max    |     min    |     max    |   Type  |
         +------------------+-------+------------+------------+------------+------------+------------+------------+---------+
-        |grp_conv1_fu_172  |conv1  |  1096798456|  1096809016|  10.968 sec|  10.968 sec|  1096798456|  1096809016|       no|
-        |grp_conv2_fu_196  |conv2  |  1378701191|  1378744711|  13.787 sec|  13.787 sec|  1378701191|  1378744711|       no|
-        |grp_conv3_fu_217  |conv3  |   197384332|   197384893|   1.974 sec|   1.974 sec|   197384332|   197384893|       no|
+        |grp_conv1_fu_172  |conv1  |  1087800030|  1087809822|  10.878 sec|  10.878 sec|  1087800030|  1087809822|       no|
+        |grp_conv2_fu_196  |conv2  |   148167666|   148192146|   1.482 sec|   1.482 sec|   148167666|   148192146|       no|
+        |grp_conv3_fu_217  |conv3  |   197129332|   197129995|   1.971 sec|   1.971 sec|   197129332|   197129995|       no|
         +------------------+-------+------------+------------+------------+------------+------------+------------+---------+
 
         * Loop: 
@@ -100,10 +100,10 @@ State 2 <SV = 1> <Delay = 0.00>
 ST_2 : Operation 15 [1/2] (0.00ns)   --->   "%call_ln44 = call void @conv1, i32 %i1, i64 %input_ftmap_read, i32 %w1, i64 %conv1_weights_read, i32 %conv1_biases, i32 %i2, i64 %conv1_output_ftmap_read, i32 %input_fm_buffer_2_0, i32 %weight_buffer_2_0, i32 %output_fm_buffer_1" [src/srcnn.cpp:44]   --->   Operation 15 'call' 'call_ln44' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 16 [2/2] (0.00ns)   --->   "%call_ln47 = call void @conv2, i32 %i2, i64 %conv1_output_ftmap_read, i32 %w2, i64 %conv2_weights_read, i32 %conv2_biases, i32 %i3, i64 %conv2_output_ftmap_read, i32 %input_fm_buffer_1, i32 %weight_buffer_3_0_0, i32 %output_fm_buffer" [src/srcnn.cpp:47]   --->   Operation 16 'call' 'call_ln47' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 16 [2/2] (0.00ns)   --->   "%call_ln47 = call void @conv2, i32 %i2, i64 %conv1_output_ftmap_read, i32 %w2, i64 %conv2_weights_read, i32 %conv2_biases, i32 %i3, i64 %conv2_output_ftmap_read, i32 %input_fm_buffer_1, i32 %weight_buffer, i32 %output_fm_buffer" [src/srcnn.cpp:47]   --->   Operation 16 'call' 'call_ln47' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 17 [1/2] (0.00ns)   --->   "%call_ln47 = call void @conv2, i32 %i2, i64 %conv1_output_ftmap_read, i32 %w2, i64 %conv2_weights_read, i32 %conv2_biases, i32 %i3, i64 %conv2_output_ftmap_read, i32 %input_fm_buffer_1, i32 %weight_buffer_3_0_0, i32 %output_fm_buffer" [src/srcnn.cpp:47]   --->   Operation 17 'call' 'call_ln47' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 17 [1/2] (0.00ns)   --->   "%call_ln47 = call void @conv2, i32 %i2, i64 %conv1_output_ftmap_read, i32 %w2, i64 %conv2_weights_read, i32 %conv2_biases, i32 %i3, i64 %conv2_output_ftmap_read, i32 %input_fm_buffer_1, i32 %weight_buffer, i32 %output_fm_buffer" [src/srcnn.cpp:47]   --->   Operation 17 'call' 'call_ln47' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 5 <SV = 4> <Delay = 0.00>
 ST_5 : Operation 18 [1/1] (0.00ns)   --->   "%conv3_biases_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %conv3_biases"   --->   Operation 18 'read' 'conv3_biases_read' <Predicate = true> <Delay = 0.00>
@@ -111,42 +111,42 @@ ST_5 : Operation 19 [1/1] (0.00ns)   --->   "%empty = bitcast i32 %conv3_biases_
 ST_5 : Operation 20 [2/2] (0.00ns)   --->   "%call_ln50 = call void @conv3, i32 %i3, i64 %conv2_output_ftmap_read, i32 %w3, i64 %conv3_weights_read, i32 %empty, i32 %o, i64 %output_ftmap_read, i32 %input_fm_buffer, i32 %weight_buffer_0, i32 %output_fm_buffer_0" [src/srcnn.cpp:50]   --->   Operation 20 'call' 'call_ln50' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 6 <SV = 5> <Delay = 0.00>
-ST_6 : Operation 21 [1/1] (0.00ns)   --->   "%spectopmodule_ln8 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_4" [src/srcnn.cpp:8]   --->   Operation 21 'spectopmodule' 'spectopmodule_ln8' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i1, void @empty_21, i32 0, i32 0, void @empty_22, i32 0, i32 512, void @empty_24, void @empty_23, void @empty_22, i32 16, i32 16, i32 256, i32 256, void @empty_22, void @empty_22, i32 4294967295, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 21 [1/1] (0.00ns)   --->   "%spectopmodule_ln8 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_31" [src/srcnn.cpp:8]   --->   Operation 21 'spectopmodule' 'spectopmodule_ln8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i1, void @empty_10, i32 0, i32 0, void @empty_11, i32 0, i32 512, void @empty_13, void @empty_23, void @empty_11, i32 16, i32 16, i32 256, i32 256, void @empty_11, void @empty_11, i32 4294967295, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 23 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %i1"   --->   Operation 23 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w1, void @empty_21, i32 0, i32 0, void @empty_22, i32 0, i32 512, void @empty_25, void @empty_23, void @empty_22, i32 16, i32 16, i32 256, i32 256, void @empty_22, void @empty_22, i32 4294967295, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w1, void @empty_10, i32 0, i32 0, void @empty_11, i32 0, i32 512, void @empty_14, void @empty_23, void @empty_11, i32 16, i32 16, i32 256, i32 256, void @empty_11, void @empty_11, i32 4294967295, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %w1"   --->   Operation 25 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i2, void @empty_21, i32 0, i32 0, void @empty_22, i32 0, i32 512, void @empty_31, void @empty_23, void @empty_22, i32 16, i32 16, i32 256, i32 256, void @empty_22, void @empty_22, i32 4294967295, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i2, void @empty_10, i32 0, i32 0, void @empty_11, i32 0, i32 512, void @empty_3, void @empty_23, void @empty_11, i32 16, i32 16, i32 256, i32 256, void @empty_11, void @empty_11, i32 4294967295, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 27 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %i2"   --->   Operation 27 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w2, void @empty_21, i32 0, i32 0, void @empty_22, i32 0, i32 512, void @empty_27, void @empty_23, void @empty_22, i32 16, i32 16, i32 256, i32 256, void @empty_22, void @empty_22, i32 4294967295, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w2, void @empty_10, i32 0, i32 0, void @empty_11, i32 0, i32 512, void @empty_15, void @empty_23, void @empty_11, i32 16, i32 16, i32 256, i32 256, void @empty_11, void @empty_11, i32 4294967295, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 29 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %w2"   --->   Operation 29 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i3, void @empty_21, i32 0, i32 0, void @empty_22, i32 0, i32 512, void @empty_28, void @empty_23, void @empty_22, i32 16, i32 16, i32 256, i32 256, void @empty_22, void @empty_22, i32 4294967295, i32 0"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i3, void @empty_10, i32 0, i32 0, void @empty_11, i32 0, i32 512, void @empty_16, void @empty_23, void @empty_11, i32 16, i32 16, i32 256, i32 256, void @empty_11, void @empty_11, i32 4294967295, i32 0"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 31 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %i3"   --->   Operation 31 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w3, void @empty_21, i32 0, i32 0, void @empty_22, i32 0, i32 512, void @empty_29, void @empty_23, void @empty_22, i32 16, i32 16, i32 256, i32 256, void @empty_22, void @empty_22, i32 4294967295, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w3, void @empty_10, i32 0, i32 0, void @empty_11, i32 0, i32 512, void @empty_17, void @empty_23, void @empty_11, i32 16, i32 16, i32 256, i32 256, void @empty_11, void @empty_11, i32 4294967295, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 33 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %w3"   --->   Operation 33 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %o, void @empty_21, i32 0, i32 0, void @empty_22, i32 0, i32 512, void @empty_11, void @empty_23, void @empty_22, i32 16, i32 16, i32 256, i32 256, void @empty_22, void @empty_22, i32 4294967295, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %o, void @empty_10, i32 0, i32 0, void @empty_11, i32 0, i32 512, void @empty_12, void @empty_23, void @empty_11, i32 16, i32 16, i32 256, i32 256, void @empty_11, void @empty_11, i32 4294967295, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 35 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %o"   --->   Operation 35 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %input_ftmap, void @empty_30, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_32, void @empty_33, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_34, i32 4294967295, i32 0"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %input_ftmap, void @empty_35, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_22, void @empty_22, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_34, i32 4294967295, i32 0"   --->   Operation 37 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv1_weights, void @empty_30, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_32, void @empty_36, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_34, i32 4294967295, i32 0"   --->   Operation 38 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv1_weights, void @empty_35, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_22, void @empty_22, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_34, i32 4294967295, i32 0"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %conv1_biases, void @empty_0, i32 0, i32 0, void @empty_22, i32 4294967295, i32 0, void @empty_22, void @empty_22, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_22, i32 4294967295, i32 0"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %input_ftmap, void @empty_18, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_19, void @empty_20, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_21, i32 4294967295, i32 0"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %input_ftmap, void @empty_22, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_11, void @empty_11, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_21, i32 4294967295, i32 0"   --->   Operation 37 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv1_weights, void @empty_18, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_19, void @empty_6, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_21, i32 4294967295, i32 0"   --->   Operation 38 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv1_weights, void @empty_22, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_11, void @empty_11, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_21, i32 4294967295, i32 0"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %conv1_biases, void @empty_5, i32 0, i32 0, void @empty_11, i32 4294967295, i32 0, void @empty_11, void @empty_11, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_11, i32 4294967295, i32 0"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %conv1_biases"   --->   Operation 41 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 42 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv1_output_ftmap, void @empty_30, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_32, void @empty_37, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_34, i32 4294967295, i32 0"   --->   Operation 42 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv1_output_ftmap, void @empty_35, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_22, void @empty_22, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_34, i32 4294967295, i32 0"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv2_weights, void @empty_30, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_32, void @empty, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_34, i32 4294967295, i32 0"   --->   Operation 44 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv2_weights, void @empty_35, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_22, void @empty_22, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_34, i32 4294967295, i32 0"   --->   Operation 45 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %conv2_biases, void @empty_0, i32 0, i32 0, void @empty_22, i32 4294967295, i32 0, void @empty_22, void @empty_22, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_22, i32 4294967295, i32 0"   --->   Operation 46 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 42 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv1_output_ftmap, void @empty_18, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_19, void @empty_24, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_21, i32 4294967295, i32 0"   --->   Operation 42 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv1_output_ftmap, void @empty_22, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_11, void @empty_11, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_21, i32 4294967295, i32 0"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv2_weights, void @empty_18, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_19, void @empty_25, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_21, i32 4294967295, i32 0"   --->   Operation 44 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv2_weights, void @empty_22, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_11, void @empty_11, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_21, i32 4294967295, i32 0"   --->   Operation 45 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %conv2_biases, void @empty_5, i32 0, i32 0, void @empty_11, i32 4294967295, i32 0, void @empty_11, void @empty_11, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_11, i32 4294967295, i32 0"   --->   Operation 46 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 47 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %conv2_biases"   --->   Operation 47 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 48 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv2_output_ftmap, void @empty_30, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_32, void @empty_1, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_34, i32 4294967295, i32 0"   --->   Operation 48 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 49 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv2_output_ftmap, void @empty_35, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_22, void @empty_22, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_34, i32 4294967295, i32 0"   --->   Operation 49 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 50 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv3_weights, void @empty_30, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_32, void @empty_2, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_34, i32 4294967295, i32 0"   --->   Operation 50 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv3_weights, void @empty_35, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_22, void @empty_22, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_34, i32 4294967295, i32 0"   --->   Operation 51 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 48 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv2_output_ftmap, void @empty_18, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_19, void @empty_28, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_21, i32 4294967295, i32 0"   --->   Operation 48 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 49 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv2_output_ftmap, void @empty_22, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_11, void @empty_11, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_21, i32 4294967295, i32 0"   --->   Operation 49 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 50 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv3_weights, void @empty_18, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_19, void @empty_29, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_21, i32 4294967295, i32 0"   --->   Operation 50 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %conv3_weights, void @empty_22, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_11, void @empty_11, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_21, i32 4294967295, i32 0"   --->   Operation 51 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 52 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %conv3_biases"   --->   Operation 52 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 53 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %conv3_biases, void @empty_35, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_22, void @empty_22, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_22, i32 4294967295, i32 0"   --->   Operation 53 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 54 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_ftmap, void @empty_30, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_32, void @empty_3, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_34, i32 4294967295, i32 0"   --->   Operation 54 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 55 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_ftmap, void @empty_35, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_22, void @empty_22, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_34, i32 4294967295, i32 0"   --->   Operation 55 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_30, i32 0, i32 0, void @empty_22, i32 0, i32 0, void @empty_32, void @empty_22, void @empty_22, i32 0, i32 0, i32 0, i32 0, void @empty_22, void @empty_22, i32 4294967295, i32 0"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 53 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %conv3_biases, void @empty_22, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_11, void @empty_11, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_11, i32 4294967295, i32 0"   --->   Operation 53 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 54 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_ftmap, void @empty_18, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_19, void @empty_30, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_21, i32 4294967295, i32 0"   --->   Operation 54 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 55 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_ftmap, void @empty_22, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_11, void @empty_11, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_21, i32 4294967295, i32 0"   --->   Operation 55 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_18, i32 0, i32 0, void @empty_11, i32 0, i32 0, void @empty_19, void @empty_11, void @empty_11, i32 0, i32 0, i32 0, i32 0, void @empty_11, void @empty_11, i32 4294967295, i32 0"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 57 [1/2] (0.00ns)   --->   "%call_ln50 = call void @conv3, i32 %i3, i64 %conv2_output_ftmap_read, i32 %w3, i64 %conv3_weights_read, i32 %empty, i32 %o, i64 %output_ftmap_read, i32 %input_fm_buffer, i32 %weight_buffer_0, i32 %output_fm_buffer_0" [src/srcnn.cpp:50]   --->   Operation 57 'call' 'call_ln50' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_6 : Operation 58 [1/1] (0.00ns)   --->   "%ret_ln51 = ret" [src/srcnn.cpp:51]   --->   Operation 58 'ret' 'ret_ln51' <Predicate = true> <Delay = 0.00>
 
@@ -182,9 +182,9 @@ Port [ output_ftmap]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=
 Port [ input_fm_buffer_2_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[20]; IO mode=ap_memory:ce=0
 Port [ weight_buffer_2_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
 Port [ output_fm_buffer_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ input_fm_buffer_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ weight_buffer_3_0_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ output_fm_buffer]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ input_fm_buffer_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[10]; IO mode=ap_memory:ce=0
+Port [ weight_buffer]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ output_fm_buffer]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[21]; IO mode=ap_memory:ce=0
 Port [ input_fm_buffer]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[20]; IO mode=ap_memory:ce=0
 Port [ weight_buffer_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
 Port [ output_fm_buffer_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
@@ -438,17 +438,17 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="41" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="input_fm_buffer_1"/><MemPortTyVec>2 3 </MemPortTyVec>
+<StgValue><ssdm name="input_fm_buffer_1"/><MemPortTyVec>1 0 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="42" class="1000" name="weight_buffer_3_0_0">
+<comp id="42" class="1000" name="weight_buffer">
 <pin_list>
 <pin id="43" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="weight_buffer_3_0_0"/><MemPortTyVec>2 3 </MemPortTyVec>
+<StgValue><ssdm name="weight_buffer"/><MemPortTyVec>2 3 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
@@ -458,7 +458,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="45" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="output_fm_buffer"/><MemPortTyVec>2 3 </MemPortTyVec>
+<StgValue><ssdm name="output_fm_buffer"/><MemPortTyVec>2 1 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
@@ -552,7 +552,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_4"/></StgValue>
+<StgValue><ssdm name="empty_31"/></StgValue>
 </bind>
 </comp>
 
@@ -570,7 +570,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="69" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_21"/></StgValue>
+<StgValue><ssdm name="empty_10"/></StgValue>
 </bind>
 </comp>
 
@@ -588,7 +588,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="73" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_22"/></StgValue>
+<StgValue><ssdm name="empty_11"/></StgValue>
 </bind>
 </comp>
 
@@ -606,7 +606,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="77" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_24"/></StgValue>
+<StgValue><ssdm name="empty_13"/></StgValue>
 </bind>
 </comp>
 
@@ -660,7 +660,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="89" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_25"/></StgValue>
+<StgValue><ssdm name="empty_14"/></StgValue>
 </bind>
 </comp>
 
@@ -669,7 +669,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="91" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_31"/></StgValue>
+<StgValue><ssdm name="empty_3"/></StgValue>
 </bind>
 </comp>
 
@@ -678,7 +678,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="93" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_27"/></StgValue>
+<StgValue><ssdm name="empty_15"/></StgValue>
 </bind>
 </comp>
 
@@ -687,7 +687,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="95" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_28"/></StgValue>
+<StgValue><ssdm name="empty_16"/></StgValue>
 </bind>
 </comp>
 
@@ -696,7 +696,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="97" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_29"/></StgValue>
+<StgValue><ssdm name="empty_17"/></StgValue>
 </bind>
 </comp>
 
@@ -705,7 +705,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="99" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_11"/></StgValue>
+<StgValue><ssdm name="empty_12"/></StgValue>
 </bind>
 </comp>
 
@@ -714,7 +714,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="101" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_30"/></StgValue>
+<StgValue><ssdm name="empty_18"/></StgValue>
 </bind>
 </comp>
 
@@ -723,7 +723,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="103" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_32"/></StgValue>
+<StgValue><ssdm name="empty_19"/></StgValue>
 </bind>
 </comp>
 
@@ -732,7 +732,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="105" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_33"/></StgValue>
+<StgValue><ssdm name="empty_20"/></StgValue>
 </bind>
 </comp>
 
@@ -741,7 +741,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="107" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_34"/></StgValue>
+<StgValue><ssdm name="empty_21"/></StgValue>
 </bind>
 </comp>
 
@@ -750,7 +750,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="109" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_35"/></StgValue>
+<StgValue><ssdm name="empty_22"/></StgValue>
 </bind>
 </comp>
 
@@ -759,7 +759,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="111" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_36"/></StgValue>
+<StgValue><ssdm name="empty_6"/></StgValue>
 </bind>
 </comp>
 
@@ -768,7 +768,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="113" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_0"/></StgValue>
+<StgValue><ssdm name="empty_5"/></StgValue>
 </bind>
 </comp>
 
@@ -777,7 +777,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="115" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_37"/></StgValue>
+<StgValue><ssdm name="empty_24"/></StgValue>
 </bind>
 </comp>
 
@@ -786,7 +786,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="117" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty"/></StgValue>
+<StgValue><ssdm name="empty_25"/></StgValue>
 </bind>
 </comp>
 
@@ -795,7 +795,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="119" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_1"/></StgValue>
+<StgValue><ssdm name="empty_28"/></StgValue>
 </bind>
 </comp>
 
@@ -804,7 +804,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="121" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_2"/></StgValue>
+<StgValue><ssdm name="empty_29"/></StgValue>
 </bind>
 </comp>
 
@@ -813,7 +813,7 @@ ret_ln51                (ret          ) [ 0000000]
 <pin id="123" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_3"/></StgValue>
+<StgValue><ssdm name="empty_30"/></StgValue>
 </bind>
 </comp>
 
@@ -1208,7 +1208,7 @@ ret_ln51                (ret          ) [ 0000000]
 	Port: weight_buffer_2_0 | {1 2 }
 	Port: output_fm_buffer_1 | {1 2 }
 	Port: input_fm_buffer_1 | {3 4 }
-	Port: weight_buffer_3_0_0 | {3 4 }
+	Port: weight_buffer | {3 4 }
 	Port: output_fm_buffer | {3 4 }
 	Port: input_fm_buffer | {5 6 }
 	Port: weight_buffer_0 | {5 6 }
@@ -1234,7 +1234,7 @@ ret_ln51                (ret          ) [ 0000000]
 	Port: srcnn : weight_buffer_2_0 | {1 2 }
 	Port: srcnn : output_fm_buffer_1 | {1 2 }
 	Port: srcnn : input_fm_buffer_1 | {3 4 }
-	Port: srcnn : weight_buffer_3_0_0 | {3 4 }
+	Port: srcnn : weight_buffer | {3 4 }
 	Port: srcnn : output_fm_buffer | {3 4 }
 	Port: srcnn : input_fm_buffer | {5 6 }
 	Port: srcnn : weight_buffer_0 | {5 6 }
@@ -1257,9 +1257,9 @@ ret_ln51                (ret          ) [ 0000000]
 |----------|-------------------------------------|---------|---------|---------|---------|
 | Operation|           Functional Unit           |   DSP   |  Delay  |    FF   |   LUT   |
 |----------|-------------------------------------|---------|---------|---------|---------|
-|          |           grp_conv1_fu_172          |    11   |  10.92  |   2675  |   3304  |
-|   call   |           grp_conv2_fu_196          |    11   |  6.797  |   2417  |   2852  |
-|          |           grp_conv3_fu_217          |    10   |  9.737  |   2431  |   3013  |
+|          |           grp_conv1_fu_172          |    11   |  13.237 |   3066  |   3450  |
+|   call   |           grp_conv2_fu_196          |    11   |  9.821  |   2873  |   2943  |
+|          |           grp_conv3_fu_217          |    10   |  11.529 |   2875  |   3090  |
 |----------|-------------------------------------|---------|---------|---------|---------|
 |          |    output_ftmap_read_read_fu_124    |    0    |    0    |    0    |    0    |
 |          |    conv3_weights_read_read_fu_130   |    0    |    0    |    0    |    0    |
@@ -1270,7 +1270,7 @@ ret_ln51                (ret          ) [ 0000000]
 |          |     input_ftmap_read_read_fu_160    |    0    |    0    |    0    |    0    |
 |          |    conv3_biases_read_read_fu_166    |    0    |    0    |    0    |    0    |
 |----------|-------------------------------------|---------|---------|---------|---------|
-|   Total  |                                     |    32   |  27.454 |   7523  |   9169  |
+|   Total  |                                     |    32   |  34.587 |   8814  |   9483  |
 |----------|-------------------------------------|---------|---------|---------|---------|
 
 Memories:
@@ -1278,16 +1278,16 @@ Memories:
 |                   |  BRAM  |   FF   |   LUT  |  URAM  |
 +-------------------+--------+--------+--------+--------+
 |  input_fm_buffer  |   138  |    0   |    0   |    0   |
-| input_fm_buffer_1 |   44   |    0   |    0   |    0   |
-|input_fm_buffer_2_0|   16   |    0   |    0   |    0   |
-|  output_fm_buffer |   14   |    0   |    0   |    0   |
+| input_fm_buffer_1 |    -   |   64   |  24480 |    -   |
+|input_fm_buffer_2_0|   14   |    0   |    0   |    0   |
+|  output_fm_buffer |    8   |    0   |    0   |    0   |
 | output_fm_buffer_0|    4   |    0   |    0   |    0   |
-| output_fm_buffer_1|   66   |    0   |    0   |    0   |
+| output_fm_buffer_1|   56   |    0   |    0   |    0   |
+|   weight_buffer   |    1   |    0   |    0   |    0   |
 |  weight_buffer_0  |    2   |    0   |    0   |    0   |
 | weight_buffer_2_0 |    2   |    0   |    0   |    0   |
-|weight_buffer_3_0_0|    1   |    0   |    0   |    0   |
 +-------------------+--------+--------+--------+--------+
-|       Total       |   287  |    0   |    0   |    0   |
+|       Total       |   225  |   64   |  24480 |    0   |
 +-------------------+--------+--------+--------+--------+
 
 * Register list:
@@ -1324,10 +1324,10 @@ Memories:
 +-----------+--------+--------+--------+--------+--------+--------+
 |           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
 +-----------+--------+--------+--------+--------+--------+--------+
-|  Function |    -   |   32   |   27   |  7523  |  9169  |    -   |
-|   Memory  |   287  |    -   |    -   |    0   |    0   |    0   |
+|  Function |    -   |   32   |   34   |  8814  |  9483  |    -   |
+|   Memory  |   225  |    -   |    -   |   64   |  24480 |    0   |
 |Multiplexer|    -   |    -   |    1   |    -   |   36   |    -   |
 |  Register |    -   |    -   |    -   |   480  |    -   |    -   |
 +-----------+--------+--------+--------+--------+--------+--------+
-|   Total   |   287  |   32   |   29   |  8003  |  9205  |    0   |
+|   Total   |   225  |   32   |   36   |  9358  |  33999 |    0   |
 +-----------+--------+--------+--------+--------+--------+--------+

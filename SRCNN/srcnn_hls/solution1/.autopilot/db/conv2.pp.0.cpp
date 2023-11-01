@@ -5748,7 +5748,7 @@ int clamp(int value, int min, int max);
 
 
 void load_input_buffer_c1(
- ftmap_t input_fm_buffer[1][17 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)],
+ ftmap_t input_fm_buffer[1][15 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)],
  ftmap_t input_ftmap[1][255][255],
  int in,
  int h
@@ -5762,7 +5762,7 @@ void load_weight_buffer_c1(
 );
 
 void export_output_buffer_c1(
- ftmap_t output_fm_buffer[8][17][255],
+ ftmap_t output_fm_buffer[8][15][255],
  ftmap_t output_ftmap[64][255][255],
  param_t biases[64],
  int out,
@@ -5770,28 +5770,28 @@ void export_output_buffer_c1(
 );
 
 void clear_buffer_c1(
- ftmap_t output_fm_buffer[8][17][255]
+ ftmap_t output_fm_buffer[8][15][255]
 );
 
 
 
 
 void load_input_buffer_c2(
- ftmap_t input_fm_buffer[32][3 + (2 * (1 - 1) / 2)][255 + (2 * (1 - 1) / 2)],
+ ftmap_t input_fm_buffer[64][3 + (2 * (1 - 1) / 2)][255 + (2 * (1 - 1) / 2)],
  ftmap_t input_ftmap[64][255][255],
  int in,
  int h
 );
 
 void load_weight_buffer_c2(
- param_t weight_buffer[8][32][1][1],
+ param_t weight_buffer[4][64][1][1],
  param_t conv2_weights[32][64][1][1],
  int out,
  int in
 );
 
 void export_output_buffer_c2(
- ftmap_t output_fm_buffer[8][3][255],
+ ftmap_t output_fm_buffer[4][3][255],
  ftmap_t output_ftmap[32][255][255],
  param_t biases[32],
  int out,
@@ -5799,7 +5799,7 @@ void export_output_buffer_c2(
 );
 
 void clear_buffer_c2(
- ftmap_t output_fm_buffer[8][3][255]
+ ftmap_t output_fm_buffer[4][3][255]
 );
 
 
@@ -33549,32 +33549,33 @@ void conv2(ftmap_t input_ftmap[64][255][255],
            ftmap_t output_ftmap[32][255][255])
 {
 
-#pragma HLS PIPELINE off
-
- static ftmap_t output_fm_buffer[8][3][255] = {0};
 
 
- static ftmap_t input_fm_buffer[32][3 + (2 * (1 - 1) / 2)][255 + (2 * (1 - 1) / 2)];
+ static ftmap_t output_fm_buffer[4][3][255] = {0};
 
 
- static param_t weight_buffer[8][32][1][1];
+ static ftmap_t input_fm_buffer[64][3 + (2 * (1 - 1) / 2)][255 + (2 * (1 - 1) / 2)];
+#pragma HLS bind_storage variable=input_fm_buffer type=RAM_2P impl=LUTRAM
 
 
-
+ static param_t weight_buffer[4][64][1][1];
 
 
 
- TILE_IN: for (int in = 0; in < 64; in += 32) {
+
+
+
+ TILE_IN: for (int in = 0; in < 64; in += 64) {
  TILE_ROW: for (int h = 0; h < 255; h += 3) {
 
   load_input_buffer_c2(input_fm_buffer, input_ftmap, in, h);
 
-  TILE_OUT: for (int out = 0; out < 32; out += 8) {
+  TILE_OUT: for (int out = 0; out < 32; out += 4) {
 
    load_weight_buffer_c2(weight_buffer, conv2_weights, out, in);
 
-   OUT: for (int o = 0; o < 8; o++) {
-   IN: for (int i = 0; i < 32; i++) {
+   OUT: for (int o = 0; o < 4; o++) {
+   IN: for (int i = 0; i < 64; i++) {
 
     ROW: for (int r = 0; r < 3; r++) {
     COL: for (int c = 0; c < 255; c++) {
@@ -33590,8 +33591,8 @@ void conv2(ftmap_t input_ftmap[64][255][255],
 }
 
 
-void clear_buffer_c2(ftmap_t output_fm_buffer[8][3][255]) {
- CLEAR: for (int o = 0; o < 8; o++) {
+void clear_buffer_c2(ftmap_t output_fm_buffer[4][3][255]) {
+ CLEAR: for (int o = 0; o < 4; o++) {
  BH: for (int h = 0; h < 3; h++) {
 #pragma HLS UNROLL factor=3
  BW: for (int w = 0; w < 255; w++) {
@@ -33602,13 +33603,13 @@ void clear_buffer_c2(ftmap_t output_fm_buffer[8][3][255]) {
 
 
 void load_input_buffer_c2(
- ftmap_t input_fm_buffer[32][3 + (2 * (1 - 1) / 2)][255 + (2 * (1 - 1) / 2)],
+ ftmap_t input_fm_buffer[64][3 + (2 * (1 - 1) / 2)][255 + (2 * (1 - 1) / 2)],
  ftmap_t input_ftmap[64][255][255],
  int in,
  int h
 ) {
 
- LOAD_INPUT: for (int bin = 0; bin < 32; bin++) {
+ LOAD_INPUT: for (int bin = 0; bin < 64; bin++) {
  BH: for (int bh = 0; bh < 3; bh++) {
 
   memcpy(&input_fm_buffer[bin][bh], &input_ftmap[in + bin][h + bh], 255 * sizeof(ftmap_t));
@@ -33617,28 +33618,27 @@ void load_input_buffer_c2(
 }
 
 void load_weight_buffer_c2(
- param_t weight_buffer[8][32][1][1],
+ param_t weight_buffer[4][64][1][1],
  param_t conv2_weights[32][64][1][1],
  int out,
  int in
 ) {
- LOAD_WEIGHTS: for (int bout = 0; bout < 8; bout++) {
- IN: for (int bin = 0; bin < 32; bin++) {
+ LOAD_WEIGHTS: for (int bout = 0; bout < 4; bout++) {
 
-  memcpy(&weight_buffer[bout][bin][0], &conv2_weights[bout + out][bin + in][0], 1 * sizeof(param_t));
+  memcpy(&weight_buffer[bout][0], &conv2_weights[bout + out][in], 64 * 1 * 1 * sizeof(param_t));
 
- }}
+ }
 }
 
 void export_output_buffer_c2(
- ftmap_t output_fm_buffer[8][3][255],
+ ftmap_t output_fm_buffer[4][3][255],
  ftmap_t output_ftmap[32][255][255],
  param_t biases[32],
  int out,
  int h
 ) {
 
- EXPORT: for (int bout = 0; bout < 8; bout++) {
+ EXPORT: for (int bout = 0; bout < 4; bout++) {
  BH: for (int bh = 0; bh < 3; bh++) {
 #pragma HLS UNROLL factor=2
 

@@ -26,15 +26,15 @@ module srcnn_conv3_Pipeline_KR_KC (
         input_fm_buffer_address0,
         input_fm_buffer_ce0,
         input_fm_buffer_q0,
-        grp_fu_2116_p_din0,
-        grp_fu_2116_p_din1,
-        grp_fu_2116_p_opcode,
-        grp_fu_2116_p_dout0,
-        grp_fu_2116_p_ce,
-        grp_fu_2120_p_din0,
-        grp_fu_2120_p_din1,
-        grp_fu_2120_p_dout0,
-        grp_fu_2120_p_ce
+        grp_fu_1675_p_din0,
+        grp_fu_1675_p_din1,
+        grp_fu_1675_p_opcode,
+        grp_fu_1675_p_dout0,
+        grp_fu_1675_p_ce,
+        grp_fu_1679_p_din0,
+        grp_fu_1679_p_din1,
+        grp_fu_1679_p_dout0,
+        grp_fu_1679_p_ce
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 3'd1;
@@ -60,15 +60,15 @@ input  [31:0] weight_buffer_0_q0;
 output  [16:0] input_fm_buffer_address0;
 output   input_fm_buffer_ce0;
 input  [31:0] input_fm_buffer_q0;
-output  [31:0] grp_fu_2116_p_din0;
-output  [31:0] grp_fu_2116_p_din1;
-output  [1:0] grp_fu_2116_p_opcode;
-input  [31:0] grp_fu_2116_p_dout0;
-output   grp_fu_2116_p_ce;
-output  [31:0] grp_fu_2120_p_din0;
-output  [31:0] grp_fu_2120_p_din1;
-input  [31:0] grp_fu_2120_p_dout0;
-output   grp_fu_2120_p_ce;
+output  [31:0] grp_fu_1675_p_din0;
+output  [31:0] grp_fu_1675_p_din1;
+output  [1:0] grp_fu_1675_p_opcode;
+input  [31:0] grp_fu_1675_p_dout0;
+output   grp_fu_1675_p_ce;
+output  [31:0] grp_fu_1679_p_din0;
+output  [31:0] grp_fu_1679_p_din1;
+input  [31:0] grp_fu_1679_p_dout0;
+output   grp_fu_1679_p_ce;
 
 reg ap_idle;
 reg p_out_ap_vld;
@@ -129,9 +129,9 @@ wire   [2:0] add_ln46_fu_246_p2;
 reg   [2:0] ap_sig_allocacmp_kc_load;
 reg   [2:0] kr_fu_76;
 reg   [2:0] ap_sig_allocacmp_kr_load;
-reg   [4:0] indvar_flatten_fu_80;
+reg   [4:0] indvar_flatten20_fu_80;
 wire   [4:0] add_ln45_2_fu_192_p2;
-reg   [4:0] ap_sig_allocacmp_indvar_flatten_load;
+reg   [4:0] ap_sig_allocacmp_indvar_flatten20_load;
 wire    ap_block_pp0_stage2_01001;
 wire   [0:0] icmp_ln46_fu_210_p2;
 wire   [2:0] add_ln45_fu_204_p2;
@@ -186,7 +186,7 @@ srcnn_ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1 #(
     .din2_WIDTH( 9 ),
     .din3_WIDTH( 9 ),
     .dout_WIDTH( 17 ))
-ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1_U76(
+ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1_U121(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(add_ln53),
@@ -278,16 +278,16 @@ always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
         empty_fu_68 <= output_fm_buffer_0_load_1;
     end else if (((1'b0 == ap_block_pp0_stage2_11001) & (ap_enable_reg_pp0_iter3 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
-        empty_fu_68 <= grp_fu_2116_p_dout0;
+        empty_fu_68 <= grp_fu_1675_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if (((icmp_ln45_fu_186_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            indvar_flatten_fu_80 <= add_ln45_2_fu_192_p2;
+            indvar_flatten20_fu_80 <= add_ln45_2_fu_192_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            indvar_flatten_fu_80 <= 5'd0;
+            indvar_flatten20_fu_80 <= 5'd0;
         end
     end
 end
@@ -331,7 +331,7 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
         input_fm_buffer_load_reg_425 <= input_fm_buffer_q0;
-        mul_reg_430 <= grp_fu_2120_p_dout0;
+        mul_reg_430 <= grp_fu_1679_p_dout0;
         weight_buffer_0_load_reg_420 <= weight_buffer_0_q0;
     end
 end
@@ -401,9 +401,9 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
-        ap_sig_allocacmp_indvar_flatten_load = 5'd0;
+        ap_sig_allocacmp_indvar_flatten20_load = 5'd0;
     end else begin
-        ap_sig_allocacmp_indvar_flatten_load = indvar_flatten_fu_80;
+        ap_sig_allocacmp_indvar_flatten20_load = indvar_flatten20_fu_80;
     end
 end
 
@@ -425,7 +425,7 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage2) & (ap_enable_reg_pp0_iter3 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
-        ap_sig_allocacmp_p_load = grp_fu_2116_p_dout0;
+        ap_sig_allocacmp_p_load = grp_fu_1675_p_dout0;
     end else begin
         ap_sig_allocacmp_p_load = empty_fu_68;
     end
@@ -486,7 +486,7 @@ end
 
 assign add_ln45_1_fu_236_p2 = (zext_ln45_fu_232_p1 + select_ln42_2_cast_fu_159_p1);
 
-assign add_ln45_2_fu_192_p2 = (ap_sig_allocacmp_indvar_flatten_load + 5'd1);
+assign add_ln45_2_fu_192_p2 = (ap_sig_allocacmp_indvar_flatten20_load + 5'd1);
 
 assign add_ln45_fu_204_p2 = (ap_sig_allocacmp_kr_load + 3'd1);
 
@@ -554,19 +554,19 @@ assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage2;
 
-assign grp_fu_2116_p_ce = 1'b1;
+assign grp_fu_1675_p_ce = 1'b1;
 
-assign grp_fu_2116_p_din0 = ap_sig_allocacmp_p_load;
+assign grp_fu_1675_p_din0 = ap_sig_allocacmp_p_load;
 
-assign grp_fu_2116_p_din1 = mul_reg_430;
+assign grp_fu_1675_p_din1 = mul_reg_430;
 
-assign grp_fu_2116_p_opcode = 2'd0;
+assign grp_fu_1675_p_opcode = 2'd0;
 
-assign grp_fu_2120_p_ce = 1'b1;
+assign grp_fu_1679_p_ce = 1'b1;
 
-assign grp_fu_2120_p_din0 = weight_buffer_0_load_reg_420;
+assign grp_fu_1679_p_din0 = weight_buffer_0_load_reg_420;
 
-assign grp_fu_2120_p_din1 = input_fm_buffer_load_reg_425;
+assign grp_fu_1679_p_din1 = input_fm_buffer_load_reg_425;
 
 assign grp_fu_340_p1 = grp_fu_340_p10;
 
@@ -578,7 +578,7 @@ assign grp_fu_340_p3 = grp_fu_340_p30;
 
 assign grp_fu_340_p30 = add_ln51_fu_270_p2;
 
-assign icmp_ln45_fu_186_p2 = ((ap_sig_allocacmp_indvar_flatten_load == 5'd25) ? 1'b1 : 1'b0);
+assign icmp_ln45_fu_186_p2 = ((ap_sig_allocacmp_indvar_flatten20_load == 5'd25) ? 1'b1 : 1'b0);
 
 assign icmp_ln46_fu_210_p2 = ((ap_sig_allocacmp_kc_load == 3'd5) ? 1'b1 : 1'b0);
 

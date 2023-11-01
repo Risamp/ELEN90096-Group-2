@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'export_output_buffer_c1'" level="0">
-<item name = "Date">Thu Nov  2 02:40:03 2023
+<item name = "Date">Thu Nov  2 03:19:59 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,28 +24,27 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">222642, 222730, 2.226 ms, 2.227 ms, 222642, 222730, no</column>
+<column name="">131394, 131466, 1.314 ms, 1.315 ms, 131394, 131466, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_export_output_buffer_c1_Pipeline_RELU_fu_318">export_output_buffer_c1_Pipeline_RELU, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
-<column name="grp_export_output_buffer_c1_Pipeline_RELU1_fu_326">export_output_buffer_c1_Pipeline_RELU1, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_export_output_buffer_c1_Pipeline_RELU_fu_199">export_output_buffer_c1_Pipeline_RELU, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_export_output_buffer_c1_Pipeline_2_fu_207">export_output_buffer_c1_Pipeline_2, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_export_output_buffer_c1_Pipeline_RELU1_fu_217">export_output_buffer_c1_Pipeline_RELU1, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_export_output_buffer_c1_Pipeline_4_fu_225">export_output_buffer_c1_Pipeline_4, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_export_output_buffer_c1_Pipeline_BW_fu_235">export_output_buffer_c1_Pipeline_BW, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_export_output_buffer_c1_Pipeline_BW2_fu_242">export_output_buffer_c1_Pipeline_BW2, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_export_output_buffer_c1_Pipeline_BW3_fu_249">export_output_buffer_c1_Pipeline_BW3, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- EXPORT">185712, 185776, 23214 ~ 23222, -, -, 8, no</column>
-<column name=" + BH">23211, 23218, 2579, -, -, 9, no</column>
-<column name="  ++ BH.1">765, 765, 3, -, -, 255, no</column>
-<column name="  ++ BH.2">765, 765, 3, -, -, 255, no</column>
-<column name="- CLEAR">36928, 36952, 4616 ~ 4619, -, -, 8, no</column>
-<column name=" + BH">4614, 4616, 769, -, -, 6, no</column>
-<column name="  ++ BW">255, 255, 1, -, -, 255, no</column>
-<column name="  ++ BW">255, 255, 1, -, -, 255, no</column>
-<column name="  ++ BW">255, 255, 1, -, -, 255, no</column>
+<column name="- EXPORT">100312, 100384, 12539 ~ 12548, -, -, 8, no</column>
+<column name=" + BH">12536, 12544, 1567, -, -, 8, no</column>
+<column name="- CLEAR_BH">31080, 31080, 777, -, -, 40, no</column>
 </table>
 </item>
 </section>

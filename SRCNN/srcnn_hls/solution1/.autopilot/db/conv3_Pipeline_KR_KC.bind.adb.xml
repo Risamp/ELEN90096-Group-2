@@ -130,10 +130,10 @@ newFuncRoot:2 %kr = alloca i32 1
 
 <Node id="12" bw="5" op_0_bw="32">
 <![CDATA[
-newFuncRoot:3 %indvar_flatten = alloca i32 1
+newFuncRoot:3 %indvar_flatten20 = alloca i32 1
 
 ]]></Node>
-<StgValue><ssdm name="indvar_flatten"/></StgValue>
+<StgValue><ssdm name="indvar_flatten20"/></StgValue>
 </operation>
 
 <operation id="19" st_id="1" stage="1" lat="1">
@@ -250,7 +250,7 @@ newFuncRoot:10 %select_ln42_2_cast = zext i3 %select_ln42_2_read
 
 <Node id="20" bw="0" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-newFuncRoot:11 %store_ln0 = store i5 0, i5 %indvar_flatten
+newFuncRoot:11 %store_ln0 = store i5 0, i5 %indvar_flatten20
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -325,10 +325,10 @@ newFuncRoot:15 %br_ln0 = br void %for.inc
 
 <Node id="26" bw="5" op_0_bw="5" op_1_bw="0">
 <![CDATA[
-for.inc:0 %indvar_flatten_load = load i5 %indvar_flatten
+for.inc:0 %indvar_flatten20_load = load i5 %indvar_flatten20
 
 ]]></Node>
-<StgValue><ssdm name="indvar_flatten_load"/></StgValue>
+<StgValue><ssdm name="indvar_flatten20_load"/></StgValue>
 </operation>
 
 <operation id="32" st_id="1" stage="1" lat="1">
@@ -340,7 +340,7 @@ for.inc:0 %indvar_flatten_load = load i5 %indvar_flatten
 
 <Node id="27" bw="1" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-for.inc:1 %icmp_ln45 = icmp_eq  i5 %indvar_flatten_load, i5 25
+for.inc:1 %icmp_ln45 = icmp_eq  i5 %indvar_flatten20_load, i5 25
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln45"/></StgValue>
@@ -355,7 +355,7 @@ for.inc:1 %icmp_ln45 = icmp_eq  i5 %indvar_flatten_load, i5 25
 
 <Node id="28" bw="5" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-for.inc:2 %add_ln45_2 = add i5 %indvar_flatten_load, i5 1
+for.inc:2 %add_ln45_2 = add i5 %indvar_flatten20_load, i5 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln45_2"/></StgValue>
@@ -594,7 +594,7 @@ for.inc53:37 %add_ln46 = add i3 %select_ln45, i3 1
 
 <Node id="69" bw="0" op_0_bw="5" op_1_bw="5" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc53:38 %store_ln46 = store i5 %add_ln45_2, i5 %indvar_flatten
+for.inc53:38 %store_ln46 = store i5 %add_ln45_2, i5 %indvar_flatten20
 
 ]]></Node>
 <StgValue><ssdm name="store_ln46"/></StgValue>
@@ -1208,7 +1208,7 @@ for.inc53:5 %speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTr
 
 <Node id="57" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.inc53:26 %specpipeline_ln48 = specpipeline void @_ssdm_op_SpecPipeline, i32 3, i32 0, i32 0, i32 0, void @empty_22
+for.inc53:26 %specpipeline_ln48 = specpipeline void @_ssdm_op_SpecPipeline, i32 3, i32 0, i32 0, i32 0, void @empty_11
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln48"/></StgValue>
@@ -1223,7 +1223,7 @@ for.inc53:26 %specpipeline_ln48 = specpipeline void @_ssdm_op_SpecPipeline, i32 
 
 <Node id="58" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc53:27 %specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9
+for.inc53:27 %specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty_1
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln46"/></StgValue>
@@ -1314,7 +1314,7 @@ for.inc53:42 %br_ln46 = br void %for.inc
 </dataflow>
 <dataflow id="131" from="StgValue_128" to="kr" fromId="128" toId="17">
 </dataflow>
-<dataflow id="132" from="StgValue_128" to="indvar_flatten" fromId="128" toId="18">
+<dataflow id="132" from="StgValue_128" to="indvar_flatten20" fromId="128" toId="18">
 </dataflow>
 <dataflow id="134" from="_ssdm_op_Read.ap_auto.i8" to="zext_ln43_1_read" fromId="133" toId="19">
 </dataflow>
@@ -1342,7 +1342,7 @@ for.inc53:42 %br_ln46 = br void %for.inc
 </dataflow>
 <dataflow id="151" from="StgValue_150" to="store_ln0" fromId="150" toId="26">
 </dataflow>
-<dataflow id="152" from="indvar_flatten" to="store_ln0" fromId="18" toId="26">
+<dataflow id="152" from="indvar_flatten20" to="store_ln0" fromId="18" toId="26">
 </dataflow>
 <dataflow id="154" from="StgValue_153" to="store_ln0" fromId="153" toId="27">
 </dataflow>
@@ -1356,13 +1356,13 @@ for.inc53:42 %br_ln46 = br void %for.inc
 </dataflow>
 <dataflow id="159" from="empty" to="store_ln0" fromId="15" toId="29">
 </dataflow>
-<dataflow id="160" from="indvar_flatten" to="indvar_flatten_load" fromId="18" toId="31">
+<dataflow id="160" from="indvar_flatten20" to="indvar_flatten20_load" fromId="18" toId="31">
 </dataflow>
-<dataflow id="161" from="indvar_flatten_load" to="icmp_ln45" fromId="31" toId="32">
+<dataflow id="161" from="indvar_flatten20_load" to="icmp_ln45" fromId="31" toId="32">
 </dataflow>
 <dataflow id="163" from="StgValue_162" to="icmp_ln45" fromId="162" toId="32">
 </dataflow>
-<dataflow id="164" from="indvar_flatten_load" to="add_ln45_2" fromId="31" toId="33">
+<dataflow id="164" from="indvar_flatten20_load" to="add_ln45_2" fromId="31" toId="33">
 </dataflow>
 <dataflow id="166" from="StgValue_165" to="add_ln45_2" fromId="165" toId="33">
 </dataflow>
@@ -1416,7 +1416,7 @@ for.inc53:42 %br_ln46 = br void %for.inc
 </dataflow>
 <dataflow id="194" from="add_ln45_2" to="store_ln46" fromId="33" toId="48">
 </dataflow>
-<dataflow id="195" from="indvar_flatten" to="store_ln46" fromId="18" toId="48">
+<dataflow id="195" from="indvar_flatten20" to="store_ln46" fromId="18" toId="48">
 </dataflow>
 <dataflow id="196" from="select_ln45_1" to="store_ln46" fromId="40" toId="49">
 </dataflow>
@@ -1548,11 +1548,11 @@ for.inc53:42 %br_ln46 = br void %for.inc
 </dataflow>
 <dataflow id="270" from="StgValue_267" to="specpipeline_ln48" fromId="267" toId="83">
 </dataflow>
-<dataflow id="272" from="empty_22" to="specpipeline_ln48" fromId="271" toId="83">
+<dataflow id="272" from="empty_11" to="specpipeline_ln48" fromId="271" toId="83">
 </dataflow>
 <dataflow id="273" from="_ssdm_op_SpecLoopName" to="specloopname_ln46" fromId="253" toId="84">
 </dataflow>
-<dataflow id="275" from="empty_9" to="specloopname_ln46" fromId="274" toId="84">
+<dataflow id="275" from="empty_1" to="specloopname_ln46" fromId="274" toId="84">
 </dataflow>
 <dataflow id="276" from="p_load" to="add" fromId="77" toId="85">
 </dataflow>

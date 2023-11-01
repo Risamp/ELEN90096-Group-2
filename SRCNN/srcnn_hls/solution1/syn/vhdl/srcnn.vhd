@@ -438,7 +438,7 @@ end;
 architecture behav of srcnn is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "srcnn_srcnn,hls_ip_2023_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck24-ubva530-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1622049035,HLS_SYN_TPT=none,HLS_SYN_MEM=399,HLS_SYN_DSP=0,HLS_SYN_FF=12212,HLS_SYN_LUT=16829,HLS_VERSION=2023_1}";
+    "srcnn_srcnn,hls_ip_2023_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck24-ubva530-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=1433116481,HLS_SYN_TPT=none,HLS_SYN_MEM=337,HLS_SYN_DSP=0,HLS_SYN_FF=12725,HLS_SYN_LUT=43609,HLS_VERSION=2023_1}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (5 downto 0) := "000001";
@@ -3340,7 +3340,7 @@ begin
         I_BVALID => w3_BVALID,
         I_BREADY => ap_const_logic_0);
 
-    fadd_32ns_32ns_32_4_full_dsp_1_U111 : component srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+    fadd_32ns_32ns_32_4_full_dsp_1_U170 : component srcnn_fadd_32ns_32ns_32_4_full_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -3355,7 +3355,7 @@ begin
         ce => grp_fu_284_ce,
         dout => grp_fu_284_p2);
 
-    fmul_32ns_32ns_32_3_max_dsp_1_U112 : component srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+    fmul_32ns_32ns_32_3_max_dsp_1_U171 : component srcnn_fmul_32ns_32ns_32_3_max_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 3,
@@ -3370,7 +3370,7 @@ begin
         ce => grp_fu_288_ce,
         dout => grp_fu_288_p2);
 
-    fcmp_32ns_32ns_1_2_no_dsp_1_U113 : component srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
+    fcmp_32ns_32ns_1_2_no_dsp_1_U172 : component srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 2,

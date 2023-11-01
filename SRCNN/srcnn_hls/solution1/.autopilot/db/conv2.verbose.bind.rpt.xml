@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2'" level="0">
-<item name = "Date">Thu Nov  2 02:40:08 2023
+<item name = "Date">Thu Nov  2 03:20:06 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,38 +24,32 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1378701191, 1378744711, 13.787 sec, 13.787 sec, 1378701191, 1378744711, no</column>
+<column name="">148167666, 148192146, 1.482 sec, 1.482 sec, 148167666, 148192146, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_conv2_Pipeline_RELU_fu_617">conv2_Pipeline_RELU, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
-<column name="grp_conv2_Pipeline_RELU3_fu_625">conv2_Pipeline_RELU3, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_conv2_Pipeline_LOAD_INPUT_BH_L_fu_302">conv2_Pipeline_LOAD_INPUT_BH_L, 48971, 48971, 0.490 ms, 0.490 ms, 48971, 48971, no</column>
+<column name="grp_conv2_Pipeline_LOAD_WEIGHTS_L_fu_312">conv2_Pipeline_LOAD_WEIGHTS_L, 259, 259, 2.590 us, 2.590 us, 259, 259, no</column>
+<column name="grp_conv2_Pipeline_OUT_ROW_COL_fu_321">conv2_Pipeline_OUT_ROW_COL, 195850, 195850, 1.958 ms, 1.958 ms, 195850, 195850, no</column>
+<column name="grp_conv2_Pipeline_RELU_fu_331">conv2_Pipeline_RELU, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_conv2_Pipeline_5_fu_339">conv2_Pipeline_5, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_conv2_Pipeline_RELU7_fu_349">conv2_Pipeline_RELU7, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_conv2_Pipeline_7_fu_357">conv2_Pipeline_7, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_conv2_Pipeline_BW_fu_367">conv2_Pipeline_BW, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_conv2_Pipeline_BW8_fu_375">conv2_Pipeline_BW8, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_conv2_Pipeline_BW9_fu_382">conv2_Pipeline_BW9, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILE_IN_TILE_ROW">1378701190, 1378744710, 8110007 ~ 8110263, -, -, 170, no</column>
-<column name=" + LOAD_INPUT">73952, 73952, 2311, -, -, 32, no</column>
-<column name="  ++ BH">2301, 2301, 767, -, -, 3, no</column>
-<column name="   +++ BH.1">765, 765, 3, -, -, 255, no</column>
-<column name=" + TILE_OUT">8036052, 8036308, 2009013 ~ 2009077, -, -, 4, no</column>
-<column name="  ++ LOAD_WEIGHTS">848, 848, 106, -, -, 8, no</column>
-<column name="   +++ IN">96, 96, 3, -, -, 32, no</column>
-<column name="  ++ OUT">1960720, 1960720, 245090, -, -, 8, no</column>
-<column name="   +++ IN">245088, 245088, 7659, -, -, 32, no</column>
-<column name="    ++++ ROW">7656, 7656, 2552, -, -, 3, no</column>
-<column name="     +++++ COL">2550, 2550, 10, -, -, 255, no</column>
-<column name="  ++ EXPORT">41288, 41352, 5161 ~ 5169, -, -, 8, no</column>
-<column name="   +++ BH">5158, 5165, 2579, -, -, 2, no</column>
-<column name="    ++++ BH.1">765, 765, 3, -, -, 255, no</column>
-<column name="    ++++ BH.2">765, 765, 3, -, -, 255, no</column>
-<column name="  ++ CLEAR">6152, 6152, 769, -, -, 8, no</column>
-<column name="   +++ BW">255, 255, 1, -, -, 255, no</column>
-<column name="   +++ BW">255, 255, 1, -, -, 255, no</column>
-<column name="   +++ BW">255, 255, 1, -, -, 255, no</column>
+<column name="- TILE_ROW">148167665, 148192145, 1743149 ~ 1743437, -, -, 85, no</column>
+<column name=" + TILE_OUT">1694168, 1694456, 211771 ~ 211807, -, -, 8, no</column>
+<column name="  ++ EXPORT">12548, 12584, 3137 ~ 3146, -, -, 4, no</column>
+<column name="   +++ BH">3134, 3142, 1567, -, -, 2, no</column>
+<column name="  ++ CLEAR">3108, 3108, 777, -, -, 4, no</column>
 </table>
 </item>
 </section>

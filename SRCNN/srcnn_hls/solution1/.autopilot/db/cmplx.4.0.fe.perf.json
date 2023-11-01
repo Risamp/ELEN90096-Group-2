@@ -1,7 +1,7 @@
 {
   "0": {
     "basicblocks": 1,
-    "calls": "2 4 1",
+    "calls": "3 2 1",
     "file": "srcnn.cpp",
     "fileloc": 8,
     "instructions": 42,
@@ -9,14 +9,14 @@
       "T": 1
     },
     "name": "srcnn",
-    "total_instructions": 912
+    "total_instructions": 903
   },
   "1": {
     "basicblocks": 73,
     "calls": "",
     "file": "conv3.cpp",
     "fileloc": 10,
-    "instructions": 289,
+    "instructions": 288,
     "loads": {
       "G": 7,
       "L": 2
@@ -25,46 +25,14 @@
     "stores": {
       "G": 12
     },
-    "total_instructions": 289
+    "total_instructions": 288
   },
   "2": {
-    "basicblocks": 40,
-    "calls": "3",
-    "file": "conv1.cpp",
-    "fileloc": 9,
-    "instructions": 161,
-    "loads": {
-      "G": 3,
-      "L": 2
-    },
-    "name": "conv1",
-    "stores": {
-      "G": 5
-    },
-    "total_instructions": 314
-  },
-  "3": {
-    "basicblocks": 40,
-    "calls": "",
-    "file": "conv1.cpp",
-    "fileloc": 125,
-    "instructions": 153,
-    "loads": {
-      "G": 4,
-      "L": 1
-    },
-    "name": "export_output_buffer_c1",
-    "stores": {
-      "G": 7
-    },
-    "total_instructions": 153
-  },
-  "4": {
-    "basicblocks": 72,
+    "basicblocks": 69,
     "calls": "",
     "file": "conv2.cpp",
     "fileloc": 9,
-    "instructions": 267,
+    "instructions": 262,
     "loads": {
       "G": 7,
       "L": 1
@@ -73,6 +41,38 @@
     "stores": {
       "G": 10
     },
-    "total_instructions": 267
+    "total_instructions": 262
+  },
+  "3": {
+    "basicblocks": 40,
+    "calls": "4",
+    "file": "conv1.cpp",
+    "fileloc": 9,
+    "instructions": 160,
+    "loads": {
+      "G": 3,
+      "L": 2
+    },
+    "name": "conv1",
+    "stores": {
+      "G": 5
+    },
+    "total_instructions": 311
+  },
+  "4": {
+    "basicblocks": 39,
+    "calls": "",
+    "file": "conv1.cpp",
+    "fileloc": 125,
+    "instructions": 151,
+    "loads": {
+      "G": 4,
+      "L": 1
+    },
+    "name": "export_output_buffer_c1",
+    "stores": {
+      "G": 7
+    },
+    "total_instructions": 151
   }
 }

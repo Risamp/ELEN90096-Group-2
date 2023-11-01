@@ -20,11 +20,11 @@
 // CONV1
 #define C1_OD 8 		// conv1 output tile depth
 #define C1_ID N0 		// conv1 input tile depth
-#define C1_TH 17 		// conv1 tile height
+#define C1_TH 15 		// conv1 tile height
 
 // CONV2
-#define C2_OD 8 		// conv1 output tile depth
-#define C2_ID N2 		// conv1 input tile depth
+#define C2_OD 4 		// conv1 output tile depth
+#define C2_ID N1 		// conv1 input tile depth
 #define C2_TH 3 		// conv1 tile height
 
 // CONV3

@@ -96,9 +96,6 @@ void load_input_buffer_c3(
 		// burst in main image area
 		memcpy(&input_fm_buffer[bin][bh][P3], &input_ftmap[in + bin][hclamp], W * sizeof(ftmap_t));
 	}}
-
-	//cout << "\n " << input_fm_buffer[0][0][0] << " conv1 input_fm_buffer";
-	//cout << "\n " << input_ftmap[0][0][0] << " conv1 input_ftmap";
 }
 
 void load_weight_buffer_c3(
@@ -114,8 +111,6 @@ void load_weight_buffer_c3(
 		memcpy(&weight_buffer[bout][bin][k], &conv3_weights[bout + out][bin + in][k], F3 * sizeof(param_t));
 
 	}}}
-
-	//cout << "\n " << weight_buffer[0][0][0][0] << " conv1 weights";
 }
 
 void export_output_buffer_c3(
@@ -142,9 +137,6 @@ void export_output_buffer_c3(
 
 		memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], W * sizeof(ftmap_t));
 	}}
-
-	//cout << "\n " << output_fm_buffer[5][5][5] << " conv1 output_fm_buffer";
-	//cout << "\n " << output_ftmap[5][5][5] << " conv1 output_ftmap";
 
 	clear_buffer_c3(output_fm_buffer);
 }

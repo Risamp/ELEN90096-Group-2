@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3'" level="0">
-<item name = "Date">Thu Nov  2 02:40:11 2023
+<item name = "Date">Thu Nov  2 03:20:10 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">197384332, 197384893, 1.974 sec, 1.974 sec, 197384332, 197384893, no</column>
+<column name="">197129332, 197129995, 1.971 sec, 1.971 sec, 197129332, 197129995, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,22 +35,14 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILE_ROW">197384331, 197384892, 3870281 ~ 3870292, -, -, 51, no</column>
+<column name="- TILE_ROW">197129331, 197129994, 3865281 ~ 3865294, -, -, 51, no</column>
 <column name=" + LOAD_INPUT">227008, 227008, 7094, -, -, 32, no</column>
 <column name="  ++ BH">7092, 7092, 788, -, -, 9, no</column>
 <column name="   +++ PAD">2, 2, 1, -, -, 2, no</column>
 <column name="   +++ BH.2">765, 765, 3, -, -, 255, no</column>
-<column name=" + IN">2784, 2784, 87, -, -, 32, no</column>
-<column name="  ++ K">85, 85, 17, -, -, 5, no</column>
-<column name="   +++ K.1">15, 15, 3, -, -, 5, no</column>
 <column name=" + IN_ROW_COL">3631200, 3631200, 89, -, -, 40800, no</column>
-<column name=" + BH">7737, 7744, 2579, -, -, 3, no</column>
-<column name="  ++ BH.1">765, 765, 3, -, -, 255, no</column>
-<column name="  ++ BH.2">765, 765, 3, -, -, 255, no</column>
-<column name=" + BH">1538, 1540, 769, -, -, 2, no</column>
-<column name="  ++ BW">255, 255, 1, -, -, 255, no</column>
-<column name="  ++ BW">255, 255, 1, -, -, 255, no</column>
-<column name="  ++ BW">255, 255, 1, -, -, 255, no</column>
+<column name=" + BH">4701, 4709, 1567, -, -, 3, no</column>
+<column name=" + BH">1554, 1557, 777, -, -, 2, no</column>
 </table>
 </item>
 </section>

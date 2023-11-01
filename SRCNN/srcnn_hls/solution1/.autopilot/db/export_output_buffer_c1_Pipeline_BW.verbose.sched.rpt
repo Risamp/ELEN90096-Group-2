@@ -1,0 +1,136 @@
+
+
+================================================================
+== Vitis HLS Report for 'export_output_buffer_c1_Pipeline_BW'
+================================================================
+* Date:           Thu Nov  2 03:19:57 2023
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        srcnn_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck24-ubva530-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.079 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      257|      257|  2.570 us|  2.570 us|  257|  257|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- BW      |      255|      255|         1|          1|          1|   255|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.07>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%w = alloca i32 1"   --->   Operation 4 'alloca' 'w' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%sub_ln73_1_read = read i15 @_ssdm_op_Read.ap_auto.i15, i15 %sub_ln73_1"   --->   Operation 5 'read' 'sub_ln73_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.42ns)   --->   "%store_ln0 = store i8 0, i8 %w"   --->   Operation 6 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i"   --->   Operation 7 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%w_2 = load i8 %w" [src/conv1.cpp:71->src/conv1.cpp:153]   --->   Operation 8 'load' 'w_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 9 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.76ns)   --->   "%icmp_ln71 = icmp_eq  i8 %w_2, i8 255" [src/conv1.cpp:71->src/conv1.cpp:153]   --->   Operation 10 'icmp' 'icmp_ln71' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (0.76ns)   --->   "%add_ln71 = add i8 %w_2, i8 1" [src/conv1.cpp:71->src/conv1.cpp:153]   --->   Operation 11 'add' 'add_ln71' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln71 = br i1 %icmp_ln71, void %for.inc.i.split, void %for.inc13.i.exitStub" [src/conv1.cpp:71->src/conv1.cpp:153]   --->   Operation 12 'br' 'br_ln71' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%zext_ln73 = zext i8 %w_2" [src/conv1.cpp:73->src/conv1.cpp:153]   --->   Operation 13 'zext' 'zext_ln73' <Predicate = (!icmp_ln71)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.84ns)   --->   "%add_ln73 = add i15 %sub_ln73_1_read, i15 %zext_ln73" [src/conv1.cpp:73->src/conv1.cpp:153]   --->   Operation 14 'add' 'add_ln73' <Predicate = (!icmp_ln71)> <Delay = 0.84> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%zext_ln73_3 = zext i15 %add_ln73" [src/conv1.cpp:73->src/conv1.cpp:153]   --->   Operation 15 'zext' 'zext_ln73_3' <Predicate = (!icmp_ln71)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%output_fm_buffer_1_addr = getelementptr i32 %output_fm_buffer_1, i64 0, i64 %zext_ln73_3" [src/conv1.cpp:73->src/conv1.cpp:153]   --->   Operation 16 'getelementptr' 'output_fm_buffer_1_addr' <Predicate = (!icmp_ln71)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%speclooptripcount_ln71 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv1.cpp:71->src/conv1.cpp:153]   --->   Operation 17 'speclooptripcount' 'speclooptripcount_ln71' <Predicate = (!icmp_ln71)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specloopname_ln71 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9" [src/conv1.cpp:71->src/conv1.cpp:153]   --->   Operation 18 'specloopname' 'specloopname_ln71' <Predicate = (!icmp_ln71)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.23ns)   --->   "%store_ln73 = store i32 0, i15 %output_fm_buffer_1_addr" [src/conv1.cpp:73->src/conv1.cpp:153]   --->   Operation 19 'store' 'store_ln73' <Predicate = (!icmp_ln71)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 30600> <RAM>
+ST_1 : Operation 20 [1/1] (0.42ns)   --->   "%store_ln71 = store i8 %add_ln71, i8 %w" [src/conv1.cpp:71->src/conv1.cpp:153]   --->   Operation 20 'store' 'store_ln71' <Predicate = (!icmp_ln71)> <Delay = 0.42>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln71 = br void %for.inc.i" [src/conv1.cpp:71->src/conv1.cpp:153]   --->   Operation 21 'br' 'br_ln71' <Predicate = (!icmp_ln71)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 22 'ret' 'ret_ln0' <Predicate = (icmp_ln71)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 2.079ns
+The critical path consists of the following:
+	'alloca' operation ('w') [3]  (0.000 ns)
+	'load' operation ('w', src/conv1.cpp:71->src/conv1.cpp:153) on local variable 'w' [8]  (0.000 ns)
+	'add' operation ('add_ln73', src/conv1.cpp:73->src/conv1.cpp:153) [15]  (0.842 ns)
+	'getelementptr' operation ('output_fm_buffer_1_addr', src/conv1.cpp:73->src/conv1.cpp:153) [17]  (0.000 ns)
+	'store' operation ('store_ln73', src/conv1.cpp:73->src/conv1.cpp:153) of constant 0 on array 'output_fm_buffer_1' [20]  (1.237 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

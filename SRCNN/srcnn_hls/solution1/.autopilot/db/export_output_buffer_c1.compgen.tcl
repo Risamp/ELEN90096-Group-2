@@ -17,7 +17,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 28 \
+    id 45 \
     name conv1_biases \
     reset_level 1 \
     sync_rst true \
@@ -36,14 +36,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 31 \
+    id 48 \
     name output_fm_buffer_1 \
     reset_level 1 \
     sync_rst true \
     dir IO \
     corename output_fm_buffer_1 \
     op interface \
-    ports { output_fm_buffer_1_address0 { O 16 vector } output_fm_buffer_1_ce0 { O 1 bit } output_fm_buffer_1_we0 { O 1 bit } output_fm_buffer_1_d0 { O 32 vector } output_fm_buffer_1_q0 { I 32 vector } } \
+    ports { output_fm_buffer_1_address0 { O 15 vector } output_fm_buffer_1_ce0 { O 1 bit } output_fm_buffer_1_we0 { O 1 bit } output_fm_buffer_1_d0 { O 32 vector } output_fm_buffer_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'output_fm_buffer_1'"
@@ -54,7 +54,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 26 \
+    id 43 \
     name i2 \
     type other \
     dir O \
@@ -69,7 +69,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 27 \
+    id 44 \
     name output_ftmap \
     type other \
     dir I \
@@ -84,7 +84,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 29 \
+    id 46 \
     name out_r \
     type other \
     dir I \
@@ -99,7 +99,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 30 \
+    id 47 \
     name h \
     type other \
     dir I \

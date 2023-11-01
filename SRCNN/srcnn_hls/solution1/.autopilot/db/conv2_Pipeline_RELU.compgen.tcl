@@ -11,14 +11,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 51 \
+    id 81 \
     name output_fm_buffer \
     reset_level 1 \
     sync_rst true \
     dir IO \
     corename output_fm_buffer \
     op interface \
-    ports { output_fm_buffer_address0 { O 13 vector } output_fm_buffer_ce0 { O 1 bit } output_fm_buffer_we0 { O 1 bit } output_fm_buffer_d0 { O 32 vector } output_fm_buffer_q0 { I 32 vector } } \
+    ports { output_fm_buffer_address0 { O 12 vector } output_fm_buffer_ce0 { O 1 bit } output_fm_buffer_we0 { O 1 bit } output_fm_buffer_d0 { O 32 vector } output_fm_buffer_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'output_fm_buffer'"
@@ -29,7 +29,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 49 \
+    id 79 \
     name sub_ln111_1 \
     type other \
     dir I \
@@ -37,14 +37,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_sub_ln111_1 \
     op interface \
-    ports { sub_ln111_1 { I 13 vector } } \
+    ports { sub_ln111_1 { I 12 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 50 \
+    id 80 \
     name empty \
     type other \
     dir I \

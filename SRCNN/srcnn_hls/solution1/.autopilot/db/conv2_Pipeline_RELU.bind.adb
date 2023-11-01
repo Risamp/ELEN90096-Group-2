@@ -34,10 +34,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>540876921</coreId>
+						<coreId>1852142702</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>13</bitwidth>
+					<bitwidth>12</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>540876921</coreId>
+						<coreId>1931485194</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -113,7 +113,7 @@
 				</Value>
 				<direction>2</direction>
 				<if_type>1</if_type>
-				<array_size>6120</array_size>
+				<array_size>3060</array_size>
 				<bit_vecs>
 					<count>0</count>
 					<item_version>0</item_version>
@@ -146,7 +146,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3</coreId>
+						<coreId>64</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -188,7 +188,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>568</coreId>
+						<coreId>2742008776</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -231,10 +231,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2741986744</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>13</bitwidth>
+					<bitwidth>12</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -274,7 +274,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2741988736</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -317,7 +317,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1380927064</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -360,7 +360,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -380,7 +380,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>452</coreId>
+						<coreId>2741957397</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -424,7 +424,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -488,7 +488,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -552,7 +552,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -572,7 +572,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>206</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -617,7 +617,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -637,10 +637,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2741965363</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>13</bitwidth>
+					<bitwidth>12</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -680,7 +680,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -703,7 +703,7 @@
 						<coreId>1</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>13</bitwidth>
+					<bitwidth>12</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -716,7 +716,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.82</m_delay>
+				<m_delay>0.80</m_delay>
 				<m_topoIndex>11</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -744,7 +744,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -764,7 +764,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>732</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -807,7 +807,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -827,10 +827,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1671</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>13</bitwidth>
+					<bitwidth>12</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -872,7 +872,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -935,7 +935,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -999,7 +999,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -1019,7 +1019,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>456</coreId>
+						<coreId>2742012816</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1043,7 +1043,7 @@
 					<Obj>
 						<type>0</type>
 						<id>25</id>
-						<name>tmp_9</name>
+						<name>tmp_s</name>
 						<fileName>src/conv2.cpp</fileName>
 						<fileDirectory>C:\SPB_Data\ELEN90096-Group-2\SRCNN</fileDirectory>
 						<lineNumber>113</lineNumber>
@@ -1062,7 +1062,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -1082,7 +1082,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>592</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1128,7 +1128,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -1191,7 +1191,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -1255,7 +1255,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -1319,7 +1319,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -1364,7 +1364,7 @@
 					<Obj>
 						<type>0</type>
 						<id>30</id>
-						<name>tmp_s</name>
+						<name>tmp_1</name>
 						<fileName>src/conv2.cpp</fileName>
 						<fileDirectory>C:\SPB_Data\ELEN90096-Group-2\SRCNN</fileDirectory>
 						<lineNumber>113</lineNumber>
@@ -1383,7 +1383,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -1447,7 +1447,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -1511,7 +1511,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -1576,7 +1576,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -1641,7 +1641,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -1707,7 +1707,7 @@
 											<first>src/conv2.cpp</first>
 											<second>conv2</second>
 										</first>
-										<second>50</second>
+										<second>51</second>
 									</item>
 									<item>
 										<first>
@@ -1727,7 +1727,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2741973761</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1769,7 +1769,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2741973434</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1814,7 +1814,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1846165031</coreId>
+						<coreId>1396449342</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1845,7 +1845,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852142702</coreId>
+						<coreId>1668183366</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1876,7 +1876,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1046836594</coreId>
+						<coreId>1717920800</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1907,7 +1907,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852142602</coreId>
+						<coreId>1025538401</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1938,7 +1938,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852142702</coreId>
+						<coreId>1045250386</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -2000,7 +2000,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1528833802</coreId>
+						<coreId>544433525</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2031,7 +2031,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>10</coreId>
+						<coreId>1852142702</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>23</bitwidth>
@@ -2062,7 +2062,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1043406909</coreId>
+						<coreId>1025538401</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2096,7 +2096,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967292</coreId>
+					<coreId>466</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -2131,7 +2131,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2262393680</coreId>
+					<coreId>1</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -2165,7 +2165,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967288</coreId>
+					<coreId>1536298715</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -2213,7 +2213,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967292</coreId>
+					<coreId>3493544600</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3607,7 +3607,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_9_fu_127</first>
+			<first>tmp_s_fu_127</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

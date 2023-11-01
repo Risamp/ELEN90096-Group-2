@@ -47,8 +47,8 @@
 
 <AreaEstimates>
 <Resources>
-<FF>162</FF>
-<LUT>241</LUT>
+<FF>161</FF>
+<LUT>240</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
 <URAM>0</URAM>
@@ -130,7 +130,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1164_p_din0</name>
+<name>grp_fu_985_p_din0</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -141,7 +141,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1164_p_din1</name>
+<name>grp_fu_985_p_din1</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -152,7 +152,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1164_p_opcode</name>
+<name>grp_fu_985_p_opcode</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -163,7 +163,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1164_p_dout0</name>
+<name>grp_fu_985_p_dout0</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -174,7 +174,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1164_p_ce</name>
+<name>grp_fu_985_p_ce</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -185,7 +185,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1168_p_din0</name>
+<name>grp_fu_989_p_din0</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -196,7 +196,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1168_p_din1</name>
+<name>grp_fu_989_p_din1</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -207,7 +207,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1168_p_opcode</name>
+<name>grp_fu_989_p_opcode</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -218,7 +218,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1168_p_dout0</name>
+<name>grp_fu_989_p_dout0</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -229,7 +229,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1168_p_ce</name>
+<name>grp_fu_989_p_ce</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -240,14 +240,14 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sub_ln140_1</name>
-<Object>sub_ln140_1</Object>
+<name>sub_ln140_2</name>
+<Object>sub_ln140_2</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>16</Bits>
+<Bits>15</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -269,7 +269,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>16</Bits>
+<Bits>15</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>

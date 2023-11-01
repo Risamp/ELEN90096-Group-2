@@ -18,6 +18,7 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 	//#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=cyclic factor=8 dim=2
 
 	static ftmap_t input_fm_buffer[C2_ID][C2_TH + (2 * P2)][W + (2 * P2)];
+	#pragma HLS bind_storage variable=input_fm_buffer type=RAM_2P impl=LUTRAM
 	//#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=cyclic factor=4 dim=2
 
 	static param_t weight_buffer[C2_OD][C2_ID][F2][F2];
@@ -86,11 +87,10 @@ void load_weight_buffer_c2(
 	int in
 ) {
 	LOAD_WEIGHTS: for (int bout = 0; bout < C2_OD; bout++) {
-	IN: for (int bin = 0; bin < C2_ID; bin++) {
 
-		memcpy(&weight_buffer[bout][bin][0], &conv2_weights[bout + out][bin + in][0], F2 * sizeof(param_t));
+		memcpy(&weight_buffer[bout][0], &conv2_weights[bout + out][in], C2_ID * F2 * F2 * sizeof(param_t));
 
-	}}
+	}
 }
 
 void export_output_buffer_c2(
@@ -117,9 +117,6 @@ void export_output_buffer_c2(
 
 		memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], W * sizeof(ftmap_t));
 	}}
-
-	//cout << "\n " << output_fm_buffer[5][5][5] << " conv1 output_fm_buffer";
-	//cout << "\n " << output_ftmap[5][5][5] << " conv1 output_ftmap";
 
 	clear_buffer_c2(output_fm_buffer);
 }

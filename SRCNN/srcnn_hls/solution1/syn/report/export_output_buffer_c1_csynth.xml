@@ -22,14 +22,14 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>222642</Best-caseLatency>
-<Average-caseLatency>222698</Average-caseLatency>
-<Worst-caseLatency>222730</Worst-caseLatency>
-<Best-caseRealTimeLatency>2.226 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>2.227 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>2.227 ms</Worst-caseRealTimeLatency>
-<Interval-min>222642</Interval-min>
-<Interval-max>222730</Interval-max>
+<Best-caseLatency>131394</Best-caseLatency>
+<Average-caseLatency>131434</Average-caseLatency>
+<Worst-caseLatency>131466</Worst-caseLatency>
+<Best-caseRealTimeLatency>1.314 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>1.314 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>1.315 ms</Worst-caseRealTimeLatency>
+<Interval-min>131394</Interval-min>
+<Interval-max>131466</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <EXPORT>
@@ -37,140 +37,61 @@
 <TripCount>8</TripCount>
 <Latency>
 <range>
-<min>185712</min>
-<max>185776</max>
+<min>100312</min>
+<max>100384</max>
 </range>
 </Latency>
 <AbsoluteTimeLatency>
 <range>
-<min>1857120</min>
-<max>1857760</max>
+<min>1003120</min>
+<max>1003840</max>
 </range>
 </AbsoluteTimeLatency>
 <IterationLatency>
 <range>
-<min>23214</min>
-<max>23222</max>
+<min>12539</min>
+<max>12548</max>
 </range>
 </IterationLatency>
 <InstanceList>
 </InstanceList>
 <BH>
-<Slack>7.30</Slack>
-<TripCount>9</TripCount>
-<Latency>
-<range>
-<min>23211</min>
-<max>23218</max>
-</range>
-</Latency>
-<AbsoluteTimeLatency>
-<range>
-<min>232110</min>
-<max>232180</max>
-</range>
-</AbsoluteTimeLatency>
-<IterationLatency>2579</IterationLatency>
-<InstanceList>
-</InstanceList>
-<BH.1>
-<Slack>7.30</Slack>
-<TripCount>255</TripCount>
-<Latency>765</Latency>
-<AbsoluteTimeLatency>7650</AbsoluteTimeLatency>
-<IterationLatency>3</IterationLatency>
-<InstanceList>
-</InstanceList>
-</BH.1>
-<BH.2>
-<Slack>7.30</Slack>
-<TripCount>255</TripCount>
-<Latency>765</Latency>
-<AbsoluteTimeLatency>7650</AbsoluteTimeLatency>
-<IterationLatency>3</IterationLatency>
-<InstanceList>
-</InstanceList>
-</BH.2>
-</BH>
-</EXPORT>
-<CLEAR>
 <Slack>7.30</Slack>
 <TripCount>8</TripCount>
 <Latency>
 <range>
-<min>36928</min>
-<max>36952</max>
+<min>12536</min>
+<max>12544</max>
 </range>
 </Latency>
 <AbsoluteTimeLatency>
 <range>
-<min>369280</min>
-<max>369520</max>
+<min>125360</min>
+<max>125440</max>
 </range>
 </AbsoluteTimeLatency>
-<IterationLatency>
-<range>
-<min>4616</min>
-<max>4619</max>
-</range>
-</IterationLatency>
+<IterationLatency>1567</IterationLatency>
 <InstanceList>
 </InstanceList>
-<BH>
-<Slack>7.30</Slack>
-<TripCount>6</TripCount>
-<Latency>
-<range>
-<min>4614</min>
-<max>4616</max>
-</range>
-</Latency>
-<AbsoluteTimeLatency>
-<range>
-<min>46140</min>
-<max>46160</max>
-</range>
-</AbsoluteTimeLatency>
-<IterationLatency>769</IterationLatency>
-<InstanceList>
-</InstanceList>
-<BW>
-<Slack>7.30</Slack>
-<TripCount>255</TripCount>
-<Latency>255</Latency>
-<AbsoluteTimeLatency>2550</AbsoluteTimeLatency>
-<IterationLatency>1</IterationLatency>
-<InstanceList>
-</InstanceList>
-</BW>
-<BW>
-<Slack>7.30</Slack>
-<TripCount>255</TripCount>
-<Latency>255</Latency>
-<AbsoluteTimeLatency>2550</AbsoluteTimeLatency>
-<IterationLatency>1</IterationLatency>
-<InstanceList>
-</InstanceList>
-</BW>
-<BW>
-<Slack>7.30</Slack>
-<TripCount>255</TripCount>
-<Latency>255</Latency>
-<AbsoluteTimeLatency>2550</AbsoluteTimeLatency>
-<IterationLatency>1</IterationLatency>
-<InstanceList>
-</InstanceList>
-</BW>
 </BH>
-</CLEAR>
+</EXPORT>
+<CLEAR_BH>
+<Slack>7.30</Slack>
+<TripCount>40</TripCount>
+<Latency>31080</Latency>
+<AbsoluteTimeLatency>310800</AbsoluteTimeLatency>
+<IterationLatency>777</IterationLatency>
+<InstanceList>
+</InstanceList>
+</CLEAR_BH>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
 <DSP>1</DSP>
-<FF>885</FF>
-<LUT>1917</LUT>
+<FF>915</FF>
+<LUT>2393</LUT>
 <BRAM_18K>0</BRAM_18K>
 <URAM>0</URAM>
 </Resources>
@@ -251,7 +172,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1352_p_din0</name>
+<name>grp_fu_1171_p_din0</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -262,7 +183,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1352_p_din1</name>
+<name>grp_fu_1171_p_din1</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -273,7 +194,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1352_p_opcode</name>
+<name>grp_fu_1171_p_opcode</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -284,7 +205,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1352_p_dout0</name>
+<name>grp_fu_1171_p_dout0</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -295,7 +216,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1352_p_ce</name>
+<name>grp_fu_1171_p_ce</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -306,7 +227,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1360_p_din0</name>
+<name>grp_fu_1179_p_din0</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -317,7 +238,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1360_p_din1</name>
+<name>grp_fu_1179_p_din1</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -328,7 +249,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1360_p_opcode</name>
+<name>grp_fu_1179_p_opcode</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -339,7 +260,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1360_p_dout0</name>
+<name>grp_fu_1179_p_dout0</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -350,7 +271,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1360_p_ce</name>
+<name>grp_fu_1179_p_ce</name>
 <Object>export_output_buffer_c1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -940,7 +861,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>16</Bits>
+<Bits>15</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>

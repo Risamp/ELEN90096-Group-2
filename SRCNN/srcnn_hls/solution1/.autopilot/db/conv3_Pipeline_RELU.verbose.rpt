@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_RELU'
 ================================================================
-* Date:           Thu Nov  2 02:40:19 2023
+* Date:           Thu Nov  2 03:20:27 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -150,16 +150,16 @@
 |ap_done                      |  out|    1|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
 |ap_idle                      |  out|    1|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
 |ap_ready                     |  out|    1|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
-|grp_fu_2116_p_din0           |  out|   32|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
-|grp_fu_2116_p_din1           |  out|   32|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
-|grp_fu_2116_p_opcode         |  out|    2|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
-|grp_fu_2116_p_dout0          |   in|   32|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
-|grp_fu_2116_p_ce             |  out|    1|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
-|grp_fu_2124_p_din0           |  out|   32|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
-|grp_fu_2124_p_din1           |  out|   32|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
-|grp_fu_2124_p_opcode         |  out|    5|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
-|grp_fu_2124_p_dout0          |   in|    1|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
-|grp_fu_2124_p_ce             |  out|    1|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
+|grp_fu_1675_p_din0           |  out|   32|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
+|grp_fu_1675_p_din1           |  out|   32|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
+|grp_fu_1675_p_opcode         |  out|    2|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
+|grp_fu_1675_p_dout0          |   in|   32|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
+|grp_fu_1675_p_ce             |  out|    1|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
+|grp_fu_1683_p_din0           |  out|   32|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
+|grp_fu_1683_p_din1           |  out|   32|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
+|grp_fu_1683_p_opcode         |  out|    5|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
+|grp_fu_1683_p_dout0          |   in|    1|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
+|grp_fu_1683_p_ce             |  out|    1|  ap_ctrl_hs|   conv3_Pipeline_RELU|  return value|
 |sub_ln136                    |   in|   11|     ap_none|             sub_ln136|        scalar|
 |conv3_biases_0_0_val         |   in|   32|     ap_none|  conv3_biases_0_0_val|        scalar|
 |output_fm_buffer_0_address0  |  out|   11|   ap_memory|    output_fm_buffer_0|         array|
@@ -254,9 +254,9 @@ ST_7 : [1/1] (0.62ns)   --->   Input mux for Operation 31 '%tmp_4 = fcmp_olt  i3
 ST_7 : Operation 31 [2/2] (2.15ns)   --->   "%tmp_4 = fcmp_olt  i32 %add15_0_i, i32 0" [src/conv3.cpp:138->src/conv3.cpp:58]   --->   Operation 31 'fcmp' 'tmp_4' <Predicate = true> <Delay = 2.15> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
 
 State 8 <SV = 7> <Delay = 4.46>
-ST_8 : Operation 32 [1/1] (0.00ns)   --->   "%specpipeline_ln134 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_22" [src/conv3.cpp:134->src/conv3.cpp:58]   --->   Operation 32 'specpipeline' 'specpipeline_ln134' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 32 [1/1] (0.00ns)   --->   "%specpipeline_ln134 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_11" [src/conv3.cpp:134->src/conv3.cpp:58]   --->   Operation 32 'specpipeline' 'specpipeline_ln134' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 33 [1/1] (0.00ns)   --->   "%speclooptripcount_ln133 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv3.cpp:133->src/conv3.cpp:58]   --->   Operation 33 'speclooptripcount' 'speclooptripcount_ln133' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 34 [1/1] (0.00ns)   --->   "%specloopname_ln133 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17" [src/conv3.cpp:133->src/conv3.cpp:58]   --->   Operation 34 'specloopname' 'specloopname_ln133' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 34 [1/1] (0.00ns)   --->   "%specloopname_ln133 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [src/conv3.cpp:133->src/conv3.cpp:58]   --->   Operation 34 'specloopname' 'specloopname_ln133' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 35 [1/1] (0.00ns)   --->   "%bitcast_ln138 = bitcast i32 %add15_0_i" [src/conv3.cpp:138->src/conv3.cpp:58]   --->   Operation 35 'bitcast' 'bitcast_ln138' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 36 [1/1] (0.00ns)   --->   "%tmp = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln138, i32 23, i32 30" [src/conv3.cpp:138->src/conv3.cpp:58]   --->   Operation 36 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 37 [1/1] (0.00ns)   --->   "%trunc_ln138 = trunc i32 %bitcast_ln138" [src/conv3.cpp:138->src/conv3.cpp:58]   --->   Operation 37 'trunc' 'trunc_ln138' <Predicate = true> <Delay = 0.00>
@@ -458,7 +458,7 @@ ret_ln0                   (ret              ) [ 000000000]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_22"/></StgValue>
+<StgValue><ssdm name="empty_11"/></StgValue>
 </bind>
 </comp>
 
@@ -494,7 +494,7 @@ ret_ln0                   (ret              ) [ 000000000]
 <pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_17"/></StgValue>
+<StgValue><ssdm name="empty_7"/></StgValue>
 </bind>
 </comp>
 

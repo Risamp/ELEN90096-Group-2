@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_KR_KC'
 ================================================================
-* Date:           Thu Nov  2 02:40:19 2023
+* Date:           Thu Nov  2 03:20:26 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -73,11 +73,11 @@
     N/A
 
     * DSP: 
-    +-------------------------------------------+---------------------------------------+---------------------+
-    |                  Instance                 |                 Module                |      Expression     |
-    +-------------------------------------------+---------------------------------------+---------------------+
-    |ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1_U76  |ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1  |  (i0 + i1) * i2 + i3|
-    +-------------------------------------------+---------------------------------------+---------------------+
+    +--------------------------------------------+---------------------------------------+---------------------+
+    |                  Instance                  |                 Module                |      Expression     |
+    +--------------------------------------------+---------------------------------------+---------------------+
+    |ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1_U121  |ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1  |  (i0 + i1) * i2 + i3|
+    +--------------------------------------------+---------------------------------------+---------------------+
 
     * Memory: 
     N/A
@@ -107,24 +107,24 @@
     +-------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    +--------------------------------------+----+-----------+-----+-----------+
-    |                 Name                 | LUT| Input Size| Bits| Total Bits|
-    +--------------------------------------+----+-----------+-----+-----------+
-    |ap_NS_fsm                             |  20|          4|    1|          4|
-    |ap_done_int                           |   9|          2|    1|          2|
-    |ap_enable_reg_pp0_iter0               |   9|          2|    1|          2|
-    |ap_enable_reg_pp0_iter1               |   9|          2|    1|          2|
-    |ap_sig_allocacmp_indvar_flatten_load  |   9|          2|    5|         10|
-    |ap_sig_allocacmp_kc_load              |   9|          2|    3|          6|
-    |ap_sig_allocacmp_kr_load              |   9|          2|    3|          6|
-    |ap_sig_allocacmp_p_load               |   9|          2|   32|         64|
-    |empty_fu_68                           |   9|          2|   32|         64|
-    |indvar_flatten_fu_80                  |   9|          2|    5|         10|
-    |kc_fu_72                              |   9|          2|    3|          6|
-    |kr_fu_76                              |   9|          2|    3|          6|
-    +--------------------------------------+----+-----------+-----+-----------+
-    |Total                                 | 119|         26|   90|        182|
-    +--------------------------------------+----+-----------+-----+-----------+
+    +----------------------------------------+----+-----------+-----+-----------+
+    |                  Name                  | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                               |  20|          4|    1|          4|
+    |ap_done_int                             |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0                 |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                 |   9|          2|    1|          2|
+    |ap_sig_allocacmp_indvar_flatten20_load  |   9|          2|    5|         10|
+    |ap_sig_allocacmp_kc_load                |   9|          2|    3|          6|
+    |ap_sig_allocacmp_kr_load                |   9|          2|    3|          6|
+    |ap_sig_allocacmp_p_load                 |   9|          2|   32|         64|
+    |empty_fu_68                             |   9|          2|   32|         64|
+    |indvar_flatten20_fu_80                  |   9|          2|    5|         10|
+    |kc_fu_72                                |   9|          2|    3|          6|
+    |kr_fu_76                                |   9|          2|    3|          6|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |Total                                   | 119|         26|   90|        182|
+    +----------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
     +----------------------------------+----+----+-----+-----------+
@@ -140,7 +140,7 @@
     |ap_loop_exit_ready_pp0_iter2_reg  |   1|   0|    1|          0|
     |empty_fu_68                       |  32|   0|   32|          0|
     |icmp_ln45_reg_390                 |   1|   0|    1|          0|
-    |indvar_flatten_fu_80              |   5|   0|    5|          0|
+    |indvar_flatten20_fu_80            |   5|   0|    5|          0|
     |input_fm_buffer_load_reg_425      |  32|   0|   32|          0|
     |kc_fu_72                          |   3|   0|    3|          0|
     |kr_fu_76                          |   3|   0|    3|          0|
@@ -169,15 +169,15 @@
 |ap_done                    |  out|    1|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
 |ap_idle                    |  out|    1|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
 |ap_ready                   |  out|    1|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
-|grp_fu_2116_p_din0         |  out|   32|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
-|grp_fu_2116_p_din1         |  out|   32|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
-|grp_fu_2116_p_opcode       |  out|    2|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
-|grp_fu_2116_p_dout0        |   in|   32|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
-|grp_fu_2116_p_ce           |  out|    1|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
-|grp_fu_2120_p_din0         |  out|   32|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
-|grp_fu_2120_p_din1         |  out|   32|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
-|grp_fu_2120_p_dout0        |   in|   32|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
-|grp_fu_2120_p_ce           |  out|    1|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
+|grp_fu_1675_p_din0         |  out|   32|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
+|grp_fu_1675_p_din1         |  out|   32|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
+|grp_fu_1675_p_opcode       |  out|    2|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
+|grp_fu_1675_p_dout0        |   in|   32|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
+|grp_fu_1675_p_ce           |  out|    1|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
+|grp_fu_1679_p_din0         |  out|   32|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
+|grp_fu_1679_p_din1         |  out|   32|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
+|grp_fu_1679_p_dout0        |   in|   32|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
+|grp_fu_1679_p_ce           |  out|    1|  ap_ctrl_hs|       conv3_Pipeline_KR_KC|  return value|
 |output_fm_buffer_0_load_1  |   in|   32|     ap_none|  output_fm_buffer_0_load_1|        scalar|
 |add_ln53_1                 |   in|    9|     ap_none|                 add_ln53_1|        scalar|
 |select_ln42_2              |   in|    3|     ap_none|              select_ln42_2|        scalar|

@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 3
-set name srcnn_ama_addmuladd_4ns_5ns_9ns_9ns_13_4_1
+set id 6
+set name srcnn_ama_addmuladd_4ns_4ns_9ns_9ns_13_4_1
 set corename simcore_ama
 set op ama
 set stage_num 4
@@ -11,7 +11,7 @@ set reset_width 1
 set reset_signed 0
 set in0_width 4
 set in0_signed 0
-set in1_width 5
+set in1_width 4
 set in1_signed 0
 set in2_width 9
 set in2_signed 0
@@ -20,7 +20,7 @@ set in3_signed 0
 set ce_width 1
 set ce_signed 0
 set out_width 13
-set arg_lists {i0 {4 0 +} i1 {5 0 +} s {5 0 +} i2 {9 0 +} m {13 1 +} i3 {9 0 +} p {13 0 +} c_expval {c} c_reg {1} rnd {0} acc {0} }
+set arg_lists {i0 {4 0 +} i1 {4 0 +} s {5 0 +} i2 {9 0 +} m {13 1 +} i3 {9 0 +} p {13 0 +} c_expval {c} c_reg {1} rnd {0} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1
@@ -74,7 +74,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 10 \
+    id 13 \
     name weight_buffer_2_0 \
     reset_level 1 \
     sync_rst true \
@@ -93,7 +93,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 11 \
+    id 14 \
     name input_fm_buffer_2_0 \
     reset_level 1 \
     sync_rst true \
@@ -111,7 +111,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 5 \
+    id 8 \
     name output_fm_buffer_1_load \
     type other \
     dir I \
@@ -126,7 +126,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 6 \
+    id 9 \
     name add_ln53 \
     type other \
     dir I \
@@ -141,7 +141,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 7 \
+    id 10 \
     name select_ln42_6 \
     type other \
     dir I \
@@ -149,14 +149,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_select_ln42_6 \
     op interface \
-    ports { select_ln42_6 { I 5 vector } } \
+    ports { select_ln42_6 { I 4 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 8 \
+    id 11 \
     name zext_ln43_2 \
     type other \
     dir I \
@@ -171,7 +171,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 9 \
+    id 12 \
     name p_out \
     type other \
     dir O \

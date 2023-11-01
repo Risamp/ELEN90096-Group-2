@@ -6,7 +6,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="srcnn_srcnn,hls_ip_2023_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck24-ubva530-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1622049035,HLS_SYN_TPT=none,HLS_SYN_MEM=399,HLS_SYN_DSP=0,HLS_SYN_FF=12212,HLS_SYN_LUT=16829,HLS_VERSION=2023_1}" *)
+(* CORE_GENERATION_INFO="srcnn_srcnn,hls_ip_2023_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck24-ubva530-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=1433116481,HLS_SYN_TPT=none,HLS_SYN_MEM=337,HLS_SYN_DSP=0,HLS_SYN_FF=12725,HLS_SYN_LUT=43609,HLS_VERSION=2023_1}" *)
 
 module srcnn (
         ap_clk,
@@ -2436,7 +2436,7 @@ srcnn_fadd_32ns_32ns_32_4_full_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fadd_32ns_32ns_32_4_full_dsp_1_U111(
+fadd_32ns_32ns_32_4_full_dsp_1_U170(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .din0(grp_fu_284_p0),
@@ -2451,7 +2451,7 @@ srcnn_fmul_32ns_32ns_32_3_max_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fmul_32ns_32ns_32_3_max_dsp_1_U112(
+fmul_32ns_32ns_32_3_max_dsp_1_U171(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .din0(grp_fu_288_p0),
@@ -2466,7 +2466,7 @@ srcnn_fcmp_32ns_32ns_1_2_no_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 1 ))
-fcmp_32ns_32ns_1_2_no_dsp_1_U113(
+fcmp_32ns_32ns_1_2_no_dsp_1_U172(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .din0(grp_fu_292_p0),
