@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn'" level="0">
-<item name = "Date">Thu Nov  2 03:05:41 2023
+<item name = "Date">Thu Nov  2 03:24:16 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">6066420713, 6066420713, 60.664 sec, 60.664 sec, 6066420714, 6066420714, no</column>
+<column name="">6066483488, 6066483488, 60.665 sec, 60.665 sec, 6066483489, 6066483489, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -32,7 +32,7 @@
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="grp_conv1_fu_283">conv1, 4827573706, 4827573706, 48.276 sec, 48.276 sec, 4827573706, 4827573706, no</column>
-<column name="grp_conv2_fu_297">conv2, 449153806, 449153806, 4.492 sec, 4.492 sec, 449153806, 449153806, no</column>
+<column name="grp_conv2_fu_297">conv2, 449216581, 449216581, 4.492 sec, 4.492 sec, 449216581, 449216581, no</column>
 <column name="grp_conv3_fu_311">conv3, 777078317, 777078317, 7.771 sec, 7.771 sec, 777078317, 777078317, no</column>
 </table>
 </item>
@@ -55,7 +55,7 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 256, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">133, 6, 4935, 8688, 0</column>
+<column name="Instance">133, 6, 4935, 8864, 0</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 553, -</column>
 <column name="Register">-, -, 917, -, -</column>
@@ -68,9 +68,9 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="control_s_axi_U">control_s_axi, 0, 0, 736, 1320, 0</column>
-<column name="grp_conv1_fu_283">conv1, 40, 1, 1042, 2306, 0</column>
-<column name="grp_conv2_fu_297">conv2, 60, 2, 1175, 1993, 0</column>
-<column name="grp_conv3_fu_311">conv3, 29, 3, 1152, 2375, 0</column>
+<column name="grp_conv1_fu_283">conv1, 40, 1, 1040, 2306, 0</column>
+<column name="grp_conv2_fu_297">conv2, 60, 2, 1181, 2171, 0</column>
+<column name="grp_conv3_fu_311">conv3, 29, 3, 1148, 2373, 0</column>
 <column name="gmem_m_axi_U">gmem_m_axi, 4, 0, 830, 694, 0</column>
 </table>
 </item>
@@ -88,20 +88,20 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="empty_65_fu_359_p2">+, 0, 0, 29, 22, 1</column>
-<column name="empty_69_fu_404_p2">+, 0, 0, 28, 21, 1</column>
-<column name="empty_73_fu_449_p2">+, 0, 0, 23, 16, 1</column>
+<column name="empty_63_fu_359_p2">+, 0, 0, 29, 22, 1</column>
+<column name="empty_67_fu_404_p2">+, 0, 0, 28, 21, 1</column>
+<column name="empty_71_fu_449_p2">+, 0, 0, 23, 16, 1</column>
 <column name="exitcond3_fu_443_p2">icmp, 0, 0, 23, 16, 10</column>
 <column name="exitcond44_fu_398_p2">icmp, 0, 0, 28, 21, 15</column>
 <column name="exitcond55_fu_353_p2">icmp, 0, 0, 29, 22, 16</column>
-<column name="empty_76_fu_493_p2">lshr, 0, 0, 96, 32, 32</column>
+<column name="empty_74_fu_493_p2">lshr, 0, 0, 96, 32, 32</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">173, 39, 1, 39</column>
-<column name="empty_66_fu_152">9, 2, 21, 42</column>
-<column name="empty_70_fu_156">9, 2, 16, 32</column>
+<column name="empty_64_fu_152">9, 2, 21, 42</column>
+<column name="empty_68_fu_156">9, 2, 16, 32</column>
 <column name="empty_fu_148">9, 2, 22, 44</column>
 <column name="gmem_ARADDR">26, 5, 64, 320</column>
 <column name="gmem_ARLEN">26, 5, 32, 160</column>
@@ -132,10 +132,10 @@
 <column name="conv2_weights_read_reg_539">64, 0, 64, 0</column>
 <column name="conv3_biases_read_reg_516">64, 0, 64, 0</column>
 <column name="conv3_weights_read_reg_522">64, 0, 64, 0</column>
-<column name="empty_66_fu_152">21, 0, 21, 0</column>
-<column name="empty_70_fu_156">16, 0, 16, 0</column>
-<column name="empty_75_reg_612">2, 0, 2, 0</column>
-<column name="empty_77_reg_622">15, 0, 15, 0</column>
+<column name="empty_64_fu_152">21, 0, 21, 0</column>
+<column name="empty_68_fu_156">16, 0, 16, 0</column>
+<column name="empty_73_reg_612">2, 0, 2, 0</column>
+<column name="empty_75_reg_622">15, 0, 15, 0</column>
 <column name="empty_fu_148">22, 0, 22, 0</column>
 <column name="gmem_addr_3_read_reg_617">32, 0, 32, 0</column>
 <column name="gmem_addr_3_reg_606">64, 0, 64, 0</column>

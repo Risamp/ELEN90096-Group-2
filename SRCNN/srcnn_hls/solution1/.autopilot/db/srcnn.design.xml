@@ -249,7 +249,7 @@
 <DSP>1</DSP>
 <AVAIL_DSP>1248</AVAIL_DSP>
 <UTIL_DSP>~0</UTIL_DSP>
-<FF>1042</FF>
+<FF>1040</FF>
 <AVAIL_FF>234240</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
 <LUT>2306</LUT>
@@ -913,13 +913,13 @@
 <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>449153806</Best-caseLatency>
-<Average-caseLatency>449153806</Average-caseLatency>
-<Worst-caseLatency>449153806</Worst-caseLatency>
+<Best-caseLatency>449216581</Best-caseLatency>
+<Average-caseLatency>449216581</Average-caseLatency>
+<Worst-caseLatency>449216581</Worst-caseLatency>
 <Best-caseRealTimeLatency>4.492 sec</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>4.492 sec</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>4.492 sec</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>449153806</PipelineInitiationInterval>
+<PipelineInitiationInterval>449216581</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -927,10 +927,10 @@
 <Name>TJ</Name>
 <Slack>7.30</Slack>
 <TripCount>15</TripCount>
-<Latency>449153805</Latency>
+<Latency>449216580</Latency>
 <AbsoluteTimeLatency>4.492 sec</AbsoluteTimeLatency>
-<IterationLatency>29943587</IterationLatency>
-<PipelineDepth>29943587</PipelineDepth>
+<IterationLatency>29947772</IterationLatency>
+<PipelineDepth>29947772</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
 </InstanceList>
@@ -938,10 +938,10 @@
 <Name>TI</Name>
 <Slack>7.30</Slack>
 <TripCount>15</TripCount>
-<Latency>29943585</Latency>
+<Latency>29947770</Latency>
 <AbsoluteTimeLatency>0.299 sec</AbsoluteTimeLatency>
-<IterationLatency>1996239</IterationLatency>
-<PipelineDepth>1996239</PipelineDepth>
+<IterationLatency>1996518</IterationLatency>
+<PipelineDepth>1996518</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
 </InstanceList>
@@ -1045,10 +1045,10 @@
 <Name>VITIS_LOOP_131_1</Name>
 <Slack>7.30</Slack>
 <TripCount>32</TripCount>
-<Latency>32193</Latency>
-<AbsoluteTimeLatency>0.322 ms</AbsoluteTimeLatency>
-<IterationLatency>1006</IterationLatency>
-<PipelineDepth>1006</PipelineDepth>
+<Latency>32480</Latency>
+<AbsoluteTimeLatency>0.325 ms</AbsoluteTimeLatency>
+<IterationLatency>1015</IterationLatency>
+<PipelineDepth>1015</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
 </InstanceList>
@@ -1101,10 +1101,10 @@
 <DSP>2</DSP>
 <AVAIL_DSP>1248</AVAIL_DSP>
 <UTIL_DSP>~0</UTIL_DSP>
-<FF>1175</FF>
+<FF>1181</FF>
 <AVAIL_FF>234240</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>1993</LUT>
+<LUT>2171</LUT>
 <AVAIL_LUT>117120</AVAIL_LUT>
 <UTIL_LUT>1</UTIL_LUT>
 <URAM>0</URAM>
@@ -1980,10 +1980,10 @@
 <DSP>3</DSP>
 <AVAIL_DSP>1248</AVAIL_DSP>
 <UTIL_DSP>~0</UTIL_DSP>
-<FF>1152</FF>
+<FF>1148</FF>
 <AVAIL_FF>234240</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>2375</LUT>
+<LUT>2373</LUT>
 <AVAIL_LUT>117120</AVAIL_LUT>
 <UTIL_LUT>2</UTIL_LUT>
 <URAM>0</URAM>
@@ -2624,13 +2624,13 @@
 <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>6066420713</Best-caseLatency>
-<Average-caseLatency>6066420713</Average-caseLatency>
-<Worst-caseLatency>6066420713</Worst-caseLatency>
-<Best-caseRealTimeLatency>60.664 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>60.664 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>60.664 sec</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>6066420714</PipelineInitiationInterval>
+<Best-caseLatency>6066483488</Best-caseLatency>
+<Average-caseLatency>6066483488</Average-caseLatency>
+<Worst-caseLatency>6066483488</Worst-caseLatency>
+<Best-caseRealTimeLatency>60.665 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>60.665 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>60.665 sec</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>6066483489</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -2683,7 +2683,7 @@
 <FF>5852</FF>
 <AVAIL_FF>234240</AVAIL_FF>
 <UTIL_FF>2</UTIL_FF>
-<LUT>9497</LUT>
+<LUT>9673</LUT>
 <AVAIL_LUT>117120</AVAIL_LUT>
 <UTIL_LUT>8</UTIL_LUT>
 <URAM>0</URAM>

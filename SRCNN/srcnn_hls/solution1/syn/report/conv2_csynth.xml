@@ -22,30 +22,30 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>449153806</Best-caseLatency>
-<Average-caseLatency>449153806</Average-caseLatency>
-<Worst-caseLatency>449153806</Worst-caseLatency>
+<Best-caseLatency>449216581</Best-caseLatency>
+<Average-caseLatency>449216581</Average-caseLatency>
+<Worst-caseLatency>449216581</Worst-caseLatency>
 <Best-caseRealTimeLatency>4.492 sec</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>4.492 sec</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>4.492 sec</Worst-caseRealTimeLatency>
-<Interval-min>449153806</Interval-min>
-<Interval-max>449153806</Interval-max>
+<Interval-min>449216581</Interval-min>
+<Interval-max>449216581</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <TJ>
 <Slack>7.30</Slack>
 <TripCount>15</TripCount>
-<Latency>449153805</Latency>
-<AbsoluteTimeLatency>4491538050</AbsoluteTimeLatency>
-<IterationLatency>29943587</IterationLatency>
+<Latency>449216580</Latency>
+<AbsoluteTimeLatency>4492165800</AbsoluteTimeLatency>
+<IterationLatency>29947772</IterationLatency>
 <InstanceList>
 </InstanceList>
 <TI>
 <Slack>7.30</Slack>
 <TripCount>15</TripCount>
-<Latency>29943585</Latency>
-<AbsoluteTimeLatency>299435850</AbsoluteTimeLatency>
-<IterationLatency>1996239</IterationLatency>
+<Latency>29947770</Latency>
+<AbsoluteTimeLatency>299477700</AbsoluteTimeLatency>
+<IterationLatency>1996518</IterationLatency>
 <InstanceList>
 </InstanceList>
 <TI.1>
@@ -123,9 +123,9 @@
 <VITIS_LOOP_131_1>
 <Slack>7.30</Slack>
 <TripCount>32</TripCount>
-<Latency>32193</Latency>
-<AbsoluteTimeLatency>321930</AbsoluteTimeLatency>
-<IterationLatency>1006</IterationLatency>
+<Latency>32480</Latency>
+<AbsoluteTimeLatency>324800</AbsoluteTimeLatency>
+<IterationLatency>1015</IterationLatency>
 <InstanceList>
 </InstanceList>
 <VITIS_LOOP_132_2>
@@ -165,8 +165,8 @@
 <Resources>
 <BRAM_18K>60</BRAM_18K>
 <DSP>2</DSP>
-<FF>1175</FF>
-<LUT>1993</LUT>
+<FF>1181</FF>
+<LUT>2171</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

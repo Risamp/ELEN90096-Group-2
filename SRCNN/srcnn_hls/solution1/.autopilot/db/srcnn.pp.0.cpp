@@ -5712,12 +5712,12 @@ typedef ap_fixed<24,2> input_ft;
 typedef ap_fixed<12,1> conv1_w;
 typedef ap_fixed<10,1> conv1_b;
 typedef ap_fixed<18,1> conv2_w;
-typedef ap_fixed<24,1> conv2_b;
-typedef ap_fixed<20,1> conv3_w;
+typedef ap_fixed<10,1> conv2_b;
+typedef ap_fixed<18,1> conv3_w;
 typedef ap_fixed<15,1> conv3_b;
-typedef ap_fixed<32,3> output_conv1;
-typedef ap_fixed<32,3> output_conv2;
-typedef ap_fixed<32,3> output_conv3;
+typedef ap_fixed<32,2> output_conv1;
+typedef ap_fixed<32,2> output_conv2;
+typedef ap_fixed<32,2> output_conv3;
 
 
 __attribute__((sdx_kernel("srcnn", 0))) void srcnn(input_ft input_ftmap[1][255][255],

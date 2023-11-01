@@ -29,16 +29,16 @@
 // data types
 //typedef float ftmap_t;  // feature map
 //typedef float param_t;  // parameters
-typedef ap_fixed<24,2> input_ft;  // input features
+typedef ap_fixed<24,3> input_ft;  // input features
 typedef ap_fixed<12,1> conv1_w;  // conv1 weights
 typedef ap_fixed<10,1> conv1_b;  // conv1 biases
 typedef ap_fixed<18,1> conv2_w;  // conv2 weights
-typedef ap_fixed<24,1> conv2_b;  // conv2 biases
-typedef ap_fixed<20,1> conv3_w;  // conv3 weights
+typedef ap_fixed<10,1> conv2_b;  // conv2 biases
+typedef ap_fixed<18,1> conv3_w;  // conv3 weights
 typedef ap_fixed<15,1> conv3_b;  // conv3 biases
 typedef ap_fixed<32,3> output_conv1;  // conv1 output
 typedef ap_fixed<32,3> output_conv2;  // conv2 output
-typedef ap_fixed<32,3> output_conv3;  // conv3 output
+typedef ap_fixed<24,3> output_conv3;  // conv3 output
 
 // implements end-to-end SRCNN
 void srcnn(input_ft input_ftmap[N0][H][W],

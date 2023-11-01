@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2'" level="0">
-<item name = "Date">Thu Nov  2 03:05:35 2023
+<item name = "Date">Thu Nov  2 03:24:09 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">449153806, 449153806, 4.492 sec, 4.492 sec, 449153806, 449153806, no</column>
+<column name="">449216581, 449216581, 4.492 sec, 4.492 sec, 449216581, 449216581, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TJ">449153805, 449153805, 29943587, -, -, 15, no</column>
-<column name=" + TI">29943585, 29943585, 1996239, -, -, 15, no</column>
+<column name="- TJ">449216580, 449216580, 29947772, -, -, 15, no</column>
+<column name=" + TI">29947770, 29947770, 1996518, -, -, 15, no</column>
 <column name="  ++ TI.1">18496, 18496, 1, -, -, 18496, no</column>
 <column name="  ++ VITIS_LOOP_109_1">66496, 66496, 1039, -, -, 64, no</column>
 <column name="   +++ VITIS_LOOP_110_2">1037, 1037, 61, -, -, 17, no</column>
@@ -45,7 +45,7 @@
 <column name="   +++ TY">58429, 58429, 3437, -, -, 17, no</column>
 <column name="    ++++ TX">3435, 3435, 202, -, -, 17, no</column>
 <column name="     +++++ NIN">192, 192, 3, -, -, 64, no</column>
-<column name="  ++ VITIS_LOOP_131_1">32193, 32193, 1006, -, -, 32, no</column>
+<column name="  ++ VITIS_LOOP_131_1">32480, 32480, 1015, -, -, 32, no</column>
 <column name="   +++ VITIS_LOOP_132_2">1003, 1003, 59, -, -, 17, no</column>
 <column name="    ++++ VITIS_LOOP_133_3">51, 51, 3, -, -, 17, no</column>
 <column name="  ++ TI.5">9248, 9248, 1, -, -, 9248, no</column>

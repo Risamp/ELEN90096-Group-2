@@ -6,7 +6,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="srcnn_srcnn,hls_ip_2023_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck26-sfvc784-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=1771453417,HLS_SYN_TPT=none,HLS_SYN_MEM=133,HLS_SYN_DSP=0,HLS_SYN_FF=5852,HLS_SYN_LUT=9497,HLS_VERSION=2023_1}" *)
+(* CORE_GENERATION_INFO="srcnn_srcnn,hls_ip_2023_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck26-sfvc784-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=1771516192,HLS_SYN_TPT=none,HLS_SYN_MEM=133,HLS_SYN_DSP=0,HLS_SYN_FF=5852,HLS_SYN_LUT=9673,HLS_VERSION=2023_1}" *)
 
 module srcnn (
         ap_clk,
@@ -246,11 +246,11 @@ reg   [63:0] gmem_addr_reg_565;
 reg   [63:0] gmem_addr_3_reg_606;
 wire    ap_CS_fsm_state17;
 wire   [0:0] exitcond3_fu_443_p2;
-wire   [1:0] empty_75_fu_479_p1;
-reg   [1:0] empty_75_reg_612;
+wire   [1:0] empty_73_fu_479_p1;
+reg   [1:0] empty_73_reg_612;
 reg   [31:0] gmem_addr_3_read_reg_617;
-wire   [14:0] empty_77_fu_498_p1;
-reg   [14:0] empty_77_reg_622;
+wire   [14:0] empty_75_fu_498_p1;
+reg   [14:0] empty_75_reg_622;
 wire    ap_CS_fsm_state37;
 wire    grp_conv1_fu_283_ap_start;
 wire    grp_conv1_fu_283_ap_done;
@@ -391,16 +391,16 @@ wire  signed [63:0] sext_ln35_fu_384_p1;
 wire  signed [63:0] sext_ln36_fu_429_p1;
 wire  signed [63:0] p_cast_cast_fu_469_p1;
 reg   [21:0] empty_fu_148;
-wire   [21:0] empty_65_fu_359_p2;
+wire   [21:0] empty_63_fu_359_p2;
 wire    ap_CS_fsm_state3;
 wire   [0:0] exitcond55_fu_353_p2;
-reg   [20:0] empty_66_fu_152;
-wire   [20:0] empty_69_fu_404_p2;
+reg   [20:0] empty_64_fu_152;
+wire   [20:0] empty_67_fu_404_p2;
 wire    ap_CS_fsm_state10;
 wire   [0:0] exitcond44_fu_398_p2;
 wire    ap_CS_fsm_state5;
-reg   [15:0] empty_70_fu_156;
-wire   [15:0] empty_73_fu_449_p2;
+reg   [15:0] empty_68_fu_156;
+wire   [15:0] empty_71_fu_449_p2;
 wire    ap_CS_fsm_state12;
 wire   [61:0] trunc_ln_fu_325_p4;
 wire   [61:0] trunc_ln1_fu_375_p4;
@@ -408,7 +408,7 @@ wire   [61:0] trunc_ln2_fu_420_p4;
 wire   [61:0] p_cast_fu_460_p4;
 wire   [4:0] tmp_1_fu_482_p3;
 wire   [31:0] p_cast2_fu_489_p1;
-wire   [31:0] empty_76_fu_493_p2;
+wire   [31:0] empty_74_fu_493_p2;
 reg   [37:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 reg    ap_ST_fsm_state2_blk;
@@ -631,7 +631,7 @@ srcnn_conv3 grp_conv3_fu_311(
     .m_axi_gmem_BUSER(1'd0),
     .input_ftmap(conv2_output_ftmap_read_reg_527),
     .conv3_weights(conv3_weights_read_reg_522),
-    .conv3_biases_0_0_val(empty_77_reg_622),
+    .conv3_biases_0_0_val(empty_75_reg_622),
     .output_ftmap(output_ftmap_read_reg_510)
 );
 
@@ -812,17 +812,17 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        empty_66_fu_152 <= 21'd0;
+        empty_64_fu_152 <= 21'd0;
     end else if (((exitcond44_fu_398_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state10))) begin
-        empty_66_fu_152 <= empty_69_fu_404_p2;
+        empty_64_fu_152 <= empty_67_fu_404_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state12)) begin
-        empty_70_fu_156 <= 16'd0;
+        empty_68_fu_156 <= 16'd0;
     end else if (((exitcond3_fu_443_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17))) begin
-        empty_70_fu_156 <= empty_73_fu_449_p2;
+        empty_68_fu_156 <= empty_71_fu_449_p2;
     end
 end
 
@@ -830,7 +830,7 @@ always @ (posedge ap_clk) begin
     if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         empty_fu_148 <= 22'd0;
     end else if (((exitcond55_fu_353_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
-        empty_fu_148 <= empty_65_fu_359_p2;
+        empty_fu_148 <= empty_63_fu_359_p2;
     end
 end
 
@@ -852,14 +852,14 @@ end
 
 always @ (posedge ap_clk) begin
     if (((exitcond3_fu_443_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state17))) begin
-        empty_75_reg_612 <= empty_75_fu_479_p1;
+        empty_73_reg_612 <= empty_73_fu_479_p1;
         gmem_addr_3_reg_606 <= p_cast_cast_fu_469_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state37)) begin
-        empty_77_reg_622 <= empty_77_fu_498_p1;
+        empty_75_reg_622 <= empty_75_fu_498_p1;
     end
 end
 
@@ -1481,21 +1481,21 @@ always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign empty_65_fu_359_p2 = (empty_fu_148 + 22'd1);
+assign empty_63_fu_359_p2 = (empty_fu_148 + 22'd1);
 
-assign empty_69_fu_404_p2 = (empty_66_fu_152 + 21'd1);
+assign empty_67_fu_404_p2 = (empty_64_fu_152 + 21'd1);
 
-assign empty_73_fu_449_p2 = (empty_70_fu_156 + 16'd1);
+assign empty_71_fu_449_p2 = (empty_68_fu_156 + 16'd1);
 
-assign empty_75_fu_479_p1 = conv3_biases_read_reg_516[1:0];
+assign empty_73_fu_479_p1 = conv3_biases_read_reg_516[1:0];
 
-assign empty_76_fu_493_p2 = gmem_addr_3_read_reg_617 >> p_cast2_fu_489_p1;
+assign empty_74_fu_493_p2 = gmem_addr_3_read_reg_617 >> p_cast2_fu_489_p1;
 
-assign empty_77_fu_498_p1 = empty_76_fu_493_p2[14:0];
+assign empty_75_fu_498_p1 = empty_74_fu_493_p2[14:0];
 
-assign exitcond3_fu_443_p2 = ((empty_70_fu_156 == 16'd65025) ? 1'b1 : 1'b0);
+assign exitcond3_fu_443_p2 = ((empty_68_fu_156 == 16'd65025) ? 1'b1 : 1'b0);
 
-assign exitcond44_fu_398_p2 = ((empty_66_fu_152 == 21'd2080800) ? 1'b1 : 1'b0);
+assign exitcond44_fu_398_p2 = ((empty_64_fu_152 == 21'd2080800) ? 1'b1 : 1'b0);
 
 assign exitcond55_fu_353_p2 = ((empty_fu_148 == 22'd4161600) ? 1'b1 : 1'b0);
 
@@ -1517,7 +1517,7 @@ assign sext_ln35_fu_384_p1 = $signed(trunc_ln1_fu_375_p4);
 
 assign sext_ln36_fu_429_p1 = $signed(trunc_ln2_fu_420_p4);
 
-assign tmp_1_fu_482_p3 = {{empty_75_reg_612}, {3'd0}};
+assign tmp_1_fu_482_p3 = {{empty_73_reg_612}, {3'd0}};
 
 assign trunc_ln1_fu_375_p4 = {{conv2_output_ftmap_read_reg_527[63:2]}};
 
