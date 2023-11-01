@@ -4872,3 +4872,458 @@ Command   csim_design done; 67.824 sec.
 INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 67.824 seconds; current allocated memory: 0.855 MB.
 Command ap_source done; 69.473 sec.
 Execute cleanup_all 
+INFO-FLOW: Workspace C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1 opened at Thu Nov 02 00:58:46 +1100 2023
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xck24-ubva530-2LV-c 
+Execute       create_platform xck24-ubva530-2LV-c -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2023.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2023.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xck24-ubva530-2LV-c'
+Command       create_platform done; 0.848 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.105 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.145 sec.
+Execute       ap_part_info -name xck24-ubva530-2LV-c -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1.006 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command   open_solution done; 1.237 sec.
+Execute   set_part xck24-ubva530-2LV-c 
+INFO: [HLS 200-1510] Running: set_part xck24-ubva530-2LV-c 
+Execute     create_platform xck24-ubva530-2LV-c -board  
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.103 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.135 sec.
+Execute     ap_part_info -name xck24-ubva530-2LV-c -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.157 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   source ./srcnn_hls/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+Execute     set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+Execute   csim_design -ldflags -I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include -clean -quiet 
+INFO: [HLS 200-1510] Running: csim_design -ldflags -I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include -clean -quiet 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     ap_part_info -name xck24-ubva530-2LV-c -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 45.226 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 67.838 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 67.839 seconds; current allocated memory: 0.793 MB.
+Command ap_source done; 69.486 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1 opened at Thu Nov 02 01:04:41 +1100 2023
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xck24-ubva530-2LV-c 
+Execute       create_platform xck24-ubva530-2LV-c -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2023.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2023.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xck24-ubva530-2LV-c'
+Command       create_platform done; 0.899 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.122 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.168 sec.
+Execute       ap_part_info -name xck24-ubva530-2LV-c -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1.082 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command   open_solution done; 1.248 sec.
+Execute   set_part xck24-ubva530-2LV-c 
+INFO: [HLS 200-1510] Running: set_part xck24-ubva530-2LV-c 
+Execute     create_platform xck24-ubva530-2LV-c -board  
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.132 sec.
+Execute     ap_part_info -name xck24-ubva530-2LV-c -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.159 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   source ./srcnn_hls/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+Execute     set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+Execute   csim_design -ldflags -I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include -clean -quiet 
+INFO: [HLS 200-1510] Running: csim_design -ldflags -I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include -clean -quiet 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     ap_part_info -name xck24-ubva530-2LV-c -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 45.886 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 69.713 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 69.713 seconds; current allocated memory: 0.789 MB.
+Command ap_source done; 71.357 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1 opened at Thu Nov 02 01:12:14 +1100 2023
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xck24-ubva530-2LV-c 
+Execute       create_platform xck24-ubva530-2LV-c -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2023.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2023.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xck24-ubva530-2LV-c'
+Command       create_platform done; 0.953 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.128 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.169 sec.
+Execute       ap_part_info -name xck24-ubva530-2LV-c -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1.136 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command   open_solution done; 1.396 sec.
+Execute   set_part xck24-ubva530-2LV-c 
+INFO: [HLS 200-1510] Running: set_part xck24-ubva530-2LV-c 
+Execute     create_platform xck24-ubva530-2LV-c -board  
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.104 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.138 sec.
+Execute     ap_part_info -name xck24-ubva530-2LV-c -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.167 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   source ./srcnn_hls/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+Execute     set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+Execute   csim_design -ldflags -I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include -clean -quiet 
+INFO: [HLS 200-1510] Running: csim_design -ldflags -I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include -clean -quiet 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     ap_part_info -name xck24-ubva530-2LV-c -data info 
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 22.342 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 22.342 seconds; current allocated memory: 0.621 MB.
+Command ap_source done; error code: 1; 24.255 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1 opened at Thu Nov 02 01:14:23 +1100 2023
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xck24-ubva530-2LV-c 
+Execute       create_platform xck24-ubva530-2LV-c -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2023.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2023.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xck24-ubva530-2LV-c'
+Command       create_platform done; 0.924 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.119 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.16 sec.
+Execute       ap_part_info -name xck24-ubva530-2LV-c -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1.101 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command   open_solution done; 1.262 sec.
+Execute   set_part xck24-ubva530-2LV-c 
+INFO: [HLS 200-1510] Running: set_part xck24-ubva530-2LV-c 
+Execute     create_platform xck24-ubva530-2LV-c -board  
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.143 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.181 sec.
+Execute     ap_part_info -name xck24-ubva530-2LV-c -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.203 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   source ./srcnn_hls/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+Execute     set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+Execute   csim_design -ldflags -I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include -clean -quiet 
+INFO: [HLS 200-1510] Running: csim_design -ldflags -I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include -clean -quiet 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     ap_part_info -name xck24-ubva530-2LV-c -data info 
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 18.661 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 18.661 seconds; current allocated memory: 0.691 MB.
+Command ap_source done; error code: 1; 20.387 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1 opened at Thu Nov 02 01:20:15 +1100 2023
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xck24-ubva530-2LV-c 
+Execute       create_platform xck24-ubva530-2LV-c -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2023.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2023.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xck24-ubva530-2LV-c'
+Command       create_platform done; 0.873 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command         ap_source done; 1.088 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 1.102 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 2.231 sec.
+Execute       ap_part_info -name xck24-ubva530-2LV-c -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 3.12 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command   open_solution done; 3.283 sec.
+Execute   set_part xck24-ubva530-2LV-c 
+INFO: [HLS 200-1510] Running: set_part xck24-ubva530-2LV-c 
+Execute     create_platform xck24-ubva530-2LV-c -board  
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.106 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.143 sec.
+Execute     ap_part_info -name xck24-ubva530-2LV-c -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.166 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   source ./srcnn_hls/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+Execute     set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+Execute   csim_design -ldflags -I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include -clean -quiet 
+INFO: [HLS 200-1510] Running: csim_design -ldflags -I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include -clean -quiet 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     ap_part_info -name xck24-ubva530-2LV-c -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 46.74 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 76.916 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 76.916 seconds; current allocated memory: 0.875 MB.
+Command ap_source done; 80.619 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1 opened at Thu Nov 02 01:26:00 +1100 2023
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xck24-ubva530-2LV-c 
+Execute       create_platform xck24-ubva530-2LV-c -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2023.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2023.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xck24-ubva530-2LV-c'
+Command       create_platform done; 2.78 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.647 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.679 sec.
+Execute       ap_part_info -name xck24-ubva530-2LV-c -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 3.526 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command   open_solution done; 4.502 sec.
+Execute   set_part xck24-ubva530-2LV-c 
+INFO: [HLS 200-1510] Running: set_part xck24-ubva530-2LV-c 
+Execute     create_platform xck24-ubva530-2LV-c -board  
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.658 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.701 sec.
+Execute     ap_part_info -name xck24-ubva530-2LV-c -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.731 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Command   create_clock done; 0.282 sec.
+Execute   source ./srcnn_hls/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
+Execute     set_directive_top -name srcnn srcnn 
+INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
+Execute   csim_design -ldflags -I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include -clean -quiet 
+INFO: [HLS 200-1510] Running: csim_design -ldflags -I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include -clean -quiet 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     ap_part_info -name xck24-ubva530-2LV-c -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 46.834 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 90.176 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 90.176 seconds; current allocated memory: 0.797 MB.
+Command ap_source done; 99.224 sec.
+Execute cleanup_all 

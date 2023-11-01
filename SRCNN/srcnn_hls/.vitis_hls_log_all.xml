@@ -4,6 +4,8 @@
     <logs>
       <synLog/>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-11-02T01:14:43.870+1100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-11-02T01:12:38.167+1100"/>
         <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T23:45:58.175+1100"/>
         <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T22:49:36.641+1100"/>
         <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T22:48:11.604+1100"/>

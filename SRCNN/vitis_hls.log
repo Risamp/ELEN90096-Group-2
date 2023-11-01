@@ -2,7 +2,7 @@ ECHO is off.
 ECHO is off.
 NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'bcevans' on host '400p1l1760g0508' (Windows NT_amd64 version 6.2) on Thu Nov 02 00:38:08 +1100 2023
+INFO: [HLS 200-10] For user 'bcevans' on host '400p1l1760g0508' (Windows NT_amd64 version 6.2) on Thu Nov 02 01:25:54 +1100 2023
 INFO: [HLS 200-10] In directory 'C:/SPB_Data/ELEN90096-Group-2/SRCNN'
 Sourcing Tcl script 'C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim.tcl'
 INFO: [HLS 200-1510] Running: source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csim.tcl
@@ -254,58 +254,58 @@ C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: no
 ***** SRCNN - Set14 Test *****
 Image Name     PSNR GT vs HR (dB)  PSNR GT vs HR MATLAB (dB)  PSNR GT vs LR (dB)  MSE GT vs HR   MSE GT vs HR MATLAB        
 0.316708 ######## CONV1 -> CONV2 OUT
- 0.0624609 ######## CONV2 -> CONV3 OUT
- 0.240417 ######## FINAL
- baboon         27.9103             24.9898                    27.3618             0.00161402     0.00161402                 
+ 0 ######## CONV2 -> CONV3 OUT
+ 0.0652312 ######## FINAL
+ baboon         8.38784             24.9898                    27.3618             0.143518       0.00161402                 
 0.642986 ######## CONV1 -> CONV2 OUT
- 0.178371 ######## CONV2 -> CONV3 OUT
- 0.524026 ######## FINAL
- barbara        7.02365             26.2451                    24.8997             0.218186       0.00316839                 
+ 0.00694887 ######## CONV2 -> CONV3 OUT
+ 0.0891966 ######## FINAL
+ barbara        7.76669             26.2451                    24.8997             0.165753       0.00316839                 
 1.06921 ######## CONV1 -> CONV2 OUT
- 0.709066 ######## CONV2 -> CONV3 OUT
- 1.2787 ######## FINAL
- bridge         8.96973             26.8397                    25.2317             0.895651       0.00237435                 
+ 0.164847 ######## CONV2 -> CONV3 OUT
+ 0.174518 ######## FINAL
+ bridge         8.07841             26.8397                    25.2317             0.154323       0.00237435                 
 0.357396 ######## CONV1 -> CONV2 OUT
- 0.855527 ######## CONV2 -> CONV3 OUT
- 1.56641 ######## FINAL
- coastguard     9.83053             33.4187                    26.3                1.91406        0.00206895                 
+ 0 ######## CONV2 -> CONV3 OUT
+ 0.0744118 ######## FINAL
+ coastguard     8.21444             33.4187                    26.3                0.149451       0.00206895                 
 0.0832457 ######## CONV1 -> CONV2 OUT
- 0.84428 ######## CONV2 -> CONV3 OUT
- 1.66852 ######## FINAL
- face           7.31002             27.3319                    32.6794             3.23353        0.000454177                
+ 0 ######## CONV2 -> CONV3 OUT
+ 0.0277299 ######## FINAL
+ face           11.0448             27.3319                    32.6794             0.0777052      0.000454177                
 0.38174 ######## CONV1 -> CONV2 OUT
- 0.994707 ######## CONV2 -> CONV3 OUT
- 1.95242 ######## FINAL
- flowers        8.62562             35.727                     25.6995             4.29619        0.00184746                 
+ 0 ######## CONV2 -> CONV3 OUT
+ 0.0760315 ######## FINAL
+ flowers        9.27901             35.727                     25.6995             0.116919       0.00184746                 
 1.07848 ######## CONV1 -> CONV2 OUT
- 1.55337 ######## CONV2 -> CONV3 OUT
- 2.68719 ######## FINAL
- foreman        8.30178             30.8413                    33.2014             5.889          0.000266235                
+ 0.183099 ######## CONV2 -> CONV3 OUT
+ 0.17709 ######## FINAL
+ foreman        6.08924             30.8413                    33.2014             0.244226       0.000266235                
 0.707334 ######## CONV1 -> CONV2 OUT
- 1.79499 ######## CONV2 -> CONV3 OUT
- 3.0981 ######## FINAL
- lenna          9.47816             27.1209                    29.1689             9.01359        0.000822304                
+ 0.0293751 ######## CONV2 -> CONV3 OUT
+ 0.11038 ######## FINAL
+ lenna          8.23852             27.1209                    29.1689             0.148607       0.000822304                
 0.231513 ######## CONV1 -> CONV2 OUT
- 1.71251 ######## CONV2 -> CONV3 OUT
- 3.11096 ######## FINAL
- man            8.38842             27.9822                    26.0613             11.9221        0.00193996                 
+ 0 ######## CONV2 -> CONV3 OUT
+ 0.0271906 ######## FINAL
+ man            9.21806             27.9822                    26.0613             0.118543       0.00193996                 
 0.397524 ######## CONV1 -> CONV2 OUT
- 1.87246 ######## CONV2 -> CONV3 OUT
- 3.40024 ######## FINAL
- monarch        9.12141             33.4745                    24.5799             14.6339        0.00159023                 
+ 0 ######## CONV2 -> CONV3 OUT
+ 0.0765752 ######## FINAL
+ monarch        7.76457             33.4745                    24.5799             0.165873       0.00159023                 
 0.61752 ######## CONV1 -> CONV2 OUT
- 2.17847 ######## CONV2 -> CONV3 OUT
- 3.84542 ######## FINAL
- pepper         9.53854             29.4367                    32.0454             18.2634        0.000447919                
+ 0.0546095 ######## CONV2 -> CONV3 OUT
+ 0.116454 ######## FINAL
+ pepper         7.64253             29.4367                    32.0454             0.170535       0.000447919                
 0.922331 ######## CONV1 -> CONV2 OUT
- 2.64135 ######## CONV2 -> CONV3 OUT
- 4.54508 ######## FINAL
- ppt3           8.20884             27.6649                    26.6842             22.6428        0.0011378                  
+ 0.159906 ######## CONV2 -> CONV3 OUT
+ 0.164621 ######## FINAL
+ ppt3           5.01793             27.6649                    26.6842             0.313072       0.0011378                  
 0.85219 ######## CONV1 -> CONV2 OUT
- 2.83937 ######## CONV2 -> CONV3 OUT
- 4.80196 ######## FINAL
- zebra          8.19832             0                          24.7423             29.3642        0.00171134                 
+ 0.0282823 ######## CONV2 -> CONV3 OUT
+ 0.110359 ######## FINAL
+ zebra          8.39767             0                          24.7423             0.143352       0.00171134                 
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 67.824 seconds; current allocated memory: 0.855 MB.
-INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 2 seconds. Total elapsed time: 70.461 seconds; peak allocated memory: 93.027 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 90.176 seconds; current allocated memory: 0.797 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 2 seconds. Total elapsed time: 106.638 seconds; peak allocated memory: 92.703 MB.
