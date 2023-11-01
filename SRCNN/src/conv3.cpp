@@ -12,6 +12,7 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
            param_t conv3_biases[N3],
            ftmap_t output_ftmap[N3][H][W])
 {
+	cout << "\n " << input_ftmap[0][0][0] << "conv3 input_ftmap";
 
 	#pragma HLS PIPELINE off
 
@@ -98,6 +99,8 @@ void load_input_buffer_c3(
 		// burst in main image area
 		memcpy(&input_fm_buffer[bin][bh][P3], &input_ftmap[in + bin][hclamp], W * sizeof(ftmap_t));
 	}}
+
+	cout << "\n " << input_fm_buffer[0][0][0] << "conv3 input_fm_buffer";
 }
 
 void load_weight_buffer_c3(
@@ -131,13 +134,12 @@ void export_output_buffer_c3(
 
 			output_fm_buffer[bout][bh][bw] = output_fm_buffer[bout][bh][bw] + biases[bout + out];
 
-			if (output_fm_buffer[bout][bh][bw] < 0) {
-				output_fm_buffer[bout][bh][bw] = 0;
-			}
 		}
 
 		memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], W * sizeof(ftmap_t));
 	}}
+
+	cout << "\n " << output_fm_buffer[0][0][0] << "conv3 output_fm_buffer";
 
 	clear_buffer_c3(output_fm_buffer);
 }

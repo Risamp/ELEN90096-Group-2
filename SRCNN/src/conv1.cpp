@@ -139,6 +139,9 @@ void export_output_buffer_c1(
 		memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], W * sizeof(ftmap_t));
 	}}
 
+	cout << "\n " << output_fm_buffer[0][0][0] << "conv1 output_fm_buffer";
+	cout << "\n " << output_ftmap[0][0][0] << "conv1 output_ftmap";
+
 	clear_buffer_c1(output_fm_buffer);
 }
 

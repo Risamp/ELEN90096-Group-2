@@ -116,10 +116,8 @@ void load_input_buffer_c2(
 );
 
 void load_weight_buffer_c2(
-	param_t weight_buffer[C2_OD][C2_ID][F2][F2],
-	param_t conv1_weights[N2][N1][F2][F2],
-	int out,
-	int in
+	param_t weight_buffer[N2][N1][F2][F2],
+	param_t conv1_weights[N2][N1][F2][F2]
 );
 
 void export_output_buffer_c2(
