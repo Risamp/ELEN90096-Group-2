@@ -13,52 +13,52 @@ module srcnn_srcnn_Pipeline_1 (
         ap_done,
         ap_idle,
         ap_ready,
-        m_axi_output_r_AWVALID,
-        m_axi_output_r_AWREADY,
-        m_axi_output_r_AWADDR,
-        m_axi_output_r_AWID,
-        m_axi_output_r_AWLEN,
-        m_axi_output_r_AWSIZE,
-        m_axi_output_r_AWBURST,
-        m_axi_output_r_AWLOCK,
-        m_axi_output_r_AWCACHE,
-        m_axi_output_r_AWPROT,
-        m_axi_output_r_AWQOS,
-        m_axi_output_r_AWREGION,
-        m_axi_output_r_AWUSER,
-        m_axi_output_r_WVALID,
-        m_axi_output_r_WREADY,
-        m_axi_output_r_WDATA,
-        m_axi_output_r_WSTRB,
-        m_axi_output_r_WLAST,
-        m_axi_output_r_WID,
-        m_axi_output_r_WUSER,
-        m_axi_output_r_ARVALID,
-        m_axi_output_r_ARREADY,
-        m_axi_output_r_ARADDR,
-        m_axi_output_r_ARID,
-        m_axi_output_r_ARLEN,
-        m_axi_output_r_ARSIZE,
-        m_axi_output_r_ARBURST,
-        m_axi_output_r_ARLOCK,
-        m_axi_output_r_ARCACHE,
-        m_axi_output_r_ARPROT,
-        m_axi_output_r_ARQOS,
-        m_axi_output_r_ARREGION,
-        m_axi_output_r_ARUSER,
-        m_axi_output_r_RVALID,
-        m_axi_output_r_RREADY,
-        m_axi_output_r_RDATA,
-        m_axi_output_r_RLAST,
-        m_axi_output_r_RID,
-        m_axi_output_r_RFIFONUM,
-        m_axi_output_r_RUSER,
-        m_axi_output_r_RRESP,
-        m_axi_output_r_BVALID,
-        m_axi_output_r_BREADY,
-        m_axi_output_r_BRESP,
-        m_axi_output_r_BID,
-        m_axi_output_r_BUSER,
+        m_axi_i3_AWVALID,
+        m_axi_i3_AWREADY,
+        m_axi_i3_AWADDR,
+        m_axi_i3_AWID,
+        m_axi_i3_AWLEN,
+        m_axi_i3_AWSIZE,
+        m_axi_i3_AWBURST,
+        m_axi_i3_AWLOCK,
+        m_axi_i3_AWCACHE,
+        m_axi_i3_AWPROT,
+        m_axi_i3_AWQOS,
+        m_axi_i3_AWREGION,
+        m_axi_i3_AWUSER,
+        m_axi_i3_WVALID,
+        m_axi_i3_WREADY,
+        m_axi_i3_WDATA,
+        m_axi_i3_WSTRB,
+        m_axi_i3_WLAST,
+        m_axi_i3_WID,
+        m_axi_i3_WUSER,
+        m_axi_i3_ARVALID,
+        m_axi_i3_ARREADY,
+        m_axi_i3_ARADDR,
+        m_axi_i3_ARID,
+        m_axi_i3_ARLEN,
+        m_axi_i3_ARSIZE,
+        m_axi_i3_ARBURST,
+        m_axi_i3_ARLOCK,
+        m_axi_i3_ARCACHE,
+        m_axi_i3_ARPROT,
+        m_axi_i3_ARQOS,
+        m_axi_i3_ARREGION,
+        m_axi_i3_ARUSER,
+        m_axi_i3_RVALID,
+        m_axi_i3_RREADY,
+        m_axi_i3_RDATA,
+        m_axi_i3_RLAST,
+        m_axi_i3_RID,
+        m_axi_i3_RFIFONUM,
+        m_axi_i3_RUSER,
+        m_axi_i3_RRESP,
+        m_axi_i3_BVALID,
+        m_axi_i3_BREADY,
+        m_axi_i3_BRESP,
+        m_axi_i3_BID,
+        m_axi_i3_BUSER,
         sext_ln38
 );
 
@@ -70,56 +70,56 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-output   m_axi_output_r_AWVALID;
-input   m_axi_output_r_AWREADY;
-output  [63:0] m_axi_output_r_AWADDR;
-output  [0:0] m_axi_output_r_AWID;
-output  [31:0] m_axi_output_r_AWLEN;
-output  [2:0] m_axi_output_r_AWSIZE;
-output  [1:0] m_axi_output_r_AWBURST;
-output  [1:0] m_axi_output_r_AWLOCK;
-output  [3:0] m_axi_output_r_AWCACHE;
-output  [2:0] m_axi_output_r_AWPROT;
-output  [3:0] m_axi_output_r_AWQOS;
-output  [3:0] m_axi_output_r_AWREGION;
-output  [0:0] m_axi_output_r_AWUSER;
-output   m_axi_output_r_WVALID;
-input   m_axi_output_r_WREADY;
-output  [31:0] m_axi_output_r_WDATA;
-output  [3:0] m_axi_output_r_WSTRB;
-output   m_axi_output_r_WLAST;
-output  [0:0] m_axi_output_r_WID;
-output  [0:0] m_axi_output_r_WUSER;
-output   m_axi_output_r_ARVALID;
-input   m_axi_output_r_ARREADY;
-output  [63:0] m_axi_output_r_ARADDR;
-output  [0:0] m_axi_output_r_ARID;
-output  [31:0] m_axi_output_r_ARLEN;
-output  [2:0] m_axi_output_r_ARSIZE;
-output  [1:0] m_axi_output_r_ARBURST;
-output  [1:0] m_axi_output_r_ARLOCK;
-output  [3:0] m_axi_output_r_ARCACHE;
-output  [2:0] m_axi_output_r_ARPROT;
-output  [3:0] m_axi_output_r_ARQOS;
-output  [3:0] m_axi_output_r_ARREGION;
-output  [0:0] m_axi_output_r_ARUSER;
-input   m_axi_output_r_RVALID;
-output   m_axi_output_r_RREADY;
-input  [31:0] m_axi_output_r_RDATA;
-input   m_axi_output_r_RLAST;
-input  [0:0] m_axi_output_r_RID;
-input  [8:0] m_axi_output_r_RFIFONUM;
-input  [0:0] m_axi_output_r_RUSER;
-input  [1:0] m_axi_output_r_RRESP;
-input   m_axi_output_r_BVALID;
-output   m_axi_output_r_BREADY;
-input  [1:0] m_axi_output_r_BRESP;
-input  [0:0] m_axi_output_r_BID;
-input  [0:0] m_axi_output_r_BUSER;
+output   m_axi_i3_AWVALID;
+input   m_axi_i3_AWREADY;
+output  [63:0] m_axi_i3_AWADDR;
+output  [0:0] m_axi_i3_AWID;
+output  [31:0] m_axi_i3_AWLEN;
+output  [2:0] m_axi_i3_AWSIZE;
+output  [1:0] m_axi_i3_AWBURST;
+output  [1:0] m_axi_i3_AWLOCK;
+output  [3:0] m_axi_i3_AWCACHE;
+output  [2:0] m_axi_i3_AWPROT;
+output  [3:0] m_axi_i3_AWQOS;
+output  [3:0] m_axi_i3_AWREGION;
+output  [0:0] m_axi_i3_AWUSER;
+output   m_axi_i3_WVALID;
+input   m_axi_i3_WREADY;
+output  [31:0] m_axi_i3_WDATA;
+output  [3:0] m_axi_i3_WSTRB;
+output   m_axi_i3_WLAST;
+output  [0:0] m_axi_i3_WID;
+output  [0:0] m_axi_i3_WUSER;
+output   m_axi_i3_ARVALID;
+input   m_axi_i3_ARREADY;
+output  [63:0] m_axi_i3_ARADDR;
+output  [0:0] m_axi_i3_ARID;
+output  [31:0] m_axi_i3_ARLEN;
+output  [2:0] m_axi_i3_ARSIZE;
+output  [1:0] m_axi_i3_ARBURST;
+output  [1:0] m_axi_i3_ARLOCK;
+output  [3:0] m_axi_i3_ARCACHE;
+output  [2:0] m_axi_i3_ARPROT;
+output  [3:0] m_axi_i3_ARQOS;
+output  [3:0] m_axi_i3_ARREGION;
+output  [0:0] m_axi_i3_ARUSER;
+input   m_axi_i3_RVALID;
+output   m_axi_i3_RREADY;
+input  [31:0] m_axi_i3_RDATA;
+input   m_axi_i3_RLAST;
+input  [0:0] m_axi_i3_RID;
+input  [12:0] m_axi_i3_RFIFONUM;
+input  [0:0] m_axi_i3_RUSER;
+input  [1:0] m_axi_i3_RRESP;
+input   m_axi_i3_BVALID;
+output   m_axi_i3_BREADY;
+input  [1:0] m_axi_i3_BRESP;
+input  [0:0] m_axi_i3_BID;
+input  [0:0] m_axi_i3_BUSER;
 input  [61:0] sext_ln38;
 
 reg ap_idle;
-reg m_axi_output_r_WVALID;
+reg m_axi_i3_WVALID;
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_pp0_stage0;
@@ -129,16 +129,16 @@ reg    ap_idle_pp0;
 wire    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state2_pp0_stage0_iter1;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] exitcond33_fu_83_p2;
+wire   [0:0] exitcond33_fu_85_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-reg    output_r_blk_n_W;
+reg    i3_blk_n_W;
 wire    ap_block_pp0_stage0;
 reg    ap_block_pp0_stage0_11001;
 wire    ap_block_pp0_stage0_01001;
-reg   [20:0] empty_fu_46;
-wire   [20:0] empty_64_fu_89_p2;
+reg   [20:0] empty_fu_48;
+wire   [20:0] empty_61_fu_91_p2;
 wire    ap_loop_init;
 reg   [20:0] ap_sig_allocacmp_p_load;
 reg    ap_done_reg;
@@ -205,16 +205,16 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if (((exitcond33_fu_83_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            empty_fu_46 <= empty_64_fu_89_p2;
+        if (((exitcond33_fu_85_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+            empty_fu_48 <= empty_61_fu_91_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            empty_fu_46 <= 21'd0;
+            empty_fu_48 <= 21'd0;
         end
     end
 end
 
 always @ (*) begin
-    if (((exitcond33_fu_83_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((exitcond33_fu_85_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -257,23 +257,23 @@ always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
         ap_sig_allocacmp_p_load = 21'd0;
     end else begin
-        ap_sig_allocacmp_p_load = empty_fu_46;
-    end
-end
-
-always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        m_axi_output_r_WVALID = 1'b1;
-    end else begin
-        m_axi_output_r_WVALID = 1'b0;
+        ap_sig_allocacmp_p_load = empty_fu_48;
     end
 end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        output_r_blk_n_W = m_axi_output_r_WREADY;
+        i3_blk_n_W = m_axi_i3_WREADY;
     end else begin
-        output_r_blk_n_W = 1'b1;
+        i3_blk_n_W = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        m_axi_i3_WVALID = 1'b1;
+    end else begin
+        m_axi_i3_WVALID = 1'b0;
     end
 end
 
@@ -295,11 +295,11 @@ assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 assign ap_block_pp0_stage0_01001 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001 = ((m_axi_output_r_WREADY == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1));
+    ap_block_pp0_stage0_11001 = ((m_axi_i3_WREADY == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_subdone = ((m_axi_output_r_WREADY == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1));
+    ap_block_pp0_stage0_subdone = ((m_axi_i3_WREADY == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1));
 end
 
 assign ap_block_state1_pp0_stage0_iter0 = ~(1'b1 == 1'b1);
@@ -312,70 +312,70 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign empty_64_fu_89_p2 = (ap_sig_allocacmp_p_load + 21'd1);
+assign empty_61_fu_91_p2 = (ap_sig_allocacmp_p_load + 21'd1);
 
-assign exitcond33_fu_83_p2 = ((ap_sig_allocacmp_p_load == 21'd2080800) ? 1'b1 : 1'b0);
+assign exitcond33_fu_85_p2 = ((ap_sig_allocacmp_p_load == 21'd2080800) ? 1'b1 : 1'b0);
 
-assign m_axi_output_r_ARADDR = 64'd0;
+assign m_axi_i3_ARADDR = 64'd0;
 
-assign m_axi_output_r_ARBURST = 2'd0;
+assign m_axi_i3_ARBURST = 2'd0;
 
-assign m_axi_output_r_ARCACHE = 4'd0;
+assign m_axi_i3_ARCACHE = 4'd0;
 
-assign m_axi_output_r_ARID = 1'd0;
+assign m_axi_i3_ARID = 1'd0;
 
-assign m_axi_output_r_ARLEN = 32'd0;
+assign m_axi_i3_ARLEN = 32'd0;
 
-assign m_axi_output_r_ARLOCK = 2'd0;
+assign m_axi_i3_ARLOCK = 2'd0;
 
-assign m_axi_output_r_ARPROT = 3'd0;
+assign m_axi_i3_ARPROT = 3'd0;
 
-assign m_axi_output_r_ARQOS = 4'd0;
+assign m_axi_i3_ARQOS = 4'd0;
 
-assign m_axi_output_r_ARREGION = 4'd0;
+assign m_axi_i3_ARREGION = 4'd0;
 
-assign m_axi_output_r_ARSIZE = 3'd0;
+assign m_axi_i3_ARSIZE = 3'd0;
 
-assign m_axi_output_r_ARUSER = 1'd0;
+assign m_axi_i3_ARUSER = 1'd0;
 
-assign m_axi_output_r_ARVALID = 1'b0;
+assign m_axi_i3_ARVALID = 1'b0;
 
-assign m_axi_output_r_AWADDR = 64'd0;
+assign m_axi_i3_AWADDR = 64'd0;
 
-assign m_axi_output_r_AWBURST = 2'd0;
+assign m_axi_i3_AWBURST = 2'd0;
 
-assign m_axi_output_r_AWCACHE = 4'd0;
+assign m_axi_i3_AWCACHE = 4'd0;
 
-assign m_axi_output_r_AWID = 1'd0;
+assign m_axi_i3_AWID = 1'd0;
 
-assign m_axi_output_r_AWLEN = 32'd0;
+assign m_axi_i3_AWLEN = 32'd0;
 
-assign m_axi_output_r_AWLOCK = 2'd0;
+assign m_axi_i3_AWLOCK = 2'd0;
 
-assign m_axi_output_r_AWPROT = 3'd0;
+assign m_axi_i3_AWPROT = 3'd0;
 
-assign m_axi_output_r_AWQOS = 4'd0;
+assign m_axi_i3_AWQOS = 4'd0;
 
-assign m_axi_output_r_AWREGION = 4'd0;
+assign m_axi_i3_AWREGION = 4'd0;
 
-assign m_axi_output_r_AWSIZE = 3'd0;
+assign m_axi_i3_AWSIZE = 3'd0;
 
-assign m_axi_output_r_AWUSER = 1'd0;
+assign m_axi_i3_AWUSER = 1'd0;
 
-assign m_axi_output_r_AWVALID = 1'b0;
+assign m_axi_i3_AWVALID = 1'b0;
 
-assign m_axi_output_r_BREADY = 1'b0;
+assign m_axi_i3_BREADY = 1'b0;
 
-assign m_axi_output_r_RREADY = 1'b0;
+assign m_axi_i3_RREADY = 1'b0;
 
-assign m_axi_output_r_WDATA = 32'd0;
+assign m_axi_i3_WDATA = 32'd0;
 
-assign m_axi_output_r_WID = 1'd0;
+assign m_axi_i3_WID = 1'd0;
 
-assign m_axi_output_r_WLAST = 1'b0;
+assign m_axi_i3_WLAST = 1'b0;
 
-assign m_axi_output_r_WSTRB = 4'd15;
+assign m_axi_i3_WSTRB = 4'd15;
 
-assign m_axi_output_r_WUSER = 1'd0;
+assign m_axi_i3_WUSER = 1'd0;
 
 endmodule //srcnn_srcnn_Pipeline_1

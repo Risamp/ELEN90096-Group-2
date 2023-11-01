@@ -11,7 +11,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 207 \
+    id 260 \
     name weights_buffer_0_0_0 \
     reset_level 1 \
     sync_rst true \
@@ -30,7 +30,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 208 \
+    id 261 \
     name weights_buffer_0_0_1 \
     reset_level 1 \
     sync_rst true \
@@ -49,7 +49,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 209 \
+    id 262 \
     name weights_buffer_0_0_2 \
     reset_level 1 \
     sync_rst true \
@@ -68,7 +68,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 210 \
+    id 263 \
     name weights_buffer_0_0_3 \
     reset_level 1 \
     sync_rst true \
@@ -87,7 +87,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 211 \
+    id 264 \
     name weights_buffer_0_0_4 \
     reset_level 1 \
     sync_rst true \
@@ -106,7 +106,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 212 \
+    id 265 \
     name weights_buffer_0_0_5 \
     reset_level 1 \
     sync_rst true \
@@ -125,7 +125,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 213 \
+    id 266 \
     name weights_buffer_0_0_6 \
     reset_level 1 \
     sync_rst true \
@@ -144,7 +144,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 214 \
+    id 267 \
     name weights_buffer_0_0_7 \
     reset_level 1 \
     sync_rst true \
@@ -162,7 +162,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 204 \
+    id 257 \
     name tn0 \
     type other \
     dir I \
@@ -177,7 +177,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 205 \
+    id 258 \
     name conv2_weights \
     type other \
     dir I \
@@ -192,15 +192,15 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 206 \
-    name params \
+    id 259 \
+    name w2 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_params \
+    corename dc_w2 \
     op interface \
-    ports { m_axi_params_AWVALID { O 1 bit } m_axi_params_AWREADY { I 1 bit } m_axi_params_AWADDR { O 64 vector } m_axi_params_AWID { O 1 vector } m_axi_params_AWLEN { O 32 vector } m_axi_params_AWSIZE { O 3 vector } m_axi_params_AWBURST { O 2 vector } m_axi_params_AWLOCK { O 2 vector } m_axi_params_AWCACHE { O 4 vector } m_axi_params_AWPROT { O 3 vector } m_axi_params_AWQOS { O 4 vector } m_axi_params_AWREGION { O 4 vector } m_axi_params_AWUSER { O 1 vector } m_axi_params_WVALID { O 1 bit } m_axi_params_WREADY { I 1 bit } m_axi_params_WDATA { O 32 vector } m_axi_params_WSTRB { O 4 vector } m_axi_params_WLAST { O 1 bit } m_axi_params_WID { O 1 vector } m_axi_params_WUSER { O 1 vector } m_axi_params_ARVALID { O 1 bit } m_axi_params_ARREADY { I 1 bit } m_axi_params_ARADDR { O 64 vector } m_axi_params_ARID { O 1 vector } m_axi_params_ARLEN { O 32 vector } m_axi_params_ARSIZE { O 3 vector } m_axi_params_ARBURST { O 2 vector } m_axi_params_ARLOCK { O 2 vector } m_axi_params_ARCACHE { O 4 vector } m_axi_params_ARPROT { O 3 vector } m_axi_params_ARQOS { O 4 vector } m_axi_params_ARREGION { O 4 vector } m_axi_params_ARUSER { O 1 vector } m_axi_params_RVALID { I 1 bit } m_axi_params_RREADY { O 1 bit } m_axi_params_RDATA { I 32 vector } m_axi_params_RLAST { I 1 bit } m_axi_params_RID { I 1 vector } m_axi_params_RFIFONUM { I 9 vector } m_axi_params_RUSER { I 1 vector } m_axi_params_RRESP { I 2 vector } m_axi_params_BVALID { I 1 bit } m_axi_params_BREADY { O 1 bit } m_axi_params_BRESP { I 2 vector } m_axi_params_BID { I 1 vector } m_axi_params_BUSER { I 1 vector } } \
+    ports { m_axi_w2_AWVALID { O 1 bit } m_axi_w2_AWREADY { I 1 bit } m_axi_w2_AWADDR { O 64 vector } m_axi_w2_AWID { O 1 vector } m_axi_w2_AWLEN { O 32 vector } m_axi_w2_AWSIZE { O 3 vector } m_axi_w2_AWBURST { O 2 vector } m_axi_w2_AWLOCK { O 2 vector } m_axi_w2_AWCACHE { O 4 vector } m_axi_w2_AWPROT { O 3 vector } m_axi_w2_AWQOS { O 4 vector } m_axi_w2_AWREGION { O 4 vector } m_axi_w2_AWUSER { O 1 vector } m_axi_w2_WVALID { O 1 bit } m_axi_w2_WREADY { I 1 bit } m_axi_w2_WDATA { O 32 vector } m_axi_w2_WSTRB { O 4 vector } m_axi_w2_WLAST { O 1 bit } m_axi_w2_WID { O 1 vector } m_axi_w2_WUSER { O 1 vector } m_axi_w2_ARVALID { O 1 bit } m_axi_w2_ARREADY { I 1 bit } m_axi_w2_ARADDR { O 64 vector } m_axi_w2_ARID { O 1 vector } m_axi_w2_ARLEN { O 32 vector } m_axi_w2_ARSIZE { O 3 vector } m_axi_w2_ARBURST { O 2 vector } m_axi_w2_ARLOCK { O 2 vector } m_axi_w2_ARCACHE { O 4 vector } m_axi_w2_ARPROT { O 3 vector } m_axi_w2_ARQOS { O 4 vector } m_axi_w2_ARREGION { O 4 vector } m_axi_w2_ARUSER { O 1 vector } m_axi_w2_RVALID { I 1 bit } m_axi_w2_RREADY { O 1 bit } m_axi_w2_RDATA { I 32 vector } m_axi_w2_RLAST { I 1 bit } m_axi_w2_RID { I 1 vector } m_axi_w2_RFIFONUM { I 13 vector } m_axi_w2_RUSER { I 1 vector } m_axi_w2_RRESP { I 2 vector } m_axi_w2_BVALID { I 1 bit } m_axi_w2_BREADY { O 1 bit } m_axi_w2_BRESP { I 2 vector } m_axi_w2_BID { I 1 vector } m_axi_w2_BUSER { I 1 vector } } \
 } "
 }
 

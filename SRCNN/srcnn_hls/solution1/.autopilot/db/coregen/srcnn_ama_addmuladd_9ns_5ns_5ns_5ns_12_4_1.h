@@ -7,7 +7,7 @@
 // ==============================================================
 #ifndef __srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1__HH__
 #define __srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1__HH__
-#include "srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_0.h"
+#include "srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_2.h"
 
 template<
     int ID,
@@ -29,17 +29,17 @@ SC_MODULE(srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1) {
 
 
 
-    srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_0 srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_0_U;
+    srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_2 srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_2_U;
 
-    SC_CTOR(srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1):  srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_0_U ("srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_0_U") {
-        srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_0_U.clk(clk);
-        srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_0_U.rst(reset);
-        srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_0_U.ce(ce);
-        srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_0_U.in0(din0);
-        srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_0_U.in1(din1);
-        srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_0_U.in2(din2);
-        srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_0_U.in3(din3);
-        srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_0_U.dout(dout);
+    SC_CTOR(srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1):  srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_2_U ("srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_2_U") {
+        srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_2_U.clk(clk);
+        srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_2_U.rst(reset);
+        srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_2_U.ce(ce);
+        srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_2_U.in0(din0);
+        srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_2_U.in1(din1);
+        srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_2_U.in2(din2);
+        srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_2_U.in3(din3);
+        srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_2_U.dout(dout);
 
     }
 

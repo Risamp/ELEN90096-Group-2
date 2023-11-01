@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1'" level="0">
-<item name = "Date">Wed Nov  1 04:13:17 2023
+<item name = "Date">Wed Nov  1 16:44:35 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,32 +24,39 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1466940609, 1467071169, 14.669 sec, 14.671 sec, 1466940609, 1467071169, no</column>
+<column name="">2012500665, 2012505017, 20.125 sec, 20.125 sec, 2012500665, 2012505017, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_load_input_buffer_c1_fu_550">load_input_buffer_c1, 76729, 76729, 0.767 ms, 0.767 ms, 76729, 76729, no</column>
-<column name="grp_export_output_buffer_c1_fu_574">export_output_buffer_c1, 109138, 109138, 1.091 ms, 1.091 ms, 109138, 109138, no</column>
-<column name="grp_conv1_Pipeline_KR_KC_fu_589">conv1_Pipeline_KR_KC, 342, 342, 3.420 us, 3.420 us, 342, 342, no</column>
-<column name="grp_conv1_Pipeline_KR_KC1_fu_624">conv1_Pipeline_KR_KC1, 342, 342, 3.420 us, 3.420 us, 342, 342, no</column>
-<column name="grp_conv1_Pipeline_KR_KC2_fu_659">conv1_Pipeline_KR_KC2, 342, 342, 3.420 us, 3.420 us, 342, 342, no</column>
-<column name="grp_conv1_Pipeline_KR_KC3_fu_694">conv1_Pipeline_KR_KC3, 342, 342, 3.420 us, 3.420 us, 342, 342, no</column>
+<column name="grp_load_input_buffer_c1_fu_528">load_input_buffer_c1, 18240, 18240, 0.182 ms, 0.182 ms, 18240, 18240, no</column>
+<column name="grp_conv1_Pipeline_LOAD_WEIGHTS_K_L_fu_544">conv1_Pipeline_LOAD_WEIGHTS_K_L, 651, 651, 6.510 us, 6.510 us, 651, 651, no</column>
+<column name="grp_conv1_Pipeline_KR_KC_fu_555">conv1_Pipeline_KR_KC, 445, 445, 4.450 us, 4.450 us, 445, 445, no</column>
+<column name="grp_conv1_Pipeline_KR_KC1_fu_580">conv1_Pipeline_KR_KC1, 445, 445, 4.450 us, 4.450 us, 445, 445, no</column>
+<column name="grp_conv1_Pipeline_KR_KC2_fu_605">conv1_Pipeline_KR_KC2, 445, 445, 4.450 us, 4.450 us, 445, 445, no</column>
+<column name="grp_conv1_Pipeline_KR_KC3_fu_630">conv1_Pipeline_KR_KC3, 445, 445, 4.450 us, 4.450 us, 445, 445, no</column>
+<column name="grp_conv1_Pipeline_EXPORT_ROW_L_fu_655">conv1_Pipeline_EXPORT_ROW_L, 30608, 30608, 0.306 ms, 0.306 ms, 30608, 30608, no</column>
+<column name="grp_conv1_Pipeline_BW_fu_680">conv1_Pipeline_BW, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_conv1_Pipeline_BW4_fu_703">conv1_Pipeline_BW4, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_conv1_Pipeline_BW5_fu_726">conv1_Pipeline_BW5, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_conv1_Pipeline_BW6_fu_749">conv1_Pipeline_BW6, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_conv1_Pipeline_BW7_fu_769">conv1_Pipeline_BW7, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_conv1_Pipeline_BW8_fu_789">conv1_Pipeline_BW8, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILE_OUT_TILE_ROW">1466940608, 1467071168, 10786328 ~ 10787288, -, -, 136, no</column>
-<column name=" + LOAD_WEIGHTS">1672, 1672, 209, -, -, 8, no</column>
-<column name="  ++ KH">207, 207, 23, -, -, 9, no</column>
-<column name="   +++ KW">21, 21, 4, -, -, 5, no</column>
-<column name=" + OUT_ROW">10590960, 10591920, 88258 ~ 88266, -, -, 120, no</column>
-<column name="  ++ COL">88256, 88263, 1379, -, -, 64, no</column>
-<column name=" + CLEAR">7816, 7816, 977, -, -, 8, no</column>
-<column name="  ++ BH">975, 975, 65, -, -, 15, no</column>
-<column name="   +++ BW">63, 63, 1, -, -, 63, no</column>
+<column name="- TILE_OUT_TILE_ROW">2012500664, 2012505016, 14797799 ~ 14797831, -, -, 136, no</column>
+<column name=" + OUT">14655536, 14655568, 1831942 ~ 1831946, -, -, 8, no</column>
+<column name="  ++ ROW">1831940, 1831943, 457985, -, -, 4, no</column>
+<column name="   +++ COL">114495, 114495, 449, -, -, 255, no</column>
+<column name="   +++ COL">114495, 114495, 449, -, -, 255, no</column>
+<column name="   +++ COL">114495, 114495, 449, -, -, 255, no</column>
+<column name="   +++ COL">114495, 114495, 449, -, -, 255, no</column>
+<column name=" + RELU1_BH">62320, 62320, 1558, -, -, 40, no</column>
+<column name=" + CLEAR_BH">31080, 31080, 777, -, -, 40, no</column>
 </table>
 </item>
 </section>

@@ -11,36 +11,17 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 109 \
-    name conv1_float_255_255_float_1_9_9_float_float_255_255_we_3 \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename conv1_float_255_255_float_1_9_9_float_float_255_255_we_3 \
-    op interface \
-    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_we_3_address0 { O 8 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_we_3_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_we_3_q0 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_we_3'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     id 110 \
-    name conv1_float_255_255_float_1_9_9_float_float_255_255_we_1 \
+    name p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename conv1_float_255_255_float_1_9_9_float_float_255_255_we_1 \
+    corename p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0 \
     op interface \
-    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_we_1_address0 { O 8 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_we_1_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_we_1_q0 { I 32 vector } } \
+    ports { p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0_address0 { O 9 vector } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0_ce0 { O 1 bit } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0_q0 { I 32 vector } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0_address1 { O 9 vector } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0_ce1 { O 1 bit } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0_q1 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_we_1'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0'"
 }
 }
 
@@ -50,16 +31,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     id 111 \
-    name conv1_float_255_255_float_1_9_9_float_float_255_255_we \
+    name p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename conv1_float_255_255_float_1_9_9_float_float_255_255_we \
+    corename p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0 \
     op interface \
-    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_we_address0 { O 8 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_we_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_we_q0 { I 32 vector } } \
+    ports { p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0_address0 { O 9 vector } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0_ce0 { O 1 bit } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0_q0 { I 32 vector } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0_address1 { O 9 vector } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0_ce1 { O 1 bit } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0_q1 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_we'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0'"
 }
 }
 
@@ -69,108 +50,13 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     id 112 \
-    name conv1_float_255_255_float_1_9_9_float_float_255_255_we_2 \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename conv1_float_255_255_float_1_9_9_float_float_255_255_we_2 \
-    op interface \
-    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_address0 { O 8 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_we_2_q0 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_we_2'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 113 \
-    name conv1_float_255_255_float_1_9_9_float_float_255_255_in_7 \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename conv1_float_255_255_float_1_9_9_float_float_255_255_in_7 \
-    op interface \
-    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_in_7_address0 { O 10 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_7_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_in_7_q0 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_in_7'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 114 \
-    name conv1_float_255_255_float_1_9_9_float_float_255_255_in_6 \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename conv1_float_255_255_float_1_9_9_float_float_255_255_in_6 \
-    op interface \
-    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_in_6_address0 { O 10 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_6_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_in_6_q0 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_in_6'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 115 \
-    name conv1_float_255_255_float_1_9_9_float_float_255_255_in_5 \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename conv1_float_255_255_float_1_9_9_float_float_255_255_in_5 \
-    op interface \
-    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_in_5_address0 { O 10 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_5_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_in_5_q0 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_in_5'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 116 \
-    name conv1_float_255_255_float_1_9_9_float_float_255_255_in_4 \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename conv1_float_255_255_float_1_9_9_float_float_255_255_in_4 \
-    op interface \
-    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_in_4_address0 { O 10 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_4_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_in_4_q0 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_in_4'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 117 \
     name conv1_float_255_255_float_1_9_9_float_float_255_255_in_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename conv1_float_255_255_float_1_9_9_float_float_255_255_in_3 \
     op interface \
-    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_address0 { O 10 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_q0 { I 32 vector } } \
+    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_address0 { O 11 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_in_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_in_3'"
@@ -182,33 +68,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 118 \
-    name conv1_float_255_255_float_1_9_9_float_float_255_255_in_2 \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename conv1_float_255_255_float_1_9_9_float_float_255_255_in_2 \
-    op interface \
-    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_address0 { O 10 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_q0 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_in_2'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 119 \
+    id 113 \
     name conv1_float_255_255_float_1_9_9_float_float_255_255_in_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename conv1_float_255_255_float_1_9_9_float_float_255_255_in_1 \
     op interface \
-    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_address0 { O 10 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_q0 { I 32 vector } } \
+    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_address0 { O 11 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_in_1'"
@@ -220,17 +87,36 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 120 \
+    id 114 \
     name conv1_float_255_255_float_1_9_9_float_float_255_255_in \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename conv1_float_255_255_float_1_9_9_float_float_255_255_in \
     op interface \
-    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_in_address0 { O 10 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_in_q0 { I 32 vector } } \
+    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_in_address0 { O 11 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_in_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_in'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 115 \
+    name conv1_float_255_255_float_1_9_9_float_float_255_255_in_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename conv1_float_255_255_float_1_9_9_float_float_255_255_in_2 \
+    op interface \
+    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_address0 { O 11 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_in_2'"
 }
 }
 
@@ -239,14 +125,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 103 \
-    name conv1_float_255_255_float_1_9_9_float_float_255_255_ou_29 \
+    name select_ln63_3 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_conv1_float_255_255_float_1_9_9_float_float_255_255_ou_29 \
+    corename dc_select_ln63_3 \
     op interface \
-    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_ou_29 { I 32 vector } } \
+    ports { select_ln63_3 { I 32 vector } } \
 } "
 }
 
@@ -254,14 +140,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 104 \
-    name select_ln42 \
+    name or_ln63 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_select_ln42 \
+    corename dc_or_ln63 \
     op interface \
-    ports { select_ln42 { I 4 vector } } \
+    ports { or_ln63 { I 5 vector } } \
 } "
 }
 
@@ -269,14 +155,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 105 \
-    name zext_ln34_1 \
+    name zext_ln50_1 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_zext_ln34_1 \
+    corename dc_zext_ln50_1 \
     op interface \
-    ports { zext_ln34_1 { I 4 vector } } \
+    ports { zext_ln50_1 { I 4 vector } } \
 } "
 }
 
@@ -284,14 +170,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 106 \
-    name trunc_ln31_mid2 \
+    name zext_ln52_9 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_trunc_ln31_mid2 \
+    corename dc_zext_ln52_9 \
     op interface \
-    ports { trunc_ln31_mid2 { I 2 vector } } \
+    ports { zext_ln52_9 { I 8 vector } } \
 } "
 }
 
@@ -299,14 +185,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 107 \
-    name zext_ln35_1 \
+    name trunc_ln \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_zext_ln35_1 \
+    corename dc_trunc_ln \
     op interface \
-    ports { zext_ln35_1 { I 8 vector } } \
+    ports { trunc_ln { I 1 vector } } \
 } "
 }
 
@@ -314,14 +200,29 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 108 \
-    name add52_325_out \
+    name zext_ln52_8 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_zext_ln52_8 \
+    op interface \
+    ports { zext_ln52_8 { I 8 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 109 \
+    name add52_3_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_add52_325_out \
+    corename dc_add52_3_out \
     op interface \
-    ports { add52_325_out { O 32 vector } add52_325_out_ap_vld { O 1 bit } } \
+    ports { add52_3_out { O 32 vector } add52_3_out_ap_vld { O 1 bit } } \
 } "
 }
 

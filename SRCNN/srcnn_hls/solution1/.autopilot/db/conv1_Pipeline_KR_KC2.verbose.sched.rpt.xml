@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1_Pipeline_KR_KC2'" level="0">
-<item name = "Date">Wed Nov  1 04:13:12 2023
+<item name = "Date">Wed Nov  1 16:44:28 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">342, 342, 3.420 us, 3.420 us, 342, 342, no</column>
+<column name="">445, 445, 4.450 us, 4.450 us, 445, 445, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- KR_KC">340, 340, 21, 4, 4, 81, yes</column>
+<column name="- KR_KC">443, 443, 20, 12, 12, 36, yes</column>
 </table>
 </item>
 </section>

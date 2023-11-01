@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'load_buffer_tile_c2'" level="0">
-<item name = "Date">Wed Nov  1 04:13:51 2023
+<item name = "Date">Wed Nov  1 16:45:05 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -31,10 +31,10 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_load_buffer_tile_c2_Pipeline_1_fu_128">load_buffer_tile_c2_Pipeline_1, 2314, 2314, 23.140 us, 23.140 us, 2314, 2314, no</column>
-<column name="grp_load_buffer_tile_c2_Pipeline_2_fu_134">load_buffer_tile_c2_Pipeline_2, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
-<column name="grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1_fu_140">load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1, 2393, 2393, 23.930 us, 23.930 us, 2393, 2393, no</column>
-<column name="grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_188">load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4, 267, 267, 2.670 us, 2.670 us, 267, 267, no</column>
+<column name="grp_load_buffer_tile_c2_Pipeline_1_fu_130">load_buffer_tile_c2_Pipeline_1, 2314, 2314, 23.140 us, 23.140 us, 2314, 2314, no</column>
+<column name="grp_load_buffer_tile_c2_Pipeline_2_fu_136">load_buffer_tile_c2_Pipeline_2, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1_fu_142">load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1, 2393, 2393, 23.930 us, 23.930 us, 2393, 2393, no</column>
+<column name="grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_190">load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4, 267, 267, 2.670 us, 2.670 us, 267, 267, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

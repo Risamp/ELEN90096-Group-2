@@ -1,75 +1,17 @@
 {
     "1": {
-        "name": "conv1_Pipeline_KR_KC2",
-        "file": "conv1.cpp",
-        "fileloc": "0",
-        "instructions": "88",
-        "total_instructions": "88",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "G": "12",
-            "L": "5"
-        },
-        "stores": {
-            "L": "8"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "2": {
-        "name": "conv1",
-        "file": "conv1.cpp",
-        "fileloc": "9",
-        "instructions": "228",
-        "total_instructions": "983",
-        "calls": "20 6 1 7 4 14",
-        "basicblocks": "39",
-        "loads": {
-            "G": "4",
-            "L": "7"
-        },
-        "stores": {
-            "G": "16",
-            "L": "6"
-        },
-        "loops": {
-            "L": "1",
-            "N": "8"
-        }
-    },
-    "3": {
-        "name": "srcnn_Pipeline_2",
-        "file": "srcnn.cpp",
-        "fileloc": "0",
-        "instructions": "18",
-        "total_instructions": "18",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "L": "1"
-        },
-        "stores": {
-            "L": "2"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "4": {
         "name": "load_input_buffer_c1",
         "file": "conv1.cpp",
-        "fileloc": "67",
-        "instructions": "169",
-        "total_instructions": "169",
+        "fileloc": "88",
+        "instructions": "214",
+        "total_instructions": "214",
         "calls": "",
-        "basicblocks": "16",
+        "basicblocks": "22",
         "loads": {
             "L": "1"
         },
         "stores": {
-            "G": "16",
+            "G": "36",
             "L": "2"
         },
         "loops": {
@@ -77,227 +19,7 @@
             "N": "1"
         }
     },
-    "5": {
-        "name": "load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4",
-        "file": "conv2.cpp",
-        "fileloc": "0",
-        "instructions": "60",
-        "total_instructions": "60",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "L": "1"
-        },
-        "stores": {
-            "G": "8",
-            "L": "2"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "6": {
-        "name": "conv1_Pipeline_KR_KC1",
-        "file": "conv1.cpp",
-        "fileloc": "0",
-        "instructions": "88",
-        "total_instructions": "88",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "G": "12",
-            "L": "5"
-        },
-        "stores": {
-            "L": "8"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "7": {
-        "name": "export_output_buffer_c1",
-        "file": "conv1.cpp",
-        "fileloc": "116",
-        "instructions": "154",
-        "total_instructions": "234",
-        "calls": "19",
-        "basicblocks": "19",
-        "loads": {
-            "G": "4",
-            "L": "5"
-        },
-        "stores": {
-            "L": "8"
-        },
-        "loops": {
-            "L": "2",
-            "N": "4"
-        }
-    },
-    "8": {
-        "name": "conv3_Pipeline_VITIS_LOOP_106_1_VITIS_LOOP_107_2_VITIS_LOOP_108_3",
-        "file": "conv3.cpp",
-        "fileloc": "0",
-        "instructions": "140",
-        "total_instructions": "140",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "L": "5"
-        },
-        "stores": {
-            "G": "1",
-            "L": "10"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "9": {
-        "name": "conv3_Pipeline_1",
-        "file": "conv3.cpp",
-        "fileloc": "0",
-        "instructions": "15",
-        "total_instructions": "15",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "L": "1"
-        },
-        "stores": {
-            "G": "1",
-            "L": "2"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "10": {
-        "name": "conv2",
-        "file": "conv2.cpp",
-        "fileloc": "9",
-        "instructions": "256",
-        "total_instructions": "3783",
-        "calls": "16 13",
-        "basicblocks": "25",
-        "loads": {
-            "G": "18",
-            "L": "4"
-        },
-        "stores": {
-            "G": "1",
-            "L": "6"
-        },
-        "loops": {
-            "L": "1",
-            "N": "7"
-        }
-    },
-    "11": {
-        "name": "load_buffer_tile_c2_Pipeline_1",
-        "file": "conv2.cpp",
-        "fileloc": "0",
-        "instructions": "15",
-        "total_instructions": "15",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "L": "1"
-        },
-        "stores": {
-            "G": "1",
-            "L": "2"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "12": {
-        "name": "srcnn_Pipeline_1",
-        "file": "srcnn.cpp",
-        "fileloc": "0",
-        "instructions": "18",
-        "total_instructions": "18",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "L": "1"
-        },
-        "stores": {
-            "L": "2"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "13": {
-        "name": "conv2_Pipeline_1",
-        "file": "conv2.cpp",
-        "fileloc": "0",
-        "instructions": "15",
-        "total_instructions": "15",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "L": "1"
-        },
-        "stores": {
-            "G": "1",
-            "L": "2"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "14": {
-        "name": "conv1_Pipeline_KR_KC3",
-        "file": "conv1.cpp",
-        "fileloc": "0",
-        "instructions": "88",
-        "total_instructions": "88",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "G": "12",
-            "L": "5"
-        },
-        "stores": {
-            "L": "8"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "15": {
-        "name": "conv3_Pipeline_3",
-        "file": "conv3.cpp",
-        "fileloc": "0",
-        "instructions": "15",
-        "total_instructions": "15",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "L": "1"
-        },
-        "stores": {
-            "G": "1",
-            "L": "2"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "16": {
-        "name": "load_buffer_tile_c2",
-        "file": "conv2.cpp",
-        "fileloc": "92",
-        "instructions": "44",
-        "total_instructions": "3512",
-        "calls": "11 17 18 5",
-        "basicblocks": "1"
-    },
-    "17": {
+    "2": {
         "name": "load_buffer_tile_c2_Pipeline_2",
         "file": "conv2.cpp",
         "fileloc": "0",
@@ -316,7 +38,171 @@
             "L": "1"
         }
     },
-    "18": {
+    "3": {
+        "name": "load_buffer_tile_c2_Pipeline_1",
+        "file": "conv2.cpp",
+        "fileloc": "0",
+        "instructions": "15",
+        "total_instructions": "15",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "G": "1",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "conv1_Pipeline_KR_KC1",
+        "file": "conv1.cpp",
+        "fileloc": "0",
+        "instructions": "141",
+        "total_instructions": "141",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "18",
+            "L": "4"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "conv3_Pipeline_1",
+        "file": "conv3.cpp",
+        "fileloc": "0",
+        "instructions": "15",
+        "total_instructions": "15",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "G": "1",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "conv3",
+        "file": "conv3.cpp",
+        "fileloc": "10",
+        "instructions": "316",
+        "total_instructions": "486",
+        "calls": "5 13 23",
+        "basicblocks": "25",
+        "loads": {
+            "G": "10",
+            "L": "3"
+        },
+        "stores": {
+            "G": "1",
+            "L": "6"
+        },
+        "loops": {
+            "L": "1",
+            "N": "7"
+        }
+    },
+    "7": {
+        "name": "conv1_Pipeline_BW8",
+        "file": "conv1.cpp",
+        "fileloc": "0",
+        "instructions": "40",
+        "total_instructions": "40",
+        "calls": "",
+        "basicblocks": "12",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "G": "7",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "srcnn_Pipeline_2",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "18",
+        "total_instructions": "18",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "load_buffer_tile_c2",
+        "file": "conv2.cpp",
+        "fileloc": "92",
+        "instructions": "44",
+        "total_instructions": "3512",
+        "calls": "3 2 12 18",
+        "basicblocks": "1"
+    },
+    "10": {
+        "name": "conv1",
+        "file": "conv1.cpp",
+        "fileloc": "9",
+        "instructions": "280",
+        "total_instructions": "1597",
+        "calls": "14 11 27 19 16 15 25 7 1 20 4 26 24",
+        "basicblocks": "41",
+        "loads": {
+            "G": "8",
+            "L": "8"
+        },
+        "stores": {
+            "G": "8",
+            "L": "6"
+        },
+        "loops": {
+            "L": "1",
+            "N": "8"
+        }
+    },
+    "11": {
+        "name": "conv1_Pipeline_EXPORT_ROW_L",
+        "file": "conv1.cpp",
+        "fileloc": "0",
+        "instructions": "117",
+        "total_instructions": "117",
+        "calls": "",
+        "basicblocks": "12",
+        "loads": {
+            "G": "8",
+            "L": "5"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "12": {
         "name": "load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1",
         "file": "conv2.cpp",
         "fileloc": "0",
@@ -335,37 +221,36 @@
             "L": "1"
         }
     },
-    "19": {
-        "name": "export_output_buffer_c1_Pipeline_BW",
-        "file": "conv1.cpp",
+    "13": {
+        "name": "conv3_Pipeline_VITIS_LOOP_106_1_VITIS_LOOP_107_2_VITIS_LOOP_108_3",
+        "file": "conv3.cpp",
         "fileloc": "0",
-        "instructions": "80",
-        "total_instructions": "80",
+        "instructions": "140",
+        "total_instructions": "140",
         "calls": "",
-        "basicblocks": "5",
+        "basicblocks": "4",
         "loads": {
-            "G": "4",
-            "L": "1"
+            "L": "5"
         },
         "stores": {
-            "G": "4",
-            "L": "2"
+            "G": "1",
+            "L": "10"
         },
         "loops": {
             "L": "1"
         }
     },
-    "20": {
+    "14": {
         "name": "conv1_Pipeline_KR_KC",
         "file": "conv1.cpp",
         "fileloc": "0",
-        "instructions": "88",
-        "total_instructions": "88",
+        "instructions": "141",
+        "total_instructions": "141",
         "calls": "",
         "basicblocks": "4",
         "loads": {
-            "G": "12",
-            "L": "5"
+            "G": "18",
+            "L": "4"
         },
         "stores": {
             "L": "8"
@@ -374,17 +259,133 @@
             "L": "1"
         }
     },
+    "15": {
+        "name": "conv1_Pipeline_BW6",
+        "file": "conv1.cpp",
+        "fileloc": "0",
+        "instructions": "40",
+        "total_instructions": "40",
+        "calls": "",
+        "basicblocks": "12",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "G": "7",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "16": {
+        "name": "conv1_Pipeline_BW5",
+        "file": "conv1.cpp",
+        "fileloc": "0",
+        "instructions": "77",
+        "total_instructions": "77",
+        "calls": "",
+        "basicblocks": "22",
+        "loads": {
+            "G": "8",
+            "L": "1"
+        },
+        "stores": {
+            "G": "14",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "17": {
+        "name": "conv2_Pipeline_1",
+        "file": "conv2.cpp",
+        "fileloc": "0",
+        "instructions": "15",
+        "total_instructions": "15",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "G": "1",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "18": {
+        "name": "load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4",
+        "file": "conv2.cpp",
+        "fileloc": "0",
+        "instructions": "60",
+        "total_instructions": "60",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "G": "8",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "19": {
+        "name": "conv1_Pipeline_BW4",
+        "file": "conv1.cpp",
+        "fileloc": "0",
+        "instructions": "77",
+        "total_instructions": "77",
+        "calls": "",
+        "basicblocks": "22",
+        "loads": {
+            "G": "8",
+            "L": "1"
+        },
+        "stores": {
+            "G": "14",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "20": {
+        "name": "conv1_Pipeline_LOAD_WEIGHTS_K_L",
+        "file": "conv1.cpp",
+        "fileloc": "0",
+        "instructions": "71",
+        "total_instructions": "71",
+        "calls": "",
+        "basicblocks": "7",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "G": "2",
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
     "21": {
-        "name": "conv3",
-        "file": "conv3.cpp",
-        "fileloc": "10",
-        "instructions": "315",
-        "total_instructions": "485",
-        "calls": "9 8 15",
+        "name": "conv2",
+        "file": "conv2.cpp",
+        "fileloc": "9",
+        "instructions": "257",
+        "total_instructions": "3784",
+        "calls": "9 17",
         "basicblocks": "25",
         "loads": {
-            "G": "10",
-            "L": "3"
+            "G": "18",
+            "L": "4"
         },
         "stores": {
             "G": "1",
@@ -395,13 +396,127 @@
             "N": "7"
         }
     },
+    "22": {
+        "name": "srcnn_Pipeline_1",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "18",
+        "total_instructions": "18",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "23": {
+        "name": "conv3_Pipeline_3",
+        "file": "conv3.cpp",
+        "fileloc": "0",
+        "instructions": "15",
+        "total_instructions": "15",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "G": "1",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
     "0": {
         "name": "srcnn",
         "file": "srcnn.cpp",
         "fileloc": "6",
-        "instructions": "53",
-        "total_instructions": "5340",
-        "calls": "12 3 2 10 21",
+        "instructions": "61",
+        "total_instructions": "5964",
+        "calls": "22 8 10 21 6",
         "basicblocks": "1"
+    },
+    "24": {
+        "name": "conv1_Pipeline_KR_KC3",
+        "file": "conv1.cpp",
+        "fileloc": "0",
+        "instructions": "141",
+        "total_instructions": "141",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "18",
+            "L": "4"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "25": {
+        "name": "conv1_Pipeline_BW7",
+        "file": "conv1.cpp",
+        "fileloc": "0",
+        "instructions": "40",
+        "total_instructions": "40",
+        "calls": "",
+        "basicblocks": "12",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "G": "7",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "26": {
+        "name": "conv1_Pipeline_KR_KC2",
+        "file": "conv1.cpp",
+        "fileloc": "0",
+        "instructions": "141",
+        "total_instructions": "141",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "18",
+            "L": "4"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "27": {
+        "name": "conv1_Pipeline_BW",
+        "file": "conv1.cpp",
+        "fileloc": "0",
+        "instructions": "77",
+        "total_instructions": "77",
+        "calls": "",
+        "basicblocks": "22",
+        "loads": {
+            "G": "8",
+            "L": "1"
+        },
+        "stores": {
+            "G": "14",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
     }
 }

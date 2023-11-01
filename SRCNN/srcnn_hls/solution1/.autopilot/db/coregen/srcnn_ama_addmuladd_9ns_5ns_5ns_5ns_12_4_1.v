@@ -7,7 +7,7 @@
 // ==============================================================
 `timescale 1 ns / 1 ps
 
-module srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_0 (
+module srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_2 (
     input clk,
     input rst,
     input ce,
@@ -80,7 +80,7 @@ output[dout_WIDTH - 1:0] dout;
 
 
 
-srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_0 srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_0_U(
+srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_2 srcnn_ama_addmuladd_9ns_5ns_5ns_5ns_12_4_1_DSP48_2_U(
     .clk( clk ),
     .rst( reset ),
     .ce( ce ),

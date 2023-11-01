@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1'" level="0">
-<item name = "Date">Wed Nov  1 04:13:48 2023
+<item name = "Date">Wed Nov  1 16:45:02 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn'" level="0">
-<item name = "Date">Wed Nov  1 04:14:00 2023
+<item name = "Date">Wed Nov  1 16:45:13 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,18 +24,18 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">2464156836, 2464287396, 24.642 sec, 24.643 sec, 2464156837, 2464287397, no</column>
+<column name="">3007571054, 3007575406, 30.076 sec, 30.076 sec, 3007571055, 3007575407, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_srcnn_Pipeline_1_fu_222">srcnn_Pipeline_1, 2080802, 2080802, 20.808 ms, 20.808 ms, 2080802, 2080802, no</column>
-<column name="grp_srcnn_Pipeline_2_fu_229">srcnn_Pipeline_2, 65027, 65027, 0.650 ms, 0.650 ms, 65027, 65027, no</column>
-<column name="grp_conv1_fu_236">conv1, 1466940609, 1467071169, 14.669 sec, 14.671 sec, 1466940609, 1467071169, no</column>
-<column name="grp_conv2_fu_279">conv2, 691303951, 691303951, 6.913 sec, 6.913 sec, 691303951, 691303951, no</column>
-<column name="grp_conv3_fu_312">conv3, 303766426, 303766426, 3.038 sec, 3.038 sec, 303766426, 303766426, no</column>
+<column name="grp_srcnn_Pipeline_1_fu_240">srcnn_Pipeline_1, 2080802, 2080802, 20.808 ms, 20.808 ms, 2080802, 2080802, no</column>
+<column name="grp_srcnn_Pipeline_2_fu_247">srcnn_Pipeline_2, 65027, 65027, 0.650 ms, 0.650 ms, 65027, 65027, no</column>
+<column name="grp_conv1_fu_254">conv1, 2012500665, 2012505017, 20.125 sec, 20.125 sec, 2012500665, 2012505017, no</column>
+<column name="grp_conv2_fu_297">conv2, 691303951, 691303951, 6.913 sec, 6.913 sec, 691303951, 691303951, no</column>
+<column name="grp_conv3_fu_332">conv3, 303766426, 303766426, 3.038 sec, 3.038 sec, 303766426, 303766426, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

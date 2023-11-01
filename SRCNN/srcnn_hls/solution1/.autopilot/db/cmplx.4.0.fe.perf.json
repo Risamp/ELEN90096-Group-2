@@ -1,19 +1,19 @@
 {
   "0": {
     "basicblocks": 7,
-    "calls": "7 6 4",
+    "calls": "4 3 2",
     "file": "srcnn.cpp",
     "fileloc": 6,
-    "instructions": 62,
+    "instructions": 66,
     "loads": {
       "T": 1
     },
     "name": "srcnn",
-    "total_instructions": 3635
+    "total_instructions": 4065
   },
   "1": {
     "basicblocks": 13,
-    "calls": "2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2",
+    "calls": "5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5",
     "file": "conv2.cpp",
     "fileloc": 92,
     "instructions": 2260,
@@ -27,31 +27,6 @@
     "total_instructions": 2430
   },
   "2": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 53,
-    "instructions": 5,
-    "name": "clamp",
-    "total_instructions": 5
-  },
-  "3": {
-    "basicblocks": 34,
-    "calls": "",
-    "file": "conv1.cpp",
-    "fileloc": 116,
-    "instructions": 154,
-    "loads": {
-      "G": 8,
-      "L": 1
-    },
-    "name": "export_output_buffer_c1",
-    "stores": {
-      "G": 8
-    },
-    "total_instructions": 154
-  },
-  "4": {
     "basicblocks": 43,
     "calls": "",
     "file": "conv3.cpp",
@@ -68,22 +43,7 @@
     },
     "total_instructions": 277
   },
-  "5": {
-    "basicblocks": 16,
-    "calls": "",
-    "file": "conv1.cpp",
-    "fileloc": 67,
-    "instructions": 138,
-    "loads": {
-      "L": 2
-    },
-    "name": "load_input_buffer_c1",
-    "stores": {
-      "G": 16
-    },
-    "total_instructions": 138
-  },
-  "6": {
+  "3": {
     "basicblocks": 33,
     "calls": "1",
     "file": "conv2.cpp",
@@ -100,19 +60,44 @@
     },
     "total_instructions": 2602
   },
-  "7": {
-    "basicblocks": 71,
-    "calls": "5 3",
+  "4": {
+    "basicblocks": 234,
+    "calls": "6",
     "file": "conv1.cpp",
     "fileloc": 9,
-    "instructions": 402,
+    "instructions": 928,
     "loads": {
-      "G": 52
+      "G": 88,
+      "L": 1
     },
     "name": "conv1",
     "stores": {
-      "G": 16
+      "G": 82
     },
-    "total_instructions": 694
+    "total_instructions": 1120
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 53,
+    "instructions": 5,
+    "name": "clamp",
+    "total_instructions": 5
+  },
+  "6": {
+    "basicblocks": 26,
+    "calls": "",
+    "file": "conv1.cpp",
+    "fileloc": 88,
+    "instructions": 192,
+    "loads": {
+      "L": 2
+    },
+    "name": "load_input_buffer_c1",
+    "stores": {
+      "G": 36
+    },
+    "total_instructions": 192
   }
 }

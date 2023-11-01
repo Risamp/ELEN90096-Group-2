@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2'" level="0">
-<item name = "Date">Wed Nov  1 04:13:54 2023
+<item name = "Date">Wed Nov  1 16:45:08 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -31,8 +31,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_load_buffer_tile_c2_fu_528">load_buffer_tile_c2, 4710, 4710, 47.100 us, 47.100 us, 4710, 4710, no</column>
-<column name="grp_conv2_Pipeline_1_fu_559">conv2_Pipeline_1, 9250, 9250, 92.500 us, 92.500 us, 9250, 9250, no</column>
+<column name="grp_load_buffer_tile_c2_fu_534">load_buffer_tile_c2, 4710, 4710, 47.100 us, 47.100 us, 4710, 4710, no</column>
+<column name="grp_conv2_Pipeline_1_fu_565">conv2_Pipeline_1, 9250, 9250, 92.500 us, 92.500 us, 9250, 9250, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

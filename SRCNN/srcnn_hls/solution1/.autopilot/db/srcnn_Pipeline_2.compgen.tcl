@@ -11,14 +11,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 3 \
-    name output_r \
+    name o \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_output_r \
+    corename dc_o \
     op interface \
-    ports { m_axi_output_r_AWVALID { O 1 bit } m_axi_output_r_AWREADY { I 1 bit } m_axi_output_r_AWADDR { O 64 vector } m_axi_output_r_AWID { O 1 vector } m_axi_output_r_AWLEN { O 32 vector } m_axi_output_r_AWSIZE { O 3 vector } m_axi_output_r_AWBURST { O 2 vector } m_axi_output_r_AWLOCK { O 2 vector } m_axi_output_r_AWCACHE { O 4 vector } m_axi_output_r_AWPROT { O 3 vector } m_axi_output_r_AWQOS { O 4 vector } m_axi_output_r_AWREGION { O 4 vector } m_axi_output_r_AWUSER { O 1 vector } m_axi_output_r_WVALID { O 1 bit } m_axi_output_r_WREADY { I 1 bit } m_axi_output_r_WDATA { O 32 vector } m_axi_output_r_WSTRB { O 4 vector } m_axi_output_r_WLAST { O 1 bit } m_axi_output_r_WID { O 1 vector } m_axi_output_r_WUSER { O 1 vector } m_axi_output_r_ARVALID { O 1 bit } m_axi_output_r_ARREADY { I 1 bit } m_axi_output_r_ARADDR { O 64 vector } m_axi_output_r_ARID { O 1 vector } m_axi_output_r_ARLEN { O 32 vector } m_axi_output_r_ARSIZE { O 3 vector } m_axi_output_r_ARBURST { O 2 vector } m_axi_output_r_ARLOCK { O 2 vector } m_axi_output_r_ARCACHE { O 4 vector } m_axi_output_r_ARPROT { O 3 vector } m_axi_output_r_ARQOS { O 4 vector } m_axi_output_r_ARREGION { O 4 vector } m_axi_output_r_ARUSER { O 1 vector } m_axi_output_r_RVALID { I 1 bit } m_axi_output_r_RREADY { O 1 bit } m_axi_output_r_RDATA { I 32 vector } m_axi_output_r_RLAST { I 1 bit } m_axi_output_r_RID { I 1 vector } m_axi_output_r_RFIFONUM { I 9 vector } m_axi_output_r_RUSER { I 1 vector } m_axi_output_r_RRESP { I 2 vector } m_axi_output_r_BVALID { I 1 bit } m_axi_output_r_BREADY { O 1 bit } m_axi_output_r_BRESP { I 2 vector } m_axi_output_r_BID { I 1 vector } m_axi_output_r_BUSER { I 1 vector } } \
+    ports { m_axi_o_AWVALID { O 1 bit } m_axi_o_AWREADY { I 1 bit } m_axi_o_AWADDR { O 64 vector } m_axi_o_AWID { O 1 vector } m_axi_o_AWLEN { O 32 vector } m_axi_o_AWSIZE { O 3 vector } m_axi_o_AWBURST { O 2 vector } m_axi_o_AWLOCK { O 2 vector } m_axi_o_AWCACHE { O 4 vector } m_axi_o_AWPROT { O 3 vector } m_axi_o_AWQOS { O 4 vector } m_axi_o_AWREGION { O 4 vector } m_axi_o_AWUSER { O 1 vector } m_axi_o_WVALID { O 1 bit } m_axi_o_WREADY { I 1 bit } m_axi_o_WDATA { O 32 vector } m_axi_o_WSTRB { O 4 vector } m_axi_o_WLAST { O 1 bit } m_axi_o_WID { O 1 vector } m_axi_o_WUSER { O 1 vector } m_axi_o_ARVALID { O 1 bit } m_axi_o_ARREADY { I 1 bit } m_axi_o_ARADDR { O 64 vector } m_axi_o_ARID { O 1 vector } m_axi_o_ARLEN { O 32 vector } m_axi_o_ARSIZE { O 3 vector } m_axi_o_ARBURST { O 2 vector } m_axi_o_ARLOCK { O 2 vector } m_axi_o_ARCACHE { O 4 vector } m_axi_o_ARPROT { O 3 vector } m_axi_o_ARQOS { O 4 vector } m_axi_o_ARREGION { O 4 vector } m_axi_o_ARUSER { O 1 vector } m_axi_o_RVALID { I 1 bit } m_axi_o_RREADY { O 1 bit } m_axi_o_RDATA { I 32 vector } m_axi_o_RLAST { I 1 bit } m_axi_o_RID { I 1 vector } m_axi_o_RFIFONUM { I 13 vector } m_axi_o_RUSER { I 1 vector } m_axi_o_RRESP { I 2 vector } m_axi_o_BVALID { I 1 bit } m_axi_o_BREADY { O 1 bit } m_axi_o_BRESP { I 2 vector } m_axi_o_BID { I 1 vector } m_axi_o_BUSER { I 1 vector } } \
 } "
 }
 

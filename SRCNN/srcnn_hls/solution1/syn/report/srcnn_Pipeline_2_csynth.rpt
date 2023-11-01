@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'srcnn_Pipeline_2'
 ================================================================
-* Date:           Wed Nov  1 04:14:01 2023
+* Date:           Wed Nov  1 16:45:14 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -85,9 +85,9 @@
     +---------------------------+----------+----+---+----+------------+------------+
     |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------+----------+----+---+----+------------+------------+
-    |empty_63_fu_89_p2          |         +|   0|  0|  23|          16|           1|
+    |empty_60_fu_91_p2          |         +|   0|  0|  23|          16|           1|
     |ap_block_pp0_stage0_11001  |       and|   0|  0|   2|           1|           1|
-    |exitcond2_fu_83_p2         |      icmp|   0|  0|  23|          16|          10|
+    |exitcond2_fu_85_p2         |      icmp|   0|  0|  23|          16|          10|
     |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
     +---------------------------+----------+----+---+----+------------+------------+
     |Total                      |          |   0|  0|  50|          34|          14|
@@ -100,8 +100,8 @@
     |ap_done_int              |   9|          2|    1|          2|
     |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
     |ap_sig_allocacmp_p_load  |   9|          2|   16|         32|
-    |empty_fu_46              |   9|          2|   16|         32|
-    |output_r_blk_n_W         |   9|          2|    1|          2|
+    |empty_fu_48              |   9|          2|   16|         32|
+    |o_blk_n_W                |   9|          2|    1|          2|
     +-------------------------+----+-----------+-----+-----------+
     |Total                    |  45|         10|   35|         70|
     +-------------------------+----+-----------+-----+-----------+
@@ -113,7 +113,7 @@
     |ap_CS_fsm                |   1|   0|    1|          0|
     |ap_done_reg              |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
-    |empty_fu_46              |  16|   0|   16|          0|
+    |empty_fu_48              |  16|   0|   16|          0|
     +-------------------------+----+----+-----+-----------+
     |Total                    |  19|   0|   19|          0|
     +-------------------------+----+----+-----+-----------+
@@ -124,61 +124,61 @@
 == Interface
 ================================================================
 * Summary: 
-+-------------------------+-----+-----+------------+------------------+--------------+
-|        RTL Ports        | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
-+-------------------------+-----+-----+------------+------------------+--------------+
-|ap_clk                   |   in|    1|  ap_ctrl_hs|  srcnn_Pipeline_2|  return value|
-|ap_rst                   |   in|    1|  ap_ctrl_hs|  srcnn_Pipeline_2|  return value|
-|ap_start                 |   in|    1|  ap_ctrl_hs|  srcnn_Pipeline_2|  return value|
-|ap_done                  |  out|    1|  ap_ctrl_hs|  srcnn_Pipeline_2|  return value|
-|ap_idle                  |  out|    1|  ap_ctrl_hs|  srcnn_Pipeline_2|  return value|
-|ap_ready                 |  out|    1|  ap_ctrl_hs|  srcnn_Pipeline_2|  return value|
-|m_axi_output_r_AWVALID   |  out|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_AWREADY   |   in|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_AWADDR    |  out|   64|       m_axi|          output_r|       pointer|
-|m_axi_output_r_AWID      |  out|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_AWLEN     |  out|   32|       m_axi|          output_r|       pointer|
-|m_axi_output_r_AWSIZE    |  out|    3|       m_axi|          output_r|       pointer|
-|m_axi_output_r_AWBURST   |  out|    2|       m_axi|          output_r|       pointer|
-|m_axi_output_r_AWLOCK    |  out|    2|       m_axi|          output_r|       pointer|
-|m_axi_output_r_AWCACHE   |  out|    4|       m_axi|          output_r|       pointer|
-|m_axi_output_r_AWPROT    |  out|    3|       m_axi|          output_r|       pointer|
-|m_axi_output_r_AWQOS     |  out|    4|       m_axi|          output_r|       pointer|
-|m_axi_output_r_AWREGION  |  out|    4|       m_axi|          output_r|       pointer|
-|m_axi_output_r_AWUSER    |  out|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_WVALID    |  out|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_WREADY    |   in|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_WDATA     |  out|   32|       m_axi|          output_r|       pointer|
-|m_axi_output_r_WSTRB     |  out|    4|       m_axi|          output_r|       pointer|
-|m_axi_output_r_WLAST     |  out|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_WID       |  out|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_WUSER     |  out|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_ARVALID   |  out|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_ARREADY   |   in|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_ARADDR    |  out|   64|       m_axi|          output_r|       pointer|
-|m_axi_output_r_ARID      |  out|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_ARLEN     |  out|   32|       m_axi|          output_r|       pointer|
-|m_axi_output_r_ARSIZE    |  out|    3|       m_axi|          output_r|       pointer|
-|m_axi_output_r_ARBURST   |  out|    2|       m_axi|          output_r|       pointer|
-|m_axi_output_r_ARLOCK    |  out|    2|       m_axi|          output_r|       pointer|
-|m_axi_output_r_ARCACHE   |  out|    4|       m_axi|          output_r|       pointer|
-|m_axi_output_r_ARPROT    |  out|    3|       m_axi|          output_r|       pointer|
-|m_axi_output_r_ARQOS     |  out|    4|       m_axi|          output_r|       pointer|
-|m_axi_output_r_ARREGION  |  out|    4|       m_axi|          output_r|       pointer|
-|m_axi_output_r_ARUSER    |  out|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_RVALID    |   in|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_RREADY    |  out|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_RDATA     |   in|   32|       m_axi|          output_r|       pointer|
-|m_axi_output_r_RLAST     |   in|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_RID       |   in|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_RFIFONUM  |   in|    9|       m_axi|          output_r|       pointer|
-|m_axi_output_r_RUSER     |   in|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_RRESP     |   in|    2|       m_axi|          output_r|       pointer|
-|m_axi_output_r_BVALID    |   in|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_BREADY    |  out|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_BRESP     |   in|    2|       m_axi|          output_r|       pointer|
-|m_axi_output_r_BID       |   in|    1|       m_axi|          output_r|       pointer|
-|m_axi_output_r_BUSER     |   in|    1|       m_axi|          output_r|       pointer|
-|sext_ln39                |   in|   62|     ap_none|         sext_ln39|        scalar|
-+-------------------------+-----+-----+------------+------------------+--------------+
++------------------+-----+-----+------------+------------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++------------------+-----+-----+------------+------------------+--------------+
+|ap_clk            |   in|    1|  ap_ctrl_hs|  srcnn_Pipeline_2|  return value|
+|ap_rst            |   in|    1|  ap_ctrl_hs|  srcnn_Pipeline_2|  return value|
+|ap_start          |   in|    1|  ap_ctrl_hs|  srcnn_Pipeline_2|  return value|
+|ap_done           |  out|    1|  ap_ctrl_hs|  srcnn_Pipeline_2|  return value|
+|ap_idle           |  out|    1|  ap_ctrl_hs|  srcnn_Pipeline_2|  return value|
+|ap_ready          |  out|    1|  ap_ctrl_hs|  srcnn_Pipeline_2|  return value|
+|m_axi_o_AWVALID   |  out|    1|       m_axi|                 o|       pointer|
+|m_axi_o_AWREADY   |   in|    1|       m_axi|                 o|       pointer|
+|m_axi_o_AWADDR    |  out|   64|       m_axi|                 o|       pointer|
+|m_axi_o_AWID      |  out|    1|       m_axi|                 o|       pointer|
+|m_axi_o_AWLEN     |  out|   32|       m_axi|                 o|       pointer|
+|m_axi_o_AWSIZE    |  out|    3|       m_axi|                 o|       pointer|
+|m_axi_o_AWBURST   |  out|    2|       m_axi|                 o|       pointer|
+|m_axi_o_AWLOCK    |  out|    2|       m_axi|                 o|       pointer|
+|m_axi_o_AWCACHE   |  out|    4|       m_axi|                 o|       pointer|
+|m_axi_o_AWPROT    |  out|    3|       m_axi|                 o|       pointer|
+|m_axi_o_AWQOS     |  out|    4|       m_axi|                 o|       pointer|
+|m_axi_o_AWREGION  |  out|    4|       m_axi|                 o|       pointer|
+|m_axi_o_AWUSER    |  out|    1|       m_axi|                 o|       pointer|
+|m_axi_o_WVALID    |  out|    1|       m_axi|                 o|       pointer|
+|m_axi_o_WREADY    |   in|    1|       m_axi|                 o|       pointer|
+|m_axi_o_WDATA     |  out|   32|       m_axi|                 o|       pointer|
+|m_axi_o_WSTRB     |  out|    4|       m_axi|                 o|       pointer|
+|m_axi_o_WLAST     |  out|    1|       m_axi|                 o|       pointer|
+|m_axi_o_WID       |  out|    1|       m_axi|                 o|       pointer|
+|m_axi_o_WUSER     |  out|    1|       m_axi|                 o|       pointer|
+|m_axi_o_ARVALID   |  out|    1|       m_axi|                 o|       pointer|
+|m_axi_o_ARREADY   |   in|    1|       m_axi|                 o|       pointer|
+|m_axi_o_ARADDR    |  out|   64|       m_axi|                 o|       pointer|
+|m_axi_o_ARID      |  out|    1|       m_axi|                 o|       pointer|
+|m_axi_o_ARLEN     |  out|   32|       m_axi|                 o|       pointer|
+|m_axi_o_ARSIZE    |  out|    3|       m_axi|                 o|       pointer|
+|m_axi_o_ARBURST   |  out|    2|       m_axi|                 o|       pointer|
+|m_axi_o_ARLOCK    |  out|    2|       m_axi|                 o|       pointer|
+|m_axi_o_ARCACHE   |  out|    4|       m_axi|                 o|       pointer|
+|m_axi_o_ARPROT    |  out|    3|       m_axi|                 o|       pointer|
+|m_axi_o_ARQOS     |  out|    4|       m_axi|                 o|       pointer|
+|m_axi_o_ARREGION  |  out|    4|       m_axi|                 o|       pointer|
+|m_axi_o_ARUSER    |  out|    1|       m_axi|                 o|       pointer|
+|m_axi_o_RVALID    |   in|    1|       m_axi|                 o|       pointer|
+|m_axi_o_RREADY    |  out|    1|       m_axi|                 o|       pointer|
+|m_axi_o_RDATA     |   in|   32|       m_axi|                 o|       pointer|
+|m_axi_o_RLAST     |   in|    1|       m_axi|                 o|       pointer|
+|m_axi_o_RID       |   in|    1|       m_axi|                 o|       pointer|
+|m_axi_o_RFIFONUM  |   in|   13|       m_axi|                 o|       pointer|
+|m_axi_o_RUSER     |   in|    1|       m_axi|                 o|       pointer|
+|m_axi_o_RRESP     |   in|    2|       m_axi|                 o|       pointer|
+|m_axi_o_BVALID    |   in|    1|       m_axi|                 o|       pointer|
+|m_axi_o_BREADY    |  out|    1|       m_axi|                 o|       pointer|
+|m_axi_o_BRESP     |   in|    2|       m_axi|                 o|       pointer|
+|m_axi_o_BID       |   in|    1|       m_axi|                 o|       pointer|
+|m_axi_o_BUSER     |   in|    1|       m_axi|                 o|       pointer|
+|sext_ln39         |   in|   62|     ap_none|         sext_ln39|        scalar|
++------------------+-----+-----+------------+------------------+--------------+
 

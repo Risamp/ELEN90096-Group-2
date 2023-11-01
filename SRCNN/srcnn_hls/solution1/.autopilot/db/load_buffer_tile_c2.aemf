@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698772464700">
-  <ports id="1" name="output_r" type="PortType" coreId="1635147636" bitwidth="32" iftype="IfTypeFifo">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698817538060">
+  <ports id="1" name="i2" type="PortType" coreId="540876915" bitwidth="32" iftype="IfTypeFifo">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="2" name="input_fm" type="PortType" coreId="1852142702" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="params" type="PortType" coreId="1380681504" bitwidth="32" iftype="IfTypeFifo">
+  <ports id="3" name="w2" type="PortType" coreId="50" bitwidth="32" iftype="IfTypeFifo">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="4" name="conv2_weights" type="PortType" coreId="1819310149" bitwidth="64">
+  <ports id="4" name="conv2_weights" type="PortType" coreId="540876921" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="tx0" type="PortType" coreId="1380662448" bitwidth="8">
+  <ports id="5" name="tx0" type="PortType" coreId="1852142702" bitwidth="8">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="6" name="ty0" type="PortType" coreId="1149997232" bitwidth="8">
+  <ports id="6" name="ty0" type="PortType" coreId="50" bitwidth="8">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="7" name="tn0" type="PortType" coreId="1374226384" bitwidth="6">
+  <ports id="7" name="tn0" type="PortType" coreId="1717920800" bitwidth="6">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="8" name="input_fm_buffer_1" type="PortType" coreName="RAM" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="2312">
+  <ports id="8" name="input_fm_buffer_1" type="PortType" coreName="RAM" coreId="1852142702" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="2312">
     <dataInputObjs>call</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="9" name="weights_buffer_0_0_0" type="PortType" coreName="RAM" coreId="1313818964" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
+  <ports id="9" name="weights_buffer_0_0_0" type="PortType" coreName="RAM" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
     <dataInputObjs>call</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="10" name="weights_buffer_0_0_1" type="PortType" coreName="RAM" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
+  <ports id="10" name="weights_buffer_0_0_1" type="PortType" coreName="RAM" coreId="1852142702" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="11" name="weights_buffer_0_0_2" type="PortType" coreName="RAM" coreId="1431261768" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
+  <ports id="11" name="weights_buffer_0_0_2" type="PortType" coreName="RAM" coreId="1717920800" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="12" name="weights_buffer_0_0_3" type="PortType" coreName="RAM" coreId="544825708" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
+  <ports id="12" name="weights_buffer_0_0_3" type="PortType" coreName="RAM" coreId="98" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="13" name="weights_buffer_0_0_4" type="PortType" coreName="RAM" coreId="1374226384" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
+  <ports id="13" name="weights_buffer_0_0_4" type="PortType" coreName="RAM" coreId="50" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="14" name="weights_buffer_0_0_5" type="PortType" coreName="RAM" coreId="544433525" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
+  <ports id="14" name="weights_buffer_0_0_5" type="PortType" coreName="RAM" coreId="1852142702" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="15" name="weights_buffer_0_0_6" type="PortType" coreName="RAM" coreId="1717920800" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
+  <ports id="15" name="weights_buffer_0_0_6" type="PortType" coreName="RAM" coreId="51" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="16" name="weights_buffer_0_0_7" type="PortType" coreName="RAM" coreId="1852142702" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
+  <ports id="16" name="weights_buffer_0_0_7" type="PortType" coreName="RAM" coreId="50" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="32">
     <dataInputObjs>call</dataInputObjs>
   </ports>
   <edges id="64" source_obj="//@ports.6" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -138,16 +138,16 @@
   <edges id="211" source_obj="//@blocks.0/@node_objs.40" sink_obj="//@ports.13"/>
   <edges id="212" source_obj="//@blocks.0/@node_objs.40" sink_obj="//@ports.14"/>
   <edges id="213" source_obj="//@blocks.0/@node_objs.40" sink_obj="//@ports.15"/>
-  <edges id="262" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.40"/>
-  <edges id="263" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.39"/>
+  <edges id="263" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.40"/>
   <edges id="264" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.39"/>
+  <edges id="265" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.39"/>
   <blocks id="61" name="load_buffer_tile_c2" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="tn0_read" coreId="7028" bitwidth="6" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="tn0_read" coreId="0" bitwidth="6" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>tn0</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="ty0_read" coreId="14329" bitwidth="8" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="ty0_read" coreId="0" bitwidth="8" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataInputObjs>ty0</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -167,7 +167,7 @@
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="tx0_read" coreId="15589" bitwidth="8" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="tx0_read" coreId="0" bitwidth="8" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <dataInputObjs>tx0</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -187,188 +187,188 @@
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="conv2_weights_read" coreId="10204" bitwidth="64" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="conv2_weights_read" coreId="0" bitwidth="64" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
       <dataInputObjs>conv2_weights</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="input_fm_read" coreId="16289" bitwidth="64" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="input_fm_read" coreId="0" bitwidth="64" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <dataInputObjs>input_fm</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="_ln0" rtlName="grp_load_buffer_tile_c2_Pipeline_1_fu_128" coreId="17549" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="_ln0" rtlName="grp_load_buffer_tile_c2_Pipeline_1_fu_130" coreId="0" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>input_fm_buffer_1</dataOutputObjs>
       <constName>load_buffer_tile_c2_Pipeline_1</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="_ln0" rtlName="grp_load_buffer_tile_c2_Pipeline_2_fu_134" coreId="14049" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="_ln0" rtlName="grp_load_buffer_tile_c2_Pipeline_2_fu_136" coreId="0" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>weights_buffer_0_0_0</dataOutputObjs>
       <constName>load_buffer_tile_c2_Pipeline_2</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="xClamped" rtlName="xClamped_fu_214_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="xClamped" rtlName="xClamped_fu_216_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="8" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="xClamped_1" rtlName="xClamped_1_fu_221_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="xClamped_1" rtlName="xClamped_1_fu_223_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="9" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="xClamped_2" rtlName="xClamped_2_fu_228_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="xClamped_2" rtlName="xClamped_2_fu_230_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="10" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="xClamped_3" rtlName="xClamped_3_fu_235_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="xClamped_3" rtlName="xClamped_3_fu_237_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="11" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="xClamped_4" rtlName="xClamped_4_fu_242_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="xClamped_4" rtlName="xClamped_4_fu_244_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="12" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="xClamped_5" rtlName="xClamped_5_fu_249_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="13" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="xClamped_5" rtlName="xClamped_5_fu_251_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="13" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="xClamped_6" rtlName="xClamped_6_fu_256_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="14" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="xClamped_6" rtlName="xClamped_6_fu_258_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="14" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="xClamped_7" rtlName="xClamped_7_fu_263_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="xClamped_7" rtlName="xClamped_7_fu_265_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="15" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="xClamped_8" rtlName="xClamped_8_fu_270_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="xClamped_8" rtlName="xClamped_8_fu_272_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="16" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="xClamped_9" rtlName="xClamped_9_fu_277_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="17" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="xClamped_9" rtlName="xClamped_9_fu_279_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="17" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="xClamped_10" rtlName="xClamped_10_fu_284_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="18" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="xClamped_10" rtlName="xClamped_10_fu_286_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="18" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="xClamped_11" rtlName="xClamped_11_fu_291_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="19" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="xClamped_11" rtlName="xClamped_11_fu_293_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="19" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="xClamped_12" rtlName="xClamped_12_fu_298_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="20" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="xClamped_12" rtlName="xClamped_12_fu_300_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="20" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="xClamped_13" rtlName="xClamped_13_fu_305_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="21" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="xClamped_13" rtlName="xClamped_13_fu_307_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="21" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="xClamped_14" rtlName="xClamped_14_fu_312_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="22" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="xClamped_14" rtlName="xClamped_14_fu_314_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="22" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="xClamped_15" rtlName="xClamped_15_fu_319_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="23" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="xClamped_15" rtlName="xClamped_15_fu_321_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="23" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="yClamped" rtlName="yClamped_fu_326_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="24" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="yClamped" rtlName="yClamped_fu_328_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="24" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="yClamped_1" rtlName="yClamped_1_fu_333_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="25" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="yClamped_1" rtlName="yClamped_1_fu_335_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="25" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="yClamped_2" rtlName="yClamped_2_fu_340_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="26" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="yClamped_2" rtlName="yClamped_2_fu_342_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="26" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="yClamped_3" rtlName="yClamped_3_fu_347_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="27" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="yClamped_3" rtlName="yClamped_3_fu_349_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="27" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="yClamped_4" rtlName="yClamped_4_fu_354_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="28" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="yClamped_4" rtlName="yClamped_4_fu_356_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="28" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="yClamped_5" rtlName="yClamped_5_fu_361_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="29" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="yClamped_5" rtlName="yClamped_5_fu_363_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="29" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="yClamped_6" rtlName="yClamped_6_fu_368_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="30" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="yClamped_6" rtlName="yClamped_6_fu_370_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="30" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="yClamped_7" rtlName="yClamped_7_fu_375_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="31" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="yClamped_7" rtlName="yClamped_7_fu_377_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="31" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="yClamped_8" rtlName="yClamped_8_fu_382_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="32" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="yClamped_8" rtlName="yClamped_8_fu_384_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="32" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="yClamped_9" rtlName="yClamped_9_fu_389_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="33" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="yClamped_9" rtlName="yClamped_9_fu_391_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="33" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="yClamped_10" rtlName="yClamped_10_fu_396_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="34" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="yClamped_10" rtlName="yClamped_10_fu_398_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="34" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="yClamped_11" rtlName="yClamped_11_fu_403_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="35" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="yClamped_11" rtlName="yClamped_11_fu_405_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="35" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="yClamped_12" rtlName="yClamped_12_fu_410_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="36" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="yClamped_12" rtlName="yClamped_12_fu_412_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="36" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="yClamped_13" rtlName="yClamped_13_fu_417_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="37" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="yClamped_13" rtlName="yClamped_13_fu_419_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="37" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="yClamped_14" rtlName="yClamped_14_fu_424_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="38" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="yClamped_14" rtlName="yClamped_14_fu_426_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="38" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="yClamped_15" rtlName="yClamped_15_fu_431_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="39" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="yClamped_15" rtlName="yClamped_15_fu_433_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="8" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.76" m_topoIndex="39" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="_ln0" rtlName="grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1_fu_140" coreId="15309" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="_ln0" rtlName="grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1_fu_142" coreId="0" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
-      <dataInputObjs>output_r</dataInputObjs>
+      <dataInputObjs>i2</dataInputObjs>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>add</dataInputObjs>
@@ -404,10 +404,10 @@
       <dataOutputObjs>input_fm_buffer_1</dataOutputObjs>
       <constName>load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="_ln0" rtlName="grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_188" coreId="17969" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="0.81" m_topoIndex="41" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="_ln0" rtlName="grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_190" coreId="0" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="0.81" m_topoIndex="41" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
-      <dataInputObjs>params</dataInputObjs>
+      <dataInputObjs>w2</dataInputObjs>
       <dataOutputObjs>weights_buffer_0_0_0</dataOutputObjs>
       <dataOutputObjs>weights_buffer_0_0_1</dataOutputObjs>
       <dataOutputObjs>weights_buffer_0_0_2</dataOutputObjs>
@@ -418,7 +418,7 @@
       <dataOutputObjs>weights_buffer_0_0_7</dataOutputObjs>
       <constName>load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="_ln132" lineNumber="132" fileName="src/conv2.cpp" fileDirectory="../." coreId="14469" contextFuncName="load_buffer_tile_c2" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="_ln132" lineNumber="132" fileName="src/conv2.cpp" fileDirectory="../." coreId="0" contextFuncName="load_buffer_tile_c2" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv2.cpp" linenumber="132" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="load_buffer_tile_c2"/>
     </node_objs>
     <fileValidLineNumbers fileName="src/conv2.cpp">
@@ -429,258 +429,253 @@
   <ScheduleInfo time="1"/>
   <ScheduleInfo time="2"/>
   <ScheduleInfo time="3"/>
-  <regnodes realName="conv2_weights_read_reg_454">
+  <regnodes realName="yClamped_15_reg_621">
+    <nodeIds>57</nodeIds>
+  </regnodes>
+  <regnodes realName="conv2_weights_read_reg_456">
     <nodeIds>20</nodeIds>
   </regnodes>
-  <regnodes realName="yClamped_1_reg_549">
-    <nodeIds>43</nodeIds>
-  </regnodes>
-  <regnodes realName="xClamped_7_reg_499">
-    <nodeIds>33</nodeIds>
-  </regnodes>
-  <regnodes realName="xClamped_13_reg_529">
-    <nodeIds>39</nodeIds>
-  </regnodes>
-  <regnodes realName="tx0_read_reg_449">
-    <nodeIds>19</nodeIds>
-  </regnodes>
-  <regnodes realName="xClamped_2_reg_474">
-    <nodeIds>28</nodeIds>
-  </regnodes>
-  <regnodes realName="yClamped_12_reg_604">
-    <nodeIds>54</nodeIds>
-  </regnodes>
-  <regnodes realName="yClamped_13_reg_609">
-    <nodeIds>55</nodeIds>
-  </regnodes>
-  <regnodes realName="xClamped_1_reg_469">
-    <nodeIds>27</nodeIds>
-  </regnodes>
-  <regnodes realName="yClamped_5_reg_569">
-    <nodeIds>47</nodeIds>
-  </regnodes>
-  <regnodes realName="yClamped_11_reg_599">
-    <nodeIds>53</nodeIds>
-  </regnodes>
-  <regnodes realName="xClamped_15_reg_539">
-    <nodeIds>41</nodeIds>
-  </regnodes>
-  <regnodes realName="yClamped_2_reg_554">
-    <nodeIds>44</nodeIds>
-  </regnodes>
-  <regnodes realName="yClamped_10_reg_594">
-    <nodeIds>52</nodeIds>
-  </regnodes>
-  <regnodes realName="xClamped_12_reg_524">
-    <nodeIds>38</nodeIds>
-  </regnodes>
-  <regnodes realName="xClamped_4_reg_484">
-    <nodeIds>30</nodeIds>
-  </regnodes>
-  <regnodes realName="xClamped_11_reg_519">
-    <nodeIds>37</nodeIds>
-  </regnodes>
-  <regnodes realName="yClamped_8_reg_584">
-    <nodeIds>50</nodeIds>
-  </regnodes>
-  <regnodes realName="xClamped_10_reg_514">
-    <nodeIds>36</nodeIds>
-  </regnodes>
-  <regnodes realName="xClamped_9_reg_509">
-    <nodeIds>35</nodeIds>
-  </regnodes>
-  <regnodes realName="xClamped_5_reg_489">
-    <nodeIds>31</nodeIds>
-  </regnodes>
-  <regnodes realName="yClamped_3_reg_559">
-    <nodeIds>45</nodeIds>
-  </regnodes>
-  <regnodes realName="yClamped_4_reg_564">
-    <nodeIds>46</nodeIds>
-  </regnodes>
-  <regnodes realName="yClamped_reg_544">
-    <nodeIds>42</nodeIds>
-  </regnodes>
-  <regnodes realName="tn0_read_reg_438">
+  <regnodes realName="tn0_read_reg_440">
     <nodeIds>17</nodeIds>
   </regnodes>
-  <regnodes realName="yClamped_9_reg_589">
-    <nodeIds>51</nodeIds>
+  <regnodes realName="xClamped_2_reg_476">
+    <nodeIds>28</nodeIds>
   </regnodes>
-  <regnodes realName="xClamped_14_reg_534">
-    <nodeIds>40</nodeIds>
-  </regnodes>
-  <regnodes realName="xClamped_6_reg_494">
+  <regnodes realName="xClamped_6_reg_496">
     <nodeIds>32</nodeIds>
   </regnodes>
-  <regnodes realName="yClamped_15_reg_619">
-    <nodeIds>57</nodeIds>
+  <regnodes realName="xClamped_1_reg_471">
+    <nodeIds>27</nodeIds>
   </regnodes>
-  <regnodes realName="input_fm_read_reg_459">
+  <regnodes realName="yClamped_5_reg_571">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="yClamped_12_reg_606">
+    <nodeIds>54</nodeIds>
+  </regnodes>
+  <regnodes realName="xClamped_9_reg_511">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="yClamped_4_reg_566">
+    <nodeIds>46</nodeIds>
+  </regnodes>
+  <regnodes realName="xClamped_11_reg_521">
+    <nodeIds>37</nodeIds>
+  </regnodes>
+  <regnodes realName="xClamped_12_reg_526">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="yClamped_10_reg_596">
+    <nodeIds>52</nodeIds>
+  </regnodes>
+  <regnodes realName="yClamped_1_reg_551">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="xClamped_4_reg_486">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="input_fm_read_reg_461">
     <nodeIds>21</nodeIds>
   </regnodes>
-  <regnodes realName="xClamped_3_reg_479">
+  <regnodes realName="yClamped_8_reg_586">
+    <nodeIds>50</nodeIds>
+  </regnodes>
+  <regnodes realName="xClamped_10_reg_516">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="xClamped_3_reg_481">
     <nodeIds>29</nodeIds>
   </regnodes>
-  <regnodes realName="yClamped_7_reg_579">
+  <regnodes realName="yClamped_7_reg_581">
     <nodeIds>49</nodeIds>
   </regnodes>
-  <regnodes realName="xClamped_reg_464">
-    <nodeIds>26</nodeIds>
+  <regnodes realName="yClamped_13_reg_611">
+    <nodeIds>55</nodeIds>
   </regnodes>
-  <regnodes realName="yClamped_14_reg_614">
+  <regnodes realName="yClamped_2_reg_556">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="xClamped_7_reg_501">
+    <nodeIds>33</nodeIds>
+  </regnodes>
+  <regnodes realName="yClamped_reg_546">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="xClamped_15_reg_541">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="xClamped_14_reg_536">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="xClamped_13_reg_531">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="yClamped_3_reg_561">
+    <nodeIds>45</nodeIds>
+  </regnodes>
+  <regnodes realName="yClamped_9_reg_591">
+    <nodeIds>51</nodeIds>
+  </regnodes>
+  <regnodes realName="yClamped_11_reg_601">
+    <nodeIds>53</nodeIds>
+  </regnodes>
+  <regnodes realName="yClamped_14_reg_616">
     <nodeIds>56</nodeIds>
   </regnodes>
-  <regnodes realName="yClamped_6_reg_574">
+  <regnodes realName="yClamped_6_reg_576">
     <nodeIds>48</nodeIds>
   </regnodes>
-  <regnodes realName="ty0_read_reg_444">
+  <regnodes realName="ty0_read_reg_446">
     <nodeIds>18</nodeIds>
   </regnodes>
-  <regnodes realName="xClamped_8_reg_504">
+  <regnodes realName="tx0_read_reg_451">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="xClamped_reg_466">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="xClamped_8_reg_506">
     <nodeIds>34</nodeIds>
   </regnodes>
-  <expressionNodes realName="xClamped_1_fu_221">
+  <regnodes realName="xClamped_5_reg_491">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <expressionNodes realName="xClamped_1_fu_223">
     <nodeIds>27</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="yClamped_8_fu_382">
+  <expressionNodes realName="yClamped_8_fu_384">
     <nodeIds>50</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="xClamped_8_fu_270">
-    <nodeIds>34</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="yClamped_9_fu_389">
-    <nodeIds>51</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="xClamped_13_fu_305">
-    <nodeIds>39</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="yClamped_fu_326">
-    <nodeIds>42</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="xClamped_fu_214">
-    <nodeIds>26</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="yClamped_12_fu_410">
-    <nodeIds>54</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="yClamped_4_fu_354">
-    <nodeIds>46</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="xClamped_7_fu_263">
-    <nodeIds>33</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="yClamped_10_fu_396">
-    <nodeIds>52</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="yClamped_1_fu_333">
-    <nodeIds>43</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="xClamped_4_fu_242">
-    <nodeIds>30</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="yClamped_7_fu_375">
-    <nodeIds>49</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="xClamped_11_fu_291">
-    <nodeIds>37</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="xClamped_5_fu_249">
-    <nodeIds>31</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="xClamped_2_fu_228">
-    <nodeIds>28</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="yClamped_13_fu_417">
-    <nodeIds>55</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="xClamped_12_fu_298">
+  <expressionNodes realName="xClamped_12_fu_300">
     <nodeIds>38</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="xClamped_14_fu_312">
-    <nodeIds>40</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="yClamped_15_fu_431">
-    <nodeIds>57</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="yClamped_3_fu_347">
-    <nodeIds>45</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="xClamped_15_fu_319">
+  <expressionNodes realName="xClamped_15_fu_321">
     <nodeIds>41</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="yClamped_14_fu_424">
-    <nodeIds>56</nodeIds>
+  <expressionNodes realName="yClamped_1_fu_335">
+    <nodeIds>43</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="yClamped_6_fu_368">
+  <expressionNodes realName="xClamped_13_fu_307">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xClamped_fu_216">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="yClamped_fu_328">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xClamped_7_fu_265">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="yClamped_10_fu_398">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="yClamped_12_fu_412">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="yClamped_15_fu_433">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="yClamped_4_fu_356">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="yClamped_7_fu_377">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xClamped_4_fu_244">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xClamped_11_fu_293">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="yClamped_6_fu_370">
     <nodeIds>48</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="xClamped_9_fu_277">
+  <expressionNodes realName="yClamped_9_fu_391">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="yClamped_13_fu_419">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xClamped_14_fu_314">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xClamped_2_fu_230">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="yClamped_3_fu_349">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xClamped_9_fu_279">
     <nodeIds>35</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="yClamped_2_fu_340">
-    <nodeIds>44</nodeIds>
+  <expressionNodes realName="yClamped_14_fu_426">
+    <nodeIds>56</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="xClamped_6_fu_256">
-    <nodeIds>32</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="yClamped_11_fu_403">
-    <nodeIds>53</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="yClamped_5_fu_361">
+  <expressionNodes realName="yClamped_5_fu_363">
     <nodeIds>47</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="xClamped_3_fu_235">
-    <nodeIds>29</nodeIds>
+  <expressionNodes realName="yClamped_2_fu_342">
+    <nodeIds>44</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="xClamped_10_fu_284">
+  <expressionNodes realName="xClamped_5_fu_251">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xClamped_8_fu_272">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xClamped_6_fu_258">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="yClamped_11_fu_405">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xClamped_10_fu_286">
     <nodeIds>36</nodeIds>
   </expressionNodes>
-  <moduleNodes realName="grp_load_buffer_tile_c2_Pipeline_2_fu_134">
-    <nodeIds>25</nodeIds>
-  </moduleNodes>
-  <moduleNodes realName="grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_188">
-    <nodeIds>59</nodeIds>
-  </moduleNodes>
-  <moduleNodes realName="grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1_fu_140">
-    <nodeIds>58</nodeIds>
-  </moduleNodes>
-  <moduleNodes realName="grp_load_buffer_tile_c2_Pipeline_1_fu_128">
+  <expressionNodes realName="xClamped_3_fu_237">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_load_buffer_tile_c2_Pipeline_1_fu_130">
     <nodeIds>24</nodeIds>
   </moduleNodes>
-  <ioNodes realName="tx0_read_read_fu_110">
-    <nodeIds>19</nodeIds>
-  </ioNodes>
-  <ioNodes realName="ty0_read_read_fu_104">
+  <moduleNodes realName="grp_load_buffer_tile_c2_Pipeline_2_fu_136">
+    <nodeIds>25</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_105_1_fu_142">
+    <nodeIds>58</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_load_buffer_tile_c2_Pipeline_VITIS_LOOP_121_4_fu_190">
+    <nodeIds>59</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="ty0_read_read_fu_106">
     <nodeIds>18</nodeIds>
   </ioNodes>
-  <ioNodes realName="tn0_read_read_fu_98">
+  <ioNodes realName="tn0_read_read_fu_100">
     <nodeIds>17</nodeIds>
   </ioNodes>
-  <ioNodes realName="input_fm_read_read_fu_122">
-    <nodeIds>21</nodeIds>
+  <ioNodes realName="tx0_read_read_fu_112">
+    <nodeIds>19</nodeIds>
   </ioNodes>
-  <ioNodes realName="conv2_weights_read_read_fu_116">
+  <ioNodes realName="conv2_weights_read_read_fu_118">
     <nodeIds>20</nodeIds>
+  </ioNodes>
+  <ioNodes realName="input_fm_read_read_fu_124">
+    <nodeIds>21</nodeIds>
   </ioNodes>
   <ioPorts name="conv2_weights">
     <contents name="read">
       <nodeIds>20</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="input_fm">
-    <contents name="read">
-      <nodeIds>21</nodeIds>
-    </contents>
-  </ioPorts>
-  <ioPorts name="output_r">
+  <ioPorts name="i2">
     <contents name="call">
       <nodeIds>58</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="params">
-    <contents name="call">
-      <nodeIds>59</nodeIds>
+  <ioPorts name="input_fm">
+    <contents name="read">
+      <nodeIds>21</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="tn0">
@@ -696,6 +691,11 @@
   <ioPorts name="ty0">
     <contents name="read">
       <nodeIds>18</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="w2">
+    <contents name="call">
+      <nodeIds>59</nodeIds>
     </contents>
   </ioPorts>
   <fsm>

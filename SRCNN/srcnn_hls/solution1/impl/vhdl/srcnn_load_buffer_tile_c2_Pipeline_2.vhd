@@ -50,7 +50,7 @@ attribute shreg_extract : string;
     signal ap_ready_int : STD_LOGIC;
     signal p_cast23_fu_80_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal empty_fu_32 : STD_LOGIC_VECTOR (8 downto 0);
-    signal empty_73_fu_64_p2 : STD_LOGIC_VECTOR (8 downto 0);
+    signal empty_69_fu_64_p2 : STD_LOGIC_VECTOR (8 downto 0);
     signal ap_loop_init : STD_LOGIC;
     signal ap_sig_allocacmp_p_load : STD_LOGIC_VECTOR (8 downto 0);
     signal tmp_fu_70_p4 : STD_LOGIC_VECTOR (4 downto 0);
@@ -133,7 +133,7 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_start_int = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
                 if ((exitcond13811_fu_58_p2 = ap_const_lv1_0)) then 
-                    empty_fu_32 <= empty_73_fu_64_p2;
+                    empty_fu_32 <= empty_69_fu_64_p2;
                 elsif ((ap_loop_init = ap_const_logic_1)) then 
                     empty_fu_32 <= ap_const_lv9_0;
                 end if;
@@ -218,7 +218,7 @@ begin
         end if; 
     end process;
 
-    empty_73_fu_64_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_p_load) + unsigned(ap_const_lv9_1));
+    empty_69_fu_64_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_p_load) + unsigned(ap_const_lv9_1));
     exitcond13811_fu_58_p2 <= "1" when (ap_sig_allocacmp_p_load = ap_const_lv9_100) else "0";
     p_cast23_fu_80_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_fu_70_p4),64));
     tmp_fu_70_p4 <= ap_sig_allocacmp_p_load(7 downto 3);

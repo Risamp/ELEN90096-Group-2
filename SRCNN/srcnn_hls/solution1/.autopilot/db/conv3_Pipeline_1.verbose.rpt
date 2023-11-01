@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_1'
 ================================================================
-* Date:           Wed Nov  1 04:14:26 2023
+* Date:           Wed Nov  1 16:45:39 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -85,7 +85,7 @@
     +--------------------+----------+----+---+----+------------+------------+
     |    Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------+----------+----+---+----+------------+------------+
-    |empty_98_fu_58_p2   |         +|   0|  0|  19|          12|           1|
+    |empty_72_fu_58_p2   |         +|   0|  0|  19|          12|           1|
     |exitcond8_fu_52_p2  |      icmp|   0|  0|  19|          12|          11|
     +--------------------+----------+----+---+----+------------+------------+
     |Total               |          |   0|  0|  38|          24|          12|
@@ -180,13 +180,13 @@ ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%br_ln0 = br void %memset.loop.i"   
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_load = load i12 %empty"   --->   Operation 7 'load' 'p_load' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 8 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.80ns)   --->   "%exitcond8 = icmp_eq  i12 %p_load, i12 3528"   --->   Operation 9 'icmp' 'exitcond8' <Predicate = true> <Delay = 0.80> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 10 [1/1] (0.80ns)   --->   "%empty_98 = add i12 %p_load, i12 1"   --->   Operation 10 'add' 'empty_98' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (0.80ns)   --->   "%empty_72 = add i12 %p_load, i12 1"   --->   Operation 10 'add' 'empty_72' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln0 = br i1 %exitcond8, void %memset.loop.i.split, void %VITIS_LOOP_106_1.i.exitStub"   --->   Operation 11 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 3528, i64 3528, i64 3528"   --->   Operation 12 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = (!exitcond8)> <Delay = 0.00>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%p_cast = zext i12 %p_load"   --->   Operation 13 'zext' 'p_cast' <Predicate = (!exitcond8)> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%input_fm_buffer_addr = getelementptr i32 %input_fm_buffer, i64 0, i64 %p_cast"   --->   Operation 14 'getelementptr' 'input_fm_buffer_addr' <Predicate = (!exitcond8)> <Delay = 0.00>
 ST_1 : Operation 15 [1/1] (1.23ns)   --->   "%store_ln0 = store i32 0, i12 %input_fm_buffer_addr"   --->   Operation 15 'store' 'store_ln0' <Predicate = (!exitcond8)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3528> <RAM>
-ST_1 : Operation 16 [1/1] (0.42ns)   --->   "%store_ln0 = store i12 %empty_98, i12 %empty"   --->   Operation 16 'store' 'store_ln0' <Predicate = (!exitcond8)> <Delay = 0.42>
+ST_1 : Operation 16 [1/1] (0.42ns)   --->   "%store_ln0 = store i12 %empty_72, i12 %empty"   --->   Operation 16 'store' 'store_ln0' <Predicate = (!exitcond8)> <Delay = 0.42>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln0 = br void %memset.loop.i"   --->   Operation 17 'br' 'br_ln0' <Predicate = (!exitcond8)> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 18 'ret' 'ret_ln0' <Predicate = (exitcond8)> <Delay = 0.00>
 
@@ -215,7 +215,7 @@ br_ln0                (br               ) [ 00]
 p_load                (load             ) [ 00]
 specpipeline_ln0      (specpipeline     ) [ 00]
 exitcond8             (icmp             ) [ 01]
-empty_98              (add              ) [ 00]
+empty_72              (add              ) [ 00]
 br_ln0                (br               ) [ 00]
 speclooptripcount_ln0 (speclooptripcount) [ 00]
 p_cast                (zext             ) [ 00]
@@ -419,7 +419,7 @@ ret_ln0               (ret              ) [ 00]
 </bind>
 </comp>
 
-<comp id="58" class="1004" name="empty_98_fu_58">
+<comp id="58" class="1004" name="empty_72_fu_58">
 <pin_list>
 <pin id="59" dir="0" index="0" bw="12" slack="0"/>
 <pin id="60" dir="0" index="1" bw="1" slack="0"/>
@@ -427,7 +427,7 @@ ret_ln0               (ret              ) [ 00]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="empty_98/1 "/>
+<opset="empty_72/1 "/>
 </bind>
 </comp>
 
@@ -516,7 +516,7 @@ ret_ln0               (ret              ) [ 00]
 		store_ln0 : 1
 		p_load : 1
 		exitcond8 : 2
-		empty_98 : 2
+		empty_72 : 2
 		br_ln0 : 3
 		p_cast : 2
 		input_fm_buffer_addr : 3
@@ -534,7 +534,7 @@ ret_ln0               (ret              ) [ 00]
 |----------|-----------------|---------|---------|
 |   icmp   | exitcond8_fu_52 |    0    |    19   |
 |----------|-----------------|---------|---------|
-|    add   |  empty_98_fu_58 |    0    |    19   |
+|    add   |  empty_72_fu_58 |    0    |    19   |
 |----------|-----------------|---------|---------|
 |   zext   |   p_cast_fu_64  |    0    |    0    |
 |----------|-----------------|---------|---------|

@@ -70,7 +70,7 @@ newFuncRoot:2 %sext_ln39_cast = sext i62 %sext_ln39_read
 
 <Node id="6" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %output_r, void @empty_18, i32 0, i32 0, void @empty_19, i32 0, i32 512, void @empty_21, void @empty_10, void @empty_19, i32 16, i32 16, i32 16, i32 16, void @empty_19, void @empty_19, i32 4294967295, i32 0
+newFuncRoot:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %o, void @empty_13, i32 0, i32 0, void @empty_14, i32 0, i32 512, void @empty_20, void @empty_15, void @empty_14, i32 16, i32 16, i32 256, i32 256, void @empty_14, void @empty_14, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -130,7 +130,7 @@ memset.loop:0 %p_load = load i16 %empty
 
 <Node id="11" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-memset.loop:1 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %output_r
+memset.loop:1 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %o
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -145,10 +145,10 @@ memset.loop:1 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %ou
 
 <Node id="12" bw="32" op_0_bw="32" op_1_bw="64">
 <![CDATA[
-memset.loop:2 %output_r_addr = getelementptr i32 %output_r, i64 %sext_ln39_cast
+memset.loop:2 %o_addr = getelementptr i32 %o, i64 %sext_ln39_cast
 
 ]]></Node>
-<StgValue><ssdm name="output_r_addr"/></StgValue>
+<StgValue><ssdm name="o_addr"/></StgValue>
 </operation>
 
 <operation id="14" st_id="1" stage="1" lat="1">
@@ -190,10 +190,10 @@ memset.loop:4 %exitcond2 = icmp_eq  i16 %p_load, i16 65025
 
 <Node id="15" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-memset.loop:5 %empty_63 = add i16 %p_load, i16 1
+memset.loop:5 %empty_60 = add i16 %p_load, i16 1
 
 ]]></Node>
-<StgValue><ssdm name="empty_63"/></StgValue>
+<StgValue><ssdm name="empty_60"/></StgValue>
 </operation>
 
 <operation id="17" st_id="1" stage="1" lat="1">
@@ -221,7 +221,7 @@ memset.loop:6 %br_ln0 = br i1 %exitcond2, void %memset.loop.split, void %split.e
 
 <Node id="20" bw="0" op_0_bw="16" op_1_bw="16" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-memset.loop.split:2 %store_ln0 = store i16 %empty_63, i16 %empty
+memset.loop.split:2 %store_ln0 = store i16 %empty_60, i16 %empty
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -270,7 +270,7 @@ memset.loop.split:0 %speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_Sp
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="4">
 <![CDATA[
-memset.loop.split:1 %write_ln39 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %output_r_addr, i32 0, i4 15
+memset.loop.split:1 %write_ln39 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %o_addr, i32 0, i4 15
 
 ]]></Node>
 <StgValue><ssdm name="write_ln39"/></StgValue>
