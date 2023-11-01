@@ -5714,36 +5714,40 @@ typedef ap_fixed<10,1> conv1_b;
 typedef ap_fixed<18,1> conv2_w;
 typedef ap_fixed<24,1> conv2_b;
 typedef ap_fixed<20,1> conv3_w;
+typedef ap_fixed<15,1> conv3_b;
+typedef ap_fixed<32,1> output_conv1;
+typedef ap_fixed<32,1> output_conv2;
+
 typedef ap_fixed<32,3> test;
 
 
 void srcnn(input_ft input_ftmap[1][255][255],
      conv1_w conv1_weights[64][1][9][9],
      conv1_b conv1_biases[64],
-     test conv1_output_ftmap[64][255][255],
+     output_conv1 conv1_output_ftmap[64][255][255],
      conv2_w conv2_weights[32][64][1][1],
      conv2_b conv2_biases[32],
-     test conv2_output_ftmap[32][255][255],
+     output_conv2 conv2_output_ftmap[32][255][255],
      conv3_w conv3_weights[1][32][5][5],
-     test conv3_biases[1],
+     conv3_b conv3_biases[1],
      test output_ftmap[1][255][255]);
 
 
 void conv1(input_ft input_ftmap[1][255][255],
      conv1_w conv1_weights[64][1][9][9],
            conv1_b conv1_biases[64],
-           test output_ftmap[64][255][255]);
+           output_conv1 output_ftmap[64][255][255]);
 
 
-void conv2(test input_ftmap[64][255][255],
+void conv2(output_conv1 input_ftmap[64][255][255],
      conv2_w conv2_weights[32][64][1][1],
      conv2_b conv2_biases[32],
-     test output_ftmap[32][255][255]);
+     output_conv2 output_ftmap[32][255][255]);
 
 
-void conv3(test input_ftmap[32][255][255],
+void conv3(output_conv2 input_ftmap[32][255][255],
      conv3_w conv3_weights[1][32][5][5],
-     test conv3_biases[1],
+     conv3_b conv3_biases[1],
      test output_ftmap[1][255][255]);
 
 
@@ -5755,26 +5759,26 @@ void load_buffer_tile_c1(input_ft input_fm_buffer[1][255 / 15 + (2 * (9 - 1) / 2
                          int tx0,
                          int ty0);
 
-void export_buffer_tile_c1(test output_fm_buffer[64][255 / 15][255 / 15],
-         test output_ftmap[64][255][255],
+void export_buffer_tile_c1(output_conv1 output_fm_buffer[64][255 / 15][255 / 15],
+         output_conv1 output_ftmap[64][255][255],
                            int tx0,
                            int ty0,
          conv1_b conv1_biases[64]
          );
 
-void load_buffer_tile_c2(test input_fm_buffer[64][255 / 15 + (2 * (1 - 1) / 2)][255 / 15 + (2 * (1 - 1) / 2)],
-       test input_fm[64][255][255],
+void load_buffer_tile_c2(output_conv1 input_fm_buffer[64][255 / 15 + (2 * (1 - 1) / 2)][255 / 15 + (2 * (1 - 1) / 2)],
+       output_conv1 input_fm[64][255][255],
                          int tx0,
                          int ty0);
 
-void export_buffer_tile_c2(test output_fm_buffer[32][255 / 15][255 / 15],
-         test output_ftmap[32][255][255],
+void export_buffer_tile_c2(output_conv2 output_fm_buffer[32][255 / 15][255 / 15],
+         output_conv2 output_ftmap[32][255][255],
                            int tx0,
                            int ty0,
          conv2_b conv2_biases[32]);
 
-void load_buffer_tile_c3(test input_fm_buffer[32][255 / 15 + (2 * (5 - 1) / 2)][255 / 15 + (2 * (5 - 1) / 2)],
-       test input_fm[32][255][255],
+void load_buffer_tile_c3(output_conv2 input_fm_buffer[32][255 / 15 + (2 * (5 - 1) / 2)][255 / 15 + (2 * (5 - 1) / 2)],
+       output_conv2 input_fm[32][255][255],
                          int tx0,
                          int ty0);
 
@@ -33543,10 +33547,10 @@ namespace std
 using namespace std;
 
 
-void conv2(test input_ftmap[64][255][255],
+void conv2(output_conv1 input_ftmap[64][255][255],
      conv2_w conv2_weights[32][64][1][1],
            conv2_b conv2_biases[32],
-           test output_ftmap[32][255][255])
+           output_conv2 output_ftmap[32][255][255])
 {
 # 28 "src/conv2.cpp"
 #pragma HLS PIPELINE off
@@ -33560,8 +33564,8 @@ void conv2(test input_ftmap[64][255][255],
   int tx0 = ti * 255 / 15;
 
 
-  static test input_fm_buffer[64][255 / 15 + (2 * (1 - 1) / 2)][255 / 15 + (2 * (1 - 1) / 2)];
-  static test output_fm_buffer[32][255 / 15][255 / 15] = {0};
+  static output_conv1 input_fm_buffer[64][255 / 15 + (2 * (1 - 1) / 2)][255 / 15 + (2 * (1 - 1) / 2)];
+  static output_conv2 output_fm_buffer[32][255 / 15][255 / 15] = {0};
 
 
   load_buffer_tile_c2(input_fm_buffer, input_ftmap, tx0, ty0);
@@ -33601,13 +33605,13 @@ void conv2(test input_ftmap[64][255][255],
 }
 # 100 "src/conv2.cpp"
 void load_buffer_tile_c2(
- test input_fm_buffer[64][255 / 15 + (2 * (1 - 1) / 2)][255 / 15 + (2 * (1 - 1) / 2)],
- test input_fm[64][255][255],
+ output_conv1 input_fm_buffer[64][255 / 15 + (2 * (1 - 1) / 2)][255 / 15 + (2 * (1 - 1) / 2)],
+ output_conv1 input_fm[64][255][255],
  int tx0,
  int ty0
 ) {
 
- memset(input_fm_buffer, 0, 64 * (255 / 15 + (2 * (1 - 1) / 2)) * (255 / 15 + (2 * (1 - 1) / 2)) * sizeof(test));
+ memset(input_fm_buffer, 0, 64 * (255 / 15 + (2 * (1 - 1) / 2)) * (255 / 15 + (2 * (1 - 1) / 2)) * sizeof(output_conv1));
 
  VITIS_LOOP_109_1: for (int nin = 0; nin < 64; nin++) {
   VITIS_LOOP_110_2: for (int by = 0; by < 255 / 15 + (2 * (1 - 1) / 2); by++) {
@@ -33625,8 +33629,8 @@ void load_buffer_tile_c2(
 }
 
 void export_buffer_tile_c2(
- test output_fm_buffer[32][255 / 15][255 / 15],
- test output_ftmap[32][255][255],
+ output_conv2 output_fm_buffer[32][255 / 15][255 / 15],
+ output_conv2 output_ftmap[32][255][255],
  int tx0,
  int ty0,
  conv2_b conv2_biases[32]
@@ -33645,5 +33649,5 @@ void export_buffer_tile_c2(
  }
 
 
- memset(output_fm_buffer, 0, 32 * 255 / 15 * 255 / 15 * sizeof(test));
+ memset(output_fm_buffer, 0, 32 * 255 / 15 * 255 / 15 * sizeof(output_conv2));
 }

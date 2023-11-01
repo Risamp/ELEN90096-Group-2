@@ -9,8 +9,8 @@ using namespace std;
 input_ft img_LR[N0][H][W];  // low resolution input image
 test img_HR[N0][H][W];  // high-resolution output image
 test img_GR[N0][H][W];  // high-resolution golden reference
-test layer_1_output[N1][H][W] = {0};
-test layer_2_output[N2][H][W] = {0};
+output_conv1 layer_1_output[N1][H][W] = {0};
+output_conv2 layer_2_output[N2][H][W] = {0};
 
 // parameter dimensions
 //   weights: output features x input features x kernel height x kernel width
@@ -48,7 +48,7 @@ int tb_srcnn()
     load_conv3_w("./weights/conv3_weights_3x_flp.bin",
                &conv3_weights[0][0][0][0],
                N3*N2*F3*F3);
-    load_param_gen("./weights/conv3_biases_3x_flp.bin",
+    load_conv3_b("./weights/conv3_biases_3x_flp.bin",
                &conv3_biases[0],
                N3);
     

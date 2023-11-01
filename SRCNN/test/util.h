@@ -51,6 +51,11 @@ void load_conv2_b(std::string  fname,
                 conv2_b     *param,
                 int          count);
 
+// load conv3 layer biases from single precision FLP file
+void load_conv3_b(std::string  fname,
+                conv3_b     *param,
+                int          count);
+
 // load test from single precision FLP file
 void load_test(std::string  fname,
                 test     *param,
@@ -64,6 +69,11 @@ void load_param_gen(std::string  fname,
 // returns MSE between two images
 double calculate_mse(test *img1,
                      test *img2,
+                     int      count);
+
+// returns MSE between two images
+double calculate_mse_conv1(test *img1,
+                     output_conv1 *img2,
                      int      count);
 
 // return PSNR between two images

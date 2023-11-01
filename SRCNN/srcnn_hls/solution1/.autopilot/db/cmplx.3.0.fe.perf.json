@@ -9,14 +9,14 @@
       "T": 1
     },
     "name": "srcnn",
-    "total_instructions": 522
+    "total_instructions": 523
   },
   "1": {
     "basicblocks": 37,
     "calls": "",
     "file": "conv3.cpp",
     "fileloc": 10,
-    "instructions": 161,
+    "instructions": 162,
     "loads": {
       "G": 4,
       "L": 3
@@ -26,7 +26,7 @@
       "G": 6,
       "L": 2
     },
-    "total_instructions": 163
+    "total_instructions": 164
   },
   "2": {
     "basicblocks": 31,

@@ -10,7 +10,7 @@ using namespace std;
 void conv1(input_ft input_ftmap[N0][H][W],
 		   conv1_w conv1_weights[N1][N0][F1][F1],
            conv1_b conv1_biases[N1],
-           test output_ftmap[N1][H][W])
+           output_conv1 output_ftmap[N1][H][W])
 {
 
 		/*
@@ -36,7 +36,7 @@ void conv1(input_ft input_ftmap[N0][H][W],
 
 			// initialise input and output buffers
 			static input_ft input_fm_buffer[N0][TH + (2 * P1)][TW + (2 * P1)];
-			static test output_fm_buffer[N1][TH][TW] = {0};
+			static output_conv1 output_fm_buffer[N1][TH][TW] = {0};
 
 			// load buffer-sized chunk
 			load_buffer_tile_c1(input_fm_buffer, input_ftmap, tx0, ty0);
@@ -106,8 +106,8 @@ void load_buffer_tile_c1(
 }
 
 void export_buffer_tile_c1(
-		test output_fm_buffer[N1][TH][TW],
-		test output_ftmap[N1][H][W],
+		output_conv1 output_fm_buffer[N1][TH][TW],
+		output_conv1 output_ftmap[N1][H][W],
 		int tx0,
 		int ty0,
 		conv1_b conv1_biases[N1]

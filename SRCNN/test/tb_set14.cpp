@@ -11,8 +11,8 @@ using namespace std;
 input_ft img_LR_set14[N0][H][W];  // low resolution input image
 test img_HR_set14[N0][H][W];  // high-resolution output image
 test img_GT_set14[N0][H][W];
-test layer_1_output_set14[N1][H][W] = {0};
-test layer_2_output_set14[N2][H][W] = {0};
+output_conv1 layer_1_output_set14[N1][H][W] = {0};
+output_conv2 layer_2_output_set14[N2][H][W] = {0};
 
 conv1_w conv1_weights_set14[N1][N0][F1][F1];
 conv1_b conv1_biases_set14[N1];

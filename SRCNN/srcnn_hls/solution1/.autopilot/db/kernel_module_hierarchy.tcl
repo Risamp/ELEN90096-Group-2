@@ -1,7 +1,7 @@
 set ModuleHierarchy {[{
 "Name" : "srcnn","ID" : "0","Type" : "sequential",
 "SubInsts" : [
-	{"Name" : "grp_conv1_fu_279","ID" : "1","Type" : "sequential",
+	{"Name" : "grp_conv1_fu_283","ID" : "1","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "TILE_J","ID" : "2","Type" : "no",
 		"SubLoops" : [
@@ -26,7 +26,7 @@ set ModuleHierarchy {[{
 					"SubLoops" : [
 					{"Name" : "OUT_BUFFER_TX","ID" : "14","Type" : "no"},]},]},
 			{"Name" : "TILE_I.5","ID" : "15","Type" : "no"},]},]},]},
-	{"Name" : "grp_conv2_fu_293","ID" : "16","Type" : "sequential",
+	{"Name" : "grp_conv2_fu_297","ID" : "16","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "TJ","ID" : "17","Type" : "no",
 		"SubLoops" : [
@@ -51,7 +51,7 @@ set ModuleHierarchy {[{
 					"SubLoops" : [
 					{"Name" : "VITIS_LOOP_133_3","ID" : "29","Type" : "no"},]},]},
 			{"Name" : "TI.5","ID" : "30","Type" : "no"},]},]},]},
-	{"Name" : "grp_conv3_fu_307","ID" : "31","Type" : "sequential",
+	{"Name" : "grp_conv3_fu_311","ID" : "31","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "VITIS_LOOP_31_1","ID" : "32","Type" : "no",
 		"SubLoops" : [

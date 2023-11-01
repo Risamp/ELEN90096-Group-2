@@ -3,8 +3,8 @@
         "name": "conv1",
         "file": "conv1.cpp",
         "fileloc": "10",
-        "instructions": "295",
-        "total_instructions": "295",
+        "instructions": "294",
+        "total_instructions": "294",
         "calls": "",
         "basicblocks": "43",
         "loads": {
@@ -20,12 +20,51 @@
             "N": "13"
         }
     },
+    "0": {
+        "name": "srcnn",
+        "file": "srcnn.cpp",
+        "fileloc": "6",
+        "instructions": "96",
+        "total_instructions": "956",
+        "calls": "1 2 3",
+        "basicblocks": "10",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "3"
+        }
+    },
     "2": {
+        "name": "conv2",
+        "file": "conv2.cpp",
+        "fileloc": "10",
+        "instructions": "263",
+        "total_instructions": "263",
+        "calls": "",
+        "basicblocks": "43",
+        "loads": {
+            "G": "3",
+            "L": "1"
+        },
+        "stores": {
+            "G": "4",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1",
+            "N": "13"
+        }
+    },
+    "3": {
         "name": "conv3",
         "file": "conv3.cpp",
         "fileloc": "10",
-        "instructions": "300",
-        "total_instructions": "300",
+        "instructions": "303",
+        "total_instructions": "303",
         "calls": "",
         "basicblocks": "49",
         "loads": {
@@ -39,45 +78,6 @@
         "loops": {
             "L": "2",
             "N": "14"
-        }
-    },
-    "0": {
-        "name": "srcnn",
-        "file": "srcnn.cpp",
-        "fileloc": "6",
-        "instructions": "91",
-        "total_instructions": "950",
-        "calls": "1 3 2",
-        "basicblocks": "10",
-        "loads": {
-            "L": "3"
-        },
-        "stores": {
-            "L": "6"
-        },
-        "loops": {
-            "L": "3"
-        }
-    },
-    "3": {
-        "name": "conv2",
-        "file": "conv2.cpp",
-        "fileloc": "10",
-        "instructions": "264",
-        "total_instructions": "264",
-        "calls": "",
-        "basicblocks": "43",
-        "loads": {
-            "G": "3",
-            "L": "1"
-        },
-        "stores": {
-            "G": "4",
-            "L": "2"
-        },
-        "loops": {
-            "L": "1",
-            "N": "13"
         }
     }
 }

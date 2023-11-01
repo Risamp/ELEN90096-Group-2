@@ -7,7 +7,7 @@
 using namespace std;
 
 input_ft input_ftmap[N0][H][W];    // low resolution input image
-test output_ftmap[N1][H][W];   // output feature map
+output_conv1 output_ftmap[N1][H][W];   // output feature map
 test golden_ftmap[N1][H][W];   // golden reference output feature map
 
 // parameter dimensions
@@ -43,7 +43,7 @@ int tb_conv1()
     load_ftmap(fname_GR, &golden_ftmap[0][0][0], N1*H*W);
 
     // compare 
-    double mse = calculate_mse(&golden_ftmap[0][0][0],
+    double mse = calculate_mse_conv1(&golden_ftmap[0][0][0],
                                &output_ftmap[0][0][0],
                                N1*H*W);
     

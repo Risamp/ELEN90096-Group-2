@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set name srcnn_mul_32s_20s_51_1_1
+set name srcnn_mul_32s_20s_52_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
 }
@@ -148,7 +148,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_conv3_biases_0_0_val \
     op interface \
-    ports { conv3_biases_0_0_val { I 32 vector } } \
+    ports { conv3_biases_0_0_val { I 15 vector } } \
 } "
 }
 

@@ -179,6 +179,25 @@ void load_conv3_w(std::string  fname,
     ifs.close();
 }
 
+// load conv3 biases parameters from flp file
+void load_conv3_b(std::string  fname,
+                conv3_b     *param,
+                int          count)
+{
+    float p;
+
+    std::ifstream ifs(fname, std::ios::in | std::ios::binary);
+    if (!ifs)
+        throw std::runtime_error("File not found");
+
+    for (int i = 0; i < count; i++) {
+        ifs.read((char *) &p, sizeof(float));
+        param[i] = (conv3_b) p;
+    }
+
+    ifs.close();
+}
+
 // load test type from flp file
 void load_test(std::string  fname,
                 test     *param,
@@ -225,6 +244,21 @@ double calculate_mse(test *img1,
 {
     double mse = 0.0;
     
+    for (int i = 0; i < count; i++) {
+        mse += std::pow(float(img1[i] - img2[i]), 2);
+    }
+    mse = mse / count;
+
+    return mse;
+}
+
+// returns MSE between two images
+double calculate_mse_conv1(test *img1,
+                     output_conv1 *img2,
+                     int      count)
+{
+    double mse = 0.0;
+
     for (int i = 0; i < count; i++) {
         mse += std::pow(float(img1[i] - img2[i]), 2);
     }

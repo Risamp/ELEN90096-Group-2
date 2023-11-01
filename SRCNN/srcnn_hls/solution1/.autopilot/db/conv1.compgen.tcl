@@ -7,7 +7,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 set id 2
-set name srcnn_mac_muladd_24s_12s_36ns_36_4_1
+set name srcnn_mac_muladd_24s_12s_34ns_34_4_1
 set corename simcore_mac
 set op mac
 set stage_num 4
@@ -19,12 +19,12 @@ set in0_width 24
 set in0_signed 1
 set in1_width 12
 set in1_signed 1
-set in2_width 36
+set in2_width 34
 set in2_signed 0
 set ce_width 1
 set ce_signed 0
-set out_width 36
-set arg_lists {i0 {24 1 +} i1 {12 1 +} m {36 1 +} i2 {36 0 +} p {36 0 +} c_reg {1} rnd {0} acc {0} }
+set out_width 34
+set arg_lists {i0 {24 1 +} i1 {12 1 +} m {34 1 +} i2 {34 0 +} p {34 0 +} c_reg {1} rnd {0} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1

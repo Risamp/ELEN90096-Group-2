@@ -3,247 +3,247 @@
 
 <trans_list>
 
-<trans id="152" from="1" to="2">
+<trans id="157" from="1" to="2">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="153" from="2" to="3">
+<trans id="158" from="2" to="3">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="154" from="3" to="4">
+<trans id="159" from="3" to="4">
 <condition id="-1">
 <or_exp><and_exp><literal name="exitcond55" val="0"/>
 </and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="155" from="3" to="5">
+<trans id="160" from="3" to="5">
 <condition id="-1">
 <or_exp><and_exp><literal name="exitcond55" val="1"/>
 </and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="157" from="4" to="3">
+<trans id="162" from="4" to="3">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="158" from="5" to="6">
+<trans id="163" from="5" to="6">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="159" from="6" to="7">
+<trans id="164" from="6" to="7">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="160" from="7" to="8">
+<trans id="165" from="7" to="8">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="161" from="8" to="9">
+<trans id="166" from="8" to="9">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="162" from="9" to="10">
+<trans id="167" from="9" to="10">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="163" from="10" to="11">
+<trans id="168" from="10" to="11">
 <condition id="-1">
 <or_exp><and_exp><literal name="exitcond44" val="0"/>
 </and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="164" from="10" to="12">
+<trans id="169" from="10" to="12">
 <condition id="-1">
 <or_exp><and_exp><literal name="exitcond44" val="1"/>
 </and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="166" from="11" to="10">
+<trans id="171" from="11" to="10">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="167" from="12" to="13">
+<trans id="172" from="12" to="13">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="168" from="13" to="14">
+<trans id="173" from="13" to="14">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="169" from="14" to="15">
+<trans id="174" from="14" to="15">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="170" from="15" to="16">
+<trans id="175" from="15" to="16">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="171" from="16" to="17">
+<trans id="176" from="16" to="17">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="172" from="17" to="18">
+<trans id="177" from="17" to="18">
 <condition id="-1">
 <or_exp><and_exp><literal name="exitcond3" val="0"/>
 </and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="173" from="17" to="19">
+<trans id="178" from="17" to="19">
 <condition id="-1">
 <or_exp><and_exp><literal name="exitcond3" val="1"/>
 </and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="175" from="18" to="17">
+<trans id="180" from="18" to="17">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="177" from="19" to="20">
+<trans id="182" from="19" to="20">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="178" from="20" to="21">
+<trans id="183" from="20" to="21">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="179" from="21" to="22">
+<trans id="184" from="21" to="22">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="180" from="22" to="23">
+<trans id="185" from="22" to="23">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="181" from="23" to="24">
+<trans id="186" from="23" to="24">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="182" from="24" to="25">
+<trans id="187" from="24" to="25">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="183" from="25" to="26">
+<trans id="188" from="25" to="26">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="184" from="26" to="27">
+<trans id="189" from="26" to="27">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="185" from="27" to="28">
+<trans id="190" from="27" to="28">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="186" from="28" to="29">
+<trans id="191" from="28" to="29">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="187" from="29" to="30">
+<trans id="192" from="29" to="30">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="188" from="30" to="31">
+<trans id="193" from="30" to="31">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="189" from="31" to="32">
+<trans id="194" from="31" to="32">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="190" from="32" to="33">
+<trans id="195" from="32" to="33">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="191" from="33" to="34">
+<trans id="196" from="33" to="34">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="192" from="34" to="35">
+<trans id="197" from="34" to="35">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="193" from="35" to="36">
+<trans id="198" from="35" to="36">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="194" from="36" to="37">
+<trans id="199" from="36" to="37">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="195" from="37" to="38">
+<trans id="200" from="37" to="38">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
@@ -1644,11 +1644,27 @@ split:5 %gmem_addr_3 = getelementptr i32 %gmem, i64 %p_cast_cast
 ]]></Node>
 <StgValue><ssdm name="gmem_addr_3"/></StgValue>
 </operation>
+
+<operation id="128" st_id="17" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="exitcond3" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="116" bw="2" op_0_bw="64">
+<![CDATA[
+split:8 %empty_75 = trunc i64 %conv3_biases_read
+
+]]></Node>
+<StgValue><ssdm name="empty_75"/></StgValue>
+</operation>
 </state>
 
 <state id="18" st_id="18">
 
-<operation id="128" st_id="18" stage="1" lat="1">
+<operation id="129" st_id="18" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1663,7 +1679,7 @@ memset.loop.split:0 %speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_Sp
 <StgValue><ssdm name="speclooptripcount_ln0"/></StgValue>
 </operation>
 
-<operation id="129" st_id="18" stage="1" lat="1">
+<operation id="130" st_id="18" stage="1" lat="1">
 <core>m_axi</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1678,7 +1694,7 @@ memset.loop.split:1 %write_ln36 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %g
 <StgValue><ssdm name="write_ln36"/></StgValue>
 </operation>
 
-<operation id="130" st_id="18" stage="1" lat="1">
+<operation id="131" st_id="18" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1696,7 +1712,7 @@ memset.loop.split:3 %br_ln0 = br void %memset.loop
 
 <state id="19" st_id="19">
 
-<operation id="131" st_id="19" stage="5" lat="5">
+<operation id="132" st_id="19" stage="5" lat="5">
 <core>m_axi</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1714,7 +1730,7 @@ split:0 %empty_74 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr
 
 <state id="20" st_id="20">
 
-<operation id="132" st_id="20" stage="4" lat="5">
+<operation id="133" st_id="20" stage="4" lat="5">
 <core>m_axi</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1732,7 +1748,7 @@ split:0 %empty_74 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr
 
 <state id="21" st_id="21">
 
-<operation id="133" st_id="21" stage="3" lat="5">
+<operation id="134" st_id="21" stage="3" lat="5">
 <core>m_axi</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1750,7 +1766,7 @@ split:0 %empty_74 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr
 
 <state id="22" st_id="22">
 
-<operation id="134" st_id="22" stage="2" lat="5">
+<operation id="135" st_id="22" stage="2" lat="5">
 <core>m_axi</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1768,7 +1784,7 @@ split:0 %empty_74 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr
 
 <state id="23" st_id="23">
 
-<operation id="135" st_id="23" stage="1" lat="5">
+<operation id="136" st_id="23" stage="1" lat="5">
 <core>m_axi</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1786,7 +1802,7 @@ split:0 %empty_74 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr
 
 <state id="24" st_id="24">
 
-<operation id="136" st_id="24" stage="2" lat="2">
+<operation id="137" st_id="24" stage="2" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1804,7 +1820,7 @@ split:1 %call_ln39 = call void @conv1, i32 %gmem, i64 %input_ftmap_read, i64 %co
 
 <state id="25" st_id="25">
 
-<operation id="137" st_id="25" stage="1" lat="2">
+<operation id="138" st_id="25" stage="1" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1822,7 +1838,7 @@ split:1 %call_ln39 = call void @conv1, i32 %gmem, i64 %input_ftmap_read, i64 %co
 
 <state id="26" st_id="26">
 
-<operation id="138" st_id="26" stage="2" lat="2">
+<operation id="139" st_id="26" stage="2" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1840,7 +1856,7 @@ split:2 %call_ln42 = call void @conv2, i32 %gmem, i64 %conv1_output_ftmap_read, 
 
 <state id="27" st_id="27">
 
-<operation id="139" st_id="27" stage="1" lat="2">
+<operation id="140" st_id="27" stage="1" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1858,7 +1874,7 @@ split:2 %call_ln42 = call void @conv2, i32 %gmem, i64 %conv1_output_ftmap_read, 
 
 <state id="28" st_id="28">
 
-<operation id="140" st_id="28" stage="8" lat="8">
+<operation id="141" st_id="28" stage="8" lat="8">
 <core>m_axi</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1876,7 +1892,7 @@ split:6 %gmem_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_ad
 
 <state id="29" st_id="29">
 
-<operation id="141" st_id="29" stage="7" lat="8">
+<operation id="142" st_id="29" stage="7" lat="8">
 <core>m_axi</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1894,7 +1910,7 @@ split:6 %gmem_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_ad
 
 <state id="30" st_id="30">
 
-<operation id="142" st_id="30" stage="6" lat="8">
+<operation id="143" st_id="30" stage="6" lat="8">
 <core>m_axi</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1912,7 +1928,7 @@ split:6 %gmem_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_ad
 
 <state id="31" st_id="31">
 
-<operation id="143" st_id="31" stage="5" lat="8">
+<operation id="144" st_id="31" stage="5" lat="8">
 <core>m_axi</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1930,7 +1946,7 @@ split:6 %gmem_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_ad
 
 <state id="32" st_id="32">
 
-<operation id="144" st_id="32" stage="4" lat="8">
+<operation id="145" st_id="32" stage="4" lat="8">
 <core>m_axi</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1948,7 +1964,7 @@ split:6 %gmem_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_ad
 
 <state id="33" st_id="33">
 
-<operation id="145" st_id="33" stage="3" lat="8">
+<operation id="146" st_id="33" stage="3" lat="8">
 <core>m_axi</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1966,7 +1982,7 @@ split:6 %gmem_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_ad
 
 <state id="34" st_id="34">
 
-<operation id="146" st_id="34" stage="2" lat="8">
+<operation id="147" st_id="34" stage="2" lat="8">
 <core>m_axi</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1984,7 +2000,7 @@ split:6 %gmem_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_ad
 
 <state id="35" st_id="35">
 
-<operation id="147" st_id="35" stage="1" lat="8">
+<operation id="148" st_id="35" stage="1" lat="8">
 <core>m_axi</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -2002,7 +2018,7 @@ split:6 %gmem_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_ad
 
 <state id="36" st_id="36">
 
-<operation id="148" st_id="36" stage="1" lat="1">
+<operation id="149" st_id="36" stage="1" lat="1">
 <core>m_axi</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -2020,16 +2036,76 @@ split:7 %gmem_addr_3_read = read i32 @_ssdm_op_Read.m_axi.i32P1A, i32 %gmem_addr
 
 <state id="37" st_id="37">
 
-<operation id="149" st_id="37" stage="2" lat="2">
+<operation id="150" st_id="37" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="117" bw="5" op_0_bw="5" op_1_bw="2" op_2_bw="3">
+<![CDATA[
+split:9 %tmp_1 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i2.i3, i2 %empty_75, i3 0
+
+]]></Node>
+<StgValue><ssdm name="tmp_1"/></StgValue>
+</operation>
+
+<operation id="151" st_id="37" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="118" bw="32" op_0_bw="5">
+<![CDATA[
+split:10 %p_cast2 = zext i5 %tmp_1
+
+]]></Node>
+<StgValue><ssdm name="p_cast2"/></StgValue>
+</operation>
+
+<operation id="152" st_id="37" stage="1" lat="1">
+<core>Shifter</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="119" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+split:11 %empty_76 = lshr i32 %gmem_addr_3_read, i32 %p_cast2
+
+]]></Node>
+<StgValue><ssdm name="empty_76"/></StgValue>
+</operation>
+
+<operation id="153" st_id="37" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="120" bw="15" op_0_bw="32">
+<![CDATA[
+split:12 %empty_77 = trunc i32 %empty_76
+
+]]></Node>
+<StgValue><ssdm name="empty_77"/></StgValue>
+</operation>
+
+<operation id="154" st_id="37" stage="2" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="116" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="64" op_4_bw="32" op_5_bw="64" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="0" op_13_bw="0" op_14_bw="0">
+<Node id="121" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="64" op_4_bw="15" op_5_bw="64" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="0" op_13_bw="0" op_14_bw="0">
 <![CDATA[
-split:8 %call_ln45 = call void @conv3, i32 %gmem, i64 %conv2_output_ftmap_read, i64 %conv3_weights_read, i32 %gmem_addr_3_read, i64 %output_ftmap_read, i32 %input_fm_buffer, i32 %output_fm_buffer_0
+split:13 %call_ln45 = call void @conv3, i32 %gmem, i64 %conv2_output_ftmap_read, i64 %conv3_weights_read, i15 %empty_77, i64 %output_ftmap_read, i32 %input_fm_buffer, i32 %output_fm_buffer_0
 
 ]]></Node>
 <StgValue><ssdm name="call_ln45"/></StgValue>
@@ -2038,31 +2114,31 @@ split:8 %call_ln45 = call void @conv3, i32 %gmem, i64 %conv2_output_ftmap_read, 
 
 <state id="38" st_id="38">
 
-<operation id="150" st_id="38" stage="1" lat="2">
+<operation id="155" st_id="38" stage="1" lat="2">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="116" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="64" op_4_bw="32" op_5_bw="64" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="0" op_13_bw="0" op_14_bw="0">
+<Node id="121" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="64" op_4_bw="15" op_5_bw="64" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="0" op_13_bw="0" op_14_bw="0">
 <![CDATA[
-split:8 %call_ln45 = call void @conv3, i32 %gmem, i64 %conv2_output_ftmap_read, i64 %conv3_weights_read, i32 %gmem_addr_3_read, i64 %output_ftmap_read, i32 %input_fm_buffer, i32 %output_fm_buffer_0
+split:13 %call_ln45 = call void @conv3, i32 %gmem, i64 %conv2_output_ftmap_read, i64 %conv3_weights_read, i15 %empty_77, i64 %output_ftmap_read, i32 %input_fm_buffer, i32 %output_fm_buffer_0
 
 ]]></Node>
 <StgValue><ssdm name="call_ln45"/></StgValue>
 </operation>
 
-<operation id="151" st_id="38" stage="1" lat="1">
+<operation id="156" st_id="38" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="117" bw="0">
+<Node id="122" bw="0">
 <![CDATA[
-split:9 %ret_ln47 = ret
+split:14 %ret_ln47 = ret
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln47"/></StgValue>
