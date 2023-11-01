@@ -48,13 +48,11 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 			IN: for (int i = 0; i < C1_ID; i++) {
 
 				ROW: for (int r = 0; r < C1_TH; r++) {
-				#pragma HLS UNROLL factor=4
 				COL: for (int c = 0; c < W; c++) {
 
 					KR: for (int kr = 0; kr < F1; kr++) { // kernel row
-					//#pragma HLS UNROLL
 					KC: for (int kc = 0; kc < F1; kc++) { // kernel column
-						#pragma HLS UNROLL factor=2
+						//#pragma HLS UNROLL factor=2
 						#pragma HLS PIPELINE II=12
 
 						int rtarget = r + kr;
@@ -97,25 +95,18 @@ void load_input_buffer_c1(
 
 		int hclamp = clamp(h + bh - P1, 0, H - 1);
 
-		int left = input_ftmap[bin + in][hclamp][0];
-		int right = input_ftmap[bin + in][hclamp][W - 1];
+		ftmap_t left = input_ftmap[bin + in][hclamp][0];
+		ftmap_t right = input_ftmap[bin + in][hclamp][W - 1];
 
-		// load in left padding
-		PAD_LEFT: for (int pl = 0; pl < P1; pl++) {
-			#pragma HLS UNROLL
+		// load in left and right padding
+		PAD: for (int p = 0; p < P1; p++) {
 
-			input_fm_buffer[bin][bh][pl] = left;
+			input_fm_buffer[bin][bh][p] = left;
+			input_fm_buffer[bin][bh][P1 + W + p] = right;
 		}
 
+		// burst in main image area
 		memcpy(&input_fm_buffer[bin][bh][P1], &input_ftmap[in + bin][hclamp], W * sizeof(ftmap_t));
-
-		// load in right padding
-		PAD_RIGHT: for (int pr = 0; pr < P1; pr++) {
-			#pragma HLS UNROLL
-
-			input_fm_buffer[bin][bh][P1 + W + pr] = right;
-		}
-
 	}}
 }
 

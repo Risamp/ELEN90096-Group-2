@@ -33543,12 +33543,12 @@ void conv1(ftmap_t input_ftmap[1][255][255],
    IN: for (int i = 0; i < 1; i++) {
 
     ROW: for (int r = 0; r < 15; r++) {
-#pragma HLS UNROLL factor=4
+#pragma HLS UNROLL factor=2
  COL: for (int c = 0; c < 255; c++) {
 
      KR: for (int kr = 0; kr < 9; kr++) {
-
-     KC: for (int kc = 0; kc < 9; kc++) {
+#pragma HLS UNROLL
+ KC: for (int kc = 0; kc < 9; kc++) {
 #pragma HLS UNROLL factor=2
 #pragma HLS PIPELINE II=12
 

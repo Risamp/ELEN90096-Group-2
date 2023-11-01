@@ -694,7 +694,23 @@ Args:
   - String:          ''' partially '
   - String:          ''
   - String:          'with a factor of '
-  - Factor:          '4'
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        KR
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:54:10'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1
+  - String:          ''' completely with a factor of '
+  - Factor:          '9'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
@@ -705,7 +721,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:56:10'
+  - LoopLoc:         'src/conv1.cpp:56:6'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -723,7 +739,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:56:10'
+  - LoopLoc:         'src/conv1.cpp:56:6'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -741,7 +757,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:56:10'
+  - LoopLoc:         'src/conv1.cpp:56:6'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -759,7 +775,275 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:56:10'
+  - LoopLoc:         'src/conv1.cpp:56:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        KC
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:56:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        KC
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:56:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        KC
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:56:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        KC
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:56:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        KC
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:56:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        KR
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:54:10'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1
+  - String:          ''' completely with a factor of '
+  - Factor:          '9'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        KC
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:56:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        KC
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:56:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        KC
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:56:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        KC
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:56:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        KC
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:56:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        KC
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:56:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        KC
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:56:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        KC
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:56:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv1
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        KC
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:56:6'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -1232,7 +1516,7 @@ Args:
   - Length:          '3825'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgep153seq
+  - AccessID:        scevgep402seq
   - ArrayName:       output_ftmap
   - String:          ' '
   - BundleName:      i2
@@ -1247,7 +1531,7 @@ Args:
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      store
   - OrigDirection:   write
-  - OrigID:          load-store-loop.i43.store.21
+  - OrigID:          load-store-loop.i79.store.21
 ...
 --- !Missed
 Pass:            reflow-burst-inference
@@ -1276,7 +1560,7 @@ Args:
   - OrigAccess:      call
     DebugLoc:        { File: src/conv1.cpp, Line: 159, Column: 7 }
   - OrigDirection:   write
-  - OrigID:          scevgep153seq
+  - OrigID:          scevgep402seq
   - ArrayName:       output_ftmap
   - String:          ' '
   - BundleName:      i2
@@ -8882,7 +9166,7 @@ Args:
   - OrigAccess:      call
     DebugLoc:        { File: src/conv1.cpp, Line: 159, Column: 7 }
   - OrigDirection:   write
-  - OrigID:          scevgep153seq
+  - OrigID:          scevgep402seq
   - ArrayName:       output_ftmap
   - String:          ' '
   - BundleName:      i2

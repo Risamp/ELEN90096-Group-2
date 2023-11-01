@@ -12,7 +12,10 @@
         <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=weight_buffer type=cyclic factor=2 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:51:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=4" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:55:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:57:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
@@ -134,11 +137,14 @@
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv2.cpp:100:0" msg_body="Unrolling loop 'VITIS_LOOP_109_3' (src/conv2.cpp:109:22) in function 'load_buffer_tile_c2' completely with a factor of 17">
         <args Factor="17" LoopLoc="src/conv2.cpp:109:22" LoopName="VITIS_LOOP_109_3"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv1.cpp:13:0" msg_body="Unrolling loop 'ROW' (src/conv1.cpp:50:10) in function 'conv1' partially with a factor of 4">
-        <args Factor="4" LoopLoc="src/conv1.cpp:50:10" LoopName="ROW"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv1.cpp:13:0" msg_body="Unrolling loop 'ROW' (src/conv1.cpp:50:10) in function 'conv1' partially with a factor of 2">
+        <args Factor="2" LoopLoc="src/conv1.cpp:50:10" LoopName="ROW"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv1.cpp:13:0" msg_body="Unrolling loop 'KC' (src/conv1.cpp:56:10) in function 'conv1' partially with a factor of 2">
-        <args Factor="2" LoopLoc="src/conv1.cpp:56:10" LoopName="KC"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv1.cpp:13:0" msg_body="Unrolling loop 'KR' (src/conv1.cpp:54:10) in function 'conv1' completely with a factor of 9">
+        <args Factor="9" LoopLoc="src/conv1.cpp:54:10" LoopName="KR"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv1.cpp:13:0" msg_body="Unrolling loop 'KC' (src/conv1.cpp:56:6) in function 'conv1' partially with a factor of 2">
+        <args Factor="2" LoopLoc="src/conv1.cpp:56:6" LoopName="KC"/>
     </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv1.cpp:77:0" msg_body="Unrolling loop 'BH' (src/conv1.cpp:79:6) in function 'clear_buffer' partially with a factor of 3">
         <args Factor="3" LoopLoc="src/conv1.cpp:79:6" LoopName="BH"/>
