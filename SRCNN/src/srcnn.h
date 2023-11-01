@@ -33,6 +33,15 @@
 #define C3_TH 15 		// conv1 tile height
 
 
+// deprecated
+#define T 15			// number of tiles in each dimension (width/height)
+#define TH H / T		// input tile height
+#define TW W / T		// input tile width
+#define UNROLL 8		// input tile unroll factor
+#define TD1 N1 / UNROLL		// number of N1 tile blocks
+#define TD2 N2 / UNROLL		// number of N2 tile blocks
+
+
 //Padding values
 #define P1 (F1 - 1) / 2	// padding conv1
 #define P2 (F2 - 1) / 2	// padding conv2
@@ -107,7 +116,7 @@ void clear_buffer_c1(
 );
 
 // CONV2 ###################
-
+/*
 void load_input_buffer_c2(
 	ftmap_t input_fm_buffer[C2_ID][C2_TH + (2 * P2)][W + (2 * P2)],
 	ftmap_t input_ftmap[N1][H][W],
@@ -131,9 +140,37 @@ void export_output_buffer_c2(
 void clear_buffer_c2(
 	ftmap_t output_fm_buffer[C2_OD][C2_TH][W]
 );
-
+*/
 // CONV3 ###################
+void load_buffer_tile_c2(ftmap_t input_fm_buffer[UNROLL][TH + (2 * P2)][TW + (2 * P2)],
+                         ftmap_t input_fm[N1][H][W],
+						 param_t weights_buffer[N2][UNROLL][F2][F2],
+						 param_t conv2_weights[N2][N1][F2][F2],
+                         int tx0,
+                         int ty0,
+						 int tn0);
 
+void export_buffer_tile_c2(ftmap_t output_fm_buffer[N2][TH][TW],
+                           ftmap_t output_ftmap[N2][H][W],
+                           int tx0,
+                           int ty0,
+						   param_t conv2_biases[N2]);
+
+void load_buffer_tile_c3(ftmap_t input_fm_buffer[UNROLL][TH + (2 * P3)][TW + (2 * P3)],
+						ftmap_t input_fm[N2][H][W],
+						param_t weights_buffer[N3][UNROLL][F3][F3],
+						param_t conv3_weights[N3][N2][F3][F3],
+						int tx0,
+						int ty0,
+						int tn0);
+
+void export_buffer_tile_c3(ftmap_t output_fm_buffer[N3][TH][TW],
+                           ftmap_t output_ftmap[N3][H][W],
+                           int tx0,
+                           int ty0,
+						   param_t conv3_biases[N3]);
+
+/*
 void load_input_buffer_c3(
 	ftmap_t input_fm_buffer[C3_ID][C3_TH + (2 * P3)][W + (2 * P3)],
 	ftmap_t input_ftmap[N2][H][W],
@@ -159,6 +196,6 @@ void export_output_buffer_c3(
 void clear_buffer_c3(
 	ftmap_t output_fm_buffer[C3_OD][C3_TH][W]
 );
-
+*/
 
 #endif /* _SRCNN_H_ */

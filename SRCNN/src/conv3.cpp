@@ -6,141 +6,146 @@
 
 using namespace std;
 
-// implements conv3 layer of SRCNN
+// implements conv2 layer of SRCNN
 void conv3(ftmap_t input_ftmap[N2][H][W],
            param_t conv3_weights[N3][N2][F3][F3],
            param_t conv3_biases[N3],
            ftmap_t output_ftmap[N3][H][W])
 {
-	cout << "\n " << input_ftmap[0][0][0] << "conv3 input_ftmap";
 
-	#pragma HLS PIPELINE off
+	/*
+		nin: current input layer
+		nout: current output layer
 
-	static ftmap_t output_fm_buffer[C3_OD][C3_TH][W] = {0};
-	//#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=cyclic factor=8 dim=2
+		(ti, tj): current tile index
+		(tx0, ty0): image space coordinates of tile origin
+		(tx, ty): current tile space coordinates
+		(kx, ky): current kernel space coordinates
+		(bx, by): current buffer space coordinates
 
-	static ftmap_t input_fm_buffer[C3_ID][C3_TH + (2 * P3)][W + (2 * P3)];
-	//#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=cyclic factor=4 dim=2
+	*/
 
-	static param_t weight_buffer[C3_OD][C3_ID][F3][F3];
-	//#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=3
-	//#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=4
+	//#pragma HLS PIPELINE off
 
-	//#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=3
-	//#pragma HLS ARRAY_PARTITION variable=weight_buffer type=complete dim=4
+	// for each tile (ti, tj) in our T x T grid
+	TJ: for (int tj = 0; tj < T; tj++) {
+	TI: for (int ti = 0; ti < T; ti++) {
 
-	TILE_IN: for (int in = 0; in < N2; in += C3_ID) {
-	TILE_ROW: for (int h = 0; h < H; h += C3_TH) {
+		static ftmap_t output_fm_buffer[N3][TH][TW] = {0};
+		//#pragma HLS array_partition variable=output_fm_buffer type=complete
+		int ty0 = tj * TH;
+		int tx0 = ti * TW;
 
-		load_input_buffer_c3(input_fm_buffer, input_ftmap, in, h);
+		// break down the input layers into blocks
+		TN: for (int tn = 0; tn < TD2; tn++) {
 
-		TILE_OUT: for (int out = 0; out < N3; out += C3_OD) {
+			int tn0 = tn * UNROLL;
 
-			load_weight_buffer_c3(weight_buffer, conv3_weights, out, in);
+			// initialise input and output buffers
+			static ftmap_t input_fm_buffer[UNROLL][TH + (2 * P3)][TW + (2 * P3)];
+			static param_t weights_buffer[N3][UNROLL][F3][F3];
+			// partitioning slows it down?
+			//#pragma HLS array_partition variable=input_fm_buffer type=complete
+			//#pragma HLS array_partition variable=weights_buffer type=complete
 
-			OUT: for (int o = 0; o < C3_OD; o++) {
-			IN: for (int i = 0; i < C3_ID; i++) {
+			// load buffer-sized chunk
+			load_buffer_tile_c3(input_fm_buffer, input_ftmap, weights_buffer, conv3_weights, tx0, ty0, tn0);
 
-				ROW: for (int r = 0; r < C3_TH; r++) {
-				COL: for (int c = 0; c < W; c++) {
+			// for each output layer
+			NOUT: for (int nout = 0; nout < N3; nout++) {
 
-					KR: for (int kr = 0; kr < F3; kr++) { // kernel row
-					KC: for (int kc = 0; kc < F3; kc++) { // kernel column
-						//#pragma HLS UNROLL factor=2
-						#pragma HLS PIPELINE II=3
+				// for each pixel in tile
+				TY: for (int ty = 0; ty < TH; ty++) {
+				TX: for (int tx = 0; tx < TW; tx++) {
+				#pragma HLS pipeline off
 
-						int rtarget = r + kr;
-						int ctarget = c + kc;
+					// for each pixel in the kernel
+					KY: for (int ky = 0; ky < F3; ky++) {
+					KX: for (int kx = 0; kx < F3; kx++) {
 
-						output_fm_buffer[o][r][c] += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][rtarget][ctarget];
+						// get buffer-space coordinates
+						int by = ty + ky;
+						int bx = tx + kx;
 
+						// for each input layer
+						NIN: for (int nin = 0; nin < UNROLL; nin++) {
+						#pragma HLS UNROLL factor=8
+							output_fm_buffer[nout][ty][tx] += conv3_weights[nout][tn0 + nin][ky][kx] * input_fm_buffer[nin][by][bx];
+						}
 					}}
+
 				}}
-			}}
-			export_output_buffer_c3(output_fm_buffer, output_ftmap, conv3_biases, out, h);
-		}
-	}}
-}
 
-
-void clear_buffer_c3(ftmap_t output_fm_buffer[C3_OD][C3_TH][W]) {
-	CLEAR: for (int o = 0; o < C3_OD; o++) {
-	BH: for (int h = 0; h < C3_TH; h++) {
-	#pragma HLS UNROLL factor=3
-	BW: for (int w = 0; w < W; w++) {
-
-		output_fm_buffer[o][h][w] = 0;
-	}}}
-}
-
-
-void load_input_buffer_c3(
-	ftmap_t input_fm_buffer[C3_ID][C3_TH + (2 * P3)][W + (2 * P3)],
-	ftmap_t input_ftmap[N2][H][W],
-	int in,
-	int h
-) {
-	LOAD_INPUT: for (int bin = 0; bin < C3_ID; bin++) {
-	BH: for (int bh = 0; bh < C3_TH + (2 * P3); bh++) {
-		#pragma HLS PIPELINE OFF
-
-		int hclamp = clamp(h + bh - P3, 0, H - 1);
-
-		ftmap_t left = input_ftmap[bin + in][hclamp][0];
-		ftmap_t right = input_ftmap[bin + in][hclamp][W - 1];
-
-		// load in left and right padding
-		PAD: for (int p = 0; p < P3; p++) {
-
-			input_fm_buffer[bin][bh][p] = left;
-			input_fm_buffer[bin][bh][P3 + W + p] = right;
+			}
 		}
 
-		// burst in main image area
-		memcpy(&input_fm_buffer[bin][bh][P3], &input_ftmap[in + bin][hclamp], W * sizeof(ftmap_t));
+		// load output buffer back to DRAM
+		export_buffer_tile_c3(output_fm_buffer, output_ftmap, tx0, ty0, conv3_biases);
 	}}
-
-	cout << "\n " << input_fm_buffer[0][0][0] << "conv3 input_fm_buffer";
 }
 
-void load_weight_buffer_c3(
-	param_t weight_buffer[C3_OD][C3_ID][F3][F3],
-	param_t conv1_weights[N3][N2][F3][F3],
-	int out,
-	int in
+
+
+/* loads a buffer tile (i.e. tile + padding) into a given buffer for layer 1.
+ * input_fm_buffer = the buffer to load the image features into
+ * input_fm = the source image feature maps
+ * tx0, ty0 = image space coordinates of tile top left
+*/
+void load_buffer_tile_c3(
+	ftmap_t input_fm_buffer[UNROLL][TH + (2 * P3)][TW + (2 * P3)],
+	ftmap_t input_fm[N2][H][W],
+	param_t weights_buffer[N3][UNROLL][F3][F3],
+	param_t conv3_weights[N3][N2][F3][F3],
+	int tx0,
+	int ty0,
+	int tn0
 ) {
-	LOAD_WEIGHTS: for (int bout = 0; bout < C3_OD; bout++) {
-	IN: for (int bin = 0; bin < C3_ID; bin++) {
+	// clear buffer
+	memset(input_fm_buffer, 0, UNROLL * (TH + (2 * P3)) * (TW + (2 * P3)) * sizeof(ftmap_t));
 
-		memcpy(&weight_buffer[bout][bin][0], &conv1_weights[bout + out][bin + in][0], F3 * sizeof(param_t));
+	for (int nin = 0; nin < UNROLL; nin++) { // input layer
+		for (int by = 0; by < TH + (2 * P3); by++) { // buffer space y
+			for (int bx = 0; bx < TW + (2 * P3); bx++) { // buffer space x
 
-	}}
+				// check for overflow - if there is, clamp (i.e. extend edge values)
+				int xClamped = clamp(tx0 - P3 + bx, 0, W - 1);
+				int yClamped = clamp(ty0 - P3 + by, 0, H - 1);
+
+				//load value into input buffer
+				input_fm_buffer[nin][by][bx] = input_fm[tn0 + nin][yClamped][xClamped];
+			}
+		}
+	}
+
+	for (int nout = 0; nout < N3; nout++) {
+		for (int nin = 0; nin < UNROLL; nin++) {
+			for (int ky = 0; ky < F3; ky++) {
+				for (int kx = 0; kx < F3; kx++) {
+					weights_buffer[nout][nin][ky][kx] = conv3_weights[nout][tn0 + nin][ky][kx];
+				}
+			}
+		}
+	}
 }
 
-void export_output_buffer_c3(
-	ftmap_t output_fm_buffer[C3_OD][C3_TH][W],
+void export_buffer_tile_c3(
+	ftmap_t output_fm_buffer[N3][TH][TW],
 	ftmap_t output_ftmap[N3][H][W],
-	param_t biases[N3],
-	int out,
-	int h
+	int tx0,
+	int ty0,
+	param_t conv3_biases[N3]
 ) {
-	// apply biases and ReLU
-	EXPORT: for (int bout = 0; bout < C3_OD; bout++) {
-	BH: for (int bh = 0; bh < C3_TH; bh++) {
-		#pragma HLS UNROLL factor=2
+	for (int nout = 0; nout < N3; nout++) { // output layer
+		for (int ty = 0; ty < TH; ty++) { // tile space y
+			#pragma HLS pipeline off
+			for (int tx = 0; tx < TW; tx++) { // tile space x
 
-		RELU: for (int bw = 0; bw < W; bw++) {
-			#pragma HLS PIPELINE II=2
+				output_ftmap[nout][ty0 + ty][tx0 + tx] += output_fm_buffer[nout][ty][tx] + conv3_biases[nout];
 
-			output_fm_buffer[bout][bh][bw] = output_fm_buffer[bout][bh][bw] + biases[bout + out];
-
+			}
 		}
+	}
 
-		memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], W * sizeof(ftmap_t));
-	}}
-
-	cout << "\n " << output_fm_buffer[0][0][0] << "conv3 output_fm_buffer";
-
-	clear_buffer_c3(output_fm_buffer);
+	// clear buffer
+	memset(output_fm_buffer, 0, N3 * TH * TW * sizeof(ftmap_t));
 }
-
