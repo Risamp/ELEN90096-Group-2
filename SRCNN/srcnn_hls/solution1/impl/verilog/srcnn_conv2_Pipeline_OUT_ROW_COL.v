@@ -141,15 +141,15 @@ reg   [2:0] o_fu_110;
 wire   [2:0] select_ln40_2_fu_273_p3;
 reg   [17:0] indvar_flatten92_fu_114;
 wire   [17:0] add_ln40_2_fu_235_p2;
-wire   [1:0] empty_71_fu_217_p1;
+wire   [1:0] empty_69_fu_217_p1;
 wire   [5:0] empty_fu_213_p1;
 wire   [0:0] icmp_ln41_fu_259_p2;
 wire   [2:0] add_ln40_fu_253_p2;
-wire   [4:0] tmp_9_fu_285_p3;
+wire   [4:0] tmp_10_fu_285_p3;
 wire   [5:0] zext_ln46_2_fu_293_p1;
 wire   [5:0] zext_ln46_fu_281_p1;
 wire   [5:0] sub_ln46_fu_297_p2;
-wire   [1:0] empty_72_fu_307_p1;
+wire   [1:0] empty_70_fu_307_p1;
 wire   [7:0] p_mid_fu_311_p3;
 wire   [7:0] tmp_s_fu_221_p3;
 wire   [0:0] icmp_ln43_fu_339_p2;
@@ -162,8 +162,8 @@ wire   [8:0] p_shl3_fu_383_p3;
 wire   [9:0] zext_ln46_4_fu_391_p1;
 wire   [9:0] zext_ln46_3_fu_379_p1;
 wire   [9:0] sub_ln46_1_fu_395_p2;
-wire   [1:0] empty_74_fu_409_p1;
-wire   [5:0] empty_73_fu_405_p1;
+wire   [1:0] empty_72_fu_409_p1;
+wire   [5:0] empty_71_fu_405_p1;
 wire   [7:0] p_mid1_fu_413_p3;
 wire   [7:0] select_ln40_3_fu_319_p3;
 wire   [7:0] select_ln41_2_fu_421_p3;
@@ -639,13 +639,13 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter1_stage0;
 
 assign bitcast_ln41_fu_650_p1 = weight_buffer_load_reg_726;
 
-assign empty_71_fu_217_p1 = o_fu_110[1:0];
+assign empty_69_fu_217_p1 = o_fu_110[1:0];
 
-assign empty_72_fu_307_p1 = add_ln40_fu_253_p2[1:0];
+assign empty_70_fu_307_p1 = add_ln40_fu_253_p2[1:0];
 
-assign empty_73_fu_405_p1 = add_ln41_fu_351_p2[5:0];
+assign empty_71_fu_405_p1 = add_ln41_fu_351_p2[5:0];
 
-assign empty_74_fu_409_p1 = select_ln40_2_fu_273_p3[1:0];
+assign empty_72_fu_409_p1 = select_ln40_2_fu_273_p3[1:0];
 
 assign empty_fu_213_p1 = i_fu_102[5:0];
 
@@ -687,9 +687,9 @@ assign output_fm_buffer_address1 = zext_ln46_10_fu_654_p1;
 
 assign output_fm_buffer_d0 = add_reg_757;
 
-assign p_mid1_fu_413_p3 = {{empty_74_fu_409_p1}, {empty_73_fu_405_p1}};
+assign p_mid1_fu_413_p3 = {{empty_72_fu_409_p1}, {empty_71_fu_405_p1}};
 
-assign p_mid_fu_311_p3 = {{empty_72_fu_307_p1}, {6'd0}};
+assign p_mid_fu_311_p3 = {{empty_70_fu_307_p1}, {6'd0}};
 
 assign p_shl3_fu_383_p3 = {{select_ln41_1_fu_371_p3}, {2'd0}};
 
@@ -733,9 +733,9 @@ assign sub_ln46_3_fu_550_p2 = ($signed(p_shl5_fu_542_p3) - $signed(sext_ln46_1_f
 
 assign sub_ln46_fu_297_p2 = (zext_ln46_2_fu_293_p1 - zext_ln46_fu_281_p1);
 
-assign tmp_9_fu_285_p3 = {{select_ln40_2_fu_273_p3}, {2'd0}};
+assign tmp_10_fu_285_p3 = {{select_ln40_2_fu_273_p3}, {2'd0}};
 
-assign tmp_s_fu_221_p3 = {{empty_71_fu_217_p1}, {empty_fu_213_p1}};
+assign tmp_s_fu_221_p3 = {{empty_69_fu_217_p1}, {empty_fu_213_p1}};
 
 assign trunc_ln46_1_fu_538_p1 = add_ln46_1_fu_528_p2[3:0];
 
@@ -751,7 +751,7 @@ assign zext_ln41_fu_429_p1 = select_ln41_2_fu_421_p3;
 
 assign zext_ln46_10_fu_654_p1 = add_ln46_3_reg_721_pp0_iter3_reg;
 
-assign zext_ln46_2_fu_293_p1 = tmp_9_fu_285_p3;
+assign zext_ln46_2_fu_293_p1 = tmp_10_fu_285_p3;
 
 assign zext_ln46_3_fu_379_p1 = select_ln41_1_fu_371_p3;
 

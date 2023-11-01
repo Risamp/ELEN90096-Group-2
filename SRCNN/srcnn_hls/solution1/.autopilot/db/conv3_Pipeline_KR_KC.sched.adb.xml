@@ -1208,7 +1208,7 @@ for.inc53:5 %speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTr
 
 <Node id="57" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.inc53:26 %specpipeline_ln48 = specpipeline void @_ssdm_op_SpecPipeline, i32 3, i32 0, i32 0, i32 0, void @empty_11
+for.inc53:26 %specpipeline_ln48 = specpipeline void @_ssdm_op_SpecPipeline, i32 3, i32 0, i32 0, i32 0, void @empty_22
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln48"/></StgValue>
@@ -1223,7 +1223,7 @@ for.inc53:26 %specpipeline_ln48 = specpipeline void @_ssdm_op_SpecPipeline, i32 
 
 <Node id="58" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc53:27 %specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty_1
+for.inc53:27 %specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln46"/></StgValue>

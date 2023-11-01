@@ -124,10 +124,10 @@ for.inc.1.i.i:2 %icmp_ln67 = icmp_eq  i8 %w, i8 255
 
 <Node id="11" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.inc.1.i.i:3 %add_ln67 = add i8 %w, i8 1
+for.inc.1.i.i:3 %add_ln67_1 = add i8 %w, i8 1
 
 ]]></Node>
-<StgValue><ssdm name="add_ln67"/></StgValue>
+<StgValue><ssdm name="add_ln67_1"/></StgValue>
 </operation>
 
 <operation id="12" st_id="1" stage="1" lat="1">
@@ -235,7 +235,7 @@ for.inc.1.i.i.split:4 %speclooptripcount_ln67 = speclooptripcount void @_ssdm_op
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.1.i.i.split:5 %specloopname_ln67 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9
+for.inc.1.i.i.split:5 %specloopname_ln67 = specloopname void @_ssdm_op_SpecLoopName, void @empty_0
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln67"/></StgValue>
@@ -267,7 +267,7 @@ for.inc.1.i.i.split:6 %store_ln69 = store i32 0, i11 %output_fm_buffer_0_addr
 
 <Node id="21" bw="0" op_0_bw="8" op_1_bw="8" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc.1.i.i.split:7 %store_ln67 = store i8 %add_ln67, i8 %w_3
+for.inc.1.i.i.split:7 %store_ln67 = store i8 %add_ln67_1, i8 %w_3
 
 ]]></Node>
 <StgValue><ssdm name="store_ln67"/></StgValue>
@@ -348,9 +348,9 @@ for.inc13.1.i.i.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="52" from="StgValue_51" to="icmp_ln67" fromId="51" toId="10">
 </dataflow>
-<dataflow id="53" from="w" to="add_ln67" fromId="8" toId="11">
+<dataflow id="53" from="w" to="add_ln67_1" fromId="8" toId="11">
 </dataflow>
-<dataflow id="55" from="StgValue_54" to="add_ln67" fromId="54" toId="11">
+<dataflow id="55" from="StgValue_54" to="add_ln67_1" fromId="54" toId="11">
 </dataflow>
 <dataflow id="56" from="icmp_ln67" to="br_ln67" fromId="10" toId="12">
 </dataflow>
@@ -378,13 +378,13 @@ for.inc13.1.i.i.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="72" from="_ssdm_op_SpecLoopName" to="specloopname_ln67" fromId="71" toId="18">
 </dataflow>
-<dataflow id="74" from="empty_9" to="specloopname_ln67" fromId="73" toId="18">
+<dataflow id="74" from="empty_0" to="specloopname_ln67" fromId="73" toId="18">
 </dataflow>
 <dataflow id="76" from="StgValue_75" to="store_ln69" fromId="75" toId="19">
 </dataflow>
 <dataflow id="77" from="output_fm_buffer_0_addr" to="store_ln69" fromId="16" toId="19">
 </dataflow>
-<dataflow id="78" from="add_ln67" to="store_ln67" fromId="11" toId="20">
+<dataflow id="78" from="add_ln67_1" to="store_ln67" fromId="11" toId="20">
 </dataflow>
 <dataflow id="79" from="w_3" to="store_ln67" fromId="4" toId="20">
 </dataflow>

@@ -47,7 +47,7 @@ wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 wire   [63:0] zext_ln69_2_fu_88_p1;
 reg   [7:0] w_3_fu_34;
-wire   [7:0] add_ln67_fu_72_p2;
+wire   [7:0] add_ln67_1_fu_72_p2;
 wire    ap_loop_init;
 reg   [7:0] ap_sig_allocacmp_w;
 wire   [10:0] zext_ln69_fu_78_p1;
@@ -104,7 +104,7 @@ end
 always @ (posedge ap_clk) begin
     if (((ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         if ((icmp_ln67_fu_66_p2 == 1'd0)) begin
-            w_3_fu_34 <= add_ln67_fu_72_p2;
+            w_3_fu_34 <= add_ln67_1_fu_72_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             w_3_fu_34 <= 8'd0;
         end
@@ -186,7 +186,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln67_fu_72_p2 = (ap_sig_allocacmp_w + 8'd1);
+assign add_ln67_1_fu_72_p2 = (ap_sig_allocacmp_w + 8'd1);
 
 assign add_ln69_fu_82_p2 = (sub_ln69_1 + zext_ln69_fu_78_p1);
 

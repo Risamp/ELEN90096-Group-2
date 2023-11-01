@@ -33552,14 +33552,15 @@ void conv1(ftmap_t input_ftmap[1][255][255],
 
 
  static ftmap_t output_fm_buffer[8][15][255] = {0};
+#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=cyclic factor=8
 
 
  static ftmap_t input_fm_buffer[1][15 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)];
+#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=cyclic factor=8
 
 
  static param_t weight_buffer[8][1][9][9];
-
-
+#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=8
 
 
 
@@ -33575,8 +33576,9 @@ void conv1(ftmap_t input_ftmap[1][255][255],
 
    OUT: for (int o = 0; o < 8; o++) {
    IN: for (int i = 0; i < 1; i++) {
+#pragma HLS UNROLL factor=4
 
-    ROW: for (int r = 0; r < 15; r++) {
+ ROW: for (int r = 0; r < 15; r++) {
     COL: for (int c = 0; c < 255; c++) {
 
      KR: for (int kr = 0; kr < 9; kr++) {
@@ -33588,9 +33590,6 @@ void conv1(ftmap_t input_ftmap[1][255][255],
       int ctarget = c + kc;
 
       output_fm_buffer[o][r][c] += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][rtarget][ctarget];
-
-
-
      }}
     }}
    }}
@@ -33637,9 +33636,6 @@ void load_input_buffer_c1(
 
   memcpy(&input_fm_buffer[bin][bh][(9 - 1) / 2], &input_ftmap[in + bin][hclamp], 255 * sizeof(ftmap_t));
  }}
-
-
-
 }
 
 void load_weight_buffer_c1(
@@ -33655,8 +33651,6 @@ void load_weight_buffer_c1(
   memcpy(&weight_buffer[bout][bin][k], &conv1_weights[bout + out][bin + in][k], 9 * sizeof(param_t));
 
  }}}
-
-
 }
 
 void export_output_buffer_c1(
@@ -33683,9 +33677,6 @@ void export_output_buffer_c1(
 
   memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], 255 * sizeof(ftmap_t));
  }}
-
-
-
 
  clear_buffer_c1(output_fm_buffer);
 }

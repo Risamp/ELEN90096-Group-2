@@ -8,12 +8,12 @@ library ieee;
 use ieee.std_logic_1164.all; 
 use ieee.std_logic_unsigned.all;
 
-entity srcnn_conv1_weight_buffer_2_0_RAM_AUTO_1R1W is 
+entity srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_in_RAM_AUTO_1R1W is 
     generic(
         MEM_TYPE        : string    := "auto"; 
         DataWidth       : integer   := 32; 
-        AddressWidth    : integer   := 10;
-        AddressRange    : integer   := 648
+        AddressWidth    : integer   := 13;
+        AddressRange    : integer   := 6049
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 
@@ -21,12 +21,16 @@ entity srcnn_conv1_weight_buffer_2_0_RAM_AUTO_1R1W is
         d0          : in std_logic_vector(DataWidth-1 downto 0); 
         we0         : in std_logic; 
         q0          : out std_logic_vector(DataWidth-1 downto 0);
+        address1    : in std_logic_vector(AddressWidth-1 downto 0); 
+        ce1         : in std_logic; 
+        d1          : in std_logic_vector(DataWidth-1 downto 0); 
+        we1         : in std_logic; 
         reset           : in std_logic; 
         clk             : in std_logic 
     ); 
 end entity; 
 
-architecture rtl of srcnn_conv1_weight_buffer_2_0_RAM_AUTO_1R1W is 
+architecture rtl of srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_in_RAM_AUTO_1R1W is 
 
 signal address0_tmp : std_logic_vector(AddressWidth-1 downto 0);
 
@@ -70,6 +74,23 @@ begin
         end if;
     end if;
 end process;
+
+
+ 
+
+
+p_memory_access_1: process (clk)  
+begin 
+    if (clk'event and clk = '1') then
+        if (ce1 = '1') then 
+            if (we1 = '1') then 
+                ram(CONV_INTEGER(address1)) := d1; 
+            end if;
+        end if;
+    end if;
+end process;      
+
+
 
 
  

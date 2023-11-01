@@ -119,7 +119,7 @@ attribute shreg_extract : string;
     signal ap_loop_init : STD_LOGIC;
     signal ap_sig_allocacmp_loop_index_1_i_load : STD_LOGIC_VECTOR (7 downto 0);
     signal loop_index_1_i_cast1_fu_115_p1 : STD_LOGIC_VECTOR (11 downto 0);
-    signal empty_84_fu_119_p2 : STD_LOGIC_VECTOR (11 downto 0);
+    signal empty_82_fu_119_p2 : STD_LOGIC_VECTOR (11 downto 0);
     signal ap_done_reg : STD_LOGIC := '0';
     signal ap_continue_int : STD_LOGIC;
     signal ap_done_int : STD_LOGIC;
@@ -355,7 +355,7 @@ begin
         end if; 
     end process;
 
-    empty_84_fu_119_p2 <= std_logic_vector(unsigned(sub_ln111_2) + unsigned(loop_index_1_i_cast1_fu_115_p1));
+    empty_82_fu_119_p2 <= std_logic_vector(unsigned(sub_ln111_2) + unsigned(loop_index_1_i_cast1_fu_115_p1));
     empty_fu_109_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_loop_index_1_i_load) + unsigned(ap_const_lv8_1));
     exitcond5418_fu_103_p2 <= "1" when (ap_sig_allocacmp_loop_index_1_i_load = ap_const_lv8_FF) else "0";
 
@@ -421,5 +421,5 @@ begin
         end if; 
     end process;
 
-    p_cast_fu_125_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(empty_84_fu_119_p2),64));
+    p_cast_fu_125_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(empty_82_fu_119_p2),64));
 end behav;

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_6'
 ================================================================
-* Date:           Thu Nov  2 03:20:29 2023
+* Date:           Thu Nov  2 04:32:27 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -85,7 +85,7 @@
     +---------------------------+----------+----+---+----+------------+------------+
     |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------+----------+----+---+----+------------+------------+
-    |empty_57_fu_119_p2         |         +|   0|  0|  18|          11|          11|
+    |empty_55_fu_119_p2         |         +|   0|  0|  18|          11|          11|
     |empty_fu_109_p2            |         +|   0|  0|  15|           8|           1|
     |ap_block_pp0_stage0_11001  |       and|   0|  0|   2|           1|           1|
     |exitcond6521_fu_103_p2     |      icmp|   0|  0|  15|           8|           2|
@@ -184,8 +184,8 @@
 |m_axi_o_BRESP                |   in|    2|       m_axi|                   o|       pointer|
 |m_axi_o_BID                  |   in|    1|       m_axi|                   o|       pointer|
 |m_axi_o_BUSER                |   in|    1|       m_axi|                   o|       pointer|
-|sext_ln143_1                 |   in|   62|     ap_none|        sext_ln143_1|        scalar|
-|sub_ln136_1                  |   in|   11|     ap_none|         sub_ln136_1|        scalar|
+|sext_ln138_1                 |   in|   62|     ap_none|        sext_ln138_1|        scalar|
+|sub_ln131_2                  |   in|   11|     ap_none|         sub_ln131_2|        scalar|
 |output_fm_buffer_0_address0  |  out|   11|   ap_memory|  output_fm_buffer_0|         array|
 |output_fm_buffer_0_ce0       |  out|    1|   ap_memory|  output_fm_buffer_0|         array|
 |output_fm_buffer_0_q0        |   in|   32|   ap_memory|  output_fm_buffer_0|         array|

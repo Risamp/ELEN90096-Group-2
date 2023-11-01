@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698855629988">
-  <ports id="1" name="sub_ln69_1" type="PortType" coreId="1852142702" bitwidth="11">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698859947934">
+  <ports id="1" name="sub_ln69_1" type="PortType" coreId="4294967295" bitwidth="11">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="output_fm_buffer_0" type="PortType" coreName="RAM" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="1275">
+  <ports id="2" name="output_fm_buffer_0" type="PortType" coreName="RAM" coreId="1852142702" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="1275">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
   <edges id="30" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -40,7 +40,7 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="sub_ln69_1_read" coreId="0" bitwidth="11" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="sub_ln69_1_read" coreId="895439701" bitwidth="11" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataInputObjs>sub_ln69_1</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
@@ -48,14 +48,14 @@
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="br_ln0" coreId="778530409" opcode="br" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="br_ln0" coreId="0" opcode="br" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <controlInputObjs>for.inc.1.i.i</controlInputObjs>
     </node_objs>
   </blocks>
   <blocks id="25" name="for.inc13.1.i.i.exitStub" type="BlockType">
     <controlInputObjs>for.inc.1.i.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="_ln0" coreId="1918989395" opcode="ret" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="_ln0" coreId="1819310149" opcode="ret" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1"/>
   </blocks>
   <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="87" pipe_depth="1" RegionName="BW">
     <basic_blocks id="13" name="for.inc.1.i.i" type="BlockType">
@@ -68,7 +68,7 @@
       <node_objs xsi:type="cdfg:CdfgNode" id="8" name="w" lineNumber="67" originalName="w" fileName="src/conv3.cpp" fileDirectory="../." coreId="0" contextFuncName="clear_buffer_c3" bitwidth="8" opcode="load" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="67" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="clear_buffer_c3"/>
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="58" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
-        <inlineStackInfo fileName="src/conv3.cpp" linenumber="149" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
+        <inlineStackInfo fileName="src/conv3.cpp" linenumber="141" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
         <dataOutputObjs>add</dataOutputObjs>
@@ -77,23 +77,23 @@
       <node_objs xsi:type="cdfg:CdfgNode" id="10" name="icmp_ln67" lineNumber="67" fileName="src/conv3.cpp" fileDirectory="../." rtlName="icmp_ln67_fu_66_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="clear_buffer_c3" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.76" m_topoIndex="6" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="67" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="clear_buffer_c3"/>
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="58" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
-        <inlineStackInfo fileName="src/conv3.cpp" linenumber="149" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
+        <inlineStackInfo fileName="src/conv3.cpp" linenumber="141" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="add_ln67" lineNumber="67" fileName="src/conv3.cpp" fileDirectory="../." rtlName="add_ln67_fu_72_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="clear_buffer_c3" bitwidth="8" opcode="add" m_display="0" m_delay="0.76" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="add_ln67_1" lineNumber="67" fileName="src/conv3.cpp" fileDirectory="../." rtlName="add_ln67_1_fu_72_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="clear_buffer_c3" bitwidth="8" opcode="add" m_display="0" m_delay="0.76" m_topoIndex="7" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="67" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="clear_buffer_c3"/>
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="58" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
-        <inlineStackInfo fileName="src/conv3.cpp" linenumber="149" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
+        <inlineStackInfo fileName="src/conv3.cpp" linenumber="141" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="br_ln67" lineNumber="67" fileName="src/conv3.cpp" fileDirectory="../." coreId="1096045407" contextFuncName="clear_buffer_c3" opcode="br" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="br_ln67" lineNumber="67" fileName="src/conv3.cpp" fileDirectory="../." coreId="0" contextFuncName="clear_buffer_c3" opcode="br" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="67" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="clear_buffer_c3"/>
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="58" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
-        <inlineStackInfo fileName="src/conv3.cpp" linenumber="149" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
+        <inlineStackInfo fileName="src/conv3.cpp" linenumber="141" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>for.inc.1.i.i.split</controlInputObjs>
         <controlInputObjs>for.inc13.1.i.i.exitStub</controlInputObjs>
@@ -101,39 +101,39 @@
       <fileValidLineNumbers fileName="src/conv3.cpp">
         <validLinenumbers>67</validLinenumbers>
         <validLinenumbers>58</validLinenumbers>
-        <validLinenumbers>149</validLinenumbers>
+        <validLinenumbers>141</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="23" name="for.inc.1.i.i.split" type="BlockType">
       <controlInputObjs>for.inc.1.i.i</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.inc.1.i.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="zext_ln69" lineNumber="69" fileName="src/conv3.cpp" fileDirectory="../." rtlName="zext_ln69_fu_78_p1" coreId="0" contextFuncName="clear_buffer_c3" bitwidth="11" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="zext_ln69" lineNumber="69" fileName="src/conv3.cpp" fileDirectory="../." rtlName="zext_ln69_fu_78_p1" coreId="1918989395" contextFuncName="clear_buffer_c3" bitwidth="11" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="69" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="clear_buffer_c3"/>
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="58" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
-        <inlineStackInfo fileName="src/conv3.cpp" linenumber="149" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
+        <inlineStackInfo fileName="src/conv3.cpp" linenumber="141" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="15" name="add_ln69" lineNumber="69" fileName="src/conv3.cpp" fileDirectory="../." rtlName="add_ln69_fu_82_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="clear_buffer_c3" bitwidth="11" opcode="add" m_display="0" m_delay="0.79" m_topoIndex="10" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="69" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="clear_buffer_c3"/>
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="58" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
-        <inlineStackInfo fileName="src/conv3.cpp" linenumber="149" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
+        <inlineStackInfo fileName="src/conv3.cpp" linenumber="141" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
         <dataInputObjs>read</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="zext_ln69_2" lineNumber="69" fileName="src/conv3.cpp" fileDirectory="../." rtlName="zext_ln69_2_fu_88_p1" coreId="895439701" contextFuncName="clear_buffer_c3" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="zext_ln69_2" lineNumber="69" fileName="src/conv3.cpp" fileDirectory="../." rtlName="zext_ln69_2_fu_88_p1" coreId="778530409" contextFuncName="clear_buffer_c3" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="69" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="clear_buffer_c3"/>
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="58" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
-        <inlineStackInfo fileName="src/conv3.cpp" linenumber="149" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
+        <inlineStackInfo fileName="src/conv3.cpp" linenumber="141" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="17" name="output_fm_buffer_0_addr" lineNumber="69" fileName="src/conv3.cpp" fileDirectory="../." coreId="0" contextFuncName="clear_buffer_c3" bitwidth="11" opcode="getelementptr" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="69" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="clear_buffer_c3"/>
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="58" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
-        <inlineStackInfo fileName="src/conv3.cpp" linenumber="149" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
+        <inlineStackInfo fileName="src/conv3.cpp" linenumber="141" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>output_fm_buffer_0</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
@@ -142,28 +142,28 @@
       <node_objs xsi:type="cdfg:CdfgNode" id="20" name="output_fm_buffer_0_addr_write_ln69" lineNumber="69" fileName="src/conv3.cpp" fileDirectory="../." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="clear_buffer_c3" opcode="store" m_display="0" m_delay="1.23" m_topoIndex="13" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="69" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="clear_buffer_c3"/>
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="58" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
-        <inlineStackInfo fileName="src/conv3.cpp" linenumber="149" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
+        <inlineStackInfo fileName="src/conv3.cpp" linenumber="141" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="w_3_write_ln67" lineNumber="67" fileName="src/conv3.cpp" fileDirectory="../." coreId="1918989395" contextFuncName="clear_buffer_c3" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="w_3_write_ln67" lineNumber="67" fileName="src/conv3.cpp" fileDirectory="../." coreId="0" contextFuncName="clear_buffer_c3" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="67" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="clear_buffer_c3"/>
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="58" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
-        <inlineStackInfo fileName="src/conv3.cpp" linenumber="149" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
+        <inlineStackInfo fileName="src/conv3.cpp" linenumber="141" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="22" name="br_ln67" lineNumber="67" fileName="src/conv3.cpp" fileDirectory="../." coreId="0" contextFuncName="clear_buffer_c3" opcode="br" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="67" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="clear_buffer_c3"/>
         <inlineStackInfo fileName="src/conv3.cpp" linenumber="58" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
-        <inlineStackInfo fileName="src/conv3.cpp" linenumber="149" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
+        <inlineStackInfo fileName="src/conv3.cpp" linenumber="141" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
         <controlInputObjs>for.inc.1.i.i</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="src/conv3.cpp">
         <validLinenumbers>69</validLinenumbers>
         <validLinenumbers>67</validLinenumbers>
         <validLinenumbers>58</validLinenumbers>
-        <validLinenumbers>149</validLinenumbers>
+        <validLinenumbers>141</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
   </regions>
@@ -183,7 +183,7 @@
   <expressionNodes realName="output_fm_buffer_0_addr_gep_fu_44">
     <nodeIds>17</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="add_ln67_fu_72">
+  <expressionNodes realName="add_ln67_1_fu_72">
     <nodeIds>11</nodeIds>
   </expressionNodes>
   <expressionNodes realName="icmp_ln67_fu_66">

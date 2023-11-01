@@ -382,10 +382,10 @@ for.inc:3 %empty = trunc i7 %i_1
 
 <Node id="25" bw="2" op_0_bw="3">
 <![CDATA[
-for.inc:4 %empty_71 = trunc i3 %o_1
+for.inc:4 %empty_69 = trunc i3 %o_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_71"/></StgValue>
+<StgValue><ssdm name="empty_69"/></StgValue>
 </operation>
 
 <operation id="34" st_id="2" stage="1" lat="1">
@@ -397,7 +397,7 @@ for.inc:4 %empty_71 = trunc i3 %o_1
 
 <Node id="26" bw="8" op_0_bw="8" op_1_bw="2" op_2_bw="6">
 <![CDATA[
-for.inc:5 %tmp_s = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %empty_71, i6 %empty
+for.inc:5 %tmp_s = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %empty_69, i6 %empty
 
 ]]></Node>
 <StgValue><ssdm name="tmp_s"/></StgValue>
@@ -617,10 +617,10 @@ for.inc47:10 %zext_ln46 = zext i3 %select_ln40_2
 
 <Node id="43" bw="5" op_0_bw="5" op_1_bw="3" op_2_bw="2">
 <![CDATA[
-for.inc47:11 %tmp_9 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %select_ln40_2, i2 0
+for.inc47:11 %tmp_10 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %select_ln40_2, i2 0
 
 ]]></Node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_10"/></StgValue>
 </operation>
 
 <operation id="49" st_id="2" stage="1" lat="1">
@@ -633,7 +633,7 @@ for.inc47:11 %tmp_9 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %s
 
 <Node id="44" bw="6" op_0_bw="5">
 <![CDATA[
-for.inc47:12 %zext_ln46_2 = zext i5 %tmp_9
+for.inc47:12 %zext_ln46_2 = zext i5 %tmp_10
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln46_2"/></StgValue>
@@ -681,10 +681,10 @@ for.inc47:14 %sext_ln40 = sext i6 %sub_ln46
 
 <Node id="47" bw="2" op_0_bw="3">
 <![CDATA[
-for.inc47:15 %empty_72 = trunc i3 %add_ln40
+for.inc47:15 %empty_70 = trunc i3 %add_ln40
 
 ]]></Node>
-<StgValue><ssdm name="empty_72"/></StgValue>
+<StgValue><ssdm name="empty_70"/></StgValue>
 </operation>
 
 <operation id="53" st_id="2" stage="1" lat="1">
@@ -697,7 +697,7 @@ for.inc47:15 %empty_72 = trunc i3 %add_ln40
 
 <Node id="48" bw="8" op_0_bw="8" op_1_bw="2" op_2_bw="6">
 <![CDATA[
-for.inc47:16 %p_mid = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %empty_72, i6 0
+for.inc47:16 %p_mid = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %empty_70, i6 0
 
 ]]></Node>
 <StgValue><ssdm name="p_mid"/></StgValue>
@@ -937,10 +937,10 @@ for.inc47:32 %sub_ln46_1_cast = sext i10 %sub_ln46_1
 
 <Node id="65" bw="6" op_0_bw="7">
 <![CDATA[
-for.inc47:33 %empty_73 = trunc i7 %add_ln41
+for.inc47:33 %empty_71 = trunc i7 %add_ln41
 
 ]]></Node>
-<StgValue><ssdm name="empty_73"/></StgValue>
+<StgValue><ssdm name="empty_71"/></StgValue>
 </operation>
 
 <operation id="69" st_id="2" stage="1" lat="1">
@@ -953,10 +953,10 @@ for.inc47:33 %empty_73 = trunc i7 %add_ln41
 
 <Node id="66" bw="2" op_0_bw="3">
 <![CDATA[
-for.inc47:34 %empty_74 = trunc i3 %select_ln40_2
+for.inc47:34 %empty_72 = trunc i3 %select_ln40_2
 
 ]]></Node>
-<StgValue><ssdm name="empty_74"/></StgValue>
+<StgValue><ssdm name="empty_72"/></StgValue>
 </operation>
 
 <operation id="70" st_id="2" stage="1" lat="1">
@@ -969,7 +969,7 @@ for.inc47:34 %empty_74 = trunc i3 %select_ln40_2
 
 <Node id="67" bw="8" op_0_bw="8" op_1_bw="2" op_2_bw="6">
 <![CDATA[
-for.inc47:35 %p_mid1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %empty_74, i6 %empty_73
+for.inc47:35 %p_mid1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %empty_72, i6 %empty_71
 
 ]]></Node>
 <StgValue><ssdm name="p_mid1"/></StgValue>
@@ -2046,7 +2046,7 @@ for.inc47:64 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4
 
 <Node id="105" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc47:73 %specloopname_ln44 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2
+for.inc47:73 %specloopname_ln44 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln44"/></StgValue>

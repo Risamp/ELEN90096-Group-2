@@ -15,14 +15,15 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 	//#pragma HLS PIPELINE off
 
 	static ftmap_t output_fm_buffer[C1_OD][C1_TH][W] = {0};
+	#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=cyclic factor=8
 	//#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=cyclic factor=8 dim=2
 
 	static ftmap_t input_fm_buffer[C1_ID][C1_TH + (2 * P1)][W + (2 * P1)];
+	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=cyclic factor=8
 	//#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=cyclic factor=4 dim=2
 
 	static param_t weight_buffer[C1_OD][C1_ID][F1][F1];
-	//#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=3
-	//#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=4
+	#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=8
 
 	//#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=3
 	//#pragma HLS ARRAY_PARTITION variable=weight_buffer type=complete dim=4
@@ -38,6 +39,7 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 
 			OUT: for (int o = 0; o < C1_OD; o++) {
 			IN: for (int i = 0; i < C1_ID; i++) {
+			#pragma HLS UNROLL factor=4
 
 				ROW: for (int r = 0; r < C1_TH; r++) {
 				COL: for (int c = 0; c < W; c++) {

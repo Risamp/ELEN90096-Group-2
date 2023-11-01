@@ -8,12 +8,12 @@ library ieee;
 use ieee.std_logic_1164.all; 
 use ieee.std_logic_unsigned.all;
 
-entity srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W is 
+entity srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_we_7_RAM_AUTO_1R1W is 
     generic(
         MEM_TYPE        : string    := "auto"; 
         DataWidth       : integer   := 32; 
-        AddressWidth    : integer   := 15;
-        AddressRange    : integer   := 30600
+        AddressWidth    : integer   := 7;
+        AddressRange    : integer   := 81
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 
@@ -26,7 +26,7 @@ entity srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W is
     ); 
 end entity; 
 
-architecture rtl of srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W is 
+architecture rtl of srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_we_7_RAM_AUTO_1R1W is 
 
 signal address0_tmp : std_logic_vector(AddressWidth-1 downto 0);
 

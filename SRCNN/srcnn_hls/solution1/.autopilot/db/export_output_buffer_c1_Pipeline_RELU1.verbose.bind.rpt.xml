@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'export_output_buffer_c1_Pipeline_RELU1'" level="0">
-<item name = "Date">Thu Nov  2 03:19:57 2023
+<item name = "Date">Thu Nov  2 04:31:54 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>

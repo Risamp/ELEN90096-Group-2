@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_IN_K_L'
 ================================================================
-* Date:           Thu Nov  2 03:20:26 2023
+* Date:           Thu Nov  2 04:32:24 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -85,29 +85,29 @@
     +----------------------------------+----------+----+---+----+------------+------------+
     |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------------+----------+----+---+----+------------+------------+
-    |add_ln111_1_fu_156_p2             |         +|   0|  0|  17|          10|           1|
-    |add_ln111_fu_185_p2               |         +|   0|  0|  13|           6|           1|
-    |add_ln112_1_fu_338_p2             |         +|   0|  0|  13|           6|           1|
-    |add_ln112_fu_253_p2               |         +|   0|  0|  10|           3|           1|
-    |empty_51_fu_285_p2                |         +|   0|  0|  18|           9|           9|
-    |empty_53_fu_307_p2                |         +|   0|  0|  18|          10|          10|
-    |empty_54_fu_317_p2                |         +|   0|  0|  18|          10|          10|
-    |empty_56_fu_332_p2                |         +|   0|  0|  10|           3|           1|
+    |add_ln108_1_fu_156_p2             |         +|   0|  0|  17|          10|           1|
+    |add_ln108_fu_185_p2               |         +|   0|  0|  13|           6|           1|
+    |add_ln109_1_fu_338_p2             |         +|   0|  0|  13|           6|           1|
+    |add_ln109_fu_253_p2               |         +|   0|  0|  10|           3|           1|
+    |empty_49_fu_285_p2                |         +|   0|  0|  18|           9|           9|
+    |empty_51_fu_307_p2                |         +|   0|  0|  18|          10|          10|
+    |empty_52_fu_317_p2                |         +|   0|  0|  18|          10|          10|
+    |empty_54_fu_332_p2                |         +|   0|  0|  10|           3|           1|
     |empty_fu_229_p2                   |         +|   0|  0|  18|           9|           9|
-    |and_ln111_fu_247_p2               |       and|   0|  0|   2|           1|           1|
+    |and_ln108_fu_247_p2               |       and|   0|  0|   2|           1|           1|
     |ap_block_pp0_stage0_11001         |       and|   0|  0|   2|           1|           1|
     |ap_block_state2_pp0_stage0_iter1  |       and|   0|  0|   2|           1|           1|
     |exitcond3410158_fu_241_p2         |      icmp|   0|  0|  10|           3|           3|
-    |icmp_ln111_fu_150_p2              |      icmp|   0|  0|  17|          10|           9|
-    |icmp_ln112_fu_191_p2              |      icmp|   0|  0|  13|           6|           5|
-    |or_ln112_fu_259_p2                |        or|   0|  0|   2|           1|           1|
-    |select_ln111_1_fu_205_p3          |    select|   0|  0|   6|           1|           6|
-    |select_ln111_fu_197_p3            |    select|   0|  0|   3|           1|           1|
-    |select_ln112_1_fu_273_p3          |    select|   0|  0|   3|           1|           3|
-    |select_ln112_2_fu_344_p3          |    select|   0|  0|   6|           1|           1|
-    |select_ln112_fu_265_p3            |    select|   0|  0|   3|           1|           1|
+    |icmp_ln108_fu_150_p2              |      icmp|   0|  0|  17|          10|           9|
+    |icmp_ln109_fu_191_p2              |      icmp|   0|  0|  13|           6|           5|
+    |or_ln109_fu_259_p2                |        or|   0|  0|   2|           1|           1|
+    |select_ln108_1_fu_205_p3          |    select|   0|  0|   6|           1|           6|
+    |select_ln108_fu_197_p3            |    select|   0|  0|   3|           1|           1|
+    |select_ln109_1_fu_273_p3          |    select|   0|  0|   3|           1|           3|
+    |select_ln109_2_fu_344_p3          |    select|   0|  0|   6|           1|           1|
+    |select_ln109_fu_265_p3            |    select|   0|  0|   3|           1|           1|
     |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
-    |xor_ln111_fu_235_p2               |       xor|   0|  0|   2|           1|           2|
+    |xor_ln108_fu_235_p2               |       xor|   0|  0|   2|           1|           2|
     +----------------------------------+----------+----+---+----+------------+------------+
     |Total                             |          |   0|  0| 208|          96|          80|
     +----------------------------------+----------+----+---+----+------------+------------+
@@ -139,7 +139,7 @@
     |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
     |bin_fu_86                         |   6|   0|    6|          0|
-    |icmp_ln111_reg_412                |   1|   0|    1|          0|
+    |icmp_ln108_reg_412                |   1|   0|    1|          0|
     |indvar_flatten12_fu_90            |  10|   0|   10|          0|
     |indvar_flatten_fu_82              |   6|   0|    6|          0|
     |k_fu_78                           |   3|   0|    3|          0|
@@ -210,7 +210,7 @@
 |m_axi_w3_BRESP            |   in|    2|       m_axi|                     w3|       pointer|
 |m_axi_w3_BID              |   in|    1|       m_axi|                     w3|       pointer|
 |m_axi_w3_BUSER            |   in|    1|       m_axi|                     w3|       pointer|
-|sext_ln111                |   in|   62|     ap_none|             sext_ln111|        scalar|
+|sext_ln108                |   in|   62|     ap_none|             sext_ln108|        scalar|
 |weight_buffer_0_address0  |  out|   10|   ap_memory|        weight_buffer_0|         array|
 |weight_buffer_0_ce0       |  out|    1|   ap_memory|        weight_buffer_0|         array|
 |weight_buffer_0_we0       |  out|    1|   ap_memory|        weight_buffer_0|         array|

@@ -1,7 +1,7 @@
 set ModuleHierarchy {[{
 "Name" : "srcnn","ID" : "0","Type" : "sequential",
 "SubInsts" : [
-	{"Name" : "grp_conv1_fu_172","ID" : "1","Type" : "sequential",
+	{"Name" : "grp_conv1_fu_200","ID" : "1","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "TILE_ROW","ID" : "2","Type" : "no",
 		"SubLoops" : [
@@ -11,45 +11,45 @@ set ModuleHierarchy {[{
 			{"Name" : "BH.2","ID" : "5","Type" : "no"},]},
 		{"Name" : "TILE_OUT","ID" : "6","Type" : "no",
 			"SubInsts" : [
-			{"Name" : "grp_conv1_Pipeline_LOAD_WEIGHTS_K_L_fu_406","ID" : "7","Type" : "sequential",
+			{"Name" : "grp_conv1_Pipeline_LOAD_WEIGHTS_K_L_fu_532","ID" : "7","Type" : "sequential",
 					"SubLoops" : [
 					{"Name" : "LOAD_WEIGHTS_K_L","ID" : "8","Type" : "pipeline"},]},
-			{"Name" : "grp_export_output_buffer_c1_fu_415","ID" : "9","Type" : "sequential",
+			{"Name" : "grp_export_output_buffer_c1_fu_555","ID" : "9","Type" : "sequential",
 					"SubLoops" : [
 					{"Name" : "EXPORT","ID" : "10","Type" : "no",
 					"SubLoops" : [
 					{"Name" : "BH","ID" : "11","Type" : "no",
 						"SubInsts" : [
-						{"Name" : "grp_export_output_buffer_c1_Pipeline_RELU_fu_199","ID" : "12","Type" : "sequential",
+						{"Name" : "grp_export_output_buffer_c1_Pipeline_RELU_fu_213","ID" : "12","Type" : "sequential",
 								"SubLoops" : [
 								{"Name" : "RELU","ID" : "13","Type" : "pipeline"},]},
-						{"Name" : "grp_export_output_buffer_c1_Pipeline_2_fu_207","ID" : "14","Type" : "sequential",
+						{"Name" : "grp_export_output_buffer_c1_Pipeline_2_fu_236","ID" : "14","Type" : "sequential",
 								"SubLoops" : [
 								{"Name" : "Loop 1","ID" : "15","Type" : "pipeline"},]},
-						{"Name" : "grp_export_output_buffer_c1_Pipeline_RELU1_fu_217","ID" : "16","Type" : "sequential",
+						{"Name" : "grp_export_output_buffer_c1_Pipeline_RELU1_fu_261","ID" : "16","Type" : "sequential",
 								"SubLoops" : [
 								{"Name" : "RELU","ID" : "17","Type" : "pipeline"},]},
-						{"Name" : "grp_export_output_buffer_c1_Pipeline_4_fu_225","ID" : "18","Type" : "sequential",
+						{"Name" : "grp_export_output_buffer_c1_Pipeline_4_fu_284","ID" : "18","Type" : "sequential",
 								"SubLoops" : [
 								{"Name" : "Loop 1","ID" : "19","Type" : "pipeline"},]},]},]},
 					{"Name" : "CLEAR_BH","ID" : "20","Type" : "no",
 					"SubInsts" : [
-					{"Name" : "grp_export_output_buffer_c1_Pipeline_BW_fu_235","ID" : "21","Type" : "sequential",
+					{"Name" : "grp_export_output_buffer_c1_Pipeline_BW_fu_309","ID" : "21","Type" : "sequential",
 							"SubLoops" : [
 							{"Name" : "BW","ID" : "22","Type" : "pipeline"},]},
-					{"Name" : "grp_export_output_buffer_c1_Pipeline_BW2_fu_242","ID" : "23","Type" : "sequential",
+					{"Name" : "grp_export_output_buffer_c1_Pipeline_BW2_fu_331","ID" : "23","Type" : "sequential",
 							"SubLoops" : [
 							{"Name" : "BW","ID" : "24","Type" : "pipeline"},]},
-					{"Name" : "grp_export_output_buffer_c1_Pipeline_BW3_fu_249","ID" : "25","Type" : "sequential",
+					{"Name" : "grp_export_output_buffer_c1_Pipeline_BW3_fu_353","ID" : "25","Type" : "sequential",
 							"SubLoops" : [
 							{"Name" : "BW","ID" : "26","Type" : "pipeline"},]},]},]},],
 			"SubLoops" : [
 			{"Name" : "OUT_ROW_COL","ID" : "27","Type" : "no",
 				"SubInsts" : [
-				{"Name" : "grp_conv1_Pipeline_KR_KC_fu_428","ID" : "28","Type" : "sequential",
+				{"Name" : "grp_conv1_Pipeline_KR_KC_fu_582","ID" : "28","Type" : "sequential",
 						"SubLoops" : [
 						{"Name" : "KR_KC","ID" : "29","Type" : "pipeline"},]},]},]},]},]},
-	{"Name" : "grp_conv2_fu_196","ID" : "30","Type" : "sequential",
+	{"Name" : "grp_conv2_fu_252","ID" : "30","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "TILE_ROW","ID" : "31","Type" : "no",
 		"SubInsts" : [
@@ -93,7 +93,7 @@ set ModuleHierarchy {[{
 				{"Name" : "grp_conv2_Pipeline_BW9_fu_382","ID" : "54","Type" : "sequential",
 						"SubLoops" : [
 						{"Name" : "BW","ID" : "55","Type" : "pipeline"},]},]},]},]},]},
-	{"Name" : "grp_conv3_fu_217","ID" : "56","Type" : "sequential",
+	{"Name" : "grp_conv3_fu_273","ID" : "56","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "TILE_ROW","ID" : "57","Type" : "no",
 		"SubInsts" : [

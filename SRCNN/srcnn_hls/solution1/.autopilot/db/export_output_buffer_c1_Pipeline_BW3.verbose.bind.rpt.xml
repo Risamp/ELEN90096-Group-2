@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'export_output_buffer_c1_Pipeline_BW3'" level="0">
-<item name = "Date">Thu Nov  2 03:19:58 2023
+<item name = "Date">Thu Nov  2 04:31:56 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 2.079 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 2.046 ns, 2.70 ns</column>
 </table>
 </item>
 </section>

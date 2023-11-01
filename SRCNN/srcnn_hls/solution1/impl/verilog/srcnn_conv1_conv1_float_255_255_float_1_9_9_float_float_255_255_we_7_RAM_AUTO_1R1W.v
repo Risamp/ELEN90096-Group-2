@@ -4,7 +4,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // ==============================================================
 `timescale 1 ns / 1 ps
-module srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W (
+module srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_we_7_RAM_AUTO_1R1W (
      
     address0, ce0,
     d0, we0, 
@@ -13,8 +13,8 @@ module srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W (
     reset, clk);
 
 parameter DataWidth = 32;
-parameter AddressWidth = 15;
-parameter AddressRange = 30600;
+parameter AddressWidth = 7;
+parameter AddressRange = 81;
  
 input[AddressWidth-1:0] address0;
 input ce0;
@@ -28,7 +28,7 @@ input clk;
 (* ram_style = "auto"  *)reg [DataWidth-1:0] ram[0:AddressRange-1];
 
 initial begin
-    $readmemh("./srcnn_conv1_output_fm_buffer_1_RAM_AUTO_1R1W.dat", ram);
+    $readmemh("./srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_we_7_RAM_AUTO_1R1W.dat", ram);
 end 
 
  

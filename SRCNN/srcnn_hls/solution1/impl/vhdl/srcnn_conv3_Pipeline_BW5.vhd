@@ -49,7 +49,7 @@ attribute shreg_extract : string;
     signal ap_ready_int : STD_LOGIC;
     signal zext_ln69_2_fu_88_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal w_3_fu_34 : STD_LOGIC_VECTOR (7 downto 0);
-    signal add_ln67_fu_72_p2 : STD_LOGIC_VECTOR (7 downto 0);
+    signal add_ln67_1_fu_72_p2 : STD_LOGIC_VECTOR (7 downto 0);
     signal ap_loop_init : STD_LOGIC;
     signal ap_sig_allocacmp_w : STD_LOGIC_VECTOR (7 downto 0);
     signal zext_ln69_fu_78_p1 : STD_LOGIC_VECTOR (10 downto 0);
@@ -133,7 +133,7 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_start_int = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
                 if ((icmp_ln67_fu_66_p2 = ap_const_lv1_0)) then 
-                    w_3_fu_34 <= add_ln67_fu_72_p2;
+                    w_3_fu_34 <= add_ln67_1_fu_72_p2;
                 elsif ((ap_loop_init = ap_const_logic_1)) then 
                     w_3_fu_34 <= ap_const_lv8_0;
                 end if;
@@ -150,7 +150,7 @@ begin
                 ap_NS_fsm <= "X";
         end case;
     end process;
-    add_ln67_fu_72_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_w) + unsigned(ap_const_lv8_1));
+    add_ln67_1_fu_72_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_w) + unsigned(ap_const_lv8_1));
     add_ln69_fu_82_p2 <= std_logic_vector(unsigned(sub_ln69_1) + unsigned(zext_ln69_fu_78_p1));
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
 

@@ -33655,8 +33655,5 @@ void export_output_buffer_c2(
   memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], 255 * sizeof(ftmap_t));
  }}
 
-
-
-
  clear_buffer_c2(output_fm_buffer);
 }

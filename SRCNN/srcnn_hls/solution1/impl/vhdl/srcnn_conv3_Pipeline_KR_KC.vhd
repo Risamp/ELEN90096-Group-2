@@ -236,7 +236,7 @@ attribute shreg_extract : string;
 
 
 begin
-    ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1_U121 : component srcnn_ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1
+    ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1_U205 : component srcnn_ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1
     generic map (
         ID => 1,
         NUM_STAGE => 4,

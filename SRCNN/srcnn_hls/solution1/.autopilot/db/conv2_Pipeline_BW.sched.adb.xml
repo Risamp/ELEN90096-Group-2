@@ -235,7 +235,7 @@ for.inc.i.i.split:4 %speclooptripcount_ln61 = speclooptripcount void @_ssdm_op_S
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.i.i.split:5 %specloopname_ln61 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9
+for.inc.i.i.split:5 %specloopname_ln61 = specloopname void @_ssdm_op_SpecLoopName, void @empty_0
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln61"/></StgValue>

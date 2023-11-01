@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_KR_KC'
 ================================================================
-* Date:           Thu Nov  2 03:20:26 2023
+* Date:           Thu Nov  2 04:32:24 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -76,7 +76,7 @@
     +--------------------------------------------+---------------------------------------+---------------------+
     |                  Instance                  |                 Module                |      Expression     |
     +--------------------------------------------+---------------------------------------+---------------------+
-    |ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1_U121  |ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1  |  (i0 + i1) * i2 + i3|
+    |ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1_U205  |ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1  |  (i0 + i1) * i2 + i3|
     +--------------------------------------------+---------------------------------------+---------------------+
 
     * Memory: 
@@ -339,8 +339,8 @@ ST_11 : Operation 80 [2/4] (6.43ns)   --->   "%add = fadd i32 %p_load, i32 %mul"
 State 12 <SV = 11> <Delay = 6.86>
 ST_12 : Operation 81 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @KR_KC_str"   --->   Operation 81 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
 ST_12 : Operation 82 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 25, i64 25, i64 25"   --->   Operation 82 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
-ST_12 : Operation 83 [1/1] (0.00ns)   --->   "%specpipeline_ln48 = specpipeline void @_ssdm_op_SpecPipeline, i32 3, i32 0, i32 0, i32 0, void @empty_11" [src/conv3.cpp:48]   --->   Operation 83 'specpipeline' 'specpipeline_ln48' <Predicate = true> <Delay = 0.00>
-ST_12 : Operation 84 [1/1] (0.00ns)   --->   "%specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty_1" [src/conv3.cpp:46]   --->   Operation 84 'specloopname' 'specloopname_ln46' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 83 [1/1] (0.00ns)   --->   "%specpipeline_ln48 = specpipeline void @_ssdm_op_SpecPipeline, i32 3, i32 0, i32 0, i32 0, void @empty_22" [src/conv3.cpp:48]   --->   Operation 83 'specpipeline' 'specpipeline_ln48' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 84 [1/1] (0.00ns)   --->   "%specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [src/conv3.cpp:46]   --->   Operation 84 'specloopname' 'specloopname_ln46' <Predicate = true> <Delay = 0.00>
 ST_12 : Operation 85 [1/4] (6.43ns)   --->   "%add = fadd i32 %p_load, i32 %mul" [src/conv3.cpp:53]   --->   Operation 85 'fadd' 'add' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 ST_12 : Operation 86 [1/1] (0.42ns)   --->   "%store_ln46 = store i32 %add, i32 %empty" [src/conv3.cpp:46]   --->   Operation 86 'store' 'store_ln46' <Predicate = true> <Delay = 0.42>
 ST_12 : Operation 87 [1/1] (0.00ns)   --->   "%br_ln46 = br void %for.inc" [src/conv3.cpp:46]   --->   Operation 87 'br' 'br_ln46' <Predicate = true> <Delay = 0.00>
@@ -728,7 +728,7 @@ ret_ln0                        (ret              ) [ 0000000000000]
 <pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_11"/></StgValue>
+<StgValue><ssdm name="empty_22"/></StgValue>
 </bind>
 </comp>
 
@@ -737,7 +737,7 @@ ret_ln0                        (ret              ) [ 0000000000000]
 <pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_1"/></StgValue>
+<StgValue><ssdm name="empty_7"/></StgValue>
 </bind>
 </comp>
 

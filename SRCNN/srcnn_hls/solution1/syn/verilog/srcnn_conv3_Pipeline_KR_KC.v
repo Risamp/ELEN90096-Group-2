@@ -186,7 +186,7 @@ srcnn_ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1 #(
     .din2_WIDTH( 9 ),
     .din3_WIDTH( 9 ),
     .dout_WIDTH( 17 ))
-ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1_U121(
+ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1_U205(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(add_ln53),

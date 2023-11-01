@@ -34,7 +34,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1852142702</coreId>
+              <coreId>4294967295</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -70,7 +70,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1852142702</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -152,7 +152,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>895439701</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -238,7 +238,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>778530409</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -295,7 +295,7 @@
                         <first>src/conv3.cpp</first>
                         <second>export_output_buffer_c3</second>
                       </first>
-                      <second>149</second>
+                      <second>141</second>
                     </item>
                   </second>
                 </item>
@@ -366,7 +366,7 @@
                         <first>src/conv3.cpp</first>
                         <second>export_output_buffer_c3</second>
                       </first>
-                      <second>149</second>
+                      <second>141</second>
                     </item>
                   </second>
                 </item>
@@ -404,7 +404,7 @@
             <Obj>
               <type>0</type>
               <id>11</id>
-              <name>add_ln67</name>
+              <name>add_ln67_1</name>
               <fileName>src/conv3.cpp</fileName>
               <fileDirectory>../.</fileDirectory>
               <lineNumber>67</lineNumber>
@@ -437,13 +437,13 @@
                         <first>src/conv3.cpp</first>
                         <second>export_output_buffer_c3</second>
                       </first>
-                      <second>149</second>
+                      <second>141</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln67_fu_72_p2</rtlName>
+              <rtlName>add_ln67_1_fu_72_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -508,7 +508,7 @@
                         <first>src/conv3.cpp</first>
                         <second>export_output_buffer_c3</second>
                       </first>
-                      <second>149</second>
+                      <second>141</second>
                     </item>
                   </second>
                 </item>
@@ -521,7 +521,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1096045407</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -580,7 +580,7 @@
                         <first>src/conv3.cpp</first>
                         <second>export_output_buffer_c3</second>
                       </first>
-                      <second>149</second>
+                      <second>141</second>
                     </item>
                   </second>
                 </item>
@@ -593,7 +593,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1918989395</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -650,7 +650,7 @@
                         <first>src/conv3.cpp</first>
                         <second>export_output_buffer_c3</second>
                       </first>
-                      <second>149</second>
+                      <second>141</second>
                     </item>
                   </second>
                 </item>
@@ -721,7 +721,7 @@
                         <first>src/conv3.cpp</first>
                         <second>export_output_buffer_c3</second>
                       </first>
-                      <second>149</second>
+                      <second>141</second>
                     </item>
                   </second>
                 </item>
@@ -734,7 +734,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>895439701</coreId>
+              <coreId>778530409</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -791,7 +791,7 @@
                         <first>src/conv3.cpp</first>
                         <second>export_output_buffer_c3</second>
                       </first>
-                      <second>149</second>
+                      <second>141</second>
                     </item>
                   </second>
                 </item>
@@ -863,7 +863,7 @@
                         <first>src/conv3.cpp</first>
                         <second>export_output_buffer_c3</second>
                       </first>
-                      <second>149</second>
+                      <second>141</second>
                     </item>
                   </second>
                 </item>
@@ -934,7 +934,7 @@
                         <first>src/conv3.cpp</first>
                         <second>export_output_buffer_c3</second>
                       </first>
-                      <second>149</second>
+                      <second>141</second>
                     </item>
                   </second>
                 </item>
@@ -947,7 +947,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1918989395</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1007,7 +1007,7 @@
                         <first>src/conv3.cpp</first>
                         <second>export_output_buffer_c3</second>
                       </first>
-                      <second>149</second>
+                      <second>141</second>
                     </item>
                   </second>
                 </item>
@@ -1062,7 +1062,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1918989395</coreId>
+              <coreId>1819310149</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1107,7 +1107,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1852142702</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1138,7 +1138,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1852793695</coreId>
+              <coreId>1852142702</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1200,7 +1200,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1635147636</coreId>
+              <coreId>1931485194</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1231,7 +1231,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1852142702</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1330,7 +1330,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>0</coreId>
+            <coreId>270215988</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -1364,7 +1364,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>0</coreId>
+            <coreId>270215988</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -1401,7 +1401,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>0</coreId>
+            <coreId>1701519360</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -1867,7 +1867,7 @@
         <count>3</count>
         <item_version>0</item_version>
         <item>
-          <first>add_ln67_fu_72_p2 ( + ) </first>
+          <first>add_ln67_1_fu_72_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -2097,7 +2097,7 @@
         <count>3</count>
         <item_version>0</item_version>
         <item class_id="36" tracking_level="0" version="0">
-          <first>add_ln67_fu_72_p2 ( + ) </first>
+          <first>add_ln67_1_fu_72_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -2407,7 +2407,7 @@
       <count>7</count>
       <item_version>0</item_version>
       <item class_id="50" tracking_level="0" version="0">
-        <first>add_ln67_fu_72</first>
+        <first>add_ln67_1_fu_72</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

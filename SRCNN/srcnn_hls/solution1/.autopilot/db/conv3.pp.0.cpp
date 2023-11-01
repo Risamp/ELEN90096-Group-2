@@ -33670,9 +33670,6 @@ void load_input_buffer_c3(
 
   memcpy(&input_fm_buffer[bin][bh][(5 - 1) / 2], &input_ftmap[in + bin][hclamp], 255 * sizeof(ftmap_t));
  }}
-
-
-
 }
 
 void load_weight_buffer_c3(
@@ -33688,8 +33685,6 @@ void load_weight_buffer_c3(
   memcpy(&weight_buffer[bout][bin][k], &conv3_weights[bout + out][bin + in][k], 5 * sizeof(param_t));
 
  }}}
-
-
 }
 
 void export_output_buffer_c3(
@@ -33716,9 +33711,6 @@ void export_output_buffer_c3(
 
   memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], 255 * sizeof(ftmap_t));
  }}
-
-
-
 
  clear_buffer_c3(output_fm_buffer);
 }

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3_Pipeline_KR_KC'" level="0">
-<item name = "Date">Thu Nov  2 03:20:26 2023
+<item name = "Date">Thu Nov  2 04:32:24 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -66,7 +66,7 @@
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
-<column name="ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1_U121">ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1, (i0 + i1) * i2 + i3</column>
+<column name="ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1_U205">ama_addmuladd_10ns_4ns_9ns_9ns_17_4_1, (i0 + i1) * i2 + i3</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">

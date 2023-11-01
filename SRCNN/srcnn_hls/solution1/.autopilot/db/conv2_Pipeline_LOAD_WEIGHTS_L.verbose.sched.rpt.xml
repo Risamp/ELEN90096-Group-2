@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2_Pipeline_LOAD_WEIGHTS_L'" level="0">
-<item name = "Date">Thu Nov  2 03:20:01 2023
+<item name = "Date">Thu Nov  2 04:31:59 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
