@@ -12,7 +12,7 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
            ftmap_t output_ftmap[N1][H][W])
 {
 
-	//#pragma HLS PIPELINE off
+	#pragma HLS PIPELINE off
 
 	static ftmap_t output_fm_buffer[C1_OD][C1_TH][W] = {0};
 	#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=cyclic factor=8 dim=2
@@ -21,28 +21,20 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=cyclic factor=4 dim=2
 
 	static param_t weight_buffer[C1_OD][C1_ID][F1][F1];
-	#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=1
-	#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=2
+	//#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=3
+	//#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=4
 
-	//static ftmap_t temp_input[C1_ID][C1_TH + (2 * P1)][W + (2 * P1)];
-	//static ftmap_t temp_weights[C1_OD][C1_ID][F1][F1];
+#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=3
+#pragma HLS ARRAY_PARTITION variable=weight_buffer type=complete dim=4
 
-	// run each tile
-	TILE_OUT: for (int out = 0; out < N1; out += C1_OD) {
-	TILE_ROW: for (int h = 0; h < H; h += C1_TH) {
 	TILE_IN: for (int in = 0; in < N0; in += C1_ID) {
-		//#pragma HLS PIPELINE II=20000
+	TILE_ROW: for (int h = 0; h < H; h += C1_TH) {
 
-			load_input_buffer_c1(input_fm_buffer, input_ftmap, in, h);
+		load_input_buffer_c1(input_fm_buffer, input_ftmap, in, h);
+
+		TILE_OUT: for (int out = 0; out < N1; out += C1_OD) {
+
 			load_weight_buffer_c1(weight_buffer, conv1_weights, out, in);
-
-			// load temp weights so we can load from DRAM while the next loop starts
-			// THIS DOESN'T WORK
-			//load_input_buffer_c1(temp_input, input_ftmap, in, h);
-			//load_weight_buffer_c1(temp_weights, conv1_weights, out, in);
-
-			//memcpy(input_fm_buffer, temp_input, C1_ID * (C1_TH + (2 * P1)) * (W + (2 * P1)) * sizeof(ftmap_t));
-			//memcpy(weight_buffer, temp_weights, C1_OD * C1_ID * F1 * F1 * sizeof(param_t));
 
 			OUT: for (int o = 0; o < C1_OD; o++) {
 			IN: for (int i = 0; i < C1_ID; i++) {
@@ -52,8 +44,8 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 
 					KR: for (int kr = 0; kr < F1; kr++) { // kernel row
 					KC: for (int kc = 0; kc < F1; kc++) { // kernel column
-						//#pragma HLS UNROLL factor=2
-						#pragma HLS PIPELINE II=12
+						#pragma HLS UNROLL factor=2
+						#pragma HLS PIPELINE II=3
 
 						int rtarget = r + kr;
 						int ctarget = c + kc;
@@ -63,11 +55,8 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 					}}
 				}}
 			}}
+			export_output_buffer_c1(output_fm_buffer, output_ftmap, conv1_biases, out, h);
 		}
-
-		export_output_buffer_c1(output_fm_buffer, output_ftmap, conv1_biases, out, h);
-		// clear output buffer
-		clear_buffer(output_fm_buffer);
 	}}
 }
 
@@ -133,23 +122,23 @@ void export_output_buffer_c1(
 	int h
 ) {
 	// apply biases and ReLU
-	RELU1: for (int bout = 0; bout < C1_OD; bout++) {
-	BH: for (int bh = 0; bh < C1_TH; bh++) {
-	#pragma HLS UNROLL factor=3
-	BW: for (int bw = 0; bw < W; bw++) {
-		#pragma HLS PIPELINE II=2
-
-		output_fm_buffer[bout][bh][bw] = output_fm_buffer[bout][bh][bw] + biases[bout + out];
-
-		if (output_fm_buffer[bout][bh][bw] < 0) {
-			output_fm_buffer[bout][bh][bw] = 0;
-		}
-	}}}
-
 	EXPORT: for (int bout = 0; bout < C1_OD; bout++) {
-	ROW: for (int bh = 0; bh < C1_TH; bh++) {
+	BH: for (int bh = 0; bh < C1_TH; bh++) {
+		#pragma HLS UNROLL factor=2
+
+		RELU: for (int bw = 0; bw < W; bw++) {
+			#pragma HLS PIPELINE II=2
+
+			output_fm_buffer[bout][bh][bw] = output_fm_buffer[bout][bh][bw] + biases[bout + out];
+
+			if (output_fm_buffer[bout][bh][bw] < 0) {
+				output_fm_buffer[bout][bh][bw] = 0;
+			}
+		}
 
 		memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], W * sizeof(ftmap_t));
 	}}
+
+	clear_buffer(output_fm_buffer);
 }
 

@@ -18,10 +18,10 @@
 #define F3 5            // conv3 kernel size
 
 // CONV1
-#define C1_OD 8 // conv1 output tile depth
-#define C1_ID 1 // conv1 input tile depth
-#define C1_TH 15 // conv1 tile height
-#define C1_TW W // conv1 tile width
+#define C1_OD 8 		// conv1 output tile depth
+#define C1_ID 1 		// conv1 input tile depth
+#define C1_TH 15 		// conv1 tile height
+#define C1_TW W 		// conv1 tile width
 
 #define T 15			// number of tiles in each dimension (width/height)
 #define TH H / T		// input tile height
