@@ -3,6 +3,10 @@
   <errorLogs>
     <logs>
       <synLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T22:11:12.411+1100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T22:09:51.119+1100"/>
+      </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>
@@ -18,6 +22,7 @@
         <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_o_AWREGION' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T18:49:10.579+1100" type="Warning"/>
         <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_2/m_axi_o_AWQOS' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-01T18:49:10.567+1100" type="Warning"/>
       </synLog>
+      <csimLog/>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

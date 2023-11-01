@@ -83,8 +83,20 @@ void load_input_buffer_c3(
 	BH: for (int bh = 0; bh < C3_TH + (2 * P3); bh++) {
 		#pragma HLS PIPELINE OFF
 
-		// no padding, so just burst in main image area
-		memcpy(&input_fm_buffer[bin][bh][P2], &input_ftmap[in + bin][hclamp], W * sizeof(ftmap_t));
+		int hclamp = clamp(h + bh - P3, 0, H - 1);
+
+		ftmap_t left = input_ftmap[bin + in][hclamp][0];
+		ftmap_t right = input_ftmap[bin + in][hclamp][W - 1];
+
+		// load in left and right padding
+		PAD: for (int p = 0; p < P3; p++) {
+
+			input_fm_buffer[bin][bh][p] = left;
+			input_fm_buffer[bin][bh][P3 + W + p] = right;
+		}
+
+		// burst in main image area
+		memcpy(&input_fm_buffer[bin][bh][P3], &input_ftmap[in + bin][hclamp], W * sizeof(ftmap_t));
 	}}
 }
 
@@ -127,6 +139,6 @@ void export_output_buffer_c3(
 		memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], W * sizeof(ftmap_t));
 	}}
 
-	clear_buffer(output_fm_buffer);
+	clear_buffer_c3(output_fm_buffer);
 }
 

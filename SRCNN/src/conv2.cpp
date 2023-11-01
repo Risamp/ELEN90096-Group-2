@@ -74,7 +74,7 @@ void load_input_buffer_c2(
 		#pragma HLS PIPELINE OFF
 
 		// no padding, so just burst in main image area
-		memcpy(&input_fm_buffer[bin][bh][P1], &input_ftmap[in + bin][hclamp], W * sizeof(ftmap_t));
+		memcpy(&input_fm_buffer[bin][bh][P1], &input_ftmap[in + bin][h + bh], W * sizeof(ftmap_t));
 	}}
 }
 
@@ -117,6 +117,6 @@ void export_output_buffer_c2(
 		memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], W * sizeof(ftmap_t));
 	}}
 
-	clear_buffer(output_fm_buffer);
+	clear_buffer_c2(output_fm_buffer);
 }
 
