@@ -21,14 +21,16 @@
 #define C1_OD 8 		// conv1 output tile depth
 #define C1_ID 1 		// conv1 input tile depth
 #define C1_TH 15 		// conv1 tile height
-#define C1_TW W 		// conv1 tile width
 
-#define T 15			// number of tiles in each dimension (width/height)
-#define TH H / T		// input tile height
-#define TW W / T		// input tile width
-#define UNROLL 8		// input tile unroll factor
-#define TD1 N1 / UNROLL		// number of N1 tile blocks
-#define TD2 N2 / UNROLL		// number of N2 tile blocks
+// CONV2
+#define C2_OD 8 		// conv1 output tile depth
+#define C2_ID 8 		// conv1 input tile depth
+#define C2_TH 15 		// conv1 tile height
+
+// CONV3
+#define C3_OD 1 		// conv1 output tile depth
+#define C3_ID 8 		// conv1 input tile depth
+#define C3_TH 15 		// conv1 tile height
 
 
 //Padding values
@@ -76,9 +78,10 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 //clamp for extending edge values
 int clamp(int value, int min, int max);
 
-// load or ship buffer tiles (i.e. tile + padding for input, tile for output) into a given buffer
+// CONV1 ###################
+
 void load_input_buffer_c1(
-	ftmap_t input_fm_buffer[C1_ID][C1_TH + (2 * P1)][C1_TW + (2 * P1)],
+	ftmap_t input_fm_buffer[C1_ID][C1_TH + (2 * P1)][W + (2 * P1)],
 	ftmap_t input_ftmap[N0][H][W],
 	int in,
 	int h
@@ -92,41 +95,72 @@ void load_weight_buffer_c1(
 );
 
 void export_output_buffer_c1(
-	ftmap_t output_fm_buffer[C1_OD][C1_TH][C1_TW],
+	ftmap_t output_fm_buffer[C1_OD][C1_TH][W],
 	ftmap_t output_ftmap[N1][H][W],
 	param_t biases[N1],
 	int out,
 	int h
 );
 
-void clear_buffer(ftmap_t output_fm_buffer[C1_OD][C1_TH][C1_TW]);
+void clear_buffer_c1(
+	ftmap_t output_fm_buffer[C1_OD][C1_TH][W]
+);
 
-void load_buffer_tile_c2(ftmap_t input_fm_buffer[UNROLL][TH + (2 * P2)][TW + (2 * P2)],
-                         ftmap_t input_fm[N1][H][W],
-						 param_t weights_buffer[N2][UNROLL][F2][F2],
-						 param_t conv2_weights[N2][N1][F2][F2],
-                         int tx0,
-                         int ty0,
-						 int tn0);
+// CONV2 ###################
 
-void export_buffer_tile_c2(ftmap_t output_fm_buffer[N2][TH][TW],
-                           ftmap_t output_ftmap[N2][H][W],
-                           int tx0,
-                           int ty0,
-						   param_t conv2_biases[N2]);
+void load_input_buffer_c2(
+	ftmap_t input_fm_buffer[C2_ID][C2_TH + (2 * P2)][W + (2 * P2)],
+	ftmap_t input_ftmap[N1][H][W],
+	int in,
+	int h
+);
 
-void load_buffer_tile_c3(ftmap_t input_fm_buffer[UNROLL][TH + (2 * P3)][TW + (2 * P3)],
-						ftmap_t input_fm[N2][H][W],
-						param_t weights_buffer[N3][UNROLL][F3][F3],
-						param_t conv3_weights[N3][N2][F3][F3],
-						int tx0,
-						int ty0,
-						int tn0);
+void load_weight_buffer_c2(
+	param_t weight_buffer[C2_OD][C2_ID][F2][F2],
+	param_t conv1_weights[N2][N1][F2][F2],
+	int out,
+	int in
+);
 
-void export_buffer_tile_c3(ftmap_t output_fm_buffer[N3][TH][TW],
-                           ftmap_t output_ftmap[N3][H][W],
-                           int tx0,
-                           int ty0,
-						   param_t conv3_biases[N3]);
+void export_output_buffer_c2(
+	ftmap_t output_fm_buffer[C2_OD][C2_TH][W],
+	ftmap_t output_ftmap[N2][H][W],
+	param_t biases[N2],
+	int out,
+	int h
+);
+
+void clear_buffer_c2(
+	ftmap_t output_fm_buffer[C2_OD][C2_TH][W]
+);
+
+// CONV3 ###################
+
+void load_input_buffer_c3(
+	ftmap_t input_fm_buffer[C3_ID][C3_TH + (2 * P3)][W + (2 * P3)],
+	ftmap_t input_ftmap[N2][H][W],
+	int in,
+	int h
+);
+
+void load_weight_buffer_c3(
+	param_t weight_buffer[C3_OD][C3_ID][F3][F3],
+	param_t conv1_weights[N3][N2][F3][F3],
+	int out,
+	int in
+);
+
+void export_output_buffer_c3(
+	ftmap_t output_fm_buffer[C3_OD][C3_TH][W],
+	ftmap_t output_ftmap[N3][H][W],
+	param_t biases[N3],
+	int out,
+	int h
+);
+
+void clear_buffer_c3(
+	ftmap_t output_fm_buffer[C3_OD][C3_TH][W]
+);
+
 
 #endif /* _SRCNN_H_ */
