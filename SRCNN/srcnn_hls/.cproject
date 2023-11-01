@@ -59,6 +59,8 @@
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
                                     									
+                                    <listOptionValue builtIn="false" value="C:/SPB_Data/ELEN90096-Group-2/SRCNN"/>
+                                    									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include"/>
@@ -96,6 +98,8 @@
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/etc"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/SPB_Data/ELEN90096-Group-2/SRCNN"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
                                     									
@@ -407,6 +411,8 @@
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
                                     									
+                                    <listOptionValue builtIn="false" value="C:/SPB_Data/ELEN90096-Group-2/SRCNN"/>
+                                    									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include"/>
@@ -434,6 +440,8 @@
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/etc"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/SPB_Data/ELEN90096-Group-2/SRCNN"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
                                     									
@@ -718,5 +726,7 @@
     </storageModule>
     	
     <storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+    	
+    <storageModule moduleId="refreshScope"/>
     
 </cproject>

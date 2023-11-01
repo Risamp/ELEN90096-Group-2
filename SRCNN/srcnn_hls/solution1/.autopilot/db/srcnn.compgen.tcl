@@ -1,23 +1,5 @@
 # This script segment is generated automatically by AutoPilot
 
-set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
-}
-
-
-set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
-}
-
-
-set name srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fcmp} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
-}
-
-
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler srcnn_gmem_m_axi BINDTYPE {interface} TYPE {adapter} IMPL {m_axi}
 }
@@ -126,7 +108,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 42 \
+			id 33 \
 			corename srcnn_control_axilite \
 			name srcnn_control_s_axi \
 			ports {$port_control} \

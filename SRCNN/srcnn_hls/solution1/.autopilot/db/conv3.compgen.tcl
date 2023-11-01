@@ -1,12 +1,18 @@
 # This script segment is generated automatically by AutoPilot
 
+set name srcnn_mul_32s_20s_51_1_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+}
+
+
 set name srcnn_mul_10ns_6ns_14_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
 }
 
 
-set id 26
+set id 22
 set name srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1
 set corename simcore_ama
 set op ama
@@ -89,7 +95,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 31 \
+    id 28 \
     name gmem \
     type other \
     dir IO \
@@ -104,7 +110,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 32 \
+    id 29 \
     name input_ftmap \
     type other \
     dir I \
@@ -119,7 +125,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 33 \
+    id 30 \
     name conv3_weights \
     type other \
     dir I \
@@ -134,7 +140,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 34 \
+    id 31 \
     name conv3_biases_0_0_val \
     type other \
     dir I \
@@ -149,7 +155,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 35 \
+    id 32 \
     name output_ftmap \
     type other \
     dir I \

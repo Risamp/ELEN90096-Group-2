@@ -8,18 +8,18 @@
 
 using namespace std;
 
-conv1_b img_LR_set14[N0][H][W];  // low resolution input image
-conv1_b img_HR_set14[N0][H][W];  // high-resolution output image
-conv1_b img_GT_set14[N0][H][W];
-conv1_b layer_1_output_set14[N1][H][W] = {0};
-conv1_b layer_2_output_set14[N2][H][W] = {0};
+input_ft img_LR_set14[N0][H][W];  // low resolution input image
+test img_HR_set14[N0][H][W];  // high-resolution output image
+test img_GT_set14[N0][H][W];
+test layer_1_output_set14[N1][H][W] = {0};
+test layer_2_output_set14[N2][H][W] = {0};
 
 conv1_w conv1_weights_set14[N1][N0][F1][F1];
 conv1_b conv1_biases_set14[N1];
-conv1_b conv2_weights_set14[N2][N1][F2][F2];
-conv1_b conv2_biases_set14[N2];
-conv1_b conv3_weights_set14[N3][N2][F3][F3];
-conv1_b conv3_biases_set14[N3];
+conv2_w conv2_weights_set14[N2][N1][F2][F2];
+conv2_b conv2_biases_set14[N2];
+conv3_w conv3_weights_set14[N3][N2][F3][F3];
+conv3_b conv3_biases_set14[N3];
 
 // PSNR from matlab, obtained from comparing the ground truth (GT) with the software SRCNN from matlab
 double software_HR_psnr[] = {
@@ -60,22 +60,22 @@ int tb_set14()
 {
 
     // load conv weights and biases
-    load_param_conv1_w("./weights/conv1_weights_3x_flp.bin",
+    load_conv1_w("./weights/conv1_weights_3x_flp.bin",
                &conv1_weights_set14[0][0][0][0],
                N1*N0*F1*F1);
-    load_param_gen("./weights/conv1_biases_3x_flp.bin",
+    load_conv1_b("./weights/conv1_biases_3x_flp.bin",
                &conv1_biases_set14[0],
                N1);
-    load_param_gen("./weights/conv2_weights_3x_flp.bin",
+    load_conv2_w("./weights/conv2_weights_3x_flp.bin",
                &conv2_weights_set14[0][0][0][0],
                N2*N1*F2*F2);
-    load_param_gen("./weights/conv2_biases_3x_flp.bin",
+    load_conv2_b("./weights/conv2_biases_3x_flp.bin",
                &conv2_biases_set14[0],
                N2);
-    load_param_gen("./weights/conv3_weights_3x_flp.bin",
+    load_conv3_w("./weights/conv3_weights_3x_flp.bin",
                &conv3_weights_set14[0][0][0][0],
                N3*N2*F3*F3);
-    load_param_gen("./weights/conv3_biases_3x_flp.bin",
+    load_conv3_b("./weights/conv3_biases_3x_flp.bin",
                &conv3_biases_set14[0],
                N3);
 
@@ -105,7 +105,7 @@ int tb_set14()
 
             // Skip '.' and '..' entries and 'GT' entries, only work on 'LR' entries
             if (strcmp(ent->d_name, ".") != 0 && strcmp(ent->d_name, "..") != 0 && LR_pos != string::npos) {
-				load_image(directoryPath + filename, &img_LR_set14[0][0][0], N0*H*W);
+				load_input_image(directoryPath + filename, &img_LR_set14[0][0][0], N0*H*W);
 
 				std::string GT_filename(ent->d_name);
 				GT_filename.replace(LR_pos, 2, "GT");
@@ -123,12 +123,12 @@ int tb_set14()
 					  conv3_biases_set14,
 					  img_HR_set14);
 
-				write_bin("output_" + GT_filename, (conv1_b*) img_HR_set14, H * W);
+				write_bin("output_" + GT_filename, (test*) img_HR_set14, H * W);
 
                 std::cout << std::setw(15) << std::left << filename.substr(0,(filename).find("_")) 
                     << std::setw(20) << std::left <<  calculate_PSNR(&img_GT_set14[0][0][0], &img_HR_set14[0][0][0], H*W)
                     << std::setw(27) << std::left <<  software_HR_psnr[i]
-                    << std::setw(20) << std::left <<  calculate_PSNR(&img_GT_set14[0][0][0], &img_LR_set14[0][0][0], H*W) 
+                    << std::setw(20) << std::left <<  calculate_PSNR_input(&img_GT_set14[0][0][0], &img_LR_set14[0][0][0], H*W)
                     << std::setw(15) << std::left <<  calculate_mse(&img_GT_set14[0][0][0],&img_HR_set14[0][0][0],N3*H*W) 
                     << std::setw(27) << std::left <<  software_HR_mse[i++] << std::endl;
             }

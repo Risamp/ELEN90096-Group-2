@@ -11,7 +11,7 @@ use ieee.std_logic_unsigned.all;
 entity srcnn_conv1_input_fm_buffer_2_0_RAM_AUTO_1R1W is 
     generic(
         MEM_TYPE        : string    := "auto"; 
-        DataWidth       : integer   := 32; 
+        DataWidth       : integer   := 24; 
         AddressWidth    : integer   := 10;
         AddressRange    : integer   := 625
     ); 

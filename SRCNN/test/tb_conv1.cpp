@@ -6,9 +6,9 @@
 
 using namespace std;
 
-conv1_b input_ftmap[N0][H][W];    // low resolution input image
-conv1_b output_ftmap[N1][H][W];   // output feature map
-conv1_b golden_ftmap[N1][H][W];   // golden reference output feature map
+input_ft input_ftmap[N0][H][W];    // low resolution input image
+test output_ftmap[N1][H][W];   // output feature map
+test golden_ftmap[N1][H][W];   // golden reference output feature map
 
 // parameter dimensions
 //   weights: output features x input features x kernel height x kernel width
@@ -23,13 +23,13 @@ int tb_conv1()
     string fname_GR = "./set5/butterfly_3x_CONV1_flp.bin";
 
     // load input feature map
-    load_image(fname_LR, &input_ftmap[0][0][0], N0*H*W);
+    load_input_image(fname_LR, &input_ftmap[0][0][0], N0*H*W);
 
     // load conv1 layer weights and biases
-    load_param_conv1_w("./weights/conv1_weights_3x_flp.bin",
+    load_conv1_w("./weights/conv1_weights_3x_flp.bin",
                &weights[0][0][0][0],
                N1*N0*F1*F1);
-    load_param_gen("./weights/conv1_biases_3x_flp.bin",
+    load_conv1_b("./weights/conv1_biases_3x_flp.bin",
                &biases[0],
                N1);
 

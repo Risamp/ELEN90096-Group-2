@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn'" level="0">
-<item name = "Date">Wed Nov  1 01:02:26 2023
+<item name = "Date">Thu Nov  2 00:53:04 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,16 +24,16 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">8929747088, 8929747088, 89.297 sec, 89.297 sec, 8929747089, 8929747089, no</column>
+<column name="">6066420713, 6066420713, 60.664 sec, 60.664 sec, 6066420714, 6066420714, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_conv1_fu_279">conv1, 6557273356, 6557273356, 65.573 sec, 65.573 sec, 6557273356, 6557273356, no</column>
-<column name="grp_conv2_fu_293">conv2, 1270335406, 1270335406, 12.703 sec, 12.703 sec, 1270335406, 1270335406, no</column>
-<column name="grp_conv3_fu_307">conv3, 1089523442, 1089523442, 10.895 sec, 10.895 sec, 1089523442, 1089523442, no</column>
+<column name="grp_conv1_fu_279">conv1, 4827573706, 4827573706, 48.276 sec, 48.276 sec, 4827573706, 4827573706, no</column>
+<column name="grp_conv2_fu_293">conv2, 449153806, 449153806, 4.492 sec, 4.492 sec, 449153806, 449153806, no</column>
+<column name="grp_conv3_fu_307">conv3, 777078317, 777078317, 7.771 sec, 7.771 sec, 777078317, 777078317, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

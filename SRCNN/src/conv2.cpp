@@ -7,10 +7,10 @@
 using namespace std;
 
 // implements conv2 layer of SRCNN
-void conv2(ftmap_t input_ftmap[N1][H][W],
-           param_t conv2_weights[N2][N1][F2][F2],
-           param_t conv2_biases[N2],
-           ftmap_t output_ftmap[N2][H][W])
+void conv2(test input_ftmap[N1][H][W],
+		   conv2_w conv2_weights[N2][N1][F2][F2],
+           conv2_b conv2_biases[N2],
+           test output_ftmap[N2][H][W])
 {
 
 	/*
@@ -36,8 +36,8 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 		int tx0 = ti * TW;
 
 		// initialise input and output buffers
-		static ftmap_t input_fm_buffer[N1][TH + (2 * P2)][TW + (2 * P2)];
-		static ftmap_t output_fm_buffer[N2][TH][TW] = {0};
+		static test input_fm_buffer[N1][TH + (2 * P2)][TW + (2 * P2)];
+		static test output_fm_buffer[N2][TH][TW] = {0};
 
 		// load buffer-sized chunk
 		load_buffer_tile_c2(input_fm_buffer, input_ftmap, tx0, ty0);
@@ -98,13 +98,13 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
  * tx0, ty0 = image space coordinates of tile top left
 */
 void load_buffer_tile_c2(
-	ftmap_t input_fm_buffer[N1][TH + (2 * P2)][TW + (2 * P2)],
-	ftmap_t input_fm[N1][H][W],
+	test input_fm_buffer[N1][TH + (2 * P2)][TW + (2 * P2)],
+	test input_fm[N1][H][W],
 	int tx0,
 	int ty0
 ) {
 	// clear buffer
-	memset(input_fm_buffer, 0, N1 * (TH + (2 * P2)) * (TW + (2 * P2)) * sizeof(ftmap_t));
+	memset(input_fm_buffer, 0, N1 * (TH + (2 * P2)) * (TW + (2 * P2)) * sizeof(test));
 
 	for (int nin = 0; nin < N1; nin++) { // input layer
 		for (int by = 0; by < TH + (2 * P2); by++) { // buffer space y
@@ -122,11 +122,11 @@ void load_buffer_tile_c2(
 }
 
 void export_buffer_tile_c2(
-	ftmap_t output_fm_buffer[N2][TH][TW],
-	ftmap_t output_ftmap[N2][H][W],
+	test output_fm_buffer[N2][TH][TW],
+	test output_ftmap[N2][H][W],
 	int tx0,
 	int ty0,
-	param_t conv2_biases[N2]
+	conv2_b conv2_biases[N2]
 ) {
 	for (int nout = 0; nout < N2; nout++) { // output layer
 		for (int ty = 0; ty < TH; ty++) { // tile space y
@@ -142,5 +142,5 @@ void export_buffer_tile_c2(
 	}
 
 	// clear buffer
-	memset(output_fm_buffer, 0, N2 * TH * TW * sizeof(ftmap_t));
+	memset(output_fm_buffer, 0, N2 * TH * TW * sizeof(test));
 }

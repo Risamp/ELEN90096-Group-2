@@ -6,7 +6,7 @@
 
 // load image from uint8_t file and normalize to interval [0, 1]
 void load_image(std::string  fname,
-                ftmap_t     *image,
+                conv1_b     *image,
                 int          count)
 {
     uint8_t p;
@@ -19,7 +19,7 @@ void load_image(std::string  fname,
     for (int i = 0; i < count; i++) {
         ifs.read((char *) &p, sizeof(uint8_t));
         p_flp = ((float) p) / 255;
-        image[i] = (ftmap_t) p_flp;
+        image[i] = (conv1_b) p_flp;
     }
 
     ifs.close();
@@ -27,7 +27,7 @@ void load_image(std::string  fname,
 
 // load feature map from single precision FLP file
 void load_ftmap(std::string  fname,
-                ftmap_t     *ftmap,
+                conv1_b     *ftmap,
                 int          count)
 {
     float f;
@@ -38,15 +38,34 @@ void load_ftmap(std::string  fname,
 
     for (int i = 0; i < count; i++) {
         ifs.read((char *) &f, sizeof(float));
-        ftmap[i] = (ftmap_t) f;
+        ftmap[i] = (conv1_b) f;
     }
 
     ifs.close();
 }
+//
+//// load conv layer parameters from flp file
+//void load_param(std::string  fname,
+//                param_t     *param,
+//                int          count)
+//{
+//    float p;
+//
+//    std::ifstream ifs(fname, std::ios::in | std::ios::binary);
+//    if (!ifs)
+//        throw std::runtime_error("File not found");
+//
+//    for (int i = 0; i < count; i++) {
+//        ifs.read((char *) &p, sizeof(float));
+//        param[i] = (param_t) p;
+//    }
+//
+//    ifs.close();
+//}
 
 // load conv layer parameters from flp file
-void load_param(std::string  fname,
-                param_t     *param,
+void load_param_conv1_w(std::string  fname,
+                conv1_w     *param,
                 int          count)
 {
     float p;
@@ -57,21 +76,40 @@ void load_param(std::string  fname,
 
     for (int i = 0; i < count; i++) {
         ifs.read((char *) &p, sizeof(float));
-        param[i] = (param_t) p;
+        param[i] = (conv1_w) p;
+    }
+
+    ifs.close();
+}
+
+// load gen fixed point layer parameters from flp file
+void load_param_gen(std::string  fname,
+                conv1_b     *param,
+                int          count)
+{
+    float p;
+
+    std::ifstream ifs(fname, std::ios::in | std::ios::binary);
+    if (!ifs)
+        throw std::runtime_error("File not found");
+
+    for (int i = 0; i < count; i++) {
+        ifs.read((char *) &p, sizeof(float));
+        param[i] = (conv1_w) p;
     }
 
     ifs.close();
 }
 
 // returns MSE between two images
-double calculate_mse(ftmap_t *img1,
-                     ftmap_t *img2,
+double calculate_mse(conv1_b *img1,
+                     conv1_b *img2,
                      int      count)
 {
     double mse = 0.0;
     
     for (int i = 0; i < count; i++) {
-        mse += std::pow(img1[i] - (float)img2[i], 2);
+        mse += std::pow(float(img1[i] - img2[i]), 2);
     }
     mse = mse / count;
 
@@ -79,8 +117,8 @@ double calculate_mse(ftmap_t *img1,
 }
 
 // return PSNR between two images
-double calculate_PSNR(ftmap_t *img1,
-					  ftmap_t *img2,
+double calculate_PSNR(conv1_b *img1,
+					  conv1_b *img2,
 					  int      count)
 {
 	double rmse = 0.0;
@@ -95,7 +133,7 @@ double calculate_PSNR(ftmap_t *img1,
 
 // write ftmap image to output file
 void write_bin(std::string    fname,
-			   ftmap_t       *ftmap,
+			   conv1_b       *ftmap,
 			   int            count)
 {
     std::ofstream outputFile(fname, std::ios::binary);

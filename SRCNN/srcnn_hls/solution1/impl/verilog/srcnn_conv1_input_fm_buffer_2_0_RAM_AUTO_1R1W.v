@@ -12,7 +12,7 @@ module srcnn_conv1_input_fm_buffer_2_0_RAM_AUTO_1R1W (
      
     reset, clk);
 
-parameter DataWidth = 32;
+parameter DataWidth = 24;
 parameter AddressWidth = 10;
 parameter AddressRange = 625;
  

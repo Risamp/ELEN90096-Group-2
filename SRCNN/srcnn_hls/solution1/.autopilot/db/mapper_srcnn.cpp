@@ -367,54 +367,54 @@ __xlx_input_ftmap_conv1_weights_conv1_biases_conv1_output_ftmap_conv2_weights_co
   int __xlx_size_param_conv1_weights = 2592;
   int __xlx_offset_param_conv1_weights = 65025;
   int __xlx_offset_byte_param_conv1_weights = 65025*4;
-for (size_t i = 0; i < 64; ++i){
+for (size_t i = 0; i < 32; ++i){
 __xlx_input_ftmap_conv1_weights_conv1_biases_conv1_output_ftmap_conv2_weights_conv2_biases_conv2_output_ftmap_conv3_weights_conv3_biases_output_ftmap__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_conv1_biases)[i]);
 }
-  int __xlx_size_param_conv1_biases = 64;
+  int __xlx_size_param_conv1_biases = 32;
   int __xlx_offset_param_conv1_biases = 67617;
   int __xlx_offset_byte_param_conv1_biases = 67617*4;
 for (size_t i = 0; i < 4161600; ++i){
 __xlx_input_ftmap_conv1_weights_conv1_biases_conv1_output_ftmap_conv2_weights_conv2_biases_conv2_output_ftmap_conv3_weights_conv3_biases_output_ftmap__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_conv1_output_ftmap)[i]);
 }
   int __xlx_size_param_conv1_output_ftmap = 4161600;
-  int __xlx_offset_param_conv1_output_ftmap = 67681;
-  int __xlx_offset_byte_param_conv1_output_ftmap = 67681*4;
+  int __xlx_offset_param_conv1_output_ftmap = 67649;
+  int __xlx_offset_byte_param_conv1_output_ftmap = 67649*4;
 for (size_t i = 0; i < 2048; ++i){
 __xlx_input_ftmap_conv1_weights_conv1_biases_conv1_output_ftmap_conv2_weights_conv2_biases_conv2_output_ftmap_conv3_weights_conv3_biases_output_ftmap__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_conv2_weights)[i]);
 }
   int __xlx_size_param_conv2_weights = 2048;
-  int __xlx_offset_param_conv2_weights = 4229281;
-  int __xlx_offset_byte_param_conv2_weights = 4229281*4;
+  int __xlx_offset_param_conv2_weights = 4229249;
+  int __xlx_offset_byte_param_conv2_weights = 4229249*4;
 for (size_t i = 0; i < 32; ++i){
 __xlx_input_ftmap_conv1_weights_conv1_biases_conv1_output_ftmap_conv2_weights_conv2_biases_conv2_output_ftmap_conv3_weights_conv3_biases_output_ftmap__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_conv2_biases)[i]);
 }
   int __xlx_size_param_conv2_biases = 32;
-  int __xlx_offset_param_conv2_biases = 4231329;
-  int __xlx_offset_byte_param_conv2_biases = 4231329*4;
+  int __xlx_offset_param_conv2_biases = 4231297;
+  int __xlx_offset_byte_param_conv2_biases = 4231297*4;
 for (size_t i = 0; i < 2080800; ++i){
 __xlx_input_ftmap_conv1_weights_conv1_biases_conv1_output_ftmap_conv2_weights_conv2_biases_conv2_output_ftmap_conv3_weights_conv3_biases_output_ftmap__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_conv2_output_ftmap)[i]);
 }
   int __xlx_size_param_conv2_output_ftmap = 2080800;
-  int __xlx_offset_param_conv2_output_ftmap = 4231361;
-  int __xlx_offset_byte_param_conv2_output_ftmap = 4231361*4;
+  int __xlx_offset_param_conv2_output_ftmap = 4231329;
+  int __xlx_offset_byte_param_conv2_output_ftmap = 4231329*4;
 for (size_t i = 0; i < 800; ++i){
 __xlx_input_ftmap_conv1_weights_conv1_biases_conv1_output_ftmap_conv2_weights_conv2_biases_conv2_output_ftmap_conv3_weights_conv3_biases_output_ftmap__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_conv3_weights)[i]);
 }
   int __xlx_size_param_conv3_weights = 800;
-  int __xlx_offset_param_conv3_weights = 6312161;
-  int __xlx_offset_byte_param_conv3_weights = 6312161*4;
+  int __xlx_offset_param_conv3_weights = 6312129;
+  int __xlx_offset_byte_param_conv3_weights = 6312129*4;
 for (size_t i = 0; i < 1; ++i){
 __xlx_input_ftmap_conv1_weights_conv1_biases_conv1_output_ftmap_conv2_weights_conv2_biases_conv2_output_ftmap_conv3_weights_conv3_biases_output_ftmap__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_conv3_biases)[i]);
 }
   int __xlx_size_param_conv3_biases = 1;
-  int __xlx_offset_param_conv3_biases = 6312961;
-  int __xlx_offset_byte_param_conv3_biases = 6312961*4;
+  int __xlx_offset_param_conv3_biases = 6312929;
+  int __xlx_offset_byte_param_conv3_biases = 6312929*4;
 for (size_t i = 0; i < 65025; ++i){
 __xlx_input_ftmap_conv1_weights_conv1_biases_conv1_output_ftmap_conv2_weights_conv2_biases_conv2_output_ftmap_conv3_weights_conv3_biases_output_ftmap__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_output_ftmap)[i]);
 }
   int __xlx_size_param_output_ftmap = 65025;
-  int __xlx_offset_param_output_ftmap = 6312962;
-  int __xlx_offset_byte_param_output_ftmap = 6312962*4;
+  int __xlx_offset_param_output_ftmap = 6312930;
+  int __xlx_offset_byte_param_output_ftmap = 6312930*4;
   // DUT call
   srcnn(__xlx_input_ftmap_conv1_weights_conv1_biases_conv1_output_ftmap_conv2_weights_conv2_biases_conv2_output_ftmap_conv3_weights_conv3_biases_output_ftmap__tmp_vec.data(), __xlx_offset_byte_param_input_ftmap, __xlx_offset_byte_param_conv1_weights, __xlx_offset_byte_param_conv1_biases, __xlx_offset_byte_param_conv1_output_ftmap, __xlx_offset_byte_param_conv2_weights, __xlx_offset_byte_param_conv2_biases, __xlx_offset_byte_param_conv2_output_ftmap, __xlx_offset_byte_param_conv3_weights, __xlx_offset_byte_param_conv3_biases, __xlx_offset_byte_param_output_ftmap);
 // print __xlx_apatb_param_input_ftmap

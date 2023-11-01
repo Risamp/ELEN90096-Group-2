@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1'" level="0">
-<item name = "Date">Wed Nov  1 01:02:21 2023
+<item name = "Date">Thu Nov  2 00:53:00 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">6557273356, 6557273356, 65.573 sec, 65.573 sec, 6557273356, 6557273356, no</column>
+<column name="">4827573706, 4827573706, 48.276 sec, 48.276 sec, 4827573706, 4827573706, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,19 +35,19 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILE_J">6557273355, 6557273355, 437151557, -, -, 15, no</column>
-<column name=" + TILE_I">437151555, 437151555, 29143437, -, -, 15, no</column>
-<column name="  ++ TILE_I.1">625, 625, 1, -, -, 625, no</column>
+<column name="- TILE_J">4827573705, 4827573705, 321838247, -, -, 15, no</column>
+<column name=" + TILE_I">321838245, 321838245, 21455883, -, -, 15, no</column>
+<column name="  ++ TILE_I.1">312, 312, 1, -, -, 312, no</column>
 <column name="  ++ IN_BUFFER_BY">6925, 6925, 277, -, -, 25, no</column>
 <column name="   +++ IN_BUFFER_BX">275, 275, 11, -, -, 25, no</column>
-<column name="  ++ NOUT">28856064, 28856064, 450876, -, -, 64, no</column>
-<column name="   +++ TY">450874, 450874, 26522, -, -, 17, no</column>
-<column name="    ++++ TX">26520, 26520, 1560, -, -, 17, no</column>
-<column name="     +++++ KY">1557, 1557, 173, -, -, 9, no</column>
-<column name="      ++++++ KX">171, 171, 19, -, -, 9, no</column>
-<column name="  ++ OUT_BUFFER_NOUT">261313, 261313, 4083, -, -, 64, no</column>
-<column name="   +++ OUT_BUFFER_TY">4080, 4080, 240, -, -, 17, no</column>
-<column name="    ++++ OUT_BUFFER_TX">238, 238, 14, -, -, 17, no</column>
+<column name="  ++ NOUT">21365184, 21365184, 333831, -, -, 64, no</column>
+<column name="   +++ TY">333829, 333829, 19637, -, -, 17, no</column>
+<column name="    ++++ TX">19635, 19635, 1155, -, -, 17, no</column>
+<column name="     +++++ KY">1152, 1152, 128, -, -, 9, no</column>
+<column name="      ++++++ KX">126, 126, 14, -, -, 9, no</column>
+<column name="  ++ OUT_BUFFER_NOUT">64960, 64960, 1015, -, -, 64, no</column>
+<column name="   +++ OUT_BUFFER_TY">1003, 1003, 59, -, -, 17, no</column>
+<column name="    ++++ OUT_BUFFER_TX">51, 51, 3, -, -, 17, no</column>
 <column name="  ++ TILE_I.5">18496, 18496, 1, -, -, 18496, no</column>
 </table>
 </item>

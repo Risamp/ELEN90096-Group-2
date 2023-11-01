@@ -3,16 +3,16 @@
 #include <cstring>
 #include <iostream>
 
-void srcnn(conv1_b input_ftmap[N0][H][W],
+void srcnn(input_ft input_ftmap[N0][H][W],
 		   conv1_w conv1_weights[N1][N0][F1][F1],
            conv1_b conv1_biases[N1],
-		   conv1_b conv1_output_ftmap[N1][H][W],
-		   conv1_b conv2_weights[N2][N1][F2][F2],
-		   conv1_b conv2_biases[N2],
-		   conv1_b conv2_output_ftmap[N2][H][W],
-		   conv1_b conv3_weights[N3][N2][F3][F3],
-		   conv1_b conv3_biases[N3],
-		   conv1_b output_ftmap[N3][H][W])
+		   test conv1_output_ftmap[N1][H][W],
+		   conv2_w conv2_weights[N2][N1][F2][F2],
+		   conv2_b conv2_biases[N2],
+		   test conv2_output_ftmap[N2][H][W],
+		   conv3_w conv3_weights[N3][N2][F3][F3],
+		   conv3_b conv3_biases[N3],
+		   test output_ftmap[N3][H][W])
 {
     // Implement end-to-end SRCNN here
     // Assuming image pre-processing is already completed
@@ -31,9 +31,9 @@ void srcnn(conv1_b input_ftmap[N0][H][W],
 	#pragma HLS INTERFACE m_axi port=output_ftmap offset=slave
 	#pragma HLS INTERFACE s_axilite port=return
 
-	memset(conv1_output_ftmap, 0, N1 * H * W * sizeof(ftmap_t));
-	memset(conv2_output_ftmap, 0, N2 * H * W * sizeof(ftmap_t));
-	memset(output_ftmap, 0, N3 * H * W * sizeof(ftmap_t));
+	memset(conv1_output_ftmap, 0, N1 * H * W * sizeof(input_ft));
+	memset(conv2_output_ftmap, 0, N2 * H * W * sizeof(test));
+	memset(output_ftmap, 0, N3 * H * W * sizeof(test));
 
     // apply convolutional layer 1
     conv1(input_ftmap, conv1_weights, conv1_biases, conv1_output_ftmap);

@@ -9,7 +9,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1_DSP48_0 is
+entity srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1_DSP48_1 is
 port (
     clk: in  std_logic;
     rst: in  std_logic;
@@ -22,7 +22,7 @@ port (
 
 end entity;
 
-architecture behav of srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1_DSP48_0 is
+architecture behav of srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1_DSP48_1 is
     signal b       : signed(18-1 downto 0);
     signal a       : signed(27-1 downto 0);
     signal d       : signed(27-1 downto 0);
@@ -82,7 +82,7 @@ entity srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1 is
 end entity;
 
 architecture arch of srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1 is
-    component srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1_DSP48_0 is
+    component srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1_DSP48_1 is
         port (
             clk : IN STD_LOGIC;
             rst : IN STD_LOGIC;
@@ -97,7 +97,7 @@ architecture arch of srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1 is
 
 
 begin
-    srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1_DSP48_0_U :  component srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1_DSP48_0
+    srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1_DSP48_1_U :  component srcnn_ama_addmuladd_10ns_5ns_5ns_5ns_14_4_1_DSP48_1
     port map (
         clk => clk,
         rst => reset,

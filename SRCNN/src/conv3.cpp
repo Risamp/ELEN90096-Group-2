@@ -7,10 +7,10 @@
 using namespace std;
 
 // implements conv2 layer of SRCNN
-void conv3(ftmap_t input_ftmap[N2][H][W],
-           param_t conv3_weights[N3][N2][F3][F3],
-           param_t conv3_biases[N3],
-           ftmap_t output_ftmap[N3][H][W])
+void conv3(test input_ftmap[N2][H][W],
+		conv3_w conv3_weights[N3][N2][F3][F3],
+           test conv3_biases[N3],
+           test output_ftmap[N3][H][W])
 {
 
 	/*
@@ -35,8 +35,8 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 		int tx0 = ti * TW;
 
 		// initialise input and output buffers
-		static ftmap_t input_fm_buffer[N2][TH + (2 * P3)][TW + (2 * P3)];
-		static ftmap_t output_fm_buffer[N3][TH][TW] = {0};
+		static test input_fm_buffer[N2][TH + (2 * P3)][TW + (2 * P3)];
+		static test output_fm_buffer[N3][TH][TW] = {0};
 
 		// load buffer-sized chunk
 		load_buffer_tile_c3(input_fm_buffer, input_ftmap, tx0, ty0);
@@ -95,13 +95,13 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
  * tx0, ty0 = image space coordinates of tile top left
 */
 void load_buffer_tile_c3(
-	ftmap_t input_fm_buffer[N2][TH + (2 * P3)][TW + (2 * P3)],
-	ftmap_t input_fm[N2][H][W],
+	test input_fm_buffer[N2][TH + (2 * P3)][TW + (2 * P3)],
+	test input_fm[N2][H][W],
 	int tx0,
 	int ty0
 ) {
 	// clear buffer
-	memset(input_fm_buffer, 0, N2 * (TH + (2 * P3)) * (TW + (2 * P3)) * sizeof(ftmap_t));
+	memset(input_fm_buffer, 0, N2 * (TH + (2 * P3)) * (TW + (2 * P3)) * sizeof(test));
 
 	for (int nin = 0; nin < N2; nin++) { // input layer
 		for (int by = 0; by < TH + (2 * P3); by++) { // buffer space y
@@ -119,8 +119,8 @@ void load_buffer_tile_c3(
 }
 
 void export_buffer_tile_c3(
-	ftmap_t output_fm_buffer[N3][TH][TW],
-	ftmap_t output_ftmap[N3][H][W],
+	test output_fm_buffer[N3][TH][TW],
+	test output_ftmap[N3][H][W],
 	int tx0,
 	int ty0
 ) {
@@ -135,5 +135,5 @@ void export_buffer_tile_c3(
 	}
 
 	// clear buffer
-	memset(output_fm_buffer, 0, N3 * TH * TW * sizeof(ftmap_t));
+	memset(output_fm_buffer, 0, N3 * TH * TW * sizeof(test));
 }
