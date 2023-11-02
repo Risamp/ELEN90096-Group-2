@@ -106,7 +106,7 @@ newFuncRoot:4 %sext_ln36_cast = sext i62 %sext_ln36_read
 
 <Node id="9" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w2, void @empty, i32 0, i32 0, void @empty_37, i32 0, i32 512, void @empty_7, void @empty_36, void @empty_37, i32 16, i32 16, i32 256, i32 256, void @empty_37, void @empty_37, i32 4294967295, i32 0
+newFuncRoot:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w2, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 512, void @empty_15, void @empty_3, void @empty_10, i32 16, i32 16, i32 256, i32 256, void @empty_10, void @empty_10, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -475,10 +475,10 @@ for.inc.i20:10 %empty = trunc i7 %select_ln89
 
 <Node id="33" bw="2" op_0_bw="3">
 <![CDATA[
-for.inc.i20:11 %empty_213 = trunc i3 %select_ln89_1
+for.inc.i20:11 %empty_203 = trunc i3 %select_ln89_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_213"/></StgValue>
+<StgValue><ssdm name="empty_203"/></StgValue>
 </operation>
 
 <operation id="35" st_id="3" stage="1" lat="1">
@@ -490,7 +490,7 @@ for.inc.i20:11 %empty_213 = trunc i3 %select_ln89_1
 
 <Node id="34" bw="8" op_0_bw="8" op_1_bw="2" op_2_bw="6">
 <![CDATA[
-for.inc.i20:12 %tmp_s = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %empty_213, i6 %empty
+for.inc.i20:12 %tmp_s = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %empty_203, i6 %empty
 
 ]]></Node>
 <StgValue><ssdm name="tmp_s"/></StgValue>
@@ -550,10 +550,10 @@ for.inc.i20:15 %store_ln36 = store i32 %w2_addr_read, i8 %weight_buffer_addr
 
 <Node id="38" bw="7" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-for.inc.i20:16 %empty_214 = add i7 %select_ln89, i7 1
+for.inc.i20:16 %empty_204 = add i7 %select_ln89, i7 1
 
 ]]></Node>
-<StgValue><ssdm name="empty_214"/></StgValue>
+<StgValue><ssdm name="empty_204"/></StgValue>
 </operation>
 
 <operation id="40" st_id="3" stage="1" lat="1">
@@ -580,7 +580,7 @@ for.inc.i20:18 %store_ln89 = store i3 %select_ln89_1, i3 %bout
 
 <Node id="41" bw="0" op_0_bw="7" op_1_bw="7" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc.i20:19 %store_ln89 = store i7 %empty_214, i7 %loop_index_i16
+for.inc.i20:19 %store_ln89 = store i7 %empty_204, i7 %loop_index_i16
 
 ]]></Node>
 <StgValue><ssdm name="store_ln89"/></StgValue>

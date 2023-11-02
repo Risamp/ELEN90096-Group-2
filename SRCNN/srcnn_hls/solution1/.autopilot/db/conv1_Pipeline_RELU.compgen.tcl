@@ -11,7 +11,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 231 \
+    id 86 \
     name conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1 \
     reset_level 1 \
     sync_rst true \
@@ -30,7 +30,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 232 \
+    id 87 \
     name conv1_float_255_255_float_1_9_9_float_float_255_255_ou \
     reset_level 1 \
     sync_rst true \
@@ -48,37 +48,22 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 228 \
-    name sub_ln155_3 \
+    id 84 \
+    name tmp_370 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_sub_ln155_3 \
+    corename dc_tmp_370 \
     op interface \
-    ports { sub_ln155_3 { I 14 vector } } \
+    ports { tmp_370 { I 7 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 229 \
-    name trunc_ln20 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_trunc_ln20 \
-    op interface \
-    ports { trunc_ln20 { I 1 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 230 \
+    id 85 \
     name empty \
     type other \
     dir I \

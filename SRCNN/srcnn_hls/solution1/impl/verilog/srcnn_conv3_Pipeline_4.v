@@ -59,7 +59,7 @@ module srcnn_conv3_Pipeline_4 (
         m_axi_o_BRESP,
         m_axi_o_BID,
         m_axi_o_BUSER,
-        sext_ln150,
+        sext_ln148,
         bh,
         conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_address0,
         conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_ce0,
@@ -123,7 +123,7 @@ output   m_axi_o_BREADY;
 input  [1:0] m_axi_o_BRESP;
 input  [0:0] m_axi_o_BID;
 input  [0:0] m_axi_o_BUSER;
-input  [61:0] sext_ln150;
+input  [61:0] sext_ln148;
 input  [2:0] bh;
 output  [9:0] conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_address0;
 output   conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_ce0;
@@ -165,7 +165,7 @@ reg   [7:0] loop_index_0_i_fu_64;
 wire   [7:0] empty_fu_132_p2;
 wire    ap_loop_init;
 reg   [7:0] ap_sig_allocacmp_loop_index_0_i_load;
-wire   [6:0] empty_203_fu_138_p1;
+wire   [6:0] empty_193_fu_138_p1;
 wire   [9:0] tmp_s_fu_142_p3;
 reg    ap_done_reg;
 wire    ap_continue_int;
@@ -191,7 +191,7 @@ srcnn_mux_2_1_32_1_1 #(
     .din1_WIDTH( 32 ),
     .din2_WIDTH( 1 ),
     .dout_WIDTH( 32 ))
-mux_2_1_32_1_1_U426(
+mux_2_1_32_1_1_U226(
     .din0(conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_q0),
     .din1(conv3_float_255_255_float_32_5_5_float_float_255_255_o_q0),
     .din2(tmp_reg_213),
@@ -413,7 +413,7 @@ assign conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_address0 = tmp_1
 
 assign conv3_float_255_255_float_32_5_5_float_float_255_255_o_address0 = tmp_138_cast_fu_150_p1;
 
-assign empty_203_fu_138_p1 = ap_sig_allocacmp_loop_index_0_i_load[6:0];
+assign empty_193_fu_138_p1 = ap_sig_allocacmp_loop_index_0_i_load[6:0];
 
 assign empty_fu_132_p2 = (ap_sig_allocacmp_loop_index_0_i_load + 8'd1);
 
@@ -483,6 +483,6 @@ assign m_axi_o_WUSER = 1'd0;
 
 assign tmp_138_cast_fu_150_p1 = tmp_s_fu_142_p3;
 
-assign tmp_s_fu_142_p3 = {{bh}, {empty_203_fu_138_p1}};
+assign tmp_s_fu_142_p3 = {{bh}, {empty_193_fu_138_p1}};
 
 endmodule //srcnn_conv3_Pipeline_4

@@ -91,7 +91,7 @@ newFuncRoot:3 %sext_ln118_1_cast = sext i62 %sext_ln118_1_read
 
 <Node id="9" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i3, void @empty, i32 0, i32 0, void @empty_37, i32 0, i32 512, void @empty_5, void @empty_36, void @empty_37, i32 16, i32 16, i32 256, i32 256, void @empty_37, void @empty_37, i32 4294967295, i32 0
+newFuncRoot:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i3, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 512, void @empty_16, void @empty_3, void @empty_10, i32 16, i32 16, i32 256, i32 256, void @empty_10, void @empty_10, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -213,10 +213,10 @@ load-store-loop.1.i.split:0 %loop_index_1_i_cast1 = zext i8 %loop_index_1_i_load
 
 <Node id="21" bw="12" op_0_bw="12" op_1_bw="12">
 <![CDATA[
-load-store-loop.1.i.split:1 %empty_222 = add i12 %sub_ln111_2_read, i12 %loop_index_1_i_cast1
+load-store-loop.1.i.split:1 %empty_212 = add i12 %sub_ln111_2_read, i12 %loop_index_1_i_cast1
 
 ]]></Node>
-<StgValue><ssdm name="empty_222"/></StgValue>
+<StgValue><ssdm name="empty_212"/></StgValue>
 </operation>
 
 <operation id="19" st_id="1" stage="1" lat="1">
@@ -229,7 +229,7 @@ load-store-loop.1.i.split:1 %empty_222 = add i12 %sub_ln111_2_read, i12 %loop_in
 
 <Node id="22" bw="64" op_0_bw="12">
 <![CDATA[
-load-store-loop.1.i.split:2 %p_cast = zext i12 %empty_222
+load-store-loop.1.i.split:2 %p_cast = zext i12 %empty_212
 
 ]]></Node>
 <StgValue><ssdm name="p_cast"/></StgValue>
@@ -375,10 +375,10 @@ load-store-loop.1.i.split:4 %speclooptripcount_ln0 = speclooptripcount void @_ss
 
 <Node id="26" bw="32" op_0_bw="32">
 <![CDATA[
-load-store-loop.1.i.split:6 %empty_223 = bitcast i32 %output_fm_buffer_load
+load-store-loop.1.i.split:6 %empty_213 = bitcast i32 %output_fm_buffer_load
 
 ]]></Node>
-<StgValue><ssdm name="empty_223"/></StgValue>
+<StgValue><ssdm name="empty_213"/></StgValue>
 </operation>
 
 <operation id="28" st_id="3" stage="1" lat="1">
@@ -390,7 +390,7 @@ load-store-loop.1.i.split:6 %empty_223 = bitcast i32 %output_fm_buffer_load
 
 <Node id="27" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="4">
 <![CDATA[
-load-store-loop.1.i.split:7 %write_ln118 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %i3_addr, i32 %empty_223, i4 15
+load-store-loop.1.i.split:7 %write_ln118 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %i3_addr, i32 %empty_213, i4 15
 
 ]]></Node>
 <StgValue><ssdm name="write_ln118"/></StgValue>

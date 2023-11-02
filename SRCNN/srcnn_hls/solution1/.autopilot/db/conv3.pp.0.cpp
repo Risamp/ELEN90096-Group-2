@@ -33580,8 +33580,6 @@ namespace std
 
 using namespace std;
 
-const unsigned int CHUNK3 = 3;
-
 
 void conv3(ftmap_t input_ftmap[32][255][255],
            param_t conv3_weights[1][32][5][5],
@@ -33615,7 +33613,7 @@ void conv3(ftmap_t input_ftmap[32][255][255],
 
     ROW: for (int r = 0; r < 5; r++) {
 
-     COL1: for (int c = 0; c < 255; c++) {
+     COL: for (int c = 0; c < 255; c++) {
 #pragma HLS UNROLL factor=3
 #pragma HLS PIPELINE II=19
  KR1: for (int kr = 0; kr < 5; kr++) {

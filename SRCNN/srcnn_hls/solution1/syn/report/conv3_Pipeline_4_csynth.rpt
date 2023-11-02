@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_4'
 ================================================================
-* Date:           Thu Nov  2 21:49:04 2023
+* Date:           Thu Nov  2 22:33:48 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -73,7 +73,7 @@
     +---------------------+----------------+---------+----+---+----+-----+
     |       Instance      |     Module     | BRAM_18K| DSP| FF| LUT| URAM|
     +---------------------+----------------+---------+----+---+----+-----+
-    |mux_2_1_32_1_1_U426  |mux_2_1_32_1_1  |        0|   0|  0|   9|    0|
+    |mux_2_1_32_1_1_U226  |mux_2_1_32_1_1  |        0|   0|  0|   9|    0|
     +---------------------+----------------+---------+----+---+----+-----+
     |Total                |                |        0|   0|  0|   9|    0|
     +---------------------+----------------+---------+----+---+----+-----+
@@ -190,7 +190,7 @@
 |m_axi_o_BRESP                                                      |   in|    2|       m_axi|                                                         o|       pointer|
 |m_axi_o_BID                                                        |   in|    1|       m_axi|                                                         o|       pointer|
 |m_axi_o_BUSER                                                      |   in|    1|       m_axi|                                                         o|       pointer|
-|sext_ln150                                                         |   in|   62|     ap_none|                                                sext_ln150|        scalar|
+|sext_ln148                                                         |   in|   62|     ap_none|                                                sext_ln148|        scalar|
 |bh                                                                 |   in|    3|     ap_none|                                                        bh|        scalar|
 |conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_address0  |  out|   10|   ap_memory|  conv3_float_255_255_float_32_5_5_float_float_255_255_o_1|         array|
 |conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_ce0       |  out|    1|   ap_memory|  conv3_float_255_255_float_32_5_5_float_float_255_255_o_1|         array|

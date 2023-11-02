@@ -6,8 +6,6 @@
 
 using namespace std;
 
-const unsigned int CHUNK3 = 3;
-
 // implements conv2 layer of SRCNN
 void conv3(ftmap_t input_ftmap[N2][H][W],
            param_t conv3_weights[N3][N2][F3][F3],
@@ -41,7 +39,7 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 
 				ROW: for (int r = 0; r < C3_TH; r++) {
 
-					COL1: for (int c = 0; c < W; c++) {
+					COL: for (int c = 0; c < W; c++) {
 						#pragma HLS UNROLL factor=3
 						#pragma HLS PIPELINE II=19
 						KR1: for (int kr = 0; kr < F3; kr++) {

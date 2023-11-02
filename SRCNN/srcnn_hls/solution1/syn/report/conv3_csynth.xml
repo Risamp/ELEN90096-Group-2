@@ -100,9 +100,9 @@
 <AreaEstimates>
 <Resources>
 <BRAM_18K>150</BRAM_18K>
-<DSP>6</DSP>
-<FF>8537</FF>
-<LUT>14983</LUT>
+<DSP>16</DSP>
+<FF>9247</FF>
+<LUT>15645</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -182,7 +182,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_396_p_din0</name>
+<name>grp_fu_312_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -193,7 +193,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_396_p_din1</name>
+<name>grp_fu_312_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -204,7 +204,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_396_p_opcode</name>
+<name>grp_fu_312_p_opcode</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -215,7 +215,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_396_p_dout0</name>
+<name>grp_fu_312_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -226,7 +226,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_396_p_ce</name>
+<name>grp_fu_312_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -237,7 +237,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_400_p_din0</name>
+<name>grp_fu_316_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -248,7 +248,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_400_p_din1</name>
+<name>grp_fu_316_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -259,7 +259,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_400_p_opcode</name>
+<name>grp_fu_316_p_opcode</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -270,7 +270,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_400_p_dout0</name>
+<name>grp_fu_316_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -281,7 +281,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_400_p_ce</name>
+<name>grp_fu_316_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -292,7 +292,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_404_p_din0</name>
+<name>grp_fu_320_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -303,7 +303,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_404_p_din1</name>
+<name>grp_fu_320_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -314,7 +314,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_404_p_opcode</name>
+<name>grp_fu_320_p_opcode</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -325,7 +325,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_404_p_dout0</name>
+<name>grp_fu_320_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -336,7 +336,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_404_p_ce</name>
+<name>grp_fu_320_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -347,7 +347,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_408_p_din0</name>
+<name>grp_fu_324_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -358,7 +358,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_408_p_din1</name>
+<name>grp_fu_324_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -369,18 +369,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_408_p_opcode</name>
-<Object>conv3</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>2</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_408_p_dout0</name>
+<name>grp_fu_324_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -391,7 +380,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_408_p_ce</name>
+<name>grp_fu_324_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -402,7 +391,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_412_p_din0</name>
+<name>grp_fu_328_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -413,7 +402,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_412_p_din1</name>
+<name>grp_fu_328_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -424,18 +413,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_412_p_opcode</name>
-<Object>conv3</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>2</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_412_p_dout0</name>
+<name>grp_fu_328_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -446,7 +424,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_412_p_ce</name>
+<name>grp_fu_328_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -457,7 +435,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_416_p_din0</name>
+<name>grp_fu_332_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -468,7 +446,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_416_p_din1</name>
+<name>grp_fu_332_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -479,183 +457,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_416_p_dout0</name>
-<Object>conv3</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_416_p_ce</name>
-<Object>conv3</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_420_p_din0</name>
-<Object>conv3</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_420_p_din1</name>
-<Object>conv3</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_420_p_dout0</name>
-<Object>conv3</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_420_p_ce</name>
-<Object>conv3</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_424_p_din0</name>
-<Object>conv3</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_424_p_din1</name>
-<Object>conv3</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_424_p_dout0</name>
-<Object>conv3</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_424_p_ce</name>
-<Object>conv3</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_428_p_din0</name>
-<Object>conv3</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_428_p_din1</name>
-<Object>conv3</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_428_p_dout0</name>
-<Object>conv3</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_428_p_ce</name>
-<Object>conv3</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_432_p_din0</name>
-<Object>conv3</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_432_p_din1</name>
-<Object>conv3</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_432_p_opcode</name>
+<name>grp_fu_332_p_opcode</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -666,7 +468,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_432_p_dout0</name>
+<name>grp_fu_332_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -677,7 +479,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_432_p_ce</name>
+<name>grp_fu_332_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>

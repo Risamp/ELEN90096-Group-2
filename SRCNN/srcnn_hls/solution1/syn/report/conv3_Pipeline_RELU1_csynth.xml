@@ -185,7 +185,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_700_p_din0</name>
+<name>grp_fu_684_p_din0</name>
 <Object>conv3_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -196,7 +196,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_700_p_din1</name>
+<name>grp_fu_684_p_din1</name>
 <Object>conv3_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -207,7 +207,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_700_p_opcode</name>
+<name>grp_fu_684_p_opcode</name>
 <Object>conv3_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -218,7 +218,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_700_p_dout0</name>
+<name>grp_fu_684_p_dout0</name>
 <Object>conv3_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -229,7 +229,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_700_p_ce</name>
+<name>grp_fu_684_p_ce</name>
 <Object>conv3_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -240,8 +240,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>or_ln140</name>
-<Object>or_ln140</Object>
+<name>or_ln138</name>
+<Object>or_ln138</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

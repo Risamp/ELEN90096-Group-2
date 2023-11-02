@@ -208,7 +208,7 @@ reg   [0:0] ap_phi_mux_first_iter_01_phi_fu_181_p4;
 wire   [63:0] p_cast4_fu_451_p1;
 wire  signed [63:0] sext_ln75_1_fu_501_p1;
 reg   [7:0] loop_index_i_fu_106;
-wire   [7:0] empty_215_fu_456_p2;
+wire   [7:0] empty_205_fu_456_p2;
 reg   [1:0] bh_fu_110;
 wire   [1:0] select_ln76_1_fu_383_p3;
 reg   [9:0] indvar_flatten_fu_114;
@@ -216,19 +216,19 @@ wire   [9:0] select_ln76_2_fu_468_p3;
 reg   [6:0] bin_fu_118;
 wire   [6:0] select_ln75_1_fu_271_p3;
 reg   [15:0] indvar_flatten17_fu_122;
-wire   [15:0] add_ln75_1_fu_230_p2;
+wire   [15:0] add_ln75_3_fu_230_p2;
 wire   [0:0] icmp_ln76_fu_251_p2;
 wire   [6:0] add_ln75_fu_245_p2;
 wire   [8:0] tmp_s_fu_283_p3;
 wire   [9:0] tmp_144_cast_fu_291_p1;
 wire   [9:0] select_ln75_1_cast_fu_279_p1;
-wire   [9:0] empty_217_fu_295_p2;
+wire   [9:0] empty_207_fu_295_p2;
 wire   [6:0] mul_ln75_fu_309_p0;
 wire   [18:0] mul_ln75_fu_309_p1;
 wire   [24:0] mul_ln75_fu_309_p2;
 wire   [63:0] zext_ln75_1_fu_315_p1;
-wire   [63:0] add_ln75_2_fu_319_p2;
-wire   [63:0] add_ln75_3_fu_324_p2;
+wire   [63:0] add_ln75_1_fu_319_p2;
+wire   [63:0] add_ln75_2_fu_324_p2;
 wire   [0:0] exitcond6205_fu_345_p2;
 wire   [0:0] xor_ln75_fu_339_p2;
 wire   [1:0] select_ln75_fu_257_p3;
@@ -238,16 +238,16 @@ wire   [0:0] or_ln76_1_fu_369_p2;
 wire   [1:0] add_ln76_fu_357_p2;
 wire  signed [10:0] sext_ln75_2_fu_301_p1;
 wire   [10:0] select_ln76_1_cast_fu_391_p1;
-wire  signed [10:0] empty_218_fu_395_p2;
-wire   [7:0] empty_219_fu_405_p1;
+wire  signed [10:0] empty_208_fu_395_p2;
+wire   [7:0] empty_209_fu_405_p1;
 wire   [15:0] p_shl_fu_409_p3;
 wire  signed [15:0] p_cast1_fu_401_p1;
 wire   [0:0] xor_ln76_fu_423_p2;
 wire   [0:0] and_ln76_fu_429_p2;
 wire   [7:0] select_ln76_fu_375_p3;
-wire   [15:0] empty_220_fu_417_p2;
+wire   [15:0] empty_210_fu_417_p2;
 wire   [15:0] select_ln76_cast_fu_441_p1;
-wire   [15:0] empty_221_fu_445_p2;
+wire   [15:0] empty_211_fu_445_p2;
 wire   [9:0] add_ln76_1_fu_462_p2;
 reg    ap_done_reg;
 wire    ap_continue_int;
@@ -290,7 +290,7 @@ srcnn_mul_7ns_19ns_25_1_1 #(
     .din0_WIDTH( 7 ),
     .din1_WIDTH( 19 ),
     .dout_WIDTH( 25 ))
-mul_7ns_19ns_25_1_1_U318(
+mul_7ns_19ns_25_1_1_U118(
     .din0(mul_ln75_fu_309_p0),
     .din1(mul_ln75_fu_309_p1),
     .dout(mul_ln75_fu_309_p2)
@@ -486,7 +486,7 @@ always @ (posedge ap_clk) begin
         if ((ap_loop_init == 1'b1)) begin
             indvar_flatten17_fu_122 <= 16'd0;
         end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (icmp_ln75_fu_224_p2 == 1'd0))) begin
-            indvar_flatten17_fu_122 <= add_ln75_1_fu_230_p2;
+            indvar_flatten17_fu_122 <= add_ln75_3_fu_230_p2;
         end
     end
 end
@@ -506,7 +506,7 @@ always @ (posedge ap_clk) begin
         if ((ap_loop_init == 1'b1)) begin
             loop_index_i_fu_106 <= 8'd0;
         end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (icmp_ln75_fu_224_p2 == 1'd0))) begin
-            loop_index_i_fu_106 <= empty_215_fu_456_p2;
+            loop_index_i_fu_106 <= empty_205_fu_456_p2;
         end
     end
 end
@@ -560,7 +560,7 @@ always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln75_fu_224_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
         input_fm_buffer_addr_reg_584 <= p_cast4_fu_451_p1;
         or_ln76_reg_575 <= or_ln76_fu_363_p2;
-        sext_ln76_mid2_v_reg_570 <= {{add_ln75_3_fu_324_p2[63:2]}};
+        sext_ln76_mid2_v_reg_570 <= {{add_ln75_2_fu_324_p2[63:2]}};
     end
 end
 
@@ -685,11 +685,11 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln75_1_fu_230_p2 = (indvar_flatten17_fu_122 + 16'd1);
+assign add_ln75_1_fu_319_p2 = (zext_ln75_1_fu_315_p1 + input_ftmap);
 
-assign add_ln75_2_fu_319_p2 = (zext_ln75_1_fu_315_p1 + input_ftmap);
+assign add_ln75_2_fu_324_p2 = ($signed(add_ln75_1_fu_319_p2) + $signed(sext_ln75_cast_reg_561));
 
-assign add_ln75_3_fu_324_p2 = ($signed(add_ln75_2_fu_319_p2) + $signed(sext_ln75_cast_reg_561));
+assign add_ln75_3_fu_230_p2 = (indvar_flatten17_fu_122 + 16'd1);
 
 assign add_ln75_fu_245_p2 = (bin_fu_118 + 7'd1);
 
@@ -753,17 +753,17 @@ always @ (*) begin
     ap_predicate_op97_readreq_state3 = ((or_ln76_2_reg_579 == 1'd1) & (or_ln76_reg_575 == 1'd1));
 end
 
-assign empty_215_fu_456_p2 = (select_ln76_fu_375_p3 + 8'd1);
+assign empty_205_fu_456_p2 = (select_ln76_fu_375_p3 + 8'd1);
 
-assign empty_217_fu_295_p2 = (tmp_144_cast_fu_291_p1 - select_ln75_1_cast_fu_279_p1);
+assign empty_207_fu_295_p2 = (tmp_144_cast_fu_291_p1 - select_ln75_1_cast_fu_279_p1);
 
-assign empty_218_fu_395_p2 = ($signed(sext_ln75_2_fu_301_p1) + $signed(select_ln76_1_cast_fu_391_p1));
+assign empty_208_fu_395_p2 = ($signed(sext_ln75_2_fu_301_p1) + $signed(select_ln76_1_cast_fu_391_p1));
 
-assign empty_219_fu_405_p1 = empty_218_fu_395_p2[7:0];
+assign empty_209_fu_405_p1 = empty_208_fu_395_p2[7:0];
 
-assign empty_220_fu_417_p2 = ($signed(p_shl_fu_409_p3) - $signed(p_cast1_fu_401_p1));
+assign empty_210_fu_417_p2 = ($signed(p_shl_fu_409_p3) - $signed(p_cast1_fu_401_p1));
 
-assign empty_221_fu_445_p2 = (empty_220_fu_417_p2 + select_ln76_cast_fu_441_p1);
+assign empty_211_fu_445_p2 = (empty_210_fu_417_p2 + select_ln76_cast_fu_441_p1);
 
 assign exitcond6205_fu_345_p2 = ((loop_index_i_fu_106 == 8'd255) ? 1'b1 : 1'b0);
 
@@ -849,11 +849,11 @@ assign or_ln76_2_fu_435_p2 = (icmp_ln76_fu_251_p2 | and_ln76_fu_429_p2);
 
 assign or_ln76_fu_363_p2 = (or_ln75_fu_265_p2 | and_ln75_fu_351_p2);
 
-assign p_cast1_fu_401_p1 = empty_218_fu_395_p2;
+assign p_cast1_fu_401_p1 = empty_208_fu_395_p2;
 
-assign p_cast4_fu_451_p1 = empty_221_fu_445_p2;
+assign p_cast4_fu_451_p1 = empty_211_fu_445_p2;
 
-assign p_shl_fu_409_p3 = {{empty_219_fu_405_p1}, {8'd0}};
+assign p_shl_fu_409_p3 = {{empty_209_fu_405_p1}, {8'd0}};
 
 assign select_ln75_1_cast_fu_279_p1 = select_ln75_1_fu_271_p3;
 
@@ -873,7 +873,7 @@ assign select_ln76_fu_375_p3 = ((or_ln76_1_fu_369_p2[0:0] == 1'b1) ? 8'd0 : loop
 
 assign sext_ln75_1_fu_501_p1 = $signed(sext_ln76_mid2_v_reg_570);
 
-assign sext_ln75_2_fu_301_p1 = $signed(empty_217_fu_295_p2);
+assign sext_ln75_2_fu_301_p1 = $signed(empty_207_fu_295_p2);
 
 assign sext_ln75_cast_fu_189_p1 = $signed(sext_ln75);
 

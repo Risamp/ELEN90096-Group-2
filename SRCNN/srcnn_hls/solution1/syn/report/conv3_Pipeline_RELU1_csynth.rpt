@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_RELU1'
 ================================================================
-* Date:           Thu Nov  2 21:49:04 2023
+* Date:           Thu Nov  2 22:33:49 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -73,7 +73,7 @@
     +---------------------+----------------+---------+----+---+----+-----+
     |       Instance      |     Module     | BRAM_18K| DSP| FF| LUT| URAM|
     +---------------------+----------------+---------+----+---+----+-----+
-    |mux_2_1_32_1_1_U434  |mux_2_1_32_1_1  |        0|   0|  0|   9|    0|
+    |mux_2_1_32_1_1_U234  |mux_2_1_32_1_1  |        0|   0|  0|   9|    0|
     +---------------------+----------------+---------+----+---+----+-----+
     |Total                |                |        0|   0|  0|   9|    0|
     +---------------------+----------------+---------+----+---+----+-----+
@@ -91,12 +91,12 @@
     +------------------------+----------+----+---+----+------------+------------+
     |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +------------------------+----------+----+---+----+------------+------------+
-    |add_ln140_fu_131_p2     |         +|   0|  0|  15|           8|           1|
-    |and_ln145_fu_210_p2     |       and|   0|  0|   2|           1|           1|
-    |icmp_ln140_fu_125_p2    |      icmp|   0|  0|  15|           8|           2|
-    |icmp_ln145_1_fu_200_p2  |      icmp|   0|  0|  30|          23|           1|
-    |icmp_ln145_fu_194_p2    |      icmp|   0|  0|  15|           8|           2|
-    |or_ln145_fu_206_p2      |        or|   0|  0|   2|           1|           1|
+    |add_ln138_fu_131_p2     |         +|   0|  0|  15|           8|           1|
+    |and_ln143_fu_210_p2     |       and|   0|  0|   2|           1|           1|
+    |icmp_ln138_fu_125_p2    |      icmp|   0|  0|  15|           8|           2|
+    |icmp_ln143_1_fu_200_p2  |      icmp|   0|  0|  30|          23|           1|
+    |icmp_ln143_fu_194_p2    |      icmp|   0|  0|  15|           8|           2|
+    |or_ln143_fu_206_p2      |        or|   0|  0|   2|           1|           1|
     |ap_enable_pp0           |       xor|   0|  0|   2|           1|           2|
     +------------------------+----------+----+---+----+------------+------------+
     |Total                   |          |   0|  0|  81|          50|          10|
@@ -136,9 +136,9 @@
     |bw_fu_56                                                          |   8|   0|    8|          0|
     |conv3_float_255_255_float_32_5_5_float_float_255_255_o_2_reg_232  |  10|   0|   10|          0|
     |conv3_float_255_255_float_32_5_5_float_float_255_255_o_3_reg_238  |  10|   0|   10|          0|
-    |icmp_ln140_reg_228                                                |   1|   0|    1|          0|
-    |icmp_ln145_1_reg_267                                              |   1|   0|    1|          0|
-    |icmp_ln145_reg_262                                                |   1|   0|    1|          0|
+    |icmp_ln138_reg_228                                                |   1|   0|    1|          0|
+    |icmp_ln143_1_reg_267                                              |   1|   0|    1|          0|
+    |icmp_ln143_reg_262                                                |   1|   0|    1|          0|
     |tmp_1_reg_249                                                     |  32|   0|   32|          0|
     |tmp_reg_244                                                       |   1|   0|    1|          0|
     |conv3_float_255_255_float_32_5_5_float_float_255_255_o_2_reg_232  |  64|  32|   10|          0|
@@ -168,12 +168,12 @@
 |grp_fu_664_p_opcode                                                |  out|    2|  ap_ctrl_hs|                                      conv3_Pipeline_RELU1|  return value|
 |grp_fu_664_p_dout0                                                 |   in|   32|  ap_ctrl_hs|                                      conv3_Pipeline_RELU1|  return value|
 |grp_fu_664_p_ce                                                    |  out|    1|  ap_ctrl_hs|                                      conv3_Pipeline_RELU1|  return value|
-|grp_fu_700_p_din0                                                  |  out|   32|  ap_ctrl_hs|                                      conv3_Pipeline_RELU1|  return value|
-|grp_fu_700_p_din1                                                  |  out|   32|  ap_ctrl_hs|                                      conv3_Pipeline_RELU1|  return value|
-|grp_fu_700_p_opcode                                                |  out|    5|  ap_ctrl_hs|                                      conv3_Pipeline_RELU1|  return value|
-|grp_fu_700_p_dout0                                                 |   in|    1|  ap_ctrl_hs|                                      conv3_Pipeline_RELU1|  return value|
-|grp_fu_700_p_ce                                                    |  out|    1|  ap_ctrl_hs|                                      conv3_Pipeline_RELU1|  return value|
-|or_ln140                                                           |   in|    3|     ap_none|                                                  or_ln140|        scalar|
+|grp_fu_684_p_din0                                                  |  out|   32|  ap_ctrl_hs|                                      conv3_Pipeline_RELU1|  return value|
+|grp_fu_684_p_din1                                                  |  out|   32|  ap_ctrl_hs|                                      conv3_Pipeline_RELU1|  return value|
+|grp_fu_684_p_opcode                                                |  out|    5|  ap_ctrl_hs|                                      conv3_Pipeline_RELU1|  return value|
+|grp_fu_684_p_dout0                                                 |   in|    1|  ap_ctrl_hs|                                      conv3_Pipeline_RELU1|  return value|
+|grp_fu_684_p_ce                                                    |  out|    1|  ap_ctrl_hs|                                      conv3_Pipeline_RELU1|  return value|
+|or_ln138                                                           |   in|    3|     ap_none|                                                  or_ln138|        scalar|
 |conv3_biases_0_0_val                                               |   in|   32|     ap_none|                                      conv3_biases_0_0_val|        scalar|
 |conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_address0  |  out|   10|   ap_memory|  conv3_float_255_255_float_32_5_5_float_float_255_255_o_1|         array|
 |conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_ce0       |  out|    1|   ap_memory|  conv3_float_255_255_float_32_5_5_float_float_255_255_o_1|         array|

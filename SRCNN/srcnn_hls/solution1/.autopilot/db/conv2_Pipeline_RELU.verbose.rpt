@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_RELU'
 ================================================================
-* Date:           Thu Nov  2 21:48:49 2023
+* Date:           Thu Nov  2 22:33:34 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -250,13 +250,13 @@ ST_6 : Operation 30 [1/4] (6.43ns)   --->   "%add15_0_i = fadd i32 %output_fm_bu
 ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 46 'ret' 'ret_ln0' <Predicate = (icmp_ln108)> <Delay = 0.00>
 
 State 7 <SV = 6> <Delay = 2.78>
-ST_7 : [1/1] (0.62ns)   --->   Input mux for Operation 31 '%tmp_119 = fcmp_olt  i32 %add15_0_i, i32 0'
-ST_7 : Operation 31 [2/2] (2.15ns)   --->   "%tmp_119 = fcmp_olt  i32 %add15_0_i, i32 0" [src/conv2.cpp:113->src/conv2.cpp:51]   --->   Operation 31 'fcmp' 'tmp_119' <Predicate = true> <Delay = 2.15> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : [1/1] (0.57ns)   --->   Input mux for Operation 31 '%tmp_119 = fcmp_olt  i32 %add15_0_i, i32 0'
+ST_7 : Operation 31 [2/2] (2.20ns)   --->   "%tmp_119 = fcmp_olt  i32 %add15_0_i, i32 0" [src/conv2.cpp:113->src/conv2.cpp:51]   --->   Operation 31 'fcmp' 'tmp_119' <Predicate = true> <Delay = 2.20> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
 
 State 8 <SV = 7> <Delay = 4.46>
-ST_8 : Operation 32 [1/1] (0.00ns)   --->   "%specpipeline_ln109 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_37" [src/conv2.cpp:109->src/conv2.cpp:51]   --->   Operation 32 'specpipeline' 'specpipeline_ln109' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 32 [1/1] (0.00ns)   --->   "%specpipeline_ln109 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_10" [src/conv2.cpp:109->src/conv2.cpp:51]   --->   Operation 32 'specpipeline' 'specpipeline_ln109' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 33 [1/1] (0.00ns)   --->   "%speclooptripcount_ln108 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv2.cpp:108->src/conv2.cpp:51]   --->   Operation 33 'speclooptripcount' 'speclooptripcount_ln108' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 34 [1/1] (0.00ns)   --->   "%specloopname_ln108 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12" [src/conv2.cpp:108->src/conv2.cpp:51]   --->   Operation 34 'specloopname' 'specloopname_ln108' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 34 [1/1] (0.00ns)   --->   "%specloopname_ln108 = specloopname void @_ssdm_op_SpecLoopName, void @empty_36" [src/conv2.cpp:108->src/conv2.cpp:51]   --->   Operation 34 'specloopname' 'specloopname_ln108' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 35 [1/1] (0.00ns)   --->   "%bitcast_ln113 = bitcast i32 %add15_0_i" [src/conv2.cpp:113->src/conv2.cpp:51]   --->   Operation 35 'bitcast' 'bitcast_ln113' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_s = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln113, i32 23, i32 30" [src/conv2.cpp:113->src/conv2.cpp:51]   --->   Operation 36 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 37 [1/1] (0.00ns)   --->   "%trunc_ln113 = trunc i32 %bitcast_ln113" [src/conv2.cpp:113->src/conv2.cpp:51]   --->   Operation 37 'trunc' 'trunc_ln113' <Predicate = true> <Delay = 0.00>
@@ -458,7 +458,7 @@ ret_ln0                 (ret              ) [ 000000000]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_37"/></StgValue>
+<StgValue><ssdm name="empty_10"/></StgValue>
 </bind>
 </comp>
 
@@ -494,7 +494,7 @@ ret_ln0                 (ret              ) [ 000000000]
 <pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_12"/></StgValue>
+<StgValue><ssdm name="empty_36"/></StgValue>
 </bind>
 </comp>
 

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3_Pipeline_CLEARW2'" level="0">
-<item name = "Date">Thu Nov  2 21:49:06 2023
+<item name = "Date">Thu Nov  2 22:33:50 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -78,8 +78,8 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln75_fu_94_p2">+, 0, 0, 15, 8, 1</column>
-<column name="icmp_ln75_fu_88_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="add_ln73_fu_94_p2">+, 0, 0, 15, 8, 1</column>
+<column name="icmp_ln73_fu_88_p2">icmp, 0, 0, 15, 8, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -109,7 +109,7 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, conv3_Pipeline_CLEARW2, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv3_Pipeline_CLEARW2, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv3_Pipeline_CLEARW2, return value</column>
-<column name="add_ln73">in, 3, ap_none, add_ln73, scalar</column>
+<column name="add_ln71">in, 3, ap_none, add_ln71, scalar</column>
 <column name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_address0">out, 10, ap_memory, conv3_float_255_255_float_32_5_5_float_float_255_255_o_1, array</column>
 <column name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_ce0">out, 1, ap_memory, conv3_float_255_255_float_32_5_5_float_float_255_255_o_1, array</column>
 <column name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_we0">out, 1, ap_memory, conv3_float_255_255_float_32_5_5_float_float_255_255_o_1, array</column>

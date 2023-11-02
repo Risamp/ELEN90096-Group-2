@@ -62,7 +62,7 @@ port (
     m_axi_o_BRESP : IN STD_LOGIC_VECTOR (1 downto 0);
     m_axi_o_BID : IN STD_LOGIC_VECTOR (0 downto 0);
     m_axi_o_BUSER : IN STD_LOGIC_VECTOR (0 downto 0);
-    sext_ln150 : IN STD_LOGIC_VECTOR (61 downto 0);
+    sext_ln148 : IN STD_LOGIC_VECTOR (61 downto 0);
     bh : IN STD_LOGIC_VECTOR (2 downto 0);
     conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_address0 : OUT STD_LOGIC_VECTOR (9 downto 0);
     conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_ce0 : OUT STD_LOGIC;
@@ -124,7 +124,7 @@ attribute shreg_extract : string;
     signal empty_fu_132_p2 : STD_LOGIC_VECTOR (7 downto 0);
     signal ap_loop_init : STD_LOGIC;
     signal ap_sig_allocacmp_loop_index_0_i_load : STD_LOGIC_VECTOR (7 downto 0);
-    signal empty_203_fu_138_p1 : STD_LOGIC_VECTOR (6 downto 0);
+    signal empty_193_fu_138_p1 : STD_LOGIC_VECTOR (6 downto 0);
     signal tmp_s_fu_142_p3 : STD_LOGIC_VECTOR (9 downto 0);
     signal ap_done_reg : STD_LOGIC := '0';
     signal ap_continue_int : STD_LOGIC;
@@ -170,7 +170,7 @@ attribute shreg_extract : string;
 
 
 begin
-    mux_2_1_32_1_1_U426 : component srcnn_mux_2_1_32_1_1
+    mux_2_1_32_1_1_U226 : component srcnn_mux_2_1_32_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -421,7 +421,7 @@ begin
         end if; 
     end process;
 
-    empty_203_fu_138_p1 <= ap_sig_allocacmp_loop_index_0_i_load(7 - 1 downto 0);
+    empty_193_fu_138_p1 <= ap_sig_allocacmp_loop_index_0_i_load(7 - 1 downto 0);
     empty_fu_132_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_loop_index_0_i_load) + unsigned(ap_const_lv8_1));
     exitcond16911_fu_126_p2 <= "1" when (ap_sig_allocacmp_loop_index_0_i_load = ap_const_lv8_FF) else "0";
     m_axi_o_ARADDR <= ap_const_lv64_0;
@@ -476,5 +476,5 @@ begin
     end process;
 
     tmp_138_cast_fu_150_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_s_fu_142_p3),64));
-    tmp_s_fu_142_p3 <= (bh & empty_203_fu_138_p1);
+    tmp_s_fu_142_p3 <= (bh & empty_193_fu_138_p1);
 end behav;

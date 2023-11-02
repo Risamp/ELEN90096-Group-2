@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3_Pipeline_RELU'" level="0">
-<item name = "Date">Thu Nov  2 21:49:03 2023
+<item name = "Date">Thu Nov  2 22:33:48 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -62,7 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mux_2_1_32_1_1_U421">mux_2_1_32_1_1, 0, 0, 0, 9, 0</column>
+<column name="mux_2_1_32_1_1_U221">mux_2_1_32_1_1, 0, 0, 0, 9, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -79,12 +79,12 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln140_fu_131_p2">+, 0, 0, 15, 8, 1</column>
-<column name="and_ln145_fu_210_p2">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln140_fu_125_p2">icmp, 0, 0, 15, 8, 2</column>
-<column name="icmp_ln145_1_fu_200_p2">icmp, 0, 0, 30, 23, 1</column>
-<column name="icmp_ln145_fu_194_p2">icmp, 0, 0, 15, 8, 2</column>
-<column name="or_ln145_fu_206_p2">or, 0, 0, 2, 1, 1</column>
+<column name="add_ln138_fu_131_p2">+, 0, 0, 15, 8, 1</column>
+<column name="and_ln143_fu_210_p2">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln138_fu_125_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="icmp_ln143_1_fu_200_p2">icmp, 0, 0, 30, 23, 1</column>
+<column name="icmp_ln143_fu_194_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="or_ln143_fu_206_p2">or, 0, 0, 2, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -116,9 +116,9 @@
 <column name="bw_fu_56">8, 0, 8, 0</column>
 <column name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_6_reg_232">10, 0, 10, 0</column>
 <column name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_7_reg_238">10, 0, 10, 0</column>
-<column name="icmp_ln140_reg_228">1, 0, 1, 0</column>
-<column name="icmp_ln145_1_reg_267">1, 0, 1, 0</column>
-<column name="icmp_ln145_reg_262">1, 0, 1, 0</column>
+<column name="icmp_ln138_reg_228">1, 0, 1, 0</column>
+<column name="icmp_ln143_1_reg_267">1, 0, 1, 0</column>
+<column name="icmp_ln143_reg_262">1, 0, 1, 0</column>
 <column name="tmp_3_reg_244">1, 0, 1, 0</column>
 <column name="tmp_reg_249">32, 0, 32, 0</column>
 <column name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_6_reg_232">64, 32, 10, 0</column>
@@ -144,11 +144,11 @@
 <column name="grp_fu_664_p_opcode">out, 2, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
 <column name="grp_fu_664_p_dout0">in, 32, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
 <column name="grp_fu_664_p_ce">out, 1, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
-<column name="grp_fu_700_p_din0">out, 32, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
-<column name="grp_fu_700_p_din1">out, 32, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
-<column name="grp_fu_700_p_opcode">out, 5, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
-<column name="grp_fu_700_p_dout0">in, 1, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
-<column name="grp_fu_700_p_ce">out, 1, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
+<column name="grp_fu_684_p_din0">out, 32, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
+<column name="grp_fu_684_p_din1">out, 32, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
+<column name="grp_fu_684_p_opcode">out, 5, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
+<column name="grp_fu_684_p_dout0">in, 1, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
+<column name="grp_fu_684_p_ce">out, 1, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
 <column name="bh">in, 3, ap_none, bh, scalar</column>
 <column name="conv3_biases_0_0_val">in, 32, ap_none, conv3_biases_0_0_val, scalar</column>
 <column name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_address0">out, 10, ap_memory, conv3_float_255_255_float_32_5_5_float_float_255_255_o_1, array</column>

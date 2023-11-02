@@ -13,7 +13,7 @@ entity srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_RAM_
         MEM_TYPE        : string    := "auto"; 
         DataWidth       : integer   := 32; 
         AddressWidth    : integer   := 14;
-        AddressRange    : integer   := 15300
+        AddressRange    : integer   := 15360
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

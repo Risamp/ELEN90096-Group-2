@@ -18,7 +18,7 @@ module srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_RAM_
 
 parameter DataWidth = 32;
 parameter AddressWidth = 14;
-parameter AddressRange = 15300;
+parameter AddressRange = 15360;
  
 input[AddressWidth-1:0] address0;
 input ce0;
