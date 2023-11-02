@@ -60,7 +60,7 @@ attribute shreg_extract : string;
     signal ap_sig_allocacmp_w : STD_LOGIC_VECTOR (7 downto 0);
     signal tmp_fu_118_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal empty_fu_100_p1 : STD_LOGIC_VECTOR (6 downto 0);
-    signal tmp_84_fu_104_p3 : STD_LOGIC_VECTOR (9 downto 0);
+    signal tmp_86_fu_104_p3 : STD_LOGIC_VECTOR (9 downto 0);
     signal ap_done_reg : STD_LOGIC := '0';
     signal ap_continue_int : STD_LOGIC;
     signal ap_done_int : STD_LOGIC;
@@ -272,7 +272,7 @@ begin
 
     empty_fu_100_p1 <= ap_sig_allocacmp_w(7 - 1 downto 0);
     icmp_ln73_fu_88_p2 <= "1" when (ap_sig_allocacmp_w = ap_const_lv8_FF) else "0";
-    tmp_84_fu_104_p3 <= (add_ln71 & empty_fu_100_p1);
+    tmp_86_fu_104_p3 <= (add_ln71 & empty_fu_100_p1);
     tmp_fu_118_p3 <= ap_sig_allocacmp_w(7 downto 7);
-    zext_ln75_fu_112_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_84_fu_104_p3),64));
+    zext_ln75_fu_112_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_86_fu_104_p3),64));
 end behav;

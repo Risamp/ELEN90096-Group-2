@@ -831,7 +831,7 @@ initial begin
 #0 grp_conv3_Pipeline_CLEARW3_fu_311_ap_start_reg = 1'b0;
 end
 
-srcnn_conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_RAM_AUTOjbC #(
+srcnn_conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_RAM_AUTO2iS #(
     .DataWidth( 32 ),
     .AddressRange( 37440 ),
     .AddressWidth( 16 ))
@@ -850,7 +850,7 @@ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_U(
     .q1(conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_q1)
 );
 
-srcnn_conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_RAM_AUTOjbC #(
+srcnn_conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_RAM_AUTO2iS #(
     .DataWidth( 32 ),
     .AddressRange( 37440 ),
     .AddressWidth( 16 ))
@@ -886,7 +886,7 @@ weight_buffer_0_U(
     .q1(weight_buffer_0_q1)
 );
 
-srcnn_conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_RAM_AUTOlbW #(
+srcnn_conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_RAM_AUTO4jc #(
     .DataWidth( 24 ),
     .AddressRange( 640 ),
     .AddressWidth( 10 ))
@@ -905,7 +905,7 @@ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_U(
     .q1(conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_q1)
 );
 
-srcnn_conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_RAM_AUTOlbW #(
+srcnn_conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_RAM_AUTO4jc #(
     .DataWidth( 24 ),
     .AddressRange( 640 ),
     .AddressWidth( 10 ))

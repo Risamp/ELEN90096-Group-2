@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'load_input_buffer_c3'
 ================================================================
-* Date:           Thu Nov  2 23:33:13 2023
+* Date:           Fri Nov  3 02:33:51 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -73,7 +73,7 @@
     +--------------------------+---------------------+---------+----+---+----+-----+
     |         Instance         |        Module       | BRAM_18K| DSP| FF| LUT| URAM|
     +--------------------------+---------------------+---------+----+---+----+-----+
-    |mul_6ns_19ns_24_1_1_U238  |mul_6ns_19ns_24_1_1  |        0|   1|  0|   6|    0|
+    |mul_6ns_19ns_24_1_1_U719  |mul_6ns_19ns_24_1_1  |        0|   1|  0|   6|    0|
     +--------------------------+---------------------+---------+----+---+----+-----+
     |Total                     |                     |        0|   1|  0|   6|    0|
     +--------------------------+---------------------+---------+----+---+----+-----+
@@ -820,7 +820,7 @@ ST_1 : Operation 271 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   
 ST_1 : Operation 272 [1/1] (0.00ns)   --->   "%h_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %h"   --->   Operation 272 'read' 'h_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 273 [1/1] (0.00ns)   --->   "%input_ftmap_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %input_ftmap"   --->   Operation 273 'read' 'input_ftmap_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 274 [1/1] (0.00ns)   --->   "%h_cast1 = zext i8 %h_read"   --->   Operation 274 'zext' 'h_cast1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 275 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i3, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 512, void @empty_16, void @empty_3, void @empty_10, i32 16, i32 16, i32 256, i32 256, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 275 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 275 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i3, void @empty_0, i32 0, i32 0, void @empty_2, i32 0, i32 512, void @empty_32, void @empty_33, void @empty_2, i32 16, i32 16, i32 256, i32 256, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 275 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 276 [1/1] (0.00ns)   --->   "%zext_ln86 = zext i8 %h_read" [src/conv3.cpp:86]   --->   Operation 276 'zext' 'zext_ln86' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 277 [1/1] (0.42ns)   --->   "%store_ln86 = store i9 0, i9 %indvar_flatten" [src/conv3.cpp:86]   --->   Operation 277 'store' 'store_ln86' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 278 [1/1] (0.42ns)   --->   "%store_ln86 = store i6 0, i6 %bin" [src/conv3.cpp:86]   --->   Operation 278 'store' 'store_ln86' <Predicate = true> <Delay = 0.42>
@@ -2448,8 +2448,8 @@ State 266 <SV = 265> <Delay = 1.23>
 ST_266 : Operation 1369 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @LOADI_LOADH_str"   --->   Operation 1369 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
 ST_266 : Operation 1370 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 288, i64 288, i64 288"   --->   Operation 1370 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
 ST_266 : Operation 1371 [1/1] (0.00ns)   --->   "%conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_262 = getelementptr i32 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2, i64 0, i64 %p_cast1683" [src/conv3.cpp:98]   --->   Operation 1371 'getelementptr' 'conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_262' <Predicate = true> <Delay = 0.00>
-ST_266 : Operation 1372 [1/1] (0.00ns)   --->   "%specpipeline_ln88 = specpipeline void @_ssdm_op_SpecPipeline, i32 256, i32 0, i32 0, i32 0, void @empty_10" [src/conv3.cpp:88]   --->   Operation 1372 'specpipeline' 'specpipeline_ln88' <Predicate = true> <Delay = 0.00>
-ST_266 : Operation 1373 [1/1] (0.00ns)   --->   "%specloopname_ln87 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [src/conv3.cpp:87]   --->   Operation 1373 'specloopname' 'specloopname_ln87' <Predicate = true> <Delay = 0.00>
+ST_266 : Operation 1372 [1/1] (0.00ns)   --->   "%specpipeline_ln88 = specpipeline void @_ssdm_op_SpecPipeline, i32 256, i32 0, i32 0, i32 0, void @empty_2" [src/conv3.cpp:88]   --->   Operation 1372 'specpipeline' 'specpipeline_ln88' <Predicate = true> <Delay = 0.00>
+ST_266 : Operation 1373 [1/1] (0.00ns)   --->   "%specloopname_ln87 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9" [src/conv3.cpp:87]   --->   Operation 1373 'specloopname' 'specloopname_ln87' <Predicate = true> <Delay = 0.00>
 ST_266 : Operation 1374 [1/1] (1.23ns)   --->   "%store_ln98 = store i32 %i3_addr_read_254, i16 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_262" [src/conv3.cpp:98]   --->   Operation 1374 'store' 'store_ln98' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 37440> <RAM>
 ST_266 : Operation 1375 [1/1] (0.00ns)   --->   "%br_ln87 = br void %load-store-loop" [src/conv3.cpp:87]   --->   Operation 1375 'br' 'br_ln87' <Predicate = true> <Delay = 0.00>
 
@@ -3670,7 +3670,7 @@ ret_ln109                                                        (ret           
 <pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_8"/></StgValue>
+<StgValue><ssdm name="empty_0"/></StgValue>
 </bind>
 </comp>
 
@@ -3688,7 +3688,7 @@ ret_ln109                                                        (ret           
 <pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_10"/></StgValue>
+<StgValue><ssdm name="empty_2"/></StgValue>
 </bind>
 </comp>
 
@@ -3706,7 +3706,7 @@ ret_ln109                                                        (ret           
 <pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_16"/></StgValue>
+<StgValue><ssdm name="empty_32"/></StgValue>
 </bind>
 </comp>
 
@@ -3715,7 +3715,7 @@ ret_ln109                                                        (ret           
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_3"/></StgValue>
+<StgValue><ssdm name="empty_33"/></StgValue>
 </bind>
 </comp>
 
@@ -5236,7 +5236,7 @@ ret_ln109                                                        (ret           
 <pin id="367" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_7"/></StgValue>
+<StgValue><ssdm name="empty_9"/></StgValue>
 </bind>
 </comp>
 

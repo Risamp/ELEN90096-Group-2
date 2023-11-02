@@ -22,14 +22,14 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>148109186</Best-caseLatency>
-<Average-caseLatency>148122786</Average-caseLatency>
-<Worst-caseLatency>148133666</Worst-caseLatency>
-<Best-caseRealTimeLatency>1.481 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>1.481 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>1.481 sec</Worst-caseRealTimeLatency>
-<Interval-min>148109186</Interval-min>
-<Interval-max>148133666</Interval-max>
+<Best-caseLatency>94863146</Best-caseLatency>
+<Average-caseLatency>94876746</Average-caseLatency>
+<Worst-caseLatency>94887626</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.949 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.949 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.949 sec</Worst-caseRealTimeLatency>
+<Interval-min>94863146</Interval-min>
+<Interval-max>94887626</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <TILE_ROW>
@@ -37,20 +37,20 @@
 <TripCount>85</TripCount>
 <Latency>
 <range>
-<min>148109185</min>
-<max>148133665</max>
+<min>94863145</min>
+<max>94887625</max>
 </range>
 </Latency>
 <AbsoluteTimeLatency>
 <range>
-<min>1481091850</min>
-<max>1481336650</max>
+<min>948631450</min>
+<max>948876250</max>
 </range>
 </AbsoluteTimeLatency>
 <IterationLatency>
 <range>
-<min>1742461</min>
-<max>1742749</max>
+<min>1116037</min>
+<max>1116325</max>
 </range>
 </IterationLatency>
 <InstanceList>
@@ -60,20 +60,20 @@
 <TripCount>8</TripCount>
 <Latency>
 <range>
-<min>1693480</min>
-<max>1693768</max>
+<min>1066864</min>
+<max>1067152</max>
 </range>
 </Latency>
 <AbsoluteTimeLatency>
 <range>
-<min>16934800</min>
-<max>16937680</max>
+<min>10668640</min>
+<max>10671520</max>
 </range>
 </AbsoluteTimeLatency>
 <IterationLatency>
 <range>
-<min>211685</min>
-<max>211721</max>
+<min>133358</min>
+<max>133394</max>
 </range>
 </IterationLatency>
 <InstanceList>
@@ -137,10 +137,10 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>9</BRAM_18K>
-<DSP>4</DSP>
-<FF>1486</FF>
-<LUT>28263</LUT>
+<BRAM_18K>31</BRAM_18K>
+<DSP>19</DSP>
+<FF>10018</FF>
+<LUT>55727</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

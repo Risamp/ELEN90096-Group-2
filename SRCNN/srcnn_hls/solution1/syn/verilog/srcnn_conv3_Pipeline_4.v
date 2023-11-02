@@ -156,17 +156,17 @@ wire    ap_block_pp0_stage0;
 reg    ap_block_pp0_stage0_11001;
 reg   [0:0] exitcond61711_reg_199;
 reg   [0:0] tmp_reg_213;
-wire   [23:0] tmp_10_fu_174_p4;
-reg   [23:0] tmp_10_reg_223;
+wire   [23:0] tmp_4_fu_174_p4;
+reg   [23:0] tmp_4_reg_223;
 reg    ap_condition_exit_pp0_iter1_stage0;
-wire   [63:0] tmp_69_cast_fu_150_p1;
+wire   [63:0] tmp_71_cast_fu_150_p1;
 wire    ap_block_pp0_stage0_01001;
 reg   [7:0] loop_index_0_i_fu_64;
 wire   [7:0] empty_fu_132_p2;
 wire    ap_loop_init;
 reg   [7:0] ap_sig_allocacmp_loop_index_0_i_load;
-wire   [6:0] empty_199_fu_138_p1;
-wire   [9:0] tmp_69_fu_142_p3;
+wire   [6:0] empty_216_fu_138_p1;
+wire   [9:0] tmp_71_fu_142_p3;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -191,11 +191,11 @@ srcnn_mux_2_1_24_1_1 #(
     .din1_WIDTH( 24 ),
     .din2_WIDTH( 1 ),
     .dout_WIDTH( 24 ))
-mux_2_1_24_1_1_U291(
+mux_2_1_24_1_1_U772(
     .din0(conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_q0),
     .din1(conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_q0),
     .din2(tmp_reg_213),
-    .dout(tmp_10_fu_174_p4)
+    .dout(tmp_4_fu_174_p4)
 );
 
 srcnn_flow_control_loop_pipe_sequential_init flow_control_loop_pipe_sequential_init_U(
@@ -274,7 +274,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (exitcond61711_reg_199 == 1'd0))) begin
-        tmp_10_reg_223 <= tmp_10_fu_174_p4;
+        tmp_4_reg_223 <= tmp_4_fu_174_p4;
     end
 end
 
@@ -409,11 +409,11 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_address0 = tmp_69_cast_fu_150_p1;
+assign conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_address0 = tmp_71_cast_fu_150_p1;
 
-assign conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_address0 = tmp_69_cast_fu_150_p1;
+assign conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_address0 = tmp_71_cast_fu_150_p1;
 
-assign empty_199_fu_138_p1 = ap_sig_allocacmp_loop_index_0_i_load[6:0];
+assign empty_216_fu_138_p1 = ap_sig_allocacmp_loop_index_0_i_load[6:0];
 
 assign empty_fu_132_p2 = (ap_sig_allocacmp_loop_index_0_i_load + 8'd1);
 
@@ -471,7 +471,7 @@ assign m_axi_o_BREADY = 1'b0;
 
 assign m_axi_o_RREADY = 1'b0;
 
-assign m_axi_o_WDATA = tmp_10_reg_223;
+assign m_axi_o_WDATA = tmp_4_reg_223;
 
 assign m_axi_o_WID = 1'd0;
 
@@ -481,8 +481,8 @@ assign m_axi_o_WSTRB = 4'd15;
 
 assign m_axi_o_WUSER = 1'd0;
 
-assign tmp_69_cast_fu_150_p1 = tmp_69_fu_142_p3;
+assign tmp_71_cast_fu_150_p1 = tmp_71_fu_142_p3;
 
-assign tmp_69_fu_142_p3 = {{bh}, {empty_199_fu_138_p1}};
+assign tmp_71_fu_142_p3 = {{bh}, {empty_216_fu_138_p1}};
 
 endmodule //srcnn_conv3_Pipeline_4

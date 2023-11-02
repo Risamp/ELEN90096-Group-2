@@ -62,7 +62,7 @@ wire    ap_loop_init;
 reg   [7:0] ap_sig_allocacmp_w_1;
 wire   [0:0] tmp_fu_118_p3;
 wire   [6:0] empty_fu_100_p1;
-wire   [9:0] tmp_86_fu_104_p3;
+wire   [9:0] tmp_87_fu_104_p3;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -235,10 +235,10 @@ assign empty_fu_100_p1 = ap_sig_allocacmp_w_1[6:0];
 
 assign icmp_ln73_fu_88_p2 = ((ap_sig_allocacmp_w_1 == 8'd255) ? 1'b1 : 1'b0);
 
-assign tmp_86_fu_104_p3 = {{add_ln71_1}, {empty_fu_100_p1}};
+assign tmp_87_fu_104_p3 = {{add_ln71_1}, {empty_fu_100_p1}};
 
 assign tmp_fu_118_p3 = ap_sig_allocacmp_w_1[32'd7];
 
-assign zext_ln75_fu_112_p1 = tmp_86_fu_104_p3;
+assign zext_ln75_fu_112_p1 = tmp_87_fu_104_p3;
 
 endmodule //srcnn_conv3_Pipeline_CLEARW3

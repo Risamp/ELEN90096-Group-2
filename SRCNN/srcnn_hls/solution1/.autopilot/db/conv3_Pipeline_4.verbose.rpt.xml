@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3_Pipeline_4'" level="0">
-<item name = "Date">Thu Nov  2 23:33:22 2023
+<item name = "Date">Fri Nov  3 02:34:02 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -62,7 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mux_2_1_24_1_1_U291">mux_2_1_24_1_1, 0, 0, 0, 9, 0</column>
+<column name="mux_2_1_24_1_1_U772">mux_2_1_24_1_1, 0, 0, 0, 9, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -103,7 +103,7 @@
 <column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="exitcond61711_reg_199">1, 0, 1, 0</column>
 <column name="loop_index_0_i_fu_64">8, 0, 8, 0</column>
-<column name="tmp_10_reg_223">24, 0, 24, 0</column>
+<column name="tmp_4_reg_223">24, 0, 24, 0</column>
 <column name="tmp_reg_213">1, 0, 1, 0</column>
 </table>
 </item>

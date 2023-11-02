@@ -39,10 +39,10 @@
 
 // data types
 //layer 1
-typedef ap_fixed<24,3> input_t;   // input feature map
-typedef ap_fixed<12,1> conv1w_t;  // weights - conv 1
-typedef ap_fixed<10,1> conv1b_t;  // biases - conv 1
-typedef ap_fixed<32,3> conv1o_t;  // outputs - conv 1 / inputs - conv 2
+typedef ap_fixed<24,3> input_t;   // input feature map   12, 1
+typedef ap_fixed<12,1> conv1w_t;  // weights - conv 1   12, 1
+typedef ap_fixed<10,1> conv1b_t;  // biases - conv 1    8, 1
+typedef ap_fixed<32,3> conv1o_t;  // outputs - conv 1 / inputs - conv 2  16, 3
 
 //layer 2
 typedef ap_fixed<18,1> conv2w_t;  // weights - conv 2

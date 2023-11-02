@@ -33569,18 +33569,15 @@ void conv2(conv1o_t input_ftmap[64][255][255],
 
 
  static conv2o_t output_fm_buffer[4][3][255] = {0};
-
+#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=15
 
  static conv1o_t input_fm_buffer[64][3 + (2 * (1 - 1) / 2)][255 + (2 * (1 - 1) / 2)];
 #pragma HLS bind_storage variable=input_fm_buffer type=RAM_2P impl=LUTRAM
 
+#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=2 type=cyclic factor=2
+#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=block factor=15
 
  static conv2w_t weight_buffer[4][64][1][1];
-
-
-
-
-
 
  TILE_IN: for (int in = 0; in < 64; in += 64) {
  TILE_ROW: for (int h = 0; h < 255; h += 3) {
@@ -33594,11 +33591,14 @@ void conv2(conv1o_t input_ftmap[64][255][255],
    OUT: for (int o = 0; o < 4; o++) {
    IN: for (int i = 0; i < 64; i++) {
 
+    conv2w_t weight = weight_buffer[o][i][0][0];
+
     ROW: for (int r = 0; r < 3; r++) {
     COL: for (int c = 0; c < 255; c++) {
+#pragma HLS UNROLL factor=15
+#pragma HLS PIPELINE II=9
 
-      output_fm_buffer[o][r][c] += weight_buffer[o][i][0][0] * input_fm_buffer[i][r][c];
-
+ output_fm_buffer[o][r][c] = weight * input_fm_buffer[i][r][c];
     }}
    }}
 
@@ -33625,11 +33625,11 @@ void load_input_buffer_c2(
  int in,
  int h
 ) {
-
  LOAD_INPUT: for (int bin = 0; bin < 64; bin++) {
  BH: for (int bh = 0; bh < 3; bh++) {
+#pragma HLS PIPELINE II=256
 
-  memcpy(&input_fm_buffer[bin][bh], &input_ftmap[in + bin][h + bh], 255 * sizeof(conv1o_t));
+ memcpy(&input_fm_buffer[bin][bh], &input_ftmap[in + bin][h + bh], 255 * sizeof(conv1o_t));
 
  }}
 }

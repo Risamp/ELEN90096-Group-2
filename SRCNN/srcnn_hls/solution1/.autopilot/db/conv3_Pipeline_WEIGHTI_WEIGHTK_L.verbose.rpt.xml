@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3_Pipeline_WEIGHTI_WEIGHTK_L'" level="0">
-<item name = "Date">Thu Nov  2 23:33:17 2023
+<item name = "Date">Fri Nov  3 02:33:56 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -82,10 +82,10 @@
 <column name="add_ln118_fu_189_p2">+, 0, 0, 13, 6, 1</column>
 <column name="add_ln119_1_fu_338_p2">+, 0, 0, 13, 6, 1</column>
 <column name="add_ln119_fu_257_p2">+, 0, 0, 10, 3, 1</column>
-<column name="empty_189_fu_289_p2">+, 0, 0, 18, 9, 9</column>
-<column name="empty_191_fu_311_p2">+, 0, 0, 18, 10, 10</column>
-<column name="empty_192_fu_321_p2">+, 0, 0, 18, 10, 10</column>
-<column name="empty_194_fu_332_p2">+, 0, 0, 10, 3, 1</column>
+<column name="empty_206_fu_289_p2">+, 0, 0, 18, 9, 9</column>
+<column name="empty_208_fu_311_p2">+, 0, 0, 18, 10, 10</column>
+<column name="empty_209_fu_321_p2">+, 0, 0, 18, 10, 10</column>
+<column name="empty_211_fu_332_p2">+, 0, 0, 10, 3, 1</column>
 <column name="empty_fu_233_p2">+, 0, 0, 18, 9, 9</column>
 <column name="and_ln118_fu_251_p2">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
@@ -124,7 +124,7 @@
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="bin_fu_86">6, 0, 6, 0</column>
-<column name="empty_193_reg_416">18, 0, 18, 0</column>
+<column name="empty_210_reg_416">18, 0, 18, 0</column>
 <column name="icmp_ln118_reg_412">1, 0, 1, 0</column>
 <column name="indvar_flatten12_fu_90">10, 0, 10, 0</column>
 <column name="indvar_flatten_fu_82">6, 0, 6, 0</column>

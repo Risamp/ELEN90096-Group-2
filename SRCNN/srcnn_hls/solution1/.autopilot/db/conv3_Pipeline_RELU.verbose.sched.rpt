@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_RELU'
 ================================================================
-* Date:           Thu Nov  2 23:32:46 2023
+* Date:           Fri Nov  3 02:32:59 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -108,9 +108,9 @@ ST_1 : Operation 24 [2/2] (1.23ns)   --->   "%conv3_ap_fixed_255_255_ap_fixed_32
 ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 44 'ret' 'ret_ln0' <Predicate = (icmp_ln138)> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 4.16>
-ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%specpipeline_ln139 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_10" [src/conv3.cpp:139->src/conv3.cpp:64]   --->   Operation 25 'specpipeline' 'specpipeline_ln139' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%specpipeline_ln139 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_2" [src/conv3.cpp:139->src/conv3.cpp:64]   --->   Operation 25 'specpipeline' 'specpipeline_ln139' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%speclooptripcount_ln138 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv3.cpp:138->src/conv3.cpp:64]   --->   Operation 26 'speclooptripcount' 'speclooptripcount_ln138' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%specloopname_ln138 = specloopname void @_ssdm_op_SpecLoopName, void @empty_36" [src/conv3.cpp:138->src/conv3.cpp:64]   --->   Operation 27 'specloopname' 'specloopname_ln138' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%specloopname_ln138 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5" [src/conv3.cpp:138->src/conv3.cpp:64]   --->   Operation 27 'specloopname' 'specloopname_ln138' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 28 [1/2] (1.23ns)   --->   "%conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_269 = load i10 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_267" [src/conv3.cpp:141->src/conv3.cpp:64]   --->   Operation 28 'load' 'conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_269' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 640> <RAM>
 ST_2 : Operation 29 [1/2] (1.23ns)   --->   "%conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_270 = load i10 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_268" [src/conv3.cpp:141->src/conv3.cpp:64]   --->   Operation 29 'load' 'conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_270' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 640> <RAM>
 ST_2 : Operation 30 [1/1] (0.42ns)   --->   "%tmp = mux i24 @_ssdm_op_Mux.ap_auto.2i24.i1, i24 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_269, i24 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_270, i1 %tmp_4" [src/conv3.cpp:141->src/conv3.cpp:64]   --->   Operation 30 'mux' 'tmp' <Predicate = true> <Delay = 0.42> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>

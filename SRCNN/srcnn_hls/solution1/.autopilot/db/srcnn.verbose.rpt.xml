@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn'" level="0">
-<item name = "Date">Thu Nov  2 23:33:27 2023
+<item name = "Date">Fri Nov  3 02:34:07 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,16 +24,16 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">350261973, 350287116, 3.503 sec, 3.503 sec, 350261974, 350287117, no</column>
+<column name="">202730329, 202778320, 2.027 sec, 2.028 sec, 202730330, 202778321, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_conv1_fu_188">conv1, 184894840, 184894840, 1.849 sec, 1.849 sec, 184894840, 184894840, no</column>
-<column name="grp_conv2_fu_222">conv2, 148109186, 148133666, 1.481 sec, 1.481 sec, 148109186, 148133666, no</column>
-<column name="grp_conv3_fu_243">conv3, 17257942, 17258605, 0.173 sec, 0.173 sec, 17257942, 17258605, no</column>
+<column name="grp_conv1_fu_274">conv1, 90609236, 90632084, 0.906 sec, 0.906 sec, 90609236, 90632084, no</column>
+<column name="grp_conv2_fu_308">conv2, 94863146, 94887626, 0.949 sec, 0.949 sec, 94863146, 94887626, no</column>
+<column name="grp_conv3_fu_415">conv3, 17257942, 17258605, 0.173 sec, 0.173 sec, 17257942, 17258605, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -52,12 +52,12 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, -, -, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">331, 110, 21429, 67764, 0</column>
+<column name="Instance">353, 294, 39655, 101938, 0</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 226, -</column>
 <column name="Register">-, -, 472, -, -</column>
 <specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
-<specialColumn name="Utilization (%)">76, 30, 15, 96, 0</specialColumn>
+<specialColumn name="Utilization (%)">81, 81, 28, 144, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -65,9 +65,9 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="control_s_axi_U">control_s_axi, 0, 0, 526, 936, 0</column>
-<column name="grp_conv1_fu_188">conv1, 69, 90, 6611, 15630, 0</column>
-<column name="grp_conv2_fu_222">conv2, 9, 4, 1486, 28263, 0</column>
-<column name="grp_conv3_fu_243">conv3, 149, 16, 6915, 17910, 0</column>
+<column name="grp_conv1_fu_274">conv1, 69, 259, 16305, 22340, 0</column>
+<column name="grp_conv2_fu_308">conv2, 31, 19, 10018, 55727, 0</column>
+<column name="grp_conv3_fu_415">conv3, 149, 16, 6915, 17910, 0</column>
 <column name="i1_m_axi_U">i1_m_axi, 16, 0, 838, 704, 0</column>
 <column name="i2_m_axi_U">i2_m_axi, 16, 0, 838, 704, 0</column>
 <column name="i3_m_axi_U">i3_m_axi, 16, 0, 838, 704, 0</column>
@@ -122,17 +122,17 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">6, 0, 6, 0</column>
-<column name="conv1_output_ftmap_read_reg_293">64, 0, 64, 0</column>
-<column name="conv1_weights_read_reg_299">64, 0, 64, 0</column>
-<column name="conv2_output_ftmap_read_reg_282">64, 0, 64, 0</column>
-<column name="conv2_weights_read_reg_288">64, 0, 64, 0</column>
-<column name="conv3_weights_read_reg_277">64, 0, 64, 0</column>
-<column name="empty_reg_309">15, 0, 15, 0</column>
-<column name="grp_conv1_fu_188_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_conv2_fu_222_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_conv3_fu_243_ap_start_reg">1, 0, 1, 0</column>
-<column name="input_ftmap_read_reg_304">64, 0, 64, 0</column>
-<column name="output_ftmap_read_reg_272">64, 0, 64, 0</column>
+<column name="conv1_output_ftmap_read_reg_465">64, 0, 64, 0</column>
+<column name="conv1_weights_read_reg_471">64, 0, 64, 0</column>
+<column name="conv2_output_ftmap_read_reg_454">64, 0, 64, 0</column>
+<column name="conv2_weights_read_reg_460">64, 0, 64, 0</column>
+<column name="conv3_weights_read_reg_449">64, 0, 64, 0</column>
+<column name="empty_reg_481">15, 0, 15, 0</column>
+<column name="grp_conv1_fu_274_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_conv2_fu_308_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_conv3_fu_415_ap_start_reg">1, 0, 1, 0</column>
+<column name="input_ftmap_read_reg_476">64, 0, 64, 0</column>
+<column name="output_ftmap_read_reg_444">64, 0, 64, 0</column>
 </table>
 </item>
 </section>

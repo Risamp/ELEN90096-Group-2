@@ -2799,7 +2799,7 @@ attribute shreg_extract : string;
 
 
 begin
-    mul_6ns_19ns_24_1_1_U238 : component srcnn_mul_6ns_19ns_24_1_1
+    mul_6ns_19ns_24_1_1_U719 : component srcnn_mul_6ns_19ns_24_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,

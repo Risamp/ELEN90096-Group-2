@@ -159,14 +159,14 @@ reg   [0:0] tmp_reg_213;
 wire   [23:0] tmp_13_fu_174_p4;
 reg   [23:0] tmp_13_reg_223;
 reg    ap_condition_exit_pp0_iter1_stage0;
-wire   [63:0] tmp_77_cast_fu_150_p1;
+wire   [63:0] tmp_78_cast_fu_150_p1;
 wire    ap_block_pp0_stage0_01001;
 reg   [7:0] loop_index_1_i_fu_64;
 wire   [7:0] empty_fu_132_p2;
 wire    ap_loop_init;
 reg   [7:0] ap_sig_allocacmp_loop_index_1_i_load;
-wire   [6:0] empty_198_fu_138_p1;
-wire   [9:0] tmp_77_fu_142_p3;
+wire   [6:0] empty_215_fu_138_p1;
+wire   [9:0] tmp_78_fu_142_p3;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -191,7 +191,7 @@ srcnn_mux_2_1_24_1_1 #(
     .din1_WIDTH( 24 ),
     .din2_WIDTH( 1 ),
     .dout_WIDTH( 24 ))
-mux_2_1_24_1_1_U303(
+mux_2_1_24_1_1_U784(
     .din0(conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_q0),
     .din1(conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_q0),
     .din2(tmp_reg_213),
@@ -409,11 +409,11 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_address0 = tmp_77_cast_fu_150_p1;
+assign conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_address0 = tmp_78_cast_fu_150_p1;
 
-assign conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_address0 = tmp_77_cast_fu_150_p1;
+assign conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_address0 = tmp_78_cast_fu_150_p1;
 
-assign empty_198_fu_138_p1 = ap_sig_allocacmp_loop_index_1_i_load[6:0];
+assign empty_215_fu_138_p1 = ap_sig_allocacmp_loop_index_1_i_load[6:0];
 
 assign empty_fu_132_p2 = (ap_sig_allocacmp_loop_index_1_i_load + 8'd1);
 
@@ -481,8 +481,8 @@ assign m_axi_o_WSTRB = 4'd15;
 
 assign m_axi_o_WUSER = 1'd0;
 
-assign tmp_77_cast_fu_150_p1 = tmp_77_fu_142_p3;
+assign tmp_78_cast_fu_150_p1 = tmp_78_fu_142_p3;
 
-assign tmp_77_fu_142_p3 = {{or_ln138}, {empty_198_fu_138_p1}};
+assign tmp_78_fu_142_p3 = {{or_ln138}, {empty_215_fu_138_p1}};
 
 endmodule //srcnn_conv3_Pipeline_6

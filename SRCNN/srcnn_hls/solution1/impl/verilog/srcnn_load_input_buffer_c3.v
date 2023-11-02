@@ -2196,7 +2196,7 @@ srcnn_mul_6ns_19ns_24_1_1 #(
     .din0_WIDTH( 6 ),
     .din1_WIDTH( 19 ),
     .dout_WIDTH( 24 ))
-mul_6ns_19ns_24_1_1_U238(
+mul_6ns_19ns_24_1_1_U719(
     .din0(mul_ln98_fu_2658_p0),
     .din1(mul_ln98_fu_2658_p1),
     .dout(mul_ln98_fu_2658_p2)

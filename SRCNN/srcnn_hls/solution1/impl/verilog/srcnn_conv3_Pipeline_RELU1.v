@@ -112,7 +112,7 @@ srcnn_mux_2_1_24_1_1 #(
     .din1_WIDTH( 24 ),
     .din2_WIDTH( 1 ),
     .dout_WIDTH( 24 ))
-mux_2_1_24_1_1_U297(
+mux_2_1_24_1_1_U778(
     .din0(conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_q0),
     .din1(conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_q0),
     .din2(tmp_reg_240),

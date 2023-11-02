@@ -187,7 +187,7 @@ for.body8.0.i.i.split:1 %speclooptripcount_ln73 = speclooptripcount void @_ssdm_
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body8.0.i.i.split:2 %specloopname_ln73 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5
+for.body8.0.i.i.split:2 %specloopname_ln73 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln73"/></StgValue>
@@ -203,10 +203,10 @@ for.body8.0.i.i.split:2 %specloopname_ln73 = specloopname void @_ssdm_op_SpecLoo
 
 <Node id="18" bw="10" op_0_bw="10" op_1_bw="3" op_2_bw="7">
 <![CDATA[
-for.body8.0.i.i.split:3 %tmp_78 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i3.i7, i3 %h_1_read, i7 %empty
+for.body8.0.i.i.split:3 %tmp_79 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i3.i7, i3 %h_1_read, i7 %empty
 
 ]]></Node>
-<StgValue><ssdm name="tmp_78"/></StgValue>
+<StgValue><ssdm name="tmp_79"/></StgValue>
 </operation>
 
 <operation id="17" st_id="1" stage="1" lat="1">
@@ -219,7 +219,7 @@ for.body8.0.i.i.split:3 %tmp_78 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i1
 
 <Node id="19" bw="64" op_0_bw="10">
 <![CDATA[
-for.body8.0.i.i.split:4 %zext_ln75 = zext i10 %tmp_78
+for.body8.0.i.i.split:4 %zext_ln75 = zext i10 %tmp_79
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln75"/></StgValue>

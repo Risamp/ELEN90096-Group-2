@@ -91,7 +91,7 @@ newFuncRoot:3 %sext_ln148_1_cast = sext i62 %sext_ln148_1_read
 
 <Node id="10" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %o, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 512, void @empty_9, void @empty_3, void @empty_10, i32 16, i32 16, i32 256, i32 256, void @empty_10, void @empty_10, i32 4294967295, i32 0
+newFuncRoot:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %o, void @empty_0, i32 0, i32 0, void @empty_2, i32 0, i32 512, void @empty_1, void @empty_33, void @empty_2, i32 16, i32 16, i32 256, i32 256, void @empty_2, void @empty_2, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -197,10 +197,10 @@ load-store-loop.1.i:5 %br_ln0 = br i1 %exitcond62113, void %load-store-loop.1.i.
 
 <Node id="21" bw="7" op_0_bw="8">
 <![CDATA[
-load-store-loop.1.i.split:0 %empty_198 = trunc i8 %loop_index_1_i_load
+load-store-loop.1.i.split:0 %empty_215 = trunc i8 %loop_index_1_i_load
 
 ]]></Node>
-<StgValue><ssdm name="empty_198"/></StgValue>
+<StgValue><ssdm name="empty_215"/></StgValue>
 </operation>
 
 <operation id="18" st_id="1" stage="1" lat="1">
@@ -213,10 +213,10 @@ load-store-loop.1.i.split:0 %empty_198 = trunc i8 %loop_index_1_i_load
 
 <Node id="23" bw="10" op_0_bw="10" op_1_bw="3" op_2_bw="7">
 <![CDATA[
-load-store-loop.1.i.split:2 %tmp_77 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i3.i7, i3 %or_ln138_read, i7 %empty_198
+load-store-loop.1.i.split:2 %tmp_78 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i3.i7, i3 %or_ln138_read, i7 %empty_215
 
 ]]></Node>
-<StgValue><ssdm name="tmp_77"/></StgValue>
+<StgValue><ssdm name="tmp_78"/></StgValue>
 </operation>
 
 <operation id="19" st_id="1" stage="1" lat="1">
@@ -229,10 +229,10 @@ load-store-loop.1.i.split:2 %tmp_77 = bitconcatenate i10 @_ssdm_op_BitConcatenat
 
 <Node id="24" bw="64" op_0_bw="10">
 <![CDATA[
-load-store-loop.1.i.split:3 %tmp_77_cast = zext i10 %tmp_77
+load-store-loop.1.i.split:3 %tmp_78_cast = zext i10 %tmp_78
 
 ]]></Node>
-<StgValue><ssdm name="tmp_77_cast"/></StgValue>
+<StgValue><ssdm name="tmp_78_cast"/></StgValue>
 </operation>
 
 <operation id="20" st_id="1" stage="1" lat="1">
@@ -245,7 +245,7 @@ load-store-loop.1.i.split:3 %tmp_77_cast = zext i10 %tmp_77
 
 <Node id="25" bw="10" op_0_bw="24" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-load-store-loop.1.i.split:4 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_429 = getelementptr i24 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1, i64 0, i64 %tmp_77_cast
+load-store-loop.1.i.split:4 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_429 = getelementptr i24 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1, i64 0, i64 %tmp_78_cast
 
 ]]></Node>
 <StgValue><ssdm name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_429"/></StgValue>
@@ -261,7 +261,7 @@ load-store-loop.1.i.split:4 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_
 
 <Node id="26" bw="10" op_0_bw="24" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-load-store-loop.1.i.split:5 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_430 = getelementptr i24 %conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255, i64 0, i64 %tmp_77_cast
+load-store-loop.1.i.split:5 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_430 = getelementptr i24 %conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255, i64 0, i64 %tmp_78_cast
 
 ]]></Node>
 <StgValue><ssdm name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_430"/></StgValue>
@@ -532,23 +532,23 @@ load-store-loop.1.i.split:13 %br_ln0 = br void %load-store-loop.1.i
 </dataflow>
 <dataflow id="64" from="o" to="specinterface_ln0" fromId="48" toId="10">
 </dataflow>
-<dataflow id="66" from="empty_8" to="specinterface_ln0" fromId="65" toId="10">
+<dataflow id="66" from="empty_0" to="specinterface_ln0" fromId="65" toId="10">
 </dataflow>
 <dataflow id="68" from="StgValue_67" to="specinterface_ln0" fromId="67" toId="10">
 </dataflow>
 <dataflow id="69" from="StgValue_67" to="specinterface_ln0" fromId="67" toId="10">
 </dataflow>
-<dataflow id="71" from="empty_10" to="specinterface_ln0" fromId="70" toId="10">
+<dataflow id="71" from="empty_2" to="specinterface_ln0" fromId="70" toId="10">
 </dataflow>
 <dataflow id="72" from="StgValue_67" to="specinterface_ln0" fromId="67" toId="10">
 </dataflow>
 <dataflow id="74" from="StgValue_73" to="specinterface_ln0" fromId="73" toId="10">
 </dataflow>
-<dataflow id="76" from="empty_9" to="specinterface_ln0" fromId="75" toId="10">
+<dataflow id="76" from="empty_1" to="specinterface_ln0" fromId="75" toId="10">
 </dataflow>
-<dataflow id="78" from="empty_3" to="specinterface_ln0" fromId="77" toId="10">
+<dataflow id="78" from="empty_33" to="specinterface_ln0" fromId="77" toId="10">
 </dataflow>
-<dataflow id="79" from="empty_10" to="specinterface_ln0" fromId="70" toId="10">
+<dataflow id="79" from="empty_2" to="specinterface_ln0" fromId="70" toId="10">
 </dataflow>
 <dataflow id="81" from="StgValue_80" to="specinterface_ln0" fromId="80" toId="10">
 </dataflow>
@@ -558,9 +558,9 @@ load-store-loop.1.i.split:13 %br_ln0 = br void %load-store-loop.1.i
 </dataflow>
 <dataflow id="85" from="StgValue_83" to="specinterface_ln0" fromId="83" toId="10">
 </dataflow>
-<dataflow id="86" from="empty_10" to="specinterface_ln0" fromId="70" toId="10">
+<dataflow id="86" from="empty_2" to="specinterface_ln0" fromId="70" toId="10">
 </dataflow>
-<dataflow id="87" from="empty_10" to="specinterface_ln0" fromId="70" toId="10">
+<dataflow id="87" from="empty_2" to="specinterface_ln0" fromId="70" toId="10">
 </dataflow>
 <dataflow id="89" from="StgValue_88" to="specinterface_ln0" fromId="88" toId="10">
 </dataflow>
@@ -582,27 +582,27 @@ load-store-loop.1.i.split:13 %br_ln0 = br void %load-store-loop.1.i
 </dataflow>
 <dataflow id="101" from="exitcond62113" to="br_ln0" fromId="14" toId="16">
 </dataflow>
-<dataflow id="102" from="loop_index_1_i_load" to="empty_198" fromId="13" toId="17">
+<dataflow id="102" from="loop_index_1_i_load" to="empty_215" fromId="13" toId="17">
 </dataflow>
-<dataflow id="104" from="_ssdm_op_BitConcatenate.i10.i3.i7" to="tmp_77" fromId="103" toId="18">
+<dataflow id="104" from="_ssdm_op_BitConcatenate.i10.i3.i7" to="tmp_78" fromId="103" toId="18">
 </dataflow>
-<dataflow id="105" from="or_ln138_read" to="tmp_77" fromId="7" toId="18">
+<dataflow id="105" from="or_ln138_read" to="tmp_78" fromId="7" toId="18">
 </dataflow>
-<dataflow id="106" from="empty_198" to="tmp_77" fromId="17" toId="18">
+<dataflow id="106" from="empty_215" to="tmp_78" fromId="17" toId="18">
 </dataflow>
-<dataflow id="107" from="tmp_77" to="tmp_77_cast" fromId="18" toId="19">
+<dataflow id="107" from="tmp_78" to="tmp_78_cast" fromId="18" toId="19">
 </dataflow>
 <dataflow id="108" from="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1" to="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_429" fromId="51" toId="20">
 </dataflow>
 <dataflow id="110" from="StgValue_109" to="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_429" fromId="109" toId="20">
 </dataflow>
-<dataflow id="111" from="tmp_77_cast" to="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_429" fromId="19" toId="20">
+<dataflow id="111" from="tmp_78_cast" to="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_429" fromId="19" toId="20">
 </dataflow>
 <dataflow id="112" from="conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255" to="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_430" fromId="52" toId="21">
 </dataflow>
 <dataflow id="113" from="StgValue_109" to="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_430" fromId="109" toId="21">
 </dataflow>
-<dataflow id="114" from="tmp_77_cast" to="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_430" fromId="19" toId="21">
+<dataflow id="114" from="tmp_78_cast" to="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_430" fromId="19" toId="21">
 </dataflow>
 <dataflow id="116" from="_ssdm_op_BitSelect.i1.i8.i32" to="tmp" fromId="115" toId="22">
 </dataflow>

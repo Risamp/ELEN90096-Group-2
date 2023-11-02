@@ -33568,10 +33568,8 @@ void conv1(input_t input_ftmap[1][255][255],
 
  static conv1o_t output_fm_buffer[8][15][255] = {0};
 #pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=2
-#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=2
 
  static input_t input_fm_buffer[1][15 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)];
-#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=block factor=2
 #pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=block factor=3
 
  static conv1w_t weight_buffer[8][1][9][9];
@@ -33588,14 +33586,13 @@ void conv1(input_t input_ftmap[1][255][255],
 
    load_weight_buffer_c1(weight_buffer, conv1_weights, out, in);
 
-
    OUT: for (int o = 0; o < 8; o++) {
    IN: for (int i = 0; i < 1; i++) {
 
     ROW: for (int r = 0; r < 15; r++) {
      COL: for (int c = 0; c < 255; c++) {
-
-#pragma HLS PIPELINE
+#pragma HLS UNROLL factor=3
+#pragma HLS PIPELINE II=51
  KR1: for (int kr = 0; kr < 9; kr++) {
 
        int row = r + kr;
@@ -33603,8 +33600,9 @@ void conv1(input_t input_ftmap[1][255][255],
 
 
        KC1: for (int kc = 0; kc < 9; kc++) {
+#pragma HLS UNROLL factor=3
 
-        int col = c + kc;
+ int col = c + kc;
 
         tmp += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][row][col];
        }
@@ -33624,7 +33622,7 @@ void conv1(input_t input_ftmap[1][255][255],
 void clear_buffer_c1(conv1o_t output_fm_buffer[8][15][255]) {
  CLEAR: for (int o = 0; o < 8; o++) {
  BH: for (int h = 0; h < 15; h++) {
-
+#pragma HLS UNROLL factor=2
  BW: for (int w = 0; w < 255; w++) {
 
   output_fm_buffer[o][h][w] = 0;
@@ -33641,7 +33639,7 @@ void load_input_buffer_c1(
  LOAD_INPUT: for (int bin = 0; bin < 1; bin++) {
  BH: for (int bh = 0; bh < 15 + (2 * (9 - 1) / 2); bh++) {
 #pragma HLS PIPELINE OFF
-
+#pragma HLS UNROLL factor=2
 
  int hclamp = clamp(h + bh - (9 - 1) / 2, 0, 255 - 1);
 
@@ -33670,7 +33668,7 @@ void load_weight_buffer_c1(
  IN: for (int bin = 0; bin < 1; bin++) {
  K: for (int k = 0; k < 9; k++) {
 #pragma HLS PIPELINE OFF
-
+#pragma HLS UNROLL factor=2
 
  memcpy(&weight_buffer[bout][bin][k], &conv1_weights[bout + out][bin + in][k], 9 * sizeof(conv1w_t));
 
@@ -33687,12 +33685,12 @@ void export_output_buffer_c1(
 
  EXPORT: for (int bout = 0; bout < 8; bout++) {
  BH: for (int bh = 0; bh < 15; bh++) {
+#pragma HLS UNROLL factor=2
 
+ RELU: for (int bw = 0; bw < 255; bw++) {
+#pragma HLS PIPELINE II=2
 
-  RELU: for (int bw = 0; bw < 255; bw++) {
-
-
-   output_fm_buffer[bout][bh][bw] = output_fm_buffer[bout][bh][bw] + biases[bout + out];
+ output_fm_buffer[bout][bh][bw] = output_fm_buffer[bout][bh][bw] + biases[bout + out];
 
    if (output_fm_buffer[bout][bh][bw] < 0) {
     output_fm_buffer[bout][bh][bw] = 0;

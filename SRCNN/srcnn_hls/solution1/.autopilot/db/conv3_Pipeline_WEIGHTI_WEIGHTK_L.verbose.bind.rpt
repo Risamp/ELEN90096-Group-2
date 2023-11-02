@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_WEIGHTI_WEIGHTK_L'
 ================================================================
-* Date:           Thu Nov  2 23:32:40 2023
+* Date:           Fri Nov  3 02:32:51 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -93,7 +93,7 @@ ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%bin = alloca i32 1"   --->   Operat
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%indvar_flatten12 = alloca i32 1"   --->   Operation 10 'alloca' 'indvar_flatten12' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%sext_ln118_read = read i62 @_ssdm_op_Read.ap_auto.i62, i62 %sext_ln118"   --->   Operation 11 'read' 'sext_ln118_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%sext_ln118_cast = sext i62 %sext_ln118_read"   --->   Operation 12 'sext' 'sext_ln118_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w3, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 512, void @empty_17, void @empty_3, void @empty_10, i32 16, i32 16, i32 256, i32 256, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w3, void @empty_0, i32 0, i32 0, void @empty_2, i32 0, i32 512, void @empty_35, void @empty_33, void @empty_2, i32 16, i32 16, i32 256, i32 256, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.42ns)   --->   "%store_ln0 = store i10 0, i10 %indvar_flatten12"   --->   Operation 14 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 15 [1/1] (0.42ns)   --->   "%store_ln0 = store i6 0, i6 %bin"   --->   Operation 15 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 16 [1/1] (0.42ns)   --->   "%store_ln0 = store i6 0, i6 %indvar_flatten"   --->   Operation 16 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
@@ -110,7 +110,7 @@ State 2 <SV = 1> <Delay = 7.30>
 ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%w3_addr = getelementptr i32 %w3, i64 %sext_ln118_cast" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 25 'getelementptr' 'w3_addr' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 26 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 27 [1/1] (7.30ns)   --->   "%w3_addr_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %w3_addr" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 27 'read' 'w3_addr_read' <Predicate = (!icmp_ln118)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%empty_193 = trunc i32 %w3_addr_read" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 28 'trunc' 'empty_193' <Predicate = (!icmp_ln118)> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%empty_210 = trunc i32 %w3_addr_read" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 28 'trunc' 'empty_210' <Predicate = (!icmp_ln118)> <Delay = 0.00>
 ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 72 'ret' 'ret_ln0' <Predicate = (icmp_ln118)> <Delay = 0.00>
 
 State 3 <SV = 2> <Delay = 5.07>
@@ -125,9 +125,9 @@ ST_3 : Operation 36 [1/1] (0.78ns)   --->   "%icmp_ln119 = icmp_eq  i6 %indvar_f
 ST_3 : Operation 37 [1/1] (0.20ns)   --->   "%select_ln118 = select i1 %icmp_ln119, i3 0, i3 %k_load" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 37 'select' 'select_ln118' <Predicate = true> <Delay = 0.20> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.20> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_3 : Operation 38 [1/1] (0.38ns)   --->   "%select_ln118_1 = select i1 %icmp_ln119, i6 %add_ln118, i6 %bin_load" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 38 'select' 'select_ln118_1' <Predicate = true> <Delay = 0.38> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.38> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%select_ln118_1_cast = zext i6 %select_ln118_1" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 39 'zext' 'select_ln118_1_cast' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_4 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i6.i2, i6 %select_ln118_1, i2 0" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 40 'bitconcatenate' 'tmp_4' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_4_cast = zext i8 %tmp_4" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 41 'zext' 'tmp_4_cast' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 42 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%empty = add i9 %tmp_4_cast, i9 %select_ln118_1_cast" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 42 'add' 'empty' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.48> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_6 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i6.i2, i6 %select_ln118_1, i2 0" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 40 'bitconcatenate' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_6_cast = zext i8 %tmp_6" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 41 'zext' 'tmp_6_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%empty = add i9 %tmp_6_cast, i9 %select_ln118_1_cast" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 42 'add' 'empty' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.48> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
 ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 43 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 44 [1/1] (0.00ns) (grouped into LUT with out node and_ln118)   --->   "%xor_ln118 = xor i1 %icmp_ln119, i1 1" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 44 'xor' 'xor_ln118' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 45 [1/1] (0.67ns)   --->   "%exitcond4838 = icmp_eq  i3 %loop_index_i_load, i3 5"   --->   Operation 45 'icmp' 'exitcond4838' <Predicate = true> <Delay = 0.67> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
@@ -138,24 +138,24 @@ ST_3 : Operation 49 [1/1] (0.00ns) (grouped into LUT with out node select_ln119)
 ST_3 : Operation 50 [1/1] (0.28ns) (out node of the LUT)   --->   "%select_ln119 = select i1 %or_ln119, i3 0, i3 %loop_index_i_load" [src/conv3.cpp:119->src/conv3.cpp:35]   --->   Operation 50 'select' 'select_ln119' <Predicate = true> <Delay = 0.28> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.20> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_3 : Operation 51 [1/1] (0.20ns)   --->   "%select_ln119_1 = select i1 %and_ln118, i3 %add_ln119, i3 %select_ln118" [src/conv3.cpp:119->src/conv3.cpp:35]   --->   Operation 51 'select' 'select_ln119_1' <Predicate = true> <Delay = 0.20> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.20> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%select_ln119_1_cast = zext i3 %select_ln119_1" [src/conv3.cpp:119->src/conv3.cpp:35]   --->   Operation 52 'zext' 'select_ln119_1_cast' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 53 [1/1] (1.00ns) (root node of TernaryAdder)   --->   "%empty_189 = add i9 %empty, i9 %select_ln119_1_cast" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 53 'add' 'empty_189' <Predicate = true> <Delay = 1.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.48> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%p_cast = zext i9 %empty_189" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 54 'zext' 'p_cast' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%empty_190 = trunc i9 %empty_189" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 55 'trunc' 'empty_190' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%p_shl = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i8.i2, i8 %empty_190, i2 0" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 56 'bitconcatenate' 'p_shl' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 57 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%empty_191 = add i10 %p_shl, i10 %p_cast" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 57 'add' 'empty_191' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.48> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 53 [1/1] (1.00ns) (root node of TernaryAdder)   --->   "%empty_206 = add i9 %empty, i9 %select_ln119_1_cast" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 53 'add' 'empty_206' <Predicate = true> <Delay = 1.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.48> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%p_cast = zext i9 %empty_206" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 54 'zext' 'p_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%empty_207 = trunc i9 %empty_206" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 55 'trunc' 'empty_207' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%p_shl = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i8.i2, i8 %empty_207, i2 0" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 56 'bitconcatenate' 'p_shl' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 57 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%empty_208 = add i10 %p_shl, i10 %p_cast" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 57 'add' 'empty_208' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.48> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
 ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 58 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%select_ln119_cast = zext i3 %select_ln119" [src/conv3.cpp:119->src/conv3.cpp:35]   --->   Operation 59 'zext' 'select_ln119_cast' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 60 [1/1] (0.96ns) (root node of TernaryAdder)   --->   "%empty_192 = add i10 %empty_191, i10 %select_ln119_cast" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 60 'add' 'empty_192' <Predicate = true> <Delay = 0.96> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.48> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%p_cast2 = zext i10 %empty_192" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 61 'zext' 'p_cast2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 60 [1/1] (0.96ns) (root node of TernaryAdder)   --->   "%empty_209 = add i10 %empty_208, i10 %select_ln119_cast" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 60 'add' 'empty_209' <Predicate = true> <Delay = 0.96> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.48> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%p_cast2 = zext i10 %empty_209" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 61 'zext' 'p_cast2' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%weight_buffer_0_addr = getelementptr i18 %weight_buffer_0, i64 0, i64 %p_cast2" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 62 'getelementptr' 'weight_buffer_0_addr' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 63 [1/1] (1.23ns)   --->   "%store_ln118 = store i18 %empty_193, i10 %weight_buffer_0_addr" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 63 'store' 'store_ln118' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 800> <RAM>
-ST_3 : Operation 64 [1/1] (0.67ns)   --->   "%empty_194 = add i3 %select_ln119, i3 1" [src/conv3.cpp:119->src/conv3.cpp:35]   --->   Operation 64 'add' 'empty_194' <Predicate = true> <Delay = 0.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 63 [1/1] (1.23ns)   --->   "%store_ln118 = store i18 %empty_210, i10 %weight_buffer_0_addr" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 63 'store' 'store_ln118' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 800> <RAM>
+ST_3 : Operation 64 [1/1] (0.67ns)   --->   "%empty_211 = add i3 %select_ln119, i3 1" [src/conv3.cpp:119->src/conv3.cpp:35]   --->   Operation 64 'add' 'empty_211' <Predicate = true> <Delay = 0.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 65 [1/1] (0.78ns)   --->   "%add_ln119_1 = add i6 %indvar_flatten_load, i6 1" [src/conv3.cpp:119->src/conv3.cpp:35]   --->   Operation 65 'add' 'add_ln119_1' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 66 [1/1] (0.38ns)   --->   "%select_ln119_2 = select i1 %icmp_ln119, i6 1, i6 %add_ln119_1" [src/conv3.cpp:119->src/conv3.cpp:35]   --->   Operation 66 'select' 'select_ln119_2' <Predicate = true> <Delay = 0.38> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.38> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_3 : Operation 67 [1/1] (0.42ns)   --->   "%store_ln118 = store i6 %select_ln118_1, i6 %bin" [src/conv3.cpp:118->src/conv3.cpp:35]   --->   Operation 67 'store' 'store_ln118' <Predicate = true> <Delay = 0.42>
 ST_3 : Operation 68 [1/1] (0.42ns)   --->   "%store_ln119 = store i6 %select_ln119_2, i6 %indvar_flatten" [src/conv3.cpp:119->src/conv3.cpp:35]   --->   Operation 68 'store' 'store_ln119' <Predicate = true> <Delay = 0.42>
 ST_3 : Operation 69 [1/1] (0.42ns)   --->   "%store_ln119 = store i3 %select_ln119_1, i3 %k" [src/conv3.cpp:119->src/conv3.cpp:35]   --->   Operation 69 'store' 'store_ln119' <Predicate = true> <Delay = 0.42>
-ST_3 : Operation 70 [1/1] (0.42ns)   --->   "%store_ln119 = store i3 %empty_194, i3 %loop_index_i" [src/conv3.cpp:119->src/conv3.cpp:35]   --->   Operation 70 'store' 'store_ln119' <Predicate = true> <Delay = 0.42>
+ST_3 : Operation 70 [1/1] (0.42ns)   --->   "%store_ln119 = store i3 %empty_211, i3 %loop_index_i" [src/conv3.cpp:119->src/conv3.cpp:35]   --->   Operation 70 'store' 'store_ln119' <Predicate = true> <Delay = 0.42>
 ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%br_ln0 = br void %load-store-loop.i"   --->   Operation 71 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 
 
@@ -201,7 +201,7 @@ store_ln118           (store            ) [ 0000]
 w3_addr               (getelementptr    ) [ 0000]
 specpipeline_ln0      (specpipeline     ) [ 0000]
 w3_addr_read          (read             ) [ 0000]
-empty_193             (trunc            ) [ 0101]
+empty_210             (trunc            ) [ 0101]
 loop_index_i_load     (load             ) [ 0000]
 k_load                (load             ) [ 0000]
 indvar_flatten_load   (load             ) [ 0000]
@@ -213,8 +213,8 @@ icmp_ln119            (icmp             ) [ 0000]
 select_ln118          (select           ) [ 0000]
 select_ln118_1        (select           ) [ 0000]
 select_ln118_1_cast   (zext             ) [ 0000]
-tmp_4                 (bitconcatenate   ) [ 0000]
-tmp_4_cast            (zext             ) [ 0000]
+tmp_6                 (bitconcatenate   ) [ 0000]
+tmp_6_cast            (zext             ) [ 0000]
 empty                 (add              ) [ 0000]
 specpipeline_ln0      (specpipeline     ) [ 0000]
 xor_ln118             (xor              ) [ 0000]
@@ -226,18 +226,18 @@ or_ln119              (or               ) [ 0000]
 select_ln119          (select           ) [ 0000]
 select_ln119_1        (select           ) [ 0000]
 select_ln119_1_cast   (zext             ) [ 0000]
-empty_189             (add              ) [ 0000]
+empty_206             (add              ) [ 0000]
 p_cast                (zext             ) [ 0000]
-empty_190             (trunc            ) [ 0000]
+empty_207             (trunc            ) [ 0000]
 p_shl                 (bitconcatenate   ) [ 0000]
-empty_191             (add              ) [ 0000]
+empty_208             (add              ) [ 0000]
 specpipeline_ln0      (specpipeline     ) [ 0000]
 select_ln119_cast     (zext             ) [ 0000]
-empty_192             (add              ) [ 0000]
+empty_209             (add              ) [ 0000]
 p_cast2               (zext             ) [ 0000]
 weight_buffer_0_addr  (getelementptr    ) [ 0000]
 store_ln118           (store            ) [ 0000]
-empty_194             (add              ) [ 0000]
+empty_211             (add              ) [ 0000]
 add_ln119_1           (add              ) [ 0000]
 select_ln119_2        (select           ) [ 0000]
 store_ln118           (store            ) [ 0000]
@@ -311,7 +311,7 @@ ret_ln0               (ret              ) [ 0000]
 <pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_8"/></StgValue>
+<StgValue><ssdm name="empty_0"/></StgValue>
 </bind>
 </comp>
 
@@ -329,7 +329,7 @@ ret_ln0               (ret              ) [ 0000]
 <pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_10"/></StgValue>
+<StgValue><ssdm name="empty_2"/></StgValue>
 </bind>
 </comp>
 
@@ -347,7 +347,7 @@ ret_ln0               (ret              ) [ 0000]
 <pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_17"/></StgValue>
+<StgValue><ssdm name="empty_35"/></StgValue>
 </bind>
 </comp>
 
@@ -356,7 +356,7 @@ ret_ln0               (ret              ) [ 0000]
 <pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_3"/></StgValue>
+<StgValue><ssdm name="empty_33"/></StgValue>
 </bind>
 </comp>
 
@@ -820,14 +820,14 @@ ret_ln0               (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="173" class="1004" name="empty_193_fu_173">
+<comp id="173" class="1004" name="empty_210_fu_173">
 <pin_list>
 <pin id="174" dir="0" index="0" bw="32" slack="0"/>
 <pin id="175" dir="1" index="1" bw="18" slack="1"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="empty_193/2 "/>
+<opset="empty_210/2 "/>
 </bind>
 </comp>
 
@@ -936,7 +936,7 @@ ret_ln0               (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="221" class="1004" name="tmp_4_fu_221">
+<comp id="221" class="1004" name="tmp_6_fu_221">
 <pin_list>
 <pin id="222" dir="0" index="0" bw="8" slack="0"/>
 <pin id="223" dir="0" index="1" bw="6" slack="0"/>
@@ -945,18 +945,18 @@ ret_ln0               (ret              ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="tmp_4/3 "/>
+<opset="tmp_6/3 "/>
 </bind>
 </comp>
 
-<comp id="229" class="1004" name="tmp_4_cast_fu_229">
+<comp id="229" class="1004" name="tmp_6_cast_fu_229">
 <pin_list>
 <pin id="230" dir="0" index="0" bw="8" slack="0"/>
 <pin id="231" dir="1" index="1" bw="9" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_4_cast/3 "/>
+<opset="tmp_6_cast/3 "/>
 </bind>
 </comp>
 
@@ -1069,7 +1069,7 @@ ret_ln0               (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="289" class="1004" name="empty_189_fu_289">
+<comp id="289" class="1004" name="empty_206_fu_289">
 <pin_list>
 <pin id="290" dir="0" index="0" bw="9" slack="0"/>
 <pin id="291" dir="0" index="1" bw="3" slack="0"/>
@@ -1077,7 +1077,7 @@ ret_ln0               (ret              ) [ 0000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="empty_189/3 "/>
+<opset="empty_206/3 "/>
 </bind>
 </comp>
 
@@ -1092,14 +1092,14 @@ ret_ln0               (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="299" class="1004" name="empty_190_fu_299">
+<comp id="299" class="1004" name="empty_207_fu_299">
 <pin_list>
 <pin id="300" dir="0" index="0" bw="9" slack="0"/>
 <pin id="301" dir="1" index="1" bw="8" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="empty_190/3 "/>
+<opset="empty_207/3 "/>
 </bind>
 </comp>
 
@@ -1116,7 +1116,7 @@ ret_ln0               (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="311" class="1004" name="empty_191_fu_311">
+<comp id="311" class="1004" name="empty_208_fu_311">
 <pin_list>
 <pin id="312" dir="0" index="0" bw="10" slack="0"/>
 <pin id="313" dir="0" index="1" bw="9" slack="0"/>
@@ -1124,7 +1124,7 @@ ret_ln0               (ret              ) [ 0000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="empty_191/3 "/>
+<opset="empty_208/3 "/>
 </bind>
 </comp>
 
@@ -1139,7 +1139,7 @@ ret_ln0               (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="321" class="1004" name="empty_192_fu_321">
+<comp id="321" class="1004" name="empty_209_fu_321">
 <pin_list>
 <pin id="322" dir="0" index="0" bw="10" slack="0"/>
 <pin id="323" dir="0" index="1" bw="3" slack="0"/>
@@ -1147,7 +1147,7 @@ ret_ln0               (ret              ) [ 0000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="empty_192/3 "/>
+<opset="empty_209/3 "/>
 </bind>
 </comp>
 
@@ -1162,7 +1162,7 @@ ret_ln0               (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="332" class="1004" name="empty_194_fu_332">
+<comp id="332" class="1004" name="empty_211_fu_332">
 <pin_list>
 <pin id="333" dir="0" index="0" bw="3" slack="0"/>
 <pin id="334" dir="0" index="1" bw="1" slack="0"/>
@@ -1170,7 +1170,7 @@ ret_ln0               (ret              ) [ 0000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="empty_194/3 "/>
+<opset="empty_211/3 "/>
 </bind>
 </comp>
 
@@ -1317,13 +1317,13 @@ ret_ln0               (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="416" class="1005" name="empty_193_reg_416">
+<comp id="416" class="1005" name="empty_210_reg_416">
 <pin_list>
 <pin id="417" dir="0" index="0" bw="18" slack="1"/>
 <pin id="418" dir="1" index="1" bw="18" slack="1"/>
 </pin_list>
 <bind>
-<opset="empty_193 "/>
+<opset="empty_210 "/>
 </bind>
 </comp>
 
@@ -1573,15 +1573,15 @@ ret_ln0               (ret              ) [ 0000]
 		store_ln118 : 3
 	State 2
 		w3_addr_read : 1
-		empty_193 : 1
+		empty_210 : 1
 	State 3
 		add_ln118 : 1
 		icmp_ln119 : 1
 		select_ln118 : 2
 		select_ln118_1 : 2
 		select_ln118_1_cast : 3
-		tmp_4 : 3
-		tmp_4_cast : 4
+		tmp_6 : 3
+		tmp_6_cast : 4
 		empty : 5
 		xor_ln118 : 2
 		exitcond4838 : 1
@@ -1591,17 +1591,17 @@ ret_ln0               (ret              ) [ 0000]
 		select_ln119 : 2
 		select_ln119_1 : 2
 		select_ln119_1_cast : 3
-		empty_189 : 6
+		empty_206 : 6
 		p_cast : 7
-		empty_190 : 7
+		empty_207 : 7
 		p_shl : 8
-		empty_191 : 9
+		empty_208 : 9
 		select_ln119_cast : 3
-		empty_192 : 10
+		empty_209 : 10
 		p_cast2 : 11
 		weight_buffer_0_addr : 12
 		store_ln118 : 13
-		empty_194 : 3
+		empty_211 : 3
 		add_ln119_1 : 1
 		select_ln119_2 : 2
 		store_ln118 : 3
@@ -1622,10 +1622,10 @@ ret_ln0               (ret              ) [ 0000]
 |          |      add_ln118_fu_189      |    0    |    13   |
 |          |        empty_fu_233        |    0    |    19   |
 |          |      add_ln119_fu_257      |    0    |    10   |
-|    add   |      empty_189_fu_289      |    0    |    18   |
-|          |      empty_191_fu_311      |    0    |    18   |
-|          |      empty_192_fu_321      |    0    |    18   |
-|          |      empty_194_fu_332      |    0    |    10   |
+|    add   |      empty_206_fu_289      |    0    |    18   |
+|          |      empty_208_fu_311      |    0    |    18   |
+|          |      empty_209_fu_321      |    0    |    18   |
+|          |      empty_211_fu_332      |    0    |    10   |
 |          |     add_ln119_1_fu_338     |    0    |    13   |
 |----------|----------------------------|---------|---------|
 |          |      icmp_ln118_fu_150     |    0    |    17   |
@@ -1649,17 +1649,17 @@ ret_ln0               (ret              ) [ 0000]
 |----------|----------------------------|---------|---------|
 |   sext   |   sext_ln118_cast_fu_118   |    0    |    0    |
 |----------|----------------------------|---------|---------|
-|   trunc  |      empty_193_fu_173      |    0    |    0    |
-|          |      empty_190_fu_299      |    0    |    0    |
+|   trunc  |      empty_210_fu_173      |    0    |    0    |
+|          |      empty_207_fu_299      |    0    |    0    |
 |----------|----------------------------|---------|---------|
 |          | select_ln118_1_cast_fu_217 |    0    |    0    |
-|          |      tmp_4_cast_fu_229     |    0    |    0    |
+|          |      tmp_6_cast_fu_229     |    0    |    0    |
 |   zext   | select_ln119_1_cast_fu_285 |    0    |    0    |
 |          |        p_cast_fu_295       |    0    |    0    |
 |          |  select_ln119_cast_fu_317  |    0    |    0    |
 |          |       p_cast2_fu_327       |    0    |    0    |
 |----------|----------------------------|---------|---------|
-|bitconcatenate|        tmp_4_fu_221        |    0    |    0    |
+|bitconcatenate|        tmp_6_fu_221        |    0    |    0    |
 |          |        p_shl_fu_303        |    0    |    0    |
 |----------|----------------------------|---------|---------|
 |   Total  |                            |    0    |   203   |
@@ -1673,7 +1673,7 @@ N/A
 |                        |   FF   |
 +------------------------+--------+
 |       bin_reg_393      |    6   |
-|    empty_193_reg_416   |   18   |
+|    empty_210_reg_416   |   18   |
 |   icmp_ln118_reg_412   |    1   |
 |indvar_flatten12_reg_400|   10   |
 | indvar_flatten_reg_386 |    6   |

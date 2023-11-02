@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv1_Pipeline_RELU'
 ================================================================
-* Date:           Thu Nov  2 23:33:01 2023
+* Date:           Fri Nov  3 02:33:20 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
     |   min   |   max   |    min   |    max   | min | max |   Type  |
     +---------+---------+----------+----------+-----+-----+---------+
-    |      257|      257|  2.570 us|  2.570 us|  257|  257|       no|
+    |      512|      512|  5.120 us|  5.120 us|  512|  512|       no|
     +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +----------+---------+---------+----------+-----------+-----------+------+----------+
-        |- RELU    |      255|      255|         2|          1|          1|   255|       yes|
+        |- RELU    |      510|      510|         2|          2|          2|   255|       yes|
         +----------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -54,14 +54,14 @@
 |       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
 +-----------------+---------+-----+--------+-------+-----+
 |DSP              |        -|    -|       -|      -|    -|
-|Expression       |        -|    -|       0|    140|    -|
+|Expression       |        -|    -|       0|    138|    -|
 |FIFO             |        -|    -|       -|      -|    -|
 |Instance         |        -|    -|       0|      9|    -|
 |Memory           |        -|    -|       -|      -|    -|
-|Multiplexer      |        -|    -|       -|     36|    -|
-|Register         |        -|    -|     103|      -|    -|
+|Multiplexer      |        -|    -|       -|     69|    -|
+|Register         |        -|    -|     111|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|    0|     103|    185|    0|
+|Total            |        0|    0|     111|    216|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      432|  360|  141120|  70560|    0|
 +-----------------+---------+-----+--------+-------+-----+
@@ -73,7 +73,7 @@
     +---------------------+----------------+---------+----+---+----+-----+
     |       Instance      |     Module     | BRAM_18K| DSP| FF| LUT| URAM|
     +---------------------+----------------+---------+----+---+----+-----+
-    |mux_2_1_32_1_1_U160  |mux_2_1_32_1_1  |        0|   0|  0|   9|    0|
+    |mux_2_1_32_1_1_U332  |mux_2_1_32_1_1  |        0|   0|  0|   9|    0|
     +---------------------+----------------+---------+----+---+----+-----+
     |Total                |                |        0|   0|  0|   9|    0|
     +---------------------+----------------+---------+----+---+----+-----+
@@ -91,44 +91,45 @@
     +------------------------+----------+----+---+----+------------+------------+
     |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +------------------------+----------+----+---+----+------------+------------+
-    |add_ln138_fu_132_p2     |         +|   0|  0|  15|           8|           1|
-    |add_ln141_fu_182_p2     |         +|   0|  0|  39|          32|          32|
-    |add_ln143_fu_187_p2     |         +|   0|  0|  38|          31|          31|
-    |icmp_ln138_fu_126_p2    |      icmp|   0|  0|  15|           8|           2|
-    |select_ln143_fu_200_p3  |    select|   0|  0|  31|           1|           1|
-    |ap_enable_pp0           |       xor|   0|  0|   2|           1|           2|
+    |add_ln136_fu_124_p2     |         +|   0|  0|  15|           8|           1|
+    |add_ln139_fu_169_p2     |         +|   0|  0|  39|          32|          32|
+    |add_ln141_fu_174_p2     |         +|   0|  0|  38|          31|          31|
+    |icmp_ln136_fu_118_p2    |      icmp|   0|  0|  15|           8|           2|
+    |select_ln141_fu_187_p3  |    select|   0|  0|  31|           1|           1|
     +------------------------+----------+----+---+----+------------+------------+
-    |Total                   |          |   0|  0| 140|          81|          69|
+    |Total                   |          |   0|  0| 138|          80|          67|
     +------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    +-------------------------+----+-----------+-----+-----------+
-    |           Name          | LUT| Input Size| Bits| Total Bits|
-    +-------------------------+----+-----------+-----+-----------+
-    |ap_done_int              |   9|          2|    1|          2|
-    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
-    |ap_sig_allocacmp_bw_4    |   9|          2|    8|         16|
-    |bw_fu_54                 |   9|          2|    8|         16|
-    +-------------------------+----+-----------+-----+-----------+
-    |Total                    |  36|          8|   18|         36|
-    +-------------------------+----+-----------+-----+-----------+
+    +--------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |                                   Name                                   | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                                                 |  14|          3|    1|          3|
+    |ap_done_int                                                               |   9|          2|    1|          2|
+    |ap_sig_allocacmp_bw_4                                                     |   9|          2|    8|         16|
+    |bw_fu_54                                                                  |   9|          2|    8|         16|
+    |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_address0  |  14|          3|   14|         42|
+    |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_address0    |  14|          3|   14|         42|
+    +--------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                                     |  69|         15|   46|        121|
+    +--------------------------------------------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +-------------------------------------------------------------------------+----+----+-----+-----------+
-    |                                   Name                                  | FF | LUT| Bits| Const Bits|
-    +-------------------------------------------------------------------------+----+----+-----+-----------+
-    |ap_CS_fsm                                                                |   1|   0|    1|          0|
-    |ap_done_reg                                                              |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter1                                                  |   1|   0|    1|          0|
-    |bw_fu_54                                                                 |   8|   0|    8|          0|
-    |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_2_reg_234  |  14|   0|   14|          0|
-    |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_3_reg_240  |  14|   0|   14|          0|
-    |sext_ln135_1_cast_reg_226                                                |  32|   0|   32|          0|
-    |sext_ln141_cast_reg_221                                                  |  31|   0|   31|          0|
-    |tmp_reg_246                                                              |   1|   0|    1|          0|
-    +-------------------------------------------------------------------------+----+----+-----+-----------+
-    |Total                                                                    | 103|   0|  103|          0|
-    +-------------------------------------------------------------------------+----+----+-----+-----------+
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                   Name                                   | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+    |add_ln136_reg_225                                                         |   8|   0|    8|          0|
+    |ap_CS_fsm                                                                 |   2|   0|    2|          0|
+    |ap_done_reg                                                               |   1|   0|    1|          0|
+    |bw_fu_54                                                                  |   8|   0|    8|          0|
+    |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_10_reg_235  |  14|   0|   14|          0|
+    |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_9_reg_230   |  14|   0|   14|          0|
+    |sext_ln136_cast_reg_217                                                   |  32|   0|   32|          0|
+    |sext_ln139_cast_reg_212                                                   |  31|   0|   31|          0|
+    |tmp_reg_240                                                               |   1|   0|    1|          0|
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                     | 111|   0|  111|          0|
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
 
 
 
@@ -145,22 +146,18 @@
 |ap_done                                                                   |  out|    1|  ap_ctrl_hs|                                              conv1_Pipeline_RELU|  return value|
 |ap_idle                                                                   |  out|    1|  ap_ctrl_hs|                                              conv1_Pipeline_RELU|  return value|
 |ap_ready                                                                  |  out|    1|  ap_ctrl_hs|                                              conv1_Pipeline_RELU|  return value|
-|tmp_235                                                                   |   in|    7|     ap_none|                                                          tmp_235|        scalar|
-|sext_ln135_1                                                              |   in|   30|     ap_none|                                                     sext_ln135_1|        scalar|
-|sext_ln141                                                                |   in|   30|     ap_none|                                                       sext_ln141|        scalar|
+|tmp_313                                                                   |   in|    7|     ap_none|                                                          tmp_313|        scalar|
+|sext_ln136                                                                |   in|   30|     ap_none|                                                       sext_ln136|        scalar|
+|sext_ln139                                                                |   in|   30|     ap_none|                                                       sext_ln139|        scalar|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_address0  |  out|   14|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_ce0       |  out|    1|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_we0       |  out|    1|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_d0        |  out|   32|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
-|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_address1  |  out|   14|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
-|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_ce1       |  out|    1|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
-|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_q1        |   in|   32|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
+|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_q0        |   in|   32|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_address0    |  out|   14|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_ce0         |  out|    1|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_we0         |  out|    1|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_d0          |  out|   32|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
-|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_address1    |  out|   14|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
-|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_ce1         |  out|    1|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
-|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_q1          |   in|   32|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
+|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_q0          |   in|   32|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
 +--------------------------------------------------------------------------+-----+-----+------------+-----------------------------------------------------------------+--------------+
 

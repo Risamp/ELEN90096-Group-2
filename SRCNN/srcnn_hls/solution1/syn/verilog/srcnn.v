@@ -6,7 +6,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="srcnn_srcnn,hls_ip_2023_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck24-ubva530-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=350275981,HLS_SYN_TPT=none,HLS_SYN_MEM=331,HLS_SYN_DSP=0,HLS_SYN_FF=21901,HLS_SYN_LUT=67990,HLS_VERSION=2023_1}" *)
+(* CORE_GENERATION_INFO="srcnn_srcnn,hls_ip_2023_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck24-ubva530-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=202758481,HLS_SYN_TPT=none,HLS_SYN_MEM=353,HLS_SYN_DSP=0,HLS_SYN_FF=40127,HLS_SYN_LUT=102164,HLS_VERSION=2023_1}" *)
 
 module srcnn (
         ap_clk,
@@ -809,320 +809,320 @@ wire   [63:0] conv2_weights;
 wire   [63:0] conv2_output_ftmap;
 wire   [63:0] conv3_weights;
 wire   [63:0] output_ftmap;
-reg   [63:0] output_ftmap_read_reg_272;
-reg   [63:0] conv3_weights_read_reg_277;
-reg   [63:0] conv2_output_ftmap_read_reg_282;
-reg   [63:0] conv2_weights_read_reg_288;
-reg   [63:0] conv1_output_ftmap_read_reg_293;
-reg   [63:0] conv1_weights_read_reg_299;
-reg   [63:0] input_ftmap_read_reg_304;
-wire   [14:0] empty_fu_267_p1;
-reg   [14:0] empty_reg_309;
+reg   [63:0] output_ftmap_read_reg_444;
+reg   [63:0] conv3_weights_read_reg_449;
+reg   [63:0] conv2_output_ftmap_read_reg_454;
+reg   [63:0] conv2_weights_read_reg_460;
+reg   [63:0] conv1_output_ftmap_read_reg_465;
+reg   [63:0] conv1_weights_read_reg_471;
+reg   [63:0] input_ftmap_read_reg_476;
+wire   [14:0] empty_fu_439_p1;
+reg   [14:0] empty_reg_481;
 wire    ap_CS_fsm_state5;
-wire    grp_conv1_fu_188_ap_start;
-wire    grp_conv1_fu_188_ap_done;
-wire    grp_conv1_fu_188_ap_idle;
-wire    grp_conv1_fu_188_ap_ready;
-wire    grp_conv1_fu_188_m_axi_i1_AWVALID;
-wire   [63:0] grp_conv1_fu_188_m_axi_i1_AWADDR;
-wire   [0:0] grp_conv1_fu_188_m_axi_i1_AWID;
-wire   [31:0] grp_conv1_fu_188_m_axi_i1_AWLEN;
-wire   [2:0] grp_conv1_fu_188_m_axi_i1_AWSIZE;
-wire   [1:0] grp_conv1_fu_188_m_axi_i1_AWBURST;
-wire   [1:0] grp_conv1_fu_188_m_axi_i1_AWLOCK;
-wire   [3:0] grp_conv1_fu_188_m_axi_i1_AWCACHE;
-wire   [2:0] grp_conv1_fu_188_m_axi_i1_AWPROT;
-wire   [3:0] grp_conv1_fu_188_m_axi_i1_AWQOS;
-wire   [3:0] grp_conv1_fu_188_m_axi_i1_AWREGION;
-wire   [0:0] grp_conv1_fu_188_m_axi_i1_AWUSER;
-wire    grp_conv1_fu_188_m_axi_i1_WVALID;
-wire   [31:0] grp_conv1_fu_188_m_axi_i1_WDATA;
-wire   [3:0] grp_conv1_fu_188_m_axi_i1_WSTRB;
-wire    grp_conv1_fu_188_m_axi_i1_WLAST;
-wire   [0:0] grp_conv1_fu_188_m_axi_i1_WID;
-wire   [0:0] grp_conv1_fu_188_m_axi_i1_WUSER;
-wire    grp_conv1_fu_188_m_axi_i1_ARVALID;
-wire   [63:0] grp_conv1_fu_188_m_axi_i1_ARADDR;
-wire   [0:0] grp_conv1_fu_188_m_axi_i1_ARID;
-wire   [31:0] grp_conv1_fu_188_m_axi_i1_ARLEN;
-wire   [2:0] grp_conv1_fu_188_m_axi_i1_ARSIZE;
-wire   [1:0] grp_conv1_fu_188_m_axi_i1_ARBURST;
-wire   [1:0] grp_conv1_fu_188_m_axi_i1_ARLOCK;
-wire   [3:0] grp_conv1_fu_188_m_axi_i1_ARCACHE;
-wire   [2:0] grp_conv1_fu_188_m_axi_i1_ARPROT;
-wire   [3:0] grp_conv1_fu_188_m_axi_i1_ARQOS;
-wire   [3:0] grp_conv1_fu_188_m_axi_i1_ARREGION;
-wire   [0:0] grp_conv1_fu_188_m_axi_i1_ARUSER;
-wire    grp_conv1_fu_188_m_axi_i1_RREADY;
-wire    grp_conv1_fu_188_m_axi_i1_BREADY;
-wire    grp_conv1_fu_188_m_axi_w1_AWVALID;
-wire   [63:0] grp_conv1_fu_188_m_axi_w1_AWADDR;
-wire   [0:0] grp_conv1_fu_188_m_axi_w1_AWID;
-wire   [31:0] grp_conv1_fu_188_m_axi_w1_AWLEN;
-wire   [2:0] grp_conv1_fu_188_m_axi_w1_AWSIZE;
-wire   [1:0] grp_conv1_fu_188_m_axi_w1_AWBURST;
-wire   [1:0] grp_conv1_fu_188_m_axi_w1_AWLOCK;
-wire   [3:0] grp_conv1_fu_188_m_axi_w1_AWCACHE;
-wire   [2:0] grp_conv1_fu_188_m_axi_w1_AWPROT;
-wire   [3:0] grp_conv1_fu_188_m_axi_w1_AWQOS;
-wire   [3:0] grp_conv1_fu_188_m_axi_w1_AWREGION;
-wire   [0:0] grp_conv1_fu_188_m_axi_w1_AWUSER;
-wire    grp_conv1_fu_188_m_axi_w1_WVALID;
-wire   [15:0] grp_conv1_fu_188_m_axi_w1_WDATA;
-wire   [1:0] grp_conv1_fu_188_m_axi_w1_WSTRB;
-wire    grp_conv1_fu_188_m_axi_w1_WLAST;
-wire   [0:0] grp_conv1_fu_188_m_axi_w1_WID;
-wire   [0:0] grp_conv1_fu_188_m_axi_w1_WUSER;
-wire    grp_conv1_fu_188_m_axi_w1_ARVALID;
-wire   [63:0] grp_conv1_fu_188_m_axi_w1_ARADDR;
-wire   [0:0] grp_conv1_fu_188_m_axi_w1_ARID;
-wire   [31:0] grp_conv1_fu_188_m_axi_w1_ARLEN;
-wire   [2:0] grp_conv1_fu_188_m_axi_w1_ARSIZE;
-wire   [1:0] grp_conv1_fu_188_m_axi_w1_ARBURST;
-wire   [1:0] grp_conv1_fu_188_m_axi_w1_ARLOCK;
-wire   [3:0] grp_conv1_fu_188_m_axi_w1_ARCACHE;
-wire   [2:0] grp_conv1_fu_188_m_axi_w1_ARPROT;
-wire   [3:0] grp_conv1_fu_188_m_axi_w1_ARQOS;
-wire   [3:0] grp_conv1_fu_188_m_axi_w1_ARREGION;
-wire   [0:0] grp_conv1_fu_188_m_axi_w1_ARUSER;
-wire    grp_conv1_fu_188_m_axi_w1_RREADY;
-wire    grp_conv1_fu_188_m_axi_w1_BREADY;
-wire   [5:0] grp_conv1_fu_188_conv1_biases_address0;
-wire    grp_conv1_fu_188_conv1_biases_ce0;
-wire    grp_conv1_fu_188_m_axi_i2_AWVALID;
-wire   [63:0] grp_conv1_fu_188_m_axi_i2_AWADDR;
-wire   [0:0] grp_conv1_fu_188_m_axi_i2_AWID;
-wire   [31:0] grp_conv1_fu_188_m_axi_i2_AWLEN;
-wire   [2:0] grp_conv1_fu_188_m_axi_i2_AWSIZE;
-wire   [1:0] grp_conv1_fu_188_m_axi_i2_AWBURST;
-wire   [1:0] grp_conv1_fu_188_m_axi_i2_AWLOCK;
-wire   [3:0] grp_conv1_fu_188_m_axi_i2_AWCACHE;
-wire   [2:0] grp_conv1_fu_188_m_axi_i2_AWPROT;
-wire   [3:0] grp_conv1_fu_188_m_axi_i2_AWQOS;
-wire   [3:0] grp_conv1_fu_188_m_axi_i2_AWREGION;
-wire   [0:0] grp_conv1_fu_188_m_axi_i2_AWUSER;
-wire    grp_conv1_fu_188_m_axi_i2_WVALID;
-wire   [31:0] grp_conv1_fu_188_m_axi_i2_WDATA;
-wire   [3:0] grp_conv1_fu_188_m_axi_i2_WSTRB;
-wire    grp_conv1_fu_188_m_axi_i2_WLAST;
-wire   [0:0] grp_conv1_fu_188_m_axi_i2_WID;
-wire   [0:0] grp_conv1_fu_188_m_axi_i2_WUSER;
-wire    grp_conv1_fu_188_m_axi_i2_ARVALID;
-wire   [63:0] grp_conv1_fu_188_m_axi_i2_ARADDR;
-wire   [0:0] grp_conv1_fu_188_m_axi_i2_ARID;
-wire   [31:0] grp_conv1_fu_188_m_axi_i2_ARLEN;
-wire   [2:0] grp_conv1_fu_188_m_axi_i2_ARSIZE;
-wire   [1:0] grp_conv1_fu_188_m_axi_i2_ARBURST;
-wire   [1:0] grp_conv1_fu_188_m_axi_i2_ARLOCK;
-wire   [3:0] grp_conv1_fu_188_m_axi_i2_ARCACHE;
-wire   [2:0] grp_conv1_fu_188_m_axi_i2_ARPROT;
-wire   [3:0] grp_conv1_fu_188_m_axi_i2_ARQOS;
-wire   [3:0] grp_conv1_fu_188_m_axi_i2_ARREGION;
-wire   [0:0] grp_conv1_fu_188_m_axi_i2_ARUSER;
-wire    grp_conv1_fu_188_m_axi_i2_RREADY;
-wire    grp_conv1_fu_188_m_axi_i2_BREADY;
-wire    grp_conv2_fu_222_ap_start;
-wire    grp_conv2_fu_222_ap_done;
-wire    grp_conv2_fu_222_ap_idle;
-wire    grp_conv2_fu_222_ap_ready;
-wire    grp_conv2_fu_222_m_axi_i2_AWVALID;
-wire   [63:0] grp_conv2_fu_222_m_axi_i2_AWADDR;
-wire   [0:0] grp_conv2_fu_222_m_axi_i2_AWID;
-wire   [31:0] grp_conv2_fu_222_m_axi_i2_AWLEN;
-wire   [2:0] grp_conv2_fu_222_m_axi_i2_AWSIZE;
-wire   [1:0] grp_conv2_fu_222_m_axi_i2_AWBURST;
-wire   [1:0] grp_conv2_fu_222_m_axi_i2_AWLOCK;
-wire   [3:0] grp_conv2_fu_222_m_axi_i2_AWCACHE;
-wire   [2:0] grp_conv2_fu_222_m_axi_i2_AWPROT;
-wire   [3:0] grp_conv2_fu_222_m_axi_i2_AWQOS;
-wire   [3:0] grp_conv2_fu_222_m_axi_i2_AWREGION;
-wire   [0:0] grp_conv2_fu_222_m_axi_i2_AWUSER;
-wire    grp_conv2_fu_222_m_axi_i2_WVALID;
-wire   [31:0] grp_conv2_fu_222_m_axi_i2_WDATA;
-wire   [3:0] grp_conv2_fu_222_m_axi_i2_WSTRB;
-wire    grp_conv2_fu_222_m_axi_i2_WLAST;
-wire   [0:0] grp_conv2_fu_222_m_axi_i2_WID;
-wire   [0:0] grp_conv2_fu_222_m_axi_i2_WUSER;
-wire    grp_conv2_fu_222_m_axi_i2_ARVALID;
-wire   [63:0] grp_conv2_fu_222_m_axi_i2_ARADDR;
-wire   [0:0] grp_conv2_fu_222_m_axi_i2_ARID;
-wire   [31:0] grp_conv2_fu_222_m_axi_i2_ARLEN;
-wire   [2:0] grp_conv2_fu_222_m_axi_i2_ARSIZE;
-wire   [1:0] grp_conv2_fu_222_m_axi_i2_ARBURST;
-wire   [1:0] grp_conv2_fu_222_m_axi_i2_ARLOCK;
-wire   [3:0] grp_conv2_fu_222_m_axi_i2_ARCACHE;
-wire   [2:0] grp_conv2_fu_222_m_axi_i2_ARPROT;
-wire   [3:0] grp_conv2_fu_222_m_axi_i2_ARQOS;
-wire   [3:0] grp_conv2_fu_222_m_axi_i2_ARREGION;
-wire   [0:0] grp_conv2_fu_222_m_axi_i2_ARUSER;
-wire    grp_conv2_fu_222_m_axi_i2_RREADY;
-wire    grp_conv2_fu_222_m_axi_i2_BREADY;
-wire    grp_conv2_fu_222_m_axi_w2_AWVALID;
-wire   [63:0] grp_conv2_fu_222_m_axi_w2_AWADDR;
-wire   [0:0] grp_conv2_fu_222_m_axi_w2_AWID;
-wire   [31:0] grp_conv2_fu_222_m_axi_w2_AWLEN;
-wire   [2:0] grp_conv2_fu_222_m_axi_w2_AWSIZE;
-wire   [1:0] grp_conv2_fu_222_m_axi_w2_AWBURST;
-wire   [1:0] grp_conv2_fu_222_m_axi_w2_AWLOCK;
-wire   [3:0] grp_conv2_fu_222_m_axi_w2_AWCACHE;
-wire   [2:0] grp_conv2_fu_222_m_axi_w2_AWPROT;
-wire   [3:0] grp_conv2_fu_222_m_axi_w2_AWQOS;
-wire   [3:0] grp_conv2_fu_222_m_axi_w2_AWREGION;
-wire   [0:0] grp_conv2_fu_222_m_axi_w2_AWUSER;
-wire    grp_conv2_fu_222_m_axi_w2_WVALID;
-wire   [31:0] grp_conv2_fu_222_m_axi_w2_WDATA;
-wire   [3:0] grp_conv2_fu_222_m_axi_w2_WSTRB;
-wire    grp_conv2_fu_222_m_axi_w2_WLAST;
-wire   [0:0] grp_conv2_fu_222_m_axi_w2_WID;
-wire   [0:0] grp_conv2_fu_222_m_axi_w2_WUSER;
-wire    grp_conv2_fu_222_m_axi_w2_ARVALID;
-wire   [63:0] grp_conv2_fu_222_m_axi_w2_ARADDR;
-wire   [0:0] grp_conv2_fu_222_m_axi_w2_ARID;
-wire   [31:0] grp_conv2_fu_222_m_axi_w2_ARLEN;
-wire   [2:0] grp_conv2_fu_222_m_axi_w2_ARSIZE;
-wire   [1:0] grp_conv2_fu_222_m_axi_w2_ARBURST;
-wire   [1:0] grp_conv2_fu_222_m_axi_w2_ARLOCK;
-wire   [3:0] grp_conv2_fu_222_m_axi_w2_ARCACHE;
-wire   [2:0] grp_conv2_fu_222_m_axi_w2_ARPROT;
-wire   [3:0] grp_conv2_fu_222_m_axi_w2_ARQOS;
-wire   [3:0] grp_conv2_fu_222_m_axi_w2_ARREGION;
-wire   [0:0] grp_conv2_fu_222_m_axi_w2_ARUSER;
-wire    grp_conv2_fu_222_m_axi_w2_RREADY;
-wire    grp_conv2_fu_222_m_axi_w2_BREADY;
-wire   [4:0] grp_conv2_fu_222_conv2_biases_address0;
-wire    grp_conv2_fu_222_conv2_biases_ce0;
-wire    grp_conv2_fu_222_m_axi_i3_AWVALID;
-wire   [63:0] grp_conv2_fu_222_m_axi_i3_AWADDR;
-wire   [0:0] grp_conv2_fu_222_m_axi_i3_AWID;
-wire   [31:0] grp_conv2_fu_222_m_axi_i3_AWLEN;
-wire   [2:0] grp_conv2_fu_222_m_axi_i3_AWSIZE;
-wire   [1:0] grp_conv2_fu_222_m_axi_i3_AWBURST;
-wire   [1:0] grp_conv2_fu_222_m_axi_i3_AWLOCK;
-wire   [3:0] grp_conv2_fu_222_m_axi_i3_AWCACHE;
-wire   [2:0] grp_conv2_fu_222_m_axi_i3_AWPROT;
-wire   [3:0] grp_conv2_fu_222_m_axi_i3_AWQOS;
-wire   [3:0] grp_conv2_fu_222_m_axi_i3_AWREGION;
-wire   [0:0] grp_conv2_fu_222_m_axi_i3_AWUSER;
-wire    grp_conv2_fu_222_m_axi_i3_WVALID;
-wire   [31:0] grp_conv2_fu_222_m_axi_i3_WDATA;
-wire   [3:0] grp_conv2_fu_222_m_axi_i3_WSTRB;
-wire    grp_conv2_fu_222_m_axi_i3_WLAST;
-wire   [0:0] grp_conv2_fu_222_m_axi_i3_WID;
-wire   [0:0] grp_conv2_fu_222_m_axi_i3_WUSER;
-wire    grp_conv2_fu_222_m_axi_i3_ARVALID;
-wire   [63:0] grp_conv2_fu_222_m_axi_i3_ARADDR;
-wire   [0:0] grp_conv2_fu_222_m_axi_i3_ARID;
-wire   [31:0] grp_conv2_fu_222_m_axi_i3_ARLEN;
-wire   [2:0] grp_conv2_fu_222_m_axi_i3_ARSIZE;
-wire   [1:0] grp_conv2_fu_222_m_axi_i3_ARBURST;
-wire   [1:0] grp_conv2_fu_222_m_axi_i3_ARLOCK;
-wire   [3:0] grp_conv2_fu_222_m_axi_i3_ARCACHE;
-wire   [2:0] grp_conv2_fu_222_m_axi_i3_ARPROT;
-wire   [3:0] grp_conv2_fu_222_m_axi_i3_ARQOS;
-wire   [3:0] grp_conv2_fu_222_m_axi_i3_ARREGION;
-wire   [0:0] grp_conv2_fu_222_m_axi_i3_ARUSER;
-wire    grp_conv2_fu_222_m_axi_i3_RREADY;
-wire    grp_conv2_fu_222_m_axi_i3_BREADY;
-wire    grp_conv3_fu_243_ap_start;
-wire    grp_conv3_fu_243_ap_done;
-wire    grp_conv3_fu_243_ap_idle;
-wire    grp_conv3_fu_243_ap_ready;
-wire    grp_conv3_fu_243_m_axi_i3_AWVALID;
-wire   [63:0] grp_conv3_fu_243_m_axi_i3_AWADDR;
-wire   [0:0] grp_conv3_fu_243_m_axi_i3_AWID;
-wire   [31:0] grp_conv3_fu_243_m_axi_i3_AWLEN;
-wire   [2:0] grp_conv3_fu_243_m_axi_i3_AWSIZE;
-wire   [1:0] grp_conv3_fu_243_m_axi_i3_AWBURST;
-wire   [1:0] grp_conv3_fu_243_m_axi_i3_AWLOCK;
-wire   [3:0] grp_conv3_fu_243_m_axi_i3_AWCACHE;
-wire   [2:0] grp_conv3_fu_243_m_axi_i3_AWPROT;
-wire   [3:0] grp_conv3_fu_243_m_axi_i3_AWQOS;
-wire   [3:0] grp_conv3_fu_243_m_axi_i3_AWREGION;
-wire   [0:0] grp_conv3_fu_243_m_axi_i3_AWUSER;
-wire    grp_conv3_fu_243_m_axi_i3_WVALID;
-wire   [31:0] grp_conv3_fu_243_m_axi_i3_WDATA;
-wire   [3:0] grp_conv3_fu_243_m_axi_i3_WSTRB;
-wire    grp_conv3_fu_243_m_axi_i3_WLAST;
-wire   [0:0] grp_conv3_fu_243_m_axi_i3_WID;
-wire   [0:0] grp_conv3_fu_243_m_axi_i3_WUSER;
-wire    grp_conv3_fu_243_m_axi_i3_ARVALID;
-wire   [63:0] grp_conv3_fu_243_m_axi_i3_ARADDR;
-wire   [0:0] grp_conv3_fu_243_m_axi_i3_ARID;
-wire   [31:0] grp_conv3_fu_243_m_axi_i3_ARLEN;
-wire   [2:0] grp_conv3_fu_243_m_axi_i3_ARSIZE;
-wire   [1:0] grp_conv3_fu_243_m_axi_i3_ARBURST;
-wire   [1:0] grp_conv3_fu_243_m_axi_i3_ARLOCK;
-wire   [3:0] grp_conv3_fu_243_m_axi_i3_ARCACHE;
-wire   [2:0] grp_conv3_fu_243_m_axi_i3_ARPROT;
-wire   [3:0] grp_conv3_fu_243_m_axi_i3_ARQOS;
-wire   [3:0] grp_conv3_fu_243_m_axi_i3_ARREGION;
-wire   [0:0] grp_conv3_fu_243_m_axi_i3_ARUSER;
-wire    grp_conv3_fu_243_m_axi_i3_RREADY;
-wire    grp_conv3_fu_243_m_axi_i3_BREADY;
-wire    grp_conv3_fu_243_m_axi_w3_AWVALID;
-wire   [63:0] grp_conv3_fu_243_m_axi_w3_AWADDR;
-wire   [0:0] grp_conv3_fu_243_m_axi_w3_AWID;
-wire   [31:0] grp_conv3_fu_243_m_axi_w3_AWLEN;
-wire   [2:0] grp_conv3_fu_243_m_axi_w3_AWSIZE;
-wire   [1:0] grp_conv3_fu_243_m_axi_w3_AWBURST;
-wire   [1:0] grp_conv3_fu_243_m_axi_w3_AWLOCK;
-wire   [3:0] grp_conv3_fu_243_m_axi_w3_AWCACHE;
-wire   [2:0] grp_conv3_fu_243_m_axi_w3_AWPROT;
-wire   [3:0] grp_conv3_fu_243_m_axi_w3_AWQOS;
-wire   [3:0] grp_conv3_fu_243_m_axi_w3_AWREGION;
-wire   [0:0] grp_conv3_fu_243_m_axi_w3_AWUSER;
-wire    grp_conv3_fu_243_m_axi_w3_WVALID;
-wire   [31:0] grp_conv3_fu_243_m_axi_w3_WDATA;
-wire   [3:0] grp_conv3_fu_243_m_axi_w3_WSTRB;
-wire    grp_conv3_fu_243_m_axi_w3_WLAST;
-wire   [0:0] grp_conv3_fu_243_m_axi_w3_WID;
-wire   [0:0] grp_conv3_fu_243_m_axi_w3_WUSER;
-wire    grp_conv3_fu_243_m_axi_w3_ARVALID;
-wire   [63:0] grp_conv3_fu_243_m_axi_w3_ARADDR;
-wire   [0:0] grp_conv3_fu_243_m_axi_w3_ARID;
-wire   [31:0] grp_conv3_fu_243_m_axi_w3_ARLEN;
-wire   [2:0] grp_conv3_fu_243_m_axi_w3_ARSIZE;
-wire   [1:0] grp_conv3_fu_243_m_axi_w3_ARBURST;
-wire   [1:0] grp_conv3_fu_243_m_axi_w3_ARLOCK;
-wire   [3:0] grp_conv3_fu_243_m_axi_w3_ARCACHE;
-wire   [2:0] grp_conv3_fu_243_m_axi_w3_ARPROT;
-wire   [3:0] grp_conv3_fu_243_m_axi_w3_ARQOS;
-wire   [3:0] grp_conv3_fu_243_m_axi_w3_ARREGION;
-wire   [0:0] grp_conv3_fu_243_m_axi_w3_ARUSER;
-wire    grp_conv3_fu_243_m_axi_w3_RREADY;
-wire    grp_conv3_fu_243_m_axi_w3_BREADY;
-wire    grp_conv3_fu_243_m_axi_o_AWVALID;
-wire   [63:0] grp_conv3_fu_243_m_axi_o_AWADDR;
-wire   [0:0] grp_conv3_fu_243_m_axi_o_AWID;
-wire   [31:0] grp_conv3_fu_243_m_axi_o_AWLEN;
-wire   [2:0] grp_conv3_fu_243_m_axi_o_AWSIZE;
-wire   [1:0] grp_conv3_fu_243_m_axi_o_AWBURST;
-wire   [1:0] grp_conv3_fu_243_m_axi_o_AWLOCK;
-wire   [3:0] grp_conv3_fu_243_m_axi_o_AWCACHE;
-wire   [2:0] grp_conv3_fu_243_m_axi_o_AWPROT;
-wire   [3:0] grp_conv3_fu_243_m_axi_o_AWQOS;
-wire   [3:0] grp_conv3_fu_243_m_axi_o_AWREGION;
-wire   [0:0] grp_conv3_fu_243_m_axi_o_AWUSER;
-wire    grp_conv3_fu_243_m_axi_o_WVALID;
-wire   [31:0] grp_conv3_fu_243_m_axi_o_WDATA;
-wire   [3:0] grp_conv3_fu_243_m_axi_o_WSTRB;
-wire    grp_conv3_fu_243_m_axi_o_WLAST;
-wire   [0:0] grp_conv3_fu_243_m_axi_o_WID;
-wire   [0:0] grp_conv3_fu_243_m_axi_o_WUSER;
-wire    grp_conv3_fu_243_m_axi_o_ARVALID;
-wire   [63:0] grp_conv3_fu_243_m_axi_o_ARADDR;
-wire   [0:0] grp_conv3_fu_243_m_axi_o_ARID;
-wire   [31:0] grp_conv3_fu_243_m_axi_o_ARLEN;
-wire   [2:0] grp_conv3_fu_243_m_axi_o_ARSIZE;
-wire   [1:0] grp_conv3_fu_243_m_axi_o_ARBURST;
-wire   [1:0] grp_conv3_fu_243_m_axi_o_ARLOCK;
-wire   [3:0] grp_conv3_fu_243_m_axi_o_ARCACHE;
-wire   [2:0] grp_conv3_fu_243_m_axi_o_ARPROT;
-wire   [3:0] grp_conv3_fu_243_m_axi_o_ARQOS;
-wire   [3:0] grp_conv3_fu_243_m_axi_o_ARREGION;
-wire   [0:0] grp_conv3_fu_243_m_axi_o_ARUSER;
-wire    grp_conv3_fu_243_m_axi_o_RREADY;
-wire    grp_conv3_fu_243_m_axi_o_BREADY;
+wire    grp_conv1_fu_274_ap_start;
+wire    grp_conv1_fu_274_ap_done;
+wire    grp_conv1_fu_274_ap_idle;
+wire    grp_conv1_fu_274_ap_ready;
+wire    grp_conv1_fu_274_m_axi_i1_AWVALID;
+wire   [63:0] grp_conv1_fu_274_m_axi_i1_AWADDR;
+wire   [0:0] grp_conv1_fu_274_m_axi_i1_AWID;
+wire   [31:0] grp_conv1_fu_274_m_axi_i1_AWLEN;
+wire   [2:0] grp_conv1_fu_274_m_axi_i1_AWSIZE;
+wire   [1:0] grp_conv1_fu_274_m_axi_i1_AWBURST;
+wire   [1:0] grp_conv1_fu_274_m_axi_i1_AWLOCK;
+wire   [3:0] grp_conv1_fu_274_m_axi_i1_AWCACHE;
+wire   [2:0] grp_conv1_fu_274_m_axi_i1_AWPROT;
+wire   [3:0] grp_conv1_fu_274_m_axi_i1_AWQOS;
+wire   [3:0] grp_conv1_fu_274_m_axi_i1_AWREGION;
+wire   [0:0] grp_conv1_fu_274_m_axi_i1_AWUSER;
+wire    grp_conv1_fu_274_m_axi_i1_WVALID;
+wire   [31:0] grp_conv1_fu_274_m_axi_i1_WDATA;
+wire   [3:0] grp_conv1_fu_274_m_axi_i1_WSTRB;
+wire    grp_conv1_fu_274_m_axi_i1_WLAST;
+wire   [0:0] grp_conv1_fu_274_m_axi_i1_WID;
+wire   [0:0] grp_conv1_fu_274_m_axi_i1_WUSER;
+wire    grp_conv1_fu_274_m_axi_i1_ARVALID;
+wire   [63:0] grp_conv1_fu_274_m_axi_i1_ARADDR;
+wire   [0:0] grp_conv1_fu_274_m_axi_i1_ARID;
+wire   [31:0] grp_conv1_fu_274_m_axi_i1_ARLEN;
+wire   [2:0] grp_conv1_fu_274_m_axi_i1_ARSIZE;
+wire   [1:0] grp_conv1_fu_274_m_axi_i1_ARBURST;
+wire   [1:0] grp_conv1_fu_274_m_axi_i1_ARLOCK;
+wire   [3:0] grp_conv1_fu_274_m_axi_i1_ARCACHE;
+wire   [2:0] grp_conv1_fu_274_m_axi_i1_ARPROT;
+wire   [3:0] grp_conv1_fu_274_m_axi_i1_ARQOS;
+wire   [3:0] grp_conv1_fu_274_m_axi_i1_ARREGION;
+wire   [0:0] grp_conv1_fu_274_m_axi_i1_ARUSER;
+wire    grp_conv1_fu_274_m_axi_i1_RREADY;
+wire    grp_conv1_fu_274_m_axi_i1_BREADY;
+wire    grp_conv1_fu_274_m_axi_w1_AWVALID;
+wire   [63:0] grp_conv1_fu_274_m_axi_w1_AWADDR;
+wire   [0:0] grp_conv1_fu_274_m_axi_w1_AWID;
+wire   [31:0] grp_conv1_fu_274_m_axi_w1_AWLEN;
+wire   [2:0] grp_conv1_fu_274_m_axi_w1_AWSIZE;
+wire   [1:0] grp_conv1_fu_274_m_axi_w1_AWBURST;
+wire   [1:0] grp_conv1_fu_274_m_axi_w1_AWLOCK;
+wire   [3:0] grp_conv1_fu_274_m_axi_w1_AWCACHE;
+wire   [2:0] grp_conv1_fu_274_m_axi_w1_AWPROT;
+wire   [3:0] grp_conv1_fu_274_m_axi_w1_AWQOS;
+wire   [3:0] grp_conv1_fu_274_m_axi_w1_AWREGION;
+wire   [0:0] grp_conv1_fu_274_m_axi_w1_AWUSER;
+wire    grp_conv1_fu_274_m_axi_w1_WVALID;
+wire   [15:0] grp_conv1_fu_274_m_axi_w1_WDATA;
+wire   [1:0] grp_conv1_fu_274_m_axi_w1_WSTRB;
+wire    grp_conv1_fu_274_m_axi_w1_WLAST;
+wire   [0:0] grp_conv1_fu_274_m_axi_w1_WID;
+wire   [0:0] grp_conv1_fu_274_m_axi_w1_WUSER;
+wire    grp_conv1_fu_274_m_axi_w1_ARVALID;
+wire   [63:0] grp_conv1_fu_274_m_axi_w1_ARADDR;
+wire   [0:0] grp_conv1_fu_274_m_axi_w1_ARID;
+wire   [31:0] grp_conv1_fu_274_m_axi_w1_ARLEN;
+wire   [2:0] grp_conv1_fu_274_m_axi_w1_ARSIZE;
+wire   [1:0] grp_conv1_fu_274_m_axi_w1_ARBURST;
+wire   [1:0] grp_conv1_fu_274_m_axi_w1_ARLOCK;
+wire   [3:0] grp_conv1_fu_274_m_axi_w1_ARCACHE;
+wire   [2:0] grp_conv1_fu_274_m_axi_w1_ARPROT;
+wire   [3:0] grp_conv1_fu_274_m_axi_w1_ARQOS;
+wire   [3:0] grp_conv1_fu_274_m_axi_w1_ARREGION;
+wire   [0:0] grp_conv1_fu_274_m_axi_w1_ARUSER;
+wire    grp_conv1_fu_274_m_axi_w1_RREADY;
+wire    grp_conv1_fu_274_m_axi_w1_BREADY;
+wire   [5:0] grp_conv1_fu_274_conv1_biases_address0;
+wire    grp_conv1_fu_274_conv1_biases_ce0;
+wire    grp_conv1_fu_274_m_axi_i2_AWVALID;
+wire   [63:0] grp_conv1_fu_274_m_axi_i2_AWADDR;
+wire   [0:0] grp_conv1_fu_274_m_axi_i2_AWID;
+wire   [31:0] grp_conv1_fu_274_m_axi_i2_AWLEN;
+wire   [2:0] grp_conv1_fu_274_m_axi_i2_AWSIZE;
+wire   [1:0] grp_conv1_fu_274_m_axi_i2_AWBURST;
+wire   [1:0] grp_conv1_fu_274_m_axi_i2_AWLOCK;
+wire   [3:0] grp_conv1_fu_274_m_axi_i2_AWCACHE;
+wire   [2:0] grp_conv1_fu_274_m_axi_i2_AWPROT;
+wire   [3:0] grp_conv1_fu_274_m_axi_i2_AWQOS;
+wire   [3:0] grp_conv1_fu_274_m_axi_i2_AWREGION;
+wire   [0:0] grp_conv1_fu_274_m_axi_i2_AWUSER;
+wire    grp_conv1_fu_274_m_axi_i2_WVALID;
+wire   [31:0] grp_conv1_fu_274_m_axi_i2_WDATA;
+wire   [3:0] grp_conv1_fu_274_m_axi_i2_WSTRB;
+wire    grp_conv1_fu_274_m_axi_i2_WLAST;
+wire   [0:0] grp_conv1_fu_274_m_axi_i2_WID;
+wire   [0:0] grp_conv1_fu_274_m_axi_i2_WUSER;
+wire    grp_conv1_fu_274_m_axi_i2_ARVALID;
+wire   [63:0] grp_conv1_fu_274_m_axi_i2_ARADDR;
+wire   [0:0] grp_conv1_fu_274_m_axi_i2_ARID;
+wire   [31:0] grp_conv1_fu_274_m_axi_i2_ARLEN;
+wire   [2:0] grp_conv1_fu_274_m_axi_i2_ARSIZE;
+wire   [1:0] grp_conv1_fu_274_m_axi_i2_ARBURST;
+wire   [1:0] grp_conv1_fu_274_m_axi_i2_ARLOCK;
+wire   [3:0] grp_conv1_fu_274_m_axi_i2_ARCACHE;
+wire   [2:0] grp_conv1_fu_274_m_axi_i2_ARPROT;
+wire   [3:0] grp_conv1_fu_274_m_axi_i2_ARQOS;
+wire   [3:0] grp_conv1_fu_274_m_axi_i2_ARREGION;
+wire   [0:0] grp_conv1_fu_274_m_axi_i2_ARUSER;
+wire    grp_conv1_fu_274_m_axi_i2_RREADY;
+wire    grp_conv1_fu_274_m_axi_i2_BREADY;
+wire    grp_conv2_fu_308_ap_start;
+wire    grp_conv2_fu_308_ap_done;
+wire    grp_conv2_fu_308_ap_idle;
+wire    grp_conv2_fu_308_ap_ready;
+wire    grp_conv2_fu_308_m_axi_i2_AWVALID;
+wire   [63:0] grp_conv2_fu_308_m_axi_i2_AWADDR;
+wire   [0:0] grp_conv2_fu_308_m_axi_i2_AWID;
+wire   [31:0] grp_conv2_fu_308_m_axi_i2_AWLEN;
+wire   [2:0] grp_conv2_fu_308_m_axi_i2_AWSIZE;
+wire   [1:0] grp_conv2_fu_308_m_axi_i2_AWBURST;
+wire   [1:0] grp_conv2_fu_308_m_axi_i2_AWLOCK;
+wire   [3:0] grp_conv2_fu_308_m_axi_i2_AWCACHE;
+wire   [2:0] grp_conv2_fu_308_m_axi_i2_AWPROT;
+wire   [3:0] grp_conv2_fu_308_m_axi_i2_AWQOS;
+wire   [3:0] grp_conv2_fu_308_m_axi_i2_AWREGION;
+wire   [0:0] grp_conv2_fu_308_m_axi_i2_AWUSER;
+wire    grp_conv2_fu_308_m_axi_i2_WVALID;
+wire   [31:0] grp_conv2_fu_308_m_axi_i2_WDATA;
+wire   [3:0] grp_conv2_fu_308_m_axi_i2_WSTRB;
+wire    grp_conv2_fu_308_m_axi_i2_WLAST;
+wire   [0:0] grp_conv2_fu_308_m_axi_i2_WID;
+wire   [0:0] grp_conv2_fu_308_m_axi_i2_WUSER;
+wire    grp_conv2_fu_308_m_axi_i2_ARVALID;
+wire   [63:0] grp_conv2_fu_308_m_axi_i2_ARADDR;
+wire   [0:0] grp_conv2_fu_308_m_axi_i2_ARID;
+wire   [31:0] grp_conv2_fu_308_m_axi_i2_ARLEN;
+wire   [2:0] grp_conv2_fu_308_m_axi_i2_ARSIZE;
+wire   [1:0] grp_conv2_fu_308_m_axi_i2_ARBURST;
+wire   [1:0] grp_conv2_fu_308_m_axi_i2_ARLOCK;
+wire   [3:0] grp_conv2_fu_308_m_axi_i2_ARCACHE;
+wire   [2:0] grp_conv2_fu_308_m_axi_i2_ARPROT;
+wire   [3:0] grp_conv2_fu_308_m_axi_i2_ARQOS;
+wire   [3:0] grp_conv2_fu_308_m_axi_i2_ARREGION;
+wire   [0:0] grp_conv2_fu_308_m_axi_i2_ARUSER;
+wire    grp_conv2_fu_308_m_axi_i2_RREADY;
+wire    grp_conv2_fu_308_m_axi_i2_BREADY;
+wire    grp_conv2_fu_308_m_axi_w2_AWVALID;
+wire   [63:0] grp_conv2_fu_308_m_axi_w2_AWADDR;
+wire   [0:0] grp_conv2_fu_308_m_axi_w2_AWID;
+wire   [31:0] grp_conv2_fu_308_m_axi_w2_AWLEN;
+wire   [2:0] grp_conv2_fu_308_m_axi_w2_AWSIZE;
+wire   [1:0] grp_conv2_fu_308_m_axi_w2_AWBURST;
+wire   [1:0] grp_conv2_fu_308_m_axi_w2_AWLOCK;
+wire   [3:0] grp_conv2_fu_308_m_axi_w2_AWCACHE;
+wire   [2:0] grp_conv2_fu_308_m_axi_w2_AWPROT;
+wire   [3:0] grp_conv2_fu_308_m_axi_w2_AWQOS;
+wire   [3:0] grp_conv2_fu_308_m_axi_w2_AWREGION;
+wire   [0:0] grp_conv2_fu_308_m_axi_w2_AWUSER;
+wire    grp_conv2_fu_308_m_axi_w2_WVALID;
+wire   [31:0] grp_conv2_fu_308_m_axi_w2_WDATA;
+wire   [3:0] grp_conv2_fu_308_m_axi_w2_WSTRB;
+wire    grp_conv2_fu_308_m_axi_w2_WLAST;
+wire   [0:0] grp_conv2_fu_308_m_axi_w2_WID;
+wire   [0:0] grp_conv2_fu_308_m_axi_w2_WUSER;
+wire    grp_conv2_fu_308_m_axi_w2_ARVALID;
+wire   [63:0] grp_conv2_fu_308_m_axi_w2_ARADDR;
+wire   [0:0] grp_conv2_fu_308_m_axi_w2_ARID;
+wire   [31:0] grp_conv2_fu_308_m_axi_w2_ARLEN;
+wire   [2:0] grp_conv2_fu_308_m_axi_w2_ARSIZE;
+wire   [1:0] grp_conv2_fu_308_m_axi_w2_ARBURST;
+wire   [1:0] grp_conv2_fu_308_m_axi_w2_ARLOCK;
+wire   [3:0] grp_conv2_fu_308_m_axi_w2_ARCACHE;
+wire   [2:0] grp_conv2_fu_308_m_axi_w2_ARPROT;
+wire   [3:0] grp_conv2_fu_308_m_axi_w2_ARQOS;
+wire   [3:0] grp_conv2_fu_308_m_axi_w2_ARREGION;
+wire   [0:0] grp_conv2_fu_308_m_axi_w2_ARUSER;
+wire    grp_conv2_fu_308_m_axi_w2_RREADY;
+wire    grp_conv2_fu_308_m_axi_w2_BREADY;
+wire   [4:0] grp_conv2_fu_308_conv2_biases_address0;
+wire    grp_conv2_fu_308_conv2_biases_ce0;
+wire    grp_conv2_fu_308_m_axi_i3_AWVALID;
+wire   [63:0] grp_conv2_fu_308_m_axi_i3_AWADDR;
+wire   [0:0] grp_conv2_fu_308_m_axi_i3_AWID;
+wire   [31:0] grp_conv2_fu_308_m_axi_i3_AWLEN;
+wire   [2:0] grp_conv2_fu_308_m_axi_i3_AWSIZE;
+wire   [1:0] grp_conv2_fu_308_m_axi_i3_AWBURST;
+wire   [1:0] grp_conv2_fu_308_m_axi_i3_AWLOCK;
+wire   [3:0] grp_conv2_fu_308_m_axi_i3_AWCACHE;
+wire   [2:0] grp_conv2_fu_308_m_axi_i3_AWPROT;
+wire   [3:0] grp_conv2_fu_308_m_axi_i3_AWQOS;
+wire   [3:0] grp_conv2_fu_308_m_axi_i3_AWREGION;
+wire   [0:0] grp_conv2_fu_308_m_axi_i3_AWUSER;
+wire    grp_conv2_fu_308_m_axi_i3_WVALID;
+wire   [31:0] grp_conv2_fu_308_m_axi_i3_WDATA;
+wire   [3:0] grp_conv2_fu_308_m_axi_i3_WSTRB;
+wire    grp_conv2_fu_308_m_axi_i3_WLAST;
+wire   [0:0] grp_conv2_fu_308_m_axi_i3_WID;
+wire   [0:0] grp_conv2_fu_308_m_axi_i3_WUSER;
+wire    grp_conv2_fu_308_m_axi_i3_ARVALID;
+wire   [63:0] grp_conv2_fu_308_m_axi_i3_ARADDR;
+wire   [0:0] grp_conv2_fu_308_m_axi_i3_ARID;
+wire   [31:0] grp_conv2_fu_308_m_axi_i3_ARLEN;
+wire   [2:0] grp_conv2_fu_308_m_axi_i3_ARSIZE;
+wire   [1:0] grp_conv2_fu_308_m_axi_i3_ARBURST;
+wire   [1:0] grp_conv2_fu_308_m_axi_i3_ARLOCK;
+wire   [3:0] grp_conv2_fu_308_m_axi_i3_ARCACHE;
+wire   [2:0] grp_conv2_fu_308_m_axi_i3_ARPROT;
+wire   [3:0] grp_conv2_fu_308_m_axi_i3_ARQOS;
+wire   [3:0] grp_conv2_fu_308_m_axi_i3_ARREGION;
+wire   [0:0] grp_conv2_fu_308_m_axi_i3_ARUSER;
+wire    grp_conv2_fu_308_m_axi_i3_RREADY;
+wire    grp_conv2_fu_308_m_axi_i3_BREADY;
+wire    grp_conv3_fu_415_ap_start;
+wire    grp_conv3_fu_415_ap_done;
+wire    grp_conv3_fu_415_ap_idle;
+wire    grp_conv3_fu_415_ap_ready;
+wire    grp_conv3_fu_415_m_axi_i3_AWVALID;
+wire   [63:0] grp_conv3_fu_415_m_axi_i3_AWADDR;
+wire   [0:0] grp_conv3_fu_415_m_axi_i3_AWID;
+wire   [31:0] grp_conv3_fu_415_m_axi_i3_AWLEN;
+wire   [2:0] grp_conv3_fu_415_m_axi_i3_AWSIZE;
+wire   [1:0] grp_conv3_fu_415_m_axi_i3_AWBURST;
+wire   [1:0] grp_conv3_fu_415_m_axi_i3_AWLOCK;
+wire   [3:0] grp_conv3_fu_415_m_axi_i3_AWCACHE;
+wire   [2:0] grp_conv3_fu_415_m_axi_i3_AWPROT;
+wire   [3:0] grp_conv3_fu_415_m_axi_i3_AWQOS;
+wire   [3:0] grp_conv3_fu_415_m_axi_i3_AWREGION;
+wire   [0:0] grp_conv3_fu_415_m_axi_i3_AWUSER;
+wire    grp_conv3_fu_415_m_axi_i3_WVALID;
+wire   [31:0] grp_conv3_fu_415_m_axi_i3_WDATA;
+wire   [3:0] grp_conv3_fu_415_m_axi_i3_WSTRB;
+wire    grp_conv3_fu_415_m_axi_i3_WLAST;
+wire   [0:0] grp_conv3_fu_415_m_axi_i3_WID;
+wire   [0:0] grp_conv3_fu_415_m_axi_i3_WUSER;
+wire    grp_conv3_fu_415_m_axi_i3_ARVALID;
+wire   [63:0] grp_conv3_fu_415_m_axi_i3_ARADDR;
+wire   [0:0] grp_conv3_fu_415_m_axi_i3_ARID;
+wire   [31:0] grp_conv3_fu_415_m_axi_i3_ARLEN;
+wire   [2:0] grp_conv3_fu_415_m_axi_i3_ARSIZE;
+wire   [1:0] grp_conv3_fu_415_m_axi_i3_ARBURST;
+wire   [1:0] grp_conv3_fu_415_m_axi_i3_ARLOCK;
+wire   [3:0] grp_conv3_fu_415_m_axi_i3_ARCACHE;
+wire   [2:0] grp_conv3_fu_415_m_axi_i3_ARPROT;
+wire   [3:0] grp_conv3_fu_415_m_axi_i3_ARQOS;
+wire   [3:0] grp_conv3_fu_415_m_axi_i3_ARREGION;
+wire   [0:0] grp_conv3_fu_415_m_axi_i3_ARUSER;
+wire    grp_conv3_fu_415_m_axi_i3_RREADY;
+wire    grp_conv3_fu_415_m_axi_i3_BREADY;
+wire    grp_conv3_fu_415_m_axi_w3_AWVALID;
+wire   [63:0] grp_conv3_fu_415_m_axi_w3_AWADDR;
+wire   [0:0] grp_conv3_fu_415_m_axi_w3_AWID;
+wire   [31:0] grp_conv3_fu_415_m_axi_w3_AWLEN;
+wire   [2:0] grp_conv3_fu_415_m_axi_w3_AWSIZE;
+wire   [1:0] grp_conv3_fu_415_m_axi_w3_AWBURST;
+wire   [1:0] grp_conv3_fu_415_m_axi_w3_AWLOCK;
+wire   [3:0] grp_conv3_fu_415_m_axi_w3_AWCACHE;
+wire   [2:0] grp_conv3_fu_415_m_axi_w3_AWPROT;
+wire   [3:0] grp_conv3_fu_415_m_axi_w3_AWQOS;
+wire   [3:0] grp_conv3_fu_415_m_axi_w3_AWREGION;
+wire   [0:0] grp_conv3_fu_415_m_axi_w3_AWUSER;
+wire    grp_conv3_fu_415_m_axi_w3_WVALID;
+wire   [31:0] grp_conv3_fu_415_m_axi_w3_WDATA;
+wire   [3:0] grp_conv3_fu_415_m_axi_w3_WSTRB;
+wire    grp_conv3_fu_415_m_axi_w3_WLAST;
+wire   [0:0] grp_conv3_fu_415_m_axi_w3_WID;
+wire   [0:0] grp_conv3_fu_415_m_axi_w3_WUSER;
+wire    grp_conv3_fu_415_m_axi_w3_ARVALID;
+wire   [63:0] grp_conv3_fu_415_m_axi_w3_ARADDR;
+wire   [0:0] grp_conv3_fu_415_m_axi_w3_ARID;
+wire   [31:0] grp_conv3_fu_415_m_axi_w3_ARLEN;
+wire   [2:0] grp_conv3_fu_415_m_axi_w3_ARSIZE;
+wire   [1:0] grp_conv3_fu_415_m_axi_w3_ARBURST;
+wire   [1:0] grp_conv3_fu_415_m_axi_w3_ARLOCK;
+wire   [3:0] grp_conv3_fu_415_m_axi_w3_ARCACHE;
+wire   [2:0] grp_conv3_fu_415_m_axi_w3_ARPROT;
+wire   [3:0] grp_conv3_fu_415_m_axi_w3_ARQOS;
+wire   [3:0] grp_conv3_fu_415_m_axi_w3_ARREGION;
+wire   [0:0] grp_conv3_fu_415_m_axi_w3_ARUSER;
+wire    grp_conv3_fu_415_m_axi_w3_RREADY;
+wire    grp_conv3_fu_415_m_axi_w3_BREADY;
+wire    grp_conv3_fu_415_m_axi_o_AWVALID;
+wire   [63:0] grp_conv3_fu_415_m_axi_o_AWADDR;
+wire   [0:0] grp_conv3_fu_415_m_axi_o_AWID;
+wire   [31:0] grp_conv3_fu_415_m_axi_o_AWLEN;
+wire   [2:0] grp_conv3_fu_415_m_axi_o_AWSIZE;
+wire   [1:0] grp_conv3_fu_415_m_axi_o_AWBURST;
+wire   [1:0] grp_conv3_fu_415_m_axi_o_AWLOCK;
+wire   [3:0] grp_conv3_fu_415_m_axi_o_AWCACHE;
+wire   [2:0] grp_conv3_fu_415_m_axi_o_AWPROT;
+wire   [3:0] grp_conv3_fu_415_m_axi_o_AWQOS;
+wire   [3:0] grp_conv3_fu_415_m_axi_o_AWREGION;
+wire   [0:0] grp_conv3_fu_415_m_axi_o_AWUSER;
+wire    grp_conv3_fu_415_m_axi_o_WVALID;
+wire   [31:0] grp_conv3_fu_415_m_axi_o_WDATA;
+wire   [3:0] grp_conv3_fu_415_m_axi_o_WSTRB;
+wire    grp_conv3_fu_415_m_axi_o_WLAST;
+wire   [0:0] grp_conv3_fu_415_m_axi_o_WID;
+wire   [0:0] grp_conv3_fu_415_m_axi_o_WUSER;
+wire    grp_conv3_fu_415_m_axi_o_ARVALID;
+wire   [63:0] grp_conv3_fu_415_m_axi_o_ARADDR;
+wire   [0:0] grp_conv3_fu_415_m_axi_o_ARID;
+wire   [31:0] grp_conv3_fu_415_m_axi_o_ARLEN;
+wire   [2:0] grp_conv3_fu_415_m_axi_o_ARSIZE;
+wire   [1:0] grp_conv3_fu_415_m_axi_o_ARBURST;
+wire   [1:0] grp_conv3_fu_415_m_axi_o_ARLOCK;
+wire   [3:0] grp_conv3_fu_415_m_axi_o_ARCACHE;
+wire   [2:0] grp_conv3_fu_415_m_axi_o_ARPROT;
+wire   [3:0] grp_conv3_fu_415_m_axi_o_ARQOS;
+wire   [3:0] grp_conv3_fu_415_m_axi_o_ARREGION;
+wire   [0:0] grp_conv3_fu_415_m_axi_o_ARUSER;
+wire    grp_conv3_fu_415_m_axi_o_RREADY;
+wire    grp_conv3_fu_415_m_axi_o_BREADY;
 wire    i1_AWREADY;
 wire    i1_WREADY;
 reg    i1_ARVALID;
@@ -1193,12 +1193,12 @@ reg    w3_RREADY;
 wire   [31:0] w3_RDATA;
 wire   [12:0] w3_RFIFONUM;
 wire    w3_BVALID;
-reg    grp_conv1_fu_188_ap_start_reg;
+reg    grp_conv1_fu_274_ap_start_reg;
 wire    ap_CS_fsm_state2;
-reg    grp_conv2_fu_222_ap_start_reg;
+reg    grp_conv2_fu_308_ap_start_reg;
 wire    ap_CS_fsm_state3;
 wire    ap_CS_fsm_state4;
-reg    grp_conv3_fu_243_ap_start_reg;
+reg    grp_conv3_fu_415_ap_start_reg;
 wire    ap_CS_fsm_state6;
 reg   [5:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
@@ -1212,53 +1212,53 @@ wire    ap_ce_reg;
 // power-on initialization
 initial begin
 #0 ap_CS_fsm = 6'd1;
-#0 grp_conv1_fu_188_ap_start_reg = 1'b0;
-#0 grp_conv2_fu_222_ap_start_reg = 1'b0;
-#0 grp_conv3_fu_243_ap_start_reg = 1'b0;
+#0 grp_conv1_fu_274_ap_start_reg = 1'b0;
+#0 grp_conv2_fu_308_ap_start_reg = 1'b0;
+#0 grp_conv3_fu_415_ap_start_reg = 1'b0;
 end
 
-srcnn_conv1 grp_conv1_fu_188(
+srcnn_conv1 grp_conv1_fu_274(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_conv1_fu_188_ap_start),
-    .ap_done(grp_conv1_fu_188_ap_done),
-    .ap_idle(grp_conv1_fu_188_ap_idle),
-    .ap_ready(grp_conv1_fu_188_ap_ready),
-    .m_axi_i1_AWVALID(grp_conv1_fu_188_m_axi_i1_AWVALID),
+    .ap_start(grp_conv1_fu_274_ap_start),
+    .ap_done(grp_conv1_fu_274_ap_done),
+    .ap_idle(grp_conv1_fu_274_ap_idle),
+    .ap_ready(grp_conv1_fu_274_ap_ready),
+    .m_axi_i1_AWVALID(grp_conv1_fu_274_m_axi_i1_AWVALID),
     .m_axi_i1_AWREADY(1'b0),
-    .m_axi_i1_AWADDR(grp_conv1_fu_188_m_axi_i1_AWADDR),
-    .m_axi_i1_AWID(grp_conv1_fu_188_m_axi_i1_AWID),
-    .m_axi_i1_AWLEN(grp_conv1_fu_188_m_axi_i1_AWLEN),
-    .m_axi_i1_AWSIZE(grp_conv1_fu_188_m_axi_i1_AWSIZE),
-    .m_axi_i1_AWBURST(grp_conv1_fu_188_m_axi_i1_AWBURST),
-    .m_axi_i1_AWLOCK(grp_conv1_fu_188_m_axi_i1_AWLOCK),
-    .m_axi_i1_AWCACHE(grp_conv1_fu_188_m_axi_i1_AWCACHE),
-    .m_axi_i1_AWPROT(grp_conv1_fu_188_m_axi_i1_AWPROT),
-    .m_axi_i1_AWQOS(grp_conv1_fu_188_m_axi_i1_AWQOS),
-    .m_axi_i1_AWREGION(grp_conv1_fu_188_m_axi_i1_AWREGION),
-    .m_axi_i1_AWUSER(grp_conv1_fu_188_m_axi_i1_AWUSER),
-    .m_axi_i1_WVALID(grp_conv1_fu_188_m_axi_i1_WVALID),
+    .m_axi_i1_AWADDR(grp_conv1_fu_274_m_axi_i1_AWADDR),
+    .m_axi_i1_AWID(grp_conv1_fu_274_m_axi_i1_AWID),
+    .m_axi_i1_AWLEN(grp_conv1_fu_274_m_axi_i1_AWLEN),
+    .m_axi_i1_AWSIZE(grp_conv1_fu_274_m_axi_i1_AWSIZE),
+    .m_axi_i1_AWBURST(grp_conv1_fu_274_m_axi_i1_AWBURST),
+    .m_axi_i1_AWLOCK(grp_conv1_fu_274_m_axi_i1_AWLOCK),
+    .m_axi_i1_AWCACHE(grp_conv1_fu_274_m_axi_i1_AWCACHE),
+    .m_axi_i1_AWPROT(grp_conv1_fu_274_m_axi_i1_AWPROT),
+    .m_axi_i1_AWQOS(grp_conv1_fu_274_m_axi_i1_AWQOS),
+    .m_axi_i1_AWREGION(grp_conv1_fu_274_m_axi_i1_AWREGION),
+    .m_axi_i1_AWUSER(grp_conv1_fu_274_m_axi_i1_AWUSER),
+    .m_axi_i1_WVALID(grp_conv1_fu_274_m_axi_i1_WVALID),
     .m_axi_i1_WREADY(1'b0),
-    .m_axi_i1_WDATA(grp_conv1_fu_188_m_axi_i1_WDATA),
-    .m_axi_i1_WSTRB(grp_conv1_fu_188_m_axi_i1_WSTRB),
-    .m_axi_i1_WLAST(grp_conv1_fu_188_m_axi_i1_WLAST),
-    .m_axi_i1_WID(grp_conv1_fu_188_m_axi_i1_WID),
-    .m_axi_i1_WUSER(grp_conv1_fu_188_m_axi_i1_WUSER),
-    .m_axi_i1_ARVALID(grp_conv1_fu_188_m_axi_i1_ARVALID),
+    .m_axi_i1_WDATA(grp_conv1_fu_274_m_axi_i1_WDATA),
+    .m_axi_i1_WSTRB(grp_conv1_fu_274_m_axi_i1_WSTRB),
+    .m_axi_i1_WLAST(grp_conv1_fu_274_m_axi_i1_WLAST),
+    .m_axi_i1_WID(grp_conv1_fu_274_m_axi_i1_WID),
+    .m_axi_i1_WUSER(grp_conv1_fu_274_m_axi_i1_WUSER),
+    .m_axi_i1_ARVALID(grp_conv1_fu_274_m_axi_i1_ARVALID),
     .m_axi_i1_ARREADY(i1_ARREADY),
-    .m_axi_i1_ARADDR(grp_conv1_fu_188_m_axi_i1_ARADDR),
-    .m_axi_i1_ARID(grp_conv1_fu_188_m_axi_i1_ARID),
-    .m_axi_i1_ARLEN(grp_conv1_fu_188_m_axi_i1_ARLEN),
-    .m_axi_i1_ARSIZE(grp_conv1_fu_188_m_axi_i1_ARSIZE),
-    .m_axi_i1_ARBURST(grp_conv1_fu_188_m_axi_i1_ARBURST),
-    .m_axi_i1_ARLOCK(grp_conv1_fu_188_m_axi_i1_ARLOCK),
-    .m_axi_i1_ARCACHE(grp_conv1_fu_188_m_axi_i1_ARCACHE),
-    .m_axi_i1_ARPROT(grp_conv1_fu_188_m_axi_i1_ARPROT),
-    .m_axi_i1_ARQOS(grp_conv1_fu_188_m_axi_i1_ARQOS),
-    .m_axi_i1_ARREGION(grp_conv1_fu_188_m_axi_i1_ARREGION),
-    .m_axi_i1_ARUSER(grp_conv1_fu_188_m_axi_i1_ARUSER),
+    .m_axi_i1_ARADDR(grp_conv1_fu_274_m_axi_i1_ARADDR),
+    .m_axi_i1_ARID(grp_conv1_fu_274_m_axi_i1_ARID),
+    .m_axi_i1_ARLEN(grp_conv1_fu_274_m_axi_i1_ARLEN),
+    .m_axi_i1_ARSIZE(grp_conv1_fu_274_m_axi_i1_ARSIZE),
+    .m_axi_i1_ARBURST(grp_conv1_fu_274_m_axi_i1_ARBURST),
+    .m_axi_i1_ARLOCK(grp_conv1_fu_274_m_axi_i1_ARLOCK),
+    .m_axi_i1_ARCACHE(grp_conv1_fu_274_m_axi_i1_ARCACHE),
+    .m_axi_i1_ARPROT(grp_conv1_fu_274_m_axi_i1_ARPROT),
+    .m_axi_i1_ARQOS(grp_conv1_fu_274_m_axi_i1_ARQOS),
+    .m_axi_i1_ARREGION(grp_conv1_fu_274_m_axi_i1_ARREGION),
+    .m_axi_i1_ARUSER(grp_conv1_fu_274_m_axi_i1_ARUSER),
     .m_axi_i1_RVALID(i1_RVALID),
-    .m_axi_i1_RREADY(grp_conv1_fu_188_m_axi_i1_RREADY),
+    .m_axi_i1_RREADY(grp_conv1_fu_274_m_axi_i1_RREADY),
     .m_axi_i1_RDATA(i1_RDATA),
     .m_axi_i1_RLAST(1'b0),
     .m_axi_i1_RID(1'd0),
@@ -1266,46 +1266,46 @@ srcnn_conv1 grp_conv1_fu_188(
     .m_axi_i1_RUSER(1'd0),
     .m_axi_i1_RRESP(2'd0),
     .m_axi_i1_BVALID(1'b0),
-    .m_axi_i1_BREADY(grp_conv1_fu_188_m_axi_i1_BREADY),
+    .m_axi_i1_BREADY(grp_conv1_fu_274_m_axi_i1_BREADY),
     .m_axi_i1_BRESP(2'd0),
     .m_axi_i1_BID(1'd0),
     .m_axi_i1_BUSER(1'd0),
-    .input_ftmap(input_ftmap_read_reg_304),
-    .m_axi_w1_AWVALID(grp_conv1_fu_188_m_axi_w1_AWVALID),
+    .input_ftmap(input_ftmap_read_reg_476),
+    .m_axi_w1_AWVALID(grp_conv1_fu_274_m_axi_w1_AWVALID),
     .m_axi_w1_AWREADY(1'b0),
-    .m_axi_w1_AWADDR(grp_conv1_fu_188_m_axi_w1_AWADDR),
-    .m_axi_w1_AWID(grp_conv1_fu_188_m_axi_w1_AWID),
-    .m_axi_w1_AWLEN(grp_conv1_fu_188_m_axi_w1_AWLEN),
-    .m_axi_w1_AWSIZE(grp_conv1_fu_188_m_axi_w1_AWSIZE),
-    .m_axi_w1_AWBURST(grp_conv1_fu_188_m_axi_w1_AWBURST),
-    .m_axi_w1_AWLOCK(grp_conv1_fu_188_m_axi_w1_AWLOCK),
-    .m_axi_w1_AWCACHE(grp_conv1_fu_188_m_axi_w1_AWCACHE),
-    .m_axi_w1_AWPROT(grp_conv1_fu_188_m_axi_w1_AWPROT),
-    .m_axi_w1_AWQOS(grp_conv1_fu_188_m_axi_w1_AWQOS),
-    .m_axi_w1_AWREGION(grp_conv1_fu_188_m_axi_w1_AWREGION),
-    .m_axi_w1_AWUSER(grp_conv1_fu_188_m_axi_w1_AWUSER),
-    .m_axi_w1_WVALID(grp_conv1_fu_188_m_axi_w1_WVALID),
+    .m_axi_w1_AWADDR(grp_conv1_fu_274_m_axi_w1_AWADDR),
+    .m_axi_w1_AWID(grp_conv1_fu_274_m_axi_w1_AWID),
+    .m_axi_w1_AWLEN(grp_conv1_fu_274_m_axi_w1_AWLEN),
+    .m_axi_w1_AWSIZE(grp_conv1_fu_274_m_axi_w1_AWSIZE),
+    .m_axi_w1_AWBURST(grp_conv1_fu_274_m_axi_w1_AWBURST),
+    .m_axi_w1_AWLOCK(grp_conv1_fu_274_m_axi_w1_AWLOCK),
+    .m_axi_w1_AWCACHE(grp_conv1_fu_274_m_axi_w1_AWCACHE),
+    .m_axi_w1_AWPROT(grp_conv1_fu_274_m_axi_w1_AWPROT),
+    .m_axi_w1_AWQOS(grp_conv1_fu_274_m_axi_w1_AWQOS),
+    .m_axi_w1_AWREGION(grp_conv1_fu_274_m_axi_w1_AWREGION),
+    .m_axi_w1_AWUSER(grp_conv1_fu_274_m_axi_w1_AWUSER),
+    .m_axi_w1_WVALID(grp_conv1_fu_274_m_axi_w1_WVALID),
     .m_axi_w1_WREADY(1'b0),
-    .m_axi_w1_WDATA(grp_conv1_fu_188_m_axi_w1_WDATA),
-    .m_axi_w1_WSTRB(grp_conv1_fu_188_m_axi_w1_WSTRB),
-    .m_axi_w1_WLAST(grp_conv1_fu_188_m_axi_w1_WLAST),
-    .m_axi_w1_WID(grp_conv1_fu_188_m_axi_w1_WID),
-    .m_axi_w1_WUSER(grp_conv1_fu_188_m_axi_w1_WUSER),
-    .m_axi_w1_ARVALID(grp_conv1_fu_188_m_axi_w1_ARVALID),
+    .m_axi_w1_WDATA(grp_conv1_fu_274_m_axi_w1_WDATA),
+    .m_axi_w1_WSTRB(grp_conv1_fu_274_m_axi_w1_WSTRB),
+    .m_axi_w1_WLAST(grp_conv1_fu_274_m_axi_w1_WLAST),
+    .m_axi_w1_WID(grp_conv1_fu_274_m_axi_w1_WID),
+    .m_axi_w1_WUSER(grp_conv1_fu_274_m_axi_w1_WUSER),
+    .m_axi_w1_ARVALID(grp_conv1_fu_274_m_axi_w1_ARVALID),
     .m_axi_w1_ARREADY(w1_ARREADY),
-    .m_axi_w1_ARADDR(grp_conv1_fu_188_m_axi_w1_ARADDR),
-    .m_axi_w1_ARID(grp_conv1_fu_188_m_axi_w1_ARID),
-    .m_axi_w1_ARLEN(grp_conv1_fu_188_m_axi_w1_ARLEN),
-    .m_axi_w1_ARSIZE(grp_conv1_fu_188_m_axi_w1_ARSIZE),
-    .m_axi_w1_ARBURST(grp_conv1_fu_188_m_axi_w1_ARBURST),
-    .m_axi_w1_ARLOCK(grp_conv1_fu_188_m_axi_w1_ARLOCK),
-    .m_axi_w1_ARCACHE(grp_conv1_fu_188_m_axi_w1_ARCACHE),
-    .m_axi_w1_ARPROT(grp_conv1_fu_188_m_axi_w1_ARPROT),
-    .m_axi_w1_ARQOS(grp_conv1_fu_188_m_axi_w1_ARQOS),
-    .m_axi_w1_ARREGION(grp_conv1_fu_188_m_axi_w1_ARREGION),
-    .m_axi_w1_ARUSER(grp_conv1_fu_188_m_axi_w1_ARUSER),
+    .m_axi_w1_ARADDR(grp_conv1_fu_274_m_axi_w1_ARADDR),
+    .m_axi_w1_ARID(grp_conv1_fu_274_m_axi_w1_ARID),
+    .m_axi_w1_ARLEN(grp_conv1_fu_274_m_axi_w1_ARLEN),
+    .m_axi_w1_ARSIZE(grp_conv1_fu_274_m_axi_w1_ARSIZE),
+    .m_axi_w1_ARBURST(grp_conv1_fu_274_m_axi_w1_ARBURST),
+    .m_axi_w1_ARLOCK(grp_conv1_fu_274_m_axi_w1_ARLOCK),
+    .m_axi_w1_ARCACHE(grp_conv1_fu_274_m_axi_w1_ARCACHE),
+    .m_axi_w1_ARPROT(grp_conv1_fu_274_m_axi_w1_ARPROT),
+    .m_axi_w1_ARQOS(grp_conv1_fu_274_m_axi_w1_ARQOS),
+    .m_axi_w1_ARREGION(grp_conv1_fu_274_m_axi_w1_ARREGION),
+    .m_axi_w1_ARUSER(grp_conv1_fu_274_m_axi_w1_ARUSER),
     .m_axi_w1_RVALID(w1_RVALID),
-    .m_axi_w1_RREADY(grp_conv1_fu_188_m_axi_w1_RREADY),
+    .m_axi_w1_RREADY(grp_conv1_fu_274_m_axi_w1_RREADY),
     .m_axi_w1_RDATA(w1_RDATA),
     .m_axi_w1_RLAST(1'b0),
     .m_axi_w1_RID(1'd0),
@@ -1313,49 +1313,49 @@ srcnn_conv1 grp_conv1_fu_188(
     .m_axi_w1_RUSER(1'd0),
     .m_axi_w1_RRESP(2'd0),
     .m_axi_w1_BVALID(1'b0),
-    .m_axi_w1_BREADY(grp_conv1_fu_188_m_axi_w1_BREADY),
+    .m_axi_w1_BREADY(grp_conv1_fu_274_m_axi_w1_BREADY),
     .m_axi_w1_BRESP(2'd0),
     .m_axi_w1_BID(1'd0),
     .m_axi_w1_BUSER(1'd0),
-    .conv1_weights(conv1_weights_read_reg_299),
-    .conv1_biases_address0(grp_conv1_fu_188_conv1_biases_address0),
-    .conv1_biases_ce0(grp_conv1_fu_188_conv1_biases_ce0),
+    .conv1_weights(conv1_weights_read_reg_471),
+    .conv1_biases_address0(grp_conv1_fu_274_conv1_biases_address0),
+    .conv1_biases_ce0(grp_conv1_fu_274_conv1_biases_ce0),
     .conv1_biases_q0(conv1_biases_q0),
-    .m_axi_i2_AWVALID(grp_conv1_fu_188_m_axi_i2_AWVALID),
+    .m_axi_i2_AWVALID(grp_conv1_fu_274_m_axi_i2_AWVALID),
     .m_axi_i2_AWREADY(i2_AWREADY),
-    .m_axi_i2_AWADDR(grp_conv1_fu_188_m_axi_i2_AWADDR),
-    .m_axi_i2_AWID(grp_conv1_fu_188_m_axi_i2_AWID),
-    .m_axi_i2_AWLEN(grp_conv1_fu_188_m_axi_i2_AWLEN),
-    .m_axi_i2_AWSIZE(grp_conv1_fu_188_m_axi_i2_AWSIZE),
-    .m_axi_i2_AWBURST(grp_conv1_fu_188_m_axi_i2_AWBURST),
-    .m_axi_i2_AWLOCK(grp_conv1_fu_188_m_axi_i2_AWLOCK),
-    .m_axi_i2_AWCACHE(grp_conv1_fu_188_m_axi_i2_AWCACHE),
-    .m_axi_i2_AWPROT(grp_conv1_fu_188_m_axi_i2_AWPROT),
-    .m_axi_i2_AWQOS(grp_conv1_fu_188_m_axi_i2_AWQOS),
-    .m_axi_i2_AWREGION(grp_conv1_fu_188_m_axi_i2_AWREGION),
-    .m_axi_i2_AWUSER(grp_conv1_fu_188_m_axi_i2_AWUSER),
-    .m_axi_i2_WVALID(grp_conv1_fu_188_m_axi_i2_WVALID),
+    .m_axi_i2_AWADDR(grp_conv1_fu_274_m_axi_i2_AWADDR),
+    .m_axi_i2_AWID(grp_conv1_fu_274_m_axi_i2_AWID),
+    .m_axi_i2_AWLEN(grp_conv1_fu_274_m_axi_i2_AWLEN),
+    .m_axi_i2_AWSIZE(grp_conv1_fu_274_m_axi_i2_AWSIZE),
+    .m_axi_i2_AWBURST(grp_conv1_fu_274_m_axi_i2_AWBURST),
+    .m_axi_i2_AWLOCK(grp_conv1_fu_274_m_axi_i2_AWLOCK),
+    .m_axi_i2_AWCACHE(grp_conv1_fu_274_m_axi_i2_AWCACHE),
+    .m_axi_i2_AWPROT(grp_conv1_fu_274_m_axi_i2_AWPROT),
+    .m_axi_i2_AWQOS(grp_conv1_fu_274_m_axi_i2_AWQOS),
+    .m_axi_i2_AWREGION(grp_conv1_fu_274_m_axi_i2_AWREGION),
+    .m_axi_i2_AWUSER(grp_conv1_fu_274_m_axi_i2_AWUSER),
+    .m_axi_i2_WVALID(grp_conv1_fu_274_m_axi_i2_WVALID),
     .m_axi_i2_WREADY(i2_WREADY),
-    .m_axi_i2_WDATA(grp_conv1_fu_188_m_axi_i2_WDATA),
-    .m_axi_i2_WSTRB(grp_conv1_fu_188_m_axi_i2_WSTRB),
-    .m_axi_i2_WLAST(grp_conv1_fu_188_m_axi_i2_WLAST),
-    .m_axi_i2_WID(grp_conv1_fu_188_m_axi_i2_WID),
-    .m_axi_i2_WUSER(grp_conv1_fu_188_m_axi_i2_WUSER),
-    .m_axi_i2_ARVALID(grp_conv1_fu_188_m_axi_i2_ARVALID),
+    .m_axi_i2_WDATA(grp_conv1_fu_274_m_axi_i2_WDATA),
+    .m_axi_i2_WSTRB(grp_conv1_fu_274_m_axi_i2_WSTRB),
+    .m_axi_i2_WLAST(grp_conv1_fu_274_m_axi_i2_WLAST),
+    .m_axi_i2_WID(grp_conv1_fu_274_m_axi_i2_WID),
+    .m_axi_i2_WUSER(grp_conv1_fu_274_m_axi_i2_WUSER),
+    .m_axi_i2_ARVALID(grp_conv1_fu_274_m_axi_i2_ARVALID),
     .m_axi_i2_ARREADY(1'b0),
-    .m_axi_i2_ARADDR(grp_conv1_fu_188_m_axi_i2_ARADDR),
-    .m_axi_i2_ARID(grp_conv1_fu_188_m_axi_i2_ARID),
-    .m_axi_i2_ARLEN(grp_conv1_fu_188_m_axi_i2_ARLEN),
-    .m_axi_i2_ARSIZE(grp_conv1_fu_188_m_axi_i2_ARSIZE),
-    .m_axi_i2_ARBURST(grp_conv1_fu_188_m_axi_i2_ARBURST),
-    .m_axi_i2_ARLOCK(grp_conv1_fu_188_m_axi_i2_ARLOCK),
-    .m_axi_i2_ARCACHE(grp_conv1_fu_188_m_axi_i2_ARCACHE),
-    .m_axi_i2_ARPROT(grp_conv1_fu_188_m_axi_i2_ARPROT),
-    .m_axi_i2_ARQOS(grp_conv1_fu_188_m_axi_i2_ARQOS),
-    .m_axi_i2_ARREGION(grp_conv1_fu_188_m_axi_i2_ARREGION),
-    .m_axi_i2_ARUSER(grp_conv1_fu_188_m_axi_i2_ARUSER),
+    .m_axi_i2_ARADDR(grp_conv1_fu_274_m_axi_i2_ARADDR),
+    .m_axi_i2_ARID(grp_conv1_fu_274_m_axi_i2_ARID),
+    .m_axi_i2_ARLEN(grp_conv1_fu_274_m_axi_i2_ARLEN),
+    .m_axi_i2_ARSIZE(grp_conv1_fu_274_m_axi_i2_ARSIZE),
+    .m_axi_i2_ARBURST(grp_conv1_fu_274_m_axi_i2_ARBURST),
+    .m_axi_i2_ARLOCK(grp_conv1_fu_274_m_axi_i2_ARLOCK),
+    .m_axi_i2_ARCACHE(grp_conv1_fu_274_m_axi_i2_ARCACHE),
+    .m_axi_i2_ARPROT(grp_conv1_fu_274_m_axi_i2_ARPROT),
+    .m_axi_i2_ARQOS(grp_conv1_fu_274_m_axi_i2_ARQOS),
+    .m_axi_i2_ARREGION(grp_conv1_fu_274_m_axi_i2_ARREGION),
+    .m_axi_i2_ARUSER(grp_conv1_fu_274_m_axi_i2_ARUSER),
     .m_axi_i2_RVALID(1'b0),
-    .m_axi_i2_RREADY(grp_conv1_fu_188_m_axi_i2_RREADY),
+    .m_axi_i2_RREADY(grp_conv1_fu_274_m_axi_i2_RREADY),
     .m_axi_i2_RDATA(32'd0),
     .m_axi_i2_RLAST(1'b0),
     .m_axi_i2_RID(1'd0),
@@ -1363,55 +1363,55 @@ srcnn_conv1 grp_conv1_fu_188(
     .m_axi_i2_RUSER(1'd0),
     .m_axi_i2_RRESP(2'd0),
     .m_axi_i2_BVALID(i2_BVALID),
-    .m_axi_i2_BREADY(grp_conv1_fu_188_m_axi_i2_BREADY),
+    .m_axi_i2_BREADY(grp_conv1_fu_274_m_axi_i2_BREADY),
     .m_axi_i2_BRESP(2'd0),
     .m_axi_i2_BID(1'd0),
     .m_axi_i2_BUSER(1'd0),
-    .output_ftmap(conv1_output_ftmap_read_reg_293)
+    .output_ftmap(conv1_output_ftmap_read_reg_465)
 );
 
-srcnn_conv2 grp_conv2_fu_222(
+srcnn_conv2 grp_conv2_fu_308(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_conv2_fu_222_ap_start),
-    .ap_done(grp_conv2_fu_222_ap_done),
-    .ap_idle(grp_conv2_fu_222_ap_idle),
-    .ap_ready(grp_conv2_fu_222_ap_ready),
-    .m_axi_i2_AWVALID(grp_conv2_fu_222_m_axi_i2_AWVALID),
+    .ap_start(grp_conv2_fu_308_ap_start),
+    .ap_done(grp_conv2_fu_308_ap_done),
+    .ap_idle(grp_conv2_fu_308_ap_idle),
+    .ap_ready(grp_conv2_fu_308_ap_ready),
+    .m_axi_i2_AWVALID(grp_conv2_fu_308_m_axi_i2_AWVALID),
     .m_axi_i2_AWREADY(1'b0),
-    .m_axi_i2_AWADDR(grp_conv2_fu_222_m_axi_i2_AWADDR),
-    .m_axi_i2_AWID(grp_conv2_fu_222_m_axi_i2_AWID),
-    .m_axi_i2_AWLEN(grp_conv2_fu_222_m_axi_i2_AWLEN),
-    .m_axi_i2_AWSIZE(grp_conv2_fu_222_m_axi_i2_AWSIZE),
-    .m_axi_i2_AWBURST(grp_conv2_fu_222_m_axi_i2_AWBURST),
-    .m_axi_i2_AWLOCK(grp_conv2_fu_222_m_axi_i2_AWLOCK),
-    .m_axi_i2_AWCACHE(grp_conv2_fu_222_m_axi_i2_AWCACHE),
-    .m_axi_i2_AWPROT(grp_conv2_fu_222_m_axi_i2_AWPROT),
-    .m_axi_i2_AWQOS(grp_conv2_fu_222_m_axi_i2_AWQOS),
-    .m_axi_i2_AWREGION(grp_conv2_fu_222_m_axi_i2_AWREGION),
-    .m_axi_i2_AWUSER(grp_conv2_fu_222_m_axi_i2_AWUSER),
-    .m_axi_i2_WVALID(grp_conv2_fu_222_m_axi_i2_WVALID),
+    .m_axi_i2_AWADDR(grp_conv2_fu_308_m_axi_i2_AWADDR),
+    .m_axi_i2_AWID(grp_conv2_fu_308_m_axi_i2_AWID),
+    .m_axi_i2_AWLEN(grp_conv2_fu_308_m_axi_i2_AWLEN),
+    .m_axi_i2_AWSIZE(grp_conv2_fu_308_m_axi_i2_AWSIZE),
+    .m_axi_i2_AWBURST(grp_conv2_fu_308_m_axi_i2_AWBURST),
+    .m_axi_i2_AWLOCK(grp_conv2_fu_308_m_axi_i2_AWLOCK),
+    .m_axi_i2_AWCACHE(grp_conv2_fu_308_m_axi_i2_AWCACHE),
+    .m_axi_i2_AWPROT(grp_conv2_fu_308_m_axi_i2_AWPROT),
+    .m_axi_i2_AWQOS(grp_conv2_fu_308_m_axi_i2_AWQOS),
+    .m_axi_i2_AWREGION(grp_conv2_fu_308_m_axi_i2_AWREGION),
+    .m_axi_i2_AWUSER(grp_conv2_fu_308_m_axi_i2_AWUSER),
+    .m_axi_i2_WVALID(grp_conv2_fu_308_m_axi_i2_WVALID),
     .m_axi_i2_WREADY(1'b0),
-    .m_axi_i2_WDATA(grp_conv2_fu_222_m_axi_i2_WDATA),
-    .m_axi_i2_WSTRB(grp_conv2_fu_222_m_axi_i2_WSTRB),
-    .m_axi_i2_WLAST(grp_conv2_fu_222_m_axi_i2_WLAST),
-    .m_axi_i2_WID(grp_conv2_fu_222_m_axi_i2_WID),
-    .m_axi_i2_WUSER(grp_conv2_fu_222_m_axi_i2_WUSER),
-    .m_axi_i2_ARVALID(grp_conv2_fu_222_m_axi_i2_ARVALID),
+    .m_axi_i2_WDATA(grp_conv2_fu_308_m_axi_i2_WDATA),
+    .m_axi_i2_WSTRB(grp_conv2_fu_308_m_axi_i2_WSTRB),
+    .m_axi_i2_WLAST(grp_conv2_fu_308_m_axi_i2_WLAST),
+    .m_axi_i2_WID(grp_conv2_fu_308_m_axi_i2_WID),
+    .m_axi_i2_WUSER(grp_conv2_fu_308_m_axi_i2_WUSER),
+    .m_axi_i2_ARVALID(grp_conv2_fu_308_m_axi_i2_ARVALID),
     .m_axi_i2_ARREADY(i2_ARREADY),
-    .m_axi_i2_ARADDR(grp_conv2_fu_222_m_axi_i2_ARADDR),
-    .m_axi_i2_ARID(grp_conv2_fu_222_m_axi_i2_ARID),
-    .m_axi_i2_ARLEN(grp_conv2_fu_222_m_axi_i2_ARLEN),
-    .m_axi_i2_ARSIZE(grp_conv2_fu_222_m_axi_i2_ARSIZE),
-    .m_axi_i2_ARBURST(grp_conv2_fu_222_m_axi_i2_ARBURST),
-    .m_axi_i2_ARLOCK(grp_conv2_fu_222_m_axi_i2_ARLOCK),
-    .m_axi_i2_ARCACHE(grp_conv2_fu_222_m_axi_i2_ARCACHE),
-    .m_axi_i2_ARPROT(grp_conv2_fu_222_m_axi_i2_ARPROT),
-    .m_axi_i2_ARQOS(grp_conv2_fu_222_m_axi_i2_ARQOS),
-    .m_axi_i2_ARREGION(grp_conv2_fu_222_m_axi_i2_ARREGION),
-    .m_axi_i2_ARUSER(grp_conv2_fu_222_m_axi_i2_ARUSER),
+    .m_axi_i2_ARADDR(grp_conv2_fu_308_m_axi_i2_ARADDR),
+    .m_axi_i2_ARID(grp_conv2_fu_308_m_axi_i2_ARID),
+    .m_axi_i2_ARLEN(grp_conv2_fu_308_m_axi_i2_ARLEN),
+    .m_axi_i2_ARSIZE(grp_conv2_fu_308_m_axi_i2_ARSIZE),
+    .m_axi_i2_ARBURST(grp_conv2_fu_308_m_axi_i2_ARBURST),
+    .m_axi_i2_ARLOCK(grp_conv2_fu_308_m_axi_i2_ARLOCK),
+    .m_axi_i2_ARCACHE(grp_conv2_fu_308_m_axi_i2_ARCACHE),
+    .m_axi_i2_ARPROT(grp_conv2_fu_308_m_axi_i2_ARPROT),
+    .m_axi_i2_ARQOS(grp_conv2_fu_308_m_axi_i2_ARQOS),
+    .m_axi_i2_ARREGION(grp_conv2_fu_308_m_axi_i2_ARREGION),
+    .m_axi_i2_ARUSER(grp_conv2_fu_308_m_axi_i2_ARUSER),
     .m_axi_i2_RVALID(i2_RVALID),
-    .m_axi_i2_RREADY(grp_conv2_fu_222_m_axi_i2_RREADY),
+    .m_axi_i2_RREADY(grp_conv2_fu_308_m_axi_i2_RREADY),
     .m_axi_i2_RDATA(i2_RDATA),
     .m_axi_i2_RLAST(1'b0),
     .m_axi_i2_RID(1'd0),
@@ -1419,46 +1419,46 @@ srcnn_conv2 grp_conv2_fu_222(
     .m_axi_i2_RUSER(1'd0),
     .m_axi_i2_RRESP(2'd0),
     .m_axi_i2_BVALID(1'b0),
-    .m_axi_i2_BREADY(grp_conv2_fu_222_m_axi_i2_BREADY),
+    .m_axi_i2_BREADY(grp_conv2_fu_308_m_axi_i2_BREADY),
     .m_axi_i2_BRESP(2'd0),
     .m_axi_i2_BID(1'd0),
     .m_axi_i2_BUSER(1'd0),
-    .input_ftmap(conv1_output_ftmap_read_reg_293),
-    .m_axi_w2_AWVALID(grp_conv2_fu_222_m_axi_w2_AWVALID),
+    .input_ftmap(conv1_output_ftmap_read_reg_465),
+    .m_axi_w2_AWVALID(grp_conv2_fu_308_m_axi_w2_AWVALID),
     .m_axi_w2_AWREADY(1'b0),
-    .m_axi_w2_AWADDR(grp_conv2_fu_222_m_axi_w2_AWADDR),
-    .m_axi_w2_AWID(grp_conv2_fu_222_m_axi_w2_AWID),
-    .m_axi_w2_AWLEN(grp_conv2_fu_222_m_axi_w2_AWLEN),
-    .m_axi_w2_AWSIZE(grp_conv2_fu_222_m_axi_w2_AWSIZE),
-    .m_axi_w2_AWBURST(grp_conv2_fu_222_m_axi_w2_AWBURST),
-    .m_axi_w2_AWLOCK(grp_conv2_fu_222_m_axi_w2_AWLOCK),
-    .m_axi_w2_AWCACHE(grp_conv2_fu_222_m_axi_w2_AWCACHE),
-    .m_axi_w2_AWPROT(grp_conv2_fu_222_m_axi_w2_AWPROT),
-    .m_axi_w2_AWQOS(grp_conv2_fu_222_m_axi_w2_AWQOS),
-    .m_axi_w2_AWREGION(grp_conv2_fu_222_m_axi_w2_AWREGION),
-    .m_axi_w2_AWUSER(grp_conv2_fu_222_m_axi_w2_AWUSER),
-    .m_axi_w2_WVALID(grp_conv2_fu_222_m_axi_w2_WVALID),
+    .m_axi_w2_AWADDR(grp_conv2_fu_308_m_axi_w2_AWADDR),
+    .m_axi_w2_AWID(grp_conv2_fu_308_m_axi_w2_AWID),
+    .m_axi_w2_AWLEN(grp_conv2_fu_308_m_axi_w2_AWLEN),
+    .m_axi_w2_AWSIZE(grp_conv2_fu_308_m_axi_w2_AWSIZE),
+    .m_axi_w2_AWBURST(grp_conv2_fu_308_m_axi_w2_AWBURST),
+    .m_axi_w2_AWLOCK(grp_conv2_fu_308_m_axi_w2_AWLOCK),
+    .m_axi_w2_AWCACHE(grp_conv2_fu_308_m_axi_w2_AWCACHE),
+    .m_axi_w2_AWPROT(grp_conv2_fu_308_m_axi_w2_AWPROT),
+    .m_axi_w2_AWQOS(grp_conv2_fu_308_m_axi_w2_AWQOS),
+    .m_axi_w2_AWREGION(grp_conv2_fu_308_m_axi_w2_AWREGION),
+    .m_axi_w2_AWUSER(grp_conv2_fu_308_m_axi_w2_AWUSER),
+    .m_axi_w2_WVALID(grp_conv2_fu_308_m_axi_w2_WVALID),
     .m_axi_w2_WREADY(1'b0),
-    .m_axi_w2_WDATA(grp_conv2_fu_222_m_axi_w2_WDATA),
-    .m_axi_w2_WSTRB(grp_conv2_fu_222_m_axi_w2_WSTRB),
-    .m_axi_w2_WLAST(grp_conv2_fu_222_m_axi_w2_WLAST),
-    .m_axi_w2_WID(grp_conv2_fu_222_m_axi_w2_WID),
-    .m_axi_w2_WUSER(grp_conv2_fu_222_m_axi_w2_WUSER),
-    .m_axi_w2_ARVALID(grp_conv2_fu_222_m_axi_w2_ARVALID),
+    .m_axi_w2_WDATA(grp_conv2_fu_308_m_axi_w2_WDATA),
+    .m_axi_w2_WSTRB(grp_conv2_fu_308_m_axi_w2_WSTRB),
+    .m_axi_w2_WLAST(grp_conv2_fu_308_m_axi_w2_WLAST),
+    .m_axi_w2_WID(grp_conv2_fu_308_m_axi_w2_WID),
+    .m_axi_w2_WUSER(grp_conv2_fu_308_m_axi_w2_WUSER),
+    .m_axi_w2_ARVALID(grp_conv2_fu_308_m_axi_w2_ARVALID),
     .m_axi_w2_ARREADY(w2_ARREADY),
-    .m_axi_w2_ARADDR(grp_conv2_fu_222_m_axi_w2_ARADDR),
-    .m_axi_w2_ARID(grp_conv2_fu_222_m_axi_w2_ARID),
-    .m_axi_w2_ARLEN(grp_conv2_fu_222_m_axi_w2_ARLEN),
-    .m_axi_w2_ARSIZE(grp_conv2_fu_222_m_axi_w2_ARSIZE),
-    .m_axi_w2_ARBURST(grp_conv2_fu_222_m_axi_w2_ARBURST),
-    .m_axi_w2_ARLOCK(grp_conv2_fu_222_m_axi_w2_ARLOCK),
-    .m_axi_w2_ARCACHE(grp_conv2_fu_222_m_axi_w2_ARCACHE),
-    .m_axi_w2_ARPROT(grp_conv2_fu_222_m_axi_w2_ARPROT),
-    .m_axi_w2_ARQOS(grp_conv2_fu_222_m_axi_w2_ARQOS),
-    .m_axi_w2_ARREGION(grp_conv2_fu_222_m_axi_w2_ARREGION),
-    .m_axi_w2_ARUSER(grp_conv2_fu_222_m_axi_w2_ARUSER),
+    .m_axi_w2_ARADDR(grp_conv2_fu_308_m_axi_w2_ARADDR),
+    .m_axi_w2_ARID(grp_conv2_fu_308_m_axi_w2_ARID),
+    .m_axi_w2_ARLEN(grp_conv2_fu_308_m_axi_w2_ARLEN),
+    .m_axi_w2_ARSIZE(grp_conv2_fu_308_m_axi_w2_ARSIZE),
+    .m_axi_w2_ARBURST(grp_conv2_fu_308_m_axi_w2_ARBURST),
+    .m_axi_w2_ARLOCK(grp_conv2_fu_308_m_axi_w2_ARLOCK),
+    .m_axi_w2_ARCACHE(grp_conv2_fu_308_m_axi_w2_ARCACHE),
+    .m_axi_w2_ARPROT(grp_conv2_fu_308_m_axi_w2_ARPROT),
+    .m_axi_w2_ARQOS(grp_conv2_fu_308_m_axi_w2_ARQOS),
+    .m_axi_w2_ARREGION(grp_conv2_fu_308_m_axi_w2_ARREGION),
+    .m_axi_w2_ARUSER(grp_conv2_fu_308_m_axi_w2_ARUSER),
     .m_axi_w2_RVALID(w2_RVALID),
-    .m_axi_w2_RREADY(grp_conv2_fu_222_m_axi_w2_RREADY),
+    .m_axi_w2_RREADY(grp_conv2_fu_308_m_axi_w2_RREADY),
     .m_axi_w2_RDATA(w2_RDATA),
     .m_axi_w2_RLAST(1'b0),
     .m_axi_w2_RID(1'd0),
@@ -1466,49 +1466,49 @@ srcnn_conv2 grp_conv2_fu_222(
     .m_axi_w2_RUSER(1'd0),
     .m_axi_w2_RRESP(2'd0),
     .m_axi_w2_BVALID(1'b0),
-    .m_axi_w2_BREADY(grp_conv2_fu_222_m_axi_w2_BREADY),
+    .m_axi_w2_BREADY(grp_conv2_fu_308_m_axi_w2_BREADY),
     .m_axi_w2_BRESP(2'd0),
     .m_axi_w2_BID(1'd0),
     .m_axi_w2_BUSER(1'd0),
-    .conv2_weights(conv2_weights_read_reg_288),
-    .conv2_biases_address0(grp_conv2_fu_222_conv2_biases_address0),
-    .conv2_biases_ce0(grp_conv2_fu_222_conv2_biases_ce0),
+    .conv2_weights(conv2_weights_read_reg_460),
+    .conv2_biases_address0(grp_conv2_fu_308_conv2_biases_address0),
+    .conv2_biases_ce0(grp_conv2_fu_308_conv2_biases_ce0),
     .conv2_biases_q0(conv2_biases_q0),
-    .m_axi_i3_AWVALID(grp_conv2_fu_222_m_axi_i3_AWVALID),
+    .m_axi_i3_AWVALID(grp_conv2_fu_308_m_axi_i3_AWVALID),
     .m_axi_i3_AWREADY(i3_AWREADY),
-    .m_axi_i3_AWADDR(grp_conv2_fu_222_m_axi_i3_AWADDR),
-    .m_axi_i3_AWID(grp_conv2_fu_222_m_axi_i3_AWID),
-    .m_axi_i3_AWLEN(grp_conv2_fu_222_m_axi_i3_AWLEN),
-    .m_axi_i3_AWSIZE(grp_conv2_fu_222_m_axi_i3_AWSIZE),
-    .m_axi_i3_AWBURST(grp_conv2_fu_222_m_axi_i3_AWBURST),
-    .m_axi_i3_AWLOCK(grp_conv2_fu_222_m_axi_i3_AWLOCK),
-    .m_axi_i3_AWCACHE(grp_conv2_fu_222_m_axi_i3_AWCACHE),
-    .m_axi_i3_AWPROT(grp_conv2_fu_222_m_axi_i3_AWPROT),
-    .m_axi_i3_AWQOS(grp_conv2_fu_222_m_axi_i3_AWQOS),
-    .m_axi_i3_AWREGION(grp_conv2_fu_222_m_axi_i3_AWREGION),
-    .m_axi_i3_AWUSER(grp_conv2_fu_222_m_axi_i3_AWUSER),
-    .m_axi_i3_WVALID(grp_conv2_fu_222_m_axi_i3_WVALID),
+    .m_axi_i3_AWADDR(grp_conv2_fu_308_m_axi_i3_AWADDR),
+    .m_axi_i3_AWID(grp_conv2_fu_308_m_axi_i3_AWID),
+    .m_axi_i3_AWLEN(grp_conv2_fu_308_m_axi_i3_AWLEN),
+    .m_axi_i3_AWSIZE(grp_conv2_fu_308_m_axi_i3_AWSIZE),
+    .m_axi_i3_AWBURST(grp_conv2_fu_308_m_axi_i3_AWBURST),
+    .m_axi_i3_AWLOCK(grp_conv2_fu_308_m_axi_i3_AWLOCK),
+    .m_axi_i3_AWCACHE(grp_conv2_fu_308_m_axi_i3_AWCACHE),
+    .m_axi_i3_AWPROT(grp_conv2_fu_308_m_axi_i3_AWPROT),
+    .m_axi_i3_AWQOS(grp_conv2_fu_308_m_axi_i3_AWQOS),
+    .m_axi_i3_AWREGION(grp_conv2_fu_308_m_axi_i3_AWREGION),
+    .m_axi_i3_AWUSER(grp_conv2_fu_308_m_axi_i3_AWUSER),
+    .m_axi_i3_WVALID(grp_conv2_fu_308_m_axi_i3_WVALID),
     .m_axi_i3_WREADY(i3_WREADY),
-    .m_axi_i3_WDATA(grp_conv2_fu_222_m_axi_i3_WDATA),
-    .m_axi_i3_WSTRB(grp_conv2_fu_222_m_axi_i3_WSTRB),
-    .m_axi_i3_WLAST(grp_conv2_fu_222_m_axi_i3_WLAST),
-    .m_axi_i3_WID(grp_conv2_fu_222_m_axi_i3_WID),
-    .m_axi_i3_WUSER(grp_conv2_fu_222_m_axi_i3_WUSER),
-    .m_axi_i3_ARVALID(grp_conv2_fu_222_m_axi_i3_ARVALID),
+    .m_axi_i3_WDATA(grp_conv2_fu_308_m_axi_i3_WDATA),
+    .m_axi_i3_WSTRB(grp_conv2_fu_308_m_axi_i3_WSTRB),
+    .m_axi_i3_WLAST(grp_conv2_fu_308_m_axi_i3_WLAST),
+    .m_axi_i3_WID(grp_conv2_fu_308_m_axi_i3_WID),
+    .m_axi_i3_WUSER(grp_conv2_fu_308_m_axi_i3_WUSER),
+    .m_axi_i3_ARVALID(grp_conv2_fu_308_m_axi_i3_ARVALID),
     .m_axi_i3_ARREADY(1'b0),
-    .m_axi_i3_ARADDR(grp_conv2_fu_222_m_axi_i3_ARADDR),
-    .m_axi_i3_ARID(grp_conv2_fu_222_m_axi_i3_ARID),
-    .m_axi_i3_ARLEN(grp_conv2_fu_222_m_axi_i3_ARLEN),
-    .m_axi_i3_ARSIZE(grp_conv2_fu_222_m_axi_i3_ARSIZE),
-    .m_axi_i3_ARBURST(grp_conv2_fu_222_m_axi_i3_ARBURST),
-    .m_axi_i3_ARLOCK(grp_conv2_fu_222_m_axi_i3_ARLOCK),
-    .m_axi_i3_ARCACHE(grp_conv2_fu_222_m_axi_i3_ARCACHE),
-    .m_axi_i3_ARPROT(grp_conv2_fu_222_m_axi_i3_ARPROT),
-    .m_axi_i3_ARQOS(grp_conv2_fu_222_m_axi_i3_ARQOS),
-    .m_axi_i3_ARREGION(grp_conv2_fu_222_m_axi_i3_ARREGION),
-    .m_axi_i3_ARUSER(grp_conv2_fu_222_m_axi_i3_ARUSER),
+    .m_axi_i3_ARADDR(grp_conv2_fu_308_m_axi_i3_ARADDR),
+    .m_axi_i3_ARID(grp_conv2_fu_308_m_axi_i3_ARID),
+    .m_axi_i3_ARLEN(grp_conv2_fu_308_m_axi_i3_ARLEN),
+    .m_axi_i3_ARSIZE(grp_conv2_fu_308_m_axi_i3_ARSIZE),
+    .m_axi_i3_ARBURST(grp_conv2_fu_308_m_axi_i3_ARBURST),
+    .m_axi_i3_ARLOCK(grp_conv2_fu_308_m_axi_i3_ARLOCK),
+    .m_axi_i3_ARCACHE(grp_conv2_fu_308_m_axi_i3_ARCACHE),
+    .m_axi_i3_ARPROT(grp_conv2_fu_308_m_axi_i3_ARPROT),
+    .m_axi_i3_ARQOS(grp_conv2_fu_308_m_axi_i3_ARQOS),
+    .m_axi_i3_ARREGION(grp_conv2_fu_308_m_axi_i3_ARREGION),
+    .m_axi_i3_ARUSER(grp_conv2_fu_308_m_axi_i3_ARUSER),
     .m_axi_i3_RVALID(1'b0),
-    .m_axi_i3_RREADY(grp_conv2_fu_222_m_axi_i3_RREADY),
+    .m_axi_i3_RREADY(grp_conv2_fu_308_m_axi_i3_RREADY),
     .m_axi_i3_RDATA(32'd0),
     .m_axi_i3_RLAST(1'b0),
     .m_axi_i3_RID(1'd0),
@@ -1516,55 +1516,55 @@ srcnn_conv2 grp_conv2_fu_222(
     .m_axi_i3_RUSER(1'd0),
     .m_axi_i3_RRESP(2'd0),
     .m_axi_i3_BVALID(i3_BVALID),
-    .m_axi_i3_BREADY(grp_conv2_fu_222_m_axi_i3_BREADY),
+    .m_axi_i3_BREADY(grp_conv2_fu_308_m_axi_i3_BREADY),
     .m_axi_i3_BRESP(2'd0),
     .m_axi_i3_BID(1'd0),
     .m_axi_i3_BUSER(1'd0),
-    .output_ftmap(conv2_output_ftmap_read_reg_282)
+    .output_ftmap(conv2_output_ftmap_read_reg_454)
 );
 
-srcnn_conv3 grp_conv3_fu_243(
+srcnn_conv3 grp_conv3_fu_415(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_conv3_fu_243_ap_start),
-    .ap_done(grp_conv3_fu_243_ap_done),
-    .ap_idle(grp_conv3_fu_243_ap_idle),
-    .ap_ready(grp_conv3_fu_243_ap_ready),
-    .m_axi_i3_AWVALID(grp_conv3_fu_243_m_axi_i3_AWVALID),
+    .ap_start(grp_conv3_fu_415_ap_start),
+    .ap_done(grp_conv3_fu_415_ap_done),
+    .ap_idle(grp_conv3_fu_415_ap_idle),
+    .ap_ready(grp_conv3_fu_415_ap_ready),
+    .m_axi_i3_AWVALID(grp_conv3_fu_415_m_axi_i3_AWVALID),
     .m_axi_i3_AWREADY(1'b0),
-    .m_axi_i3_AWADDR(grp_conv3_fu_243_m_axi_i3_AWADDR),
-    .m_axi_i3_AWID(grp_conv3_fu_243_m_axi_i3_AWID),
-    .m_axi_i3_AWLEN(grp_conv3_fu_243_m_axi_i3_AWLEN),
-    .m_axi_i3_AWSIZE(grp_conv3_fu_243_m_axi_i3_AWSIZE),
-    .m_axi_i3_AWBURST(grp_conv3_fu_243_m_axi_i3_AWBURST),
-    .m_axi_i3_AWLOCK(grp_conv3_fu_243_m_axi_i3_AWLOCK),
-    .m_axi_i3_AWCACHE(grp_conv3_fu_243_m_axi_i3_AWCACHE),
-    .m_axi_i3_AWPROT(grp_conv3_fu_243_m_axi_i3_AWPROT),
-    .m_axi_i3_AWQOS(grp_conv3_fu_243_m_axi_i3_AWQOS),
-    .m_axi_i3_AWREGION(grp_conv3_fu_243_m_axi_i3_AWREGION),
-    .m_axi_i3_AWUSER(grp_conv3_fu_243_m_axi_i3_AWUSER),
-    .m_axi_i3_WVALID(grp_conv3_fu_243_m_axi_i3_WVALID),
+    .m_axi_i3_AWADDR(grp_conv3_fu_415_m_axi_i3_AWADDR),
+    .m_axi_i3_AWID(grp_conv3_fu_415_m_axi_i3_AWID),
+    .m_axi_i3_AWLEN(grp_conv3_fu_415_m_axi_i3_AWLEN),
+    .m_axi_i3_AWSIZE(grp_conv3_fu_415_m_axi_i3_AWSIZE),
+    .m_axi_i3_AWBURST(grp_conv3_fu_415_m_axi_i3_AWBURST),
+    .m_axi_i3_AWLOCK(grp_conv3_fu_415_m_axi_i3_AWLOCK),
+    .m_axi_i3_AWCACHE(grp_conv3_fu_415_m_axi_i3_AWCACHE),
+    .m_axi_i3_AWPROT(grp_conv3_fu_415_m_axi_i3_AWPROT),
+    .m_axi_i3_AWQOS(grp_conv3_fu_415_m_axi_i3_AWQOS),
+    .m_axi_i3_AWREGION(grp_conv3_fu_415_m_axi_i3_AWREGION),
+    .m_axi_i3_AWUSER(grp_conv3_fu_415_m_axi_i3_AWUSER),
+    .m_axi_i3_WVALID(grp_conv3_fu_415_m_axi_i3_WVALID),
     .m_axi_i3_WREADY(1'b0),
-    .m_axi_i3_WDATA(grp_conv3_fu_243_m_axi_i3_WDATA),
-    .m_axi_i3_WSTRB(grp_conv3_fu_243_m_axi_i3_WSTRB),
-    .m_axi_i3_WLAST(grp_conv3_fu_243_m_axi_i3_WLAST),
-    .m_axi_i3_WID(grp_conv3_fu_243_m_axi_i3_WID),
-    .m_axi_i3_WUSER(grp_conv3_fu_243_m_axi_i3_WUSER),
-    .m_axi_i3_ARVALID(grp_conv3_fu_243_m_axi_i3_ARVALID),
+    .m_axi_i3_WDATA(grp_conv3_fu_415_m_axi_i3_WDATA),
+    .m_axi_i3_WSTRB(grp_conv3_fu_415_m_axi_i3_WSTRB),
+    .m_axi_i3_WLAST(grp_conv3_fu_415_m_axi_i3_WLAST),
+    .m_axi_i3_WID(grp_conv3_fu_415_m_axi_i3_WID),
+    .m_axi_i3_WUSER(grp_conv3_fu_415_m_axi_i3_WUSER),
+    .m_axi_i3_ARVALID(grp_conv3_fu_415_m_axi_i3_ARVALID),
     .m_axi_i3_ARREADY(i3_ARREADY),
-    .m_axi_i3_ARADDR(grp_conv3_fu_243_m_axi_i3_ARADDR),
-    .m_axi_i3_ARID(grp_conv3_fu_243_m_axi_i3_ARID),
-    .m_axi_i3_ARLEN(grp_conv3_fu_243_m_axi_i3_ARLEN),
-    .m_axi_i3_ARSIZE(grp_conv3_fu_243_m_axi_i3_ARSIZE),
-    .m_axi_i3_ARBURST(grp_conv3_fu_243_m_axi_i3_ARBURST),
-    .m_axi_i3_ARLOCK(grp_conv3_fu_243_m_axi_i3_ARLOCK),
-    .m_axi_i3_ARCACHE(grp_conv3_fu_243_m_axi_i3_ARCACHE),
-    .m_axi_i3_ARPROT(grp_conv3_fu_243_m_axi_i3_ARPROT),
-    .m_axi_i3_ARQOS(grp_conv3_fu_243_m_axi_i3_ARQOS),
-    .m_axi_i3_ARREGION(grp_conv3_fu_243_m_axi_i3_ARREGION),
-    .m_axi_i3_ARUSER(grp_conv3_fu_243_m_axi_i3_ARUSER),
+    .m_axi_i3_ARADDR(grp_conv3_fu_415_m_axi_i3_ARADDR),
+    .m_axi_i3_ARID(grp_conv3_fu_415_m_axi_i3_ARID),
+    .m_axi_i3_ARLEN(grp_conv3_fu_415_m_axi_i3_ARLEN),
+    .m_axi_i3_ARSIZE(grp_conv3_fu_415_m_axi_i3_ARSIZE),
+    .m_axi_i3_ARBURST(grp_conv3_fu_415_m_axi_i3_ARBURST),
+    .m_axi_i3_ARLOCK(grp_conv3_fu_415_m_axi_i3_ARLOCK),
+    .m_axi_i3_ARCACHE(grp_conv3_fu_415_m_axi_i3_ARCACHE),
+    .m_axi_i3_ARPROT(grp_conv3_fu_415_m_axi_i3_ARPROT),
+    .m_axi_i3_ARQOS(grp_conv3_fu_415_m_axi_i3_ARQOS),
+    .m_axi_i3_ARREGION(grp_conv3_fu_415_m_axi_i3_ARREGION),
+    .m_axi_i3_ARUSER(grp_conv3_fu_415_m_axi_i3_ARUSER),
     .m_axi_i3_RVALID(i3_RVALID),
-    .m_axi_i3_RREADY(grp_conv3_fu_243_m_axi_i3_RREADY),
+    .m_axi_i3_RREADY(grp_conv3_fu_415_m_axi_i3_RREADY),
     .m_axi_i3_RDATA(i3_RDATA),
     .m_axi_i3_RLAST(1'b0),
     .m_axi_i3_RID(1'd0),
@@ -1572,46 +1572,46 @@ srcnn_conv3 grp_conv3_fu_243(
     .m_axi_i3_RUSER(1'd0),
     .m_axi_i3_RRESP(2'd0),
     .m_axi_i3_BVALID(1'b0),
-    .m_axi_i3_BREADY(grp_conv3_fu_243_m_axi_i3_BREADY),
+    .m_axi_i3_BREADY(grp_conv3_fu_415_m_axi_i3_BREADY),
     .m_axi_i3_BRESP(2'd0),
     .m_axi_i3_BID(1'd0),
     .m_axi_i3_BUSER(1'd0),
-    .input_ftmap(conv2_output_ftmap_read_reg_282),
-    .m_axi_w3_AWVALID(grp_conv3_fu_243_m_axi_w3_AWVALID),
+    .input_ftmap(conv2_output_ftmap_read_reg_454),
+    .m_axi_w3_AWVALID(grp_conv3_fu_415_m_axi_w3_AWVALID),
     .m_axi_w3_AWREADY(1'b0),
-    .m_axi_w3_AWADDR(grp_conv3_fu_243_m_axi_w3_AWADDR),
-    .m_axi_w3_AWID(grp_conv3_fu_243_m_axi_w3_AWID),
-    .m_axi_w3_AWLEN(grp_conv3_fu_243_m_axi_w3_AWLEN),
-    .m_axi_w3_AWSIZE(grp_conv3_fu_243_m_axi_w3_AWSIZE),
-    .m_axi_w3_AWBURST(grp_conv3_fu_243_m_axi_w3_AWBURST),
-    .m_axi_w3_AWLOCK(grp_conv3_fu_243_m_axi_w3_AWLOCK),
-    .m_axi_w3_AWCACHE(grp_conv3_fu_243_m_axi_w3_AWCACHE),
-    .m_axi_w3_AWPROT(grp_conv3_fu_243_m_axi_w3_AWPROT),
-    .m_axi_w3_AWQOS(grp_conv3_fu_243_m_axi_w3_AWQOS),
-    .m_axi_w3_AWREGION(grp_conv3_fu_243_m_axi_w3_AWREGION),
-    .m_axi_w3_AWUSER(grp_conv3_fu_243_m_axi_w3_AWUSER),
-    .m_axi_w3_WVALID(grp_conv3_fu_243_m_axi_w3_WVALID),
+    .m_axi_w3_AWADDR(grp_conv3_fu_415_m_axi_w3_AWADDR),
+    .m_axi_w3_AWID(grp_conv3_fu_415_m_axi_w3_AWID),
+    .m_axi_w3_AWLEN(grp_conv3_fu_415_m_axi_w3_AWLEN),
+    .m_axi_w3_AWSIZE(grp_conv3_fu_415_m_axi_w3_AWSIZE),
+    .m_axi_w3_AWBURST(grp_conv3_fu_415_m_axi_w3_AWBURST),
+    .m_axi_w3_AWLOCK(grp_conv3_fu_415_m_axi_w3_AWLOCK),
+    .m_axi_w3_AWCACHE(grp_conv3_fu_415_m_axi_w3_AWCACHE),
+    .m_axi_w3_AWPROT(grp_conv3_fu_415_m_axi_w3_AWPROT),
+    .m_axi_w3_AWQOS(grp_conv3_fu_415_m_axi_w3_AWQOS),
+    .m_axi_w3_AWREGION(grp_conv3_fu_415_m_axi_w3_AWREGION),
+    .m_axi_w3_AWUSER(grp_conv3_fu_415_m_axi_w3_AWUSER),
+    .m_axi_w3_WVALID(grp_conv3_fu_415_m_axi_w3_WVALID),
     .m_axi_w3_WREADY(1'b0),
-    .m_axi_w3_WDATA(grp_conv3_fu_243_m_axi_w3_WDATA),
-    .m_axi_w3_WSTRB(grp_conv3_fu_243_m_axi_w3_WSTRB),
-    .m_axi_w3_WLAST(grp_conv3_fu_243_m_axi_w3_WLAST),
-    .m_axi_w3_WID(grp_conv3_fu_243_m_axi_w3_WID),
-    .m_axi_w3_WUSER(grp_conv3_fu_243_m_axi_w3_WUSER),
-    .m_axi_w3_ARVALID(grp_conv3_fu_243_m_axi_w3_ARVALID),
+    .m_axi_w3_WDATA(grp_conv3_fu_415_m_axi_w3_WDATA),
+    .m_axi_w3_WSTRB(grp_conv3_fu_415_m_axi_w3_WSTRB),
+    .m_axi_w3_WLAST(grp_conv3_fu_415_m_axi_w3_WLAST),
+    .m_axi_w3_WID(grp_conv3_fu_415_m_axi_w3_WID),
+    .m_axi_w3_WUSER(grp_conv3_fu_415_m_axi_w3_WUSER),
+    .m_axi_w3_ARVALID(grp_conv3_fu_415_m_axi_w3_ARVALID),
     .m_axi_w3_ARREADY(w3_ARREADY),
-    .m_axi_w3_ARADDR(grp_conv3_fu_243_m_axi_w3_ARADDR),
-    .m_axi_w3_ARID(grp_conv3_fu_243_m_axi_w3_ARID),
-    .m_axi_w3_ARLEN(grp_conv3_fu_243_m_axi_w3_ARLEN),
-    .m_axi_w3_ARSIZE(grp_conv3_fu_243_m_axi_w3_ARSIZE),
-    .m_axi_w3_ARBURST(grp_conv3_fu_243_m_axi_w3_ARBURST),
-    .m_axi_w3_ARLOCK(grp_conv3_fu_243_m_axi_w3_ARLOCK),
-    .m_axi_w3_ARCACHE(grp_conv3_fu_243_m_axi_w3_ARCACHE),
-    .m_axi_w3_ARPROT(grp_conv3_fu_243_m_axi_w3_ARPROT),
-    .m_axi_w3_ARQOS(grp_conv3_fu_243_m_axi_w3_ARQOS),
-    .m_axi_w3_ARREGION(grp_conv3_fu_243_m_axi_w3_ARREGION),
-    .m_axi_w3_ARUSER(grp_conv3_fu_243_m_axi_w3_ARUSER),
+    .m_axi_w3_ARADDR(grp_conv3_fu_415_m_axi_w3_ARADDR),
+    .m_axi_w3_ARID(grp_conv3_fu_415_m_axi_w3_ARID),
+    .m_axi_w3_ARLEN(grp_conv3_fu_415_m_axi_w3_ARLEN),
+    .m_axi_w3_ARSIZE(grp_conv3_fu_415_m_axi_w3_ARSIZE),
+    .m_axi_w3_ARBURST(grp_conv3_fu_415_m_axi_w3_ARBURST),
+    .m_axi_w3_ARLOCK(grp_conv3_fu_415_m_axi_w3_ARLOCK),
+    .m_axi_w3_ARCACHE(grp_conv3_fu_415_m_axi_w3_ARCACHE),
+    .m_axi_w3_ARPROT(grp_conv3_fu_415_m_axi_w3_ARPROT),
+    .m_axi_w3_ARQOS(grp_conv3_fu_415_m_axi_w3_ARQOS),
+    .m_axi_w3_ARREGION(grp_conv3_fu_415_m_axi_w3_ARREGION),
+    .m_axi_w3_ARUSER(grp_conv3_fu_415_m_axi_w3_ARUSER),
     .m_axi_w3_RVALID(w3_RVALID),
-    .m_axi_w3_RREADY(grp_conv3_fu_243_m_axi_w3_RREADY),
+    .m_axi_w3_RREADY(grp_conv3_fu_415_m_axi_w3_RREADY),
     .m_axi_w3_RDATA(w3_RDATA),
     .m_axi_w3_RLAST(1'b0),
     .m_axi_w3_RID(1'd0),
@@ -1619,47 +1619,47 @@ srcnn_conv3 grp_conv3_fu_243(
     .m_axi_w3_RUSER(1'd0),
     .m_axi_w3_RRESP(2'd0),
     .m_axi_w3_BVALID(1'b0),
-    .m_axi_w3_BREADY(grp_conv3_fu_243_m_axi_w3_BREADY),
+    .m_axi_w3_BREADY(grp_conv3_fu_415_m_axi_w3_BREADY),
     .m_axi_w3_BRESP(2'd0),
     .m_axi_w3_BID(1'd0),
     .m_axi_w3_BUSER(1'd0),
-    .conv3_weights(conv3_weights_read_reg_277),
-    .conv3_biases_0_0_val(empty_reg_309),
-    .m_axi_o_AWVALID(grp_conv3_fu_243_m_axi_o_AWVALID),
+    .conv3_weights(conv3_weights_read_reg_449),
+    .conv3_biases_0_0_val(empty_reg_481),
+    .m_axi_o_AWVALID(grp_conv3_fu_415_m_axi_o_AWVALID),
     .m_axi_o_AWREADY(o_AWREADY),
-    .m_axi_o_AWADDR(grp_conv3_fu_243_m_axi_o_AWADDR),
-    .m_axi_o_AWID(grp_conv3_fu_243_m_axi_o_AWID),
-    .m_axi_o_AWLEN(grp_conv3_fu_243_m_axi_o_AWLEN),
-    .m_axi_o_AWSIZE(grp_conv3_fu_243_m_axi_o_AWSIZE),
-    .m_axi_o_AWBURST(grp_conv3_fu_243_m_axi_o_AWBURST),
-    .m_axi_o_AWLOCK(grp_conv3_fu_243_m_axi_o_AWLOCK),
-    .m_axi_o_AWCACHE(grp_conv3_fu_243_m_axi_o_AWCACHE),
-    .m_axi_o_AWPROT(grp_conv3_fu_243_m_axi_o_AWPROT),
-    .m_axi_o_AWQOS(grp_conv3_fu_243_m_axi_o_AWQOS),
-    .m_axi_o_AWREGION(grp_conv3_fu_243_m_axi_o_AWREGION),
-    .m_axi_o_AWUSER(grp_conv3_fu_243_m_axi_o_AWUSER),
-    .m_axi_o_WVALID(grp_conv3_fu_243_m_axi_o_WVALID),
+    .m_axi_o_AWADDR(grp_conv3_fu_415_m_axi_o_AWADDR),
+    .m_axi_o_AWID(grp_conv3_fu_415_m_axi_o_AWID),
+    .m_axi_o_AWLEN(grp_conv3_fu_415_m_axi_o_AWLEN),
+    .m_axi_o_AWSIZE(grp_conv3_fu_415_m_axi_o_AWSIZE),
+    .m_axi_o_AWBURST(grp_conv3_fu_415_m_axi_o_AWBURST),
+    .m_axi_o_AWLOCK(grp_conv3_fu_415_m_axi_o_AWLOCK),
+    .m_axi_o_AWCACHE(grp_conv3_fu_415_m_axi_o_AWCACHE),
+    .m_axi_o_AWPROT(grp_conv3_fu_415_m_axi_o_AWPROT),
+    .m_axi_o_AWQOS(grp_conv3_fu_415_m_axi_o_AWQOS),
+    .m_axi_o_AWREGION(grp_conv3_fu_415_m_axi_o_AWREGION),
+    .m_axi_o_AWUSER(grp_conv3_fu_415_m_axi_o_AWUSER),
+    .m_axi_o_WVALID(grp_conv3_fu_415_m_axi_o_WVALID),
     .m_axi_o_WREADY(o_WREADY),
-    .m_axi_o_WDATA(grp_conv3_fu_243_m_axi_o_WDATA),
-    .m_axi_o_WSTRB(grp_conv3_fu_243_m_axi_o_WSTRB),
-    .m_axi_o_WLAST(grp_conv3_fu_243_m_axi_o_WLAST),
-    .m_axi_o_WID(grp_conv3_fu_243_m_axi_o_WID),
-    .m_axi_o_WUSER(grp_conv3_fu_243_m_axi_o_WUSER),
-    .m_axi_o_ARVALID(grp_conv3_fu_243_m_axi_o_ARVALID),
+    .m_axi_o_WDATA(grp_conv3_fu_415_m_axi_o_WDATA),
+    .m_axi_o_WSTRB(grp_conv3_fu_415_m_axi_o_WSTRB),
+    .m_axi_o_WLAST(grp_conv3_fu_415_m_axi_o_WLAST),
+    .m_axi_o_WID(grp_conv3_fu_415_m_axi_o_WID),
+    .m_axi_o_WUSER(grp_conv3_fu_415_m_axi_o_WUSER),
+    .m_axi_o_ARVALID(grp_conv3_fu_415_m_axi_o_ARVALID),
     .m_axi_o_ARREADY(1'b0),
-    .m_axi_o_ARADDR(grp_conv3_fu_243_m_axi_o_ARADDR),
-    .m_axi_o_ARID(grp_conv3_fu_243_m_axi_o_ARID),
-    .m_axi_o_ARLEN(grp_conv3_fu_243_m_axi_o_ARLEN),
-    .m_axi_o_ARSIZE(grp_conv3_fu_243_m_axi_o_ARSIZE),
-    .m_axi_o_ARBURST(grp_conv3_fu_243_m_axi_o_ARBURST),
-    .m_axi_o_ARLOCK(grp_conv3_fu_243_m_axi_o_ARLOCK),
-    .m_axi_o_ARCACHE(grp_conv3_fu_243_m_axi_o_ARCACHE),
-    .m_axi_o_ARPROT(grp_conv3_fu_243_m_axi_o_ARPROT),
-    .m_axi_o_ARQOS(grp_conv3_fu_243_m_axi_o_ARQOS),
-    .m_axi_o_ARREGION(grp_conv3_fu_243_m_axi_o_ARREGION),
-    .m_axi_o_ARUSER(grp_conv3_fu_243_m_axi_o_ARUSER),
+    .m_axi_o_ARADDR(grp_conv3_fu_415_m_axi_o_ARADDR),
+    .m_axi_o_ARID(grp_conv3_fu_415_m_axi_o_ARID),
+    .m_axi_o_ARLEN(grp_conv3_fu_415_m_axi_o_ARLEN),
+    .m_axi_o_ARSIZE(grp_conv3_fu_415_m_axi_o_ARSIZE),
+    .m_axi_o_ARBURST(grp_conv3_fu_415_m_axi_o_ARBURST),
+    .m_axi_o_ARLOCK(grp_conv3_fu_415_m_axi_o_ARLOCK),
+    .m_axi_o_ARCACHE(grp_conv3_fu_415_m_axi_o_ARCACHE),
+    .m_axi_o_ARPROT(grp_conv3_fu_415_m_axi_o_ARPROT),
+    .m_axi_o_ARQOS(grp_conv3_fu_415_m_axi_o_ARQOS),
+    .m_axi_o_ARREGION(grp_conv3_fu_415_m_axi_o_ARREGION),
+    .m_axi_o_ARUSER(grp_conv3_fu_415_m_axi_o_ARUSER),
     .m_axi_o_RVALID(1'b0),
-    .m_axi_o_RREADY(grp_conv3_fu_243_m_axi_o_RREADY),
+    .m_axi_o_RREADY(grp_conv3_fu_415_m_axi_o_RREADY),
     .m_axi_o_RDATA(32'd0),
     .m_axi_o_RLAST(1'b0),
     .m_axi_o_RID(1'd0),
@@ -1667,11 +1667,11 @@ srcnn_conv3 grp_conv3_fu_243(
     .m_axi_o_RUSER(1'd0),
     .m_axi_o_RRESP(2'd0),
     .m_axi_o_BVALID(o_BVALID),
-    .m_axi_o_BREADY(grp_conv3_fu_243_m_axi_o_BREADY),
+    .m_axi_o_BREADY(grp_conv3_fu_415_m_axi_o_BREADY),
     .m_axi_o_BRESP(2'd0),
     .m_axi_o_BID(1'd0),
     .m_axi_o_BUSER(1'd0),
-    .output_ftmap(output_ftmap_read_reg_272)
+    .output_ftmap(output_ftmap_read_reg_444)
 );
 
 srcnn_control_s_axi #(
@@ -1784,8 +1784,8 @@ i1_m_axi_U(
     .ACLK_EN(1'b1),
     .I_ARVALID(i1_ARVALID),
     .I_ARREADY(i1_ARREADY),
-    .I_ARADDR(grp_conv1_fu_188_m_axi_i1_ARADDR),
-    .I_ARLEN(grp_conv1_fu_188_m_axi_i1_ARLEN),
+    .I_ARADDR(grp_conv1_fu_274_m_axi_i1_ARADDR),
+    .I_ARLEN(grp_conv1_fu_274_m_axi_i1_ARLEN),
     .I_RVALID(i1_RVALID),
     .I_RREADY(i1_RREADY),
     .I_RDATA(i1_RDATA),
@@ -1874,20 +1874,20 @@ i2_m_axi_U(
     .ACLK_EN(1'b1),
     .I_ARVALID(i2_ARVALID),
     .I_ARREADY(i2_ARREADY),
-    .I_ARADDR(grp_conv2_fu_222_m_axi_i2_ARADDR),
-    .I_ARLEN(grp_conv2_fu_222_m_axi_i2_ARLEN),
+    .I_ARADDR(grp_conv2_fu_308_m_axi_i2_ARADDR),
+    .I_ARLEN(grp_conv2_fu_308_m_axi_i2_ARLEN),
     .I_RVALID(i2_RVALID),
     .I_RREADY(i2_RREADY),
     .I_RDATA(i2_RDATA),
     .I_RFIFONUM(i2_RFIFONUM),
     .I_AWVALID(i2_AWVALID),
     .I_AWREADY(i2_AWREADY),
-    .I_AWADDR(grp_conv1_fu_188_m_axi_i2_AWADDR),
-    .I_AWLEN(grp_conv1_fu_188_m_axi_i2_AWLEN),
+    .I_AWADDR(grp_conv1_fu_274_m_axi_i2_AWADDR),
+    .I_AWLEN(grp_conv1_fu_274_m_axi_i2_AWLEN),
     .I_WVALID(i2_WVALID),
     .I_WREADY(i2_WREADY),
-    .I_WDATA(grp_conv1_fu_188_m_axi_i2_WDATA),
-    .I_WSTRB(grp_conv1_fu_188_m_axi_i2_WSTRB),
+    .I_WDATA(grp_conv1_fu_274_m_axi_i2_WDATA),
+    .I_WSTRB(grp_conv1_fu_274_m_axi_i2_WSTRB),
     .I_BVALID(i2_BVALID),
     .I_BREADY(i2_BREADY)
 );
@@ -1964,20 +1964,20 @@ i3_m_axi_U(
     .ACLK_EN(1'b1),
     .I_ARVALID(i3_ARVALID),
     .I_ARREADY(i3_ARREADY),
-    .I_ARADDR(grp_conv3_fu_243_m_axi_i3_ARADDR),
-    .I_ARLEN(grp_conv3_fu_243_m_axi_i3_ARLEN),
+    .I_ARADDR(grp_conv3_fu_415_m_axi_i3_ARADDR),
+    .I_ARLEN(grp_conv3_fu_415_m_axi_i3_ARLEN),
     .I_RVALID(i3_RVALID),
     .I_RREADY(i3_RREADY),
     .I_RDATA(i3_RDATA),
     .I_RFIFONUM(i3_RFIFONUM),
     .I_AWVALID(i3_AWVALID),
     .I_AWREADY(i3_AWREADY),
-    .I_AWADDR(grp_conv2_fu_222_m_axi_i3_AWADDR),
-    .I_AWLEN(grp_conv2_fu_222_m_axi_i3_AWLEN),
+    .I_AWADDR(grp_conv2_fu_308_m_axi_i3_AWADDR),
+    .I_AWLEN(grp_conv2_fu_308_m_axi_i3_AWLEN),
     .I_WVALID(i3_WVALID),
     .I_WREADY(i3_WREADY),
-    .I_WDATA(grp_conv2_fu_222_m_axi_i3_WDATA),
-    .I_WSTRB(grp_conv2_fu_222_m_axi_i3_WSTRB),
+    .I_WDATA(grp_conv2_fu_308_m_axi_i3_WDATA),
+    .I_WSTRB(grp_conv2_fu_308_m_axi_i3_WSTRB),
     .I_BVALID(i3_BVALID),
     .I_BREADY(i3_BREADY)
 );
@@ -2062,12 +2062,12 @@ o_m_axi_U(
     .I_RFIFONUM(o_RFIFONUM),
     .I_AWVALID(o_AWVALID),
     .I_AWREADY(o_AWREADY),
-    .I_AWADDR(grp_conv3_fu_243_m_axi_o_AWADDR),
-    .I_AWLEN(grp_conv3_fu_243_m_axi_o_AWLEN),
+    .I_AWADDR(grp_conv3_fu_415_m_axi_o_AWADDR),
+    .I_AWLEN(grp_conv3_fu_415_m_axi_o_AWLEN),
     .I_WVALID(o_WVALID),
     .I_WREADY(o_WREADY),
-    .I_WDATA(grp_conv3_fu_243_m_axi_o_WDATA),
-    .I_WSTRB(grp_conv3_fu_243_m_axi_o_WSTRB),
+    .I_WDATA(grp_conv3_fu_415_m_axi_o_WDATA),
+    .I_WSTRB(grp_conv3_fu_415_m_axi_o_WSTRB),
     .I_BVALID(o_BVALID),
     .I_BREADY(o_BREADY)
 );
@@ -2144,8 +2144,8 @@ w1_m_axi_U(
     .ACLK_EN(1'b1),
     .I_ARVALID(w1_ARVALID),
     .I_ARREADY(w1_ARREADY),
-    .I_ARADDR(grp_conv1_fu_188_m_axi_w1_ARADDR),
-    .I_ARLEN(grp_conv1_fu_188_m_axi_w1_ARLEN),
+    .I_ARADDR(grp_conv1_fu_274_m_axi_w1_ARADDR),
+    .I_ARLEN(grp_conv1_fu_274_m_axi_w1_ARLEN),
     .I_RVALID(w1_RVALID),
     .I_RREADY(w1_RREADY),
     .I_RDATA(w1_RDATA),
@@ -2234,8 +2234,8 @@ w2_m_axi_U(
     .ACLK_EN(1'b1),
     .I_ARVALID(w2_ARVALID),
     .I_ARREADY(w2_ARREADY),
-    .I_ARADDR(grp_conv2_fu_222_m_axi_w2_ARADDR),
-    .I_ARLEN(grp_conv2_fu_222_m_axi_w2_ARLEN),
+    .I_ARADDR(grp_conv2_fu_308_m_axi_w2_ARADDR),
+    .I_ARLEN(grp_conv2_fu_308_m_axi_w2_ARLEN),
     .I_RVALID(w2_RVALID),
     .I_RREADY(w2_RREADY),
     .I_RDATA(w2_RDATA),
@@ -2324,8 +2324,8 @@ w3_m_axi_U(
     .ACLK_EN(1'b1),
     .I_ARVALID(w3_ARVALID),
     .I_ARREADY(w3_ARREADY),
-    .I_ARADDR(grp_conv3_fu_243_m_axi_w3_ARADDR),
-    .I_ARLEN(grp_conv3_fu_243_m_axi_w3_ARLEN),
+    .I_ARADDR(grp_conv3_fu_415_m_axi_w3_ARADDR),
+    .I_ARLEN(grp_conv3_fu_415_m_axi_w3_ARLEN),
     .I_RVALID(w3_RVALID),
     .I_RREADY(w3_RREADY),
     .I_RDATA(w3_RDATA),
@@ -2352,55 +2352,55 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_conv1_fu_188_ap_start_reg <= 1'b0;
+        grp_conv1_fu_274_ap_start_reg <= 1'b0;
     end else begin
         if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
-            grp_conv1_fu_188_ap_start_reg <= 1'b1;
-        end else if ((grp_conv1_fu_188_ap_ready == 1'b1)) begin
-            grp_conv1_fu_188_ap_start_reg <= 1'b0;
+            grp_conv1_fu_274_ap_start_reg <= 1'b1;
+        end else if ((grp_conv1_fu_274_ap_ready == 1'b1)) begin
+            grp_conv1_fu_274_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_conv2_fu_222_ap_start_reg <= 1'b0;
+        grp_conv2_fu_308_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state3)) begin
-            grp_conv2_fu_222_ap_start_reg <= 1'b1;
-        end else if ((grp_conv2_fu_222_ap_ready == 1'b1)) begin
-            grp_conv2_fu_222_ap_start_reg <= 1'b0;
+            grp_conv2_fu_308_ap_start_reg <= 1'b1;
+        end else if ((grp_conv2_fu_308_ap_ready == 1'b1)) begin
+            grp_conv2_fu_308_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_conv3_fu_243_ap_start_reg <= 1'b0;
+        grp_conv3_fu_415_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state5)) begin
-            grp_conv3_fu_243_ap_start_reg <= 1'b1;
-        end else if ((grp_conv3_fu_243_ap_ready == 1'b1)) begin
-            grp_conv3_fu_243_ap_start_reg <= 1'b0;
+            grp_conv3_fu_415_ap_start_reg <= 1'b1;
+        end else if ((grp_conv3_fu_415_ap_ready == 1'b1)) begin
+            grp_conv3_fu_415_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
-        conv1_output_ftmap_read_reg_293 <= conv1_output_ftmap;
-        conv1_weights_read_reg_299 <= conv1_weights;
-        conv2_output_ftmap_read_reg_282 <= conv2_output_ftmap;
-        conv2_weights_read_reg_288 <= conv2_weights;
-        conv3_weights_read_reg_277 <= conv3_weights;
-        input_ftmap_read_reg_304 <= input_ftmap;
-        output_ftmap_read_reg_272 <= output_ftmap;
+        conv1_output_ftmap_read_reg_465 <= conv1_output_ftmap;
+        conv1_weights_read_reg_471 <= conv1_weights;
+        conv2_output_ftmap_read_reg_454 <= conv2_output_ftmap;
+        conv2_weights_read_reg_460 <= conv2_weights;
+        conv3_weights_read_reg_449 <= conv3_weights;
+        input_ftmap_read_reg_476 <= input_ftmap;
+        output_ftmap_read_reg_444 <= output_ftmap;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        empty_reg_309 <= empty_fu_267_p1;
+        empty_reg_481 <= empty_fu_439_p1;
     end
 end
 
@@ -2413,7 +2413,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((grp_conv1_fu_188_ap_done == 1'b0)) begin
+    if ((grp_conv1_fu_274_ap_done == 1'b0)) begin
         ap_ST_fsm_state2_blk = 1'b1;
     end else begin
         ap_ST_fsm_state2_blk = 1'b0;
@@ -2423,7 +2423,7 @@ end
 assign ap_ST_fsm_state3_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_conv2_fu_222_ap_done == 1'b0)) begin
+    if ((grp_conv2_fu_308_ap_done == 1'b0)) begin
         ap_ST_fsm_state4_blk = 1'b1;
     end else begin
         ap_ST_fsm_state4_blk = 1'b0;
@@ -2433,7 +2433,7 @@ end
 assign ap_ST_fsm_state5_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_conv3_fu_243_ap_done == 1'b0)) begin
+    if ((grp_conv3_fu_415_ap_done == 1'b0)) begin
         ap_ST_fsm_state6_blk = 1'b1;
     end else begin
         ap_ST_fsm_state6_blk = 1'b0;
@@ -2441,7 +2441,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((grp_conv3_fu_243_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state6))) begin
+    if (((grp_conv3_fu_415_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state6))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -2457,7 +2457,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((grp_conv3_fu_243_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state6))) begin
+    if (((grp_conv3_fu_415_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state6))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -2466,7 +2466,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
-        i1_ARVALID = grp_conv1_fu_188_m_axi_i1_ARVALID;
+        i1_ARVALID = grp_conv1_fu_274_m_axi_i1_ARVALID;
     end else begin
         i1_ARVALID = 1'b0;
     end
@@ -2474,7 +2474,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
-        i1_RREADY = grp_conv1_fu_188_m_axi_i1_RREADY;
+        i1_RREADY = grp_conv1_fu_274_m_axi_i1_RREADY;
     end else begin
         i1_RREADY = 1'b0;
     end
@@ -2482,7 +2482,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        i2_ARVALID = grp_conv2_fu_222_m_axi_i2_ARVALID;
+        i2_ARVALID = grp_conv2_fu_308_m_axi_i2_ARVALID;
     end else begin
         i2_ARVALID = 1'b0;
     end
@@ -2490,7 +2490,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
-        i2_AWVALID = grp_conv1_fu_188_m_axi_i2_AWVALID;
+        i2_AWVALID = grp_conv1_fu_274_m_axi_i2_AWVALID;
     end else begin
         i2_AWVALID = 1'b0;
     end
@@ -2498,7 +2498,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
-        i2_BREADY = grp_conv1_fu_188_m_axi_i2_BREADY;
+        i2_BREADY = grp_conv1_fu_274_m_axi_i2_BREADY;
     end else begin
         i2_BREADY = 1'b0;
     end
@@ -2506,7 +2506,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        i2_RREADY = grp_conv2_fu_222_m_axi_i2_RREADY;
+        i2_RREADY = grp_conv2_fu_308_m_axi_i2_RREADY;
     end else begin
         i2_RREADY = 1'b0;
     end
@@ -2514,7 +2514,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
-        i2_WVALID = grp_conv1_fu_188_m_axi_i2_WVALID;
+        i2_WVALID = grp_conv1_fu_274_m_axi_i2_WVALID;
     end else begin
         i2_WVALID = 1'b0;
     end
@@ -2522,7 +2522,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
-        i3_ARVALID = grp_conv3_fu_243_m_axi_i3_ARVALID;
+        i3_ARVALID = grp_conv3_fu_415_m_axi_i3_ARVALID;
     end else begin
         i3_ARVALID = 1'b0;
     end
@@ -2530,7 +2530,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        i3_AWVALID = grp_conv2_fu_222_m_axi_i3_AWVALID;
+        i3_AWVALID = grp_conv2_fu_308_m_axi_i3_AWVALID;
     end else begin
         i3_AWVALID = 1'b0;
     end
@@ -2538,7 +2538,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        i3_BREADY = grp_conv2_fu_222_m_axi_i3_BREADY;
+        i3_BREADY = grp_conv2_fu_308_m_axi_i3_BREADY;
     end else begin
         i3_BREADY = 1'b0;
     end
@@ -2546,7 +2546,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
-        i3_RREADY = grp_conv3_fu_243_m_axi_i3_RREADY;
+        i3_RREADY = grp_conv3_fu_415_m_axi_i3_RREADY;
     end else begin
         i3_RREADY = 1'b0;
     end
@@ -2554,7 +2554,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        i3_WVALID = grp_conv2_fu_222_m_axi_i3_WVALID;
+        i3_WVALID = grp_conv2_fu_308_m_axi_i3_WVALID;
     end else begin
         i3_WVALID = 1'b0;
     end
@@ -2562,7 +2562,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
-        o_AWVALID = grp_conv3_fu_243_m_axi_o_AWVALID;
+        o_AWVALID = grp_conv3_fu_415_m_axi_o_AWVALID;
     end else begin
         o_AWVALID = 1'b0;
     end
@@ -2570,7 +2570,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
-        o_BREADY = grp_conv3_fu_243_m_axi_o_BREADY;
+        o_BREADY = grp_conv3_fu_415_m_axi_o_BREADY;
     end else begin
         o_BREADY = 1'b0;
     end
@@ -2578,7 +2578,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
-        o_WVALID = grp_conv3_fu_243_m_axi_o_WVALID;
+        o_WVALID = grp_conv3_fu_415_m_axi_o_WVALID;
     end else begin
         o_WVALID = 1'b0;
     end
@@ -2586,7 +2586,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
-        w1_ARVALID = grp_conv1_fu_188_m_axi_w1_ARVALID;
+        w1_ARVALID = grp_conv1_fu_274_m_axi_w1_ARVALID;
     end else begin
         w1_ARVALID = 1'b0;
     end
@@ -2594,7 +2594,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
-        w1_RREADY = grp_conv1_fu_188_m_axi_w1_RREADY;
+        w1_RREADY = grp_conv1_fu_274_m_axi_w1_RREADY;
     end else begin
         w1_RREADY = 1'b0;
     end
@@ -2602,7 +2602,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        w2_ARVALID = grp_conv2_fu_222_m_axi_w2_ARVALID;
+        w2_ARVALID = grp_conv2_fu_308_m_axi_w2_ARVALID;
     end else begin
         w2_ARVALID = 1'b0;
     end
@@ -2610,7 +2610,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        w2_RREADY = grp_conv2_fu_222_m_axi_w2_RREADY;
+        w2_RREADY = grp_conv2_fu_308_m_axi_w2_RREADY;
     end else begin
         w2_RREADY = 1'b0;
     end
@@ -2618,7 +2618,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
-        w3_ARVALID = grp_conv3_fu_243_m_axi_w3_ARVALID;
+        w3_ARVALID = grp_conv3_fu_415_m_axi_w3_ARVALID;
     end else begin
         w3_ARVALID = 1'b0;
     end
@@ -2626,7 +2626,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state6))) begin
-        w3_RREADY = grp_conv3_fu_243_m_axi_w3_RREADY;
+        w3_RREADY = grp_conv3_fu_415_m_axi_w3_RREADY;
     end else begin
         w3_RREADY = 1'b0;
     end
@@ -2642,7 +2642,7 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((grp_conv1_fu_188_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+            if (((grp_conv1_fu_274_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
@@ -2652,7 +2652,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state4;
         end
         ap_ST_fsm_state4 : begin
-            if (((grp_conv2_fu_222_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
+            if (((grp_conv2_fu_308_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
                 ap_NS_fsm = ap_ST_fsm_state5;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state4;
@@ -2662,7 +2662,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state6;
         end
         ap_ST_fsm_state6 : begin
-            if (((grp_conv3_fu_243_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state6))) begin
+            if (((grp_conv3_fu_415_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state6))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state6;
@@ -2690,20 +2690,20 @@ always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign conv1_biases_address0 = grp_conv1_fu_188_conv1_biases_address0;
+assign conv1_biases_address0 = grp_conv1_fu_274_conv1_biases_address0;
 
-assign conv1_biases_ce0 = grp_conv1_fu_188_conv1_biases_ce0;
+assign conv1_biases_ce0 = grp_conv1_fu_274_conv1_biases_ce0;
 
-assign conv2_biases_address0 = grp_conv2_fu_222_conv2_biases_address0;
+assign conv2_biases_address0 = grp_conv2_fu_308_conv2_biases_address0;
 
-assign conv2_biases_ce0 = grp_conv2_fu_222_conv2_biases_ce0;
+assign conv2_biases_ce0 = grp_conv2_fu_308_conv2_biases_ce0;
 
-assign empty_fu_267_p1 = conv3_biases[14:0];
+assign empty_fu_439_p1 = conv3_biases[14:0];
 
-assign grp_conv1_fu_188_ap_start = grp_conv1_fu_188_ap_start_reg;
+assign grp_conv1_fu_274_ap_start = grp_conv1_fu_274_ap_start_reg;
 
-assign grp_conv2_fu_222_ap_start = grp_conv2_fu_222_ap_start_reg;
+assign grp_conv2_fu_308_ap_start = grp_conv2_fu_308_ap_start_reg;
 
-assign grp_conv3_fu_243_ap_start = grp_conv3_fu_243_ap_start_reg;
+assign grp_conv3_fu_415_ap_start = grp_conv3_fu_415_ap_start_reg;
 
 endmodule //srcnn

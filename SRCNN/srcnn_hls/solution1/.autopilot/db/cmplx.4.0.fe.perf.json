@@ -1,7 +1,7 @@
 {
   "0": {
     "basicblocks": 1,
-    "calls": "3 2 4",
+    "calls": "1 2 3",
     "file": "srcnn.cpp",
     "fileloc": 8,
     "instructions": 44,
@@ -9,55 +9,43 @@
       "T": 1
     },
     "name": "srcnn",
-    "total_instructions": 5059
+    "total_instructions": 10654
   },
   "1": {
-    "basicblocks": 7,
+    "basicblocks": 446,
     "calls": "",
-    "file": "conv3.cpp",
-    "fileloc": 80,
-    "instructions": 812,
-    "name": "load_input_buffer_c3",
-    "stores": {
-      "G": 259
+    "file": "conv1.cpp",
+    "fileloc": 9,
+    "instructions": 4259,
+    "loads": {
+      "G": 555,
+      "L": 6
     },
-    "total_instructions": 812
+    "name": "conv1",
+    "stores": {
+      "G": 134
+    },
+    "total_instructions": 4259
   },
   "2": {
-    "basicblocks": 69,
-    "calls": "",
+    "basicblocks": 418,
+    "calls": "5",
     "file": "conv2.cpp",
     "fileloc": 9,
-    "instructions": 284,
+    "instructions": 2657,
     "loads": {
-      "G": 8,
+      "G": 512,
       "L": 2
     },
     "name": "conv2",
     "stores": {
-      "G": 10
+      "G": 302
     },
-    "total_instructions": 284
+    "total_instructions": 4028
   },
   "3": {
-    "basicblocks": 187,
-    "calls": "",
-    "file": "conv1.cpp",
-    "fileloc": 9,
-    "instructions": 2408,
-    "loads": {
-      "G": 493,
-      "L": 3
-    },
-    "name": "conv1",
-    "stores": {
-      "G": 50
-    },
-    "total_instructions": 2408
-  },
-  "4": {
     "basicblocks": 258,
-    "calls": "1",
+    "calls": "4",
     "file": "conv3.cpp",
     "fileloc": 10,
     "instructions": 1511,
@@ -69,5 +57,29 @@
       "G": 73
     },
     "total_instructions": 2323
+  },
+  "4": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "conv3.cpp",
+    "fileloc": 80,
+    "instructions": 812,
+    "name": "load_input_buffer_c3",
+    "stores": {
+      "G": 259
+    },
+    "total_instructions": 812
+  },
+  "5": {
+    "basicblocks": 12,
+    "calls": "",
+    "file": "conv2.cpp",
+    "fileloc": 68,
+    "instructions": 1371,
+    "name": "load_input_buffer_c2",
+    "stores": {
+      "G": 510
+    },
+    "total_instructions": 1371
   }
 }

@@ -1699,7 +1699,7 @@ entry:5 %h_cast1 = zext i8 %h_read
 
 <Node id="12" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i3, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 512, void @empty_16, void @empty_3, void @empty_10, i32 16, i32 16, i32 256, i32 256, void @empty_10, void @empty_10, i32 4294967295, i32 0
+entry:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i3, void @empty_0, i32 0, i32 0, void @empty_2, i32 0, i32 512, void @empty_32, void @empty_33, void @empty_2, i32 16, i32 16, i32 256, i32 256, void @empty_2, void @empty_2, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -20021,7 +20021,7 @@ for.inc45:537 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_262 
 
 <Node id="562" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.inc45:538 %specpipeline_ln88 = specpipeline void @_ssdm_op_SpecPipeline, i32 256, i32 0, i32 0, i32 0, void @empty_10
+for.inc45:538 %specpipeline_ln88 = specpipeline void @_ssdm_op_SpecPipeline, i32 256, i32 0, i32 0, i32 0, void @empty_2
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln88"/></StgValue>
@@ -20036,7 +20036,7 @@ for.inc45:538 %specpipeline_ln88 = specpipeline void @_ssdm_op_SpecPipeline, i32
 
 <Node id="563" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc45:539 %specloopname_ln87 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7
+for.inc45:539 %specloopname_ln87 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln87"/></StgValue>
@@ -20117,23 +20117,23 @@ for.inc45:1083 %br_ln87 = br void %load-store-loop
 </dataflow>
 <dataflow id="1932" from="i3" to="specinterface_ln0" fromId="1914" toId="275">
 </dataflow>
-<dataflow id="1934" from="empty_8" to="specinterface_ln0" fromId="1933" toId="275">
+<dataflow id="1934" from="empty_0" to="specinterface_ln0" fromId="1933" toId="275">
 </dataflow>
 <dataflow id="1936" from="StgValue_1935" to="specinterface_ln0" fromId="1935" toId="275">
 </dataflow>
 <dataflow id="1937" from="StgValue_1935" to="specinterface_ln0" fromId="1935" toId="275">
 </dataflow>
-<dataflow id="1939" from="empty_10" to="specinterface_ln0" fromId="1938" toId="275">
+<dataflow id="1939" from="empty_2" to="specinterface_ln0" fromId="1938" toId="275">
 </dataflow>
 <dataflow id="1940" from="StgValue_1935" to="specinterface_ln0" fromId="1935" toId="275">
 </dataflow>
 <dataflow id="1942" from="StgValue_1941" to="specinterface_ln0" fromId="1941" toId="275">
 </dataflow>
-<dataflow id="1944" from="empty_16" to="specinterface_ln0" fromId="1943" toId="275">
+<dataflow id="1944" from="empty_32" to="specinterface_ln0" fromId="1943" toId="275">
 </dataflow>
-<dataflow id="1946" from="empty_3" to="specinterface_ln0" fromId="1945" toId="275">
+<dataflow id="1946" from="empty_33" to="specinterface_ln0" fromId="1945" toId="275">
 </dataflow>
-<dataflow id="1947" from="empty_10" to="specinterface_ln0" fromId="1938" toId="275">
+<dataflow id="1947" from="empty_2" to="specinterface_ln0" fromId="1938" toId="275">
 </dataflow>
 <dataflow id="1949" from="StgValue_1948" to="specinterface_ln0" fromId="1948" toId="275">
 </dataflow>
@@ -20143,9 +20143,9 @@ for.inc45:1083 %br_ln87 = br void %load-store-loop
 </dataflow>
 <dataflow id="1953" from="StgValue_1951" to="specinterface_ln0" fromId="1951" toId="275">
 </dataflow>
-<dataflow id="1954" from="empty_10" to="specinterface_ln0" fromId="1938" toId="275">
+<dataflow id="1954" from="empty_2" to="specinterface_ln0" fromId="1938" toId="275">
 </dataflow>
-<dataflow id="1955" from="empty_10" to="specinterface_ln0" fromId="1938" toId="275">
+<dataflow id="1955" from="empty_2" to="specinterface_ln0" fromId="1938" toId="275">
 </dataflow>
 <dataflow id="1957" from="StgValue_1956" to="specinterface_ln0" fromId="1956" toId="275">
 </dataflow>
@@ -24811,11 +24811,11 @@ for.inc45:1083 %br_ln87 = br void %load-store-loop
 </dataflow>
 <dataflow id="4453" from="StgValue_1935" to="specpipeline_ln88" fromId="1935" toId="1372">
 </dataflow>
-<dataflow id="4454" from="empty_10" to="specpipeline_ln88" fromId="1938" toId="1372">
+<dataflow id="4454" from="empty_2" to="specpipeline_ln88" fromId="1938" toId="1372">
 </dataflow>
 <dataflow id="4455" from="_ssdm_op_SpecLoopName" to="specloopname_ln87" fromId="4435" toId="1373">
 </dataflow>
-<dataflow id="4457" from="empty_7" to="specloopname_ln87" fromId="4456" toId="1373">
+<dataflow id="4457" from="empty_9" to="specloopname_ln87" fromId="4456" toId="1373">
 </dataflow>
 <dataflow id="4458" from="i3_addr_read_254" to="store_ln98" fromId="1363" toId="1374">
 </dataflow>

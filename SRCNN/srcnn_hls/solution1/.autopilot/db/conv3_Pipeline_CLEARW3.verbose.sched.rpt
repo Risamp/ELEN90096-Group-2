@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_CLEARW3'
 ================================================================
-* Date:           Thu Nov  2 23:32:48 2023
+* Date:           Fri Nov  3 02:33:01 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -95,9 +95,9 @@ ST_1 : Operation 11 [1/1] (0.76ns)   --->   "%add_ln73 = add i8 %w_1, i8 1" [src
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln73 = br i1 %icmp_ln73, void %for.body8.2.i.i.split, void %for.inc13.2.i.i.exitStub" [src/conv3.cpp:73->src/conv3.cpp:151->src/conv3.cpp:64]   --->   Operation 12 'br' 'br_ln73' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%empty = trunc i8 %w_1" [src/conv3.cpp:73->src/conv3.cpp:151->src/conv3.cpp:64]   --->   Operation 13 'trunc' 'empty' <Predicate = (!icmp_ln73)> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%speclooptripcount_ln73 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv3.cpp:73->src/conv3.cpp:151->src/conv3.cpp:64]   --->   Operation 14 'speclooptripcount' 'speclooptripcount_ln73' <Predicate = (!icmp_ln73)> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specloopname_ln73 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5" [src/conv3.cpp:73->src/conv3.cpp:151->src/conv3.cpp:64]   --->   Operation 15 'specloopname' 'specloopname_ln73' <Predicate = (!icmp_ln73)> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_86 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i3.i7, i3 %add_ln71_1_read, i7 %empty" [src/conv3.cpp:75->src/conv3.cpp:151->src/conv3.cpp:64]   --->   Operation 16 'bitconcatenate' 'tmp_86' <Predicate = (!icmp_ln73)> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln75 = zext i10 %tmp_86" [src/conv3.cpp:75->src/conv3.cpp:151->src/conv3.cpp:64]   --->   Operation 17 'zext' 'zext_ln75' <Predicate = (!icmp_ln73)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specloopname_ln73 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [src/conv3.cpp:73->src/conv3.cpp:151->src/conv3.cpp:64]   --->   Operation 15 'specloopname' 'specloopname_ln73' <Predicate = (!icmp_ln73)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_87 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i3.i7, i3 %add_ln71_1_read, i7 %empty" [src/conv3.cpp:75->src/conv3.cpp:151->src/conv3.cpp:64]   --->   Operation 16 'bitconcatenate' 'tmp_87' <Predicate = (!icmp_ln73)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln75 = zext i10 %tmp_87" [src/conv3.cpp:75->src/conv3.cpp:151->src/conv3.cpp:64]   --->   Operation 17 'zext' 'zext_ln75' <Predicate = (!icmp_ln73)> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_423 = getelementptr i24 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1, i64 0, i64 %zext_ln75" [src/conv3.cpp:75->src/conv3.cpp:151->src/conv3.cpp:64]   --->   Operation 18 'getelementptr' 'conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_423' <Predicate = (!icmp_ln73)> <Delay = 0.00>
 ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_424 = getelementptr i24 %conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255, i64 0, i64 %zext_ln75" [src/conv3.cpp:75->src/conv3.cpp:151->src/conv3.cpp:64]   --->   Operation 19 'getelementptr' 'conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_424' <Predicate = (!icmp_ln73)> <Delay = 0.00>
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %w_1, i32 7" [src/conv3.cpp:73->src/conv3.cpp:151->src/conv3.cpp:64]   --->   Operation 20 'bitselect' 'tmp' <Predicate = (!icmp_ln73)> <Delay = 0.00>
@@ -120,8 +120,8 @@ Target clock period: 10.000ns, clock uncertainty: 2.700ns.
 The critical path consists of the following:
 	'alloca' operation ('w') [4]  (0.000 ns)
 	'load' operation ('w', src/conv3.cpp:73->src/conv3.cpp:151->src/conv3.cpp:64) on local variable 'w' [9]  (0.000 ns)
-	'getelementptr' operation ('conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_423', src/conv3.cpp:75->src/conv3.cpp:151->src/conv3.cpp:64) [20]  (0.000 ns)
-	'store' operation ('store_ln75', src/conv3.cpp:75->src/conv3.cpp:151->src/conv3.cpp:64) of constant 0 on array 'conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1' [25]  (1.237 ns)
+	'getelementptr' operation ('conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_424', src/conv3.cpp:75->src/conv3.cpp:151->src/conv3.cpp:64) [21]  (0.000 ns)
+	'store' operation ('store_ln75', src/conv3.cpp:75->src/conv3.cpp:151->src/conv3.cpp:64) of constant 0 on array 'conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255' [28]  (1.237 ns)
 	blocking operation 0.765 ns on control path)
 
 

@@ -1699,7 +1699,7 @@ entry:5 %h_cast1 = zext i8 %h_read
 
 <Node id="12" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i3, void @empty_8, i32 0, i32 0, void @empty_10, i32 0, i32 512, void @empty_16, void @empty_3, void @empty_10, i32 16, i32 16, i32 256, i32 256, void @empty_10, void @empty_10, i32 4294967295, i32 0
+entry:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i3, void @empty_0, i32 0, i32 0, void @empty_2, i32 0, i32 512, void @empty_32, void @empty_33, void @empty_2, i32 16, i32 16, i32 256, i32 256, void @empty_2, void @empty_2, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -20021,7 +20021,7 @@ for.inc45:537 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_262 
 
 <Node id="562" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.inc45:538 %specpipeline_ln88 = specpipeline void @_ssdm_op_SpecPipeline, i32 256, i32 0, i32 0, i32 0, void @empty_10
+for.inc45:538 %specpipeline_ln88 = specpipeline void @_ssdm_op_SpecPipeline, i32 256, i32 0, i32 0, i32 0, void @empty_2
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln88"/></StgValue>
@@ -20036,7 +20036,7 @@ for.inc45:538 %specpipeline_ln88 = specpipeline void @_ssdm_op_SpecPipeline, i32
 
 <Node id="563" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc45:539 %specloopname_ln87 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7
+for.inc45:539 %specloopname_ln87 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln87"/></StgValue>
