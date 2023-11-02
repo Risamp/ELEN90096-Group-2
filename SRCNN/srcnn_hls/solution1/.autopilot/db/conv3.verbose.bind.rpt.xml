@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3'" level="0">
-<item name = "Date">Fri Nov  3 02:33:02 2023
+<item name = "Date">Fri Nov  3 04:16:46 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -31,16 +31,16 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_load_input_buffer_c3_fu_209">load_input_buffer_c3, 73739, 73739, 0.737 ms, 0.737 ms, 73739, 73739, no</column>
-<column name="grp_conv3_Pipeline_WEIGHTI_WEIGHTK_L_fu_221">conv3_Pipeline_WEIGHTI_WEIGHTK_L, 803, 803, 8.030 us, 8.030 us, 803, 803, no</column>
-<column name="grp_conv3_Pipeline_IN_ROW_COL_fu_230">conv3_Pipeline_IN_ROW_COL, 258412, 258412, 2.584 ms, 2.584 ms, 258412, 258412, no</column>
-<column name="grp_conv3_Pipeline_RELU_fu_244">conv3_Pipeline_RELU, 512, 512, 5.120 us, 5.120 us, 512, 512, no</column>
-<column name="grp_conv3_Pipeline_4_fu_256">conv3_Pipeline_4, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
-<column name="grp_conv3_Pipeline_RELU1_fu_269">conv3_Pipeline_RELU1, 512, 512, 5.120 us, 5.120 us, 512, 512, no</column>
-<column name="grp_conv3_Pipeline_6_fu_280">conv3_Pipeline_6, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
-<column name="grp_conv3_Pipeline_CLEARW_fu_292">conv3_Pipeline_CLEARW, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
-<column name="grp_conv3_Pipeline_CLEARW2_fu_302">conv3_Pipeline_CLEARW2, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
-<column name="grp_conv3_Pipeline_CLEARW3_fu_311">conv3_Pipeline_CLEARW3, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_load_input_buffer_c3_fu_217">load_input_buffer_c3, 73739, 73739, 0.737 ms, 0.737 ms, 73739, 73739, no</column>
+<column name="grp_conv3_Pipeline_WEIGHTI_WEIGHTK_L_fu_229">conv3_Pipeline_WEIGHTI_WEIGHTK_L, 803, 803, 8.030 us, 8.030 us, 803, 803, no</column>
+<column name="grp_conv3_Pipeline_IN_ROW_COL_fu_238">conv3_Pipeline_IN_ROW_COL, 258412, 258412, 2.584 ms, 2.584 ms, 258412, 258412, no</column>
+<column name="grp_conv3_Pipeline_RELU_fu_252">conv3_Pipeline_RELU, 512, 512, 5.120 us, 5.120 us, 512, 512, no</column>
+<column name="grp_conv3_Pipeline_4_fu_264">conv3_Pipeline_4, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_conv3_Pipeline_RELU1_fu_277">conv3_Pipeline_RELU1, 512, 512, 5.120 us, 5.120 us, 512, 512, no</column>
+<column name="grp_conv3_Pipeline_6_fu_288">conv3_Pipeline_6, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_conv3_Pipeline_CLEARW_fu_300">conv3_Pipeline_CLEARW, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_conv3_Pipeline_CLEARW2_fu_310">conv3_Pipeline_CLEARW2, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_conv3_Pipeline_CLEARW3_fu_319">conv3_Pipeline_CLEARW3, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

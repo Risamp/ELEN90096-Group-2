@@ -141,8 +141,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln118_1</name>
-<Object>sext_ln118_1</Object>
+<name>sext_ln119_1</name>
+<Object>sext_ln119_1</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -152,8 +152,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln141</name>
-<Object>sext_ln141</Object>
+<name>sext_ln142</name>
+<Object>sext_ln142</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

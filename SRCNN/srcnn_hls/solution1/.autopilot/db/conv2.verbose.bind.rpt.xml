@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2'" level="0">
-<item name = "Date">Fri Nov  3 02:32:42 2023
+<item name = "Date">Fri Nov  3 04:16:24 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,30 +24,30 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">94863146, 94887626, 0.949 sec, 0.949 sec, 94863146, 94887626, no</column>
+<column name="">94884906, 94909386, 0.949 sec, 0.949 sec, 94884906, 94909386, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_load_input_buffer_c2_fu_388">load_input_buffer_c2, 49163, 49163, 0.492 ms, 0.492 ms, 49163, 49163, no</column>
-<column name="grp_conv2_Pipeline_LOAD_WEIGHTS_L_fu_456">conv2_Pipeline_LOAD_WEIGHTS_L, 259, 259, 2.590 us, 2.590 us, 259, 259, no</column>
-<column name="grp_conv2_Pipeline_OUT_ROW_COL_fu_465">conv2_Pipeline_OUT_ROW_COL, 117517, 117517, 1.175 ms, 1.175 ms, 117517, 117517, no</column>
-<column name="grp_conv2_Pipeline_RELU_fu_561">conv2_Pipeline_RELU, 512, 512, 5.120 us, 5.120 us, 512, 512, no</column>
-<column name="grp_conv2_Pipeline_4_fu_598">conv2_Pipeline_4, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
-<column name="grp_conv2_Pipeline_RELU4_fu_636">conv2_Pipeline_RELU4, 512, 512, 5.120 us, 5.120 us, 512, 512, no</column>
-<column name="grp_conv2_Pipeline_6_fu_673">conv2_Pipeline_6, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
-<column name="grp_conv2_Pipeline_BW_fu_711">conv2_Pipeline_BW, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
-<column name="grp_conv2_Pipeline_BW5_fu_747">conv2_Pipeline_BW5, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
-<column name="grp_conv2_Pipeline_BW6_fu_782">conv2_Pipeline_BW6, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_load_input_buffer_c2_fu_403">load_input_buffer_c2, 49163, 49163, 0.492 ms, 0.492 ms, 49163, 49163, no</column>
+<column name="grp_conv2_Pipeline_LOAD_WEIGHTS_L_fu_471">conv2_Pipeline_LOAD_WEIGHTS_L, 259, 259, 2.590 us, 2.590 us, 259, 259, no</column>
+<column name="grp_conv2_Pipeline_OUT_ROW_COL_fu_480">conv2_Pipeline_OUT_ROW_COL, 117517, 117517, 1.175 ms, 1.175 ms, 117517, 117517, no</column>
+<column name="grp_conv2_Pipeline_RELU_fu_576">conv2_Pipeline_RELU, 512, 512, 5.120 us, 5.120 us, 512, 512, no</column>
+<column name="grp_conv2_Pipeline_4_fu_613">conv2_Pipeline_4, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_conv2_Pipeline_RELU4_fu_651">conv2_Pipeline_RELU4, 512, 512, 5.120 us, 5.120 us, 512, 512, no</column>
+<column name="grp_conv2_Pipeline_6_fu_688">conv2_Pipeline_6, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_conv2_Pipeline_BW_fu_726">conv2_Pipeline_BW, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_conv2_Pipeline_BW5_fu_762">conv2_Pipeline_BW5, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_conv2_Pipeline_BW6_fu_797">conv2_Pipeline_BW6, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILE_ROW">94863145, 94887625, 1116037 ~ 1116325, -, -, 85, no</column>
-<column name=" + TILE_OUT">1066864, 1067152, 133358 ~ 133394, -, -, 8, no</column>
-<column name="  ++ EXPORT">12468, 12504, 3117 ~ 3126, -, -, 4, no</column>
+<column name="- TILE_ROW">94884905, 94909385, 1116293 ~ 1116581, -, -, 85, no</column>
+<column name=" + TILE_OUT">1067120, 1067408, 133390 ~ 133426, -, -, 8, no</column>
+<column name="  ++ EXPORT">12500, 12536, 3125 ~ 3134, -, -, 4, no</column>
 <column name="   +++ BH">3114, 3122, 1557, -, -, 2, no</column>
 <column name="  ++ CLEAR">3108, 3108, 777, -, -, 4, no</column>
 </table>

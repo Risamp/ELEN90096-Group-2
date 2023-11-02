@@ -16,6 +16,7 @@ void conv3(conv2o_t input_ftmap[N2][H][W],
 	//#pragma HLS PIPELINE off
 
 	static output_t output_fm_buffer[C3_OD][C3_TH][W] = {0};
+	#pragma HLS BIND_STORAGE variable=output_fm_buffer type=RAM_T2P impl=BRAM
 	#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=2
 	//#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=2
 

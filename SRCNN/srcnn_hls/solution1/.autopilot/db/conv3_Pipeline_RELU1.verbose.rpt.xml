@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3_Pipeline_RELU1'" level="0">
-<item name = "Date">Fri Nov  3 02:34:02 2023
+<item name = "Date">Fri Nov  3 04:17:55 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -62,7 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mux_2_1_24_1_1_U778">mux_2_1_24_1_1, 0, 0, 0, 9, 0</column>
+<column name="mux_2_1_24_1_1_U790">mux_2_1_24_1_1, 0, 0, 0, 9, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -79,11 +79,11 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln138_fu_124_p2">+, 0, 0, 15, 8, 1</column>
-<column name="add_ln141_fu_169_p2">+, 0, 0, 31, 24, 24</column>
-<column name="add_ln143_fu_174_p2">+, 0, 0, 30, 23, 23</column>
-<column name="icmp_ln138_fu_118_p2">icmp, 0, 0, 15, 8, 2</column>
-<column name="select_ln143_fu_187_p3">select, 0, 0, 22, 1, 1</column>
+<column name="add_ln139_fu_132_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln142_fu_177_p2">+, 0, 0, 31, 24, 24</column>
+<column name="add_ln144_fu_182_p2">+, 0, 0, 30, 23, 23</column>
+<column name="icmp_ln139_fu_126_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="select_ln144_fu_195_p3">select, 0, 0, 22, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -91,22 +91,22 @@
 <column name="ap_NS_fsm">14, 3, 1, 3</column>
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_sig_allocacmp_bw_1">9, 2, 8, 16</column>
-<column name="bw_fu_54">9, 2, 8, 16</column>
+<column name="bw_fu_62">9, 2, 8, 16</column>
 <column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_address0">14, 3, 10, 30</column>
 <column name="conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_address0">14, 3, 10, 30</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln138_reg_225">8, 0, 8, 0</column>
+<column name="add_ln139_reg_233">8, 0, 8, 0</column>
 <column name="ap_CS_fsm">2, 0, 2, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="bw_fu_54">8, 0, 8, 0</column>
-<column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_263_reg_230">10, 0, 10, 0</column>
-<column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_264_reg_235">10, 0, 10, 0</column>
-<column name="sext_ln118_1_cast_reg_217">24, 0, 24, 0</column>
-<column name="sext_ln141_cast_reg_212">23, 0, 23, 0</column>
-<column name="tmp_reg_240">1, 0, 1, 0</column>
+<column name="bw_fu_62">8, 0, 8, 0</column>
+<column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_263_reg_238">10, 0, 10, 0</column>
+<column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_264_reg_243">10, 0, 10, 0</column>
+<column name="sext_ln119_1_cast_reg_225">24, 0, 24, 0</column>
+<column name="sext_ln142_cast_reg_220">23, 0, 23, 0</column>
+<column name="tmp_reg_248">1, 0, 1, 0</column>
 </table>
 </item>
 </section>
@@ -122,9 +122,9 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, conv3_Pipeline_RELU1, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv3_Pipeline_RELU1, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv3_Pipeline_RELU1, return value</column>
-<column name="or_ln138">in, 3, ap_none, or_ln138, scalar</column>
-<column name="sext_ln118_1">in, 22, ap_none, sext_ln118_1, scalar</column>
-<column name="sext_ln141">in, 22, ap_none, sext_ln141, scalar</column>
+<column name="or_ln139">in, 3, ap_none, or_ln139, scalar</column>
+<column name="sext_ln119_1">in, 22, ap_none, sext_ln119_1, scalar</column>
+<column name="sext_ln142">in, 22, ap_none, sext_ln142, scalar</column>
 <column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_address0">out, 10, ap_memory, conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1, array</column>
 <column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_ce0">out, 1, ap_memory, conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1, array</column>
 <column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_we0">out, 1, ap_memory, conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1, array</column>

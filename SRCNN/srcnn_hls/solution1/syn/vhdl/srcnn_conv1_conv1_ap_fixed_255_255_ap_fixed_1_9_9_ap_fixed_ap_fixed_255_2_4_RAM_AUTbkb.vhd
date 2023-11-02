@@ -11,7 +11,7 @@ use ieee.std_logic_unsigned.all;
 entity srcnn_conv1_conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_4_RAM_AUTbkb is 
     generic(
         MEM_TYPE        : string    := "auto"; 
-        DataWidth       : integer   := 24; 
+        DataWidth       : integer   := 12; 
         AddressWidth    : integer   := 11;
         AddressRange    : integer   := 2024
     ); 

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_4'
 ================================================================
-* Date:           Fri Nov  3 02:34:02 2023
+* Date:           Fri Nov  3 04:17:54 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -73,7 +73,7 @@
     +---------------------+----------------+---------+----+---+----+-----+
     |       Instance      |     Module     | BRAM_18K| DSP| FF| LUT| URAM|
     +---------------------+----------------+---------+----+---+----+-----+
-    |mux_2_1_24_1_1_U772  |mux_2_1_24_1_1  |        0|   0|  0|   9|    0|
+    |mux_2_1_24_1_1_U784  |mux_2_1_24_1_1  |        0|   0|  0|   9|    0|
     +---------------------+----------------+---------+----+---+----+-----+
     |Total                |                |        0|   0|  0|   9|    0|
     +---------------------+----------------+---------+----+---+----+-----+
@@ -91,9 +91,9 @@
     +---------------------------+----------+----+---+----+------------+------------+
     |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------+----------+----+---+----+------------+------------+
-    |empty_fu_132_p2            |         +|   0|  0|  15|           8|           1|
+    |empty_fu_140_p2            |         +|   0|  0|  15|           8|           1|
     |ap_block_pp0_stage0_11001  |       and|   0|  0|   2|           1|           1|
-    |exitcond61711_fu_126_p2    |      icmp|   0|  0|  15|           8|           2|
+    |exitcond61711_fu_134_p2    |      icmp|   0|  0|  15|           8|           2|
     |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
     +---------------------------+----------+----+---+----+------------+------------+
     |Total                      |          |   0|  0|  34|          18|           6|
@@ -106,7 +106,7 @@
     |ap_done_int                           |   9|          2|    1|          2|
     |ap_enable_reg_pp0_iter2               |   9|          2|    1|          2|
     |ap_sig_allocacmp_loop_index_0_i_load  |   9|          2|    8|         16|
-    |loop_index_0_i_fu_64                  |   9|          2|    8|         16|
+    |loop_index_0_i_fu_72                  |   9|          2|    8|         16|
     |o_blk_n_W                             |   9|          2|    1|          2|
     +--------------------------------------+----+-----------+-----+-----------+
     |Total                                 |  45|         10|   19|         38|
@@ -121,10 +121,10 @@
     |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
-    |exitcond61711_reg_199             |   1|   0|    1|          0|
-    |loop_index_0_i_fu_64              |   8|   0|    8|          0|
-    |tmp_4_reg_223                     |  24|   0|   24|          0|
-    |tmp_reg_213                       |   1|   0|    1|          0|
+    |exitcond61711_reg_207             |   1|   0|    1|          0|
+    |loop_index_0_i_fu_72              |   8|   0|    8|          0|
+    |tmp_4_reg_231                     |  24|   0|   24|          0|
+    |tmp_reg_221                       |   1|   0|    1|          0|
     +----------------------------------+----+----+-----+-----------+
     |Total                             |  39|   0|   39|          0|
     +----------------------------------+----+----+-----+-----------+
@@ -190,7 +190,7 @@
 |m_axi_o_BRESP                                                                      |   in|    2|       m_axi|                                                                         o|       pointer|
 |m_axi_o_BID                                                                        |   in|    1|       m_axi|                                                                         o|       pointer|
 |m_axi_o_BUSER                                                                      |   in|    1|       m_axi|                                                                         o|       pointer|
-|sext_ln148                                                                         |   in|   62|     ap_none|                                                                sext_ln148|        scalar|
+|sext_ln149                                                                         |   in|   62|     ap_none|                                                                sext_ln149|        scalar|
 |bh                                                                                 |   in|    3|     ap_none|                                                                        bh|        scalar|
 |conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_address0            |  out|   10|   ap_memory|            conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1|         array|
 |conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_ce0                 |  out|    1|   ap_memory|            conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1|         array|

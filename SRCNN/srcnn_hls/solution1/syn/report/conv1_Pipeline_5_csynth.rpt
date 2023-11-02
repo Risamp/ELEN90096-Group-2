@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv1_Pipeline_5'
 ================================================================
-* Date:           Fri Nov  3 02:33:22 2023
+* Date:           Fri Nov  3 04:17:10 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -59,9 +59,9 @@
 |Instance         |        -|    -|       0|      9|    -|
 |Memory           |        -|    -|       -|      -|    -|
 |Multiplexer      |        -|    -|       -|     45|    -|
-|Register         |        -|    -|      47|      -|    -|
+|Register         |        -|    -|      30|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|    0|      47|     88|    0|
+|Total            |        0|    0|      30|     88|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      432|  360|  141120|  70560|    0|
 +-----------------+---------+-----+--------+-------+-----+
@@ -73,7 +73,7 @@
     +---------------------+----------------+---------+----+---+----+-----+
     |       Instance      |     Module     | BRAM_18K| DSP| FF| LUT| URAM|
     +---------------------+----------------+---------+----+---+----+-----+
-    |mux_2_1_32_1_1_U350  |mux_2_1_32_1_1  |        0|   0|  0|   9|    0|
+    |mux_2_1_16_1_1_U343  |mux_2_1_16_1_1  |        0|   0|  0|   9|    0|
     +---------------------+----------------+---------+----+---+----+-----+
     |Total                |                |        0|   0|  0|   9|    0|
     +---------------------+----------------+---------+----+---+----+-----+
@@ -91,26 +91,26 @@
     +---------------------------+----------+----+---+----+------------+------------+
     |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------+----------+----+---+----+------------+------------+
-    |empty_fu_132_p2            |         +|   0|  0|  15|           8|           1|
+    |empty_fu_146_p2            |         +|   0|  0|  15|           8|           1|
     |ap_block_pp0_stage0_11001  |       and|   0|  0|   2|           1|           1|
-    |exitcond104724_fu_126_p2   |      icmp|   0|  0|  15|           8|           2|
+    |exitcond157824_fu_140_p2   |      icmp|   0|  0|  15|           8|           2|
     |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
     +---------------------------+----------+----+---+----+------------+------------+
     |Total                      |          |   0|  0|  34|          18|           6|
     +---------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    +-----------------------------------------+----+-----------+-----+-----------+
-    |                   Name                  | LUT| Input Size| Bits| Total Bits|
-    +-----------------------------------------+----+-----------+-----+-----------+
-    |ap_done_int                              |   9|          2|    1|          2|
-    |ap_enable_reg_pp0_iter2                  |   9|          2|    1|          2|
-    |ap_sig_allocacmp_loop_index_1_i971_load  |   9|          2|    8|         16|
-    |i2_blk_n_W                               |   9|          2|    1|          2|
-    |loop_index_1_i971_fu_64                  |   9|          2|    8|         16|
-    +-----------------------------------------+----+-----------+-----+-----------+
-    |Total                                    |  45|         10|   19|         38|
-    +-----------------------------------------+----+-----------+-----+-----------+
+    +------------------------------------------+----+-----------+-----+-----------+
+    |                   Name                   | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                               |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                   |   9|          2|    1|          2|
+    |ap_sig_allocacmp_loop_index_1_i1097_load  |   9|          2|    8|         16|
+    |i2_blk_n_W                                |   9|          2|    1|          2|
+    |loop_index_1_i1097_fu_72                  |   9|          2|    8|         16|
+    +------------------------------------------+----+-----------+-----+-----------+
+    |Total                                     |  45|         10|   19|         38|
+    +------------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
     +----------------------------------+----+----+-----+-----------+
@@ -121,12 +121,11 @@
     |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
-    |exitcond104724_reg_195            |   1|   0|    1|          0|
-    |loop_index_1_i971_fu_64           |   8|   0|    8|          0|
-    |tmp_205_reg_219                   |  32|   0|   32|          0|
-    |tmp_reg_209                       |   1|   0|    1|          0|
+    |loop_index_1_i1097_fu_72          |   8|   0|    8|          0|
+    |tmp_204_reg_223                   |  16|   0|   16|          0|
+    |tmp_reg_218                       |   1|   0|    1|          0|
     +----------------------------------+----+----+-----+-----------+
-    |Total                             |  47|   0|   47|          0|
+    |Total                             |  30|   0|   30|          0|
     +----------------------------------+----+----+-----+-----------+
 
 
@@ -159,8 +158,8 @@
 |m_axi_i2_AWUSER                                                           |  out|    1|       m_axi|                                                               i2|       pointer|
 |m_axi_i2_WVALID                                                           |  out|    1|       m_axi|                                                               i2|       pointer|
 |m_axi_i2_WREADY                                                           |   in|    1|       m_axi|                                                               i2|       pointer|
-|m_axi_i2_WDATA                                                            |  out|   32|       m_axi|                                                               i2|       pointer|
-|m_axi_i2_WSTRB                                                            |  out|    4|       m_axi|                                                               i2|       pointer|
+|m_axi_i2_WDATA                                                            |  out|   16|       m_axi|                                                               i2|       pointer|
+|m_axi_i2_WSTRB                                                            |  out|    2|       m_axi|                                                               i2|       pointer|
 |m_axi_i2_WLAST                                                            |  out|    1|       m_axi|                                                               i2|       pointer|
 |m_axi_i2_WID                                                              |  out|    1|       m_axi|                                                               i2|       pointer|
 |m_axi_i2_WUSER                                                            |  out|    1|       m_axi|                                                               i2|       pointer|
@@ -179,10 +178,10 @@
 |m_axi_i2_ARUSER                                                           |  out|    1|       m_axi|                                                               i2|       pointer|
 |m_axi_i2_RVALID                                                           |   in|    1|       m_axi|                                                               i2|       pointer|
 |m_axi_i2_RREADY                                                           |  out|    1|       m_axi|                                                               i2|       pointer|
-|m_axi_i2_RDATA                                                            |   in|   32|       m_axi|                                                               i2|       pointer|
+|m_axi_i2_RDATA                                                            |   in|   16|       m_axi|                                                               i2|       pointer|
 |m_axi_i2_RLAST                                                            |   in|    1|       m_axi|                                                               i2|       pointer|
 |m_axi_i2_RID                                                              |   in|    1|       m_axi|                                                               i2|       pointer|
-|m_axi_i2_RFIFONUM                                                         |   in|   13|       m_axi|                                                               i2|       pointer|
+|m_axi_i2_RFIFONUM                                                         |   in|   14|       m_axi|                                                               i2|       pointer|
 |m_axi_i2_RUSER                                                            |   in|    1|       m_axi|                                                               i2|       pointer|
 |m_axi_i2_RRESP                                                            |   in|    2|       m_axi|                                                               i2|       pointer|
 |m_axi_i2_BVALID                                                           |   in|    1|       m_axi|                                                               i2|       pointer|
@@ -190,13 +189,13 @@
 |m_axi_i2_BRESP                                                            |   in|    2|       m_axi|                                                               i2|       pointer|
 |m_axi_i2_BID                                                              |   in|    1|       m_axi|                                                               i2|       pointer|
 |m_axi_i2_BUSER                                                            |   in|    1|       m_axi|                                                               i2|       pointer|
-|sext_ln146_1                                                              |   in|   62|     ap_none|                                                     sext_ln146_1|        scalar|
-|tmp_326                                                                   |   in|    7|     ap_none|                                                          tmp_326|        scalar|
+|sext_ln147_1                                                              |   in|   63|     ap_none|                                                     sext_ln147_1|        scalar|
+|tmp_328                                                                   |   in|    7|     ap_none|                                                          tmp_328|        scalar|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_address0  |  out|   14|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_ce0       |  out|    1|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
-|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_q0        |   in|   32|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
+|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_q0        |   in|   16|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_address0    |  out|   14|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_ce0         |  out|    1|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
-|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_q0          |   in|   32|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
+|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_q0          |   in|   16|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
 +--------------------------------------------------------------------------+-----+-----+------------+-----------------------------------------------------------------+--------------+
 

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv1_Pipeline_BW'
 ================================================================
-* Date:           Fri Nov  3 02:33:23 2023
+* Date:           Fri Nov  3 04:17:11 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -85,8 +85,8 @@
     +--------------------+----------+----+---+----+------------+------------+
     |    Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------+----------+----+---+----+------------+------------+
-    |add_ln72_fu_92_p2   |         +|   0|  0|  15|           8|           1|
-    |icmp_ln72_fu_86_p2  |      icmp|   0|  0|  15|           8|           2|
+    |add_ln73_fu_102_p2  |         +|   0|  0|  15|           8|           1|
+    |icmp_ln73_fu_96_p2  |      icmp|   0|  0|  15|           8|           2|
     +--------------------+----------+----+---+----+------------+------------+
     |Total               |          |   0|  0|  30|          16|           3|
     +--------------------+----------+----+---+----+------------+------------+
@@ -97,7 +97,7 @@
     +----------------------+----+-----------+-----+-----------+
     |ap_done_int           |   9|          2|    1|          2|
     |ap_sig_allocacmp_w_6  |   9|          2|    8|         16|
-    |w_fu_40               |   9|          2|    8|         16|
+    |w_fu_50               |   9|          2|    8|         16|
     +----------------------+----+-----------+-----+-----------+
     |Total                 |  27|          6|   17|         34|
     +----------------------+----+-----------+-----+-----------+
@@ -108,7 +108,7 @@
     +-------------+---+----+-----+-----------+
     |ap_CS_fsm    |  1|   0|    1|          0|
     |ap_done_reg  |  1|   0|    1|          0|
-    |w_fu_40      |  8|   0|    8|          0|
+    |w_fu_50      |  8|   0|    8|          0|
     +-------------+---+----+-----+-----------+
     |Total        | 10|   0|   10|          0|
     +-------------+---+----+-----+-----------+
@@ -128,14 +128,14 @@
 |ap_done                                                                   |  out|    1|  ap_ctrl_hs|                                                conv1_Pipeline_BW|  return value|
 |ap_idle                                                                   |  out|    1|  ap_ctrl_hs|                                                conv1_Pipeline_BW|  return value|
 |ap_ready                                                                  |  out|    1|  ap_ctrl_hs|                                                conv1_Pipeline_BW|  return value|
-|tmp_314                                                                   |   in|    7|     ap_none|                                                          tmp_314|        scalar|
+|tmp_315                                                                   |   in|    7|     ap_none|                                                          tmp_315|        scalar|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_address0  |  out|   14|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_ce0       |  out|    1|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_we0       |  out|    1|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
-|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_d0        |  out|   32|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
+|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_d0        |  out|   16|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_address0    |  out|   14|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_ce0         |  out|    1|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_we0         |  out|    1|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
-|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_d0          |  out|   32|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
+|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_d0          |  out|   16|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
 +--------------------------------------------------------------------------+-----+-----+------------+-----------------------------------------------------------------+--------------+
 

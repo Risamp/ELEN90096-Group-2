@@ -5708,10 +5708,10 @@ inline __attribute__((nodebug)) bool operator!=(
 # 366 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\\ap_fixed.h" 2
 # 5 "src/srcnn.h" 2
 # 42 "src/srcnn.h"
-typedef ap_fixed<24,3> input_t;
+typedef ap_fixed<12,1> input_t;
 typedef ap_fixed<12,1> conv1w_t;
-typedef ap_fixed<10,1> conv1b_t;
-typedef ap_fixed<32,3> conv1o_t;
+typedef ap_fixed<8,1> conv1b_t;
+typedef ap_fixed<16,3> conv1o_t;
 
 
 typedef ap_fixed<18,1> conv2w_t;
@@ -33567,6 +33567,7 @@ void conv1(input_t input_ftmap[1][255][255],
 {
 
  static conv1o_t output_fm_buffer[8][15][255] = {0};
+#pragma HLS BIND_STORAGE variable=output_fm_buffer type=RAM_T2P impl=BRAM
 #pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=2
 
  static input_t input_fm_buffer[1][15 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)];
@@ -33574,8 +33575,8 @@ void conv1(input_t input_ftmap[1][255][255],
 
  static conv1w_t weight_buffer[8][1][9][9];
 #pragma HLS BIND_STORAGE variable=weight_buffer type=RAM_2P impl=LUTRAM
-#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=1 type=cyclic factor=3
-#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=2 type=cyclic factor=3
+#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=1 type=cyclic factor=2
+#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=2 type=cyclic factor=2
 
  TILE_IN: for (int in = 0; in < 1; in += 1) {
  TILE_ROW: for (int h = 0; h < 255; h += 15) {

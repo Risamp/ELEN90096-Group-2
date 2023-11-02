@@ -15,10 +15,11 @@ void conv2(conv1o_t input_ftmap[N1][H][W],
 	//#pragma HLS PIPELINE off
 
 	static conv2o_t output_fm_buffer[C2_OD][C2_TH][W] = {0};
+	#pragma HLS BIND_STORAGE variable=output_fm_buffer type=RAM_T2P impl=BRAM
 	#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=15
 
 	static conv1o_t input_fm_buffer[C2_ID][C2_TH + (2 * P2)][W + (2 * P2)];
-	#pragma HLS bind_storage variable=input_fm_buffer type=RAM_2P impl=LUTRAM
+	//#pragma HLS bind_storage variable=input_fm_buffer type=RAM_2P impl=LUTRAM
 
 	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=2 type=cyclic factor=2
 	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=block factor=15

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1'" level="0">
-<item name = "Date">Fri Nov  3 02:31:50 2023
+<item name = "Date">Fri Nov  3 04:15:27 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">90609236, 90632084, 0.906 sec, 0.906 sec, 90609236, 90632084, no</column>
+<column name="">90620660, 90643508, 0.906 sec, 0.906 sec, 90620660, 90643508, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,18 +35,18 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILE_ROW">90609235, 90632083, 5329955 ~ 5331299, -, -, 17, no</column>
+<column name="- TILE_ROW">90620659, 90643507, 5330627 ~ 5331971, -, -, 17, no</column>
 <column name=" + BH">81320, 81320, 6775, -, -, 12, no</column>
 <column name="  ++ PAD">52, 52, 13, -, -, 4, no</column>
 <column name="  ++ BH.2">3315, 3315, 13, -, -, 255, no</column>
 <column name="  ++ PAD">52, 52, 13, -, -, 4, no</column>
 <column name="  ++ BH.4">3315, 3315, 13, -, -, 255, no</column>
-<column name=" + TILE_OUT">5248632, 5249976, 656079 ~ 656247, -, -, 8, no</column>
+<column name=" + TILE_OUT">5249304, 5250648, 656163 ~ 656331, -, -, 8, no</column>
 <column name="  ++ LOAD_WEIGHTS">2976, 3056, 372 ~ 382, -, -, 8, no</column>
 <column name="   +++ K">370, 379, 74, -, -, 5, no</column>
 <column name="    ++++ K.1">27, 27, 3, -, -, 9, no</column>
 <column name="    ++++ K.2">28, 28, 3, -, -, 9, no</column>
-<column name="  ++ EXPORT">99672, 99744, 12459 ~ 12468, -, -, 8, no</column>
+<column name="  ++ EXPORT">99744, 99816, 12468 ~ 12477, -, -, 8, no</column>
 <column name="   +++ BH">12456, 12464, 1557, -, -, 8, no</column>
 <column name="  ++ CLEAR">33168, 33184, 4146 ~ 4148, -, -, 8, no</column>
 <column name="   +++ BH">4144, 4145, 518, -, -, 8, no</column>

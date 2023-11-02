@@ -16,13 +16,13 @@ set C_modelName {conv2_Pipeline_LOAD_WEIGHTS_L}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ w2 int 32 regular {axi_master 0}  }
-	{ sext_ln33 int 62 regular  }
+	{ sext_ln34 int 62 regular  }
 	{ weight_buffer int 32 regular {array 256 { 0 3 } 0 1 } {global 1}  }
 }
 set hasAXIMCache 0
 set C_modelArgMapList {[ 
 	{ "Name" : "w2", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "conv2_weights","offset": { "type": "dynamic","port_name": "conv2_weights","bundle": "control"},"direction": "READONLY"}]}]} , 
- 	{ "Name" : "sext_ln33", "interface" : "wire", "bitwidth" : 62, "direction" : "READONLY"} , 
+ 	{ "Name" : "sext_ln34", "interface" : "wire", "bitwidth" : 62, "direction" : "READONLY"} , 
  	{ "Name" : "weight_buffer", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} ]}
 # RTL Port declarations: 
 set portNum 57
@@ -79,7 +79,7 @@ set portList {
 	{ m_axi_w2_BRESP sc_in sc_lv 2 signal 0 } 
 	{ m_axi_w2_BID sc_in sc_lv 1 signal 0 } 
 	{ m_axi_w2_BUSER sc_in sc_lv 1 signal 0 } 
-	{ sext_ln33 sc_in sc_lv 62 signal 1 } 
+	{ sext_ln34 sc_in sc_lv 62 signal 1 } 
 	{ weight_buffer_address0 sc_out sc_lv 8 signal 2 } 
 	{ weight_buffer_ce0 sc_out sc_logic 1 signal 2 } 
 	{ weight_buffer_we0 sc_out sc_lv 4 signal 2 } 
@@ -138,7 +138,7 @@ set NewPortList {[
  	{ "name": "m_axi_w2_BRESP", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "w2", "role": "BRESP" }} , 
  	{ "name": "m_axi_w2_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "w2", "role": "BID" }} , 
  	{ "name": "m_axi_w2_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "w2", "role": "BUSER" }} , 
- 	{ "name": "sext_ln33", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln33", "role": "default" }} , 
+ 	{ "name": "sext_ln34", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln34", "role": "default" }} , 
  	{ "name": "weight_buffer_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "weight_buffer", "role": "address0" }} , 
  	{ "name": "weight_buffer_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "weight_buffer", "role": "ce0" }} , 
  	{ "name": "weight_buffer_we0", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "weight_buffer", "role": "we0" }} , 
@@ -163,7 +163,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "w2", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "w2_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "sext_ln33", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln34", "Type" : "None", "Direction" : "I"},
 			{"Name" : "weight_buffer", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "LOAD_WEIGHTS_L", "PipelineType" : "UPC",
@@ -174,7 +174,7 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	conv2_Pipeline_LOAD_WEIGHTS_L {
 		w2 {Type I LastRead 1 FirstWrite -1}
-		sext_ln33 {Type I LastRead 0 FirstWrite -1}
+		sext_ln34 {Type I LastRead 0 FirstWrite -1}
 		weight_buffer {Type O LastRead -1 FirstWrite 2}}}
 
 set hasDtUnsupportedChannel 0
@@ -190,6 +190,6 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	 { m_axi {  { m_axi_w2_AWVALID VALID 1 1 }  { m_axi_w2_AWREADY READY 0 1 }  { m_axi_w2_AWADDR ADDR 1 64 }  { m_axi_w2_AWID ID 1 1 }  { m_axi_w2_AWLEN SIZE 1 32 }  { m_axi_w2_AWSIZE BURST 1 3 }  { m_axi_w2_AWBURST LOCK 1 2 }  { m_axi_w2_AWLOCK CACHE 1 2 }  { m_axi_w2_AWCACHE PROT 1 4 }  { m_axi_w2_AWPROT QOS 1 3 }  { m_axi_w2_AWQOS REGION 1 4 }  { m_axi_w2_AWREGION USER 1 4 }  { m_axi_w2_AWUSER DATA 1 1 }  { m_axi_w2_WVALID VALID 1 1 }  { m_axi_w2_WREADY READY 0 1 }  { m_axi_w2_WDATA FIFONUM 1 32 }  { m_axi_w2_WSTRB STRB 1 4 }  { m_axi_w2_WLAST LAST 1 1 }  { m_axi_w2_WID ID 1 1 }  { m_axi_w2_WUSER DATA 1 1 }  { m_axi_w2_ARVALID VALID 1 1 }  { m_axi_w2_ARREADY READY 0 1 }  { m_axi_w2_ARADDR ADDR 1 64 }  { m_axi_w2_ARID ID 1 1 }  { m_axi_w2_ARLEN SIZE 1 32 }  { m_axi_w2_ARSIZE BURST 1 3 }  { m_axi_w2_ARBURST LOCK 1 2 }  { m_axi_w2_ARLOCK CACHE 1 2 }  { m_axi_w2_ARCACHE PROT 1 4 }  { m_axi_w2_ARPROT QOS 1 3 }  { m_axi_w2_ARQOS REGION 1 4 }  { m_axi_w2_ARREGION USER 1 4 }  { m_axi_w2_ARUSER DATA 1 1 }  { m_axi_w2_RVALID VALID 0 1 }  { m_axi_w2_RREADY READY 1 1 }  { m_axi_w2_RDATA FIFONUM 0 32 }  { m_axi_w2_RLAST LAST 0 1 }  { m_axi_w2_RID ID 0 1 }  { m_axi_w2_RFIFONUM LEN 0 13 }  { m_axi_w2_RUSER DATA 0 1 }  { m_axi_w2_RRESP RESP 0 2 }  { m_axi_w2_BVALID VALID 0 1 }  { m_axi_w2_BREADY READY 1 1 }  { m_axi_w2_BRESP RESP 0 2 }  { m_axi_w2_BID ID 0 1 }  { m_axi_w2_BUSER DATA 0 1 } } }
-	sext_ln33 { ap_none {  { sext_ln33 in_data 0 62 } } }
+	sext_ln34 { ap_none {  { sext_ln34 in_data 0 62 } } }
 	weight_buffer { ap_memory {  { weight_buffer_address0 mem_address 1 8 }  { weight_buffer_ce0 mem_ce 1 1 }  { weight_buffer_we0 mem_we 1 4 }  { weight_buffer_d0 mem_din 1 32 } } }
 }

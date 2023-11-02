@@ -1,7 +1,7 @@
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/conv3.cpp, Line: 45, Column: 7 }
+DebugLoc:        { File: src/conv3.cpp, Line: 46, Column: 7 }
 Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Loop '''
@@ -11,7 +11,7 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/conv3.cpp, Line: 51, Column: 7 }
+DebugLoc:        { File: src/conv3.cpp, Line: 52, Column: 7 }
 Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Loop '''
@@ -21,7 +21,7 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/conv3.cpp, Line: 96, Column: 8 }
+DebugLoc:        { File: src/conv3.cpp, Line: 97, Column: 8 }
 Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          'Loop '''
@@ -31,7 +31,7 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/conv3.cpp, Line: 107, Column: 3 }
+DebugLoc:        { File: src/conv3.cpp, Line: 108, Column: 3 }
 Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          'Loop '''
@@ -41,8 +41,8 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/conv2.cpp, Line: 78, Column: 2 }
-Function:        _Z20load_input_buffer_c2PA3_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_ii
+DebugLoc:        { File: src/conv2.cpp, Line: 79, Column: 2 }
+Function:        _Z20load_input_buffer_c2PA3_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_ii
 Args:            
   - String:          'Loop '''
   - LoopName:        anonymous
@@ -51,8 +51,8 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 42, Column: 7 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 43, Column: 7 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Loop '''
   - LoopName:        KR1
@@ -61,8 +61,8 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 48, Column: 13 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 49, Column: 13 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Loop '''
   - LoopName:        KC1
@@ -77,7 +77,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        COL
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:42:11'
+  - LoopLoc:         'src/conv3.cpp:43:11'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -95,7 +95,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KR1
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:45:7'
+  - LoopLoc:         'src/conv3.cpp:46:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -111,7 +111,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:51:7'
+  - LoopLoc:         'src/conv3.cpp:52:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -127,7 +127,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:51:7'
+  - LoopLoc:         'src/conv3.cpp:52:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -143,7 +143,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:51:7'
+  - LoopLoc:         'src/conv3.cpp:52:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -159,7 +159,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:51:7'
+  - LoopLoc:         'src/conv3.cpp:52:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -175,7 +175,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:51:7'
+  - LoopLoc:         'src/conv3.cpp:52:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -191,7 +191,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KR1
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:45:7'
+  - LoopLoc:         'src/conv3.cpp:46:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -207,7 +207,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:51:7'
+  - LoopLoc:         'src/conv3.cpp:52:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -223,7 +223,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:51:7'
+  - LoopLoc:         'src/conv3.cpp:52:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -239,7 +239,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:51:7'
+  - LoopLoc:         'src/conv3.cpp:52:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -255,7 +255,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:51:7'
+  - LoopLoc:         'src/conv3.cpp:52:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -271,7 +271,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:51:7'
+  - LoopLoc:         'src/conv3.cpp:52:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -287,7 +287,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KR1
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:45:7'
+  - LoopLoc:         'src/conv3.cpp:46:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -303,7 +303,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:51:7'
+  - LoopLoc:         'src/conv3.cpp:52:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -319,7 +319,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:51:7'
+  - LoopLoc:         'src/conv3.cpp:52:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -335,7 +335,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:51:7'
+  - LoopLoc:         'src/conv3.cpp:52:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -351,7 +351,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:51:7'
+  - LoopLoc:         'src/conv3.cpp:52:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -367,7 +367,7 @@ Args:
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:51:7'
+  - LoopLoc:         'src/conv3.cpp:52:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv3
@@ -377,13 +377,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: src/conv3.cpp, Line: 132, Column: 0 }
+DebugLoc:        { File: src/conv3.cpp, Line: 133, Column: 0 }
 Function:        _Z23export_output_buffer_c3PA5_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_PS_ILi15ELi1ELS0_5ELS1_3ELi0EEii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        EXPORTH
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:135:11'
+  - LoopLoc:         'src/conv3.cpp:136:11'
   - String:          ') '
   - String:          'in function '''
   - String:          export_output_buffer_c3
@@ -395,13 +395,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: src/conv3.cpp, Line: 69, Column: 0 }
+DebugLoc:        { File: src/conv3.cpp, Line: 70, Column: 0 }
 Function:        _Z15clear_buffer_c3PA5_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        CLEARH
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:71:10'
+  - LoopLoc:         'src/conv3.cpp:72:10'
   - String:          ') '
   - String:          'in function '''
   - String:          clear_buffer_c3
@@ -413,13 +413,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv3.cpp, Line: 85, Column: 0 }
+DebugLoc:        { File: src/conv3.cpp, Line: 86, Column: 0 }
 Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        PAD
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:96:8'
+  - LoopLoc:         'src/conv3.cpp:97:8'
   - String:          ') '
   - String:          'in function '''
   - String:          load_input_buffer_c3
@@ -429,13 +429,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv3.cpp, Line: 85, Column: 0 }
+DebugLoc:        { File: src/conv3.cpp, Line: 86, Column: 0 }
 Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        anonymous
   - String:          ''' ('
-  - LoopLoc:         'src/conv3.cpp:107:3'
+  - LoopLoc:         'src/conv3.cpp:108:3'
   - String:          ') '
   - String:          'in function '''
   - String:          load_input_buffer_c3
@@ -446,12 +446,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
 DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        COL
   - String:          ''' ('
-  - LoopLoc:         'src/conv2.cpp:43:10'
+  - LoopLoc:         'src/conv2.cpp:44:10'
   - String:          ') '
   - String:          'in function '''
   - String:          conv2
@@ -463,13 +463,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: src/conv2.cpp, Line: 102, Column: 0 }
+DebugLoc:        { File: src/conv2.cpp, Line: 103, Column: 0 }
 Function:        _Z23export_output_buffer_c2PA3_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_PS_ILi10ELi1ELS0_5ELS1_3ELi0EEii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        BH
   - String:          ''' ('
-  - LoopLoc:         'src/conv2.cpp:105:6'
+  - LoopLoc:         'src/conv2.cpp:106:6'
   - String:          ') '
   - String:          'in function '''
   - String:          export_output_buffer_c2
@@ -481,13 +481,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartially2FullyUnroll
-DebugLoc:        { File: src/conv2.cpp, Line: 57, Column: 0 }
+DebugLoc:        { File: src/conv2.cpp, Line: 58, Column: 0 }
 Function:        _Z15clear_buffer_c2PA3_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        BH
   - String:          ''' ('
-  - LoopLoc:         'src/conv2.cpp:59:6'
+  - LoopLoc:         'src/conv2.cpp:60:6'
   - String:          ') '
   - String:          'in function '''
   - String:          clear_buffer_c2
@@ -500,13 +500,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv2.cpp, Line: 57, Column: 0 }
+DebugLoc:        { File: src/conv2.cpp, Line: 58, Column: 0 }
 Function:        _Z15clear_buffer_c2PA3_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        BH
   - String:          ''' ('
-  - LoopLoc:         'src/conv2.cpp:59:6'
+  - LoopLoc:         'src/conv2.cpp:60:6'
   - String:          ') '
   - String:          'in function '''
   - String:          clear_buffer_c2
@@ -516,13 +516,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv2.cpp, Line: 73, Column: 0 }
-Function:        _Z20load_input_buffer_c2PA3_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_ii
+DebugLoc:        { File: src/conv2.cpp, Line: 74, Column: 0 }
+Function:        _Z20load_input_buffer_c2PA3_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_ii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        anonymous
   - String:          ''' ('
-  - LoopLoc:         'src/conv2.cpp:78:2'
+  - LoopLoc:         'src/conv2.cpp:79:2'
   - String:          ') '
   - String:          'in function '''
   - String:          load_input_buffer_c2
@@ -533,12 +533,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        COL
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:39:11'
+  - LoopLoc:         'src/conv1.cpp:40:11'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -551,12 +551,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KR1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:42:7'
+  - LoopLoc:         'src/conv1.cpp:43:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -567,12 +567,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -583,12 +583,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -599,12 +599,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -615,12 +615,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -631,12 +631,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -647,12 +647,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -663,12 +663,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -679,12 +679,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -695,12 +695,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -711,12 +711,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KR1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:42:7'
+  - LoopLoc:         'src/conv1.cpp:43:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -727,12 +727,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -743,12 +743,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -759,12 +759,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -775,12 +775,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -791,12 +791,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -807,12 +807,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -823,12 +823,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -839,12 +839,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -855,12 +855,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -871,12 +871,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KR1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:42:7'
+  - LoopLoc:         'src/conv1.cpp:43:7'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -887,12 +887,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -903,12 +903,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -919,12 +919,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -935,12 +935,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -951,12 +951,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -967,12 +967,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -983,12 +983,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -999,12 +999,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -1015,12 +1015,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:48:13'
+  - LoopLoc:         'src/conv1.cpp:49:13'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -1030,13 +1030,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 130, Column: 0 }
-Function:        _Z23export_output_buffer_c1PA15_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_PS_ILi10ELi1ELS0_5ELS1_3ELi0EEii
+DebugLoc:        { File: src/conv1.cpp, Line: 131, Column: 0 }
+Function:        _Z23export_output_buffer_c1PA15_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        BH
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:133:6'
+  - LoopLoc:         'src/conv1.cpp:134:6'
   - String:          ') '
   - String:          'in function '''
   - String:          export_output_buffer_c1
@@ -1048,13 +1048,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 68, Column: 0 }
-Function:        _Z15clear_buffer_c1PA15_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 69, Column: 0 }
+Function:        _Z15clear_buffer_c1PA15_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        BH
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:70:6'
+  - LoopLoc:         'src/conv1.cpp:71:6'
   - String:          ') '
   - String:          'in function '''
   - String:          clear_buffer_c1
@@ -1066,13 +1066,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 112, Column: 0 }
+DebugLoc:        { File: src/conv1.cpp, Line: 113, Column: 0 }
 Function:        _Z21load_weight_buffer_c1PA1_A9_A9_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EES6_ii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        K
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:115:5'
+  - LoopLoc:         'src/conv1.cpp:116:5'
   - String:          ') '
   - String:          'in function '''
   - String:          load_weight_buffer_c1
@@ -1084,42 +1084,42 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: src/conv1.cpp, Line: 84, Column: 0 }
-Function:        _Z20load_input_buffer_c1PA23_A263_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
+DebugLoc:        { File: src/conv1.cpp, Line: 85, Column: 0 }
+Function:        _Z20load_input_buffer_c1PA23_A263_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          'Inlining function '''
   - Callee:          'clamp(int, int, int)'
     DebugLoc:        { File: src/srcnn.cpp, Line: 54, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'load_input_buffer_c1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [23][263], ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
-    DebugLoc:        { File: src/conv1.cpp, Line: 84, Column: 0 }
+  - Caller:          'load_input_buffer_c1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [23][263], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
+    DebugLoc:        { File: src/conv1.cpp, Line: 85, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: src/conv1.cpp, Line: 130, Column: 0 }
-Function:        _Z23export_output_buffer_c1PA15_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_PS_ILi10ELi1ELS0_5ELS1_3ELi0EEii
+DebugLoc:        { File: src/conv1.cpp, Line: 131, Column: 0 }
+Function:        _Z23export_output_buffer_c1PA15_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEii
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'clear_buffer_c1(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [15][255])'
-    DebugLoc:        { File: src/conv1.cpp, Line: 68, Column: 0 }
+  - Callee:          'clear_buffer_c1(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [15][255])'
+    DebugLoc:        { File: src/conv1.cpp, Line: 69, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'export_output_buffer_c1(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [15][255], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)'
-    DebugLoc:        { File: src/conv1.cpp, Line: 130, Column: 0 }
+  - Caller:          'export_output_buffer_c1(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [15][255], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)'
+    DebugLoc:        { File: src/conv1.cpp, Line: 131, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'load_input_buffer_c1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [23][263], ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
-    DebugLoc:        { File: src/conv1.cpp, Line: 84, Column: 0 }
+  - Callee:          'load_input_buffer_c1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [23][263], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
+    DebugLoc:        { File: src/conv1.cpp, Line: 85, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Caller:          'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ''''
 ...
@@ -1127,13 +1127,13 @@ Args:
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Inlining function '''
   - Callee:          'load_weight_buffer_c1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], int, int)'
-    DebugLoc:        { File: src/conv1.cpp, Line: 112, Column: 0 }
+    DebugLoc:        { File: src/conv1.cpp, Line: 113, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Caller:          'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ''''
 ...
@@ -1141,41 +1141,41 @@ Args:
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'export_output_buffer_c1(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [15][255], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)'
-    DebugLoc:        { File: src/conv1.cpp, Line: 130, Column: 0 }
+  - Callee:          'export_output_buffer_c1(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [15][255], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)'
+    DebugLoc:        { File: src/conv1.cpp, Line: 131, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Caller:          'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: src/conv2.cpp, Line: 102, Column: 0 }
+DebugLoc:        { File: src/conv2.cpp, Line: 103, Column: 0 }
 Function:        _Z23export_output_buffer_c2PA3_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_PS_ILi10ELi1ELS0_5ELS1_3ELi0EEii
 Args:            
   - String:          'Inlining function '''
   - Callee:          'clear_buffer_c2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][255])'
-    DebugLoc:        { File: src/conv2.cpp, Line: 57, Column: 0 }
+    DebugLoc:        { File: src/conv2.cpp, Line: 58, Column: 0 }
   - String:          ''' into '''
   - Caller:          'export_output_buffer_c2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][255], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)'
-    DebugLoc:        { File: src/conv2.cpp, Line: 102, Column: 0 }
+    DebugLoc:        { File: src/conv2.cpp, Line: 103, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Inlining function '''
   - Callee:          'load_weight_buffer_c2(ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], int, int)'
-    DebugLoc:        { File: src/conv2.cpp, Line: 88, Column: 0 }
+    DebugLoc:        { File: src/conv2.cpp, Line: 89, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Caller:          'conv2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ''''
 ...
@@ -1183,20 +1183,20 @@ Args:
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Inlining function '''
   - Callee:          'export_output_buffer_c2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][255], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)'
-    DebugLoc:        { File: src/conv2.cpp, Line: 102, Column: 0 }
+    DebugLoc:        { File: src/conv2.cpp, Line: 103, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Caller:          'conv2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: src/conv3.cpp, Line: 85, Column: 0 }
+DebugLoc:        { File: src/conv3.cpp, Line: 86, Column: 0 }
 Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          'Inlining function '''
@@ -1204,21 +1204,21 @@ Args:
     DebugLoc:        { File: src/srcnn.cpp, Line: 54, Column: 0 }
   - String:          ''' into '''
   - Caller:          'load_input_buffer_c3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [9][259], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
-    DebugLoc:        { File: src/conv3.cpp, Line: 85, Column: 0 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 86, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: src/conv3.cpp, Line: 132, Column: 0 }
+DebugLoc:        { File: src/conv3.cpp, Line: 133, Column: 0 }
 Function:        _Z23export_output_buffer_c3PA5_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_PS_ILi15ELi1ELS0_5ELS1_3ELi0EEii
 Args:            
   - String:          'Inlining function '''
   - Callee:          'clear_buffer_c3(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [5][255])'
-    DebugLoc:        { File: src/conv3.cpp, Line: 69, Column: 0 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 70, Column: 0 }
   - String:          ''' into '''
   - Caller:          'export_output_buffer_c3(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [5][255], ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)'
-    DebugLoc:        { File: src/conv3.cpp, Line: 132, Column: 0 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 133, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -1229,7 +1229,7 @@ Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3
 Args:            
   - String:          'Inlining function '''
   - Callee:          'load_weight_buffer_c3(ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], int, int)'
-    DebugLoc:        { File: src/conv3.cpp, Line: 116, Column: 0 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 117, Column: 0 }
   - String:          ''' into '''
   - Caller:          'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
@@ -1243,7 +1243,7 @@ Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3
 Args:            
   - String:          'Inlining function '''
   - Callee:          'export_output_buffer_c3(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [5][255], ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)'
-    DebugLoc:        { File: src/conv3.cpp, Line: 132, Column: 0 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 133, Column: 0 }
   - String:          ''' into '''
   - Caller:          'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
@@ -1252,14 +1252,14 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          The program may have out of bound array access
 ...
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/conv3.cpp, Line: 22, Column: 0 }
+DebugLoc:        { File: src/conv3.cpp, Line: 23, Column: 0 }
 Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          'Applying '
@@ -1299,13 +1299,13 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/conv2.cpp, Line: 20, Column: 0 }
-Function:        _Z20load_input_buffer_c2PA3_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_ii
+DebugLoc:        { File: src/conv2.cpp, Line: 21, Column: 0 }
+Function:        _Z20load_input_buffer_c2PA3_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_ii
 Args:            
   - String:          'Applying '
   - String:          array_partition
   - String:          ' to '''
-  - UOName:          _ZZ5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_E15input_fm_buffer
+  - UOName:          _ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EEE15input_fm_buffer
   - String:          ''':'
   - String:          ' '
   - Mode:            Cyclic
@@ -1328,12 +1328,12 @@ Args:
 Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: src/conv2.cpp, Line: 17, Column: 0 }
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Applying '
   - String:          array_partition
   - String:          ' to '''
-  - UOName:          _ZZ5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_E16output_fm_buffer
+  - UOName:          _ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EEE16output_fm_buffer
   - String:          ''':'
   - String:          ' '
   - Mode:            Block
@@ -1347,19 +1347,19 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/conv1.cpp, Line: 21, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 22, Column: 0 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Applying '
   - String:          array_partition
   - String:          ' to '''
-  - UOName:          _ZZ5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EEE13weight_buffer
+  - UOName:          _ZZ5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EEE13weight_buffer
   - String:          ''':'
   - String:          ' '
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '3'
+  - Factor:          '2'
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
@@ -1367,7 +1367,7 @@ Args:
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '3'
+  - Factor:          '2'
   - String:          ' on dimension '
   - Dim:             '2'
   - String:          .
@@ -1375,13 +1375,13 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/conv1.cpp, Line: 18, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 19, Column: 0 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Applying '
   - String:          array_partition
   - String:          ' to '''
-  - UOName:          _ZZ5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EEE15input_fm_buffer
+  - UOName:          _ZZ5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EEE15input_fm_buffer
   - String:          ''':'
   - String:          ' '
   - Mode:            Block
@@ -1396,12 +1396,12 @@ Args:
 Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: src/conv1.cpp, Line: 15, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Applying '
   - String:          array_partition
   - String:          ' to '''
-  - UOName:          _ZZ5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EEE16output_fm_buffer
+  - UOName:          _ZZ5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EEE16output_fm_buffer
   - String:          ''':'
   - String:          ' '
   - Mode:            Block
@@ -1431,7 +1431,7 @@ Args:
 Pass:            reflow-aggr
 Name:            AggrSucc
 DebugLoc:        { File: src/srcnn.cpp, Line: 18, Column: 0 }
-Function:        _Z5srcnnPA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EESC_SG_PA32_A5_A5_SH_PS_ILi15ELi1ELS0_5ELS1_3ELi0EES5_
+Function:        _Z5srcnnPA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EEPA32_A5_A5_SG_PS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        maxi
@@ -1470,7 +1470,7 @@ Args:
   - String:          ''' with '
   - AggregateTypeName: 'compact=none'
   - String:          ' mode in '
-  - Bitwidth:        '32'
+  - Bitwidth:        '16'
   - String:          '-bits'
 ...
 --- !Passed
@@ -1500,14 +1500,14 @@ Args:
   - String:          ''' with '
   - AggregateTypeName: 'compact=none'
   - String:          ' mode in '
-  - Bitwidth:        '32'
+  - Bitwidth:        '16'
   - String:          '-bits'
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/conv1.cpp, Line: 103, Column: 3 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 104, Column: 3 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Sequential '
   - Direction:       read
@@ -1522,9 +1522,9 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:103:3'
+  - LoopLoc:         'src/conv1.cpp:104:3'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
@@ -1535,8 +1535,8 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/conv1.cpp, Line: 119, Column: 2 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 120, Column: 2 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Sequential '
   - Direction:       read
@@ -1551,9 +1551,9 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:119:2'
+  - LoopLoc:         'src/conv1.cpp:120:2'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
@@ -1564,8 +1564,8 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/conv1.cpp, Line: 119, Column: 2 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 120, Column: 2 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Sequential '
   - Direction:       read
@@ -1580,9 +1580,9 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:119:2'
+  - LoopLoc:         'src/conv1.cpp:120:2'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
@@ -1593,8 +1593,8 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/conv1.cpp, Line: 146, Column: 3 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 147, Column: 3 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Sequential '
   - Direction:       write
@@ -1609,21 +1609,21 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:146:3'
+  - LoopLoc:         'src/conv1.cpp:147:3'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      store
   - OrigDirection:   write
-  - OrigID:          load-store-loop.0.i965.store.12
+  - OrigID:          load-store-loop.0.i1091.store.12
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/conv1.cpp, Line: 146, Column: 3 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 147, Column: 3 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Sequential '
   - Direction:       write
@@ -1638,74 +1638,74 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:146:3'
+  - LoopLoc:         'src/conv1.cpp:147:3'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      store
   - OrigDirection:   write
-  - OrigID:          load-store-loop.1.i972.store.12
+  - OrigID:          load-store-loop.1.i1098.store.12
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzeBoundsPattern
-DebugLoc:        { File: src/conv1.cpp, Line: 115, Column: 5 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 116, Column: 5 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Could not analyze the loop bounds
   - String:          ' _XLX_SEP_ '
   - LoopName:        K
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:115:5'
+  - LoopLoc:         'src/conv1.cpp:116:5'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzeBoundsPattern
-DebugLoc:        { File: src/conv1.cpp, Line: 133, Column: 6 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 134, Column: 6 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Could not analyze the loop bounds
   - String:          ' _XLX_SEP_ '
   - LoopName:        BH
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:133:6'
+  - LoopLoc:         'src/conv1.cpp:134:6'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzeBoundsPattern
-DebugLoc:        { File: src/conv1.cpp, Line: 70, Column: 6 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 71, Column: 6 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Could not analyze the loop bounds
   - String:          ' _XLX_SEP_ '
   - LoopName:        BH
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:70:6'
+  - LoopLoc:         'src/conv1.cpp:71:6'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: src/conv1.cpp, Line: 98, Column: 32 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 99, Column: 32 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: src/conv1.cpp, Line: 98, Column: 32 }
+    DebugLoc:        { File: src/conv1.cpp, Line: 99, Column: 32 }
   - OrigDirection:   read
   - OrigID:          PAD.i.load.14
   - ArrayName:       input_ftmap
@@ -1714,22 +1714,22 @@ Args:
   - String:          ' '
   - LoopName:        BH
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:86:6'
+  - LoopLoc:         'src/conv1.cpp:87:6'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: src/conv1.cpp, Line: 99, Column: 52 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 100, Column: 52 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: src/conv1.cpp, Line: 99, Column: 52 }
+    DebugLoc:        { File: src/conv1.cpp, Line: 100, Column: 52 }
   - OrigDirection:   read
   - OrigID:          PAD.i.load.17
   - ArrayName:       input_ftmap
@@ -1738,22 +1738,22 @@ Args:
   - String:          ' '
   - LoopName:        BH
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:86:6'
+  - LoopLoc:         'src/conv1.cpp:87:6'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: src/conv1.cpp, Line: 103, Column: 3 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 104, Column: 3 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv1.cpp, Line: 103, Column: 3 }
+    DebugLoc:        { File: src/conv1.cpp, Line: 104, Column: 3 }
   - OrigDirection:   read
   - OrigID:          scevgepseq
   - ArrayName:       input_ftmap
@@ -1762,17 +1762,36 @@ Args:
   - String:          ' '
   - LoopName:        BH
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:86:6'
+  - LoopLoc:         'src/conv1.cpp:87:6'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+    DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          BH.i.load.8
+  - ArrayName:       conv1_biases
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/conv2.cpp, Line: 33, Column: 13 }
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
+DebugLoc:        { File: src/conv2.cpp, Line: 34, Column: 13 }
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Sequential '
   - Direction:       read
@@ -1787,9 +1806,9 @@ Args:
   - String:          ' '
   - LoopName:        TILE_OUT
   - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:33:13'
+  - LoopLoc:         'src/conv2.cpp:34:13'
   - String:          ' '
-  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
@@ -1800,8 +1819,8 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
+DebugLoc:        { File: src/conv2.cpp, Line: 119, Column: 3 }
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Sequential '
   - Direction:       write
@@ -1816,9 +1835,9 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:118:3'
+  - LoopLoc:         'src/conv2.cpp:119:3'
   - String:          ' '
-  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
@@ -1829,8 +1848,8 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
+DebugLoc:        { File: src/conv2.cpp, Line: 119, Column: 3 }
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Sequential '
   - Direction:       write
@@ -1845,9 +1864,9 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:118:3'
+  - LoopLoc:         'src/conv2.cpp:119:3'
   - String:          ' '
-  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
@@ -1858,29 +1877,48 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzeBoundsPattern
-DebugLoc:        { File: src/conv2.cpp, Line: 105, Column: 6 }
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
+DebugLoc:        { File: src/conv2.cpp, Line: 106, Column: 6 }
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Could not analyze the loop bounds
   - String:          ' _XLX_SEP_ '
   - LoopName:        BH
   - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:105:6'
+  - LoopLoc:         'src/conv2.cpp:106:6'
   - String:          ' '
-  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+    DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          BH.i.load.8
+  - ArrayName:       conv2_biases
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'conv2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: src/conv2.cpp, Line: 33, Column: 13 }
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
+DebugLoc:        { File: src/conv2.cpp, Line: 34, Column: 13 }
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv2.cpp, Line: 33, Column: 13 }
+    DebugLoc:        { File: src/conv2.cpp, Line: 34, Column: 13 }
   - OrigDirection:   read
   - OrigID:          conv2_weights1seq
   - ArrayName:       conv2_weights
@@ -1889,16 +1927,16 @@ Args:
   - String:          ' '
   - LoopName:        TILE_ROW
   - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:29:12'
+  - LoopLoc:         'src/conv2.cpp:30:12'
   - String:          ' '
-  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/conv3.cpp, Line: 118, Column: 11 }
+DebugLoc:        { File: src/conv3.cpp, Line: 119, Column: 11 }
 Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Sequential '
@@ -1914,7 +1952,7 @@ Args:
   - String:          ' '
   - LoopName:        WEIGHTI
   - String:          ' '
-  - LoopLoc:         'src/conv3.cpp:118:11'
+  - LoopLoc:         'src/conv3.cpp:119:11'
   - String:          ' '
   - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
@@ -1927,7 +1965,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
+DebugLoc:        { File: src/conv3.cpp, Line: 149, Column: 3 }
 Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Sequential '
@@ -1943,7 +1981,7 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv3.cpp:148:3'
+  - LoopLoc:         'src/conv3.cpp:149:3'
   - String:          ' '
   - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
@@ -1956,7 +1994,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
+DebugLoc:        { File: src/conv3.cpp, Line: 149, Column: 3 }
 Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Sequential '
@@ -1972,7 +2010,7 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv3.cpp:148:3'
+  - LoopLoc:         'src/conv3.cpp:149:3'
   - String:          ' '
   - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
@@ -1985,14 +2023,14 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzeBoundsPattern
-DebugLoc:        { File: src/conv3.cpp, Line: 135, Column: 11 }
+DebugLoc:        { File: src/conv3.cpp, Line: 136, Column: 11 }
 Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Could not analyze the loop bounds
   - String:          ' _XLX_SEP_ '
   - LoopName:        EXPORTH
   - String:          ' '
-  - LoopLoc:         'src/conv3.cpp:135:11'
+  - LoopLoc:         'src/conv3.cpp:136:11'
   - String:          ' '
   - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
@@ -2001,14 +2039,14 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzeBoundsPattern
-DebugLoc:        { File: src/conv3.cpp, Line: 71, Column: 10 }
+DebugLoc:        { File: src/conv3.cpp, Line: 72, Column: 10 }
 Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Could not analyze the loop bounds
   - String:          ' _XLX_SEP_ '
   - LoopName:        CLEARH
   - String:          ' '
-  - LoopLoc:         'src/conv3.cpp:71:10'
+  - LoopLoc:         'src/conv3.cpp:72:10'
   - String:          ' '
   - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
@@ -2017,13 +2055,35 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: src/conv3.cpp, Line: 118, Column: 11 }
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          for.inc124.load.7
+  - ArrayName:       conv3_biases
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        TILE_ROW
+  - String:          ' '
+  - LoopLoc:         'src/conv3.cpp:32:12'
+  - String:          ' '
+  - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+    DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: src/conv3.cpp, Line: 119, Column: 11 }
 Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv3.cpp, Line: 118, Column: 11 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 119, Column: 11 }
   - OrigDirection:   read
   - OrigID:          conv3_weights1seq
   - ArrayName:       conv3_weights
@@ -2032,7 +2092,7 @@ Args:
   - String:          ' '
   - LoopName:        TILE_ROW
   - String:          ' '
-  - LoopLoc:         'src/conv3.cpp:31:12'
+  - LoopLoc:         'src/conv3.cpp:32:12'
   - String:          ' '
   - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
@@ -2041,7 +2101,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/conv3.cpp, Line: 98, Column: 32 }
+DebugLoc:        { File: src/conv3.cpp, Line: 99, Column: 32 }
 Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          'Sequential '
@@ -2057,14 +2117,14 @@ Args:
   - String:          ' '
   - LoopName:        LOADH
   - String:          ' '
-  - LoopLoc:         'src/conv3.cpp:87:9'
+  - LoopLoc:         'src/conv3.cpp:88:9'
   - String:          ' '
   - Function:        'load_input_buffer_c3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [9][259], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
-    DebugLoc:        { File: src/conv3.cpp, Line: 85, Column: 0 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 86, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: src/conv3.cpp, Line: 98, Column: 32 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 99, Column: 32 }
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.276
   - OrigAccess:      load
@@ -2827,20 +2887,20 @@ Args:
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.1558
   - OrigAccess:      load
-    DebugLoc:        { File: src/conv3.cpp, Line: 99, Column: 52 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 100, Column: 52 }
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.279
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: src/conv3.cpp, Line: 98, Column: 32 }
+DebugLoc:        { File: src/conv3.cpp, Line: 99, Column: 32 }
 Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv3.cpp, Line: 98, Column: 32 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 99, Column: 32 }
   - OrigDirection:   read
   - OrigID:          scevgep1seq
   - ArrayName:       input_ftmap
@@ -2849,17 +2909,17 @@ Args:
   - String:          ' '
   - LoopName:        LOADH
   - String:          ' '
-  - LoopLoc:         'src/conv3.cpp:87:9'
+  - LoopLoc:         'src/conv3.cpp:88:9'
   - String:          ' '
   - Function:        'load_input_buffer_c3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [9][259], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
-    DebugLoc:        { File: src/conv3.cpp, Line: 85, Column: 0 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 86, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/conv2.cpp, Line: 75, Column: 6 }
-Function:        _Z20load_input_buffer_c2PA3_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_ii
+DebugLoc:        { File: src/conv2.cpp, Line: 76, Column: 6 }
+Function:        _Z20load_input_buffer_c2PA3_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_ii
 Args:            
   - String:          'Sequential '
   - Direction:       read
@@ -2874,10 +2934,10 @@ Args:
   - String:          ' '
   - LoopName:        BH
   - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:75:6'
+  - LoopLoc:         'src/conv2.cpp:76:6'
   - String:          ' '
-  - Function:        'load_input_buffer_c2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][255], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
-    DebugLoc:        { File: src/conv2.cpp, Line: 73, Column: 0 }
+  - Function:        'load_input_buffer_c2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][255], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
+    DebugLoc:        { File: src/conv2.cpp, Line: 74, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
@@ -3649,13 +3709,13 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            IncompatibleStride
-DebugLoc:        { File: src/conv2.cpp, Line: 75, Column: 6 }
-Function:        _Z20load_input_buffer_c2PA3_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_ii
+DebugLoc:        { File: src/conv2.cpp, Line: 76, Column: 6 }
+Function:        _Z20load_input_buffer_c2PA3_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_ii
 Args:            
   - String:          Stride is incompatible
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv2.cpp, Line: 75, Column: 6 }
+    DebugLoc:        { File: src/conv2.cpp, Line: 76, Column: 6 }
   - OrigDirection:   read
   - OrigID:          scevgepseq
   - ArrayName:       input_ftmap
@@ -3664,26 +3724,26 @@ Args:
   - String:          ' '
   - LoopName:        LOAD_INPUT
   - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:74:14'
+  - LoopLoc:         'src/conv2.cpp:75:14'
   - String:          ' '
-  - Function:        'load_input_buffer_c2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][255], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
-    DebugLoc:        { File: src/conv2.cpp, Line: 73, Column: 0 }
+  - Function:        'load_input_buffer_c2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][255], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
+    DebugLoc:        { File: src/conv2.cpp, Line: 74, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
-DebugLoc:        { File: src/conv1.cpp, Line: 146, Column: 3 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 147, Column: 3 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Could not widen since type '
-  - Type:            i32
+  - Type:            i16
   - String:          ' size is greater than or equal to alignment '
   - Alignment:       '1'
   - String:          '(bytes)'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv1.cpp, Line: 146, Column: 3 }
+    DebugLoc:        { File: src/conv1.cpp, Line: 147, Column: 3 }
   - OrigDirection:   write
   - OrigID:          scevgep4seq
   - ArrayName:       output_ftmap
@@ -3692,26 +3752,26 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:146:3'
+  - LoopLoc:         'src/conv1.cpp:147:3'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
-DebugLoc:        { File: src/conv1.cpp, Line: 146, Column: 3 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 147, Column: 3 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Could not widen since type '
-  - Type:            i32
+  - Type:            i16
   - String:          ' size is greater than or equal to alignment '
   - Alignment:       '1'
   - String:          '(bytes)'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv1.cpp, Line: 146, Column: 3 }
+    DebugLoc:        { File: src/conv1.cpp, Line: 147, Column: 3 }
   - OrigDirection:   write
   - OrigID:          scevgep3seq
   - ArrayName:       output_ftmap
@@ -3720,17 +3780,17 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:146:3'
+  - LoopLoc:         'src/conv1.cpp:147:3'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
-DebugLoc:        { File: src/conv1.cpp, Line: 119, Column: 2 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 120, Column: 2 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Could not widen since type '
   - Type:            i16
@@ -3739,7 +3799,7 @@ Args:
   - String:          '(bytes)'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv1.cpp, Line: 119, Column: 2 }
+    DebugLoc:        { File: src/conv1.cpp, Line: 120, Column: 2 }
   - OrigDirection:   read
   - OrigID:          scevgep2seq
   - ArrayName:       conv1_weights
@@ -3748,17 +3808,17 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:119:2'
+  - LoopLoc:         'src/conv1.cpp:120:2'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
-DebugLoc:        { File: src/conv1.cpp, Line: 119, Column: 2 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 120, Column: 2 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Could not widen since type '
   - Type:            i16
@@ -3767,7 +3827,7 @@ Args:
   - String:          '(bytes)'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv1.cpp, Line: 119, Column: 2 }
+    DebugLoc:        { File: src/conv1.cpp, Line: 120, Column: 2 }
   - OrigDirection:   read
   - OrigID:          scevgep1seq
   - ArrayName:       conv1_weights
@@ -3776,26 +3836,26 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:119:2'
+  - LoopLoc:         'src/conv1.cpp:120:2'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
-DebugLoc:        { File: src/conv1.cpp, Line: 103, Column: 3 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: src/conv1.cpp, Line: 104, Column: 3 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Could not widen since type '
-  - Type:            i32
+  - Type:            i16
   - String:          ' size is greater than or equal to alignment '
   - Alignment:       '1'
   - String:          '(bytes)'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv1.cpp, Line: 103, Column: 3 }
+    DebugLoc:        { File: src/conv1.cpp, Line: 104, Column: 3 }
   - OrigDirection:   read
   - OrigID:          scevgepseq
   - ArrayName:       input_ftmap
@@ -3804,17 +3864,17 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:103:3'
+  - LoopLoc:         'src/conv1.cpp:104:3'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
-DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
+DebugLoc:        { File: src/conv2.cpp, Line: 119, Column: 3 }
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Could not widen since type '
   - Type:            i32
@@ -3823,7 +3883,7 @@ Args:
   - String:          '(bytes)'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
+    DebugLoc:        { File: src/conv2.cpp, Line: 119, Column: 3 }
   - OrigDirection:   write
   - OrigID:          scevgep2seq
   - ArrayName:       output_ftmap
@@ -3832,17 +3892,17 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:118:3'
+  - LoopLoc:         'src/conv2.cpp:119:3'
   - String:          ' '
-  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
-DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
+DebugLoc:        { File: src/conv2.cpp, Line: 119, Column: 3 }
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Could not widen since type '
   - Type:            i32
@@ -3851,7 +3911,7 @@ Args:
   - String:          '(bytes)'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
+    DebugLoc:        { File: src/conv2.cpp, Line: 119, Column: 3 }
   - OrigDirection:   write
   - OrigID:          scevgepseq
   - ArrayName:       output_ftmap
@@ -3860,37 +3920,37 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:118:3'
+  - LoopLoc:         'src/conv2.cpp:119:3'
   - String:          ' '
-  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            TypeAllocSizePaddingMemoryAccess
-DebugLoc:        { File: src/conv2.cpp, Line: 33, Column: 13 }
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
+DebugLoc:        { File: src/conv2.cpp, Line: 34, Column: 13 }
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - Type:            i24
   - String:          ' allocated space contains padding. This is unsupported'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv2.cpp, Line: 33, Column: 13 }
+    DebugLoc:        { File: src/conv2.cpp, Line: 34, Column: 13 }
   - OrigDirection:   read
   - OrigID:          conv2_weights1seq
   - ArrayName:       conv2_weights
   - String:          ' '
   - BundleName:      w2
   - String:          ' '
-  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+  - Function:        'conv2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
-DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
+DebugLoc:        { File: src/conv3.cpp, Line: 149, Column: 3 }
 Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Could not widen since type '
@@ -3900,7 +3960,7 @@ Args:
   - String:          '(bytes)'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 149, Column: 3 }
   - OrigDirection:   write
   - OrigID:          scevgep2seq
   - ArrayName:       output_ftmap
@@ -3909,7 +3969,7 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv3.cpp:148:3'
+  - LoopLoc:         'src/conv3.cpp:149:3'
   - String:          ' '
   - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
@@ -3918,7 +3978,7 @@ Args:
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
-DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
+DebugLoc:        { File: src/conv3.cpp, Line: 149, Column: 3 }
 Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Could not widen since type '
@@ -3928,7 +3988,7 @@ Args:
   - String:          '(bytes)'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 149, Column: 3 }
   - OrigDirection:   write
   - OrigID:          scevgepseq
   - ArrayName:       output_ftmap
@@ -3937,7 +3997,7 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv3.cpp:148:3'
+  - LoopLoc:         'src/conv3.cpp:149:3'
   - String:          ' '
   - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
@@ -3946,7 +4006,7 @@ Args:
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
-DebugLoc:        { File: src/conv3.cpp, Line: 118, Column: 11 }
+DebugLoc:        { File: src/conv3.cpp, Line: 119, Column: 11 }
 Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Could not widen since type '
@@ -3956,7 +4016,7 @@ Args:
   - String:          '(bytes)'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv3.cpp, Line: 118, Column: 11 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 119, Column: 11 }
   - OrigDirection:   read
   - OrigID:          conv3_weights1seq
   - ArrayName:       conv3_weights
@@ -3965,7 +4025,7 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv3.cpp:121:3'
+  - LoopLoc:         'src/conv3.cpp:122:3'
   - String:          ' '
   - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
@@ -3974,7 +4034,7 @@ Args:
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
-DebugLoc:        { File: src/conv3.cpp, Line: 98, Column: 32 }
+DebugLoc:        { File: src/conv3.cpp, Line: 99, Column: 32 }
 Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          'Could not widen since type '
@@ -3984,7 +4044,7 @@ Args:
   - String:          '(bytes)'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv3.cpp, Line: 98, Column: 32 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 99, Column: 32 }
   - OrigDirection:   read
   - OrigID:          scevgep1seq
   - ArrayName:       input_ftmap
@@ -3992,23 +4052,23 @@ Args:
   - BundleName:      i3
   - String:          ' '
   - Function:        'load_input_buffer_c3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [9][259], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
-    DebugLoc:        { File: src/conv3.cpp, Line: 85, Column: 0 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 86, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
-DebugLoc:        { File: src/conv2.cpp, Line: 75, Column: 6 }
-Function:        _Z20load_input_buffer_c2PA3_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_ii
+DebugLoc:        { File: src/conv2.cpp, Line: 76, Column: 6 }
+Function:        _Z20load_input_buffer_c2PA3_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_ii
 Args:            
   - String:          'Could not widen since type '
-  - Type:            i32
+  - Type:            i16
   - String:          ' size is greater than or equal to alignment '
   - Alignment:       '1'
   - String:          '(bytes)'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv2.cpp, Line: 75, Column: 6 }
+    DebugLoc:        { File: src/conv2.cpp, Line: 76, Column: 6 }
   - OrigDirection:   read
   - OrigID:          scevgepseq
   - ArrayName:       input_ftmap
@@ -4017,22 +4077,22 @@ Args:
   - String:          ' '
   - LoopName:        BH
   - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:75:6'
+  - LoopLoc:         'src/conv2.cpp:76:6'
   - String:          ' '
-  - Function:        'load_input_buffer_c2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][255], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
-    DebugLoc:        { File: src/conv2.cpp, Line: 73, Column: 0 }
+  - Function:        'load_input_buffer_c2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][255], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
+    DebugLoc:        { File: src/conv2.cpp, Line: 74, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        BH
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:86:6'
+  - LoopLoc:         'src/conv1.cpp:87:6'
   - String:          ') '
   - String:          'in function '''
   - String:          conv1
@@ -4044,22 +4104,22 @@ Args:
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          The program may have out of bound array access
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/conv1.cpp, Line: 103, Column: 3 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
+DebugLoc:        { File: src/conv1.cpp, Line: 104, Column: 3 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
   - String:          ' of length '
   - Length:          '255'
   - String:          ' and bit width '
-  - Width:           '32'
+  - Width:           '16'
   - String:          ' has been inferred.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
   - String:          ' _XLX_SEP_ '
@@ -4070,28 +4130,28 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:103:3'
+  - LoopLoc:         'src/conv1.cpp:104:3'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/conv1.cpp, Line: 103, Column: 3 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
+DebugLoc:        { File: src/conv1.cpp, Line: 104, Column: 3 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
   - String:          ' of length '
   - Length:          '255'
   - String:          ' and bit width '
-  - Width:           '32'
+  - Width:           '16'
   - String:          ' in loop '''
   - LoopName:        anonymous
   - String:          '''('
-  - LoopLoc:         'src/conv1.cpp:103:3'
+  - LoopLoc:         'src/conv1.cpp:104:3'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      i1
@@ -4101,8 +4161,8 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/conv1.cpp, Line: 119, Column: 2 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
+DebugLoc:        { File: src/conv1.cpp, Line: 120, Column: 2 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -4120,17 +4180,17 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:119:2'
+  - LoopLoc:         'src/conv1.cpp:120:2'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/conv1.cpp, Line: 119, Column: 2 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
+DebugLoc:        { File: src/conv1.cpp, Line: 120, Column: 2 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -4141,7 +4201,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        anonymous
   - String:          '''('
-  - LoopLoc:         'src/conv1.cpp:119:2'
+  - LoopLoc:         'src/conv1.cpp:120:2'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      w1
@@ -4151,8 +4211,8 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/conv1.cpp, Line: 119, Column: 2 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
+DebugLoc:        { File: src/conv1.cpp, Line: 120, Column: 2 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -4170,17 +4230,17 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:119:2'
+  - LoopLoc:         'src/conv1.cpp:120:2'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/conv1.cpp, Line: 119, Column: 2 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
+DebugLoc:        { File: src/conv1.cpp, Line: 120, Column: 2 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -4191,7 +4251,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        anonymous
   - String:          '''('
-  - LoopLoc:         'src/conv1.cpp:119:2'
+  - LoopLoc:         'src/conv1.cpp:120:2'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      w1
@@ -4201,15 +4261,15 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/conv1.cpp, Line: 146, Column: 3 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
+DebugLoc:        { File: src/conv1.cpp, Line: 147, Column: 3 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
   - String:          ' of length '
   - Length:          '255'
   - String:          ' and bit width '
-  - Width:           '32'
+  - Width:           '16'
   - String:          ' has been inferred.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
   - String:          ' _XLX_SEP_ '
@@ -4220,28 +4280,28 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:146:3'
+  - LoopLoc:         'src/conv1.cpp:147:3'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/conv1.cpp, Line: 146, Column: 3 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
+DebugLoc:        { File: src/conv1.cpp, Line: 147, Column: 3 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
   - String:          ' of length '
   - Length:          '255'
   - String:          ' and bit width '
-  - Width:           '32'
+  - Width:           '16'
   - String:          ' in loop '''
   - LoopName:        anonymous
   - String:          '''('
-  - LoopLoc:         'src/conv1.cpp:146:3'
+  - LoopLoc:         'src/conv1.cpp:147:3'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      i2
@@ -4251,15 +4311,15 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/conv1.cpp, Line: 146, Column: 3 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
+DebugLoc:        { File: src/conv1.cpp, Line: 147, Column: 3 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
   - String:          ' of length '
   - Length:          '255'
   - String:          ' and bit width '
-  - Width:           '32'
+  - Width:           '16'
   - String:          ' has been inferred.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
   - String:          ' _XLX_SEP_ '
@@ -4270,28 +4330,28 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:146:3'
+  - LoopLoc:         'src/conv1.cpp:147:3'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/conv1.cpp, Line: 146, Column: 3 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
+DebugLoc:        { File: src/conv1.cpp, Line: 147, Column: 3 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
   - String:          ' of length '
   - Length:          '255'
   - String:          ' and bit width '
-  - Width:           '32'
+  - Width:           '16'
   - String:          ' in loop '''
   - LoopName:        anonymous
   - String:          '''('
-  - LoopLoc:         'src/conv1.cpp:146:3'
+  - LoopLoc:         'src/conv1.cpp:147:3'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      i2
@@ -4301,15 +4361,15 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/conv1.cpp, Line: 103, Column: 3 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
+DebugLoc:        { File: src/conv1.cpp, Line: 104, Column: 3 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
   - String:          ' of length '
   - Length:          '255'
   - String:          ' and bit width '
-  - Width:           '32'
+  - Width:           '16'
   - String:          ' has been inferred.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
   - String:          ' _XLX_SEP_ '
@@ -4320,28 +4380,28 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:103:3'
+  - LoopLoc:         'src/conv1.cpp:104:3'
   - String:          ' '
-  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
+  - Function:        'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/conv1.cpp, Line: 103, Column: 3 }
-Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
+DebugLoc:        { File: src/conv1.cpp, Line: 104, Column: 3 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
   - String:          ' of length '
   - Length:          '255'
   - String:          ' and bit width '
-  - Width:           '32'
+  - Width:           '16'
   - String:          ' in loop '''
   - LoopName:        anonymous
   - String:          '''('
-  - LoopLoc:         'src/conv1.cpp:103:3'
+  - LoopLoc:         'src/conv1.cpp:104:3'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      i1
@@ -4351,15 +4411,15 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/conv2.cpp, Line: 75, Column: 6 }
-Function:        _Z20load_input_buffer_c2PA3_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_ii.1
+DebugLoc:        { File: src/conv2.cpp, Line: 76, Column: 6 }
+Function:        _Z20load_input_buffer_c2PA3_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_ii.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
   - String:          ' of length '
   - Length:          '765'
   - String:          ' and bit width '
-  - Width:           '32'
+  - Width:           '16'
   - String:          ' has been inferred.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
   - String:          ' _XLX_SEP_ '
@@ -4370,28 +4430,28 @@ Args:
   - String:          ' '
   - LoopName:        BH
   - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:75:6'
+  - LoopLoc:         'src/conv2.cpp:76:6'
   - String:          ' '
-  - Function:        'load_input_buffer_c2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][255], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int) (.1)'
-    DebugLoc:        { File: src/conv2.cpp, Line: 73, Column: 0 }
+  - Function:        'load_input_buffer_c2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][255], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int) (.1)'
+    DebugLoc:        { File: src/conv2.cpp, Line: 74, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/conv2.cpp, Line: 75, Column: 6 }
-Function:        _Z20load_input_buffer_c2PA3_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_ii.1
+DebugLoc:        { File: src/conv2.cpp, Line: 76, Column: 6 }
+Function:        _Z20load_input_buffer_c2PA3_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_ii.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
   - String:          ' of length '
   - Length:          '765'
   - String:          ' and bit width '
-  - Width:           '32'
+  - Width:           '16'
   - String:          ' in loop '''
   - LoopName:        BH
   - String:          '''('
-  - LoopLoc:         'src/conv2.cpp:75:6'
+  - LoopLoc:         'src/conv2.cpp:76:6'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      i2
@@ -4401,8 +4461,8 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/conv2.cpp, Line: 33, Column: 13 }
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_.1
+DebugLoc:        { File: src/conv2.cpp, Line: 34, Column: 13 }
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -4420,17 +4480,17 @@ Args:
   - String:          ' '
   - LoopName:        TILE_OUT
   - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:33:13'
+  - LoopLoc:         'src/conv2.cpp:34:13'
   - String:          ' '
-  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
+  - Function:        'conv2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/conv2.cpp, Line: 33, Column: 13 }
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_.1
+DebugLoc:        { File: src/conv2.cpp, Line: 34, Column: 13 }
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -4441,7 +4501,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        TILE_OUT
   - String:          '''('
-  - LoopLoc:         'src/conv2.cpp:33:13'
+  - LoopLoc:         'src/conv2.cpp:34:13'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      w2
@@ -4451,8 +4511,8 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_.1
+DebugLoc:        { File: src/conv2.cpp, Line: 119, Column: 3 }
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
@@ -4470,17 +4530,17 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:118:3'
+  - LoopLoc:         'src/conv2.cpp:119:3'
   - String:          ' '
-  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
+  - Function:        'conv2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_.1
+DebugLoc:        { File: src/conv2.cpp, Line: 119, Column: 3 }
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
@@ -4491,7 +4551,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        anonymous
   - String:          '''('
-  - LoopLoc:         'src/conv2.cpp:118:3'
+  - LoopLoc:         'src/conv2.cpp:119:3'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      i3
@@ -4501,8 +4561,8 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_.1
+DebugLoc:        { File: src/conv2.cpp, Line: 119, Column: 3 }
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
@@ -4520,17 +4580,17 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:118:3'
+  - LoopLoc:         'src/conv2.cpp:119:3'
   - String:          ' '
-  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
+  - Function:        'conv2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
-Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_.1
+DebugLoc:        { File: src/conv2.cpp, Line: 119, Column: 3 }
+Function:        _Z5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
@@ -4541,7 +4601,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        anonymous
   - String:          '''('
-  - LoopLoc:         'src/conv2.cpp:118:3'
+  - LoopLoc:         'src/conv2.cpp:119:3'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      i3
@@ -4551,7 +4611,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/conv3.cpp, Line: 98, Column: 32 }
+DebugLoc:        { File: src/conv3.cpp, Line: 99, Column: 32 }
 Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii.1
 Args:            
   - String:          'Multiple burst '
@@ -4569,13 +4629,13 @@ Args:
   - BundleName:      i3
   - String:          ' '
   - Function:        'load_input_buffer_c3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [9][259], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int) (.1)'
-    DebugLoc:        { File: src/conv3.cpp, Line: 85, Column: 0 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 86, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/conv3.cpp, Line: 98, Column: 32 }
+DebugLoc:        { File: src/conv3.cpp, Line: 99, Column: 32 }
 Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii.1
 Args:            
   - String:          'Multiple burst '
@@ -4592,7 +4652,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/conv3.cpp, Line: 118, Column: 11 }
+DebugLoc:        { File: src/conv3.cpp, Line: 119, Column: 11 }
 Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
@@ -4611,7 +4671,7 @@ Args:
   - String:          ' '
   - LoopName:        WEIGHTI
   - String:          ' '
-  - LoopLoc:         'src/conv3.cpp:118:11'
+  - LoopLoc:         'src/conv3.cpp:119:11'
   - String:          ' '
   - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
@@ -4620,7 +4680,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/conv3.cpp, Line: 118, Column: 11 }
+DebugLoc:        { File: src/conv3.cpp, Line: 119, Column: 11 }
 Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
@@ -4632,7 +4692,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        WEIGHTI
   - String:          '''('
-  - LoopLoc:         'src/conv3.cpp:118:11'
+  - LoopLoc:         'src/conv3.cpp:119:11'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      w3
@@ -4642,7 +4702,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
+DebugLoc:        { File: src/conv3.cpp, Line: 149, Column: 3 }
 Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
@@ -4661,7 +4721,7 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv3.cpp:148:3'
+  - LoopLoc:         'src/conv3.cpp:149:3'
   - String:          ' '
   - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
@@ -4670,7 +4730,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
+DebugLoc:        { File: src/conv3.cpp, Line: 149, Column: 3 }
 Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
@@ -4682,7 +4742,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        anonymous
   - String:          '''('
-  - LoopLoc:         'src/conv3.cpp:148:3'
+  - LoopLoc:         'src/conv3.cpp:149:3'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      o
@@ -4692,7 +4752,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
+DebugLoc:        { File: src/conv3.cpp, Line: 149, Column: 3 }
 Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
@@ -4711,7 +4771,7 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'src/conv3.cpp:148:3'
+  - LoopLoc:         'src/conv3.cpp:149:3'
   - String:          ' '
   - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
@@ -4720,7 +4780,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
+DebugLoc:        { File: src/conv3.cpp, Line: 149, Column: 3 }
 Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
@@ -4732,7 +4792,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        anonymous
   - String:          '''('
-  - LoopLoc:         'src/conv3.cpp:148:3'
+  - LoopLoc:         'src/conv3.cpp:149:3'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      o

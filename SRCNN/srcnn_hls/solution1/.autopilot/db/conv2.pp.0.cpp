@@ -5708,10 +5708,10 @@ inline __attribute__((nodebug)) bool operator!=(
 # 366 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\\ap_fixed.h" 2
 # 5 "src/srcnn.h" 2
 # 42 "src/srcnn.h"
-typedef ap_fixed<24,3> input_t;
+typedef ap_fixed<12,1> input_t;
 typedef ap_fixed<12,1> conv1w_t;
-typedef ap_fixed<10,1> conv1b_t;
-typedef ap_fixed<32,3> conv1o_t;
+typedef ap_fixed<8,1> conv1b_t;
+typedef ap_fixed<16,3> conv1o_t;
 
 
 typedef ap_fixed<18,1> conv2w_t;
@@ -33569,10 +33569,11 @@ void conv2(conv1o_t input_ftmap[64][255][255],
 
 
  static conv2o_t output_fm_buffer[4][3][255] = {0};
+#pragma HLS BIND_STORAGE variable=output_fm_buffer type=RAM_T2P impl=BRAM
 #pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=15
 
  static conv1o_t input_fm_buffer[64][3 + (2 * (1 - 1) / 2)][255 + (2 * (1 - 1) / 2)];
-#pragma HLS bind_storage variable=input_fm_buffer type=RAM_2P impl=LUTRAM
+
 
 #pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=2 type=cyclic factor=2
 #pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=block factor=15

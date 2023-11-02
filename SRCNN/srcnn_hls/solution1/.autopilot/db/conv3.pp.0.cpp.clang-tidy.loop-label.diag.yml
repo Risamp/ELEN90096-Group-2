@@ -46,4 +46,9 @@ Diagnostics:
         Offset:          566059
         Length:          0
         ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, RAM_T2P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      19
+    FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv3.cpp'
+    Replacements:    
 ...

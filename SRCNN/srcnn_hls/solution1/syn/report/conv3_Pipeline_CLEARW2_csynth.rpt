@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_CLEARW2'
 ================================================================
-* Date:           Fri Nov  3 02:34:04 2023
+* Date:           Fri Nov  3 04:17:56 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -85,8 +85,8 @@
     +--------------------+----------+----+---+----+------------+------------+
     |    Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------+----------+----+---+----+------------+------------+
-    |add_ln73_fu_94_p2   |         +|   0|  0|  15|           8|           1|
-    |icmp_ln73_fu_88_p2  |      icmp|   0|  0|  15|           8|           2|
+    |add_ln74_fu_102_p2  |         +|   0|  0|  15|           8|           1|
+    |icmp_ln74_fu_96_p2  |      icmp|   0|  0|  15|           8|           2|
     +--------------------+----------+----+---+----+------------+------------+
     |Total               |          |   0|  0|  30|          16|           3|
     +--------------------+----------+----+---+----+------------+------------+
@@ -97,7 +97,7 @@
     +--------------------+----+-----------+-----+-----------+
     |ap_done_int         |   9|          2|    1|          2|
     |ap_sig_allocacmp_w  |   9|          2|    8|         16|
-    |w_1_fu_42           |   9|          2|    8|         16|
+    |w_1_fu_50           |   9|          2|    8|         16|
     +--------------------+----+-----------+-----+-----------+
     |Total               |  27|          6|   17|         34|
     +--------------------+----+-----------+-----+-----------+
@@ -108,7 +108,7 @@
     +-------------+---+----+-----+-----------+
     |ap_CS_fsm    |  1|   0|    1|          0|
     |ap_done_reg  |  1|   0|    1|          0|
-    |w_1_fu_42    |  8|   0|    8|          0|
+    |w_1_fu_50    |  8|   0|    8|          0|
     +-------------+---+----+-----+-----------+
     |Total        | 10|   0|   10|          0|
     +-------------+---+----+-----+-----------+
@@ -128,7 +128,7 @@
 |ap_done                                                                            |  out|    1|  ap_ctrl_hs|                                                    conv3_Pipeline_CLEARW2|  return value|
 |ap_idle                                                                            |  out|    1|  ap_ctrl_hs|                                                    conv3_Pipeline_CLEARW2|  return value|
 |ap_ready                                                                           |  out|    1|  ap_ctrl_hs|                                                    conv3_Pipeline_CLEARW2|  return value|
-|add_ln71                                                                           |   in|    3|     ap_none|                                                                  add_ln71|        scalar|
+|add_ln72                                                                           |   in|    3|     ap_none|                                                                  add_ln72|        scalar|
 |conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_address0            |  out|   10|   ap_memory|            conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1|         array|
 |conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_ce0                 |  out|    1|   ap_memory|            conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1|         array|
 |conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_we0                 |  out|    1|   ap_memory|            conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1|         array|

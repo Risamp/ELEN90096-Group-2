@@ -13,6 +13,7 @@ void conv1(input_t input_ftmap[N0][H][W],
 {
 
 	static conv1o_t output_fm_buffer[C1_OD][C1_TH][W] = {0};
+	//#pragma HLS BIND_STORAGE variable=output_fm_buffer type=RAM_T2P impl=BRAM
 	#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=2
 
 	static input_t input_fm_buffer[C1_ID][C1_TH + (2 * P1)][W + (2 * P1)];
@@ -20,8 +21,8 @@ void conv1(input_t input_ftmap[N0][H][W],
 
 	static conv1w_t weight_buffer[C1_OD][C1_ID][F1][F1];
 	#pragma HLS BIND_STORAGE variable=weight_buffer type=RAM_2P impl=LUTRAM
-	#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=1 type=cyclic factor=3
-	#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=2 type=cyclic factor=3
+	#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=1 type=cyclic factor=2
+	#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=2 type=cyclic factor=2
 
 	TILE_IN: for (int in = 0; in < N0; in += C1_ID) {
 	TILE_ROW: for (int h = 0; h < H; h += C1_TH) {
