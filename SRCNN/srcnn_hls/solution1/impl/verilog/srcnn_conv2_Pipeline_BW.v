@@ -49,7 +49,7 @@ wire   [63:0] zext_ln63_3_fu_88_p1;
 reg   [7:0] w_fu_34;
 wire   [7:0] add_ln61_fu_72_p2;
 wire    ap_loop_init;
-reg   [7:0] ap_sig_allocacmp_w_6;
+reg   [7:0] ap_sig_allocacmp_w_4;
 wire   [11:0] zext_ln63_fu_78_p1;
 wire   [11:0] add_ln63_fu_82_p2;
 reg    ap_done_reg;
@@ -153,9 +153,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        ap_sig_allocacmp_w_6 = 8'd0;
+        ap_sig_allocacmp_w_4 = 8'd0;
     end else begin
-        ap_sig_allocacmp_w_6 = w_fu_34;
+        ap_sig_allocacmp_w_4 = w_fu_34;
     end
 end
 
@@ -186,7 +186,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln61_fu_72_p2 = (ap_sig_allocacmp_w_6 + 8'd1);
+assign add_ln61_fu_72_p2 = (ap_sig_allocacmp_w_4 + 8'd1);
 
 assign add_ln63_fu_82_p2 = (phi_mul + zext_ln63_fu_78_p1);
 
@@ -198,7 +198,7 @@ end
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign icmp_ln61_fu_66_p2 = ((ap_sig_allocacmp_w_6 == 8'd255) ? 1'b1 : 1'b0);
+assign icmp_ln61_fu_66_p2 = ((ap_sig_allocacmp_w_4 == 8'd255) ? 1'b1 : 1'b0);
 
 assign output_fm_buffer_address0 = zext_ln63_3_fu_88_p1;
 
@@ -206,6 +206,6 @@ assign output_fm_buffer_d0 = 32'd0;
 
 assign zext_ln63_3_fu_88_p1 = add_ln63_fu_82_p2;
 
-assign zext_ln63_fu_78_p1 = ap_sig_allocacmp_w_6;
+assign zext_ln63_fu_78_p1 = ap_sig_allocacmp_w_4;
 
 endmodule //srcnn_conv2_Pipeline_BW

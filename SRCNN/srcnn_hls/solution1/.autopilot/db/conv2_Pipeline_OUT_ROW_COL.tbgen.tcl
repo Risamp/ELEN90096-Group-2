@@ -16,13 +16,13 @@ set C_modelName {conv2_Pipeline_OUT_ROW_COL}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ weight_buffer int 32 regular {array 256 { 1 3 } 1 1 } {global 0}  }
-	{ input_fm_buffer_1 float 32 regular {array 48960 { 1 3 } 1 1 } {global 0}  }
+	{ input_fm_buffer float 32 regular {array 48960 { 1 3 } 1 1 } {global 0}  }
 	{ output_fm_buffer float 32 regular {array 3060 { 0 1 } 1 1 } {global 2}  }
 }
 set hasAXIMCache 0
 set C_modelArgMapList {[ 
 	{ "Name" : "weight_buffer", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "extern" : 0} , 
- 	{ "Name" : "input_fm_buffer_1", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "extern" : 0} , 
+ 	{ "Name" : "input_fm_buffer", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "extern" : 0} , 
  	{ "Name" : "output_fm_buffer", "interface" : "memory", "bitwidth" : 32, "direction" : "READWRITE", "extern" : 0} ]}
 # RTL Port declarations: 
 set portNum 28
@@ -36,9 +36,9 @@ set portList {
 	{ weight_buffer_address0 sc_out sc_lv 8 signal 0 } 
 	{ weight_buffer_ce0 sc_out sc_logic 1 signal 0 } 
 	{ weight_buffer_q0 sc_in sc_lv 32 signal 0 } 
-	{ input_fm_buffer_1_address0 sc_out sc_lv 16 signal 1 } 
-	{ input_fm_buffer_1_ce0 sc_out sc_logic 1 signal 1 } 
-	{ input_fm_buffer_1_q0 sc_in sc_lv 32 signal 1 } 
+	{ input_fm_buffer_address0 sc_out sc_lv 16 signal 1 } 
+	{ input_fm_buffer_ce0 sc_out sc_logic 1 signal 1 } 
+	{ input_fm_buffer_q0 sc_in sc_lv 32 signal 1 } 
 	{ output_fm_buffer_address0 sc_out sc_lv 12 signal 2 } 
 	{ output_fm_buffer_ce0 sc_out sc_logic 1 signal 2 } 
 	{ output_fm_buffer_we0 sc_out sc_logic 1 signal 2 } 
@@ -66,9 +66,9 @@ set NewPortList {[
  	{ "name": "weight_buffer_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "weight_buffer", "role": "address0" }} , 
  	{ "name": "weight_buffer_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "weight_buffer", "role": "ce0" }} , 
  	{ "name": "weight_buffer_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "weight_buffer", "role": "q0" }} , 
- 	{ "name": "input_fm_buffer_1_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "input_fm_buffer_1", "role": "address0" }} , 
- 	{ "name": "input_fm_buffer_1_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "input_fm_buffer_1", "role": "ce0" }} , 
- 	{ "name": "input_fm_buffer_1_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "input_fm_buffer_1", "role": "q0" }} , 
+ 	{ "name": "input_fm_buffer_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "input_fm_buffer", "role": "address0" }} , 
+ 	{ "name": "input_fm_buffer_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "input_fm_buffer", "role": "ce0" }} , 
+ 	{ "name": "input_fm_buffer_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "input_fm_buffer", "role": "q0" }} , 
  	{ "name": "output_fm_buffer_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "output_fm_buffer", "role": "address0" }} , 
  	{ "name": "output_fm_buffer_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "output_fm_buffer", "role": "ce0" }} , 
  	{ "name": "output_fm_buffer_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "output_fm_buffer", "role": "we0" }} , 
@@ -103,7 +103,7 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "weight_buffer", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "input_fm_buffer_1", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "input_fm_buffer", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "output_fm_buffer", "Type" : "Memory", "Direction" : "IO"}],
 		"Loop" : [
 			{"Name" : "OUT_ROW_COL", "PipelineType" : "UPC",
@@ -114,7 +114,7 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	conv2_Pipeline_OUT_ROW_COL {
 		weight_buffer {Type I LastRead 1 FirstWrite -1}
-		input_fm_buffer_1 {Type I LastRead 1 FirstWrite -1}
+		input_fm_buffer {Type I LastRead 1 FirstWrite -1}
 		output_fm_buffer {Type IO LastRead 4 FirstWrite 10}}}
 
 set hasDtUnsupportedChannel 0
@@ -130,6 +130,6 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	weight_buffer { ap_memory {  { weight_buffer_address0 mem_address 1 8 }  { weight_buffer_ce0 mem_ce 1 1 }  { weight_buffer_q0 mem_dout 0 32 } } }
-	input_fm_buffer_1 { ap_memory {  { input_fm_buffer_1_address0 mem_address 1 16 }  { input_fm_buffer_1_ce0 mem_ce 1 1 }  { input_fm_buffer_1_q0 mem_dout 0 32 } } }
+	input_fm_buffer { ap_memory {  { input_fm_buffer_address0 mem_address 1 16 }  { input_fm_buffer_ce0 mem_ce 1 1 }  { input_fm_buffer_q0 mem_dout 0 32 } } }
 	output_fm_buffer { ap_memory {  { output_fm_buffer_address0 mem_address 1 12 }  { output_fm_buffer_ce0 mem_ce 1 1 }  { output_fm_buffer_we0 mem_we 1 1 }  { output_fm_buffer_d0 mem_din 1 32 }  { output_fm_buffer_address1 MemPortADDR2 1 12 }  { output_fm_buffer_ce1 MemPortCE2 1 1 }  { output_fm_buffer_q1 MemPortDOUT2 0 32 } } }
 }

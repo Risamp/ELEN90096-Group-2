@@ -262,8 +262,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>input_fm_buffer_1_address0</name>
-<Object>input_fm_buffer_1</Object>
+<name>input_fm_buffer_address0</name>
+<Object>input_fm_buffer</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -273,8 +273,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>input_fm_buffer_1_ce0</name>
-<Object>input_fm_buffer_1</Object>
+<name>input_fm_buffer_ce0</name>
+<Object>input_fm_buffer</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -284,8 +284,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>input_fm_buffer_1_q0</name>
-<Object>input_fm_buffer_1</Object>
+<name>input_fm_buffer_q0</name>
+<Object>input_fm_buffer</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>

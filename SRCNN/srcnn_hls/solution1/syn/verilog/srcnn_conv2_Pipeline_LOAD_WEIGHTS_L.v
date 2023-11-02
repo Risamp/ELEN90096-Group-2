@@ -153,7 +153,7 @@ reg   [31:0] w2_addr_read_reg_246;
 reg    ap_condition_exit_pp0_iter1_stage0;
 wire   [63:0] p_cast16_fu_195_p1;
 reg   [6:0] loop_index_i16_fu_64;
-wire   [6:0] empty_95_fu_200_p2;
+wire   [6:0] empty_91_fu_200_p2;
 wire    ap_loop_init;
 reg   [2:0] bout_fu_68;
 wire   [2:0] select_ln89_1_fu_171_p3;
@@ -163,7 +163,7 @@ reg   [8:0] ap_sig_allocacmp_indvar_flatten24_load;
 wire   [0:0] exitcond309207_fu_157_p2;
 wire   [2:0] add_ln89_fu_151_p2;
 wire   [6:0] select_ln89_fu_163_p3;
-wire   [1:0] empty_94_fu_183_p1;
+wire   [1:0] empty_90_fu_183_p1;
 wire   [5:0] empty_fu_179_p1;
 wire   [7:0] tmp_s_fu_187_p3;
 reg    ap_done_reg;
@@ -265,7 +265,7 @@ always @ (posedge ap_clk) begin
         if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
             loop_index_i16_fu_64 <= 7'd0;
         end else if ((ap_enable_reg_pp0_iter2 == 1'b1)) begin
-            loop_index_i16_fu_64 <= empty_95_fu_200_p2;
+            loop_index_i16_fu_64 <= empty_91_fu_200_p2;
         end
     end
 end
@@ -412,9 +412,9 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign empty_94_fu_183_p1 = select_ln89_1_fu_171_p3[1:0];
+assign empty_90_fu_183_p1 = select_ln89_1_fu_171_p3[1:0];
 
-assign empty_95_fu_200_p2 = (select_ln89_fu_163_p3 + 7'd1);
+assign empty_91_fu_200_p2 = (select_ln89_fu_163_p3 + 7'd1);
 
 assign empty_fu_179_p1 = select_ln89_fu_163_p3[5:0];
 
@@ -490,7 +490,7 @@ assign select_ln89_1_fu_171_p3 = ((exitcond309207_fu_157_p2[0:0] == 1'b1) ? add_
 
 assign select_ln89_fu_163_p3 = ((exitcond309207_fu_157_p2[0:0] == 1'b1) ? 7'd0 : loop_index_i16_fu_64);
 
-assign tmp_s_fu_187_p3 = {{empty_94_fu_183_p1}, {empty_fu_179_p1}};
+assign tmp_s_fu_187_p3 = {{empty_90_fu_183_p1}, {empty_fu_179_p1}};
 
 assign weight_buffer_address0 = p_cast16_fu_195_p1;
 

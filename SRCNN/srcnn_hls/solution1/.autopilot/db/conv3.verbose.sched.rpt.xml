@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3'" level="0">
-<item name = "Date">Thu Nov  2 17:53:51 2023
+<item name = "Date">Thu Nov  2 20:34:00 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.360 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">126382387, 126383050, 1.264 sec, 1.264 sec, 126382387, 126383050, no</column>
+<column name="">41074177, 41074840, 0.411 sec, 0.411 sec, 41074177, 41074840, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,14 +35,13 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILE_ROW">126382386, 126383049, 2478086 ~ 2478099, -, -, 51, no</column>
-<column name=" + LOAD_INPUT">227008, 227008, 7094, -, -, 32, no</column>
-<column name="  ++ BH">7092, 7092, 788, -, -, 9, no</column>
+<column name="- TILE_ROW">41074176, 41074839, 805376 ~ 805389, -, -, 51, no</column>
+<column name=" + LOADI">227008, 227008, 7094, -, -, 32, no</column>
+<column name="  ++ LOADH">7092, 7092, 788, -, -, 9, no</column>
 <column name="   +++ PAD">2, 2, 1, -, -, 2, no</column>
-<column name="   +++ BH.2">765, 765, 3, -, -, 255, no</column>
-<column name=" + IN_ROW_COL">2244000, 2244000, 55, -, -, 40800, no</column>
-<column name=" + BH">4701, 4709, 1567, -, -, 3, no</column>
-<column name=" + BH">1554, 1557, 777, -, -, 2, no</column>
+<column name="   +++ LOADH.2">765, 765, 3, -, -, 255, no</column>
+<column name=" + EXPORTH">4701, 4709, 1567, -, -, 3, no</column>
+<column name=" + CLEARH">1554, 1557, 777, -, -, 2, no</column>
 </table>
 </item>
 </section>

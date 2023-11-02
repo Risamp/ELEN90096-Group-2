@@ -79,10 +79,10 @@ newFuncRoot:3 %br_ln0 = br void %for.inc.i.i
 
 <Node id="8" bw="8" op_0_bw="8" op_1_bw="0">
 <![CDATA[
-for.inc.i.i:0 %w_6 = load i8 %w
+for.inc.i.i:0 %w_4 = load i8 %w
 
 ]]></Node>
-<StgValue><ssdm name="w_6"/></StgValue>
+<StgValue><ssdm name="w_4"/></StgValue>
 </operation>
 
 <operation id="9" st_id="1" stage="1" lat="1">
@@ -109,7 +109,7 @@ for.inc.i.i:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 
 
 <Node id="10" bw="1" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.inc.i.i:2 %icmp_ln61 = icmp_eq  i8 %w_6, i8 255
+for.inc.i.i:2 %icmp_ln61 = icmp_eq  i8 %w_4, i8 255
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln61"/></StgValue>
@@ -124,7 +124,7 @@ for.inc.i.i:2 %icmp_ln61 = icmp_eq  i8 %w_6, i8 255
 
 <Node id="11" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.inc.i.i:3 %add_ln61 = add i8 %w_6, i8 1
+for.inc.i.i:3 %add_ln61 = add i8 %w_4, i8 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln61"/></StgValue>
@@ -155,7 +155,7 @@ for.inc.i.i:4 %br_ln61 = br i1 %icmp_ln61, void %for.inc.i.i.split, void %for.in
 
 <Node id="14" bw="12" op_0_bw="8">
 <![CDATA[
-for.inc.i.i.split:0 %zext_ln63 = zext i8 %w_6
+for.inc.i.i.split:0 %zext_ln63 = zext i8 %w_4
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln63"/></StgValue>
@@ -235,7 +235,7 @@ for.inc.i.i.split:4 %speclooptripcount_ln61 = speclooptripcount void @_ssdm_op_S
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.i.i.split:5 %specloopname_ln61 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10
+for.inc.i.i.split:5 %specloopname_ln61 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln61"/></StgValue>

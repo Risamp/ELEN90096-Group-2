@@ -48,25 +48,7 @@ Diagnostics:
         ReplacementText: 'VITIS_LOOP_1247_1: '
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, RAM_2P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      30
+    FileOffset:      25
     FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv1.cpp'
     Replacements:    
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_56_1:  '
-    FileOffset:      56
-    FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv1.cpp'
-    Replacements:    
-      - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp'
-        Offset:          1742406
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_56_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_59_2:  '
-    FileOffset:      59
-    FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv1.cpp'
-    Replacements:    
-      - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp'
-        Offset:          1742506
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_59_2: '
 ...

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2_Pipeline_LOAD_INPUT_BH_L'" level="0">
-<item name = "Date">Thu Nov  2 17:54:16 2023
+<item name = "Date">Thu Nov  2 20:34:15 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -62,7 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mul_7ns_19ns_25_1_1_U1829">mul_7ns_19ns_25_1_1, 0, 1, 0, 6, 0</column>
+<column name="mul_7ns_19ns_25_1_1_U313">mul_7ns_19ns_25_1_1, 0, 1, 0, 6, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -79,17 +79,17 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln75_3_fu_319_p2">+, 0, 0, 64, 64, 64</column>
-<column name="add_ln75_4_fu_324_p2">+, 0, 0, 64, 64, 64</column>
-<column name="add_ln75_5_fu_230_p2">+, 0, 0, 23, 16, 1</column>
+<column name="add_ln75_1_fu_319_p2">+, 0, 0, 64, 64, 64</column>
+<column name="add_ln75_2_fu_324_p2">+, 0, 0, 64, 64, 64</column>
+<column name="add_ln75_3_fu_230_p2">+, 0, 0, 23, 16, 1</column>
 <column name="add_ln75_fu_245_p2">+, 0, 0, 14, 7, 1</column>
 <column name="add_ln76_1_fu_462_p2">+, 0, 0, 17, 10, 1</column>
 <column name="add_ln76_fu_357_p2">+, 0, 0, 9, 2, 1</column>
-<column name="empty_102_fu_445_p2">+, 0, 0, 16, 16, 16</column>
-<column name="empty_96_fu_456_p2">+, 0, 0, 15, 8, 1</column>
-<column name="empty_99_fu_395_p2">+, 0, 0, 18, 11, 11</column>
-<column name="empty_101_fu_417_p2">-, 0, 0, 16, 16, 16</column>
-<column name="empty_98_fu_295_p2">-, 0, 0, 17, 10, 10</column>
+<column name="empty_92_fu_456_p2">+, 0, 0, 15, 8, 1</column>
+<column name="empty_95_fu_395_p2">+, 0, 0, 18, 11, 11</column>
+<column name="empty_98_fu_445_p2">+, 0, 0, 16, 16, 16</column>
+<column name="empty_94_fu_295_p2">-, 0, 0, 17, 10, 10</column>
+<column name="empty_97_fu_417_p2">-, 0, 0, 16, 16, 16</column>
 <column name="and_ln75_fu_351_p2">and, 0, 0, 2, 1, 1</column>
 <column name="and_ln76_fu_429_p2">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state11_pp0_stage0_iter10">and, 0, 0, 2, 1, 1</column>
@@ -158,18 +158,18 @@
 <column name="bin_fu_118">7, 0, 7, 0</column>
 <column name="first_iter_01_reg_177">1, 0, 1, 0</column>
 <column name="first_iter_0_reg_166">1, 0, 1, 0</column>
-<column name="i2_addr_2_read_reg_599">32, 0, 32, 0</column>
+<column name="i2_addr_1_read_reg_599">32, 0, 32, 0</column>
 <column name="icmp_ln75_reg_566">1, 0, 1, 0</column>
 <column name="indvar_flatten17_fu_122">16, 0, 16, 0</column>
 <column name="indvar_flatten_fu_114">10, 0, 10, 0</column>
-<column name="input_fm_buffer_1_addr_reg_584">16, 0, 16, 0</column>
+<column name="input_fm_buffer_addr_reg_584">16, 0, 16, 0</column>
 <column name="loop_index_i_fu_106">8, 0, 8, 0</column>
 <column name="or_ln76_2_reg_579">1, 0, 1, 0</column>
 <column name="or_ln76_reg_575">1, 0, 1, 0</column>
 <column name="sext_ln75_cast_reg_561">64, 0, 64, 0</column>
 <column name="sext_ln76_mid2_v_reg_570">62, 0, 62, 0</column>
 <column name="icmp_ln75_reg_566">64, 32, 1, 0</column>
-<column name="input_fm_buffer_1_addr_reg_584">64, 32, 16, 0</column>
+<column name="input_fm_buffer_addr_reg_584">64, 32, 16, 0</column>
 </table>
 </item>
 </section>
@@ -233,10 +233,10 @@
 <column name="m_axi_i2_BUSER">in, 1, m_axi, i2, pointer</column>
 <column name="input_ftmap">in, 64, ap_none, input_ftmap, scalar</column>
 <column name="sext_ln75">in, 19, ap_none, sext_ln75, scalar</column>
-<column name="input_fm_buffer_1_address1">out, 16, ap_memory, input_fm_buffer_1, array</column>
-<column name="input_fm_buffer_1_ce1">out, 1, ap_memory, input_fm_buffer_1, array</column>
-<column name="input_fm_buffer_1_we1">out, 1, ap_memory, input_fm_buffer_1, array</column>
-<column name="input_fm_buffer_1_d1">out, 32, ap_memory, input_fm_buffer_1, array</column>
+<column name="input_fm_buffer_address1">out, 16, ap_memory, input_fm_buffer, array</column>
+<column name="input_fm_buffer_ce1">out, 1, ap_memory, input_fm_buffer, array</column>
+<column name="input_fm_buffer_we1">out, 1, ap_memory, input_fm_buffer, array</column>
+<column name="input_fm_buffer_d1">out, 32, ap_memory, input_fm_buffer, array</column>
 </table>
 </item>
 </section>

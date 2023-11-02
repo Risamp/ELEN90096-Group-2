@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_LOAD_WEIGHTS_L'
 ================================================================
-* Date:           Thu Nov  2 17:53:34 2023
+* Date:           Thu Nov  2 20:33:42 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -91,7 +91,7 @@ ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%bout = alloca i32 1"   --->   Opera
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%indvar_flatten24 = alloca i32 1"   --->   Operation 8 'alloca' 'indvar_flatten24' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%sext_ln36_read = read i62 @_ssdm_op_Read.ap_auto.i62, i62 %sext_ln36"   --->   Operation 9 'read' 'sext_ln36_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%sext_ln36_cast = sext i62 %sext_ln36_read"   --->   Operation 10 'sext' 'sext_ln36_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w2, void @empty_7, i32 0, i32 0, void @empty_6, i32 0, i32 512, void @empty_27, void @empty_4, void @empty_6, i32 16, i32 16, i32 256, i32 256, void @empty_6, void @empty_6, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w2, void @empty_26, i32 0, i32 0, void @empty_25, i32 0, i32 512, void @empty_30, void @empty_34, void @empty_25, i32 16, i32 16, i32 256, i32 256, void @empty_25, void @empty_25, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (0.42ns)   --->   "%store_ln0 = store i9 0, i9 %indvar_flatten24"   --->   Operation 12 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 13 [1/1] (0.42ns)   --->   "%store_ln0 = store i3 0, i3 %bout"   --->   Operation 13 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 14 [1/1] (0.42ns)   --->   "%store_ln0 = store i7 0, i7 %loop_index_i16"   --->   Operation 14 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
@@ -119,14 +119,14 @@ ST_3 : Operation 30 [1/1] (0.36ns)   --->   "%select_ln89 = select i1 %exitcond3
 ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 31 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 32 [1/1] (0.20ns)   --->   "%select_ln89_1 = select i1 %exitcond309207, i3 %add_ln89, i3 %bout_load" [src/conv2.cpp:89->src/conv2.cpp:38]   --->   Operation 32 'select' 'select_ln89_1' <Predicate = true> <Delay = 0.20> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.20> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%empty = trunc i7 %select_ln89" [src/conv2.cpp:89->src/conv2.cpp:38]   --->   Operation 33 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%empty_94 = trunc i3 %select_ln89_1" [src/conv2.cpp:89->src/conv2.cpp:38]   --->   Operation 34 'trunc' 'empty_94' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %empty_94, i6 %empty" [src/conv2.cpp:89->src/conv2.cpp:38]   --->   Operation 35 'bitconcatenate' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%empty_90 = trunc i3 %select_ln89_1" [src/conv2.cpp:89->src/conv2.cpp:38]   --->   Operation 34 'trunc' 'empty_90' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %empty_90, i6 %empty" [src/conv2.cpp:89->src/conv2.cpp:38]   --->   Operation 35 'bitconcatenate' 'tmp_s' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%p_cast16 = zext i8 %tmp_s" [src/conv2.cpp:89->src/conv2.cpp:38]   --->   Operation 36 'zext' 'p_cast16' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%weight_buffer_addr = getelementptr i32 %weight_buffer, i64 0, i64 %p_cast16" [src/conv2.cpp:89->src/conv2.cpp:38]   --->   Operation 37 'getelementptr' 'weight_buffer_addr' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 38 [1/1] (1.23ns)   --->   "%store_ln36 = store i32 %w2_addr_read, i8 %weight_buffer_addr" [src/conv2.cpp:36]   --->   Operation 38 'store' 'store_ln36' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
-ST_3 : Operation 39 [1/1] (0.77ns)   --->   "%empty_95 = add i7 %select_ln89, i7 1" [src/conv2.cpp:89->src/conv2.cpp:38]   --->   Operation 39 'add' 'empty_95' <Predicate = true> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 39 [1/1] (0.77ns)   --->   "%empty_91 = add i7 %select_ln89, i7 1" [src/conv2.cpp:89->src/conv2.cpp:38]   --->   Operation 39 'add' 'empty_91' <Predicate = true> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 40 [1/1] (0.42ns)   --->   "%store_ln89 = store i3 %select_ln89_1, i3 %bout" [src/conv2.cpp:89->src/conv2.cpp:38]   --->   Operation 40 'store' 'store_ln89' <Predicate = true> <Delay = 0.42>
-ST_3 : Operation 41 [1/1] (0.42ns)   --->   "%store_ln89 = store i7 %empty_95, i7 %loop_index_i16" [src/conv2.cpp:89->src/conv2.cpp:38]   --->   Operation 41 'store' 'store_ln89' <Predicate = true> <Delay = 0.42>
+ST_3 : Operation 41 [1/1] (0.42ns)   --->   "%store_ln89 = store i7 %empty_91, i7 %loop_index_i16" [src/conv2.cpp:89->src/conv2.cpp:38]   --->   Operation 41 'store' 'store_ln89' <Predicate = true> <Delay = 0.42>
 ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%br_ln0 = br void %load-store-loop.i17"   --->   Operation 42 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 
 

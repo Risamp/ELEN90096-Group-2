@@ -33580,7 +33580,7 @@ namespace std
 
 using namespace std;
 
-const unsigned int UNROLL3 = 2;
+const unsigned int CHUNK3 = 3;
 
 
 void conv3(ftmap_t input_ftmap[32][255][255],
@@ -33592,18 +33592,13 @@ void conv3(ftmap_t input_ftmap[32][255][255],
 
 
  static ftmap_t output_fm_buffer[1][5][255] = {0};
-
+#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=2
 
  static ftmap_t input_fm_buffer[32][5 + (2 * (5 - 1) / 2)][255 + (2 * (5 - 1) / 2)];
-
+#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=block factor=2
 
  static param_t weight_buffer[1][32][5][5];
-#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=3 dim=3
-#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=3 dim=4
-
-
-
-
+#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=3 type=complete
 
 
 
@@ -33619,22 +33614,15 @@ void conv3(ftmap_t input_ftmap[32][255][255],
 
     ROW: for (int r = 0; r < 5; r++) {
     COL: for (int c = 0; c < 255; c++) {
+#pragma HLS PIPELINE II=14
 
-     KR: for (int kr = 0; kr < 5; kr++) {
-     KC: for (int kc0 = 0; kc0 < 5 / UNROLL3; kc0++) {
-#pragma HLS PIPELINE II=3
+ KR: for (int kr = 0; kr < 5; kr++) {
+     KC: for (int kc = 0; kc < 5; kc++) {
 
- ftmap_t tmp = 0;
+      int rtarget = r + kr;
+      int ctarget = c + kc;
 
-      VITIS_LOOP_55_1: for (int kc = 0; kc < UNROLL3; kc++) {
-
-       int rtarget = r + kr;
-       int ctarget = c + kc;
-
-       tmp += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][rtarget][ctarget];
-      }
-
-      output_fm_buffer[o][r][c] += tmp;
+      output_fm_buffer[o][r][c] += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][rtarget][ctarget];
      }}
     }}
    }}
@@ -33645,10 +33633,10 @@ void conv3(ftmap_t input_ftmap[32][255][255],
 }
 
 void clear_buffer_c3(ftmap_t output_fm_buffer[1][5][255]) {
- CLEAR: for (int o = 0; o < 1; o++) {
- BH: for (int h = 0; h < 5; h++) {
+ CLEARO: for (int o = 0; o < 1; o++) {
+ CLEARH: for (int h = 0; h < 5; h++) {
 #pragma HLS UNROLL factor=3
- BW: for (int w = 0; w < 255; w++) {
+ CLEARW: for (int w = 0; w < 255; w++) {
 
   output_fm_buffer[o][h][w] = 0;
  }}}
@@ -33661,8 +33649,8 @@ void load_input_buffer_c3(
  int in,
  int h
 ) {
- LOAD_INPUT: for (int bin = 0; bin < 32; bin++) {
- BH: for (int bh = 0; bh < 5 + (2 * (5 - 1) / 2); bh++) {
+ LOADI: for (int bin = 0; bin < 32; bin++) {
+ LOADH: for (int bh = 0; bh < 5 + (2 * (5 - 1) / 2); bh++) {
 #pragma HLS PIPELINE OFF
 
  int hclamp = clamp(h + bh - (5 - 1) / 2, 0, 255 - 1);
@@ -33688,9 +33676,9 @@ void load_weight_buffer_c3(
  int out,
  int in
 ) {
- LOAD_WEIGHTS: for (int bout = 0; bout < 1; bout++) {
- IN: for (int bin = 0; bin < 32; bin++) {
- K: for (int k = 0; k < 5; k++) {
+ WEIGHTO: for (int bout = 0; bout < 1; bout++) {
+ WEIGHTI: for (int bin = 0; bin < 32; bin++) {
+ WEIGHTK: for (int k = 0; k < 5; k++) {
 
   memcpy(&weight_buffer[bout][bin][k], &conv3_weights[bout + out][bin + in][k], 5 * sizeof(param_t));
 
@@ -33705,8 +33693,8 @@ void export_output_buffer_c3(
  int h
 ) {
 
- EXPORT: for (int bout = 0; bout < 1; bout++) {
- BH: for (int bh = 0; bh < 5; bh++) {
+ EXPORTO: for (int bout = 0; bout < 1; bout++) {
+ EXPORTH: for (int bh = 0; bh < 5; bh++) {
 #pragma HLS UNROLL factor=2
 
  RELU: for (int bw = 0; bw < 255; bw++) {

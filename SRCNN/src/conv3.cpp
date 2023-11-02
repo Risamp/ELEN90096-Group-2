@@ -6,7 +6,7 @@
 
 using namespace std;
 
-const unsigned int UNROLL3 = 2;
+const unsigned int CHUNK3 = 3;
 
 // implements conv2 layer of SRCNN
 void conv3(ftmap_t input_ftmap[N2][H][W],
@@ -18,19 +18,14 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 	//#pragma HLS PIPELINE off
 
 	static ftmap_t output_fm_buffer[C3_OD][C3_TH][W] = {0};
-	//#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=cyclic factor=8 dim=2
+	#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=2
 
 	static ftmap_t input_fm_buffer[C3_ID][C3_TH + (2 * P3)][W + (2 * P3)];
-	//#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=cyclic factor=4 dim=2
+	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=block factor=2
 
 	static param_t weight_buffer[C3_OD][C3_ID][F3][F3];
-	#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=3 dim=3
-	#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=3 dim=4
-	//#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=3
-	//#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=4
-
-	//#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=3
-	//#pragma HLS ARRAY_PARTITION variable=weight_buffer type=complete dim=4
+	#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=3 type=complete
+	//#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=4 type=complete
 
 
 	TILE_OUT: for (int out = 0; out < N3; out += C3_OD) {
@@ -45,22 +40,15 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 
 				ROW: for (int r = 0; r < C3_TH; r++) {
 				COL: for (int c = 0; c < W; c++) {
+					#pragma HLS PIPELINE II=14
 
-					KR: for (int kr = 0; kr < F3; kr++) {
-					KC: for (int kc0 = 0; kc0 < F3 / UNROLL3; kc0++) {
-						#pragma HLS PIPELINE II=3
+					KR: for (int kr = 0; kr < F3; kr++) { // kernel row
+					KC: for (int kc = 0; kc < F3; kc++) { // kernel column
 
-						ftmap_t tmp = 0;
+						int rtarget = r + kr;
+						int ctarget = c + kc;
 
-						for (int kc = 0; kc < UNROLL3; kc++) {
-
-							int rtarget = r + kr;
-							int ctarget = c + kc;
-
-							tmp += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][rtarget][ctarget];
-						}
-
-						output_fm_buffer[o][r][c] += tmp;
+						output_fm_buffer[o][r][c] += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][rtarget][ctarget];
 					}}
 				}}
 			}}
@@ -71,10 +59,10 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 }
 
 void clear_buffer_c3(ftmap_t output_fm_buffer[C3_OD][C3_TH][W]) {
-	CLEAR: for (int o = 0; o < C3_OD; o++) {
-	BH: for (int h = 0; h < C3_TH; h++) {
+	CLEARO: for (int o = 0; o < C3_OD; o++) {
+	CLEARH: for (int h = 0; h < C3_TH; h++) {
 	#pragma HLS UNROLL factor=3
-	BW: for (int w = 0; w < W; w++) {
+	CLEARW: for (int w = 0; w < W; w++) {
 
 		output_fm_buffer[o][h][w] = 0;
 	}}}
@@ -87,8 +75,8 @@ void load_input_buffer_c3(
 	int in,
 	int h
 ) {
-	LOAD_INPUT: for (int bin = 0; bin < C3_ID; bin++) {
-	BH: for (int bh = 0; bh < C3_TH + (2 * P3); bh++) {
+	LOADI: for (int bin = 0; bin < C3_ID; bin++) {
+	LOADH: for (int bh = 0; bh < C3_TH + (2 * P3); bh++) {
 		#pragma HLS PIPELINE OFF
 
 		int hclamp = clamp(h + bh - P3, 0, H - 1);
@@ -114,9 +102,9 @@ void load_weight_buffer_c3(
 	int out,
 	int in
 ) {
-	LOAD_WEIGHTS: for (int bout = 0; bout < C3_OD; bout++) {
-	IN: for (int bin = 0; bin < C3_ID; bin++) {
-	K: for (int k = 0; k < F3; k++) {
+	WEIGHTO: for (int bout = 0; bout < C3_OD; bout++) {
+	WEIGHTI: for (int bin = 0; bin < C3_ID; bin++) {
+	WEIGHTK: for (int k = 0; k < F3; k++) {
 
 		memcpy(&weight_buffer[bout][bin][k], &conv3_weights[bout + out][bin + in][k], F3 * sizeof(param_t));
 
@@ -131,8 +119,8 @@ void export_output_buffer_c3(
 	int h
 ) {
 	// apply biases and ReLU
-	EXPORT: for (int bout = 0; bout < C3_OD; bout++) {
-	BH: for (int bh = 0; bh < C3_TH; bh++) {
+	EXPORTO: for (int bout = 0; bout < C3_OD; bout++) {
+	EXPORTH: for (int bh = 0; bh < C3_TH; bh++) {
 		#pragma HLS UNROLL factor=2
 
 		RELU: for (int bw = 0; bw < W; bw++) {

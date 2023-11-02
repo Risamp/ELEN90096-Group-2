@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2'" level="0">
-<item name = "Date">Thu Nov  2 17:53:42 2023
+<item name = "Date">Thu Nov  2 20:33:50 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -36,11 +36,11 @@
 <column name="grp_conv2_Pipeline_OUT_ROW_COL_fu_321">conv2_Pipeline_OUT_ROW_COL, 195850, 195850, 1.958 ms, 1.958 ms, 195850, 195850, no</column>
 <column name="grp_conv2_Pipeline_RELU_fu_331">conv2_Pipeline_RELU, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
 <column name="grp_conv2_Pipeline_5_fu_339">conv2_Pipeline_5, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
-<column name="grp_conv2_Pipeline_RELU7_fu_349">conv2_Pipeline_RELU7, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_conv2_Pipeline_RELU4_fu_349">conv2_Pipeline_RELU4, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
 <column name="grp_conv2_Pipeline_7_fu_357">conv2_Pipeline_7, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
 <column name="grp_conv2_Pipeline_BW_fu_367">conv2_Pipeline_BW, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
-<column name="grp_conv2_Pipeline_BW8_fu_375">conv2_Pipeline_BW8, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
-<column name="grp_conv2_Pipeline_BW9_fu_382">conv2_Pipeline_BW9, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_conv2_Pipeline_BW5_fu_375">conv2_Pipeline_BW5, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_conv2_Pipeline_BW6_fu_382">conv2_Pipeline_BW6, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

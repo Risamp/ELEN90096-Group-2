@@ -46,13 +46,4 @@ Diagnostics:
         Offset:          566059
         Length:          0
         ReplacementText: 'VITIS_LOOP_1247_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_55_1:  '
-    FileOffset:      55
-    FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\src\conv3.cpp'
-    Replacements:    
-      - FilePath:        'C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
-        Offset:          1742507
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_55_1: '
 ...

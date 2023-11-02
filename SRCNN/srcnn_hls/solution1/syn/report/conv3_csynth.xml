@@ -18,18 +18,18 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.360</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>126382387</Best-caseLatency>
-<Average-caseLatency>126382795</Average-caseLatency>
-<Worst-caseLatency>126383050</Worst-caseLatency>
-<Best-caseRealTimeLatency>1.264 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>1.264 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>1.264 sec</Worst-caseRealTimeLatency>
-<Interval-min>126382387</Interval-min>
-<Interval-max>126383050</Interval-max>
+<Best-caseLatency>41074177</Best-caseLatency>
+<Average-caseLatency>41074585</Average-caseLatency>
+<Worst-caseLatency>41074840</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.411 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.411 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.411 sec</Worst-caseRealTimeLatency>
+<Interval-min>41074177</Interval-min>
+<Interval-max>41074840</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <TILE_ROW>
@@ -37,25 +37,25 @@
 <TripCount>51</TripCount>
 <Latency>
 <range>
-<min>126382386</min>
-<max>126383049</max>
+<min>41074176</min>
+<max>41074839</max>
 </range>
 </Latency>
 <AbsoluteTimeLatency>
 <range>
-<min>1263823860</min>
-<max>1263830490</max>
+<min>410741760</min>
+<max>410748390</max>
 </range>
 </AbsoluteTimeLatency>
 <IterationLatency>
 <range>
-<min>2478086</min>
-<max>2478099</max>
+<min>805376</min>
+<max>805389</max>
 </range>
 </IterationLatency>
 <InstanceList>
 </InstanceList>
-<LOAD_INPUT>
+<LOADI>
 <Slack>7.30</Slack>
 <TripCount>32</TripCount>
 <Latency>227008</Latency>
@@ -63,7 +63,7 @@
 <IterationLatency>7094</IterationLatency>
 <InstanceList>
 </InstanceList>
-<BH>
+<LOADH>
 <Slack>7.30</Slack>
 <TripCount>9</TripCount>
 <Latency>7092</Latency>
@@ -80,7 +80,7 @@
 <InstanceList>
 </InstanceList>
 </PAD>
-<BH.2>
+<LOADH.2>
 <Slack>7.30</Slack>
 <TripCount>255</TripCount>
 <Latency>765</Latency>
@@ -88,19 +88,10 @@
 <IterationLatency>3</IterationLatency>
 <InstanceList>
 </InstanceList>
-</BH.2>
-</BH>
-</LOAD_INPUT>
-<IN_ROW_COL>
-<Slack>7.30</Slack>
-<TripCount>40800</TripCount>
-<Latency>2244000</Latency>
-<AbsoluteTimeLatency>22440000</AbsoluteTimeLatency>
-<IterationLatency>55</IterationLatency>
-<InstanceList>
-</InstanceList>
-</IN_ROW_COL>
-<BH>
+</LOADH.2>
+</LOADH>
+</LOADI>
+<EXPORTH>
 <Slack>7.30</Slack>
 <TripCount>3</TripCount>
 <Latency>
@@ -118,8 +109,8 @@
 <IterationLatency>1567</IterationLatency>
 <InstanceList>
 </InstanceList>
-</BH>
-<BH>
+</EXPORTH>
+<CLEARH>
 <Slack>7.30</Slack>
 <TripCount>2</TripCount>
 <Latency>
@@ -137,17 +128,17 @@
 <IterationLatency>777</IterationLatency>
 <InstanceList>
 </InstanceList>
-</BH>
+</CLEARH>
 </TILE_ROW>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>148</BRAM_18K>
-<DSP>0</DSP>
-<FF>3282</FF>
-<LUT>5255</LUT>
+<BRAM_18K>158</BRAM_18K>
+<DSP>4</DSP>
+<FF>5676</FF>
+<LUT>7214</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -227,7 +218,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_892_p_din0</name>
+<name>grp_fu_412_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -238,7 +229,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_892_p_din1</name>
+<name>grp_fu_412_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -249,7 +240,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_892_p_opcode</name>
+<name>grp_fu_412_p_opcode</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -260,7 +251,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_892_p_dout0</name>
+<name>grp_fu_412_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -271,7 +262,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_892_p_ce</name>
+<name>grp_fu_412_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -282,7 +273,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_896_p_din0</name>
+<name>grp_fu_416_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -293,7 +284,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_896_p_din1</name>
+<name>grp_fu_416_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -304,7 +295,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_896_p_opcode</name>
+<name>grp_fu_416_p_opcode</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -315,7 +306,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_896_p_dout0</name>
+<name>grp_fu_416_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -326,7 +317,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_896_p_ce</name>
+<name>grp_fu_416_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -337,7 +328,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_900_p_din0</name>
+<name>grp_fu_420_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -348,7 +339,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_900_p_din1</name>
+<name>grp_fu_420_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -359,7 +350,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_900_p_dout0</name>
+<name>grp_fu_420_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -370,7 +361,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_900_p_ce</name>
+<name>grp_fu_420_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -381,7 +372,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_904_p_din0</name>
+<name>grp_fu_424_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -392,7 +383,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_904_p_din1</name>
+<name>grp_fu_424_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -403,7 +394,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_904_p_dout0</name>
+<name>grp_fu_424_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -414,7 +405,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_904_p_ce</name>
+<name>grp_fu_424_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -425,7 +416,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_908_p_din0</name>
+<name>grp_fu_428_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -436,7 +427,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_908_p_din1</name>
+<name>grp_fu_428_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -447,7 +438,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_908_p_opcode</name>
+<name>grp_fu_428_p_opcode</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -458,7 +449,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_908_p_dout0</name>
+<name>grp_fu_428_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -469,7 +460,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_908_p_ce</name>
+<name>grp_fu_428_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>

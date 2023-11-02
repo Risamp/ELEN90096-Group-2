@@ -23,8 +23,3 @@ C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv3.pp.0
       ^~~
       VITIS_LOOP_1247_1: 
 C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp:3936:7: note: FIX-IT applied suggested code changes
-C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp:33629:7: warning: Added loop label VITIS_LOOP_55_1:   [xilinx-label-all-loops]
-      for (int kc = 0; kc < UNROLL3; kc++) {
-      ^~~
-      VITIS_LOOP_55_1: 
-C:\SPB_Data\ELEN90096-Group-2\SRCNN\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp:33629:7: note: FIX-IT applied suggested code changes

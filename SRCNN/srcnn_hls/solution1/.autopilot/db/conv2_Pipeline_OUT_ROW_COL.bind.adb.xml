@@ -184,7 +184,7 @@ newFuncRoot:6 %indvar_flatten92 = alloca i32 1
 
 <Node id="11" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="64" op_4_bw="64">
 <![CDATA[
-newFuncRoot:7 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %input_fm_buffer_1, i64 666, i64 23, i64 18446744073709551615
+newFuncRoot:7 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %input_fm_buffer, i64 666, i64 23, i64 18446744073709551615
 
 ]]></Node>
 <StgValue><ssdm name="specmemcore_ln0"/></StgValue>
@@ -322,10 +322,10 @@ newFuncRoot:15 %br_ln0 = br void %for.inc
 
 <Node id="21" bw="7" op_0_bw="7" op_1_bw="0">
 <![CDATA[
-for.inc:0 %i_1 = load i7 %i
+for.inc:0 %i_2 = load i7 %i
 
 ]]></Node>
-<StgValue><ssdm name="i_1"/></StgValue>
+<StgValue><ssdm name="i_2"/></StgValue>
 </operation>
 
 <operation id="30" st_id="2" stage="1" lat="1">
@@ -367,7 +367,7 @@ for.inc:2 %indvar_flatten92_load = load i18 %indvar_flatten92
 
 <Node id="24" bw="6" op_0_bw="7">
 <![CDATA[
-for.inc:3 %empty = trunc i7 %i_1
+for.inc:3 %empty = trunc i7 %i_2
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -382,10 +382,10 @@ for.inc:3 %empty = trunc i7 %i_1
 
 <Node id="25" bw="2" op_0_bw="3">
 <![CDATA[
-for.inc:4 %empty_90 = trunc i3 %o_1
+for.inc:4 %empty_86 = trunc i3 %o_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_90"/></StgValue>
+<StgValue><ssdm name="empty_86"/></StgValue>
 </operation>
 
 <operation id="34" st_id="2" stage="1" lat="1">
@@ -397,7 +397,7 @@ for.inc:4 %empty_90 = trunc i3 %o_1
 
 <Node id="26" bw="8" op_0_bw="8" op_1_bw="2" op_2_bw="6">
 <![CDATA[
-for.inc:5 %tmp_s = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %empty_90, i6 %empty
+for.inc:5 %tmp_s = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %empty_86, i6 %empty
 
 ]]></Node>
 <StgValue><ssdm name="tmp_s"/></StgValue>
@@ -569,7 +569,7 @@ for.inc47:7 %icmp_ln41 = icmp_eq  i17 %indvar_flatten51_load, i17 48960
 
 <Node id="40" bw="7" op_0_bw="1" op_1_bw="7" op_2_bw="7">
 <![CDATA[
-for.inc47:8 %select_ln40 = select i1 %icmp_ln41, i7 0, i7 %i_1
+for.inc47:8 %select_ln40 = select i1 %icmp_ln41, i7 0, i7 %i_2
 
 ]]></Node>
 <StgValue><ssdm name="select_ln40"/></StgValue>
@@ -617,10 +617,10 @@ for.inc47:10 %zext_ln46 = zext i3 %select_ln40_1
 
 <Node id="43" bw="5" op_0_bw="5" op_1_bw="3" op_2_bw="2">
 <![CDATA[
-for.inc47:11 %tmp_15 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %select_ln40_1, i2 0
+for.inc47:11 %tmp_32 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %select_ln40_1, i2 0
 
 ]]></Node>
-<StgValue><ssdm name="tmp_15"/></StgValue>
+<StgValue><ssdm name="tmp_32"/></StgValue>
 </operation>
 
 <operation id="49" st_id="2" stage="1" lat="1">
@@ -633,7 +633,7 @@ for.inc47:11 %tmp_15 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %
 
 <Node id="44" bw="6" op_0_bw="5">
 <![CDATA[
-for.inc47:12 %zext_ln46_1 = zext i5 %tmp_15
+for.inc47:12 %zext_ln46_1 = zext i5 %tmp_32
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln46_1"/></StgValue>
@@ -681,10 +681,10 @@ for.inc47:14 %sext_ln40 = sext i6 %sub_ln46
 
 <Node id="47" bw="2" op_0_bw="3">
 <![CDATA[
-for.inc47:15 %empty_91 = trunc i3 %add_ln40
+for.inc47:15 %empty_87 = trunc i3 %add_ln40
 
 ]]></Node>
-<StgValue><ssdm name="empty_91"/></StgValue>
+<StgValue><ssdm name="empty_87"/></StgValue>
 </operation>
 
 <operation id="53" st_id="2" stage="1" lat="1">
@@ -697,7 +697,7 @@ for.inc47:15 %empty_91 = trunc i3 %add_ln40
 
 <Node id="48" bw="8" op_0_bw="8" op_1_bw="2" op_2_bw="6">
 <![CDATA[
-for.inc47:16 %p_mid = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %empty_91, i6 0
+for.inc47:16 %p_mid = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %empty_87, i6 0
 
 ]]></Node>
 <StgValue><ssdm name="p_mid"/></StgValue>
@@ -841,10 +841,10 @@ for.inc47:26 %select_ln41 = select i1 %or_ln41, i2 0, i2 %r_load
 
 <Node id="59" bw="7" op_0_bw="1" op_1_bw="7" op_2_bw="7">
 <![CDATA[
-for.inc47:27 %select_ln41_1 = select i1 %and_ln40_1, i7 %add_ln41, i7 %select_ln40
+for.inc47:27 %select_ln41_7 = select i1 %and_ln40_1, i7 %add_ln41, i7 %select_ln40
 
 ]]></Node>
-<StgValue><ssdm name="select_ln41_1"/></StgValue>
+<StgValue><ssdm name="select_ln41_7"/></StgValue>
 </operation>
 
 <operation id="63" st_id="2" stage="1" lat="1">
@@ -857,7 +857,7 @@ for.inc47:27 %select_ln41_1 = select i1 %and_ln40_1, i7 %add_ln41, i7 %select_ln
 
 <Node id="60" bw="10" op_0_bw="7">
 <![CDATA[
-for.inc47:28 %zext_ln46_2 = zext i7 %select_ln41_1
+for.inc47:28 %zext_ln46_2 = zext i7 %select_ln41_7
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln46_2"/></StgValue>
@@ -873,10 +873,10 @@ for.inc47:28 %zext_ln46_2 = zext i7 %select_ln41_1
 
 <Node id="61" bw="9" op_0_bw="9" op_1_bw="7" op_2_bw="2">
 <![CDATA[
-for.inc47:29 %p_shl1 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i7.i2, i7 %select_ln41_1, i2 0
+for.inc47:29 %p_shl = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i7.i2, i7 %select_ln41_7, i2 0
 
 ]]></Node>
-<StgValue><ssdm name="p_shl1"/></StgValue>
+<StgValue><ssdm name="p_shl"/></StgValue>
 </operation>
 
 <operation id="65" st_id="2" stage="1" lat="1">
@@ -889,7 +889,7 @@ for.inc47:29 %p_shl1 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i7.i2, i7 %
 
 <Node id="62" bw="10" op_0_bw="9">
 <![CDATA[
-for.inc47:30 %zext_ln46_3 = zext i9 %p_shl1
+for.inc47:30 %zext_ln46_3 = zext i9 %p_shl
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln46_3"/></StgValue>
@@ -937,10 +937,10 @@ for.inc47:32 %sub_ln46_1_cast = sext i10 %sub_ln46_1
 
 <Node id="65" bw="6" op_0_bw="7">
 <![CDATA[
-for.inc47:33 %empty_92 = trunc i7 %add_ln41
+for.inc47:33 %empty_88 = trunc i7 %add_ln41
 
 ]]></Node>
-<StgValue><ssdm name="empty_92"/></StgValue>
+<StgValue><ssdm name="empty_88"/></StgValue>
 </operation>
 
 <operation id="69" st_id="2" stage="1" lat="1">
@@ -953,10 +953,10 @@ for.inc47:33 %empty_92 = trunc i7 %add_ln41
 
 <Node id="66" bw="2" op_0_bw="3">
 <![CDATA[
-for.inc47:34 %empty_93 = trunc i3 %select_ln40_1
+for.inc47:34 %empty_89 = trunc i3 %select_ln40_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_93"/></StgValue>
+<StgValue><ssdm name="empty_89"/></StgValue>
 </operation>
 
 <operation id="70" st_id="2" stage="1" lat="1">
@@ -969,7 +969,7 @@ for.inc47:34 %empty_93 = trunc i3 %select_ln40_1
 
 <Node id="67" bw="8" op_0_bw="8" op_1_bw="2" op_2_bw="6">
 <![CDATA[
-for.inc47:35 %p_mid1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %empty_93, i6 %empty_92
+for.inc47:35 %p_mid1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %empty_89, i6 %empty_88
 
 ]]></Node>
 <StgValue><ssdm name="p_mid1"/></StgValue>
@@ -985,10 +985,10 @@ for.inc47:35 %p_mid1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i2.i6, i2 %
 
 <Node id="68" bw="8" op_0_bw="1" op_1_bw="8" op_2_bw="8">
 <![CDATA[
-for.inc47:36 %select_ln41_2 = select i1 %and_ln40_1, i8 %p_mid1, i8 %select_ln40_2
+for.inc47:36 %select_ln41_8 = select i1 %and_ln40_1, i8 %p_mid1, i8 %select_ln40_2
 
 ]]></Node>
-<StgValue><ssdm name="select_ln41_2"/></StgValue>
+<StgValue><ssdm name="select_ln41_8"/></StgValue>
 </operation>
 
 <operation id="72" st_id="2" stage="1" lat="1">
@@ -1001,7 +1001,7 @@ for.inc47:36 %select_ln41_2 = select i1 %and_ln40_1, i8 %p_mid1, i8 %select_ln40
 
 <Node id="69" bw="64" op_0_bw="8">
 <![CDATA[
-for.inc47:37 %zext_ln41 = zext i8 %select_ln41_2
+for.inc47:37 %zext_ln41 = zext i8 %select_ln41_8
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln41"/></StgValue>
@@ -1305,10 +1305,10 @@ for.inc47:58 %sub_ln46_2 = sub i16 %p_shl2, i16 %sext_ln46
 
 <Node id="91" bw="7" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-for.inc47:59 %add_ln46_2 = add i7 %sext_ln40, i7 %zext_ln46_4
+for.inc47:59 %add_ln46_1 = add i7 %sext_ln40, i7 %zext_ln46_4
 
 ]]></Node>
-<StgValue><ssdm name="add_ln46_2"/></StgValue>
+<StgValue><ssdm name="add_ln46_1"/></StgValue>
 </operation>
 
 <operation id="92" st_id="2" stage="1" lat="1">
@@ -1321,7 +1321,7 @@ for.inc47:59 %add_ln46_2 = add i7 %sext_ln40, i7 %zext_ln46_4
 
 <Node id="92" bw="12" op_0_bw="7">
 <![CDATA[
-for.inc47:60 %sext_ln46_1 = sext i7 %add_ln46_2
+for.inc47:60 %sext_ln46_1 = sext i7 %add_ln46_1
 
 ]]></Node>
 <StgValue><ssdm name="sext_ln46_1"/></StgValue>
@@ -1337,7 +1337,7 @@ for.inc47:60 %sext_ln46_1 = sext i7 %add_ln46_2
 
 <Node id="93" bw="4" op_0_bw="7">
 <![CDATA[
-for.inc47:61 %trunc_ln46_1 = trunc i7 %add_ln46_2
+for.inc47:61 %trunc_ln46_1 = trunc i7 %add_ln46_1
 
 ]]></Node>
 <StgValue><ssdm name="trunc_ln46_1"/></StgValue>
@@ -1417,10 +1417,10 @@ for.inc47:66 %zext_ln46_7 = zext i8 %select_ln43
 
 <Node id="99" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-for.inc47:67 %add_ln46_3 = add i16 %sub_ln46_2, i16 %zext_ln46_7
+for.inc47:67 %add_ln46_2 = add i16 %sub_ln46_2, i16 %zext_ln46_7
 
 ]]></Node>
-<StgValue><ssdm name="add_ln46_3"/></StgValue>
+<StgValue><ssdm name="add_ln46_2"/></StgValue>
 </operation>
 
 <operation id="99" st_id="2" stage="1" lat="1">
@@ -1433,7 +1433,7 @@ for.inc47:67 %add_ln46_3 = add i16 %sub_ln46_2, i16 %zext_ln46_7
 
 <Node id="100" bw="64" op_0_bw="16">
 <![CDATA[
-for.inc47:68 %zext_ln46_8 = zext i16 %add_ln46_3
+for.inc47:68 %zext_ln46_8 = zext i16 %add_ln46_2
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln46_8"/></StgValue>
@@ -1449,10 +1449,10 @@ for.inc47:68 %zext_ln46_8 = zext i16 %add_ln46_3
 
 <Node id="101" bw="16" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc47:69 %input_fm_buffer_1_addr = getelementptr i32 %input_fm_buffer_1, i64 0, i64 %zext_ln46_8
+for.inc47:69 %input_fm_buffer_addr = getelementptr i32 %input_fm_buffer, i64 0, i64 %zext_ln46_8
 
 ]]></Node>
-<StgValue><ssdm name="input_fm_buffer_1_addr"/></StgValue>
+<StgValue><ssdm name="input_fm_buffer_addr"/></StgValue>
 </operation>
 
 <operation id="101" st_id="2" stage="1" lat="1">
@@ -1465,10 +1465,10 @@ for.inc47:69 %input_fm_buffer_1_addr = getelementptr i32 %input_fm_buffer_1, i64
 
 <Node id="102" bw="12" op_0_bw="12" op_1_bw="12">
 <![CDATA[
-for.inc47:70 %add_ln46_4 = add i12 %sub_ln46_3, i12 %zext_ln46_6
+for.inc47:70 %add_ln46_3 = add i12 %sub_ln46_3, i12 %zext_ln46_6
 
 ]]></Node>
-<StgValue><ssdm name="add_ln46_4"/></StgValue>
+<StgValue><ssdm name="add_ln46_3"/></StgValue>
 </operation>
 
 <operation id="102" st_id="2" stage="2" lat="2">
@@ -1481,10 +1481,10 @@ for.inc47:70 %add_ln46_4 = add i12 %sub_ln46_3, i12 %zext_ln46_6
 
 <Node id="106" bw="32" op_0_bw="16">
 <![CDATA[
-for.inc47:74 %input_fm_buffer_1_load = load i16 %input_fm_buffer_1_addr
+for.inc47:74 %input_fm_buffer_load = load i16 %input_fm_buffer_addr
 
 ]]></Node>
-<StgValue><ssdm name="input_fm_buffer_1_load"/></StgValue>
+<StgValue><ssdm name="input_fm_buffer_load"/></StgValue>
 </operation>
 
 <operation id="103" st_id="2" stage="1" lat="1">
@@ -1561,10 +1561,10 @@ for.inc47:82 %add_ln41_1 = add i17 %indvar_flatten51_load, i17 1
 
 <Node id="115" bw="17" op_0_bw="1" op_1_bw="17" op_2_bw="17">
 <![CDATA[
-for.inc47:83 %select_ln41_3 = select i1 %icmp_ln41, i17 1, i17 %add_ln41_1
+for.inc47:83 %select_ln41_9 = select i1 %icmp_ln41, i17 1, i17 %add_ln41_1
 
 ]]></Node>
-<StgValue><ssdm name="select_ln41_3"/></StgValue>
+<StgValue><ssdm name="select_ln41_9"/></StgValue>
 </operation>
 
 <operation id="108" st_id="2" stage="1" lat="1">
@@ -1609,7 +1609,7 @@ for.inc47:85 %store_ln44 = store i3 %select_ln40_1, i3 %o
 
 <Node id="118" bw="0" op_0_bw="17" op_1_bw="17" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc47:86 %store_ln44 = store i17 %select_ln41_3, i17 %indvar_flatten51
+for.inc47:86 %store_ln44 = store i17 %select_ln41_9, i17 %indvar_flatten51
 
 ]]></Node>
 <StgValue><ssdm name="store_ln44"/></StgValue>
@@ -1625,7 +1625,7 @@ for.inc47:86 %store_ln44 = store i17 %select_ln41_3, i17 %indvar_flatten51
 
 <Node id="119" bw="0" op_0_bw="7" op_1_bw="7" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc47:87 %store_ln44 = store i7 %select_ln41_1, i7 %i
+for.inc47:87 %store_ln44 = store i7 %select_ln41_7, i7 %i
 
 ]]></Node>
 <StgValue><ssdm name="store_ln44"/></StgValue>
@@ -1706,10 +1706,10 @@ for.inc47:39 %weight_buffer_load = load i8 %weight_buffer_addr
 
 <Node id="106" bw="32" op_0_bw="16">
 <![CDATA[
-for.inc47:74 %input_fm_buffer_1_load = load i16 %input_fm_buffer_1_addr
+for.inc47:74 %input_fm_buffer_load = load i16 %input_fm_buffer_addr
 
 ]]></Node>
-<StgValue><ssdm name="input_fm_buffer_1_load"/></StgValue>
+<StgValue><ssdm name="input_fm_buffer_load"/></StgValue>
 </operation>
 </state>
 
@@ -1739,7 +1739,7 @@ for.inc47:40 %bitcast_ln41 = bitcast i32 %weight_buffer_load
 
 <Node id="107" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.inc47:75 %mul = fmul i32 %bitcast_ln41, i32 %input_fm_buffer_1_load
+for.inc47:75 %mul = fmul i32 %bitcast_ln41, i32 %input_fm_buffer_load
 
 ]]></Node>
 <StgValue><ssdm name="mul"/></StgValue>
@@ -1757,7 +1757,7 @@ for.inc47:75 %mul = fmul i32 %bitcast_ln41, i32 %input_fm_buffer_1_load
 
 <Node id="103" bw="64" op_0_bw="12">
 <![CDATA[
-for.inc47:71 %zext_ln46_9 = zext i12 %add_ln46_4
+for.inc47:71 %zext_ln46_9 = zext i12 %add_ln46_3
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln46_9"/></StgValue>
@@ -1787,7 +1787,7 @@ for.inc47:72 %output_fm_buffer_addr = getelementptr i32 %output_fm_buffer, i64 0
 
 <Node id="107" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.inc47:75 %mul = fmul i32 %bitcast_ln41, i32 %input_fm_buffer_1_load
+for.inc47:75 %mul = fmul i32 %bitcast_ln41, i32 %input_fm_buffer_load
 
 ]]></Node>
 <StgValue><ssdm name="mul"/></StgValue>
@@ -1820,7 +1820,7 @@ for.inc47:76 %output_fm_buffer_load = load i12 %output_fm_buffer_addr
 
 <Node id="107" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.inc47:75 %mul = fmul i32 %bitcast_ln41, i32 %input_fm_buffer_1_load
+for.inc47:75 %mul = fmul i32 %bitcast_ln41, i32 %input_fm_buffer_load
 
 ]]></Node>
 <StgValue><ssdm name="mul"/></StgValue>
@@ -2046,7 +2046,7 @@ for.inc47:64 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4
 
 <Node id="105" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc47:73 %specloopname_ln44 = specloopname void @_ssdm_op_SpecLoopName, void @empty_19
+for.inc47:73 %specloopname_ln44 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln44"/></StgValue>
@@ -2090,8 +2090,8 @@ for.inc47:91 %br_ln44 = br void %for.inc
 <core>RAM</core><StgValue><ssdm name="weight_buffer"/><MemPortTyVec>1 3 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="167" name="input_fm_buffer_1" dir="0" iftype="1">
-<core>RAM_2P_LUTRAM</core><StgValue><ssdm name="input_fm_buffer_1"/><MemPortTyVec>1 3 </MemPortTyVec>
+<port id="167" name="input_fm_buffer" dir="0" iftype="1">
+<core>RAM_2P_LUTRAM</core><StgValue><ssdm name="input_fm_buffer"/><MemPortTyVec>1 3 </MemPortTyVec>
 </StgValue>
 </port>
 <port id="168" name="output_fm_buffer" dir="2" iftype="1">
@@ -2118,7 +2118,7 @@ for.inc47:91 %br_ln44 = br void %for.inc
 </dataflow>
 <dataflow id="178" from="_ssdm_op_SpecMemCore" to="specmemcore_ln0" fromId="177" toId="20">
 </dataflow>
-<dataflow id="179" from="input_fm_buffer_1" to="specmemcore_ln0" fromId="167" toId="20">
+<dataflow id="179" from="input_fm_buffer" to="specmemcore_ln0" fromId="167" toId="20">
 </dataflow>
 <dataflow id="181" from="StgValue_180" to="specmemcore_ln0" fromId="180" toId="20">
 </dataflow>
@@ -2154,19 +2154,19 @@ for.inc47:91 %br_ln44 = br void %for.inc
 </dataflow>
 <dataflow id="206" from="c" to="store_ln0" fromId="13" toId="27">
 </dataflow>
-<dataflow id="207" from="i" to="i_1" fromId="16" toId="29">
+<dataflow id="207" from="i" to="i_2" fromId="16" toId="29">
 </dataflow>
 <dataflow id="208" from="o" to="o_1" fromId="18" toId="30">
 </dataflow>
 <dataflow id="209" from="indvar_flatten92" to="indvar_flatten92_load" fromId="19" toId="31">
 </dataflow>
-<dataflow id="210" from="i_1" to="empty" fromId="29" toId="32">
+<dataflow id="210" from="i_2" to="empty" fromId="29" toId="32">
 </dataflow>
-<dataflow id="211" from="o_1" to="empty_90" fromId="30" toId="33">
+<dataflow id="211" from="o_1" to="empty_86" fromId="30" toId="33">
 </dataflow>
 <dataflow id="213" from="_ssdm_op_BitConcatenate.i8.i2.i6" to="tmp_s" fromId="212" toId="34">
 </dataflow>
-<dataflow id="214" from="empty_90" to="tmp_s" fromId="33" toId="34">
+<dataflow id="214" from="empty_86" to="tmp_s" fromId="33" toId="34">
 </dataflow>
 <dataflow id="215" from="empty" to="tmp_s" fromId="32" toId="34">
 </dataflow>
@@ -2212,7 +2212,7 @@ for.inc47:91 %br_ln44 = br void %for.inc
 </dataflow>
 <dataflow id="244" from="StgValue_195" to="select_ln40" fromId="195" toId="45">
 </dataflow>
-<dataflow id="245" from="i_1" to="select_ln40" fromId="29" toId="45">
+<dataflow id="245" from="i_2" to="select_ln40" fromId="29" toId="45">
 </dataflow>
 <dataflow id="246" from="icmp_ln41" to="select_ln40_1" fromId="44" toId="46">
 </dataflow>
@@ -2222,13 +2222,13 @@ for.inc47:91 %br_ln44 = br void %for.inc
 </dataflow>
 <dataflow id="249" from="select_ln40_1" to="zext_ln46" fromId="46" toId="47">
 </dataflow>
-<dataflow id="251" from="_ssdm_op_BitConcatenate.i5.i3.i2" to="tmp_15" fromId="250" toId="48">
+<dataflow id="251" from="_ssdm_op_BitConcatenate.i5.i3.i2" to="tmp_32" fromId="250" toId="48">
 </dataflow>
-<dataflow id="252" from="select_ln40_1" to="tmp_15" fromId="46" toId="48">
+<dataflow id="252" from="select_ln40_1" to="tmp_32" fromId="46" toId="48">
 </dataflow>
-<dataflow id="253" from="StgValue_201" to="tmp_15" fromId="201" toId="48">
+<dataflow id="253" from="StgValue_201" to="tmp_32" fromId="201" toId="48">
 </dataflow>
-<dataflow id="254" from="tmp_15" to="zext_ln46_1" fromId="48" toId="49">
+<dataflow id="254" from="tmp_32" to="zext_ln46_1" fromId="48" toId="49">
 </dataflow>
 <dataflow id="255" from="zext_ln46_1" to="sub_ln46" fromId="49" toId="50">
 </dataflow>
@@ -2236,11 +2236,11 @@ for.inc47:91 %br_ln44 = br void %for.inc
 </dataflow>
 <dataflow id="257" from="sub_ln46" to="sext_ln40" fromId="50" toId="51">
 </dataflow>
-<dataflow id="258" from="add_ln40" to="empty_91" fromId="43" toId="52">
+<dataflow id="258" from="add_ln40" to="empty_87" fromId="43" toId="52">
 </dataflow>
 <dataflow id="259" from="_ssdm_op_BitConcatenate.i8.i2.i6" to="p_mid" fromId="212" toId="53">
 </dataflow>
-<dataflow id="260" from="empty_91" to="p_mid" fromId="52" toId="53">
+<dataflow id="260" from="empty_87" to="p_mid" fromId="52" toId="53">
 </dataflow>
 <dataflow id="262" from="StgValue_261" to="p_mid" fromId="261" toId="53">
 </dataflow>
@@ -2280,21 +2280,21 @@ for.inc47:91 %br_ln44 = br void %for.inc
 </dataflow>
 <dataflow id="284" from="r_load" to="select_ln41" fromId="40" toId="61">
 </dataflow>
-<dataflow id="285" from="and_ln40_1" to="select_ln41_1" fromId="58" toId="62">
+<dataflow id="285" from="and_ln40_1" to="select_ln41_7" fromId="58" toId="62">
 </dataflow>
-<dataflow id="286" from="add_ln41" to="select_ln41_1" fromId="59" toId="62">
+<dataflow id="286" from="add_ln41" to="select_ln41_7" fromId="59" toId="62">
 </dataflow>
-<dataflow id="287" from="select_ln40" to="select_ln41_1" fromId="45" toId="62">
+<dataflow id="287" from="select_ln40" to="select_ln41_7" fromId="45" toId="62">
 </dataflow>
-<dataflow id="288" from="select_ln41_1" to="zext_ln46_2" fromId="62" toId="63">
+<dataflow id="288" from="select_ln41_7" to="zext_ln46_2" fromId="62" toId="63">
 </dataflow>
-<dataflow id="290" from="_ssdm_op_BitConcatenate.i9.i7.i2" to="p_shl1" fromId="289" toId="64">
+<dataflow id="290" from="_ssdm_op_BitConcatenate.i9.i7.i2" to="p_shl" fromId="289" toId="64">
 </dataflow>
-<dataflow id="291" from="select_ln41_1" to="p_shl1" fromId="62" toId="64">
+<dataflow id="291" from="select_ln41_7" to="p_shl" fromId="62" toId="64">
 </dataflow>
-<dataflow id="292" from="StgValue_201" to="p_shl1" fromId="201" toId="64">
+<dataflow id="292" from="StgValue_201" to="p_shl" fromId="201" toId="64">
 </dataflow>
-<dataflow id="293" from="p_shl1" to="zext_ln46_3" fromId="64" toId="65">
+<dataflow id="293" from="p_shl" to="zext_ln46_3" fromId="64" toId="65">
 </dataflow>
 <dataflow id="294" from="zext_ln46_3" to="sub_ln46_1" fromId="65" toId="66">
 </dataflow>
@@ -2302,23 +2302,23 @@ for.inc47:91 %br_ln44 = br void %for.inc
 </dataflow>
 <dataflow id="296" from="sub_ln46_1" to="sub_ln46_1_cast" fromId="66" toId="67">
 </dataflow>
-<dataflow id="297" from="add_ln41" to="empty_92" fromId="59" toId="68">
+<dataflow id="297" from="add_ln41" to="empty_88" fromId="59" toId="68">
 </dataflow>
-<dataflow id="298" from="select_ln40_1" to="empty_93" fromId="46" toId="69">
+<dataflow id="298" from="select_ln40_1" to="empty_89" fromId="46" toId="69">
 </dataflow>
 <dataflow id="299" from="_ssdm_op_BitConcatenate.i8.i2.i6" to="p_mid1" fromId="212" toId="70">
 </dataflow>
-<dataflow id="300" from="empty_93" to="p_mid1" fromId="69" toId="70">
+<dataflow id="300" from="empty_89" to="p_mid1" fromId="69" toId="70">
 </dataflow>
-<dataflow id="301" from="empty_92" to="p_mid1" fromId="68" toId="70">
+<dataflow id="301" from="empty_88" to="p_mid1" fromId="68" toId="70">
 </dataflow>
-<dataflow id="302" from="and_ln40_1" to="select_ln41_2" fromId="58" toId="71">
+<dataflow id="302" from="and_ln40_1" to="select_ln41_8" fromId="58" toId="71">
 </dataflow>
-<dataflow id="303" from="p_mid1" to="select_ln41_2" fromId="70" toId="71">
+<dataflow id="303" from="p_mid1" to="select_ln41_8" fromId="70" toId="71">
 </dataflow>
-<dataflow id="304" from="select_ln40_2" to="select_ln41_2" fromId="54" toId="71">
+<dataflow id="304" from="select_ln40_2" to="select_ln41_8" fromId="54" toId="71">
 </dataflow>
-<dataflow id="305" from="select_ln41_2" to="zext_ln41" fromId="71" toId="72">
+<dataflow id="305" from="select_ln41_8" to="zext_ln41" fromId="71" toId="72">
 </dataflow>
 <dataflow id="306" from="weight_buffer" to="weight_buffer_addr" fromId="166" toId="73">
 </dataflow>
@@ -2390,13 +2390,13 @@ for.inc47:91 %br_ln44 = br void %for.inc
 </dataflow>
 <dataflow id="343" from="sext_ln46" to="sub_ln46_2" fromId="87" toId="90">
 </dataflow>
-<dataflow id="344" from="sext_ln40" to="add_ln46_2" fromId="51" toId="91">
+<dataflow id="344" from="sext_ln40" to="add_ln46_1" fromId="51" toId="91">
 </dataflow>
-<dataflow id="345" from="zext_ln46_4" to="add_ln46_2" fromId="84" toId="91">
+<dataflow id="345" from="zext_ln46_4" to="add_ln46_1" fromId="84" toId="91">
 </dataflow>
-<dataflow id="346" from="add_ln46_2" to="sext_ln46_1" fromId="91" toId="92">
+<dataflow id="346" from="add_ln46_1" to="sext_ln46_1" fromId="91" toId="92">
 </dataflow>
-<dataflow id="347" from="add_ln46_2" to="trunc_ln46_1" fromId="91" toId="93">
+<dataflow id="347" from="add_ln46_1" to="trunc_ln46_1" fromId="91" toId="93">
 </dataflow>
 <dataflow id="349" from="_ssdm_op_BitConcatenate.i12.i4.i8" to="p_shl3" fromId="348" toId="94">
 </dataflow>
@@ -2412,23 +2412,23 @@ for.inc47:91 %br_ln44 = br void %for.inc
 </dataflow>
 <dataflow id="355" from="select_ln43" to="zext_ln46_7" fromId="82" toId="97">
 </dataflow>
-<dataflow id="356" from="sub_ln46_2" to="add_ln46_3" fromId="90" toId="98">
+<dataflow id="356" from="sub_ln46_2" to="add_ln46_2" fromId="90" toId="98">
 </dataflow>
-<dataflow id="357" from="zext_ln46_7" to="add_ln46_3" fromId="97" toId="98">
+<dataflow id="357" from="zext_ln46_7" to="add_ln46_2" fromId="97" toId="98">
 </dataflow>
-<dataflow id="358" from="add_ln46_3" to="zext_ln46_8" fromId="98" toId="99">
+<dataflow id="358" from="add_ln46_2" to="zext_ln46_8" fromId="98" toId="99">
 </dataflow>
-<dataflow id="359" from="input_fm_buffer_1" to="input_fm_buffer_1_addr" fromId="167" toId="100">
+<dataflow id="359" from="input_fm_buffer" to="input_fm_buffer_addr" fromId="167" toId="100">
 </dataflow>
-<dataflow id="360" from="StgValue_307" to="input_fm_buffer_1_addr" fromId="307" toId="100">
+<dataflow id="360" from="StgValue_307" to="input_fm_buffer_addr" fromId="307" toId="100">
 </dataflow>
-<dataflow id="361" from="zext_ln46_8" to="input_fm_buffer_1_addr" fromId="99" toId="100">
+<dataflow id="361" from="zext_ln46_8" to="input_fm_buffer_addr" fromId="99" toId="100">
 </dataflow>
-<dataflow id="362" from="sub_ln46_3" to="add_ln46_4" fromId="95" toId="101">
+<dataflow id="362" from="sub_ln46_3" to="add_ln46_3" fromId="95" toId="101">
 </dataflow>
-<dataflow id="363" from="zext_ln46_6" to="add_ln46_4" fromId="96" toId="101">
+<dataflow id="363" from="zext_ln46_6" to="add_ln46_3" fromId="96" toId="101">
 </dataflow>
-<dataflow id="364" from="input_fm_buffer_1_addr" to="input_fm_buffer_1_load" fromId="100" toId="102">
+<dataflow id="364" from="input_fm_buffer_addr" to="input_fm_buffer_load" fromId="100" toId="102">
 </dataflow>
 <dataflow id="365" from="select_ln43" to="add_ln44" fromId="82" toId="103">
 </dataflow>
@@ -2448,11 +2448,11 @@ for.inc47:91 %br_ln44 = br void %for.inc
 </dataflow>
 <dataflow id="376" from="StgValue_375" to="add_ln41_1" fromId="375" toId="106">
 </dataflow>
-<dataflow id="377" from="icmp_ln41" to="select_ln41_3" fromId="44" toId="107">
+<dataflow id="377" from="icmp_ln41" to="select_ln41_9" fromId="44" toId="107">
 </dataflow>
-<dataflow id="378" from="StgValue_375" to="select_ln41_3" fromId="375" toId="107">
+<dataflow id="378" from="StgValue_375" to="select_ln41_9" fromId="375" toId="107">
 </dataflow>
-<dataflow id="379" from="add_ln41_1" to="select_ln41_3" fromId="106" toId="107">
+<dataflow id="379" from="add_ln41_1" to="select_ln41_9" fromId="106" toId="107">
 </dataflow>
 <dataflow id="380" from="add_ln40_1" to="store_ln44" fromId="37" toId="108">
 </dataflow>
@@ -2462,11 +2462,11 @@ for.inc47:91 %br_ln44 = br void %for.inc
 </dataflow>
 <dataflow id="383" from="o" to="store_ln44" fromId="18" toId="109">
 </dataflow>
-<dataflow id="384" from="select_ln41_3" to="store_ln44" fromId="107" toId="110">
+<dataflow id="384" from="select_ln41_9" to="store_ln44" fromId="107" toId="110">
 </dataflow>
 <dataflow id="385" from="indvar_flatten51" to="store_ln44" fromId="17" toId="110">
 </dataflow>
-<dataflow id="386" from="select_ln41_1" to="store_ln44" fromId="62" toId="111">
+<dataflow id="386" from="select_ln41_7" to="store_ln44" fromId="62" toId="111">
 </dataflow>
 <dataflow id="387" from="i" to="store_ln44" fromId="16" toId="111">
 </dataflow>
@@ -2484,15 +2484,15 @@ for.inc47:91 %br_ln44 = br void %for.inc
 </dataflow>
 <dataflow id="394" from="weight_buffer_addr" to="weight_buffer_load" fromId="73" toId="115">
 </dataflow>
-<dataflow id="395" from="input_fm_buffer_1_addr" to="input_fm_buffer_1_load" fromId="100" toId="116">
+<dataflow id="395" from="input_fm_buffer_addr" to="input_fm_buffer_load" fromId="100" toId="116">
 </dataflow>
 <dataflow id="396" from="weight_buffer_load" to="bitcast_ln41" fromId="115" toId="117">
 </dataflow>
 <dataflow id="397" from="bitcast_ln41" to="mul" fromId="117" toId="118">
 </dataflow>
-<dataflow id="398" from="input_fm_buffer_1_load" to="mul" fromId="116" toId="118">
+<dataflow id="398" from="input_fm_buffer_load" to="mul" fromId="116" toId="118">
 </dataflow>
-<dataflow id="399" from="add_ln46_4" to="zext_ln46_9" fromId="101" toId="119">
+<dataflow id="399" from="add_ln46_3" to="zext_ln46_9" fromId="101" toId="119">
 </dataflow>
 <dataflow id="400" from="output_fm_buffer" to="output_fm_buffer_addr" fromId="168" toId="120">
 </dataflow>
@@ -2502,13 +2502,13 @@ for.inc47:91 %br_ln44 = br void %for.inc
 </dataflow>
 <dataflow id="403" from="bitcast_ln41" to="mul" fromId="117" toId="121">
 </dataflow>
-<dataflow id="404" from="input_fm_buffer_1_load" to="mul" fromId="116" toId="121">
+<dataflow id="404" from="input_fm_buffer_load" to="mul" fromId="116" toId="121">
 </dataflow>
 <dataflow id="405" from="output_fm_buffer_addr" to="output_fm_buffer_load" fromId="120" toId="122">
 </dataflow>
 <dataflow id="406" from="bitcast_ln41" to="mul" fromId="117" toId="123">
 </dataflow>
-<dataflow id="407" from="input_fm_buffer_1_load" to="mul" fromId="116" toId="123">
+<dataflow id="407" from="input_fm_buffer_load" to="mul" fromId="116" toId="123">
 </dataflow>
 <dataflow id="408" from="output_fm_buffer_addr" to="output_fm_buffer_load" fromId="120" toId="124">
 </dataflow>
@@ -2586,7 +2586,7 @@ for.inc47:91 %br_ln44 = br void %for.inc
 </dataflow>
 <dataflow id="451" from="_ssdm_op_SpecLoopName" to="specloopname_ln44" fromId="417" toId="136">
 </dataflow>
-<dataflow id="453" from="empty_19" to="specloopname_ln44" fromId="452" toId="136">
+<dataflow id="453" from="empty_10" to="specloopname_ln44" fromId="452" toId="136">
 </dataflow>
 <dataflow id="454" from="add" to="store_ln46" fromId="128" toId="137">
 </dataflow>

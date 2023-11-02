@@ -100,12 +100,12 @@ wire    ap_block_pp0_stage0;
 reg   [7:0] bw_fu_46;
 wire   [7:0] add_ln108_fu_98_p2;
 wire    ap_loop_init;
-reg   [7:0] ap_sig_allocacmp_bw_4;
+reg   [7:0] ap_sig_allocacmp_bw_3;
 wire    ap_block_pp0_stage1;
 wire   [11:0] zext_ln111_fu_104_p1;
 wire   [11:0] add_ln111_fu_108_p2;
 wire   [31:0] bitcast_ln113_fu_124_p1;
-wire   [7:0] tmp_4_fu_127_p4;
+wire   [7:0] tmp_s_fu_127_p4;
 wire   [22:0] trunc_ln113_fu_137_p1;
 wire   [0:0] icmp_ln113_1_fu_147_p2;
 wire   [0:0] icmp_ln113_fu_141_p2;
@@ -308,9 +308,9 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
-        ap_sig_allocacmp_bw_4 = 8'd0;
+        ap_sig_allocacmp_bw_3 = 8'd0;
     end else begin
-        ap_sig_allocacmp_bw_4 = bw_fu_46;
+        ap_sig_allocacmp_bw_3 = bw_fu_46;
     end
 end
 
@@ -362,7 +362,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln108_fu_98_p2 = (ap_sig_allocacmp_bw_4 + 8'd1);
+assign add_ln108_fu_98_p2 = (ap_sig_allocacmp_bw_3 + 8'd1);
 
 assign add_ln111_fu_108_p2 = (sub_ln111_1 + zext_ln111_fu_104_p1);
 
@@ -424,22 +424,22 @@ assign grp_fu_994_p_din1 = empty;
 
 assign grp_fu_994_p_opcode = 2'd0;
 
-assign icmp_ln108_fu_92_p2 = ((ap_sig_allocacmp_bw_4 == 8'd255) ? 1'b1 : 1'b0);
+assign icmp_ln108_fu_92_p2 = ((ap_sig_allocacmp_bw_3 == 8'd255) ? 1'b1 : 1'b0);
 
 assign icmp_ln113_1_fu_147_p2 = ((trunc_ln113_fu_137_p1 == 23'd0) ? 1'b1 : 1'b0);
 
-assign icmp_ln113_fu_141_p2 = ((tmp_4_fu_127_p4 != 8'd255) ? 1'b1 : 1'b0);
+assign icmp_ln113_fu_141_p2 = ((tmp_s_fu_127_p4 != 8'd255) ? 1'b1 : 1'b0);
 
 assign or_ln113_fu_153_p2 = (icmp_ln113_fu_141_p2 | icmp_ln113_1_fu_147_p2);
 
 assign output_fm_buffer_d0 = ((and_ln113_fu_159_p2[0:0] == 1'b1) ? 32'd0 : add15_0_i_reg_199);
 
-assign tmp_4_fu_127_p4 = {{bitcast_ln113_fu_124_p1[30:23]}};
+assign tmp_s_fu_127_p4 = {{bitcast_ln113_fu_124_p1[30:23]}};
 
 assign trunc_ln113_fu_137_p1 = bitcast_ln113_fu_124_p1[22:0];
 
 assign zext_ln111_2_fu_114_p1 = add_ln111_fu_108_p2;
 
-assign zext_ln111_fu_104_p1 = ap_sig_allocacmp_bw_4;
+assign zext_ln111_fu_104_p1 = ap_sig_allocacmp_bw_3;
 
 endmodule //srcnn_conv2_Pipeline_RELU

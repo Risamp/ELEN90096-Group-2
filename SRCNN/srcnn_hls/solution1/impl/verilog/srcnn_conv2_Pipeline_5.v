@@ -157,7 +157,7 @@ wire   [7:0] empty_fu_109_p2;
 wire    ap_loop_init;
 reg   [7:0] ap_sig_allocacmp_loop_index_0_i_load;
 wire   [11:0] loop_index_0_i_cast1_fu_115_p1;
-wire   [11:0] empty_105_fu_119_p2;
+wire   [11:0] empty_101_fu_119_p2;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -372,7 +372,7 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign empty_105_fu_119_p2 = (sub_ln111_1 + loop_index_0_i_cast1_fu_115_p1);
+assign empty_101_fu_119_p2 = (sub_ln111_1 + loop_index_0_i_cast1_fu_115_p1);
 
 assign empty_fu_109_p2 = (ap_sig_allocacmp_loop_index_0_i_load + 8'd1);
 
@@ -444,6 +444,6 @@ assign m_axi_i3_WUSER = 1'd0;
 
 assign output_fm_buffer_address0 = p_cast_fu_125_p1;
 
-assign p_cast_fu_125_p1 = empty_105_fu_119_p2;
+assign p_cast_fu_125_p1 = empty_101_fu_119_p2;
 
 endmodule //srcnn_conv2_Pipeline_5

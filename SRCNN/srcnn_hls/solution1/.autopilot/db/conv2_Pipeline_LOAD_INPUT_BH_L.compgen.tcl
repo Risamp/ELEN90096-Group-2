@@ -1,5 +1,11 @@
 # This script segment is generated automatically by AutoPilot
 
+set name srcnn_mul_7ns_19ns_25_1_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+}
+
+
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -11,17 +17,17 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1833 \
-    name input_fm_buffer_1 \
+    id 318 \
+    name input_fm_buffer \
     reset_level 1 \
     sync_rst true \
     dir O \
-    corename input_fm_buffer_1 \
+    corename input_fm_buffer \
     op interface \
-    ports { input_fm_buffer_1_address1 { O 16 vector } input_fm_buffer_1_ce1 { O 1 bit } input_fm_buffer_1_we1 { O 1 bit } input_fm_buffer_1_d1 { O 32 vector } } \
+    ports { input_fm_buffer_address1 { O 16 vector } input_fm_buffer_ce1 { O 1 bit } input_fm_buffer_we1 { O 1 bit } input_fm_buffer_d1 { O 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_fm_buffer_1'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_fm_buffer'"
 }
 }
 
@@ -29,7 +35,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1830 \
+    id 315 \
     name i2 \
     type other \
     dir I \
@@ -44,7 +50,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1831 \
+    id 316 \
     name input_ftmap \
     type other \
     dir I \
@@ -59,7 +65,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1832 \
+    id 317 \
     name sext_ln75 \
     type other \
     dir I \
