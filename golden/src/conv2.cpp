@@ -45,4 +45,3 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 	        }
 	    }
 
-}
