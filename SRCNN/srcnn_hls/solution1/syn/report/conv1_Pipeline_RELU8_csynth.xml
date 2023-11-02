@@ -185,7 +185,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_3967_p_din0</name>
+<name>grp_fu_3987_p_din0</name>
 <Object>conv1_Pipeline_RELU8</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -196,7 +196,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_3967_p_din1</name>
+<name>grp_fu_3987_p_din1</name>
 <Object>conv1_Pipeline_RELU8</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -207,7 +207,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_3967_p_opcode</name>
+<name>grp_fu_3987_p_opcode</name>
 <Object>conv1_Pipeline_RELU8</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -218,7 +218,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_3967_p_dout0</name>
+<name>grp_fu_3987_p_dout0</name>
 <Object>conv1_Pipeline_RELU8</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -229,7 +229,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_3967_p_ce</name>
+<name>grp_fu_3987_p_ce</name>
 <Object>conv1_Pipeline_RELU8</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -251,8 +251,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>trunc_ln22</name>
-<Object>trunc_ln22</Object>
+<name>trunc_ln20</name>
+<Object>trunc_ln20</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv1_Pipeline_7'
 ================================================================
-* Date:           Thu Nov  2 20:33:35 2023
+* Date:           Thu Nov  2 21:47:51 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -87,11 +87,11 @@ IsGatedGlobalClock: 0
 
 State 1 <SV = 0> <Delay = 2.06>
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%loop_index_0_i75 = alloca i32 1"   --->   Operation 6 'alloca' 'loop_index_0_i75' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%trunc_ln22_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %trunc_ln22"   --->   Operation 7 'read' 'trunc_ln22_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%trunc_ln20_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %trunc_ln20"   --->   Operation 7 'read' 'trunc_ln20_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%sub_ln155_3_read = read i14 @_ssdm_op_Read.ap_auto.i14, i14 %sub_ln155_3"   --->   Operation 8 'read' 'sub_ln155_3_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%sext_ln162_read = read i62 @_ssdm_op_Read.ap_auto.i62, i62 %sext_ln162"   --->   Operation 9 'read' 'sext_ln162_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%sext_ln162_cast = sext i62 %sext_ln162_read"   --->   Operation 10 'sext' 'sext_ln162_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i2, void @empty_26, i32 0, i32 0, void @empty_25, i32 0, i32 512, void @empty_1, void @empty_34, void @empty_25, i32 16, i32 16, i32 256, i32 256, void @empty_25, void @empty_25, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i2, void @empty, i32 0, i32 0, void @empty_37, i32 0, i32 512, void @empty_33, void @empty_36, void @empty_37, i32 16, i32 16, i32 256, i32 256, void @empty_37, void @empty_37, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (0.42ns)   --->   "%store_ln0 = store i8 0, i8 %loop_index_0_i75"   --->   Operation 12 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln0 = br void %load-store-loop.0.i76"   --->   Operation 13 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%loop_index_0_i75_load = load i8 %loop_index_0_i75"   --->   Operation 14 'load' 'loop_index_0_i75_load' <Predicate = true> <Delay = 0.00>
@@ -99,8 +99,8 @@ ST_1 : Operation 15 [1/1] (0.76ns)   --->   "%exitcond12823 = icmp_eq  i8 %loop_
 ST_1 : Operation 16 [1/1] (0.76ns)   --->   "%empty = add i8 %loop_index_0_i75_load, i8 1"   --->   Operation 16 'add' 'empty' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln0 = br i1 %exitcond12823, void %load-store-loop.0.i76.split, void %for.inc45.0.i.exitStub"   --->   Operation 17 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%loop_index_0_i75_cast1 = zext i8 %loop_index_0_i75_load"   --->   Operation 18 'zext' 'loop_index_0_i75_cast1' <Predicate = (!exitcond12823)> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.83ns)   --->   "%empty_112 = add i14 %sub_ln155_3_read, i14 %loop_index_0_i75_cast1"   --->   Operation 19 'add' 'empty_112' <Predicate = (!exitcond12823)> <Delay = 0.83> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%p_cast = zext i14 %empty_112"   --->   Operation 20 'zext' 'p_cast' <Predicate = (!exitcond12823)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.83ns)   --->   "%empty_235 = add i14 %sub_ln155_3_read, i14 %loop_index_0_i75_cast1"   --->   Operation 19 'add' 'empty_235' <Predicate = (!exitcond12823)> <Delay = 0.83> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%p_cast = zext i14 %empty_235"   --->   Operation 20 'zext' 'p_cast' <Predicate = (!exitcond12823)> <Delay = 0.00>
 ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_18 = getelementptr i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i64 0, i64 %p_cast"   --->   Operation 21 'getelementptr' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_18' <Predicate = (!exitcond12823)> <Delay = 0.00>
 ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_19 = getelementptr i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou, i64 0, i64 %p_cast"   --->   Operation 22 'getelementptr' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_19' <Predicate = (!exitcond12823)> <Delay = 0.00>
 ST_1 : Operation 23 [2/2] (1.23ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_20 = load i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_18"   --->   Operation 23 'load' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_20' <Predicate = (!exitcond12823)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15300> <RAM>
@@ -112,13 +112,13 @@ ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%i2_addr = getelementptr i32 %i2, i
 ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 27 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 28 [1/2] (1.23ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_20 = load i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_18"   --->   Operation 28 'load' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_20' <Predicate = (!exitcond12823)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15300> <RAM>
 ST_2 : Operation 29 [1/2] (1.23ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_21 = load i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_19"   --->   Operation 29 'load' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_21' <Predicate = (!exitcond12823)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15300> <RAM>
-ST_2 : Operation 30 [1/1] (0.42ns)   --->   "%tmp_s = mux i32 @_ssdm_op_Mux.ap_auto.2float.i1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_20, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_21, i1 %trunc_ln22_read"   --->   Operation 30 'mux' 'tmp_s' <Predicate = (!exitcond12823)> <Delay = 0.42> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (0.42ns)   --->   "%tmp_s = mux i32 @_ssdm_op_Mux.ap_auto.2float.i1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_20, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_21, i1 %trunc_ln20_read"   --->   Operation 30 'mux' 'tmp_s' <Predicate = (!exitcond12823)> <Delay = 0.42> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 35 'ret' 'ret_ln0' <Predicate = (exitcond12823)> <Delay = 0.00>
 
 State 3 <SV = 2> <Delay = 7.30>
 ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255"   --->   Operation 31 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%empty_113 = bitcast i32 %tmp_s"   --->   Operation 32 'bitcast' 'empty_113' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 33 [1/1] (7.30ns)   --->   "%write_ln162 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %i2_addr, i32 %empty_113, i4 15" [src/conv1.cpp:162->src/conv1.cpp:78]   --->   Operation 33 'write' 'write_ln162' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%empty_236 = bitcast i32 %tmp_s"   --->   Operation 32 'bitcast' 'empty_236' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (7.30ns)   --->   "%write_ln162 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %i2_addr, i32 %empty_236, i4 15" [src/conv1.cpp:162->src/conv1.cpp:78]   --->   Operation 33 'write' 'write_ln162' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%br_ln0 = br void %load-store-loop.0.i76"   --->   Operation 34 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 
 
@@ -131,7 +131,7 @@ Target clock period: 10.000ns, clock uncertainty: 2.700ns.
 The critical path consists of the following:
 	'alloca' operation ('loop_index_0_i75') [7]  (0.000 ns)
 	'load' operation ('loop_index_0_i75_load') on local variable 'loop_index_0_i75' [16]  (0.000 ns)
-	'add' operation ('empty_112') [24]  (0.831 ns)
+	'add' operation ('empty_235') [24]  (0.831 ns)
 	'getelementptr' operation ('conv1_float_255_255_float_1_9_9_float_float_255_255_ou_18') [26]  (0.000 ns)
 	'load' operation ('conv1_float_255_255_float_1_9_9_float_float_255_255_ou_20') on array 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1' [29]  (1.237 ns)
 

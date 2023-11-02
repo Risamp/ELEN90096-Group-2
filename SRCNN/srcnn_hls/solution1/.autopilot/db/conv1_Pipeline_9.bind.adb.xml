@@ -46,10 +46,10 @@ newFuncRoot:0 %loop_index_1_i84 = alloca i32 1
 
 <Node id="8" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-newFuncRoot:1 %trunc_ln22_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %trunc_ln22
+newFuncRoot:1 %trunc_ln20_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %trunc_ln20
 
 ]]></Node>
-<StgValue><ssdm name="trunc_ln22_read"/></StgValue>
+<StgValue><ssdm name="trunc_ln20_read"/></StgValue>
 </operation>
 
 <operation id="8" st_id="1" stage="1" lat="1">
@@ -106,7 +106,7 @@ newFuncRoot:4 %sext_ln162_1_cast = sext i62 %sext_ln162_1_read
 
 <Node id="12" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i2, void @empty_26, i32 0, i32 0, void @empty_25, i32 0, i32 512, void @empty_1, void @empty_34, void @empty_25, i32 16, i32 16, i32 256, i32 256, void @empty_25, void @empty_25, i32 4294967295, i32 0
+newFuncRoot:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i2, void @empty, i32 0, i32 0, void @empty_37, i32 0, i32 512, void @empty_33, void @empty_36, void @empty_37, i32 16, i32 16, i32 256, i32 256, void @empty_37, void @empty_37, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -228,10 +228,10 @@ load-store-loop.1.i85.split:0 %loop_index_1_i84_cast1 = zext i8 %loop_index_1_i8
 
 <Node id="24" bw="14" op_0_bw="14" op_1_bw="14">
 <![CDATA[
-load-store-loop.1.i85.split:1 %empty_110 = add i14 %sub_ln155_4_read, i14 %loop_index_1_i84_cast1
+load-store-loop.1.i85.split:1 %empty_233 = add i14 %sub_ln155_4_read, i14 %loop_index_1_i84_cast1
 
 ]]></Node>
-<StgValue><ssdm name="empty_110"/></StgValue>
+<StgValue><ssdm name="empty_233"/></StgValue>
 </operation>
 
 <operation id="20" st_id="1" stage="1" lat="1">
@@ -244,7 +244,7 @@ load-store-loop.1.i85.split:1 %empty_110 = add i14 %sub_ln155_4_read, i14 %loop_
 
 <Node id="25" bw="64" op_0_bw="14">
 <![CDATA[
-load-store-loop.1.i85.split:2 %p_cast = zext i14 %empty_110
+load-store-loop.1.i85.split:2 %p_cast = zext i14 %empty_233
 
 ]]></Node>
 <StgValue><ssdm name="p_cast"/></StgValue>
@@ -405,7 +405,7 @@ load-store-loop.1.i85.split:7 %conv1_float_255_255_float_1_9_9_float_float_255_2
 
 <Node id="31" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="1">
 <![CDATA[
-load-store-loop.1.i85.split:8 %tmp_s = mux i32 @_ssdm_op_Mux.ap_auto.2float.i1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_16, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_17, i1 %trunc_ln22_read
+load-store-loop.1.i85.split:8 %tmp_s = mux i32 @_ssdm_op_Mux.ap_auto.2float.i1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_16, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_17, i1 %trunc_ln20_read
 
 ]]></Node>
 <StgValue><ssdm name="tmp_s"/></StgValue>
@@ -454,10 +454,10 @@ load-store-loop.1.i85.split:5 %speclooptripcount_ln0 = speclooptripcount void @_
 
 <Node id="32" bw="32" op_0_bw="32">
 <![CDATA[
-load-store-loop.1.i85.split:9 %empty_111 = bitcast i32 %tmp_s
+load-store-loop.1.i85.split:9 %empty_234 = bitcast i32 %tmp_s
 
 ]]></Node>
-<StgValue><ssdm name="empty_111"/></StgValue>
+<StgValue><ssdm name="empty_234"/></StgValue>
 </operation>
 
 <operation id="33" st_id="3" stage="1" lat="1">
@@ -469,7 +469,7 @@ load-store-loop.1.i85.split:9 %empty_111 = bitcast i32 %tmp_s
 
 <Node id="33" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="4">
 <![CDATA[
-load-store-loop.1.i85.split:10 %write_ln162 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %i2_addr, i32 %empty_111, i4 15
+load-store-loop.1.i85.split:10 %write_ln162 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %i2_addr, i32 %empty_234, i4 15
 
 ]]></Node>
 <StgValue><ssdm name="write_ln162"/></StgValue>
@@ -503,8 +503,8 @@ load-store-loop.1.i85.split:12 %br_ln0 = br void %load-store-loop.1.i85
 <port id="50" name="sub_ln155_4" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="sub_ln155_4"/></StgValue>
 </port>
-<port id="51" name="trunc_ln22" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="trunc_ln22"/></StgValue>
+<port id="51" name="trunc_ln20" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="trunc_ln20"/></StgValue>
 </port>
 <port id="52" name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1" dir="0" iftype="1">
 <core>RAM</core><StgValue><ssdm name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1"/><MemPortTyVec>1 3 </MemPortTyVec>
@@ -520,9 +520,9 @@ load-store-loop.1.i85.split:12 %br_ln0 = br void %load-store-loop.1.i85
 <dataflows>
 <dataflow id="55" from="StgValue_54" to="loop_index_1_i84" fromId="54" toId="6">
 </dataflow>
-<dataflow id="57" from="_ssdm_op_Read.ap_auto.i1" to="trunc_ln22_read" fromId="56" toId="7">
+<dataflow id="57" from="_ssdm_op_Read.ap_auto.i1" to="trunc_ln20_read" fromId="56" toId="7">
 </dataflow>
-<dataflow id="58" from="trunc_ln22" to="trunc_ln22_read" fromId="51" toId="7">
+<dataflow id="58" from="trunc_ln20" to="trunc_ln20_read" fromId="51" toId="7">
 </dataflow>
 <dataflow id="60" from="_ssdm_op_Read.ap_auto.i14" to="sub_ln155_4_read" fromId="59" toId="8">
 </dataflow>
@@ -538,23 +538,23 @@ load-store-loop.1.i85.split:12 %br_ln0 = br void %load-store-loop.1.i85
 </dataflow>
 <dataflow id="68" from="i2" to="specinterface_ln0" fromId="48" toId="11">
 </dataflow>
-<dataflow id="70" from="empty_26" to="specinterface_ln0" fromId="69" toId="11">
+<dataflow id="70" from="empty" to="specinterface_ln0" fromId="69" toId="11">
 </dataflow>
 <dataflow id="72" from="StgValue_71" to="specinterface_ln0" fromId="71" toId="11">
 </dataflow>
 <dataflow id="73" from="StgValue_71" to="specinterface_ln0" fromId="71" toId="11">
 </dataflow>
-<dataflow id="75" from="empty_25" to="specinterface_ln0" fromId="74" toId="11">
+<dataflow id="75" from="empty_37" to="specinterface_ln0" fromId="74" toId="11">
 </dataflow>
 <dataflow id="76" from="StgValue_71" to="specinterface_ln0" fromId="71" toId="11">
 </dataflow>
 <dataflow id="78" from="StgValue_77" to="specinterface_ln0" fromId="77" toId="11">
 </dataflow>
-<dataflow id="80" from="empty_1" to="specinterface_ln0" fromId="79" toId="11">
+<dataflow id="80" from="empty_33" to="specinterface_ln0" fromId="79" toId="11">
 </dataflow>
-<dataflow id="82" from="empty_34" to="specinterface_ln0" fromId="81" toId="11">
+<dataflow id="82" from="empty_36" to="specinterface_ln0" fromId="81" toId="11">
 </dataflow>
-<dataflow id="83" from="empty_25" to="specinterface_ln0" fromId="74" toId="11">
+<dataflow id="83" from="empty_37" to="specinterface_ln0" fromId="74" toId="11">
 </dataflow>
 <dataflow id="85" from="StgValue_84" to="specinterface_ln0" fromId="84" toId="11">
 </dataflow>
@@ -564,9 +564,9 @@ load-store-loop.1.i85.split:12 %br_ln0 = br void %load-store-loop.1.i85
 </dataflow>
 <dataflow id="89" from="StgValue_87" to="specinterface_ln0" fromId="87" toId="11">
 </dataflow>
-<dataflow id="90" from="empty_25" to="specinterface_ln0" fromId="74" toId="11">
+<dataflow id="90" from="empty_37" to="specinterface_ln0" fromId="74" toId="11">
 </dataflow>
-<dataflow id="91" from="empty_25" to="specinterface_ln0" fromId="74" toId="11">
+<dataflow id="91" from="empty_37" to="specinterface_ln0" fromId="74" toId="11">
 </dataflow>
 <dataflow id="93" from="StgValue_92" to="specinterface_ln0" fromId="92" toId="11">
 </dataflow>
@@ -590,11 +590,11 @@ load-store-loop.1.i85.split:12 %br_ln0 = br void %load-store-loop.1.i85
 </dataflow>
 <dataflow id="106" from="loop_index_1_i84_load" to="loop_index_1_i84_cast1" fromId="14" toId="18">
 </dataflow>
-<dataflow id="107" from="sub_ln155_4_read" to="empty_110" fromId="8" toId="19">
+<dataflow id="107" from="sub_ln155_4_read" to="empty_233" fromId="8" toId="19">
 </dataflow>
-<dataflow id="108" from="loop_index_1_i84_cast1" to="empty_110" fromId="18" toId="19">
+<dataflow id="108" from="loop_index_1_i84_cast1" to="empty_233" fromId="18" toId="19">
 </dataflow>
-<dataflow id="109" from="empty_110" to="p_cast" fromId="19" toId="20">
+<dataflow id="109" from="empty_233" to="p_cast" fromId="19" toId="20">
 </dataflow>
 <dataflow id="110" from="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1" to="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_14" fromId="52" toId="21">
 </dataflow>
@@ -642,7 +642,7 @@ load-store-loop.1.i85.split:12 %br_ln0 = br void %load-store-loop.1.i85
 </dataflow>
 <dataflow id="136" from="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_17" to="tmp_s" fromId="29" toId="30">
 </dataflow>
-<dataflow id="137" from="trunc_ln22_read" to="tmp_s" fromId="7" toId="30">
+<dataflow id="137" from="trunc_ln20_read" to="tmp_s" fromId="7" toId="30">
 </dataflow>
 <dataflow id="139" from="_ssdm_op_SpecLoopTripCount" to="speclooptripcount_ln0" fromId="138" toId="31">
 </dataflow>
@@ -652,13 +652,13 @@ load-store-loop.1.i85.split:12 %br_ln0 = br void %load-store-loop.1.i85
 </dataflow>
 <dataflow id="143" from="StgValue_140" to="speclooptripcount_ln0" fromId="140" toId="31">
 </dataflow>
-<dataflow id="144" from="tmp_s" to="empty_111" fromId="30" toId="32">
+<dataflow id="144" from="tmp_s" to="empty_234" fromId="30" toId="32">
 </dataflow>
 <dataflow id="146" from="_ssdm_op_Write.m_axi.p1i32" to="write_ln162" fromId="145" toId="33">
 </dataflow>
 <dataflow id="147" from="i2_addr" to="write_ln162" fromId="26" toId="33">
 </dataflow>
-<dataflow id="148" from="empty_111" to="write_ln162" fromId="32" toId="33">
+<dataflow id="148" from="empty_234" to="write_ln162" fromId="32" toId="33">
 </dataflow>
 <dataflow id="150" from="StgValue_149" to="write_ln162" fromId="149" toId="33">
 </dataflow>

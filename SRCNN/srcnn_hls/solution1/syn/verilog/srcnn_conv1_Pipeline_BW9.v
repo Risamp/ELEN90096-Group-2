@@ -14,7 +14,7 @@ module srcnn_conv1_Pipeline_BW9 (
         ap_idle,
         ap_ready,
         sub_ln90_2,
-        trunc_ln24,
+        trunc_ln22,
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0,
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0,
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0,
@@ -34,7 +34,7 @@ output   ap_done;
 output   ap_idle;
 output   ap_ready;
 input  [13:0] sub_ln90_2;
-input  [0:0] trunc_ln24;
+input  [0:0] trunc_ln22;
 output  [13:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0;
 output   conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0;
 output   conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0;
@@ -57,12 +57,12 @@ wire   [0:0] icmp_ln88_fu_92_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-wire   [63:0] zext_ln90_6_fu_114_p1;
+wire   [63:0] zext_ln90_1_fu_114_p1;
 reg   [7:0] w_fu_40;
-wire   [7:0] add_ln88_fu_98_p2;
+wire   [7:0] add_ln88_1_fu_98_p2;
 wire    ap_loop_init;
 reg   [7:0] ap_sig_allocacmp_w_5;
-wire   [0:0] trunc_ln24_read_read_fu_44_p2;
+wire   [0:0] trunc_ln22_read_read_fu_44_p2;
 wire   [13:0] zext_ln90_fu_104_p1;
 wire   [13:0] add_ln90_fu_108_p2;
 reg    ap_done_reg;
@@ -117,7 +117,7 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
         if ((icmp_ln88_fu_92_p2 == 1'd0)) begin
-            w_fu_40 <= add_ln88_fu_98_p2;
+            w_fu_40 <= add_ln88_1_fu_98_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             w_fu_40 <= 8'd0;
         end
@@ -181,7 +181,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((trunc_ln24_read_read_fu_44_p2 == 1'd0) & (icmp_ln88_fu_92_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
+    if (((trunc_ln22_read_read_fu_44_p2 == 1'd0) & (icmp_ln88_fu_92_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0 = 1'b1;
     end else begin
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0 = 1'b0;
@@ -197,7 +197,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((trunc_ln24_read_read_fu_44_p2 == 1'd1) & (icmp_ln88_fu_92_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
+    if (((trunc_ln22_read_read_fu_44_p2 == 1'd1) & (icmp_ln88_fu_92_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_we0 = 1'b1;
     end else begin
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_we0 = 1'b0;
@@ -215,7 +215,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln88_fu_98_p2 = (ap_sig_allocacmp_w_5 + 8'd1);
+assign add_ln88_1_fu_98_p2 = (ap_sig_allocacmp_w_5 + 8'd1);
 
 assign add_ln90_fu_108_p2 = (sub_ln90_2 + zext_ln90_fu_104_p1);
 
@@ -227,19 +227,19 @@ end
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0 = zext_ln90_6_fu_114_p1;
+assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0 = zext_ln90_1_fu_114_p1;
 
 assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_d0 = 32'd0;
 
-assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address0 = zext_ln90_6_fu_114_p1;
+assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address0 = zext_ln90_1_fu_114_p1;
 
 assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_d0 = 32'd0;
 
 assign icmp_ln88_fu_92_p2 = ((ap_sig_allocacmp_w_5 == 8'd255) ? 1'b1 : 1'b0);
 
-assign trunc_ln24_read_read_fu_44_p2 = trunc_ln24;
+assign trunc_ln22_read_read_fu_44_p2 = trunc_ln22;
 
-assign zext_ln90_6_fu_114_p1 = add_ln90_fu_108_p2;
+assign zext_ln90_1_fu_114_p1 = add_ln90_fu_108_p2;
 
 assign zext_ln90_fu_104_p1 = ap_sig_allocacmp_w_5;
 

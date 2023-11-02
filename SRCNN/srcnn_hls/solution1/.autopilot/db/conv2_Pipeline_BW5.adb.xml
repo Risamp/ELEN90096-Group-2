@@ -171,10 +171,10 @@ for.inc.1.i.i.split:0 %zext_ln63 = zext i8 %w
 
 <Node id="15" bw="12" op_0_bw="12" op_1_bw="12">
 <![CDATA[
-for.inc.1.i.i.split:1 %add_ln63_3 = add i12 %add_ln63_read, i12 %zext_ln63
+for.inc.1.i.i.split:1 %add_ln63_1 = add i12 %add_ln63_read, i12 %zext_ln63
 
 ]]></Node>
-<StgValue><ssdm name="add_ln63_3"/></StgValue>
+<StgValue><ssdm name="add_ln63_1"/></StgValue>
 </operation>
 
 <operation id="15" st_id="1" stage="1" lat="1">
@@ -187,7 +187,7 @@ for.inc.1.i.i.split:1 %add_ln63_3 = add i12 %add_ln63_read, i12 %zext_ln63
 
 <Node id="16" bw="64" op_0_bw="12">
 <![CDATA[
-for.inc.1.i.i.split:2 %zext_ln63_2 = zext i12 %add_ln63_3
+for.inc.1.i.i.split:2 %zext_ln63_2 = zext i12 %add_ln63_1
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln63_2"/></StgValue>
@@ -235,7 +235,7 @@ for.inc.1.i.i.split:4 %speclooptripcount_ln61 = speclooptripcount void @_ssdm_op
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.1.i.i.split:5 %specloopname_ln61 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7
+for.inc.1.i.i.split:5 %specloopname_ln61 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln61"/></StgValue>
@@ -356,11 +356,11 @@ for.inc.2.i.i.preheader.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="57" from="w" to="zext_ln63" fromId="8" toId="13">
 </dataflow>
-<dataflow id="58" from="add_ln63_read" to="add_ln63_3" fromId="5" toId="14">
+<dataflow id="58" from="add_ln63_read" to="add_ln63_1" fromId="5" toId="14">
 </dataflow>
-<dataflow id="59" from="zext_ln63" to="add_ln63_3" fromId="13" toId="14">
+<dataflow id="59" from="zext_ln63" to="add_ln63_1" fromId="13" toId="14">
 </dataflow>
-<dataflow id="60" from="add_ln63_3" to="zext_ln63_2" fromId="14" toId="15">
+<dataflow id="60" from="add_ln63_1" to="zext_ln63_2" fromId="14" toId="15">
 </dataflow>
 <dataflow id="61" from="output_fm_buffer" to="output_fm_buffer_addr" fromId="30" toId="16">
 </dataflow>
@@ -378,7 +378,7 @@ for.inc.2.i.i.preheader.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="72" from="_ssdm_op_SpecLoopName" to="specloopname_ln61" fromId="71" toId="18">
 </dataflow>
-<dataflow id="74" from="empty_7" to="specloopname_ln61" fromId="73" toId="18">
+<dataflow id="74" from="empty_10" to="specloopname_ln61" fromId="73" toId="18">
 </dataflow>
 <dataflow id="76" from="StgValue_75" to="store_ln63" fromId="75" toId="19">
 </dataflow>

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1_Pipeline_BW'" level="0">
-<item name = "Date">Thu Nov  2 20:34:10 2023
+<item name = "Date">Thu Nov  2 21:48:42 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -111,7 +111,7 @@
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv1_Pipeline_BW, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv1_Pipeline_BW, return value</column>
 <column name="sub_ln90_1">in, 14, ap_none, sub_ln90_1, scalar</column>
-<column name="trunc_ln24">in, 1, ap_none, trunc_ln24, scalar</column>
+<column name="trunc_ln22">in, 1, ap_none, trunc_ln22, scalar</column>
 <column name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0">out, 14, ap_memory, conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, array</column>
 <column name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0">out, 1, ap_memory, conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, array</column>
 <column name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0">out, 1, ap_memory, conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, array</column>

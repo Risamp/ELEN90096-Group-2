@@ -107,7 +107,7 @@ attribute shreg_extract : string;
     signal select_ln112_fu_430_p3 : STD_LOGIC_VECTOR (1 downto 0);
     signal trunc_ln114_fu_377_p1 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_fu_369_p3 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_35_fu_387_p4 : STD_LOGIC_VECTOR (8 downto 0);
+    signal tmp_124_fu_387_p4 : STD_LOGIC_VECTOR (8 downto 0);
     signal or_ln114_fu_381_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_s_fu_397_p3 : STD_LOGIC_VECTOR (9 downto 0);
     signal empty_fu_340_p1 : STD_LOGIC_VECTOR (1 downto 0);
@@ -118,7 +118,7 @@ attribute shreg_extract : string;
     signal mul_ln115_fu_448_p0 : STD_LOGIC_VECTOR (8 downto 0);
     signal mul_ln115_fu_448_p1 : STD_LOGIC_VECTOR (10 downto 0);
     signal mul_ln115_fu_448_p2 : STD_LOGIC_VECTOR (18 downto 0);
-    signal tmp_36_fu_454_p4 : STD_LOGIC_VECTOR (7 downto 0);
+    signal tmp_125_fu_454_p4 : STD_LOGIC_VECTOR (7 downto 0);
     signal zext_ln115_1_fu_464_p1 : STD_LOGIC_VECTOR (9 downto 0);
     signal add_ln115_1_fu_468_p2 : STD_LOGIC_VECTOR (9 downto 0);
     signal ap_done_reg : STD_LOGIC := '0';
@@ -840,13 +840,13 @@ begin
     select_ln112_fu_430_p3 <= 
         empty_fu_340_p1 when (icmp_ln112_1_fu_418_p2(0) = '1') else 
         add_ln112_2_fu_424_p2;
-    tmp_35_fu_387_p4 <= mul_ln114_1(9 downto 1);
-    tmp_36_fu_454_p4 <= mul_ln115_fu_448_p2(18 downto 11);
+    tmp_124_fu_387_p4 <= mul_ln114_1(9 downto 1);
+    tmp_125_fu_454_p4 <= mul_ln115_fu_448_p2(18 downto 11);
     tmp_fu_369_p3 <= ap_sig_allocacmp_phi_mul2523_load(5 downto 5);
-    tmp_s_fu_397_p3 <= (tmp_35_fu_387_p4 & or_ln114_fu_381_p2);
+    tmp_s_fu_397_p3 <= (tmp_124_fu_387_p4 & or_ln114_fu_381_p2);
     trunc_ln102_1_read_read_fu_96_p2 <= trunc_ln102_1;
     trunc_ln114_fu_377_p1 <= mul_ln114_1(1 - 1 downto 0);
     zext_ln114_fu_405_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_s_fu_397_p3),64));
-    zext_ln115_1_fu_464_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_36_fu_454_p4),10));
+    zext_ln115_1_fu_464_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_125_fu_454_p4),10));
     zext_ln115_2_fu_474_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(add_ln115_1_fu_468_p2),64));
 end behav;

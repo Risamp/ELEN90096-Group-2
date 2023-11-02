@@ -16,14 +16,14 @@ set C_modelName {conv1_Pipeline_BW9}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ sub_ln90_2 int 14 regular  }
-	{ trunc_ln24 int 1 regular  }
+	{ trunc_ln22 int 1 regular  }
 	{ conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1 float 32 regular {array 15300 { 0 3 } 0 1 } {global 1}  }
 	{ conv1_float_255_255_float_1_9_9_float_float_255_255_ou float 32 regular {array 15300 { 0 3 } 0 1 } {global 1}  }
 }
 set hasAXIMCache 0
 set C_modelArgMapList {[ 
 	{ "Name" : "sub_ln90_2", "interface" : "wire", "bitwidth" : 14, "direction" : "READONLY"} , 
- 	{ "Name" : "trunc_ln24", "interface" : "wire", "bitwidth" : 1, "direction" : "READONLY"} , 
+ 	{ "Name" : "trunc_ln22", "interface" : "wire", "bitwidth" : 1, "direction" : "READONLY"} , 
  	{ "Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} , 
  	{ "Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} ]}
 # RTL Port declarations: 
@@ -36,7 +36,7 @@ set portList {
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
 	{ sub_ln90_2 sc_in sc_lv 14 signal 0 } 
-	{ trunc_ln24 sc_in sc_lv 1 signal 1 } 
+	{ trunc_ln22 sc_in sc_lv 1 signal 1 } 
 	{ conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0 sc_out sc_lv 14 signal 2 } 
 	{ conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0 sc_out sc_logic 1 signal 2 } 
 	{ conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0 sc_out sc_logic 1 signal 2 } 
@@ -54,7 +54,7 @@ set NewPortList {[
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
  	{ "name": "sub_ln90_2", "direction": "in", "datatype": "sc_lv", "bitwidth":14, "type": "signal", "bundle":{"name": "sub_ln90_2", "role": "default" }} , 
- 	{ "name": "trunc_ln24", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "trunc_ln24", "role": "default" }} , 
+ 	{ "name": "trunc_ln22", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "trunc_ln22", "role": "default" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":14, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1", "role": "address0" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1", "role": "ce0" }} , 
  	{ "name": "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1", "role": "we0" }} , 
@@ -81,7 +81,7 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "sub_ln90_2", "Type" : "None", "Direction" : "I"},
-			{"Name" : "trunc_ln24", "Type" : "None", "Direction" : "I"},
+			{"Name" : "trunc_ln22", "Type" : "None", "Direction" : "I"},
 			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
@@ -93,7 +93,7 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	conv1_Pipeline_BW9 {
 		sub_ln90_2 {Type I LastRead 0 FirstWrite -1}
-		trunc_ln24 {Type I LastRead 0 FirstWrite -1}
+		trunc_ln22 {Type I LastRead 0 FirstWrite -1}
 		conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1 {Type O LastRead -1 FirstWrite 0}
 		conv1_float_255_255_float_1_9_9_float_float_255_255_ou {Type O LastRead -1 FirstWrite 0}}}
 
@@ -109,7 +109,7 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	sub_ln90_2 { ap_none {  { sub_ln90_2 in_data 0 14 } } }
-	trunc_ln24 { ap_none {  { trunc_ln24 in_data 0 1 } } }
+	trunc_ln22 { ap_none {  { trunc_ln22 in_data 0 1 } } }
 	conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1 { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0 mem_address 1 14 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0 mem_we 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_d0 mem_din 1 32 } } }
 	conv1_float_255_255_float_1_9_9_float_float_255_255_ou { ap_memory {  { conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address0 mem_address 1 14 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_ou_ce0 mem_ce 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_ou_we0 mem_we 1 1 }  { conv1_float_255_255_float_1_9_9_float_float_255_255_ou_d0 mem_din 1 32 } } }
 }

@@ -16,7 +16,7 @@ port (
     ap_done : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    add_ln63_3 : IN STD_LOGIC_VECTOR (11 downto 0);
+    add_ln63_1 : IN STD_LOGIC_VECTOR (11 downto 0);
     output_fm_buffer_address0 : OUT STD_LOGIC_VECTOR (11 downto 0);
     output_fm_buffer_ce0 : OUT STD_LOGIC;
     output_fm_buffer_we0 : OUT STD_LOGIC;
@@ -151,7 +151,7 @@ begin
         end case;
     end process;
     add_ln61_fu_72_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_w_3) + unsigned(ap_const_lv8_1));
-    add_ln63_fu_82_p2 <= std_logic_vector(unsigned(add_ln63_3) + unsigned(zext_ln63_fu_78_p1));
+    add_ln63_fu_82_p2 <= std_logic_vector(unsigned(add_ln63_1) + unsigned(zext_ln63_fu_78_p1));
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
 
     ap_ST_fsm_state1_blk_assign_proc : process(ap_start_int)

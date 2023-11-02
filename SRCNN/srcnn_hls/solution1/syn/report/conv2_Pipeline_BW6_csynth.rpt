@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_BW6'
 ================================================================
-* Date:           Thu Nov  2 20:34:19 2023
+* Date:           Thu Nov  2 21:48:51 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -129,7 +129,7 @@
 |ap_done                    |  out|    1|  ap_ctrl_hs|  conv2_Pipeline_BW6|  return value|
 |ap_idle                    |  out|    1|  ap_ctrl_hs|  conv2_Pipeline_BW6|  return value|
 |ap_ready                   |  out|    1|  ap_ctrl_hs|  conv2_Pipeline_BW6|  return value|
-|add_ln63_3                 |   in|   12|     ap_none|          add_ln63_3|        scalar|
+|add_ln63_1                 |   in|   12|     ap_none|          add_ln63_1|        scalar|
 |output_fm_buffer_address0  |  out|   12|   ap_memory|    output_fm_buffer|         array|
 |output_fm_buffer_ce0       |  out|    1|   ap_memory|    output_fm_buffer|         array|
 |output_fm_buffer_we0       |  out|    1|   ap_memory|    output_fm_buffer|         array|

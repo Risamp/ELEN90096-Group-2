@@ -64,7 +64,7 @@ port (
     m_axi_i2_BUSER : IN STD_LOGIC_VECTOR (0 downto 0);
     sext_ln162 : IN STD_LOGIC_VECTOR (61 downto 0);
     sub_ln155_3 : IN STD_LOGIC_VECTOR (13 downto 0);
-    trunc_ln22 : IN STD_LOGIC_VECTOR (0 downto 0);
+    trunc_ln20 : IN STD_LOGIC_VECTOR (0 downto 0);
     conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0 : OUT STD_LOGIC_VECTOR (13 downto 0);
     conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0 : OUT STD_LOGIC;
     conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
@@ -124,7 +124,7 @@ attribute shreg_extract : string;
     signal ap_loop_init : STD_LOGIC;
     signal ap_sig_allocacmp_loop_index_0_i75_load : STD_LOGIC_VECTOR (7 downto 0);
     signal loop_index_0_i75_cast1_fu_142_p1 : STD_LOGIC_VECTOR (13 downto 0);
-    signal empty_112_fu_146_p2 : STD_LOGIC_VECTOR (13 downto 0);
+    signal empty_235_fu_146_p2 : STD_LOGIC_VECTOR (13 downto 0);
     signal ap_done_reg : STD_LOGIC := '0';
     signal ap_continue_int : STD_LOGIC;
     signal ap_done_int : STD_LOGIC;
@@ -180,7 +180,7 @@ begin
     port map (
         din0 => conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_q0,
         din1 => conv1_float_255_255_float_1_9_9_float_float_255_255_ou_q0,
-        din2 => trunc_ln22,
+        din2 => trunc_ln20,
         dout => tmp_s_fu_168_p4);
 
     flow_control_loop_pipe_sequential_init_U : component srcnn_flow_control_loop_pipe_sequential_init
@@ -412,7 +412,7 @@ begin
         end if; 
     end process;
 
-    empty_112_fu_146_p2 <= std_logic_vector(unsigned(sub_ln155_3) + unsigned(loop_index_0_i75_cast1_fu_142_p1));
+    empty_235_fu_146_p2 <= std_logic_vector(unsigned(sub_ln155_3) + unsigned(loop_index_0_i75_cast1_fu_142_p1));
     empty_fu_136_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_loop_index_0_i75_load) + unsigned(ap_const_lv8_1));
     exitcond12823_fu_130_p2 <= "1" when (ap_sig_allocacmp_loop_index_0_i75_load = ap_const_lv8_FF) else "0";
 
@@ -467,5 +467,5 @@ begin
         end if; 
     end process;
 
-    p_cast_fu_152_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(empty_112_fu_146_p2),64));
+    p_cast_fu_152_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(empty_235_fu_146_p2),64));
 end behav;

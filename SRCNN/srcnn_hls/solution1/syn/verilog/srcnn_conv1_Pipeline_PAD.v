@@ -162,7 +162,7 @@ wire   [1:0] trunc_ln_read_read_fu_96_p2;
 wire   [1:0] select_ln112_fu_430_p3;
 wire   [0:0] trunc_ln114_fu_377_p1;
 wire   [0:0] tmp_fu_369_p3;
-wire   [8:0] tmp_37_fu_387_p4;
+wire   [8:0] tmp_126_fu_387_p4;
 wire   [0:0] or_ln114_fu_381_p2;
 wire   [9:0] tmp_s_fu_397_p3;
 wire   [1:0] empty_fu_340_p1;
@@ -173,7 +173,7 @@ wire   [8:0] add_ln115_fu_438_p2;
 wire   [8:0] mul_ln115_fu_448_p0;
 wire   [10:0] mul_ln115_fu_448_p1;
 wire   [18:0] mul_ln115_fu_448_p2;
-wire   [7:0] tmp_38_fu_454_p4;
+wire   [7:0] tmp_127_fu_454_p4;
 wire   [9:0] zext_ln115_3_fu_464_p1;
 wire   [9:0] add_ln115_2_fu_468_p2;
 reg    ap_done_reg;
@@ -772,13 +772,13 @@ assign p_cast_fu_359_p1 = ap_sig_allocacmp_p_2;
 
 assign select_ln112_fu_430_p3 = ((icmp_ln112_2_fu_418_p2[0:0] == 1'b1) ? empty_fu_340_p1 : add_ln112_2_fu_424_p2);
 
-assign tmp_37_fu_387_p4 = {{mul_ln114[9:1]}};
+assign tmp_126_fu_387_p4 = {{mul_ln114[9:1]}};
 
-assign tmp_38_fu_454_p4 = {{mul_ln115_fu_448_p2[18:11]}};
+assign tmp_127_fu_454_p4 = {{mul_ln115_fu_448_p2[18:11]}};
 
 assign tmp_fu_369_p3 = ap_sig_allocacmp_phi_mul_load[32'd5];
 
-assign tmp_s_fu_397_p3 = {{tmp_37_fu_387_p4}, {or_ln114_fu_381_p2}};
+assign tmp_s_fu_397_p3 = {{tmp_126_fu_387_p4}, {or_ln114_fu_381_p2}};
 
 assign trunc_ln114_fu_377_p1 = mul_ln114[0:0];
 
@@ -786,7 +786,7 @@ assign trunc_ln_read_read_fu_96_p2 = trunc_ln;
 
 assign zext_ln114_fu_405_p1 = tmp_s_fu_397_p3;
 
-assign zext_ln115_3_fu_464_p1 = tmp_38_fu_454_p4;
+assign zext_ln115_3_fu_464_p1 = tmp_127_fu_454_p4;
 
 assign zext_ln115_4_fu_474_p1 = add_ln115_2_fu_468_p2;
 

@@ -14,7 +14,7 @@ module srcnn_conv1_Pipeline_RELU8 (
         ap_idle,
         ap_ready,
         sub_ln155_4,
-        trunc_ln22,
+        trunc_ln20,
         empty,
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0,
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0,
@@ -35,11 +35,11 @@ module srcnn_conv1_Pipeline_RELU8 (
         grp_fu_3951_p_opcode,
         grp_fu_3951_p_dout0,
         grp_fu_3951_p_ce,
-        grp_fu_3967_p_din0,
-        grp_fu_3967_p_din1,
-        grp_fu_3967_p_opcode,
-        grp_fu_3967_p_dout0,
-        grp_fu_3967_p_ce
+        grp_fu_3987_p_din0,
+        grp_fu_3987_p_din1,
+        grp_fu_3987_p_opcode,
+        grp_fu_3987_p_dout0,
+        grp_fu_3987_p_ce
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 2'd1;
@@ -52,7 +52,7 @@ output   ap_done;
 output   ap_idle;
 output   ap_ready;
 input  [13:0] sub_ln155_4;
-input  [0:0] trunc_ln22;
+input  [0:0] trunc_ln20;
 input  [31:0] empty;
 output  [13:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0;
 output   conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0;
@@ -73,11 +73,11 @@ output  [31:0] grp_fu_3951_p_din1;
 output  [1:0] grp_fu_3951_p_opcode;
 input  [31:0] grp_fu_3951_p_dout0;
 output   grp_fu_3951_p_ce;
-output  [31:0] grp_fu_3967_p_din0;
-output  [31:0] grp_fu_3967_p_din1;
-output  [4:0] grp_fu_3967_p_opcode;
-input  [0:0] grp_fu_3967_p_dout0;
-output   grp_fu_3967_p_ce;
+output  [31:0] grp_fu_3987_p_din0;
+output  [31:0] grp_fu_3987_p_din1;
+output  [4:0] grp_fu_3987_p_opcode;
+input  [0:0] grp_fu_3987_p_dout0;
+output   grp_fu_3987_p_ce;
 
 reg ap_idle;
 reg[13:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0;
@@ -113,7 +113,7 @@ wire    ap_block_state3_pp0_stage0_iter1;
 wire    ap_block_state5_pp0_stage0_iter2;
 wire    ap_block_state7_pp0_stage0_iter3;
 wire    ap_block_pp0_stage0_11001;
-wire   [0:0] trunc_ln22_read_reg_222;
+wire   [0:0] trunc_ln20_read_reg_222;
 wire   [0:0] icmp_ln152_fu_129_p2;
 reg   [13:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_2_reg_231;
 reg   [13:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_2_reg_231_pp0_iter1_reg;
@@ -143,7 +143,7 @@ wire    ap_block_pp0_stage1;
 wire   [13:0] zext_ln155_fu_141_p1;
 wire   [13:0] add_ln155_fu_145_p2;
 wire   [31:0] bitcast_ln157_fu_171_p1;
-wire   [7:0] tmp_33_fu_174_p4;
+wire   [7:0] tmp_121_fu_174_p4;
 wire   [22:0] trunc_ln157_fu_184_p1;
 wire   [0:0] or_ln157_fu_200_p2;
 wire    ap_block_pp0_stage0_00001;
@@ -179,7 +179,7 @@ srcnn_mux_2_1_32_1_1 #(
 mux_2_1_32_1_1_U242(
     .din0(conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_q1),
     .din1(conv1_float_255_255_float_1_9_9_float_float_255_255_ou_q1),
-    .din2(trunc_ln22),
+    .din2(trunc_ln20),
     .dout(tmp_s_fu_162_p4)
 );
 
@@ -414,7 +414,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((trunc_ln22_read_reg_222 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter3 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)) | ((trunc_ln22_read_reg_222 == 1'd0) & (1'd1 == and_ln157_fu_204_p2) & (1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter3 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)))) begin
+    if ((((trunc_ln20_read_reg_222 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter3 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)) | ((trunc_ln20_read_reg_222 == 1'd0) & (1'd1 == and_ln157_fu_204_p2) & (1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter3 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)))) begin
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0 = 1'b1;
     end else begin
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0 = 1'b0;
@@ -466,7 +466,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((trunc_ln22_read_reg_222 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter3 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)) | ((trunc_ln22_read_reg_222 == 1'd1) & (1'd1 == and_ln157_fu_204_p2) & (1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter3 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)))) begin
+    if ((((trunc_ln20_read_reg_222 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter3 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)) | ((trunc_ln20_read_reg_222 == 1'd1) & (1'd1 == and_ln157_fu_204_p2) & (1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter3 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)))) begin
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_we0 = 1'b1;
     end else begin
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_we0 = 1'b0;
@@ -499,7 +499,7 @@ assign add_ln152_fu_135_p2 = (ap_sig_allocacmp_bw + 8'd1);
 
 assign add_ln155_fu_145_p2 = (sub_ln155_4 + zext_ln155_fu_141_p1);
 
-assign and_ln157_fu_204_p2 = (or_ln157_fu_200_p2 & grp_fu_3967_p_dout0);
+assign and_ln157_fu_204_p2 = (or_ln157_fu_200_p2 & grp_fu_3987_p_dout0);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -553,27 +553,27 @@ assign grp_fu_3951_p_din1 = empty;
 
 assign grp_fu_3951_p_opcode = 2'd0;
 
-assign grp_fu_3967_p_ce = 1'b1;
+assign grp_fu_3987_p_ce = 1'b1;
 
-assign grp_fu_3967_p_din0 = add15_1_i_reg_248;
+assign grp_fu_3987_p_din0 = add15_1_i_reg_248;
 
-assign grp_fu_3967_p_din1 = 32'd0;
+assign grp_fu_3987_p_din1 = 32'd0;
 
-assign grp_fu_3967_p_opcode = 5'd4;
+assign grp_fu_3987_p_opcode = 5'd4;
 
 assign icmp_ln152_fu_129_p2 = ((ap_sig_allocacmp_bw == 8'd255) ? 1'b1 : 1'b0);
 
 assign icmp_ln157_1_fu_194_p2 = ((trunc_ln157_fu_184_p1 == 23'd0) ? 1'b1 : 1'b0);
 
-assign icmp_ln157_fu_188_p2 = ((tmp_33_fu_174_p4 != 8'd255) ? 1'b1 : 1'b0);
+assign icmp_ln157_fu_188_p2 = ((tmp_121_fu_174_p4 != 8'd255) ? 1'b1 : 1'b0);
 
 assign or_ln157_fu_200_p2 = (icmp_ln157_reg_256 | icmp_ln157_1_reg_261);
 
-assign tmp_33_fu_174_p4 = {{bitcast_ln157_fu_171_p1[30:23]}};
+assign tmp_121_fu_174_p4 = {{bitcast_ln157_fu_171_p1[30:23]}};
 
 assign trunc_ln157_fu_184_p1 = bitcast_ln157_fu_171_p1[22:0];
 
-assign trunc_ln22_read_reg_222 = trunc_ln22;
+assign trunc_ln20_read_reg_222 = trunc_ln20;
 
 assign zext_ln155_1_fu_151_p1 = add_ln155_fu_145_p2;
 

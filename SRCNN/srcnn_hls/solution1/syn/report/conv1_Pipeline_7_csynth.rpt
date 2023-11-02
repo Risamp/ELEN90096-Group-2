@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv1_Pipeline_7'
 ================================================================
-* Date:           Thu Nov  2 20:34:09 2023
+* Date:           Thu Nov  2 21:48:40 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -91,7 +91,7 @@
     +---------------------------+----------+----+---+----+------------+------------+
     |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------+----------+----+---+----+------------+------------+
-    |empty_112_fu_146_p2        |         +|   0|  0|  21|          14|          14|
+    |empty_235_fu_146_p2        |         +|   0|  0|  21|          14|          14|
     |empty_fu_136_p2            |         +|   0|  0|  15|           8|           1|
     |ap_block_pp0_stage0_11001  |       and|   0|  0|   2|           1|           1|
     |exitcond12823_fu_130_p2    |      icmp|   0|  0|  15|           8|           2|
@@ -192,7 +192,7 @@
 |m_axi_i2_BUSER                                                     |   in|    1|       m_axi|                                                        i2|       pointer|
 |sext_ln162                                                         |   in|   62|     ap_none|                                                sext_ln162|        scalar|
 |sub_ln155_3                                                        |   in|   14|     ap_none|                                               sub_ln155_3|        scalar|
-|trunc_ln22                                                         |   in|    1|     ap_none|                                                trunc_ln22|        scalar|
+|trunc_ln20                                                         |   in|    1|     ap_none|                                                trunc_ln20|        scalar|
 |conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0  |  out|   14|   ap_memory|  conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1|         array|
 |conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0       |  out|    1|   ap_memory|  conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1|         array|
 |conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_q0        |   in|   32|   ap_memory|  conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1|         array|

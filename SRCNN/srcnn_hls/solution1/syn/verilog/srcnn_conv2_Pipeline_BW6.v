@@ -13,7 +13,7 @@ module srcnn_conv2_Pipeline_BW6 (
         ap_done,
         ap_idle,
         ap_ready,
-        add_ln63_3,
+        add_ln63_1,
         output_fm_buffer_address0,
         output_fm_buffer_ce0,
         output_fm_buffer_we0,
@@ -28,7 +28,7 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-input  [11:0] add_ln63_3;
+input  [11:0] add_ln63_1;
 output  [11:0] output_fm_buffer_address0;
 output   output_fm_buffer_ce0;
 output   output_fm_buffer_we0;
@@ -188,7 +188,7 @@ end
 
 assign add_ln61_fu_72_p2 = (ap_sig_allocacmp_w_3 + 8'd1);
 
-assign add_ln63_fu_82_p2 = (add_ln63_3 + zext_ln63_fu_78_p1);
+assign add_ln63_fu_82_p2 = (add_ln63_1 + zext_ln63_fu_78_p1);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 

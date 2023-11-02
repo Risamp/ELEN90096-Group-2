@@ -658,8 +658,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>trunc_ln22</name>
-<Object>trunc_ln22</Object>
+<name>trunc_ln20</name>
+<Object>trunc_ln20</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

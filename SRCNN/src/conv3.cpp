@@ -19,12 +19,13 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 
 	static ftmap_t output_fm_buffer[C3_OD][C3_TH][W] = {0};
 	#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=2
+	//#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=2
 
 	static ftmap_t input_fm_buffer[C3_ID][C3_TH + (2 * P3)][W + (2 * P3)];
 	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=block factor=2
 
 	static param_t weight_buffer[C3_OD][C3_ID][F3][F3];
-	#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=3 type=complete
+	//#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=3 type=complete
 	//#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=4 type=complete
 
 
@@ -39,18 +40,27 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 			IN: for (int i = 0; i < C3_ID; i++) {
 
 				ROW: for (int r = 0; r < C3_TH; r++) {
-				COL: for (int c = 0; c < W; c++) {
-					#pragma HLS PIPELINE II=14
 
-					KR: for (int kr = 0; kr < F3; kr++) { // kernel row
-					KC: for (int kc = 0; kc < F3; kc++) { // kernel column
+					COL1: for (int c = 0; c < W; c++) {
+						#pragma HLS UNROLL factor=3
+						#pragma HLS PIPELINE II=19
+						KR1: for (int kr = 0; kr < F3; kr++) {
 
-						int rtarget = r + kr;
-						int ctarget = c + kc;
+							int row = r + kr;
+							ftmap_t tmp = 0;
 
-						output_fm_buffer[o][r][c] += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][rtarget][ctarget];
-					}}
-				}}
+							#pragma HLS UNROLL factor=5
+							KC1: for (int kc = 0; kc < F3; kc++) {
+
+								int col = c + kc;
+
+								tmp += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][row][col];
+							}
+
+							output_fm_buffer[o][r][c] += tmp;
+						}
+					}
+				}
 			}}
 
 			export_output_buffer_c3(output_fm_buffer, output_ftmap, conv3_biases, out, h);
@@ -77,7 +87,7 @@ void load_input_buffer_c3(
 ) {
 	LOADI: for (int bin = 0; bin < C3_ID; bin++) {
 	LOADH: for (int bh = 0; bh < C3_TH + (2 * P3); bh++) {
-		#pragma HLS PIPELINE OFF
+		#pragma HLS PIPELINE II=256
 
 		int hclamp = clamp(h + bh - P3, 0, H - 1);
 
@@ -90,6 +100,10 @@ void load_input_buffer_c3(
 			input_fm_buffer[bin][bh][p] = left;
 			input_fm_buffer[bin][bh][P3 + W + p] = right;
 		}
+
+//		MIDDLE: for (int w = 0; w < W; w++) {
+//			input_fm_buffer[bin][bh][w + P3] = input_ftmap[in + bin][hclamp][w];
+//		}
 
 		// burst in main image area
 		memcpy(&input_fm_buffer[bin][bh][P3], &input_ftmap[in + bin][hclamp], W * sizeof(ftmap_t));

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv1_Pipeline_PAD7'
 ================================================================
-* Date:           Thu Nov  2 20:34:03 2023
+* Date:           Thu Nov  2 21:48:35 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -265,13 +265,13 @@ ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln112 = br i1 %icmp_ln112, void
 ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%phi_mul2523_load = load i6 %phi_mul2523" [src/conv1.cpp:112->src/conv1.cpp:34]   --->   Operation 19 'load' 'phi_mul2523_load' <Predicate = (!icmp_ln112)> <Delay = 0.00>
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%p_1_cast = zext i3 %p_1"   --->   Operation 20 'zext' 'p_1_cast' <Predicate = (!icmp_ln112)> <Delay = 0.00>
 ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%speclooptripcount_ln112 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4" [src/conv1.cpp:112->src/conv1.cpp:34]   --->   Operation 21 'speclooptripcount' 'speclooptripcount_ln112' <Predicate = (!icmp_ln112)> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specloopname_ln112 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14" [src/conv1.cpp:112->src/conv1.cpp:34]   --->   Operation 22 'specloopname' 'specloopname_ln112' <Predicate = (!icmp_ln112)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specloopname_ln112 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18" [src/conv1.cpp:112->src/conv1.cpp:34]   --->   Operation 22 'specloopname' 'specloopname_ln112' <Predicate = (!icmp_ln112)> <Delay = 0.00>
 ST_1 : Operation 23 [1/1] (0.78ns)   --->   "%add_ln112_1 = add i6 %phi_mul2523_load, i6 11" [src/conv1.cpp:112->src/conv1.cpp:34]   --->   Operation 23 'add' 'add_ln112_1' <Predicate = (!icmp_ln112)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i6.i32, i6 %phi_mul2523_load, i32 5" [src/conv1.cpp:112->src/conv1.cpp:34]   --->   Operation 24 'bitselect' 'tmp' <Predicate = (!icmp_ln112)> <Delay = 0.00>
 ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%trunc_ln114 = trunc i10 %mul_ln114_1_read" [src/conv1.cpp:114->src/conv1.cpp:34]   --->   Operation 25 'trunc' 'trunc_ln114' <Predicate = (!icmp_ln112)> <Delay = 0.00>
 ST_1 : Operation 26 [1/1] (0.28ns)   --->   "%or_ln114 = or i1 %trunc_ln114, i1 %tmp" [src/conv1.cpp:114->src/conv1.cpp:34]   --->   Operation 26 'or' 'or_ln114' <Predicate = (!icmp_ln112)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_35 = partselect i9 @_ssdm_op_PartSelect.i9.i10.i32.i32, i10 %mul_ln114_1_read, i32 1, i32 9" [src/conv1.cpp:114->src/conv1.cpp:34]   --->   Operation 27 'partselect' 'tmp_35' <Predicate = (!icmp_ln112)> <Delay = 0.00>
-ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i9.i1, i9 %tmp_35, i1 %or_ln114" [src/conv1.cpp:114->src/conv1.cpp:34]   --->   Operation 28 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln112)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_124 = partselect i9 @_ssdm_op_PartSelect.i9.i10.i32.i32, i10 %mul_ln114_1_read, i32 1, i32 9" [src/conv1.cpp:114->src/conv1.cpp:34]   --->   Operation 27 'partselect' 'tmp_124' <Predicate = (!icmp_ln112)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i9.i1, i9 %tmp_124, i1 %or_ln114" [src/conv1.cpp:114->src/conv1.cpp:34]   --->   Operation 28 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln112)> <Delay = 0.00>
 ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%zext_ln114 = zext i10 %tmp_s" [src/conv1.cpp:114->src/conv1.cpp:34]   --->   Operation 29 'zext' 'zext_ln114' <Predicate = (!icmp_ln112)> <Delay = 0.00>
 ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_0_addr = getelementptr i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_0, i64 0, i64 %zext_ln114" [src/conv1.cpp:114->src/conv1.cpp:34]   --->   Operation 30 'getelementptr' 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_0_addr' <Predicate = (!icmp_ln112)> <Delay = 0.00>
 ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_1_addr = getelementptr i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_1, i64 0, i64 %zext_ln114" [src/conv1.cpp:114->src/conv1.cpp:34]   --->   Operation 31 'getelementptr' 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_1_addr' <Predicate = (!icmp_ln112)> <Delay = 0.00>
@@ -288,8 +288,8 @@ ST_1 : Operation 41 [1/1] (0.17ns)   --->   "%select_ln112 = select i1 %icmp_ln1
 ST_1 : Operation 42 [1/1] (0.77ns)   --->   "%add_ln115 = add i9 %p_1_cast, i9 259" [src/conv1.cpp:115->src/conv1.cpp:34]   --->   Operation 42 'add' 'add_ln115' <Predicate = (!icmp_ln112)> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%zext_ln115 = zext i9 %add_ln115" [src/conv1.cpp:115->src/conv1.cpp:34]   --->   Operation 43 'zext' 'zext_ln115' <Predicate = (!icmp_ln112)> <Delay = 0.00>
 ST_1 : Operation 44 [1/1] (2.14ns)   --->   "%mul_ln115 = mul i19 %zext_ln115, i19 683" [src/conv1.cpp:115->src/conv1.cpp:34]   --->   Operation 44 'mul' 'mul_ln115' <Predicate = (!icmp_ln112)> <Delay = 2.14> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%tmp_36 = partselect i8 @_ssdm_op_PartSelect.i8.i19.i32.i32, i19 %mul_ln115, i32 11, i32 18" [src/conv1.cpp:115->src/conv1.cpp:34]   --->   Operation 45 'partselect' 'tmp_36' <Predicate = (!icmp_ln112)> <Delay = 0.00>
-ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%zext_ln115_1 = zext i8 %tmp_36" [src/conv1.cpp:115->src/conv1.cpp:34]   --->   Operation 46 'zext' 'zext_ln115_1' <Predicate = (!icmp_ln112)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%tmp_125 = partselect i8 @_ssdm_op_PartSelect.i8.i19.i32.i32, i19 %mul_ln115, i32 11, i32 18" [src/conv1.cpp:115->src/conv1.cpp:34]   --->   Operation 45 'partselect' 'tmp_125' <Predicate = (!icmp_ln112)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%zext_ln115_1 = zext i8 %tmp_125" [src/conv1.cpp:115->src/conv1.cpp:34]   --->   Operation 46 'zext' 'zext_ln115_1' <Predicate = (!icmp_ln112)> <Delay = 0.00>
 ST_1 : Operation 47 [1/1] (0.78ns)   --->   "%add_ln115_1 = add i10 %mul_ln114_1_read, i10 %zext_ln115_1" [src/conv1.cpp:115->src/conv1.cpp:34]   --->   Operation 47 'add' 'add_ln115_1' <Predicate = (!icmp_ln112)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%zext_ln115_2 = zext i10 %add_ln115_1" [src/conv1.cpp:115->src/conv1.cpp:34]   --->   Operation 48 'zext' 'zext_ln115_2' <Predicate = (!icmp_ln112)> <Delay = 0.00>
 ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_0_addr_1 = getelementptr i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_0, i64 0, i64 %zext_ln115_2" [src/conv1.cpp:115->src/conv1.cpp:34]   --->   Operation 49 'getelementptr' 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_0_addr_1' <Predicate = (!icmp_ln112)> <Delay = 0.00>
@@ -394,7 +394,7 @@ add_ln112_1                                                           (add      
 tmp                                                                   (bitselect        ) [ 00]
 trunc_ln114                                                           (trunc            ) [ 00]
 or_ln114                                                              (or               ) [ 00]
-tmp_35                                                                (partselect       ) [ 00]
+tmp_124                                                               (partselect       ) [ 00]
 tmp_s                                                                 (bitconcatenate   ) [ 00]
 zext_ln114                                                            (zext             ) [ 00]
 p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_0_addr   (getelementptr    ) [ 00]
@@ -412,7 +412,7 @@ select_ln112                                                          (select   
 add_ln115                                                             (add              ) [ 00]
 zext_ln115                                                            (zext             ) [ 00]
 mul_ln115                                                             (mul              ) [ 00]
-tmp_36                                                                (partselect       ) [ 00]
+tmp_125                                                               (partselect       ) [ 00]
 zext_ln115_1                                                          (zext             ) [ 00]
 add_ln115_1                                                           (add              ) [ 00]
 zext_ln115_2                                                          (zext             ) [ 00]
@@ -734,7 +734,7 @@ ret_ln0                                                               (ret      
 <pin id="57" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_14"/></StgValue>
+<StgValue><ssdm name="empty_18"/></StgValue>
 </bind>
 </comp>
 
@@ -1434,7 +1434,7 @@ ret_ln0                                                               (ret      
 </bind>
 </comp>
 
-<comp id="387" class="1004" name="tmp_35_fu_387">
+<comp id="387" class="1004" name="tmp_124_fu_387">
 <pin_list>
 <pin id="388" dir="0" index="0" bw="9" slack="0"/>
 <pin id="389" dir="0" index="1" bw="10" slack="0"/>
@@ -1444,7 +1444,7 @@ ret_ln0                                                               (ret      
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_35/1 "/>
+<opset="tmp_124/1 "/>
 </bind>
 </comp>
 
@@ -1544,7 +1544,7 @@ ret_ln0                                                               (ret      
 </bind>
 </comp>
 
-<comp id="454" class="1004" name="tmp_36_fu_454">
+<comp id="454" class="1004" name="tmp_125_fu_454">
 <pin_list>
 <pin id="455" dir="0" index="0" bw="8" slack="0"/>
 <pin id="456" dir="0" index="1" bw="19" slack="0"/>
@@ -1554,7 +1554,7 @@ ret_ln0                                                               (ret      
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_36/1 "/>
+<opset="tmp_125/1 "/>
 </bind>
 </comp>
 
@@ -2008,7 +2008,7 @@ ret_ln0                                                               (ret      
 		add_ln115 : 3
 		zext_ln115 : 4
 		mul_ln115 : 5
-		tmp_36 : 6
+		tmp_125 : 6
 		zext_ln115_1 : 7
 		add_ln115_1 : 8
 		zext_ln115_2 : 9
@@ -2085,8 +2085,8 @@ ret_ln0                                                               (ret      
 |----------|-------------------------------|---------|---------|---------|
 | bitselect|           tmp_fu_369          |    0    |    0    |    0    |
 |----------|-------------------------------|---------|---------|---------|
-|partselect|         tmp_35_fu_387         |    0    |    0    |    0    |
-|          |         tmp_36_fu_454         |    0    |    0    |    0    |
+|partselect|         tmp_124_fu_387        |    0    |    0    |    0    |
+|          |         tmp_125_fu_454        |    0    |    0    |    0    |
 |----------|-------------------------------|---------|---------|---------|
 |bitconcatenate|          tmp_s_fu_397         |    0    |    0    |    0    |
 |----------|-------------------------------|---------|---------|---------|

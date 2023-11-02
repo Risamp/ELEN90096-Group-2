@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1_Pipeline_4'" level="0">
-<item name = "Date">Thu Nov  2 20:34:04 2023
+<item name = "Date">Thu Nov  2 21:48:35 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -79,12 +79,12 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="empty_116_fu_337_p2">+, 0, 0, 17, 10, 10</column>
+<column name="empty_239_fu_337_p2">+, 0, 0, 17, 10, 10</column>
 <column name="empty_fu_262_p2">+, 0, 0, 15, 8, 1</column>
 <column name="next_urem2526_fu_276_p2">+, 0, 0, 15, 8, 1</column>
 <column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state3_pp0_stage0_iter2">and, 0, 0, 2, 1, 1</column>
-<column name="empty_114_fu_282_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="empty_237_fu_282_p2">icmp, 0, 0, 15, 8, 2</column>
 <column name="exitcond87_113_fu_256_p2">icmp, 0, 0, 15, 8, 2</column>
 <column name="idx_urem2527_fu_288_p3">select, 0, 0, 8, 1, 8</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
@@ -110,13 +110,13 @@
 <column name="ap_enable_reg_pp0_iter3">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter2_reg">1, 0, 1, 0</column>
-<column name="empty_117_reg_396">2, 0, 2, 0</column>
+<column name="empty_240_reg_396">2, 0, 2, 0</column>
 <column name="exitcond87_113_reg_392">1, 0, 1, 0</column>
 <column name="exitcond87_113_reg_392_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="i1_addr_read_reg_400">32, 0, 32, 0</column>
 <column name="loop_index_i_1_fu_92">8, 0, 8, 0</column>
 <column name="phi_urem2525_fu_88">8, 0, 8, 0</column>
-<column name="empty_117_reg_396">64, 32, 2, 0</column>
+<column name="empty_240_reg_396">64, 32, 2, 0</column>
 </table>
 </item>
 </section>

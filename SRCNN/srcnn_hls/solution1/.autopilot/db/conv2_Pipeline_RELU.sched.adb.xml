@@ -402,10 +402,10 @@ for.end.0.i.exitStub:0 %ret_ln0 = ret
 
 <Node id="30" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body8.0.i.split:15 %tmp_31 = fcmp_olt  i32 %add15_0_i, i32 0
+for.body8.0.i.split:15 %tmp_119 = fcmp_olt  i32 %add15_0_i, i32 0
 
 ]]></Node>
-<StgValue><ssdm name="tmp_31"/></StgValue>
+<StgValue><ssdm name="tmp_119"/></StgValue>
 </operation>
 </state>
 
@@ -420,7 +420,7 @@ for.body8.0.i.split:15 %tmp_31 = fcmp_olt  i32 %add15_0_i, i32 0
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.body8.0.i.split:4 %specpipeline_ln109 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_25
+for.body8.0.i.split:4 %specpipeline_ln109 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_37
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln109"/></StgValue>
@@ -450,7 +450,7 @@ for.body8.0.i.split:5 %speclooptripcount_ln108 = speclooptripcount void @_ssdm_o
 
 <Node id="21" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body8.0.i.split:6 %specloopname_ln108 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9
+for.body8.0.i.split:6 %specloopname_ln108 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln108"/></StgValue>
@@ -555,10 +555,10 @@ for.body8.0.i.split:14 %or_ln113 = or i1 %icmp_ln113_1, i1 %icmp_ln113
 
 <Node id="30" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body8.0.i.split:15 %tmp_31 = fcmp_olt  i32 %add15_0_i, i32 0
+for.body8.0.i.split:15 %tmp_119 = fcmp_olt  i32 %add15_0_i, i32 0
 
 ]]></Node>
-<StgValue><ssdm name="tmp_31"/></StgValue>
+<StgValue><ssdm name="tmp_119"/></StgValue>
 </operation>
 
 <operation id="42" st_id="8" stage="1" lat="1">
@@ -570,7 +570,7 @@ for.body8.0.i.split:15 %tmp_31 = fcmp_olt  i32 %add15_0_i, i32 0
 
 <Node id="31" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-for.body8.0.i.split:16 %and_ln113 = and i1 %or_ln113, i1 %tmp_31
+for.body8.0.i.split:16 %and_ln113 = and i1 %or_ln113, i1 %tmp_119
 
 ]]></Node>
 <StgValue><ssdm name="and_ln113"/></StgValue>

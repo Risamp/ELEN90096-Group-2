@@ -51,7 +51,7 @@ wire   [7:0] add_ln61_fu_72_p2;
 wire    ap_loop_init;
 reg   [7:0] ap_sig_allocacmp_w;
 wire   [11:0] zext_ln63_fu_78_p1;
-wire   [11:0] add_ln63_3_fu_82_p2;
+wire   [11:0] add_ln63_1_fu_82_p2;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -188,7 +188,7 @@ end
 
 assign add_ln61_fu_72_p2 = (ap_sig_allocacmp_w + 8'd1);
 
-assign add_ln63_3_fu_82_p2 = (add_ln63 + zext_ln63_fu_78_p1);
+assign add_ln63_1_fu_82_p2 = (add_ln63 + zext_ln63_fu_78_p1);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -204,7 +204,7 @@ assign output_fm_buffer_address0 = zext_ln63_2_fu_88_p1;
 
 assign output_fm_buffer_d0 = 32'd0;
 
-assign zext_ln63_2_fu_88_p1 = add_ln63_3_fu_82_p2;
+assign zext_ln63_2_fu_88_p1 = add_ln63_1_fu_82_p2;
 
 assign zext_ln63_fu_78_p1 = ap_sig_allocacmp_w;
 

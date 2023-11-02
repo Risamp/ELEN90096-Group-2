@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3_Pipeline_6'" level="0">
-<item name = "Date">Thu Nov  2 20:34:26 2023
+<item name = "Date">Thu Nov  2 21:49:06 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -62,7 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mux_2_1_32_1_1_U420">mux_2_1_32_1_1, 0, 0, 0, 9, 0</column>
+<column name="mux_2_1_32_1_1_U439">mux_2_1_32_1_1, 0, 0, 0, 9, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -81,7 +81,7 @@
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="empty_fu_132_p2">+, 0, 0, 15, 8, 1</column>
 <column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
-<column name="exitcond8519_fu_126_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="exitcond17313_fu_126_p2">icmp, 0, 0, 15, 8, 2</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -101,9 +101,9 @@
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
-<column name="exitcond8519_reg_199">1, 0, 1, 0</column>
+<column name="exitcond17313_reg_199">1, 0, 1, 0</column>
 <column name="loop_index_1_i_fu_64">8, 0, 8, 0</column>
-<column name="tmp_28_reg_223">32, 0, 32, 0</column>
+<column name="tmp_115_reg_223">32, 0, 32, 0</column>
 <column name="tmp_reg_213">1, 0, 1, 0</column>
 </table>
 </item>
@@ -166,8 +166,8 @@
 <column name="m_axi_o_BRESP">in, 2, m_axi, o, pointer</column>
 <column name="m_axi_o_BID">in, 1, m_axi, o, pointer</column>
 <column name="m_axi_o_BUSER">in, 1, m_axi, o, pointer</column>
-<column name="sext_ln136_1">in, 62, ap_none, sext_ln136_1, scalar</column>
-<column name="or_ln126">in, 3, ap_none, or_ln126, scalar</column>
+<column name="sext_ln150_1">in, 62, ap_none, sext_ln150_1, scalar</column>
+<column name="or_ln140">in, 3, ap_none, or_ln140, scalar</column>
 <column name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_address0">out, 10, ap_memory, conv3_float_255_255_float_32_5_5_float_float_255_255_o_1, array</column>
 <column name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_ce0">out, 1, ap_memory, conv3_float_255_255_float_32_5_5_float_float_255_255_o_1, array</column>
 <column name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_q0">in, 32, ap_memory, conv3_float_255_255_float_32_5_5_float_float_255_255_o_1, array</column>

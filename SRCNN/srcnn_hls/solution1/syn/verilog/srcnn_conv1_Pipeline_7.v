@@ -61,7 +61,7 @@ module srcnn_conv1_Pipeline_7 (
         m_axi_i2_BUSER,
         sext_ln162,
         sub_ln155_3,
-        trunc_ln22,
+        trunc_ln20,
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0,
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0,
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_q0,
@@ -126,7 +126,7 @@ input  [0:0] m_axi_i2_BID;
 input  [0:0] m_axi_i2_BUSER;
 input  [61:0] sext_ln162;
 input  [13:0] sub_ln155_3;
-input  [0:0] trunc_ln22;
+input  [0:0] trunc_ln20;
 output  [13:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0;
 output   conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0;
 input  [31:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_q0;
@@ -167,7 +167,7 @@ wire   [7:0] empty_fu_136_p2;
 wire    ap_loop_init;
 reg   [7:0] ap_sig_allocacmp_loop_index_0_i75_load;
 wire   [13:0] loop_index_0_i75_cast1_fu_142_p1;
-wire   [13:0] empty_112_fu_146_p2;
+wire   [13:0] empty_235_fu_146_p2;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -195,7 +195,7 @@ srcnn_mux_2_1_32_1_1 #(
 mux_2_1_32_1_1_U233(
     .din0(conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_q0),
     .din1(conv1_float_255_255_float_1_9_9_float_float_255_255_ou_q0),
-    .din2(trunc_ln22),
+    .din2(trunc_ln20),
     .dout(tmp_s_fu_168_p4)
 );
 
@@ -408,7 +408,7 @@ assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0 = p_cas
 
 assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address0 = p_cast_fu_152_p1;
 
-assign empty_112_fu_146_p2 = (sub_ln155_3 + loop_index_0_i75_cast1_fu_142_p1);
+assign empty_235_fu_146_p2 = (sub_ln155_3 + loop_index_0_i75_cast1_fu_142_p1);
 
 assign empty_fu_136_p2 = (ap_sig_allocacmp_loop_index_0_i75_load + 8'd1);
 
@@ -478,6 +478,6 @@ assign m_axi_i2_WSTRB = 4'd15;
 
 assign m_axi_i2_WUSER = 1'd0;
 
-assign p_cast_fu_152_p1 = empty_112_fu_146_p2;
+assign p_cast_fu_152_p1 = empty_235_fu_146_p2;
 
 endmodule //srcnn_conv1_Pipeline_7

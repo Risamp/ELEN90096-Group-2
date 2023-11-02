@@ -11,7 +11,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 418 \
+    id 437 \
     name conv3_float_255_255_float_32_5_5_float_float_255_255_o_1 \
     reset_level 1 \
     sync_rst true \
@@ -30,7 +30,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 419 \
+    id 438 \
     name conv3_float_255_255_float_32_5_5_float_float_255_255_o \
     reset_level 1 \
     sync_rst true \
@@ -48,22 +48,22 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 416 \
-    name or_ln126 \
+    id 435 \
+    name or_ln140 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_or_ln126 \
+    corename dc_or_ln140 \
     op interface \
-    ports { or_ln126 { I 3 vector } } \
+    ports { or_ln140 { I 3 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 417 \
+    id 436 \
     name conv3_biases_0_0_val \
     type other \
     dir I \

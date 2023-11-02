@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_5'
 ================================================================
-* Date:           Thu Nov  2 20:34:17 2023
+* Date:           Thu Nov  2 21:48:49 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -85,7 +85,7 @@
     +---------------------------+----------+----+---+----+------------+------------+
     |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------+----------+----+---+----+------------+------------+
-    |empty_101_fu_119_p2        |         +|   0|  0|  19|          12|          12|
+    |empty_224_fu_119_p2        |         +|   0|  0|  19|          12|          12|
     |empty_fu_109_p2            |         +|   0|  0|  15|           8|           1|
     |ap_block_pp0_stage0_11001  |       and|   0|  0|   2|           1|           1|
     |exitcond5016_fu_103_p2     |      icmp|   0|  0|  15|           8|           2|
@@ -237,7 +237,7 @@ ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%loop_index_0_i = alloca i32 1"   --
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%sub_ln111_1_read = read i12 @_ssdm_op_Read.ap_auto.i12, i12 %sub_ln111_1"   --->   Operation 7 'read' 'sub_ln111_1_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%sext_ln118_read = read i62 @_ssdm_op_Read.ap_auto.i62, i62 %sext_ln118"   --->   Operation 8 'read' 'sext_ln118_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%sext_ln118_cast = sext i62 %sext_ln118_read"   --->   Operation 9 'sext' 'sext_ln118_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i3, void @empty_26, i32 0, i32 0, void @empty_25, i32 0, i32 512, void @empty_29, void @empty_34, void @empty_25, i32 16, i32 16, i32 256, i32 256, void @empty_25, void @empty_25, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i3, void @empty, i32 0, i32 0, void @empty_37, i32 0, i32 512, void @empty_5, void @empty_36, void @empty_37, i32 16, i32 16, i32 256, i32 256, void @empty_37, void @empty_37, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 11 [1/1] (0.42ns)   --->   "%store_ln0 = store i8 0, i8 %loop_index_0_i"   --->   Operation 11 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln0 = br void %load-store-loop.0.i"   --->   Operation 12 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%loop_index_0_i_load = load i8 %loop_index_0_i"   --->   Operation 13 'load' 'loop_index_0_i_load' <Predicate = true> <Delay = 0.00>
@@ -245,8 +245,8 @@ ST_1 : Operation 14 [1/1] (0.76ns)   --->   "%exitcond5016 = icmp_eq  i8 %loop_i
 ST_1 : Operation 15 [1/1] (0.76ns)   --->   "%empty = add i8 %loop_index_0_i_load, i8 1"   --->   Operation 15 'add' 'empty' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln0 = br i1 %exitcond5016, void %load-store-loop.0.i.split, void %for.inc45.0.i.exitStub"   --->   Operation 16 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%loop_index_0_i_cast1 = zext i8 %loop_index_0_i_load"   --->   Operation 17 'zext' 'loop_index_0_i_cast1' <Predicate = (!exitcond5016)> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (0.80ns)   --->   "%empty_101 = add i12 %sub_ln111_1_read, i12 %loop_index_0_i_cast1"   --->   Operation 18 'add' 'empty_101' <Predicate = (!exitcond5016)> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%p_cast = zext i12 %empty_101"   --->   Operation 19 'zext' 'p_cast' <Predicate = (!exitcond5016)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.80ns)   --->   "%empty_224 = add i12 %sub_ln111_1_read, i12 %loop_index_0_i_cast1"   --->   Operation 18 'add' 'empty_224' <Predicate = (!exitcond5016)> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%p_cast = zext i12 %empty_224"   --->   Operation 19 'zext' 'p_cast' <Predicate = (!exitcond5016)> <Delay = 0.00>
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%output_fm_buffer_addr = getelementptr i32 %output_fm_buffer, i64 0, i64 %p_cast"   --->   Operation 20 'getelementptr' 'output_fm_buffer_addr' <Predicate = (!exitcond5016)> <Delay = 0.00>
 ST_1 : Operation 21 [2/2] (1.23ns)   --->   "%output_fm_buffer_load = load i12 %output_fm_buffer_addr"   --->   Operation 21 'load' 'output_fm_buffer_load' <Predicate = (!exitcond5016)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 3060> <RAM>
 ST_1 : Operation 22 [1/1] (0.42ns)   --->   "%store_ln0 = store i8 %empty, i8 %loop_index_0_i"   --->   Operation 22 'store' 'store_ln0' <Predicate = (!exitcond5016)> <Delay = 0.42>
@@ -259,8 +259,8 @@ ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 
 
 State 3 <SV = 2> <Delay = 7.30>
 ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255"   --->   Operation 26 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%empty_102 = bitcast i32 %output_fm_buffer_load"   --->   Operation 27 'bitcast' 'empty_102' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 28 [1/1] (7.30ns)   --->   "%write_ln118 = write void @_ssdm_op_Write.m_axi.p1i32, i64 %i3_addr, i32 %empty_102, i4 15" [src/conv2.cpp:118->src/conv2.cpp:51]   --->   Operation 28 'write' 'write_ln118' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%empty_225 = bitcast i32 %output_fm_buffer_load"   --->   Operation 27 'bitcast' 'empty_225' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (7.30ns)   --->   "%write_ln118 = write void @_ssdm_op_Write.m_axi.p1i32, i64 %i3_addr, i32 %empty_225, i4 15" [src/conv2.cpp:118->src/conv2.cpp:51]   --->   Operation 28 'write' 'write_ln118' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln0 = br void %load-store-loop.0.i"   --->   Operation 29 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 
 
@@ -297,7 +297,7 @@ exitcond5016          (icmp             ) [ 0110]
 empty                 (add              ) [ 0000]
 br_ln0                (br               ) [ 0000]
 loop_index_0_i_cast1  (zext             ) [ 0000]
-empty_101             (add              ) [ 0000]
+empty_224             (add              ) [ 0000]
 p_cast                (zext             ) [ 0000]
 output_fm_buffer_addr (getelementptr    ) [ 0110]
 store_ln0             (store            ) [ 0000]
@@ -305,7 +305,7 @@ i3_addr               (getelementptr    ) [ 0101]
 specpipeline_ln0      (specpipeline     ) [ 0000]
 output_fm_buffer_load (load             ) [ 0101]
 speclooptripcount_ln0 (speclooptripcount) [ 0000]
-empty_102             (bitcast          ) [ 0000]
+empty_225             (bitcast          ) [ 0000]
 write_ln118           (write            ) [ 0000]
 br_ln0                (br               ) [ 0000]
 ret_ln0               (ret              ) [ 0000]
@@ -392,7 +392,7 @@ ret_ln0               (ret              ) [ 0000]
 <pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_26"/></StgValue>
+<StgValue><ssdm name="empty"/></StgValue>
 </bind>
 </comp>
 
@@ -410,7 +410,7 @@ ret_ln0               (ret              ) [ 0000]
 <pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_25"/></StgValue>
+<StgValue><ssdm name="empty_37"/></StgValue>
 </bind>
 </comp>
 
@@ -428,7 +428,7 @@ ret_ln0               (ret              ) [ 0000]
 <pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_29"/></StgValue>
+<StgValue><ssdm name="empty_5"/></StgValue>
 </bind>
 </comp>
 
@@ -437,7 +437,7 @@ ret_ln0               (ret              ) [ 0000]
 <pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_34"/></StgValue>
+<StgValue><ssdm name="empty_36"/></StgValue>
 </bind>
 </comp>
 
@@ -702,7 +702,7 @@ ret_ln0               (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="119" class="1004" name="empty_101_fu_119">
+<comp id="119" class="1004" name="empty_224_fu_119">
 <pin_list>
 <pin id="120" dir="0" index="0" bw="12" slack="0"/>
 <pin id="121" dir="0" index="1" bw="8" slack="0"/>
@@ -710,7 +710,7 @@ ret_ln0               (ret              ) [ 0000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="empty_101/1 "/>
+<opset="empty_224/1 "/>
 </bind>
 </comp>
 
@@ -749,14 +749,14 @@ ret_ln0               (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="140" class="1004" name="empty_102_fu_140">
+<comp id="140" class="1004" name="empty_225_fu_140">
 <pin_list>
 <pin id="141" dir="0" index="0" bw="32" slack="1"/>
 <pin id="142" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="bitcast(44) " fcode="bitcast"/>
-<opset="empty_102/3 "/>
+<opset="empty_225/3 "/>
 </bind>
 </comp>
 
@@ -919,7 +919,7 @@ ret_ln0               (ret              ) [ 0000]
 		empty : 2
 		br_ln0 : 3
 		loop_index_0_i_cast1 : 2
-		empty_101 : 3
+		empty_224 : 3
 		p_cast : 4
 		output_fm_buffer_addr : 5
 		output_fm_buffer_load : 6
@@ -938,7 +938,7 @@ ret_ln0               (ret              ) [ 0000]
 | Operation|       Functional Unit       |    FF   |   LUT   |
 |----------|-----------------------------|---------|---------|
 |    add   |         empty_fu_109        |    0    |    15   |
-|          |       empty_101_fu_119      |    0    |    19   |
+|          |       empty_224_fu_119      |    0    |    19   |
 |----------|-----------------------------|---------|---------|
 |   icmp   |     exitcond5016_fu_103     |    0    |    15   |
 |----------|-----------------------------|---------|---------|

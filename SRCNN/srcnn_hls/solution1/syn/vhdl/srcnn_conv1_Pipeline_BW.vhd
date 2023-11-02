@@ -17,7 +17,7 @@ port (
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
     sub_ln90_1 : IN STD_LOGIC_VECTOR (13 downto 0);
-    trunc_ln24 : IN STD_LOGIC_VECTOR (0 downto 0);
+    trunc_ln22 : IN STD_LOGIC_VECTOR (0 downto 0);
     conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0 : OUT STD_LOGIC_VECTOR (13 downto 0);
     conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0 : OUT STD_LOGIC;
     conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0 : OUT STD_LOGIC;
@@ -52,12 +52,12 @@ attribute shreg_extract : string;
     signal ap_condition_exit_pp0_iter0_stage0 : STD_LOGIC;
     signal ap_loop_exit_ready : STD_LOGIC;
     signal ap_ready_int : STD_LOGIC;
-    signal zext_ln90_7_fu_114_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal zext_ln90_2_fu_114_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal w_fu_40 : STD_LOGIC_VECTOR (7 downto 0);
     signal add_ln88_fu_98_p2 : STD_LOGIC_VECTOR (7 downto 0);
     signal ap_loop_init : STD_LOGIC;
     signal ap_sig_allocacmp_w_6 : STD_LOGIC_VECTOR (7 downto 0);
-    signal trunc_ln24_read_read_fu_44_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal trunc_ln22_read_read_fu_44_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal zext_ln90_fu_104_p1 : STD_LOGIC_VECTOR (13 downto 0);
     signal add_ln90_fu_108_p2 : STD_LOGIC_VECTOR (13 downto 0);
     signal ap_done_reg : STD_LOGIC := '0';
@@ -226,7 +226,7 @@ begin
         end if; 
     end process;
 
-    conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0 <= zext_ln90_7_fu_114_p1(14 - 1 downto 0);
+    conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0 <= zext_ln90_2_fu_114_p1(14 - 1 downto 0);
 
     conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0_assign_proc : process(ap_CS_fsm_state1, ap_start_int)
     begin
@@ -239,16 +239,16 @@ begin
 
     conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_d0 <= ap_const_lv32_0;
 
-    conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0_assign_proc : process(ap_CS_fsm_state1, icmp_ln88_fu_92_p2, trunc_ln24_read_read_fu_44_p2, ap_start_int)
+    conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0_assign_proc : process(ap_CS_fsm_state1, icmp_ln88_fu_92_p2, trunc_ln22_read_read_fu_44_p2, ap_start_int)
     begin
-        if (((trunc_ln24_read_read_fu_44_p2 = ap_const_lv1_0) and (icmp_ln88_fu_92_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state1) and (ap_start_int = ap_const_logic_1))) then 
+        if (((trunc_ln22_read_read_fu_44_p2 = ap_const_lv1_0) and (icmp_ln88_fu_92_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state1) and (ap_start_int = ap_const_logic_1))) then 
             conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0 <= ap_const_logic_1;
         else 
             conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0 <= ap_const_logic_0;
         end if; 
     end process;
 
-    conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address0 <= zext_ln90_7_fu_114_p1(14 - 1 downto 0);
+    conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address0 <= zext_ln90_2_fu_114_p1(14 - 1 downto 0);
 
     conv1_float_255_255_float_1_9_9_float_float_255_255_ou_ce0_assign_proc : process(ap_CS_fsm_state1, ap_start_int)
     begin
@@ -261,9 +261,9 @@ begin
 
     conv1_float_255_255_float_1_9_9_float_float_255_255_ou_d0 <= ap_const_lv32_0;
 
-    conv1_float_255_255_float_1_9_9_float_float_255_255_ou_we0_assign_proc : process(ap_CS_fsm_state1, icmp_ln88_fu_92_p2, trunc_ln24_read_read_fu_44_p2, ap_start_int)
+    conv1_float_255_255_float_1_9_9_float_float_255_255_ou_we0_assign_proc : process(ap_CS_fsm_state1, icmp_ln88_fu_92_p2, trunc_ln22_read_read_fu_44_p2, ap_start_int)
     begin
-        if (((trunc_ln24_read_read_fu_44_p2 = ap_const_lv1_1) and (icmp_ln88_fu_92_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state1) and (ap_start_int = ap_const_logic_1))) then 
+        if (((trunc_ln22_read_read_fu_44_p2 = ap_const_lv1_1) and (icmp_ln88_fu_92_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state1) and (ap_start_int = ap_const_logic_1))) then 
             conv1_float_255_255_float_1_9_9_float_float_255_255_ou_we0 <= ap_const_logic_1;
         else 
             conv1_float_255_255_float_1_9_9_float_float_255_255_ou_we0 <= ap_const_logic_0;
@@ -271,7 +271,7 @@ begin
     end process;
 
     icmp_ln88_fu_92_p2 <= "1" when (ap_sig_allocacmp_w_6 = ap_const_lv8_FF) else "0";
-    trunc_ln24_read_read_fu_44_p2 <= trunc_ln24;
-    zext_ln90_7_fu_114_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(add_ln90_fu_108_p2),64));
+    trunc_ln22_read_read_fu_44_p2 <= trunc_ln22;
+    zext_ln90_2_fu_114_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(add_ln90_fu_108_p2),64));
     zext_ln90_fu_104_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_sig_allocacmp_w_6),14));
 end behav;

@@ -34,10 +34,10 @@ newFuncRoot:0 %w = alloca i32 1
 
 <Node id="4" bw="12" op_0_bw="12" op_1_bw="12">
 <![CDATA[
-newFuncRoot:1 %add_ln63_3_read = read i12 @_ssdm_op_Read.ap_auto.i12, i12 %add_ln63_3
+newFuncRoot:1 %add_ln63_1_read = read i12 @_ssdm_op_Read.ap_auto.i12, i12 %add_ln63_1
 
 ]]></Node>
-<StgValue><ssdm name="add_ln63_3_read"/></StgValue>
+<StgValue><ssdm name="add_ln63_1_read"/></StgValue>
 </operation>
 
 <operation id="6" st_id="1" stage="1" lat="1">
@@ -171,7 +171,7 @@ for.inc.2.i.i.split:0 %zext_ln63 = zext i8 %w_3
 
 <Node id="15" bw="12" op_0_bw="12" op_1_bw="12">
 <![CDATA[
-for.inc.2.i.i.split:1 %add_ln63 = add i12 %add_ln63_3_read, i12 %zext_ln63
+for.inc.2.i.i.split:1 %add_ln63 = add i12 %add_ln63_1_read, i12 %zext_ln63
 
 ]]></Node>
 <StgValue><ssdm name="add_ln63"/></StgValue>
@@ -235,7 +235,7 @@ for.inc.2.i.i.split:4 %speclooptripcount_ln61 = speclooptripcount void @_ssdm_op
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.2.i.i.split:5 %specloopname_ln61 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7
+for.inc.2.i.i.split:5 %specloopname_ln61 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln61"/></StgValue>

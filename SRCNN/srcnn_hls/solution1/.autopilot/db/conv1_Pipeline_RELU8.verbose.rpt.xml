@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1_Pipeline_RELU8'" level="0">
-<item name = "Date">Thu Nov  2 20:34:09 2023
+<item name = "Date">Thu Nov  2 21:48:41 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -143,13 +143,13 @@
 <column name="grp_fu_3951_p_opcode">out, 2, ap_ctrl_hs, conv1_Pipeline_RELU8, return value</column>
 <column name="grp_fu_3951_p_dout0">in, 32, ap_ctrl_hs, conv1_Pipeline_RELU8, return value</column>
 <column name="grp_fu_3951_p_ce">out, 1, ap_ctrl_hs, conv1_Pipeline_RELU8, return value</column>
-<column name="grp_fu_3967_p_din0">out, 32, ap_ctrl_hs, conv1_Pipeline_RELU8, return value</column>
-<column name="grp_fu_3967_p_din1">out, 32, ap_ctrl_hs, conv1_Pipeline_RELU8, return value</column>
-<column name="grp_fu_3967_p_opcode">out, 5, ap_ctrl_hs, conv1_Pipeline_RELU8, return value</column>
-<column name="grp_fu_3967_p_dout0">in, 1, ap_ctrl_hs, conv1_Pipeline_RELU8, return value</column>
-<column name="grp_fu_3967_p_ce">out, 1, ap_ctrl_hs, conv1_Pipeline_RELU8, return value</column>
+<column name="grp_fu_3987_p_din0">out, 32, ap_ctrl_hs, conv1_Pipeline_RELU8, return value</column>
+<column name="grp_fu_3987_p_din1">out, 32, ap_ctrl_hs, conv1_Pipeline_RELU8, return value</column>
+<column name="grp_fu_3987_p_opcode">out, 5, ap_ctrl_hs, conv1_Pipeline_RELU8, return value</column>
+<column name="grp_fu_3987_p_dout0">in, 1, ap_ctrl_hs, conv1_Pipeline_RELU8, return value</column>
+<column name="grp_fu_3987_p_ce">out, 1, ap_ctrl_hs, conv1_Pipeline_RELU8, return value</column>
 <column name="sub_ln155_4">in, 14, ap_none, sub_ln155_4, scalar</column>
-<column name="trunc_ln22">in, 1, ap_none, trunc_ln22, scalar</column>
+<column name="trunc_ln20">in, 1, ap_none, trunc_ln20, scalar</column>
 <column name="empty">in, 32, ap_none, empty, scalar</column>
 <column name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0">out, 14, ap_memory, conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, array</column>
 <column name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0">out, 1, ap_memory, conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, array</column>
