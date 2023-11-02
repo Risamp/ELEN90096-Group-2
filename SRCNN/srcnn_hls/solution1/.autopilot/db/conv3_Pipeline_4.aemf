@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698859946221">
-  <ports id="1" name="o" type="PortType" coreId="1162363731" bitwidth="32" direction="DirOut" iftype="IfTypeFifo">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698908066778">
+  <ports id="1" name="o" type="PortType" coreId="1931485194" bitwidth="32" direction="DirOut" iftype="IfTypeFifo">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
-  <ports id="2" name="sext_ln138" type="PortType" coreId="34" bitwidth="62">
+  <ports id="2" name="sext_ln148" type="PortType" coreId="1852142702" bitwidth="62">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="sub_ln131" type="PortType" coreId="1852142702" bitwidth="11">
+  <ports id="3" name="sub_ln141" type="PortType" coreId="540876915" bitwidth="11">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="output_fm_buffer_0" type="PortType" coreName="RAM" coreId="3889822605" bitwidth="32" iftype="IfTypeRegister" arraysize="1275">
+  <ports id="4" name="output_fm_buffer_0" type="PortType" coreName="RAM" coreId="1852142702" bitwidth="32" iftype="IfTypeRegister" arraysize="1275">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
   <edges id="37" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -53,15 +53,15 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="sub_ln131_read" coreId="0" bitwidth="11" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
-      <dataInputObjs>sub_ln131</dataInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="sub_ln141_read" coreId="0" bitwidth="11" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>sub_ln141</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="sext_ln138_read" coreId="1162363731" bitwidth="62" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
-      <dataInputObjs>sext_ln138</dataInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="sext_ln148_read" coreId="0" bitwidth="62" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>sext_ln148</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="sext_ln138_cast" coreId="778530409" bitwidth="64" opcode="sext" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="sext_ln148_cast" coreId="0" bitwidth="64" opcode="sext" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
@@ -92,14 +92,14 @@
         <dataOutputObjs>add</dataOutputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="o_addr" lineNumber="138" fileName="src/conv3.cpp" fileDirectory="../." coreId="1819310149" contextFuncName="export_output_buffer_c3" bitwidth="32" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="src/conv3.cpp" linenumber="58" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
-        <inlineStackInfo fileName="src/conv3.cpp" linenumber="138" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="o_addr" lineNumber="148" fileName="src/conv3.cpp" fileDirectory="../." coreId="0" contextFuncName="export_output_buffer_c3" bitwidth="32" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/conv3.cpp" linenumber="68" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
+        <inlineStackInfo fileName="src/conv3.cpp" linenumber="148" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
         <dataInputObjs>sext</dataInputObjs>
         <dataOutputObjs>o</dataOutputObjs>
         <dataOutputObjs>write</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="exitcond6119" rtlName="exitcond6119_fu_103_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.76" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="exitcond5919" rtlName="exitcond5919_fu_103_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.76" m_topoIndex="8" m_clusterGroupNumber="-1">
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
@@ -109,14 +109,14 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln0" coreId="1598966055" opcode="br" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln0" coreId="0" opcode="br" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>load-store-loop.0.i.split</controlInputObjs>
         <controlInputObjs>for.inc45.0.i.exitStub</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="src/conv3.cpp">
-        <validLinenumbers>138</validLinenumbers>
-        <validLinenumbers>58</validLinenumbers>
+        <validLinenumbers>148</validLinenumbers>
+        <validLinenumbers>68</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="30" name="load-store-loop.0.i.split" type="BlockType">
@@ -127,12 +127,12 @@
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="empty_57" rtlName="empty_57_fu_119_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="11" opcode="add" m_display="0" m_delay="0.79" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="empty_77" rtlName="empty_77_fu_119_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="11" opcode="add" m_display="0" m_delay="0.79" m_topoIndex="12" m_clusterGroupNumber="-1">
         <dataInputObjs>read</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="p_cast" rtlName="p_cast_fu_125_p1" coreId="1279611431" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="p_cast" rtlName="p_cast_fu_125_p1" coreId="0" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
@@ -146,13 +146,13 @@
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>bitcast</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="empty_58" rtlName="m_axi_o_WDATA" coreId="0" bitwidth="32" opcode="bitcast" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="empty_78" rtlName="m_axi_o_WDATA" coreId="0" bitwidth="32" opcode="bitcast" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>write</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="o_addr_write_ln138" lineNumber="138" fileName="src/conv3.cpp" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="export_output_buffer_c3" opcode="write" nodeLabel="2.0" m_display="0" m_delay="7.3" m_topoIndex="20" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="src/conv3.cpp" linenumber="58" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
-        <inlineStackInfo fileName="src/conv3.cpp" linenumber="138" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="o_addr_write_ln148" lineNumber="148" fileName="src/conv3.cpp" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="export_output_buffer_c3" opcode="write" nodeLabel="2.0" m_display="0" m_delay="7.3" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/conv3.cpp" linenumber="68" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv3"/>
+        <inlineStackInfo fileName="src/conv3.cpp" linenumber="148" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c3"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataInputObjs>bitcast</dataInputObjs>
         <constName>empty</constName>
@@ -165,8 +165,8 @@
         <controlInputObjs>load-store-loop.0.i</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="src/conv3.cpp">
-        <validLinenumbers>138</validLinenumbers>
-        <validLinenumbers>58</validLinenumbers>
+        <validLinenumbers>148</validLinenumbers>
+        <validLinenumbers>68</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
   </regions>
@@ -176,11 +176,11 @@
   <regnodes realName="loop_index_0_i_reg_144">
     <nodeIds>5</nodeIds>
   </regnodes>
-  <regnodes realName="sext_ln138_cast_reg_151">
-    <nodeIds>8</nodeIds>
-  </regnodes>
-  <regnodes realName="exitcond6119_reg_156">
+  <regnodes realName="exitcond5919_reg_156">
     <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln148_cast_reg_151">
+    <nodeIds>8</nodeIds>
   </regnodes>
   <regnodes realName="o_addr_reg_165">
     <nodeIds>14</nodeIds>
@@ -200,27 +200,30 @@
   <expressionNodes realName="o_addr_fu_135">
     <nodeIds>14</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="empty_57_fu_119">
-    <nodeIds>21</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="empty_58_fu_140">
+  <expressionNodes realName="empty_78_fu_140">
     <nodeIds>26</nodeIds>
   </expressionNodes>
   <expressionNodes realName="output_fm_buffer_0_addr_gep_fu_78">
     <nodeIds>23</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="exitcond6119_fu_103">
+  <expressionNodes realName="exitcond5919_fu_103">
     <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln148_cast_fu_91">
+    <nodeIds>8</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_77_fu_119">
+    <nodeIds>21</nodeIds>
   </expressionNodes>
   <expressionNodes realName="loop_index_0_i_cast1_fu_115">
     <nodeIds>20</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="sext_ln138_cast_fu_91">
-    <nodeIds>8</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="empty_fu_109">
     <nodeIds>17</nodeIds>
   </expressionNodes>
+  <ioNodes realName="sext_ln148_read_read_fu_64">
+    <nodeIds>7</nodeIds>
+  </ioNodes>
   <ioNodes realName="store_ln0_store_fu_95">
     <nodeIds>10</nodeIds>
   </ioNodes>
@@ -230,13 +233,10 @@
   <ioNodes realName="store_ln0_store_fu_130">
     <nodeIds>28</nodeIds>
   </ioNodes>
-  <ioNodes realName="write_ln138_write_fu_70">
+  <ioNodes realName="write_ln148_write_fu_70">
     <nodeIds>27</nodeIds>
   </ioNodes>
-  <ioNodes realName="sext_ln138_read_read_fu_64">
-    <nodeIds>7</nodeIds>
-  </ioNodes>
-  <ioNodes realName="sub_ln131_read_read_fu_58">
+  <ioNodes realName="sub_ln141_read_read_fu_58">
     <nodeIds>6</nodeIds>
   </ioNodes>
   <memoryPorts dataString="output_fm_buffer_0">
@@ -252,12 +252,12 @@
       <nodeIds>25</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="sext_ln138">
+  <ioPorts name="sext_ln148">
     <contents name="read">
       <nodeIds>7</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="sub_ln131">
+  <ioPorts name="sub_ln141">
     <contents name="read">
       <nodeIds>6</nodeIds>
     </contents>

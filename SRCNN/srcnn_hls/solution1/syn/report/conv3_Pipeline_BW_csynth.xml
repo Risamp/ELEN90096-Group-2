@@ -130,8 +130,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sub_ln69</name>
-<Object>sub_ln69</Object>
+<name>sub_ln79</name>
+<Object>sub_ln79</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

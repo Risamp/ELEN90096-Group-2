@@ -6,6 +6,8 @@
 
 using namespace std;
 
+const unsigned int UNROLL3 = 2;
+
 // implements conv2 layer of SRCNN
 void conv3(ftmap_t input_ftmap[N2][H][W],
            param_t conv3_weights[N3][N2][F3][F3],
@@ -22,6 +24,8 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 	//#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=cyclic factor=4 dim=2
 
 	static param_t weight_buffer[C3_OD][C3_ID][F3][F3];
+	#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=3 dim=3
+	#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=3 dim=4
 	//#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=3
 	//#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=4
 
@@ -42,15 +46,21 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 				ROW: for (int r = 0; r < C3_TH; r++) {
 				COL: for (int c = 0; c < W; c++) {
 
-					KR: for (int kr = 0; kr < F3; kr++) { // kernel row
-					KC: for (int kc = 0; kc < F3; kc++) { // kernel column
-						//#pragma HLS UNROLL factor=2
+					KR: for (int kr = 0; kr < F3; kr++) {
+					KC: for (int kc0 = 0; kc0 < F3 / UNROLL3; kc0++) {
 						#pragma HLS PIPELINE II=3
 
-						int rtarget = r + kr;
-						int ctarget = c + kc;
+						ftmap_t tmp = 0;
 
-						output_fm_buffer[o][r][c] += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][rtarget][ctarget];
+						for (int kc = 0; kc < UNROLL3; kc++) {
+
+							int rtarget = r + kr;
+							int ctarget = c + kc;
+
+							tmp += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][rtarget][ctarget];
+						}
+
+						output_fm_buffer[o][r][c] += tmp;
 					}}
 				}}
 			}}

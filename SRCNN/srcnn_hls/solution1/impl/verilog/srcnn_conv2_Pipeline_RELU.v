@@ -105,7 +105,7 @@ wire    ap_block_pp0_stage1;
 wire   [11:0] zext_ln111_fu_104_p1;
 wire   [11:0] add_ln111_fu_108_p2;
 wire   [31:0] bitcast_ln113_fu_124_p1;
-wire   [7:0] tmp_1_fu_127_p4;
+wire   [7:0] tmp_4_fu_127_p4;
 wire   [22:0] trunc_ln113_fu_137_p1;
 wire   [0:0] icmp_ln113_1_fu_147_p2;
 wire   [0:0] icmp_ln113_fu_141_p2;
@@ -428,13 +428,13 @@ assign icmp_ln108_fu_92_p2 = ((ap_sig_allocacmp_bw_4 == 8'd255) ? 1'b1 : 1'b0);
 
 assign icmp_ln113_1_fu_147_p2 = ((trunc_ln113_fu_137_p1 == 23'd0) ? 1'b1 : 1'b0);
 
-assign icmp_ln113_fu_141_p2 = ((tmp_1_fu_127_p4 != 8'd255) ? 1'b1 : 1'b0);
+assign icmp_ln113_fu_141_p2 = ((tmp_4_fu_127_p4 != 8'd255) ? 1'b1 : 1'b0);
 
 assign or_ln113_fu_153_p2 = (icmp_ln113_fu_141_p2 | icmp_ln113_1_fu_147_p2);
 
 assign output_fm_buffer_d0 = ((and_ln113_fu_159_p2[0:0] == 1'b1) ? 32'd0 : add15_0_i_reg_199);
 
-assign tmp_1_fu_127_p4 = {{bitcast_ln113_fu_124_p1[30:23]}};
+assign tmp_4_fu_127_p4 = {{bitcast_ln113_fu_124_p1[30:23]}};
 
 assign trunc_ln113_fu_137_p1 = bitcast_ln113_fu_124_p1[22:0];
 

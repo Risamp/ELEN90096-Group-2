@@ -59,21 +59,9 @@ module srcnn_export_output_buffer_c1_Pipeline_4 (
         m_axi_i2_BRESP,
         m_axi_i2_BID,
         m_axi_i2_BUSER,
-        sext_ln141_1,
-        sub_ln134_1,
-        trunc_ln127_1,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_address0,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_ce0,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_q0,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6_address0,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6_ce0,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6_q0,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5_address0,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5_ce0,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5_q0,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_4_address0,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_4_ce0,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_4_q0,
+        sext_ln151_1,
+        sub_ln144_1,
+        trunc_ln137_1,
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_address0,
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_ce0,
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_q0,
@@ -142,40 +130,24 @@ output   m_axi_i2_BREADY;
 input  [1:0] m_axi_i2_BRESP;
 input  [0:0] m_axi_i2_BID;
 input  [0:0] m_axi_i2_BUSER;
-input  [61:0] sext_ln141_1;
-input  [11:0] sub_ln134_1;
-input  [2:0] trunc_ln127_1;
-output  [11:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_address0;
-output   conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_ce0;
-input  [31:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_q0;
-output  [11:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6_address0;
-output   conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6_ce0;
-input  [31:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6_q0;
-output  [11:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5_address0;
-output   conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5_ce0;
-input  [31:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5_q0;
-output  [11:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_4_address0;
-output   conv1_float_255_255_float_1_9_9_float_float_255_255_ou_4_ce0;
-input  [31:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_4_q0;
-output  [11:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_address0;
+input  [61:0] sext_ln151_1;
+input  [12:0] sub_ln144_1;
+input  [1:0] trunc_ln137_1;
+output  [12:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_address0;
 output   conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_ce0;
 input  [31:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_q0;
-output  [11:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_2_address0;
+output  [12:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_2_address0;
 output   conv1_float_255_255_float_1_9_9_float_float_255_255_ou_2_ce0;
 input  [31:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_2_q0;
-output  [11:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0;
+output  [12:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0;
 output   conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0;
 input  [31:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_q0;
-output  [11:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address0;
+output  [12:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address0;
 output   conv1_float_255_255_float_1_9_9_float_float_255_255_ou_ce0;
 input  [31:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_q0;
 
 reg ap_idle;
 reg m_axi_i2_WVALID;
-reg conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_ce0;
-reg conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6_ce0;
-reg conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5_ce0;
-reg conv1_float_255_255_float_1_9_9_float_float_255_255_ou_4_ce0;
 reg conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_ce0;
 reg conv1_float_255_255_float_1_9_9_float_float_255_255_ou_2_ce0;
 reg conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0;
@@ -191,25 +163,25 @@ wire    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state2_pp0_stage0_iter1;
 wire    ap_block_state3_pp0_stage0_iter2;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] exitcond3810_fu_220_p2;
+wire   [0:0] exitcond3810_fu_160_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 reg    i2_blk_n_W;
 wire    ap_block_pp0_stage0;
 reg    ap_block_pp0_stage0_11001;
-reg   [0:0] exitcond3810_reg_306;
-wire   [31:0] tmp_3_fu_264_p10;
-reg   [31:0] tmp_3_reg_355;
+reg   [0:0] exitcond3810_reg_234;
+wire   [31:0] tmp_3_fu_200_p6;
+reg   [31:0] tmp_3_reg_263;
 reg    ap_condition_exit_pp0_iter1_stage0;
-wire   [63:0] p_cast_fu_242_p1;
+wire   [63:0] p_cast_fu_182_p1;
 wire    ap_block_pp0_stage0_01001;
-reg   [7:0] loop_index_1_fu_74;
-wire   [7:0] empty_fu_226_p2;
+reg   [7:0] loop_index_1_fu_66;
+wire   [7:0] empty_fu_166_p2;
 wire    ap_loop_init;
 reg   [7:0] ap_sig_allocacmp_loop_index_1_load;
-wire   [11:0] loop_index_1_cast1_fu_232_p1;
-wire   [11:0] empty_40_fu_236_p2;
+wire   [12:0] loop_index_1_cast1_fu_172_p1;
+wire   [12:0] empty_50_fu_176_p2;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -227,30 +199,22 @@ initial begin
 #0 ap_done_reg = 1'b0;
 end
 
-srcnn_mux_8_3_32_1_1 #(
+srcnn_mux_4_2_32_1_1 #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .din2_WIDTH( 32 ),
     .din3_WIDTH( 32 ),
-    .din4_WIDTH( 32 ),
-    .din5_WIDTH( 32 ),
-    .din6_WIDTH( 32 ),
-    .din7_WIDTH( 32 ),
-    .din8_WIDTH( 3 ),
+    .din4_WIDTH( 2 ),
     .dout_WIDTH( 32 ))
-mux_8_3_32_1_1_U72(
-    .din0(conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_q0),
-    .din1(conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6_q0),
-    .din2(conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5_q0),
-    .din3(conv1_float_255_255_float_1_9_9_float_float_255_255_ou_4_q0),
-    .din4(conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_q0),
-    .din5(conv1_float_255_255_float_1_9_9_float_float_255_255_ou_2_q0),
-    .din6(conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_q0),
-    .din7(conv1_float_255_255_float_1_9_9_float_float_255_255_ou_q0),
-    .din8(trunc_ln127_1),
-    .dout(tmp_3_fu_264_p10)
+mux_4_2_32_1_1_U1762(
+    .din0(conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_q0),
+    .din1(conv1_float_255_255_float_1_9_9_float_float_255_255_ou_2_q0),
+    .din2(conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_q0),
+    .din3(conv1_float_255_255_float_1_9_9_float_float_255_255_ou_q0),
+    .din4(trunc_ln137_1),
+    .dout(tmp_3_fu_200_p6)
 );
 
 srcnn_flow_control_loop_pipe_sequential_init flow_control_loop_pipe_sequential_init_U(
@@ -312,10 +276,10 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if (((exitcond3810_fu_220_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            loop_index_1_fu_74 <= empty_fu_226_p2;
+        if (((exitcond3810_fu_160_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+            loop_index_1_fu_66 <= empty_fu_166_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            loop_index_1_fu_74 <= 8'd0;
+            loop_index_1_fu_66 <= 8'd0;
         end
     end
 end
@@ -323,18 +287,18 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_loop_exit_ready_pp0_iter1_reg <= ap_loop_exit_ready;
-        exitcond3810_reg_306 <= exitcond3810_fu_220_p2;
+        exitcond3810_reg_234 <= exitcond3810_fu_160_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (exitcond3810_reg_306 == 1'd0))) begin
-        tmp_3_reg_355 <= tmp_3_fu_264_p10;
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (exitcond3810_reg_234 == 1'd0))) begin
+        tmp_3_reg_263 <= tmp_3_fu_200_p6;
     end
 end
 
 always @ (*) begin
-    if (((exitcond3810_fu_220_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((exitcond3810_fu_160_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -342,7 +306,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (exitcond3810_reg_306 == 1'd1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (exitcond3810_reg_234 == 1'd1))) begin
         ap_condition_exit_pp0_iter1_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter1_stage0 = 1'b0;
@@ -382,10 +346,10 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0) & (ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
         ap_sig_allocacmp_loop_index_1_load = 8'd0;
     end else begin
-        ap_sig_allocacmp_loop_index_1_load = loop_index_1_fu_74;
+        ap_sig_allocacmp_loop_index_1_load = loop_index_1_fu_66;
     end
 end
 
@@ -410,38 +374,6 @@ always @ (*) begin
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_ce0 = 1'b1;
     end else begin
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_4_ce0 = 1'b1;
-    end else begin
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_4_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5_ce0 = 1'b1;
-    end else begin
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6_ce0 = 1'b1;
-    end else begin
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_ce0 = 1'b1;
-    end else begin
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_ce0 = 1'b0;
     end
 end
 
@@ -506,29 +438,21 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0 = p_cast_fu_242_p1;
+assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0 = p_cast_fu_182_p1;
 
-assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_2_address0 = p_cast_fu_242_p1;
+assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_2_address0 = p_cast_fu_182_p1;
 
-assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_address0 = p_cast_fu_242_p1;
+assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_3_address0 = p_cast_fu_182_p1;
 
-assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_4_address0 = p_cast_fu_242_p1;
+assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address0 = p_cast_fu_182_p1;
 
-assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_5_address0 = p_cast_fu_242_p1;
+assign empty_50_fu_176_p2 = (sub_ln144_1 + loop_index_1_cast1_fu_172_p1);
 
-assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6_address0 = p_cast_fu_242_p1;
+assign empty_fu_166_p2 = (ap_sig_allocacmp_loop_index_1_load + 8'd1);
 
-assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_address0 = p_cast_fu_242_p1;
+assign exitcond3810_fu_160_p2 = ((ap_sig_allocacmp_loop_index_1_load == 8'd255) ? 1'b1 : 1'b0);
 
-assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address0 = p_cast_fu_242_p1;
-
-assign empty_40_fu_236_p2 = (sub_ln134_1 + loop_index_1_cast1_fu_232_p1);
-
-assign empty_fu_226_p2 = (ap_sig_allocacmp_loop_index_1_load + 8'd1);
-
-assign exitcond3810_fu_220_p2 = ((ap_sig_allocacmp_loop_index_1_load == 8'd255) ? 1'b1 : 1'b0);
-
-assign loop_index_1_cast1_fu_232_p1 = ap_sig_allocacmp_loop_index_1_load;
+assign loop_index_1_cast1_fu_172_p1 = ap_sig_allocacmp_loop_index_1_load;
 
 assign m_axi_i2_ARADDR = 64'd0;
 
@@ -582,7 +506,7 @@ assign m_axi_i2_BREADY = 1'b0;
 
 assign m_axi_i2_RREADY = 1'b0;
 
-assign m_axi_i2_WDATA = tmp_3_reg_355;
+assign m_axi_i2_WDATA = tmp_3_reg_263;
 
 assign m_axi_i2_WID = 1'd0;
 
@@ -592,6 +516,6 @@ assign m_axi_i2_WSTRB = 4'd15;
 
 assign m_axi_i2_WUSER = 1'd0;
 
-assign p_cast_fu_242_p1 = empty_40_fu_236_p2;
+assign p_cast_fu_182_p1 = empty_50_fu_176_p2;
 
 endmodule //srcnn_export_output_buffer_c1_Pipeline_4

@@ -33542,6 +33542,7 @@ namespace std
 
 using namespace std;
 
+const unsigned int chunk_size = 3;
 
 void conv1(ftmap_t input_ftmap[1][255][255],
            param_t conv1_weights[64][1][9][9],
@@ -33552,18 +33553,22 @@ void conv1(ftmap_t input_ftmap[1][255][255],
 
 
  static ftmap_t output_fm_buffer[8][15][255] = {0};
-#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=cyclic factor=8
+#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=cyclic factor=4
 
 
  static ftmap_t input_fm_buffer[1][15 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)];
-#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=cyclic factor=8
+#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=1 type=cyclic factor=2
+#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=2 type=complete
+#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=cyclic factor=4
+
 
 
  static param_t weight_buffer[8][1][9][9];
-#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=8
-
-
-
+#pragma HLS BIND_STORAGE variable=weight_buffer type=RAM_2P impl=LUTRAM
+#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=1 type=cyclic factor=2
+#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=2 type=cyclic factor=2
+#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=3 type=complete
+#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=4 type=block factor=3
 
  TILE_IN: for (int in = 0; in < 1; in += 1) {
  TILE_ROW: for (int h = 0; h < 255; h += 15) {
@@ -33576,21 +33581,26 @@ void conv1(ftmap_t input_ftmap[1][255][255],
 
    OUT: for (int o = 0; o < 8; o++) {
    IN: for (int i = 0; i < 1; i++) {
+
+    ROW: for (int r = 0; r < 15; r++) {
+    COL: for (int c = 0; c < 255; c++) {
 #pragma HLS UNROLL factor=4
 
- ROW: for (int r = 0; r < 15; r++) {
-    COL: for (int c = 0; c < 255; c++) {
-
-     KR: for (int kr = 0; kr < 9; kr++) {
-     KC: for (int kc = 0; kc < 9; kc++) {
-
+ KR: for (int kr = 0; kr < 9; kr++) {
 #pragma HLS PIPELINE II=3
+ ftmap_t tmp_r = 0;
 
- int rtarget = r + kr;
-      int ctarget = c + kc;
+      VITIS_LOOP_56_1: for (int kc = 0; kc < 9; kc+=chunk_size) {
+#pragma HLS PIPELINE II=2
+ ftmap_t tmp_chunk = 0;
+       VITIS_LOOP_59_2: for (int offset = 0; offset < 3; offset++){
+        tmp_chunk += weight_buffer[o][i][kr][kc + offset] * input_fm_buffer[i][r+kr][c+kc+offset];
+       }
+       tmp_r += tmp_chunk;
+      }
 
-      output_fm_buffer[o][r][c] += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][rtarget][ctarget];
-     }}
+      output_fm_buffer[o][r][c] += tmp_r;
+     }
     }}
    }}
 

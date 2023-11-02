@@ -11,13 +11,10 @@ INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../../src/srcnn.cpp in debug mode
    Generating csim.exe
 ***** CONV1 Golden Reference *****
-  - Butterfly MSE: 3.40524e-015
+  - Butterfly MSE: 2.77772e-015
 
 ***** SRCNN - Set14 Test *****
 Image Name     PSNR GT vs HR (dB)  PSNR GT vs HR MATLAB (dB)  PSNR GT vs LR (dB)  MSE GT vs HR   MSE GT vs HR MATLAB        
 baboon         27.9104             24.9898                    27.3618             0.00161402     0.00161402                 
-barbara        24.9867             26.2451                    24.8997             0.00316839     0.00316839                 
-bridge         24.0522             26.8397                    25.2317             0.00237435     0.00237435                 
-coastguard     26.8309             33.4187                    26.3                0.00206895     0.00206895                 
 ERR: [SIM 100] CSim failed with errors.
 INFO: [SIM 3] *************** CSIM finish ***************

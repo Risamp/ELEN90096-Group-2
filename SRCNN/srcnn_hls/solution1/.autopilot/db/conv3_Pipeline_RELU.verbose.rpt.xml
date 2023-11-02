@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3_Pipeline_RELU'" level="0">
-<item name = "Date">Thu Nov  2 04:32:25 2023
+<item name = "Date">Thu Nov  2 17:54:25 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -78,13 +78,13 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln128_fu_98_p2">+, 0, 0, 15, 8, 1</column>
-<column name="add_ln131_fu_108_p2">+, 0, 0, 18, 11, 11</column>
-<column name="and_ln133_fu_159_p2">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln128_fu_92_p2">icmp, 0, 0, 15, 8, 2</column>
-<column name="icmp_ln133_1_fu_147_p2">icmp, 0, 0, 30, 23, 1</column>
-<column name="icmp_ln133_fu_141_p2">icmp, 0, 0, 15, 8, 2</column>
-<column name="or_ln133_fu_153_p2">or, 0, 0, 2, 1, 1</column>
+<column name="add_ln138_fu_98_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln141_fu_108_p2">+, 0, 0, 18, 11, 11</column>
+<column name="and_ln143_fu_159_p2">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln138_fu_92_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="icmp_ln143_1_fu_147_p2">icmp, 0, 0, 30, 23, 1</column>
+<column name="icmp_ln143_fu_141_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="or_ln143_fu_153_p2">or, 0, 0, 2, 1, 1</column>
 <column name="output_fm_buffer_0_d0">select, 0, 0, 32, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
@@ -112,7 +112,7 @@
 <column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter2_reg">1, 0, 1, 0</column>
 <column name="bw_fu_46">8, 0, 8, 0</column>
-<column name="icmp_ln128_reg_185">1, 0, 1, 0</column>
+<column name="icmp_ln138_reg_185">1, 0, 1, 0</column>
 <column name="output_fm_buffer_0_addr_reg_189">11, 0, 11, 0</column>
 <column name="output_fm_buffer_0_load_reg_194">32, 0, 32, 0</column>
 <column name="output_fm_buffer_0_addr_reg_189">64, 32, 11, 0</column>
@@ -131,17 +131,17 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
-<column name="grp_fu_1675_p_din0">out, 32, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
-<column name="grp_fu_1675_p_din1">out, 32, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
-<column name="grp_fu_1675_p_opcode">out, 2, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
-<column name="grp_fu_1675_p_dout0">in, 32, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
-<column name="grp_fu_1675_p_ce">out, 1, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
-<column name="grp_fu_1683_p_din0">out, 32, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
-<column name="grp_fu_1683_p_din1">out, 32, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
-<column name="grp_fu_1683_p_opcode">out, 5, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
-<column name="grp_fu_1683_p_dout0">in, 1, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
-<column name="grp_fu_1683_p_ce">out, 1, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
-<column name="sub_ln131">in, 11, ap_none, sub_ln131, scalar</column>
+<column name="grp_fu_1696_p_din0">out, 32, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
+<column name="grp_fu_1696_p_din1">out, 32, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
+<column name="grp_fu_1696_p_opcode">out, 2, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
+<column name="grp_fu_1696_p_dout0">in, 32, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
+<column name="grp_fu_1696_p_ce">out, 1, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
+<column name="grp_fu_1712_p_din0">out, 32, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
+<column name="grp_fu_1712_p_din1">out, 32, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
+<column name="grp_fu_1712_p_opcode">out, 5, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
+<column name="grp_fu_1712_p_dout0">in, 1, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
+<column name="grp_fu_1712_p_ce">out, 1, ap_ctrl_hs, conv3_Pipeline_RELU, return value</column>
+<column name="sub_ln141">in, 11, ap_none, sub_ln141, scalar</column>
 <column name="conv3_biases_0_0_val">in, 32, ap_none, conv3_biases_0_0_val, scalar</column>
 <column name="output_fm_buffer_0_address0">out, 11, ap_memory, output_fm_buffer_0, array</column>
 <column name="output_fm_buffer_0_ce0">out, 1, ap_memory, output_fm_buffer_0, array</column>

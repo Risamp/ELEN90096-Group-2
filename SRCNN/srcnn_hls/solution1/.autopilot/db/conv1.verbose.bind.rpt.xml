@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1'" level="0">
-<item name = "Date">Thu Nov  2 04:31:58 2023
+<item name = "Date">Thu Nov  2 17:53:31 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,26 +24,30 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1091961630, 1091971422, 10.920 sec, 10.920 sec, 1091961630, 1091971422, no</column>
+<column name="">271200219, 271389531, 2.712 sec, 2.714 sec, 271200219, 271389531, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_conv1_Pipeline_LOAD_WEIGHTS_K_L_fu_532">conv1_Pipeline_LOAD_WEIGHTS_K_L, 651, 651, 6.510 us, 6.510 us, 651, 651, no</column>
-<column name="grp_export_output_buffer_c1_fu_555">export_output_buffer_c1, 131394, 131466, 1.314 ms, 1.315 ms, 131394, 131466, no</column>
-<column name="grp_conv1_Pipeline_KR_KC_fu_582">conv1_Pipeline_KR_KC, 253, 253, 2.530 us, 2.530 us, 253, 253, no</column>
+<column name="grp_conv1_Pipeline_LOAD_WEIGHTS_K_L_fu_7443">conv1_Pipeline_LOAD_WEIGHTS_K_L, 656, 656, 6.560 us, 6.560 us, 656, 656, no</column>
+<column name="grp_export_output_buffer_c1_fu_7558">export_output_buffer_c1, 131394, 131466, 1.314 ms, 1.315 ms, 131394, 131466, no</column>
+<column name="grp_conv1_Pipeline_KR_fu_7577">conv1_Pipeline_KR, 57, 57, 0.570 us, 0.570 us, 57, 57, no</column>
+<column name="grp_conv1_Pipeline_KR10_fu_8138">conv1_Pipeline_KR10, 57, 57, 0.570 us, 0.570 us, 57, 57, no</column>
+<column name="grp_conv1_Pipeline_KR11_fu_8538">conv1_Pipeline_KR11, 57, 57, 0.570 us, 0.570 us, 57, 57, no</column>
+<column name="grp_conv1_Pipeline_KR12_fu_8938">conv1_Pipeline_KR12, 57, 57, 0.570 us, 0.570 us, 57, 57, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILE_ROW">1091961629, 1091971421, 64233037 ~ 64233613, -, -, 17, no</column>
-<column name=" + BH">18170, 18170, 790, -, -, 23, no</column>
-<column name="  ++ PAD">4, 4, 1, -, -, 4, no</column>
-<column name="  ++ BH.2">765, 765, 3, -, -, 255, no</column>
-<column name=" + TILE_OUT">64214864, 64215440, 8026858 ~ 8026930, -, -, 8, no</column>
-<column name="  ++ OUT_ROW_COL">7894800, 7894800, 258, -, -, 30600, no</column>
+<column name="- TILE_ROW">271200218, 271389530, 15952954 ~ 15964090, -, -, 17, no</column>
+<column name=" + BH">24127, 24127, 1049, -, -, 23, no</column>
+<column name="  ++ PAD">8, 8, 2, -, -, 4, no</column>
+<column name="  ++ BH.2">1020, 1020, 4, -, -, 255, no</column>
+<column name=" + TILE_OUT">15928824, 15939960, 1991103 ~ 1992495, -, -, 8, no</column>
+<column name="  ++ OUT_ROW">1859040, 1860360, 15492 ~ 15503, -, -, 120, no</column>
+<column name="   +++ COL">15488, 15498, 242, -, -, 64, no</column>
 </table>
 </item>
 </section>

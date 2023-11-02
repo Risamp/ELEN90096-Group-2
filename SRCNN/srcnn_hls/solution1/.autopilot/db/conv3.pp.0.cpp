@@ -33580,6 +33580,8 @@ namespace std
 
 using namespace std;
 
+const unsigned int UNROLL3 = 2;
+
 
 void conv3(ftmap_t input_ftmap[32][255][255],
            param_t conv3_weights[1][32][5][5],
@@ -33596,6 +33598,8 @@ void conv3(ftmap_t input_ftmap[32][255][255],
 
 
  static param_t weight_buffer[1][32][5][5];
+#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=3 dim=3
+#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=3 dim=4
 
 
 
@@ -33617,14 +33621,20 @@ void conv3(ftmap_t input_ftmap[32][255][255],
     COL: for (int c = 0; c < 255; c++) {
 
      KR: for (int kr = 0; kr < 5; kr++) {
-     KC: for (int kc = 0; kc < 5; kc++) {
-
+     KC: for (int kc0 = 0; kc0 < 5 / UNROLL3; kc0++) {
 #pragma HLS PIPELINE II=3
 
- int rtarget = r + kr;
-      int ctarget = c + kc;
+ ftmap_t tmp = 0;
 
-      output_fm_buffer[o][r][c] += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][rtarget][ctarget];
+      VITIS_LOOP_55_1: for (int kc = 0; kc < UNROLL3; kc++) {
+
+       int rtarget = r + kr;
+       int ctarget = c + kc;
+
+       tmp += weight_buffer[o][i][kr][kc] * input_fm_buffer[i][rtarget][ctarget];
+      }
+
+      output_fm_buffer[o][r][c] += tmp;
      }}
     }}
    }}

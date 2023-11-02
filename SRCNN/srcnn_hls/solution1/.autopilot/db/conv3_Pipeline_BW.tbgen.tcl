@@ -15,12 +15,12 @@ set DLRegItemOffset 0
 set C_modelName {conv3_Pipeline_BW}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ sub_ln69 int 11 regular  }
+	{ sub_ln79 int 11 regular  }
 	{ output_fm_buffer_0 float 32 regular {array 1275 { 0 3 } 0 1 } {global 1}  }
 }
 set hasAXIMCache 0
 set C_modelArgMapList {[ 
-	{ "Name" : "sub_ln69", "interface" : "wire", "bitwidth" : 11, "direction" : "READONLY"} , 
+	{ "Name" : "sub_ln79", "interface" : "wire", "bitwidth" : 11, "direction" : "READONLY"} , 
  	{ "Name" : "output_fm_buffer_0", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} ]}
 # RTL Port declarations: 
 set portNum 11
@@ -31,7 +31,7 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ sub_ln69 sc_in sc_lv 11 signal 0 } 
+	{ sub_ln79 sc_in sc_lv 11 signal 0 } 
 	{ output_fm_buffer_0_address0 sc_out sc_lv 11 signal 1 } 
 	{ output_fm_buffer_0_ce0 sc_out sc_logic 1 signal 1 } 
 	{ output_fm_buffer_0_we0 sc_out sc_logic 1 signal 1 } 
@@ -44,7 +44,7 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "sub_ln69", "direction": "in", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "sub_ln69", "role": "default" }} , 
+ 	{ "name": "sub_ln79", "direction": "in", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "sub_ln79", "role": "default" }} , 
  	{ "name": "output_fm_buffer_0_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "output_fm_buffer_0", "role": "address0" }} , 
  	{ "name": "output_fm_buffer_0_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "output_fm_buffer_0", "role": "ce0" }} , 
  	{ "name": "output_fm_buffer_0_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "output_fm_buffer_0", "role": "we0" }} , 
@@ -66,7 +66,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "sub_ln69", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sub_ln79", "Type" : "None", "Direction" : "I"},
 			{"Name" : "output_fm_buffer_0", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "BW", "PipelineType" : "UPC",
@@ -76,7 +76,7 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	conv3_Pipeline_BW {
-		sub_ln69 {Type I LastRead 0 FirstWrite -1}
+		sub_ln79 {Type I LastRead 0 FirstWrite -1}
 		output_fm_buffer_0 {Type O LastRead -1 FirstWrite 0}}}
 
 set hasDtUnsupportedChannel 0
@@ -90,6 +90,6 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	sub_ln69 { ap_none {  { sub_ln69 in_data 0 11 } } }
+	sub_ln79 { ap_none {  { sub_ln79 in_data 0 11 } } }
 	output_fm_buffer_0 { ap_memory {  { output_fm_buffer_0_address0 mem_address 1 11 }  { output_fm_buffer_0_ce0 mem_ce 1 1 }  { output_fm_buffer_0_we0 mem_we 1 1 }  { output_fm_buffer_0_d0 mem_din 1 32 } } }
 }

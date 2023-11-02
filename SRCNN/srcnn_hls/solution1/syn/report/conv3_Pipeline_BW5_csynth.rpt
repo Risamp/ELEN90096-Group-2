@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_BW5'
 ================================================================
-* Date:           Thu Nov  2 04:32:27 2023
+* Date:           Thu Nov  2 17:54:28 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -85,9 +85,9 @@
     +---------------------+----------+----+---+----+------------+------------+
     |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------+----------+----+---+----+------------+------------+
-    |add_ln67_1_fu_72_p2  |         +|   0|  0|  15|           8|           1|
-    |add_ln69_fu_82_p2    |         +|   0|  0|  18|          11|          11|
-    |icmp_ln67_fu_66_p2   |      icmp|   0|  0|  15|           8|           2|
+    |add_ln77_1_fu_72_p2  |         +|   0|  0|  15|           8|           1|
+    |add_ln79_fu_82_p2    |         +|   0|  0|  18|          11|          11|
+    |icmp_ln77_fu_66_p2   |      icmp|   0|  0|  15|           8|           2|
     +---------------------+----------+----+---+----+------------+------------+
     |Total                |          |   0|  0|  48|          27|          14|
     +---------------------+----------+----+---+----+------------+------------+
@@ -129,7 +129,7 @@
 |ap_done                      |  out|    1|  ap_ctrl_hs|  conv3_Pipeline_BW5|  return value|
 |ap_idle                      |  out|    1|  ap_ctrl_hs|  conv3_Pipeline_BW5|  return value|
 |ap_ready                     |  out|    1|  ap_ctrl_hs|  conv3_Pipeline_BW5|  return value|
-|sub_ln69_1                   |   in|   11|     ap_none|          sub_ln69_1|        scalar|
+|sub_ln79_1                   |   in|   11|     ap_none|          sub_ln79_1|        scalar|
 |output_fm_buffer_0_address0  |  out|   11|   ap_memory|  output_fm_buffer_0|         array|
 |output_fm_buffer_0_ce0       |  out|    1|   ap_memory|  output_fm_buffer_0|         array|
 |output_fm_buffer_0_we0       |  out|    1|   ap_memory|  output_fm_buffer_0|         array|

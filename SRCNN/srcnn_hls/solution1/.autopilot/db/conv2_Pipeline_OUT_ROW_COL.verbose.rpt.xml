@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2_Pipeline_OUT_ROW_COL'" level="0">
-<item name = "Date">Thu Nov  2 04:32:19 2023
+<item name = "Date">Thu Nov  2 17:54:17 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -78,16 +78,16 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln40_2_fu_235_p2">+, 0, 0, 25, 18, 1</column>
+<column name="add_ln40_1_fu_235_p2">+, 0, 0, 25, 18, 1</column>
 <column name="add_ln40_fu_253_p2">+, 0, 0, 10, 3, 1</column>
 <column name="add_ln41_1_fu_601_p2">+, 0, 0, 24, 17, 1</column>
 <column name="add_ln41_fu_351_p2">+, 0, 0, 14, 7, 1</column>
 <column name="add_ln43_1_fu_587_p2">+, 0, 0, 17, 10, 1</column>
 <column name="add_ln43_fu_458_p2">+, 0, 0, 9, 2, 1</column>
 <column name="add_ln44_fu_581_p2">+, 0, 0, 15, 8, 1</column>
-<column name="add_ln46_1_fu_528_p2">+, 0, 0, 14, 7, 7</column>
-<column name="add_ln46_2_fu_564_p2">+, 0, 0, 16, 16, 16</column>
-<column name="add_ln46_3_fu_575_p2">+, 0, 0, 17, 12, 12</column>
+<column name="add_ln46_2_fu_528_p2">+, 0, 0, 14, 7, 7</column>
+<column name="add_ln46_3_fu_564_p2">+, 0, 0, 16, 16, 16</column>
+<column name="add_ln46_4_fu_575_p2">+, 0, 0, 17, 12, 12</column>
 <column name="add_ln46_fu_500_p2">+, 0, 0, 18, 11, 11</column>
 <column name="sub_ln46_1_fu_395_p2">-, 0, 0, 17, 10, 10</column>
 <column name="sub_ln46_2_fu_522_p2">-, 0, 0, 16, 16, 16</column>
@@ -104,8 +104,8 @@
 <column name="or_ln41_fu_357_p2">or, 0, 0, 2, 1, 1</column>
 <column name="or_ln43_1_fu_470_p2">or, 0, 0, 2, 1, 1</column>
 <column name="or_ln43_fu_464_p2">or, 0, 0, 2, 1, 1</column>
-<column name="select_ln40_2_fu_273_p3">select, 0, 0, 3, 1, 3</column>
-<column name="select_ln40_3_fu_319_p3">select, 0, 0, 8, 1, 8</column>
+<column name="select_ln40_1_fu_273_p3">select, 0, 0, 3, 1, 3</column>
+<column name="select_ln40_2_fu_319_p3">select, 0, 0, 8, 1, 8</column>
 <column name="select_ln40_fu_265_p3">select, 0, 0, 7, 1, 1</column>
 <column name="select_ln41_1_fu_371_p3">select, 0, 0, 7, 1, 7</column>
 <column name="select_ln41_2_fu_421_p3">select, 0, 0, 8, 1, 8</column>
@@ -135,7 +135,7 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln46_3_reg_721">12, 0, 12, 0</column>
+<column name="add_ln46_4_reg_721">12, 0, 12, 0</column>
 <column name="add_reg_757">32, 0, 32, 0</column>
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
@@ -169,7 +169,7 @@
 <column name="output_fm_buffer_load_reg_752">32, 0, 32, 0</column>
 <column name="r_fu_94">2, 0, 2, 0</column>
 <column name="weight_buffer_load_reg_726">32, 0, 32, 0</column>
-<column name="add_ln46_3_reg_721">64, 32, 12, 0</column>
+<column name="add_ln46_4_reg_721">64, 32, 12, 0</column>
 <column name="output_fm_buffer_addr_reg_741">64, 32, 12, 0</column>
 </table>
 </item>

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2'" level="0">
-<item name = "Date">Thu Nov  2 04:32:23 2023
+<item name = "Date">Thu Nov  2 17:54:22 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -86,7 +86,7 @@
 <column name="grp_conv2_Pipeline_OUT_ROW_COL_fu_321">conv2_Pipeline_OUT_ROW_COL, 0, 0, 397, 568, 0</column>
 <column name="grp_conv2_Pipeline_RELU_fu_331">conv2_Pipeline_RELU, 0, 0, 158, 237, 0</column>
 <column name="grp_conv2_Pipeline_RELU7_fu_349">conv2_Pipeline_RELU7, 0, 0, 158, 237, 0</column>
-<column name="mul_5ns_19ns_23_1_1_U185">mul_5ns_19ns_23_1_1, 0, 1, 0, 6, 0</column>
+<column name="mul_5ns_19ns_23_1_1_U1866">mul_5ns_19ns_23_1_1, 0, 1, 0, 6, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -122,7 +122,7 @@
 <column name="add_ln58_fu_795_p2">+, 0, 0, 10, 3, 1</column>
 <column name="add_ln63_1_fu_814_p2">+, 0, 0, 19, 12, 9</column>
 <column name="add_ln63_fu_807_p2">+, 0, 0, 19, 12, 8</column>
-<column name="empty_86_fu_499_p2">+, 0, 0, 12, 5, 5</column>
+<column name="empty_107_fu_499_p2">+, 0, 0, 12, 5, 5</column>
 <column name="sub_ln108_1_fu_697_p2">-, 0, 0, 27, 20, 20</column>
 <column name="sub_ln108_fu_633_p2">-, 0, 0, 27, 20, 20</column>
 <column name="sub_ln111_1_fu_589_p2">-, 0, 0, 19, 12, 12</column>
@@ -221,7 +221,7 @@
 <column name="ap_CS_fsm">39, 0, 39, 0</column>
 <column name="bh_reg_267">3, 0, 3, 0</column>
 <column name="bout_1_reg_255">3, 0, 3, 0</column>
-<column name="empty_87_reg_903">32, 0, 32, 0</column>
+<column name="empty_108_reg_903">32, 0, 32, 0</column>
 <column name="grp_conv2_Pipeline_5_fu_339_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_conv2_Pipeline_7_fu_357_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_conv2_Pipeline_BW8_fu_375_ap_start_reg">1, 0, 1, 0</column>
@@ -264,20 +264,20 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, conv2, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv2, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_348_p_din0">out, 32, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_348_p_din1">out, 32, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_348_p_opcode">out, 5, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_348_p_dout0">in, 1, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_348_p_ce">out, 1, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_340_p_din0">out, 32, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_340_p_din1">out, 32, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_340_p_opcode">out, 2, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_340_p_dout0">in, 32, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_340_p_ce">out, 1, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_344_p_din0">out, 32, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_344_p_din1">out, 32, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_344_p_dout0">in, 32, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_344_p_ce">out, 1, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_908_p_din0">out, 32, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_908_p_din1">out, 32, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_908_p_opcode">out, 5, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_908_p_dout0">in, 1, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_908_p_ce">out, 1, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_892_p_din0">out, 32, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_892_p_din1">out, 32, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_892_p_opcode">out, 2, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_892_p_dout0">in, 32, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_892_p_ce">out, 1, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_900_p_din0">out, 32, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_900_p_din1">out, 32, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_900_p_dout0">in, 32, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_900_p_ce">out, 1, ap_ctrl_hs, conv2, return value</column>
 <column name="m_axi_i2_AWVALID">out, 1, m_axi, i2, pointer</column>
 <column name="m_axi_i2_AWREADY">in, 1, m_axi, i2, pointer</column>
 <column name="m_axi_i2_AWADDR">out, 64, m_axi, i2, pointer</column>
