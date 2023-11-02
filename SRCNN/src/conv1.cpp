@@ -13,25 +13,20 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
            ftmap_t output_ftmap[N1][H][W])
 {
 
-	//#pragma HLS PIPELINE off
-
 	static ftmap_t output_fm_buffer[C1_OD][C1_TH][W] = {0};
-	#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=cyclic factor=4
-	//#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=cyclic factor=8 dim=2
+	#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=cyclic factor=2
 
 	static ftmap_t input_fm_buffer[C1_ID][C1_TH + (2 * P1)][W + (2 * P1)];
 	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=1 type=cyclic factor=2
-	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=2 type=complete
-	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=cyclic factor=4
-	//#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=cyclic factor=16
-	//#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=cyclic factor=4 dim=2
+	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=2 type=cyclic factor=3
+	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=cyclic factor=3
 
 	static param_t weight_buffer[C1_OD][C1_ID][F1][F1];
 	#pragma HLS BIND_STORAGE variable=weight_buffer type=RAM_2P impl=LUTRAM
 	#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=1 type=cyclic factor=2
 	#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=2 type=cyclic factor=2
-	#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=3 type=complete
-	#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=4 type=block factor=3
+	#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=3 type=cyclic factor=3
+	#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=4 type=cyclic factor=3
 
 	TILE_IN: for (int in = 0; in < N0; in += C1_ID) {
 	TILE_ROW: for (int h = 0; h < H; h += C1_TH) {
@@ -49,20 +44,31 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 				COL: for (int c = 0; c < W; c++) {
 				#pragma HLS UNROLL factor=2
 					// focus acceleration on the kernel convolution
-					KR: for (int kr = 0; kr < F1; kr++) { // kernel row
+					KR0: for (int kr0 = 0; kr0 < F1; kr0 += chunk_size) {
 						#pragma HLS PIPELINE II=3
-						ftmap_t tmp_r = 0;
 
-						for (int kc = 0; kc < F1; kc+=chunk_size) {
-							#pragma HLS PIPELINE II=2
-							ftmap_t tmp_chunk = 0;
-							for (int offset = 0; offset < 3; offset++){
-								tmp_chunk += weight_buffer[o][i][kr][kc + offset] * input_fm_buffer[i][r+kr][c+kc+offset];
+						ftmap_t tmp = 0;
+
+						KR: for (int kr = 0; kr < chunk_size; kr++) {
+							ftmap_t tmp_r = 0;
+							int row = r + kr;
+
+							KC0: for (int kc0 = 0; kc0 < F1; kc0 += chunk_size) {
+								#pragma HLS PIPELINE II=2
+
+								int col = c + kc;
+
+								ftmap_t chunk_a = weight_buffer[o][i][kr][kc] * input_fm_buffer[i][row][col];
+								ftmap_t chunk_b = weight_buffer[o][i][kr][kc + 1] * input_fm_buffer[i][row][c + kc + 1];
+								ftmap_t chunk_c = weight_buffer[o][i][kr][kc + 2] * input_fm_buffer[i][row][c + kc + 2];
+
+								tmp_r += chunk_a + chunk_b + chunk_c;
 							}
-							tmp_r += tmp_chunk;
+
+							tmp += tmp_r
 						}
 
-						output_fm_buffer[o][r][c] += tmp_r;
+						output_fm_buffer[o][r][c] += tmp;
 					}
 				}}
 			}}
@@ -76,7 +82,7 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 void clear_buffer_c1(ftmap_t output_fm_buffer[C1_OD][C1_TH][W]) {
 	CLEAR: for (int o = 0; o < C1_OD; o++) {
 	BH: for (int h = 0; h < C1_TH; h++) {
-	#pragma HLS UNROLL factor=3
+	#pragma HLS UNROLL factor=2
 	BW: for (int w = 0; w < W; w++) {
 
 		output_fm_buffer[o][h][w] = 0;
@@ -120,6 +126,7 @@ void load_weight_buffer_c1(
 	LOAD_WEIGHTS: for (int bout = 0; bout < C1_OD; bout++) {
 	IN: for (int bin = 0; bin < C1_ID; bin++) {
 	K: for (int k = 0; k < F1; k++) {
+		#pragma HLS UNROLL factor=3
 
 		memcpy(&weight_buffer[bout][bin][k], &conv1_weights[bout + out][bin + in][k], F1 * sizeof(param_t));
 
