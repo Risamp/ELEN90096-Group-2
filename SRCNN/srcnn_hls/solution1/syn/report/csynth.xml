@@ -1773,7 +1773,9 @@
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
-    <UserConfigCommands/>
+    <UserConfigCommands>
+        <config_export output="C:/SPB_Data/ELEN90096-Group-2"/>
+    </UserConfigCommands>
     <Args>
         <Arg ArgName="input_ftmap" index="0" direction="inout" srcType="float*" srcSize="32">
             <hwRefs>

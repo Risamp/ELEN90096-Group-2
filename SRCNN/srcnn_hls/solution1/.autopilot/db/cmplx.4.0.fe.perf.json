@@ -1,7 +1,7 @@
 {
   "0": {
     "basicblocks": 10,
-    "calls": "2 1 3",
+    "calls": "1 3 2",
     "file": "srcnn.cpp",
     "fileloc": 6,
     "instructions": 69,
@@ -12,22 +12,6 @@
     "total_instructions": 658
   },
   "1": {
-    "basicblocks": 45,
-    "calls": "",
-    "file": "conv2.cpp",
-    "fileloc": 10,
-    "instructions": 179,
-    "loads": {
-      "G": 3
-    },
-    "name": "conv2",
-    "stores": {
-      "G": 4,
-      "L": 2
-    },
-    "total_instructions": 179
-  },
-  "2": {
     "basicblocks": 45,
     "calls": "",
     "file": "conv1.cpp",
@@ -44,7 +28,7 @@
     },
     "total_instructions": 192
   },
-  "3": {
+  "2": {
     "basicblocks": 51,
     "calls": "",
     "file": "conv3.cpp",
@@ -60,5 +44,21 @@
       "L": 2
     },
     "total_instructions": 218
+  },
+  "3": {
+    "basicblocks": 45,
+    "calls": "",
+    "file": "conv2.cpp",
+    "fileloc": 10,
+    "instructions": 179,
+    "loads": {
+      "G": 3
+    },
+    "name": "conv2",
+    "stores": {
+      "G": 4,
+      "L": 2
+    },
+    "total_instructions": 179
   }
 }

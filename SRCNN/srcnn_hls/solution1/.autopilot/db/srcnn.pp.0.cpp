@@ -26002,7 +26002,7 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][2
            param_t conv3_biases[1],
            ftmap_t output_ftmap[1][255][255])
 {
-#line 29 "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl"
+#line 30 "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
 # 16 "src/srcnn.cpp"
 

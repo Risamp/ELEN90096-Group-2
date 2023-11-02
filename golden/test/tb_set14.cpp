@@ -5,8 +5,10 @@
 #include <cstring>
 #include "srcnn.h"
 #include "util.h"
+#include <chrono>
 
 using namespace std;
+using namespace std::chrono;
 
 ftmap_t img_LR_set14[N0][H][W];  // low resolution input image
 ftmap_t img_HR_set14[N0][H][W];  // high-resolution output image
@@ -95,7 +97,8 @@ int tb_set14()
                   << std::setw(27) << std::left << "PSNR GT vs HR MATLAB (dB)"
 			      << std::setw(20) << std::left << "PSNR GT vs LR (dB)" 
                   << std::setw(15) << std::left << "MSE GT vs HR" 
-                  << std::setw(27) << std::left << "MSE GT vs HR MATLAB" << std::endl;
+                  << std::setw(27) << std::left << "MSE GT vs HR MATLAB"
+                  << std::setw(15) << std::left << "Elapsed Time" << std::endl;
 
         while ((ent = readdir(dir)) != nullptr) {
         	string filename(ent->d_name);
@@ -110,6 +113,8 @@ int tb_set14()
 
 				load_image(directoryPath + GT_filename, &img_GT_set14[0][0][0], N3*H*W);
 
+                auto start = high_resolution_clock::now();
+
 				srcnn(img_LR_set14,
 					  conv1_weights_set14,
 					  conv1_biases_set14,
@@ -119,6 +124,10 @@ int tb_set14()
 					  conv3_biases_set14,
 					  img_HR_set14);
 
+                auto stop = high_resolution_clock::now();
+
+                auto elapsed_time = duration_cast<microseconds>(stop - start);
+
 				write_bin("./output/" + filename, &img_HR_set14[0][0][0], H*W);
 
                 std::cout << std::setw(15) << std::left << filename.substr(0,(filename).find("_")) 
@@ -126,7 +135,8 @@ int tb_set14()
                     << std::setw(27) << std::left <<  software_HR_psnr[i]
                     << std::setw(20) << std::left <<  calculate_PSNR(&img_GT_set14[0][0][0], &img_LR_set14[0][0][0], H*W) 
                     << std::setw(15) << std::left <<  calculate_mse(&img_GT_set14[0][0][0],&img_HR_set14[0][0][0],N3*H*W) 
-                    << std::setw(27) << std::left <<  software_HR_mse[i++] << std::endl;
+                    << std::setw(27) << std::left <<  software_HR_mse[i]
+                    << std::setw(20) << std::left <<  (float)elapsed_time/1000000 << std::endl;
             }
         }
         // Close the directory
