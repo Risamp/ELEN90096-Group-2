@@ -6,22 +6,22 @@
 using namespace std;
 
 // implements conv2 layer of SRCNN
-void conv2(ftmap_t input_ftmap[N1][H][W],
-           param_t conv2_weights[N2][N1][F2][F2],
-           param_t conv2_biases[N2],
-           ftmap_t output_ftmap[N2][H][W])
+void conv2(conv1o_t input_ftmap[N1][H][W],
+           conv2w_t conv2_weights[N2][N1][F2][F2],
+           conv2b_t conv2_biases[N2],
+           conv2o_t output_ftmap[N2][H][W])
 {
 
 	//#pragma HLS PIPELINE off
 
-	static ftmap_t output_fm_buffer[C2_OD][C2_TH][W] = {0};
+	static conv2o_t output_fm_buffer[C2_OD][C2_TH][W] = {0};
 	//#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=cyclic factor=8 dim=2
 
-	static ftmap_t input_fm_buffer[C2_ID][C2_TH + (2 * P2)][W + (2 * P2)];
+	static conv1o_t input_fm_buffer[C2_ID][C2_TH + (2 * P2)][W + (2 * P2)];
 	#pragma HLS bind_storage variable=input_fm_buffer type=RAM_2P impl=LUTRAM
 	//#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=cyclic factor=4 dim=2
 
-	static param_t weight_buffer[C2_OD][C2_ID][F2][F2];
+	static conv2w_t weight_buffer[C2_OD][C2_ID][F2][F2];
 	//#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=3
 	//#pragma HLS ARRAY_PARTITION variable=weight_buffer type=cyclic factor=2 dim=4
 
@@ -54,7 +54,7 @@ void conv2(ftmap_t input_ftmap[N1][H][W],
 }
 
 
-void clear_buffer_c2(ftmap_t output_fm_buffer[C2_OD][C2_TH][W]) {
+void clear_buffer_c2(conv2o_t output_fm_buffer[C2_OD][C2_TH][W]) {
 	CLEAR: for (int o = 0; o < C2_OD; o++) {
 	BH: for (int h = 0; h < C2_TH; h++) {
 	#pragma HLS UNROLL factor=3
@@ -66,8 +66,8 @@ void clear_buffer_c2(ftmap_t output_fm_buffer[C2_OD][C2_TH][W]) {
 
 
 void load_input_buffer_c2(
-	ftmap_t input_fm_buffer[C2_ID][C2_TH + (2 * P2)][W + (2 * P2)],
-	ftmap_t input_ftmap[N1][H][W],
+	conv1o_t input_fm_buffer[C2_ID][C2_TH + (2 * P2)][W + (2 * P2)],
+	conv1o_t input_ftmap[N1][H][W],
 	int in,
 	int h
 ) {
@@ -75,28 +75,28 @@ void load_input_buffer_c2(
 	LOAD_INPUT: for (int bin = 0; bin < C2_ID; bin++) {
 	BH: for (int bh = 0; bh < C2_TH; bh++) {
 
-		memcpy(&input_fm_buffer[bin][bh], &input_ftmap[in + bin][h + bh], W * sizeof(ftmap_t));
+		memcpy(&input_fm_buffer[bin][bh], &input_ftmap[in + bin][h + bh], W * sizeof(conv1o_t));
 
 	}}
 }
 
 void load_weight_buffer_c2(
-	param_t weight_buffer[C2_OD][C2_ID][F2][F2],
-	param_t conv2_weights[N2][N1][F2][F2],
+	conv2w_t weight_buffer[C2_OD][C2_ID][F2][F2],
+	conv2w_t conv2_weights[N2][N1][F2][F2],
 	int out,
 	int in
 ) {
 	LOAD_WEIGHTS: for (int bout = 0; bout < C2_OD; bout++) {
 
-		memcpy(&weight_buffer[bout][0], &conv2_weights[bout + out][in], C2_ID * F2 * F2 * sizeof(param_t));
+		memcpy(&weight_buffer[bout][0], &conv2_weights[bout + out][in], C2_ID * F2 * F2 * sizeof(conv2w_t));
 
 	}
 }
 
 void export_output_buffer_c2(
-	ftmap_t output_fm_buffer[C2_OD][C2_TH][W],
-	ftmap_t output_ftmap[N2][H][W],
-	param_t biases[N2],
+	conv2o_t output_fm_buffer[C2_OD][C2_TH][W],
+	conv2o_t output_ftmap[N2][H][W],
+	conv2b_t biases[N2],
 	int out,
 	int h
 ) {
@@ -115,7 +115,7 @@ void export_output_buffer_c2(
 			}
 		}
 
-		memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], W * sizeof(ftmap_t));
+		memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], W * sizeof(conv2o_t));
 	}}
 
 	clear_buffer_c2(output_fm_buffer);

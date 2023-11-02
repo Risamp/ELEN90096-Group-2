@@ -41,17 +41,17 @@ reg output_fm_buffer_we0;
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    ap_block_state1_pp0_stage0_iter0;
-wire   [0:0] icmp_ln61_fu_66_p2;
+wire   [0:0] icmp_ln61_fu_64_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-wire   [63:0] zext_ln63_3_fu_88_p1;
-reg   [7:0] w_fu_34;
-wire   [7:0] add_ln61_fu_72_p2;
+wire   [63:0] zext_ln63_3_fu_86_p1;
+reg   [7:0] w_fu_32;
+wire   [7:0] add_ln61_fu_70_p2;
 wire    ap_loop_init;
 reg   [7:0] ap_sig_allocacmp_w_4;
-wire   [11:0] zext_ln63_fu_78_p1;
-wire   [11:0] add_ln63_fu_82_p2;
+wire   [11:0] zext_ln63_fu_76_p1;
+wire   [11:0] add_ln63_fu_80_p2;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -103,10 +103,10 @@ end
 
 always @ (posedge ap_clk) begin
     if (((ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        if ((icmp_ln61_fu_66_p2 == 1'd0)) begin
-            w_fu_34 <= add_ln61_fu_72_p2;
+        if ((icmp_ln61_fu_64_p2 == 1'd0)) begin
+            w_fu_32 <= add_ln61_fu_70_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            w_fu_34 <= 8'd0;
+            w_fu_32 <= 8'd0;
         end
     end
 end
@@ -120,7 +120,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_start_int == 1'b1) & (icmp_ln61_fu_66_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1))) begin
+    if (((ap_start_int == 1'b1) & (icmp_ln61_fu_64_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -155,7 +155,7 @@ always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_sig_allocacmp_w_4 = 8'd0;
     end else begin
-        ap_sig_allocacmp_w_4 = w_fu_34;
+        ap_sig_allocacmp_w_4 = w_fu_32;
     end
 end
 
@@ -168,7 +168,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_start_int == 1'b1) & (icmp_ln61_fu_66_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1))) begin
+    if (((ap_start_int == 1'b1) & (icmp_ln61_fu_64_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1))) begin
         output_fm_buffer_we0 = 1'b1;
     end else begin
         output_fm_buffer_we0 = 1'b0;
@@ -186,9 +186,9 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln61_fu_72_p2 = (ap_sig_allocacmp_w_4 + 8'd1);
+assign add_ln61_fu_70_p2 = (ap_sig_allocacmp_w_4 + 8'd1);
 
-assign add_ln63_fu_82_p2 = (phi_mul + zext_ln63_fu_78_p1);
+assign add_ln63_fu_80_p2 = (phi_mul + zext_ln63_fu_76_p1);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -198,14 +198,14 @@ end
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign icmp_ln61_fu_66_p2 = ((ap_sig_allocacmp_w_4 == 8'd255) ? 1'b1 : 1'b0);
+assign icmp_ln61_fu_64_p2 = ((ap_sig_allocacmp_w_4 == 8'd255) ? 1'b1 : 1'b0);
 
-assign output_fm_buffer_address0 = zext_ln63_3_fu_88_p1;
+assign output_fm_buffer_address0 = zext_ln63_3_fu_86_p1;
 
 assign output_fm_buffer_d0 = 32'd0;
 
-assign zext_ln63_3_fu_88_p1 = add_ln63_fu_82_p2;
+assign zext_ln63_3_fu_86_p1 = add_ln63_fu_80_p2;
 
-assign zext_ln63_fu_78_p1 = ap_sig_allocacmp_w_4;
+assign zext_ln63_fu_76_p1 = ap_sig_allocacmp_w_4;
 
 endmodule //srcnn_conv2_Pipeline_BW

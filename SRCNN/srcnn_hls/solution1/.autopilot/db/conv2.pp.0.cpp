@@ -5707,39 +5707,56 @@ inline __attribute__((nodebug)) bool operator!=(
 }
 # 366 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\\ap_fixed.h" 2
 # 5 "src/srcnn.h" 2
-# 44 "src/srcnn.h"
+# 42 "src/srcnn.h"
+typedef ap_fixed<24,3> input_t;
+typedef ap_fixed<12,1> conv1w_t;
+typedef ap_fixed<10,1> conv1b_t;
+typedef ap_fixed<32,3> conv1o_t;
+
+
+typedef ap_fixed<18,1> conv2w_t;
+typedef ap_fixed<10,1> conv2b_t;
+typedef ap_fixed<32,3> conv2o_t;
+
+
+typedef ap_fixed<18,1> conv3w_t;
+typedef ap_fixed<15,1> conv3b_t;
+typedef ap_fixed<24,3> output_t;
+
+
+
 typedef float ftmap_t;
 typedef float param_t;
 
 
-void srcnn(ftmap_t input_ftmap[1][255][255],
-           param_t conv1_weights[64][1][9][9],
-     param_t conv1_biases[64],
-     ftmap_t conv1_output_ftmap[64][255][255],
-     param_t conv2_weights[32][64][1][1],
-     param_t conv2_biases[32],
-     ftmap_t conv2_output_ftmap[32][255][255],
-     param_t conv3_weights[1][32][5][5],
-     param_t conv3_biases[1],
-     ftmap_t output_ftmap[1][255][255]);
+void srcnn(input_t input_ftmap[1][255][255],
+           conv1w_t conv1_weights[64][1][9][9],
+     conv1b_t conv1_biases[64],
+     conv1o_t conv1_output_ftmap[64][255][255],
+     conv2w_t conv2_weights[32][64][1][1],
+     conv2b_t conv2_biases[32],
+     conv2o_t conv2_output_ftmap[32][255][255],
+     conv3w_t conv3_weights[1][32][5][5],
+     conv3b_t conv3_biases[1],
+     output_t output_ftmap[1][255][255]);
 
 
-void conv1(ftmap_t input_ftmap[1][255][255],
-           param_t conv1_weights[64][1][9][9],
-           param_t conv1_biases[64],
-           ftmap_t output_ftmap[64][255][255]);
+void conv1(input_t input_ftmap[1][255][255],
+           conv1w_t conv1_weights[64][1][9][9],
+           conv1b_t conv1_biases[64],
+           conv1o_t output_ftmap[64][255][255]);
 
 
-void conv2(ftmap_t input_ftmap[64][255][255],
-           param_t conv2_weights[32][64][1][1],
-           param_t conv2_biases[32],
-           ftmap_t output_ftmap[32][255][255]);
+void conv2(conv1o_t input_ftmap[64][255][255],
+           conv2w_t conv2_weights[32][64][1][1],
+           conv2b_t conv2_biases[32],
+           conv2o_t output_ftmap[32][255][255]);
 
 
-void conv3(ftmap_t input_ftmap[32][255][255],
-           param_t conv3_weights[1][32][5][5],
-           param_t conv3_biases[1],
-           ftmap_t output_ftmap[1][255][255]);
+void conv3(conv2o_t input_ftmap[32][255][255],
+           conv3w_t conv3_weights[1][32][5][5],
+           conv3b_t conv3_biases[1],
+           output_t output_ftmap[1][255][255]);
 
 
 int clamp(int value, int min, int max);
@@ -5748,87 +5765,87 @@ int clamp(int value, int min, int max);
 
 
 void load_input_buffer_c1(
- ftmap_t input_fm_buffer[1][15 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)],
- ftmap_t input_ftmap[1][255][255],
+ input_t input_fm_buffer[1][15 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)],
+ input_t input_ftmap[1][255][255],
  int in,
  int h
 );
 
 void load_weight_buffer_c1(
- param_t weight_buffer[8][1][9][9],
- param_t conv1_weights[64][1][9][9],
+ conv1w_t weight_buffer[8][1][9][9],
+ conv1w_t conv1_weights[64][1][9][9],
  int out,
  int in
 );
 
 void export_output_buffer_c1(
- ftmap_t output_fm_buffer[8][15][255],
- ftmap_t output_ftmap[64][255][255],
- param_t biases[64],
+ conv1o_t output_fm_buffer[8][15][255],
+ conv1o_t output_ftmap[64][255][255],
+ conv1b_t biases[64],
  int out,
  int h
 );
 
 void clear_buffer_c1(
- ftmap_t output_fm_buffer[8][15][255]
+ conv1o_t output_fm_buffer[8][15][255]
 );
 
 
 
 
 void load_input_buffer_c2(
- ftmap_t input_fm_buffer[64][3 + (2 * (1 - 1) / 2)][255 + (2 * (1 - 1) / 2)],
- ftmap_t input_ftmap[64][255][255],
+ conv1o_t input_fm_buffer[64][3 + (2 * (1 - 1) / 2)][255 + (2 * (1 - 1) / 2)],
+ conv1o_t input_ftmap[64][255][255],
  int in,
  int h
 );
 
 void load_weight_buffer_c2(
- param_t weight_buffer[4][64][1][1],
- param_t conv2_weights[32][64][1][1],
+ conv2w_t weight_buffer[4][64][1][1],
+ conv2w_t conv2_weights[32][64][1][1],
  int out,
  int in
 );
 
 void export_output_buffer_c2(
- ftmap_t output_fm_buffer[4][3][255],
- ftmap_t output_ftmap[32][255][255],
- param_t biases[32],
+ conv2o_t output_fm_buffer[4][3][255],
+ conv2o_t output_ftmap[32][255][255],
+ conv2b_t biases[32],
  int out,
  int h
 );
 
 void clear_buffer_c2(
- ftmap_t output_fm_buffer[4][3][255]
+ conv2o_t output_fm_buffer[4][3][255]
 );
 
 
 
 
 void load_input_buffer_c3(
- ftmap_t input_fm_buffer[32][5 + (2 * (5 - 1) / 2)][255 + (2 * (5 - 1) / 2)],
- ftmap_t input_ftmap[32][255][255],
+ conv2o_t input_fm_buffer[32][5 + (2 * (5 - 1) / 2)][255 + (2 * (5 - 1) / 2)],
+ conv2o_t input_ftmap[32][255][255],
  int in,
  int h
 );
 
 void load_weight_buffer_c3(
- param_t weight_buffer[1][32][5][5],
- param_t conv1_weights[1][32][5][5],
+ conv3w_t weight_buffer[1][32][5][5],
+ conv3w_t conv3_weights[1][32][5][5],
  int out,
  int in
 );
 
 void export_output_buffer_c3(
- ftmap_t output_fm_buffer[1][5][255],
- ftmap_t output_ftmap[1][255][255],
- param_t biases[1],
+ output_t output_fm_buffer[1][5][255],
+ output_t output_ftmap[1][255][255],
+ conv3b_t biases[1],
  int out,
  int h
 );
 
 void clear_buffer_c3(
- ftmap_t output_fm_buffer[1][5][255]
+ output_t output_fm_buffer[1][5][255]
 );
 # 2 "src/conv2.cpp" 2
 # 1 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\iostream" 1 3
@@ -33543,22 +33560,22 @@ namespace std
 using namespace std;
 
 
-void conv2(ftmap_t input_ftmap[64][255][255],
-           param_t conv2_weights[32][64][1][1],
-           param_t conv2_biases[32],
-           ftmap_t output_ftmap[32][255][255])
+void conv2(conv1o_t input_ftmap[64][255][255],
+           conv2w_t conv2_weights[32][64][1][1],
+           conv2b_t conv2_biases[32],
+           conv2o_t output_ftmap[32][255][255])
 {
 
 
 
- static ftmap_t output_fm_buffer[4][3][255] = {0};
+ static conv2o_t output_fm_buffer[4][3][255] = {0};
 
 
- static ftmap_t input_fm_buffer[64][3 + (2 * (1 - 1) / 2)][255 + (2 * (1 - 1) / 2)];
+ static conv1o_t input_fm_buffer[64][3 + (2 * (1 - 1) / 2)][255 + (2 * (1 - 1) / 2)];
 #pragma HLS bind_storage variable=input_fm_buffer type=RAM_2P impl=LUTRAM
 
 
- static param_t weight_buffer[4][64][1][1];
+ static conv2w_t weight_buffer[4][64][1][1];
 
 
 
@@ -33591,7 +33608,7 @@ void conv2(ftmap_t input_ftmap[64][255][255],
 }
 
 
-void clear_buffer_c2(ftmap_t output_fm_buffer[4][3][255]) {
+void clear_buffer_c2(conv2o_t output_fm_buffer[4][3][255]) {
  CLEAR: for (int o = 0; o < 4; o++) {
  BH: for (int h = 0; h < 3; h++) {
 #pragma HLS UNROLL factor=3
@@ -33603,8 +33620,8 @@ void clear_buffer_c2(ftmap_t output_fm_buffer[4][3][255]) {
 
 
 void load_input_buffer_c2(
- ftmap_t input_fm_buffer[64][3 + (2 * (1 - 1) / 2)][255 + (2 * (1 - 1) / 2)],
- ftmap_t input_ftmap[64][255][255],
+ conv1o_t input_fm_buffer[64][3 + (2 * (1 - 1) / 2)][255 + (2 * (1 - 1) / 2)],
+ conv1o_t input_ftmap[64][255][255],
  int in,
  int h
 ) {
@@ -33612,28 +33629,28 @@ void load_input_buffer_c2(
  LOAD_INPUT: for (int bin = 0; bin < 64; bin++) {
  BH: for (int bh = 0; bh < 3; bh++) {
 
-  memcpy(&input_fm_buffer[bin][bh], &input_ftmap[in + bin][h + bh], 255 * sizeof(ftmap_t));
+  memcpy(&input_fm_buffer[bin][bh], &input_ftmap[in + bin][h + bh], 255 * sizeof(conv1o_t));
 
  }}
 }
 
 void load_weight_buffer_c2(
- param_t weight_buffer[4][64][1][1],
- param_t conv2_weights[32][64][1][1],
+ conv2w_t weight_buffer[4][64][1][1],
+ conv2w_t conv2_weights[32][64][1][1],
  int out,
  int in
 ) {
  LOAD_WEIGHTS: for (int bout = 0; bout < 4; bout++) {
 
-  memcpy(&weight_buffer[bout][0], &conv2_weights[bout + out][in], 64 * 1 * 1 * sizeof(param_t));
+  memcpy(&weight_buffer[bout][0], &conv2_weights[bout + out][in], 64 * 1 * 1 * sizeof(conv2w_t));
 
  }
 }
 
 void export_output_buffer_c2(
- ftmap_t output_fm_buffer[4][3][255],
- ftmap_t output_ftmap[32][255][255],
- param_t biases[32],
+ conv2o_t output_fm_buffer[4][3][255],
+ conv2o_t output_ftmap[32][255][255],
+ conv2b_t biases[32],
  int out,
  int h
 ) {
@@ -33652,7 +33669,7 @@ void export_output_buffer_c2(
    }
   }
 
-  memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], 255 * sizeof(ftmap_t));
+  memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], 255 * sizeof(conv2o_t));
  }}
 
  clear_buffer_c2(output_fm_buffer);

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_6'
 ================================================================
-* Date:           Thu Nov  2 22:33:17 2023
+* Date:           Thu Nov  2 23:32:47 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -94,31 +94,31 @@ ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface 
 ST_1 : Operation 11 [1/1] (0.42ns)   --->   "%store_ln0 = store i8 0, i8 %loop_index_1_i"   --->   Operation 11 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln0 = br void %load-store-loop.1.i"   --->   Operation 12 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%loop_index_1_i_load = load i8 %loop_index_1_i"   --->   Operation 13 'load' 'loop_index_1_i_load' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.76ns)   --->   "%exitcond17313 = icmp_eq  i8 %loop_index_1_i_load, i8 255"   --->   Operation 14 'icmp' 'exitcond17313' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.76ns)   --->   "%exitcond62113 = icmp_eq  i8 %loop_index_1_i_load, i8 255"   --->   Operation 14 'icmp' 'exitcond62113' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 15 [1/1] (0.76ns)   --->   "%empty = add i8 %loop_index_1_i_load, i8 1"   --->   Operation 15 'add' 'empty' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln0 = br i1 %exitcond17313, void %load-store-loop.1.i.split, void %for.inc45.1.i.exitStub"   --->   Operation 16 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%empty_191 = trunc i8 %loop_index_1_i_load"   --->   Operation 17 'trunc' 'empty_191' <Predicate = (!exitcond17313)> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i3.i7, i3 %or_ln138_read, i7 %empty_191"   --->   Operation 18 'bitconcatenate' 'tmp_s' <Predicate = (!exitcond17313)> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%tmp_140_cast = zext i10 %tmp_s"   --->   Operation 19 'zext' 'tmp_140_cast' <Predicate = (!exitcond17313)> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%conv3_float_255_255_float_32_5_5_float_float_255_255_o_28 = getelementptr i32 %conv3_float_255_255_float_32_5_5_float_float_255_255_o_1, i64 0, i64 %tmp_140_cast"   --->   Operation 20 'getelementptr' 'conv3_float_255_255_float_32_5_5_float_float_255_255_o_28' <Predicate = (!exitcond17313)> <Delay = 0.00>
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%conv3_float_255_255_float_32_5_5_float_float_255_255_o_29 = getelementptr i32 %conv3_float_255_255_float_32_5_5_float_float_255_255_o, i64 0, i64 %tmp_140_cast"   --->   Operation 21 'getelementptr' 'conv3_float_255_255_float_32_5_5_float_float_255_255_o_29' <Predicate = (!exitcond17313)> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %loop_index_1_i_load, i32 7"   --->   Operation 22 'bitselect' 'tmp' <Predicate = (!exitcond17313)> <Delay = 0.00>
-ST_1 : Operation 23 [2/2] (1.23ns)   --->   "%conv3_float_255_255_float_32_5_5_float_float_255_255_o_30 = load i10 %conv3_float_255_255_float_32_5_5_float_float_255_255_o_28"   --->   Operation 23 'load' 'conv3_float_255_255_float_32_5_5_float_float_255_255_o_30' <Predicate = (!exitcond17313)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 640> <RAM>
-ST_1 : Operation 24 [2/2] (1.23ns)   --->   "%conv3_float_255_255_float_32_5_5_float_float_255_255_o_31 = load i10 %conv3_float_255_255_float_32_5_5_float_float_255_255_o_29"   --->   Operation 24 'load' 'conv3_float_255_255_float_32_5_5_float_float_255_255_o_31' <Predicate = (!exitcond17313)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 640> <RAM>
-ST_1 : Operation 25 [1/1] (0.42ns)   --->   "%store_ln0 = store i8 %empty, i8 %loop_index_1_i"   --->   Operation 25 'store' 'store_ln0' <Predicate = (!exitcond17313)> <Delay = 0.42>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln0 = br i1 %exitcond62113, void %load-store-loop.1.i.split, void %for.inc45.1.i.exitStub"   --->   Operation 16 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%empty_198 = trunc i8 %loop_index_1_i_load"   --->   Operation 17 'trunc' 'empty_198' <Predicate = (!exitcond62113)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_77 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i3.i7, i3 %or_ln138_read, i7 %empty_198"   --->   Operation 18 'bitconcatenate' 'tmp_77' <Predicate = (!exitcond62113)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%tmp_77_cast = zext i10 %tmp_77"   --->   Operation 19 'zext' 'tmp_77_cast' <Predicate = (!exitcond62113)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_429 = getelementptr i24 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1, i64 0, i64 %tmp_77_cast"   --->   Operation 20 'getelementptr' 'conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_429' <Predicate = (!exitcond62113)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_430 = getelementptr i24 %conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255, i64 0, i64 %tmp_77_cast"   --->   Operation 21 'getelementptr' 'conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_430' <Predicate = (!exitcond62113)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %loop_index_1_i_load, i32 7"   --->   Operation 22 'bitselect' 'tmp' <Predicate = (!exitcond62113)> <Delay = 0.00>
+ST_1 : Operation 23 [2/2] (1.23ns)   --->   "%conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_431 = load i10 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_429"   --->   Operation 23 'load' 'conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_431' <Predicate = (!exitcond62113)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 640> <RAM>
+ST_1 : Operation 24 [2/2] (1.23ns)   --->   "%conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_432 = load i10 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_430"   --->   Operation 24 'load' 'conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_432' <Predicate = (!exitcond62113)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 640> <RAM>
+ST_1 : Operation 25 [1/1] (0.42ns)   --->   "%store_ln0 = store i8 %empty, i8 %loop_index_1_i"   --->   Operation 25 'store' 'store_ln0' <Predicate = (!exitcond62113)> <Delay = 0.42>
 
 State 2 <SV = 1> <Delay = 1.66>
 ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%o_addr = getelementptr i32 %o, i64 %sext_ln148_1_cast" [src/conv3.cpp:148->src/conv3.cpp:64]   --->   Operation 26 'getelementptr' 'o_addr' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 27 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 28 [1/2] (1.23ns)   --->   "%conv3_float_255_255_float_32_5_5_float_float_255_255_o_30 = load i10 %conv3_float_255_255_float_32_5_5_float_float_255_255_o_28"   --->   Operation 28 'load' 'conv3_float_255_255_float_32_5_5_float_float_255_255_o_30' <Predicate = (!exitcond17313)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 640> <RAM>
-ST_2 : Operation 29 [1/2] (1.23ns)   --->   "%conv3_float_255_255_float_32_5_5_float_float_255_255_o_31 = load i10 %conv3_float_255_255_float_32_5_5_float_float_255_255_o_29"   --->   Operation 29 'load' 'conv3_float_255_255_float_32_5_5_float_float_255_255_o_31' <Predicate = (!exitcond17313)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 640> <RAM>
-ST_2 : Operation 30 [1/1] (0.42ns)   --->   "%tmp_115 = mux i32 @_ssdm_op_Mux.ap_auto.2f32.i1, i32 %conv3_float_255_255_float_32_5_5_float_float_255_255_o_30, i32 %conv3_float_255_255_float_32_5_5_float_float_255_255_o_31, i1 %tmp"   --->   Operation 30 'mux' 'tmp_115' <Predicate = (!exitcond17313)> <Delay = 0.42> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 35 'ret' 'ret_ln0' <Predicate = (exitcond17313)> <Delay = 0.00>
+ST_2 : Operation 28 [1/2] (1.23ns)   --->   "%conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_431 = load i10 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_429"   --->   Operation 28 'load' 'conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_431' <Predicate = (!exitcond62113)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 640> <RAM>
+ST_2 : Operation 29 [1/2] (1.23ns)   --->   "%conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_432 = load i10 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_430"   --->   Operation 29 'load' 'conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_432' <Predicate = (!exitcond62113)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 24> <Depth = 640> <RAM>
+ST_2 : Operation 30 [1/1] (0.42ns)   --->   "%tmp_13 = mux i24 @_ssdm_op_Mux.ap_auto.2i24.i1, i24 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_431, i24 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_432, i1 %tmp"   --->   Operation 30 'mux' 'tmp_13' <Predicate = (!exitcond62113)> <Delay = 0.42> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 35 'ret' 'ret_ln0' <Predicate = (exitcond62113)> <Delay = 0.00>
 
 State 3 <SV = 2> <Delay = 7.30>
 ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255"   --->   Operation 31 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%empty_192 = bitcast i32 %tmp_115"   --->   Operation 32 'bitcast' 'empty_192' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 33 [1/1] (7.30ns)   --->   "%write_ln148 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %o_addr, i32 %empty_192, i4 15" [src/conv3.cpp:148->src/conv3.cpp:64]   --->   Operation 33 'write' 'write_ln148' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_13_cast = zext i24 %tmp_13"   --->   Operation 32 'zext' 'tmp_13_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (7.30ns)   --->   "%write_ln148 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %o_addr, i32 %tmp_13_cast, i4 15" [src/conv3.cpp:148->src/conv3.cpp:64]   --->   Operation 33 'write' 'write_ln148' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%br_ln0 = br void %load-store-loop.1.i"   --->   Operation 34 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 
 
@@ -136,42 +136,42 @@ Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
 Port [ o]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=4; pingpong=0; private_global=0; IO mode=m_axi:ce=0
 Port [ sext_ln148_1]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
 Port [ or_ln138]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ conv3_float_255_255_float_32_5_5_float_float_255_255_o_1]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
-Port [ conv3_float_255_255_float_32_5_5_float_float_255_255_o]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
 
 <LifeTime>
 <method=bitvector/>
-loop_index_1_i                                            (alloca           ) [ 0100]
-or_ln138_read                                             (read             ) [ 0000]
-sext_ln148_1_read                                         (read             ) [ 0000]
-sext_ln148_1_cast                                         (sext             ) [ 0110]
-specinterface_ln0                                         (specinterface    ) [ 0000]
-store_ln0                                                 (store            ) [ 0000]
-br_ln0                                                    (br               ) [ 0000]
-loop_index_1_i_load                                       (load             ) [ 0000]
-exitcond17313                                             (icmp             ) [ 0110]
-empty                                                     (add              ) [ 0000]
-br_ln0                                                    (br               ) [ 0000]
-empty_191                                                 (trunc            ) [ 0000]
-tmp_s                                                     (bitconcatenate   ) [ 0000]
-tmp_140_cast                                              (zext             ) [ 0000]
-conv3_float_255_255_float_32_5_5_float_float_255_255_o_28 (getelementptr    ) [ 0110]
-conv3_float_255_255_float_32_5_5_float_float_255_255_o_29 (getelementptr    ) [ 0110]
-tmp                                                       (bitselect        ) [ 0110]
-store_ln0                                                 (store            ) [ 0000]
-o_addr                                                    (getelementptr    ) [ 0101]
-specpipeline_ln0                                          (specpipeline     ) [ 0000]
-conv3_float_255_255_float_32_5_5_float_float_255_255_o_30 (load             ) [ 0000]
-conv3_float_255_255_float_32_5_5_float_float_255_255_o_31 (load             ) [ 0000]
-tmp_115                                                   (mux              ) [ 0101]
-speclooptripcount_ln0                                     (speclooptripcount) [ 0000]
-empty_192                                                 (bitcast          ) [ 0000]
-write_ln148                                               (write            ) [ 0000]
-br_ln0                                                    (br               ) [ 0000]
-ret_ln0                                                   (ret              ) [ 0000]
+loop_index_1_i                                                   (alloca           ) [ 0100]
+or_ln138_read                                                    (read             ) [ 0000]
+sext_ln148_1_read                                                (read             ) [ 0000]
+sext_ln148_1_cast                                                (sext             ) [ 0110]
+specinterface_ln0                                                (specinterface    ) [ 0000]
+store_ln0                                                        (store            ) [ 0000]
+br_ln0                                                           (br               ) [ 0000]
+loop_index_1_i_load                                              (load             ) [ 0000]
+exitcond62113                                                    (icmp             ) [ 0110]
+empty                                                            (add              ) [ 0000]
+br_ln0                                                           (br               ) [ 0000]
+empty_198                                                        (trunc            ) [ 0000]
+tmp_77                                                           (bitconcatenate   ) [ 0000]
+tmp_77_cast                                                      (zext             ) [ 0000]
+conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_429 (getelementptr    ) [ 0110]
+conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_430 (getelementptr    ) [ 0110]
+tmp                                                              (bitselect        ) [ 0110]
+store_ln0                                                        (store            ) [ 0000]
+o_addr                                                           (getelementptr    ) [ 0101]
+specpipeline_ln0                                                 (specpipeline     ) [ 0000]
+conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_431 (load             ) [ 0000]
+conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_432 (load             ) [ 0000]
+tmp_13                                                           (mux              ) [ 0101]
+speclooptripcount_ln0                                            (speclooptripcount) [ 0000]
+tmp_13_cast                                                      (zext             ) [ 0000]
+write_ln148                                                      (write            ) [ 0000]
+br_ln0                                                           (br               ) [ 0000]
+ret_ln0                                                          (ret              ) [ 0000]
 </LifeTime>
 
 <model>
@@ -204,22 +204,22 @@ ret_ln0                                                   (ret              ) [ 
 </bind>
 </comp>
 
-<comp id="6" class="1000" name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_1">
+<comp id="6" class="1000" name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1">
 <pin_list>
 <pin id="7" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_1"/><MemPortTyVec>1 3 </MemPortTyVec>
+<StgValue><ssdm name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1"/><MemPortTyVec>1 3 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="8" class="1000" name="conv3_float_255_255_float_32_5_5_float_float_255_255_o">
+<comp id="8" class="1000" name="conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255">
 <pin_list>
 <pin id="9" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="conv3_float_255_255_float_32_5_5_float_float_255_255_o"/><MemPortTyVec>1 3 </MemPortTyVec>
+<StgValue><ssdm name="conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255"/><MemPortTyVec>1 3 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
@@ -427,7 +427,7 @@ ret_ln0                                                   (ret              ) [ 
 <pin id="55" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Mux.ap_auto.2f32.i1"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_Mux.ap_auto.2i24.i1"/></StgValue>
 </bind>
 </comp>
 
@@ -506,7 +506,7 @@ ret_ln0                                                   (ret              ) [ 
 <pin_list>
 <pin id="81" dir="0" index="0" bw="0" slack="0"/>
 <pin id="82" dir="0" index="1" bw="32" slack="1"/>
-<pin id="83" dir="0" index="2" bw="32" slack="0"/>
+<pin id="83" dir="0" index="2" bw="24" slack="0"/>
 <pin id="84" dir="0" index="3" bw="1" slack="0"/>
 <pin id="85" dir="1" index="4" bw="0" slack="2147483647"/>
 </pin_list>
@@ -516,55 +516,55 @@ ret_ln0                                                   (ret              ) [ 
 </bind>
 </comp>
 
-<comp id="88" class="1004" name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_28_gep_fu_88">
+<comp id="88" class="1004" name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_429_gep_fu_88">
 <pin_list>
-<pin id="89" dir="0" index="0" bw="32" slack="0"/>
+<pin id="89" dir="0" index="0" bw="24" slack="0"/>
 <pin id="90" dir="0" index="1" bw="1" slack="0"/>
 <pin id="91" dir="0" index="2" bw="10" slack="0"/>
 <pin id="92" dir="1" index="3" bw="10" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="conv3_float_255_255_float_32_5_5_float_float_255_255_o_28/1 "/>
+<opset="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_429/1 "/>
 </bind>
 </comp>
 
-<comp id="95" class="1004" name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_29_gep_fu_95">
+<comp id="95" class="1004" name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_430_gep_fu_95">
 <pin_list>
-<pin id="96" dir="0" index="0" bw="32" slack="0"/>
+<pin id="96" dir="0" index="0" bw="24" slack="0"/>
 <pin id="97" dir="0" index="1" bw="1" slack="0"/>
 <pin id="98" dir="0" index="2" bw="10" slack="0"/>
 <pin id="99" dir="1" index="3" bw="10" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="conv3_float_255_255_float_32_5_5_float_float_255_255_o_29/1 "/>
+<opset="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_430/1 "/>
 </bind>
 </comp>
 
 <comp id="102" class="1004" name="grp_access_fu_102">
 <pin_list>
 <pin id="103" dir="0" index="0" bw="10" slack="0"/>
-<pin id="104" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="104" dir="0" index="1" bw="24" slack="2147483647"/>
 <pin id="105" dir="0" index="2" bw="0" slack="2147483647"/>
-<pin id="106" dir="1" index="3" bw="32" slack="0"/>
+<pin id="106" dir="1" index="3" bw="24" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
-<opset="conv3_float_255_255_float_32_5_5_float_float_255_255_o_30/1 "/>
+<opset="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_431/1 "/>
 </bind>
 </comp>
 
 <comp id="108" class="1004" name="grp_access_fu_108">
 <pin_list>
 <pin id="109" dir="0" index="0" bw="10" slack="0"/>
-<pin id="110" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="110" dir="0" index="1" bw="24" slack="2147483647"/>
 <pin id="111" dir="0" index="2" bw="0" slack="2147483647"/>
-<pin id="112" dir="1" index="3" bw="32" slack="0"/>
+<pin id="112" dir="1" index="3" bw="24" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
-<opset="conv3_float_255_255_float_32_5_5_float_float_255_255_o_31/1 "/>
+<opset="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_432/1 "/>
 </bind>
 </comp>
 
@@ -602,7 +602,7 @@ ret_ln0                                                   (ret              ) [ 
 </bind>
 </comp>
 
-<comp id="126" class="1004" name="exitcond17313_fu_126">
+<comp id="126" class="1004" name="exitcond62113_fu_126">
 <pin_list>
 <pin id="127" dir="0" index="0" bw="8" slack="0"/>
 <pin id="128" dir="0" index="1" bw="1" slack="0"/>
@@ -610,7 +610,7 @@ ret_ln0                                                   (ret              ) [ 
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="exitcond17313/1 "/>
+<opset="exitcond62113/1 "/>
 </bind>
 </comp>
 
@@ -626,18 +626,18 @@ ret_ln0                                                   (ret              ) [ 
 </bind>
 </comp>
 
-<comp id="138" class="1004" name="empty_191_fu_138">
+<comp id="138" class="1004" name="empty_198_fu_138">
 <pin_list>
 <pin id="139" dir="0" index="0" bw="8" slack="0"/>
 <pin id="140" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="empty_191/1 "/>
+<opset="empty_198/1 "/>
 </bind>
 </comp>
 
-<comp id="142" class="1004" name="tmp_s_fu_142">
+<comp id="142" class="1004" name="tmp_77_fu_142">
 <pin_list>
 <pin id="143" dir="0" index="0" bw="10" slack="0"/>
 <pin id="144" dir="0" index="1" bw="3" slack="0"/>
@@ -646,18 +646,18 @@ ret_ln0                                                   (ret              ) [ 
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="tmp_s/1 "/>
+<opset="tmp_77/1 "/>
 </bind>
 </comp>
 
-<comp id="150" class="1004" name="tmp_140_cast_fu_150">
+<comp id="150" class="1004" name="tmp_77_cast_fu_150">
 <pin_list>
 <pin id="151" dir="0" index="0" bw="10" slack="0"/>
 <pin id="152" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_140_cast/1 "/>
+<opset="tmp_77_cast/1 "/>
 </bind>
 </comp>
 
@@ -698,28 +698,28 @@ ret_ln0                                                   (ret              ) [ 
 </bind>
 </comp>
 
-<comp id="174" class="1004" name="tmp_115_fu_174">
+<comp id="174" class="1004" name="tmp_13_fu_174">
 <pin_list>
-<pin id="175" dir="0" index="0" bw="32" slack="0"/>
-<pin id="176" dir="0" index="1" bw="32" slack="0"/>
-<pin id="177" dir="0" index="2" bw="32" slack="0"/>
+<pin id="175" dir="0" index="0" bw="24" slack="0"/>
+<pin id="176" dir="0" index="1" bw="24" slack="0"/>
+<pin id="177" dir="0" index="2" bw="24" slack="0"/>
 <pin id="178" dir="0" index="3" bw="1" slack="1"/>
-<pin id="179" dir="1" index="4" bw="32" slack="1"/>
+<pin id="179" dir="1" index="4" bw="24" slack="1"/>
 </pin_list>
 <bind>
 <opcode="mux(1196) " fcode="mux"/>
-<opset="tmp_115/2 "/>
+<opset="tmp_13/2 "/>
 </bind>
 </comp>
 
-<comp id="183" class="1004" name="empty_192_fu_183">
+<comp id="183" class="1004" name="tmp_13_cast_fu_183">
 <pin_list>
-<pin id="184" dir="0" index="0" bw="32" slack="1"/>
+<pin id="184" dir="0" index="0" bw="24" slack="1"/>
 <pin id="185" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
-<opcode="bitcast(44) " fcode="bitcast"/>
-<opset="empty_192/3 "/>
+<opcode="zext(34) " fcode="zext"/>
+<opset="tmp_13_cast/3 "/>
 </bind>
 </comp>
 
@@ -743,33 +743,33 @@ ret_ln0                                                   (ret              ) [ 
 </bind>
 </comp>
 
-<comp id="199" class="1005" name="exitcond17313_reg_199">
+<comp id="199" class="1005" name="exitcond62113_reg_199">
 <pin_list>
 <pin id="200" dir="0" index="0" bw="1" slack="1"/>
 <pin id="201" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="exitcond17313 "/>
+<opset="exitcond62113 "/>
 </bind>
 </comp>
 
-<comp id="203" class="1005" name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_28_reg_203">
+<comp id="203" class="1005" name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_429_reg_203">
 <pin_list>
 <pin id="204" dir="0" index="0" bw="10" slack="1"/>
 <pin id="205" dir="1" index="1" bw="10" slack="1"/>
 </pin_list>
 <bind>
-<opset="conv3_float_255_255_float_32_5_5_float_float_255_255_o_28 "/>
+<opset="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_429 "/>
 </bind>
 </comp>
 
-<comp id="208" class="1005" name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_29_reg_208">
+<comp id="208" class="1005" name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_430_reg_208">
 <pin_list>
 <pin id="209" dir="0" index="0" bw="10" slack="1"/>
 <pin id="210" dir="1" index="1" bw="10" slack="1"/>
 </pin_list>
 <bind>
-<opset="conv3_float_255_255_float_32_5_5_float_float_255_255_o_29 "/>
+<opset="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_430 "/>
 </bind>
 </comp>
 
@@ -793,13 +793,13 @@ ret_ln0                                                   (ret              ) [ 
 </bind>
 </comp>
 
-<comp id="223" class="1005" name="tmp_115_reg_223">
+<comp id="223" class="1005" name="tmp_13_reg_223">
 <pin_list>
-<pin id="224" dir="0" index="0" bw="32" slack="1"/>
-<pin id="225" dir="1" index="1" bw="32" slack="1"/>
+<pin id="224" dir="0" index="0" bw="24" slack="1"/>
+<pin id="225" dir="1" index="1" bw="24" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_115 "/>
+<opset="tmp_13 "/>
 </bind>
 </comp>
 
@@ -921,26 +921,26 @@ ret_ln0                                                   (ret              ) [ 
  - Input state : 
 	Port: conv3_Pipeline_6 : sext_ln148_1 | {1 }
 	Port: conv3_Pipeline_6 : or_ln138 | {1 }
-	Port: conv3_Pipeline_6 : conv3_float_255_255_float_32_5_5_float_float_255_255_o_1 | {1 2 }
-	Port: conv3_Pipeline_6 : conv3_float_255_255_float_32_5_5_float_float_255_255_o | {1 2 }
+	Port: conv3_Pipeline_6 : conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1 | {1 2 }
+	Port: conv3_Pipeline_6 : conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255 | {1 2 }
   - Chain level:
 	State 1
 		store_ln0 : 1
 		loop_index_1_i_load : 1
-		exitcond17313 : 2
+		exitcond62113 : 2
 		empty : 2
 		br_ln0 : 3
-		empty_191 : 2
-		tmp_s : 3
-		tmp_140_cast : 4
-		conv3_float_255_255_float_32_5_5_float_float_255_255_o_28 : 5
-		conv3_float_255_255_float_32_5_5_float_float_255_255_o_29 : 5
+		empty_198 : 2
+		tmp_77 : 3
+		tmp_77_cast : 4
+		conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_429 : 5
+		conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_430 : 5
 		tmp : 2
-		conv3_float_255_255_float_32_5_5_float_float_255_255_o_30 : 6
-		conv3_float_255_255_float_32_5_5_float_float_255_255_o_31 : 6
+		conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_431 : 6
+		conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_432 : 6
 		store_ln0 : 3
 	State 2
-		tmp_115 : 1
+		tmp_13 : 1
 	State 3
 		write_ln148 : 1
 
@@ -953,11 +953,11 @@ ret_ln0                                                   (ret              ) [ 
 |----------|------------------------------|---------|---------|
 | Operation|        Functional Unit       |    FF   |   LUT   |
 |----------|------------------------------|---------|---------|
-|   icmp   |     exitcond17313_fu_126     |    0    |    15   |
+|   icmp   |     exitcond62113_fu_126     |    0    |    15   |
 |----------|------------------------------|---------|---------|
 |    add   |         empty_fu_132         |    0    |    15   |
 |----------|------------------------------|---------|---------|
-|    mux   |        tmp_115_fu_174        |    0    |    9    |
+|    mux   |         tmp_13_fu_174        |    0    |    9    |
 |----------|------------------------------|---------|---------|
 |   read   |   or_ln138_read_read_fu_68   |    0    |    0    |
 |          | sext_ln148_1_read_read_fu_74 |    0    |    0    |
@@ -966,11 +966,12 @@ ret_ln0                                                   (ret              ) [ 
 |----------|------------------------------|---------|---------|
 |   sext   |   sext_ln148_1_cast_fu_114   |    0    |    0    |
 |----------|------------------------------|---------|---------|
-|   trunc  |       empty_191_fu_138       |    0    |    0    |
+|   trunc  |       empty_198_fu_138       |    0    |    0    |
 |----------|------------------------------|---------|---------|
-|bitconcatenate|         tmp_s_fu_142         |    0    |    0    |
+|bitconcatenate|         tmp_77_fu_142        |    0    |    0    |
 |----------|------------------------------|---------|---------|
-|   zext   |      tmp_140_cast_fu_150     |    0    |    0    |
+|   zext   |      tmp_77_cast_fu_150      |    0    |    0    |
+|          |      tmp_13_cast_fu_183      |    0    |    0    |
 |----------|------------------------------|---------|---------|
 | bitselect|          tmp_fu_156          |    0    |    0    |
 |----------|------------------------------|---------|---------|
@@ -981,20 +982,20 @@ Memories:
 N/A
 
 * Register list:
-+-----------------------------------------------------------------+--------+
-|                                                                 |   FF   |
-+-----------------------------------------------------------------+--------+
-|conv3_float_255_255_float_32_5_5_float_float_255_255_o_28_reg_203|   10   |
-|conv3_float_255_255_float_32_5_5_float_float_255_255_o_29_reg_208|   10   |
-|                      exitcond17313_reg_199                      |    1   |
-|                      loop_index_1_i_reg_187                     |    8   |
-|                          o_addr_reg_218                         |   32   |
-|                    sext_ln148_1_cast_reg_194                    |   64   |
-|                         tmp_115_reg_223                         |   32   |
-|                           tmp_reg_213                           |    1   |
-+-----------------------------------------------------------------+--------+
-|                              Total                              |   158  |
-+-----------------------------------------------------------------+--------+
++------------------------------------------------------------------------+--------+
+|                                                                        |   FF   |
++------------------------------------------------------------------------+--------+
+|conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_429_reg_203|   10   |
+|conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_430_reg_208|   10   |
+|                          exitcond62113_reg_199                         |    1   |
+|                         loop_index_1_i_reg_187                         |    8   |
+|                             o_addr_reg_218                             |   32   |
+|                        sext_ln148_1_cast_reg_194                       |   64   |
+|                             tmp_13_reg_223                             |   24   |
+|                               tmp_reg_213                              |    1   |
++------------------------------------------------------------------------+--------+
+|                                  Total                                 |   150  |
++------------------------------------------------------------------------+--------+
 
 * Multiplexer (MUX) list: 
 |-------------------|------|------|------|--------||---------||---------|
@@ -1015,7 +1016,7 @@ N/A
 |  Function |    -   |    0   |   39   |
 |   Memory  |    -   |    -   |    -   |
 |Multiplexer|    0   |    -   |   18   |
-|  Register |    -   |   158  |    -   |
+|  Register |    -   |   150  |    -   |
 +-----------+--------+--------+--------+
-|   Total   |    0   |   158  |   57   |
+|   Total   |    0   |   150  |   57   |
 +-----------+--------+--------+--------+

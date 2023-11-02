@@ -16,7 +16,7 @@ set C_modelName {conv2_Pipeline_BW6}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ add_ln63_1 int 12 regular  }
-	{ output_fm_buffer float 32 regular {array 3060 { 0 3 } 0 1 } {global 1}  }
+	{ output_fm_buffer int 32 regular {array 3060 { 0 3 } 0 1 } {global 1}  }
 }
 set hasAXIMCache 0
 set C_modelArgMapList {[ 

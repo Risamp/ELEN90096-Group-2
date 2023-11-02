@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2_Pipeline_BW5'" level="0">
-<item name = "Date">Thu Nov  2 22:33:36 2023
+<item name = "Date">Thu Nov  2 23:33:08 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -78,23 +78,23 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln61_fu_72_p2">+, 0, 0, 15, 8, 1</column>
-<column name="add_ln63_1_fu_82_p2">+, 0, 0, 19, 12, 12</column>
-<column name="icmp_ln61_fu_66_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="add_ln61_fu_70_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln63_1_fu_80_p2">+, 0, 0, 19, 12, 12</column>
+<column name="icmp_ln61_fu_64_p2">icmp, 0, 0, 15, 8, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_sig_allocacmp_w">9, 2, 8, 16</column>
-<column name="w_3_fu_34">9, 2, 8, 16</column>
+<column name="w_3_fu_32">9, 2, 8, 16</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="w_3_fu_34">8, 0, 8, 0</column>
+<column name="w_3_fu_32">8, 0, 8, 0</column>
 </table>
 </item>
 </section>

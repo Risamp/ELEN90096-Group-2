@@ -647,8 +647,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>tmp_370</name>
-<Object>tmp_370</Object>
+<name>tmp_235</name>
+<Object>tmp_235</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -658,8 +658,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0</name>
-<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1</Object>
+<name>conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_address0</name>
+<Object>conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -669,8 +669,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0</name>
-<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1</Object>
+<name>conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_ce0</name>
+<Object>conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -680,8 +680,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_q0</name>
-<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1</Object>
+<name>conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_q0</name>
+<Object>conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -691,8 +691,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address0</name>
-<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_ou</Object>
+<name>conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_address0</name>
+<Object>conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -702,8 +702,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>conv1_float_255_255_float_1_9_9_float_float_255_255_ou_ce0</name>
-<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_ou</Object>
+<name>conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_ce0</name>
+<Object>conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -713,8 +713,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>conv1_float_255_255_float_1_9_9_float_float_255_255_ou_q0</name>
-<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_ou</Object>
+<name>conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_q0</name>
+<Object>conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>

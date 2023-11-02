@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1'" level="0">
-<item name = "Date">Thu Nov  2 22:32:38 2023
+<item name = "Date">Thu Nov  2 23:32:24 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.360 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,31 +24,31 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">189137904, 189137904, 1.891 sec, 1.891 sec, 189137904, 189137904, no</column>
+<column name="">184894840, 184894840, 1.849 sec, 1.849 sec, 184894840, 184894840, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_conv1_Pipeline_OUT_ROW_COL_fu_566">conv1_Pipeline_OUT_ROW_COL, 1254651, 1254651, 12.547 ms, 12.547 ms, 1254651, 1254651, no</column>
-<column name="grp_conv1_Pipeline_CLEAR_BH_BW_fu_586">conv1_Pipeline_CLEAR_BH_BW, 30602, 30602, 0.306 ms, 0.306 ms, 30602, 30602, no</column>
-<column name="grp_conv1_Pipeline_RELU_fu_594">conv1_Pipeline_RELU, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
-<column name="grp_conv1_Pipeline_3_fu_604">conv1_Pipeline_3, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_conv1_Pipeline_OUT_ROW_COL_fu_576">conv1_Pipeline_OUT_ROW_COL, 1254652, 1254652, 12.547 ms, 12.547 ms, 1254652, 1254652, no</column>
+<column name="grp_conv1_Pipeline_CLEAR_BH_BW_fu_596">conv1_Pipeline_CLEAR_BH_BW, 30602, 30602, 0.306 ms, 0.306 ms, 30602, 30602, no</column>
+<column name="grp_conv1_Pipeline_RELU_fu_604">conv1_Pipeline_RELU, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_conv1_Pipeline_3_fu_615">conv1_Pipeline_3, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILE_ROW">189137903, 189137903, 11125759, -, -, 17, no</column>
+<column name="- TILE_ROW">184894839, 184894839, 10876167, -, -, 17, no</column>
 <column name=" + BH">77924, 77924, 3388, -, -, 23, no</column>
 <column name="  ++ PAD">52, 52, 13, -, -, 4, no</column>
 <column name="  ++ BH.2">3315, 3315, 13, -, -, 255, no</column>
-<column name=" + TILE_OUT">11047824, 11047824, 1380978, -, -, 8, no</column>
+<column name=" + TILE_OUT">10798232, 10798232, 1349779, -, -, 8, no</column>
 <column name="  ++ LOAD_WEIGHTS">2176, 2176, 272, -, -, 8, no</column>
 <column name="   +++ K">270, 270, 30, -, -, 9, no</column>
 <column name="    ++++ K.1">28, 28, 3, -, -, 9, no</column>
-<column name="  ++ EXPORT">93544, 93544, 11693, -, -, 8, no</column>
-<column name="   +++ BH">11685, 11685, 779, -, -, 15, no</column>
+<column name="  ++ EXPORT">62344, 62344, 7793, -, -, 8, no</column>
+<column name="   +++ BH">7785, 7785, 519, -, -, 15, no</column>
 </table>
 </item>
 </section>

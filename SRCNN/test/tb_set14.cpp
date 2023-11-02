@@ -9,18 +9,18 @@
 
 using namespace std;
 
-ftmap_t img_LR_set14[N0][H][W];  // low resolution input image
-ftmap_t img_HR_set14[N0][H][W];  // high-resolution output image
+input_t img_LR_set14[N0][H][W];  // low resolution input image
+output_t img_HR_set14[N0][H][W];  // high-resolution output image
 ftmap_t img_GT_set14[N0][H][W];
-ftmap_t layer_1_output_set14[N1][H][W] = {0};
-ftmap_t layer_2_output_set14[N2][H][W] = {0};
+conv1o_t layer_1_output_set14[N1][H][W] = {0};
+conv2o_t layer_2_output_set14[N2][H][W] = {0};
 
-param_t conv1_weights_set14[N1][N0][F1][F1];
-param_t conv1_biases_set14[N1];
-param_t conv2_weights_set14[N2][N1][F2][F2];
-param_t conv2_biases_set14[N2];
-param_t conv3_weights_set14[N3][N2][F3][F3];
-param_t conv3_biases_set14[N3];
+conv1w_t conv1_weights_set14[N1][N0][F1][F1];
+conv1b_t conv1_biases_set14[N1];
+conv2w_t conv2_weights_set14[N2][N1][F2][F2];
+conv2b_t conv2_biases_set14[N2];
+conv3w_t conv3_weights_set14[N3][N2][F3][F3];
+conv3b_t conv3_biases_set14[N3];
 
 // PSNR from matlab, obtained from comparing the ground truth (GT) with the software SRCNN from matlab
 double software_HR_psnr[] = {
@@ -61,22 +61,22 @@ int tb_set14()
 {
 
     // load conv weights and biases
-    load_param("./weights/conv1_weights_3x_flp.bin",
+    load_conv1w("./weights/conv1_weights_3x_flp.bin",
                &conv1_weights_set14[0][0][0][0],
                N1*N0*F1*F1);
-    load_param("./weights/conv1_biases_3x_flp.bin",
+    load_conv1b("./weights/conv1_biases_3x_flp.bin",
                &conv1_biases_set14[0],
                N1);
-    load_param("./weights/conv2_weights_3x_flp.bin",
+    load_conv2w("./weights/conv2_weights_3x_flp.bin",
                &conv2_weights_set14[0][0][0][0],
                N2*N1*F2*F2);
-    load_param("./weights/conv2_biases_3x_flp.bin",
+    load_conv2b("./weights/conv2_biases_3x_flp.bin",
                &conv2_biases_set14[0],
                N2);
-    load_param("./weights/conv3_weights_3x_flp.bin",
+    load_conv3w("./weights/conv3_weights_3x_flp.bin",
                &conv3_weights_set14[0][0][0][0],
                N3*N2*F3*F3);
-    load_param("./weights/conv3_biases_3x_flp.bin",
+    load_conv3b("./weights/conv3_biases_3x_flp.bin",
                &conv3_biases_set14[0],
                N3);
 
@@ -111,7 +111,7 @@ int tb_set14()
 				std::string GT_filename(ent->d_name);
 				GT_filename.replace(LR_pos, 2, "GT");
 
-				load_image(directoryPath + GT_filename, &img_GT_set14[0][0][0], N3*H*W);
+				load_golden_image(directoryPath + GT_filename, &img_GT_set14[0][0][0], N3*H*W);
 
 				srcnn(img_LR_set14,
 					  conv1_weights_set14,

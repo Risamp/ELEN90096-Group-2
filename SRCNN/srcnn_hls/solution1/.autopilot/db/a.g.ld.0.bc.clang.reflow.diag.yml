@@ -2,7 +2,7 @@
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 45, Column: 7 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Loop '''
   - LoopName:        KR1
@@ -12,7 +12,7 @@ Args:
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 51, Column: 7 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Loop '''
   - LoopName:        KC1
@@ -22,7 +22,7 @@ Args:
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 96, Column: 8 }
-Function:        _Z20load_input_buffer_c3PA9_A259_fPA255_A255_fii
+Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          'Loop '''
   - LoopName:        PAD
@@ -32,7 +32,7 @@ Args:
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 107, Column: 3 }
-Function:        _Z20load_input_buffer_c3PA9_A259_fPA255_A255_fii
+Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          'Loop '''
   - LoopName:        anonymous
@@ -42,7 +42,7 @@ Args:
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 45, Column: 7 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Loop '''
   - LoopName:        KR1
@@ -52,7 +52,7 @@ Args:
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 51, Column: 13 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Loop '''
   - LoopName:        KC1
@@ -62,7 +62,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        COL
@@ -80,7 +80,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KR1
@@ -96,7 +96,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -112,7 +112,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -128,7 +128,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -144,7 +144,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -160,7 +160,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -176,7 +176,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KR1
@@ -192,7 +192,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -208,7 +208,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -224,7 +224,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -240,7 +240,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -256,7 +256,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -272,7 +272,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KR1
@@ -288,7 +288,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -304,7 +304,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -320,7 +320,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -336,7 +336,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -352,7 +352,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -368,7 +368,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 132, Column: 0 }
-Function:        _Z23export_output_buffer_c3PA5_A255_fPA255_S_Pfii
+Function:        _Z23export_output_buffer_c3PA5_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_PS_ILi15ELi1ELS0_5ELS1_3ELi0EEii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        EXPORTH
@@ -386,7 +386,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 69, Column: 0 }
-Function:        _Z15clear_buffer_c3PA5_A255_f
+Function:        _Z15clear_buffer_c3PA5_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        CLEARH
@@ -404,7 +404,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 85, Column: 0 }
-Function:        _Z20load_input_buffer_c3PA9_A259_fPA255_A255_fii
+Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        PAD
@@ -420,7 +420,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv3.cpp, Line: 85, Column: 0 }
-Function:        _Z20load_input_buffer_c3PA9_A259_fPA255_A255_fii
+Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        anonymous
@@ -436,7 +436,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
 DebugLoc:        { File: src/conv2.cpp, Line: 102, Column: 0 }
-Function:        _Z23export_output_buffer_c2PA3_A255_fPA255_S_Pfii
+Function:        _Z23export_output_buffer_c2PA3_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_PS_ILi10ELi1ELS0_5ELS1_3ELi0EEii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        BH
@@ -454,7 +454,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartially2FullyUnroll
 DebugLoc:        { File: src/conv2.cpp, Line: 57, Column: 0 }
-Function:        _Z15clear_buffer_c2PA3_A255_f
+Function:        _Z15clear_buffer_c2PA3_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        BH
@@ -473,7 +473,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv2.cpp, Line: 57, Column: 0 }
-Function:        _Z15clear_buffer_c2PA3_A255_f
+Function:        _Z15clear_buffer_c2PA3_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        BH
@@ -489,7 +489,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KR1
@@ -505,7 +505,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -521,7 +521,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -537,7 +537,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -553,7 +553,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -569,7 +569,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -585,7 +585,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -601,7 +601,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -617,7 +617,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -633,7 +633,7 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        KC1
@@ -649,13 +649,13 @@ Args:
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/conv1.cpp, Line: 86, Column: 0 }
-Function:        _Z20load_input_buffer_c1PA23_A263_fPA255_A255_fii
+Function:        _Z20load_input_buffer_c1PA23_A263_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          'Inlining function '''
   - Callee:          'clamp(int, int, int)'
     DebugLoc:        { File: src/srcnn.cpp, Line: 54, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'load_input_buffer_c1(float (*) [23][263], float (*) [255][255], int, int)'
+  - Caller:          'load_input_buffer_c1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [23][263], ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
     DebugLoc:        { File: src/conv1.cpp, Line: 86, Column: 0 }
   - String:          ''''
 ...
@@ -663,13 +663,13 @@ Args:
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/conv1.cpp, Line: 132, Column: 0 }
-Function:        _Z23export_output_buffer_c1PA15_A255_fPA255_S_Pfii
+Function:        _Z23export_output_buffer_c1PA15_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_PS_ILi10ELi1ELS0_5ELS1_3ELi0EEii
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'clear_buffer_c1(float (*) [15][255])'
+  - Callee:          'clear_buffer_c1(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [15][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 70, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'export_output_buffer_c1(float (*) [15][255], float (*) [255][255], float*, int, int)'
+  - Caller:          'export_output_buffer_c1(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [15][255], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)'
     DebugLoc:        { File: src/conv1.cpp, Line: 132, Column: 0 }
   - String:          ''''
 ...
@@ -677,13 +677,13 @@ Args:
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'load_input_buffer_c1(float (*) [23][263], float (*) [255][255], int, int)'
+  - Callee:          'load_input_buffer_c1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [23][263], ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
     DebugLoc:        { File: src/conv1.cpp, Line: 86, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+  - Caller:          'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ''''
 ...
@@ -691,13 +691,13 @@ Args:
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'load_weight_buffer_c1(float (*) [1][9][9], float (*) [1][9][9], int, int)'
+  - Callee:          'load_weight_buffer_c1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], int, int)'
     DebugLoc:        { File: src/conv1.cpp, Line: 114, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+  - Caller:          'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ''''
 ...
@@ -705,13 +705,13 @@ Args:
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'export_output_buffer_c1(float (*) [15][255], float (*) [255][255], float*, int, int)'
+  - Callee:          'export_output_buffer_c1(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [15][255], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)'
     DebugLoc:        { File: src/conv1.cpp, Line: 132, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+  - Caller:          'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ''''
 ...
@@ -719,13 +719,13 @@ Args:
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/conv2.cpp, Line: 102, Column: 0 }
-Function:        _Z23export_output_buffer_c2PA3_A255_fPA255_S_Pfii
+Function:        _Z23export_output_buffer_c2PA3_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_PS_ILi10ELi1ELS0_5ELS1_3ELi0EEii
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'clear_buffer_c2(float (*) [3][255])'
+  - Callee:          'clear_buffer_c2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 57, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'export_output_buffer_c2(float (*) [3][255], float (*) [255][255], float*, int, int)'
+  - Caller:          'export_output_buffer_c2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][255], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)'
     DebugLoc:        { File: src/conv2.cpp, Line: 102, Column: 0 }
   - String:          ''''
 ...
@@ -733,13 +733,13 @@ Args:
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'load_input_buffer_c2(float (*) [3][255], float (*) [255][255], int, int)'
+  - Callee:          'load_input_buffer_c2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][255], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
     DebugLoc:        { File: src/conv2.cpp, Line: 73, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+  - Caller:          'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ''''
 ...
@@ -747,13 +747,13 @@ Args:
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'load_weight_buffer_c2(float (*) [64][1][1], float (*) [64][1][1], int, int)'
+  - Callee:          'load_weight_buffer_c2(ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], int, int)'
     DebugLoc:        { File: src/conv2.cpp, Line: 88, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+  - Caller:          'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ''''
 ...
@@ -761,13 +761,13 @@ Args:
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'export_output_buffer_c2(float (*) [3][255], float (*) [255][255], float*, int, int)'
+  - Callee:          'export_output_buffer_c2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][255], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)'
     DebugLoc:        { File: src/conv2.cpp, Line: 102, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+  - Caller:          'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ''''
 ...
@@ -775,13 +775,13 @@ Args:
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/conv3.cpp, Line: 85, Column: 0 }
-Function:        _Z20load_input_buffer_c3PA9_A259_fPA255_A255_fii
+Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          'Inlining function '''
   - Callee:          'clamp(int, int, int)'
     DebugLoc:        { File: src/srcnn.cpp, Line: 54, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'load_input_buffer_c3(float (*) [9][259], float (*) [255][255], int, int)'
+  - Caller:          'load_input_buffer_c3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [9][259], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
     DebugLoc:        { File: src/conv3.cpp, Line: 85, Column: 0 }
   - String:          ''''
 ...
@@ -789,13 +789,13 @@ Args:
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/conv3.cpp, Line: 132, Column: 0 }
-Function:        _Z23export_output_buffer_c3PA5_A255_fPA255_S_Pfii
+Function:        _Z23export_output_buffer_c3PA5_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_S3_PS_ILi15ELi1ELS0_5ELS1_3ELi0EEii
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'clear_buffer_c3(float (*) [5][255])'
+  - Callee:          'clear_buffer_c3(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [5][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 69, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'export_output_buffer_c3(float (*) [5][255], float (*) [255][255], float*, int, int)'
+  - Caller:          'export_output_buffer_c3(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [5][255], ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)'
     DebugLoc:        { File: src/conv3.cpp, Line: 132, Column: 0 }
   - String:          ''''
 ...
@@ -803,13 +803,13 @@ Args:
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'load_weight_buffer_c3(float (*) [32][5][5], float (*) [32][5][5], int, int)'
+  - Callee:          'load_weight_buffer_c3(ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], int, int)'
     DebugLoc:        { File: src/conv3.cpp, Line: 116, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
+  - Caller:          'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
   - String:          ''''
 ...
@@ -817,27 +817,20 @@ Args:
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'export_output_buffer_c3(float (*) [5][255], float (*) [255][255], float*, int, int)'
+  - Callee:          'export_output_buffer_c3(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [5][255], ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)'
     DebugLoc:        { File: src/conv3.cpp, Line: 132, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
+  - Caller:          'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
   - String:          ''''
 ...
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
 Args:            
   - String:          The program may have out of bound array access
 ...
@@ -845,12 +838,12 @@ Args:
 Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: src/conv3.cpp, Line: 22, Column: 0 }
-Function:        _Z20load_input_buffer_c3PA9_A259_fPA255_A255_fii
+Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          'Applying '
   - String:          array_partition
   - String:          ' to '''
-  - UOName:          _ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E15input_fm_buffer
+  - UOName:          _ZZ5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EEE15input_fm_buffer
   - String:          ''':'
   - String:          ' '
   - Mode:            Block
@@ -865,12 +858,12 @@ Args:
 Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: src/conv3.cpp, Line: 18, Column: 0 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Applying '
   - String:          array_partition
   - String:          ' to '''
-  - UOName:          _ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E16output_fm_buffer
+  - UOName:          _ZZ5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EEE16output_fm_buffer
   - String:          ''':'
   - String:          ' '
   - Mode:            Block
@@ -885,12 +878,12 @@ Args:
 Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: src/conv1.cpp, Line: 23, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Applying '
   - String:          array_partition
   - String:          ' to '''
-  - UOName:          _ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer
+  - UOName:          _ZZ5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EEE13weight_buffer
   - String:          ''':'
   - String:          ' '
   - Mode:            Cyclic
@@ -913,12 +906,12 @@ Args:
 Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: src/conv1.cpp, Line: 19, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Applying '
   - String:          array_partition
   - String:          ' to '''
-  - UOName:          _ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer
+  - UOName:          _ZZ5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EEE15input_fm_buffer
   - String:          ''':'
   - String:          ' '
   - Mode:            Cyclic
@@ -941,12 +934,12 @@ Args:
 Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: src/conv1.cpp, Line: 15, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Applying '
   - String:          array_partition
   - String:          ' to '''
-  - UOName:          _ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E16output_fm_buffer
+  - UOName:          _ZZ5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EEE16output_fm_buffer
   - String:          ''':'
   - String:          ' '
   - Mode:            Block
@@ -958,10 +951,101 @@ Args:
   - String:          .
 ...
 --- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_srcnn_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            output_ftmap
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/srcnn.cpp, Line: 18, Column: 0 }
+Function:        _Z5srcnnPA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EESC_SG_PA32_A5_A5_SH_PS_ILi15ELi1ELS0_5ELS1_3ELi0EES5_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            conv3_weights
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_srcnn_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            conv2_output_ftmap
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_srcnn_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            conv1_output_ftmap
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_srcnn_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            conv1_weights
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '16'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_srcnn_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            input_ftmap
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...
+--- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
 DebugLoc:        { File: src/conv1.cpp, Line: 105, Column: 3 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Sequential '
   - Direction:       read
@@ -978,7 +1062,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv1.cpp:105:3'
   - String:          ' '
-  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
@@ -990,7 +1074,7 @@ Args:
 Pass:            reflow-burst-inference
 Name:            BurstInferred
 DebugLoc:        { File: src/conv1.cpp, Line: 33, Column: 13 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Sequential '
   - Direction:       read
@@ -998,7 +1082,7 @@ Args:
   - Length:          '5184'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        conv1_weights997seq
+  - AccessID:        conv1_weights1seq
   - ArrayName:       conv1_weights
   - String:          ' '
   - BundleName:      w1
@@ -1007,19 +1091,19 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv1.cpp:33:13'
   - String:          ' '
-  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.i68.load.4
+  - OrigID:          load-store-loop.i269.load.4
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
 DebugLoc:        { File: src/conv1.cpp, Line: 135, Column: 6 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Sequential '
   - Direction:       write
@@ -1027,7 +1111,7 @@ Args:
   - Length:          '3825'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgep998seq
+  - AccessID:        scevgep2seq
   - ArrayName:       output_ftmap
   - String:          ' '
   - BundleName:      i2
@@ -1036,24 +1120,24 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv1.cpp:135:6'
   - String:          ' '
-  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      store
   - OrigDirection:   write
-  - OrigID:          load-store-loop.i82.store.12
+  - OrigID:          load-store-loop.i282.store.13
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: src/conv1.cpp, Line: 94, Column: 18 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+DebugLoc:        { File: src/conv1.cpp, Line: 100, Column: 32 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
-  - OrigAccess:      left
-    DebugLoc:        { File: src/conv1.cpp, Line: 94, Column: 18 }
+  - OrigAccess:      load
+    DebugLoc:        { File: src/conv1.cpp, Line: 100, Column: 32 }
   - OrigDirection:   read
   - OrigID:          PAD.i.load.14
   - ArrayName:       input_ftmap
@@ -1064,20 +1148,20 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv1.cpp:88:6'
   - String:          ' '
-  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: src/conv1.cpp, Line: 95, Column: 19 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+DebugLoc:        { File: src/conv1.cpp, Line: 101, Column: 52 }
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
-  - OrigAccess:      right
-    DebugLoc:        { File: src/conv1.cpp, Line: 95, Column: 19 }
+  - OrigAccess:      load
+    DebugLoc:        { File: src/conv1.cpp, Line: 101, Column: 52 }
   - OrigDirection:   read
   - OrigID:          PAD.i.load.17
   - ArrayName:       input_ftmap
@@ -1088,7 +1172,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv1.cpp:88:6'
   - String:          ' '
-  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -1096,7 +1180,7 @@ Args:
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
 DebugLoc:        { File: src/conv1.cpp, Line: 105, Column: 3 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
@@ -1112,7 +1196,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv1.cpp:88:6'
   - String:          ' '
-  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -1120,14 +1204,14 @@ Args:
 Pass:            reflow-burst-inference
 Name:            IncompatibleStride
 DebugLoc:        { File: src/conv1.cpp, Line: 135, Column: 6 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Stride is incompatible
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
     DebugLoc:        { File: src/conv1.cpp, Line: 135, Column: 6 }
   - OrigDirection:   write
-  - OrigID:          scevgep998seq
+  - OrigID:          scevgep2seq
   - ArrayName:       output_ftmap
   - String:          ' '
   - BundleName:      i2
@@ -1136,7 +1220,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv1.cpp:134:10'
   - String:          ' '
-  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -1144,14 +1228,14 @@ Args:
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
 DebugLoc:        { File: src/conv1.cpp, Line: 33, Column: 13 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
     DebugLoc:        { File: src/conv1.cpp, Line: 33, Column: 13 }
   - OrigDirection:   read
-  - OrigID:          conv1_weights997seq
+  - OrigID:          conv1_weights1seq
   - ArrayName:       conv1_weights
   - String:          ' '
   - BundleName:      w1
@@ -1160,7 +1244,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv1.cpp:29:12'
   - String:          ' '
-  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -1168,7 +1252,7 @@ Args:
 Pass:            reflow-burst-inference
 Name:            BurstInferred
 DebugLoc:        { File: src/conv2.cpp, Line: 76, Column: 6 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
 Args:            
   - String:          'Sequential '
   - Direction:       read
@@ -1185,7 +1269,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv2.cpp:76:6'
   - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
@@ -1197,7 +1281,7 @@ Args:
 Pass:            reflow-burst-inference
 Name:            BurstInferred
 DebugLoc:        { File: src/conv2.cpp, Line: 36, Column: 13 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
 Args:            
   - String:          'Sequential '
   - Direction:       read
@@ -1205,7 +1289,7 @@ Args:
   - Length:          '2048'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        conv2_weights2seq
+  - AccessID:        conv2_weights1seq
   - ArrayName:       conv2_weights
   - String:          ' '
   - BundleName:      w2
@@ -1214,19 +1298,48 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv2.cpp:36:13'
   - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.i17.load.4
+  - OrigID:          load-store-loop.i12.load.5
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
 DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '255'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep2seq
+  - ArrayName:       output_ftmap
+  - String:          ' '
+  - BundleName:      i3
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'src/conv2.cpp:118:3'
+  - String:          ' '
+  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+    DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          load-store-loop.0.i.store.6
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
 Args:            
   - String:          'Sequential '
   - Direction:       write
@@ -1243,48 +1356,19 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv2.cpp:118:3'
   - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      store
   - OrigDirection:   write
-  - OrigID:          load-store-loop.0.i.store.5
-...
---- !Passed
-Pass:            reflow-burst-inference
-Name:            BurstInferred
-DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
-Args:            
-  - String:          'Sequential '
-  - Direction:       write
-  - String:          ' of length '
-  - Length:          '255'
-  - String:          ' has been inferred'
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgep4seq
-  - ArrayName:       output_ftmap
-  - String:          ' '
-  - BundleName:      i3
-  - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:118:3'
-  - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
-    DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
-  - String:          ' '
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      store
-  - OrigDirection:   write
-  - OrigID:          load-store-loop.1.i.store.5
+  - OrigID:          load-store-loop.1.i.store.6
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzeBoundsPattern
 DebugLoc:        { File: src/conv2.cpp, Line: 105, Column: 6 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
 Args:            
   - String:          Could not analyze the loop bounds
   - String:          ' _XLX_SEP_ '
@@ -1292,7 +1376,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv2.cpp:105:6'
   - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -1300,7 +1384,7 @@ Args:
 Pass:            reflow-burst-inference
 Name:            IncompatibleStride
 DebugLoc:        { File: src/conv2.cpp, Line: 76, Column: 6 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
 Args:            
   - String:          Stride is incompatible
   - String:          ' _XLX_SEP_ '
@@ -1316,7 +1400,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv2.cpp:75:14'
   - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -1324,14 +1408,14 @@ Args:
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
 DebugLoc:        { File: src/conv2.cpp, Line: 36, Column: 13 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
     DebugLoc:        { File: src/conv2.cpp, Line: 36, Column: 13 }
   - OrigDirection:   read
-  - OrigID:          conv2_weights2seq
+  - OrigID:          conv2_weights1seq
   - ArrayName:       conv2_weights
   - String:          ' '
   - BundleName:      w2
@@ -1340,7 +1424,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv2.cpp:32:12'
   - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -1348,7 +1432,7 @@ Args:
 Pass:            reflow-burst-inference
 Name:            BurstInferred
 DebugLoc:        { File: src/conv3.cpp, Line: 118, Column: 11 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Sequential '
   - Direction:       read
@@ -1356,7 +1440,7 @@ Args:
   - Length:          '800'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        conv3_weights106seq
+  - AccessID:        conv3_weights1seq
   - ArrayName:       conv3_weights
   - String:          ' '
   - BundleName:      w3
@@ -1365,7 +1449,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv3.cpp:118:11'
   - String:          ' '
-  - Function:        'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
+  - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
@@ -1377,7 +1461,7 @@ Args:
 Pass:            reflow-burst-inference
 Name:            BurstInferred
 DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Sequential '
   - Direction:       write
@@ -1394,19 +1478,19 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv3.cpp:148:3'
   - String:          ' '
-  - Function:        'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
+  - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      store
   - OrigDirection:   write
-  - OrigID:          load-store-loop.0.i.store.11
+  - OrigID:          load-store-loop.0.i.store.13
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
 DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Sequential '
   - Direction:       write
@@ -1414,7 +1498,7 @@ Args:
   - Length:          '255'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgep107seq
+  - AccessID:        scevgep2seq
   - ArrayName:       output_ftmap
   - String:          ' '
   - BundleName:      o
@@ -1423,19 +1507,19 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv3.cpp:148:3'
   - String:          ' '
-  - Function:        'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
+  - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      store
   - OrigDirection:   write
-  - OrigID:          load-store-loop.1.i.store.11
+  - OrigID:          load-store-loop.1.i.store.13
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzeBoundsPattern
 DebugLoc:        { File: src/conv3.cpp, Line: 135, Column: 11 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Could not analyze the loop bounds
   - String:          ' _XLX_SEP_ '
@@ -1443,7 +1527,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv3.cpp:135:11'
   - String:          ' '
-  - Function:        'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
+  - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
   - String:          ' '
 ...
@@ -1451,7 +1535,7 @@ Args:
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzeBoundsPattern
 DebugLoc:        { File: src/conv3.cpp, Line: 71, Column: 10 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Could not analyze the loop bounds
   - String:          ' _XLX_SEP_ '
@@ -1459,7 +1543,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv3.cpp:71:10'
   - String:          ' '
-  - Function:        'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
+  - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
   - String:          ' '
 ...
@@ -1467,14 +1551,14 @@ Args:
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
 DebugLoc:        { File: src/conv3.cpp, Line: 118, Column: 11 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
     DebugLoc:        { File: src/conv3.cpp, Line: 118, Column: 11 }
   - OrigDirection:   read
-  - OrigID:          conv3_weights106seq
+  - OrigID:          conv3_weights1seq
   - ArrayName:       conv3_weights
   - String:          ' '
   - BundleName:      w3
@@ -1483,15 +1567,15 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv3.cpp:31:12'
   - String:          ' '
-  - Function:        'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
+  - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/conv3.cpp, Line: 92, Column: 18 }
-Function:        _Z20load_input_buffer_c3PA9_A259_fPA255_A255_fii
+DebugLoc:        { File: src/conv3.cpp, Line: 98, Column: 32 }
+Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          'Sequential '
   - Direction:       read
@@ -1499,7 +1583,7 @@ Args:
   - Length:          '255'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgep509seq
+  - AccessID:        scevgep1seq
   - ArrayName:       input_ftmap
   - String:          ' '
   - BundleName:      i3
@@ -1508,12 +1592,12 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv3.cpp:87:9'
   - String:          ' '
-  - Function:        'load_input_buffer_c3(float (*) [9][259], float (*) [255][255], int, int)'
+  - Function:        'load_input_buffer_c3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [9][259], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
     DebugLoc:        { File: src/conv3.cpp, Line: 85, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: src/conv3.cpp, Line: 92, Column: 18 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 98, Column: 32 }
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.276
   - OrigAccess:      load
@@ -1521,777 +1605,777 @@ Args:
   - OrigID:          load-store-loop.load.298
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.302
+  - OrigID:          load-store-loop.load.303
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.306
+  - OrigID:          load-store-loop.load.308
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.310
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.314
+  - OrigID:          load-store-loop.load.313
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.318
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.322
+  - OrigID:          load-store-loop.load.323
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.326
+  - OrigID:          load-store-loop.load.328
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.330
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.334
+  - OrigID:          load-store-loop.load.333
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.338
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.342
+  - OrigID:          load-store-loop.load.343
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.346
+  - OrigID:          load-store-loop.load.348
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.350
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.354
+  - OrigID:          load-store-loop.load.353
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.358
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.362
+  - OrigID:          load-store-loop.load.363
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.366
+  - OrigID:          load-store-loop.load.368
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.370
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.374
+  - OrigID:          load-store-loop.load.373
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.378
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.382
+  - OrigID:          load-store-loop.load.383
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.386
+  - OrigID:          load-store-loop.load.388
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.390
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.394
+  - OrigID:          load-store-loop.load.393
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.398
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.402
+  - OrigID:          load-store-loop.load.403
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.406
+  - OrigID:          load-store-loop.load.408
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.410
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.414
+  - OrigID:          load-store-loop.load.413
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.418
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.422
+  - OrigID:          load-store-loop.load.423
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.426
+  - OrigID:          load-store-loop.load.428
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.430
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.434
+  - OrigID:          load-store-loop.load.433
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.438
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.442
+  - OrigID:          load-store-loop.load.443
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.446
+  - OrigID:          load-store-loop.load.448
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.450
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.454
+  - OrigID:          load-store-loop.load.453
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.458
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.462
+  - OrigID:          load-store-loop.load.463
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.466
+  - OrigID:          load-store-loop.load.468
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.470
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.474
+  - OrigID:          load-store-loop.load.473
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.478
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.482
+  - OrigID:          load-store-loop.load.483
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.486
+  - OrigID:          load-store-loop.load.488
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.490
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.494
+  - OrigID:          load-store-loop.load.493
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.498
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.502
+  - OrigID:          load-store-loop.load.503
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.506
+  - OrigID:          load-store-loop.load.508
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.510
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.514
+  - OrigID:          load-store-loop.load.513
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.518
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.522
+  - OrigID:          load-store-loop.load.523
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.526
+  - OrigID:          load-store-loop.load.528
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.530
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.534
+  - OrigID:          load-store-loop.load.533
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.538
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.542
+  - OrigID:          load-store-loop.load.543
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.546
+  - OrigID:          load-store-loop.load.548
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.550
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.554
+  - OrigID:          load-store-loop.load.553
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.558
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.562
+  - OrigID:          load-store-loop.load.563
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.566
+  - OrigID:          load-store-loop.load.568
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.570
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.574
+  - OrigID:          load-store-loop.load.573
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.578
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.582
+  - OrigID:          load-store-loop.load.583
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.586
+  - OrigID:          load-store-loop.load.588
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.590
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.594
+  - OrigID:          load-store-loop.load.593
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.598
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.602
+  - OrigID:          load-store-loop.load.603
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.606
+  - OrigID:          load-store-loop.load.608
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.610
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.614
+  - OrigID:          load-store-loop.load.613
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.618
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.622
+  - OrigID:          load-store-loop.load.623
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.626
+  - OrigID:          load-store-loop.load.628
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.630
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.634
+  - OrigID:          load-store-loop.load.633
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.638
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.642
+  - OrigID:          load-store-loop.load.643
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.646
+  - OrigID:          load-store-loop.load.648
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.650
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.654
+  - OrigID:          load-store-loop.load.653
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.658
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.662
+  - OrigID:          load-store-loop.load.663
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.666
+  - OrigID:          load-store-loop.load.668
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.670
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.674
+  - OrigID:          load-store-loop.load.673
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.678
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.682
+  - OrigID:          load-store-loop.load.683
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.686
+  - OrigID:          load-store-loop.load.688
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.690
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.694
+  - OrigID:          load-store-loop.load.693
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.698
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.702
+  - OrigID:          load-store-loop.load.703
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.706
+  - OrigID:          load-store-loop.load.708
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.710
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.714
+  - OrigID:          load-store-loop.load.713
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.718
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.722
+  - OrigID:          load-store-loop.load.723
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.726
+  - OrigID:          load-store-loop.load.728
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.730
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.734
+  - OrigID:          load-store-loop.load.733
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.738
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.742
+  - OrigID:          load-store-loop.load.743
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.746
+  - OrigID:          load-store-loop.load.748
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.750
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.754
+  - OrigID:          load-store-loop.load.753
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.758
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.762
+  - OrigID:          load-store-loop.load.763
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.766
+  - OrigID:          load-store-loop.load.768
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.770
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.774
+  - OrigID:          load-store-loop.load.773
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.778
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.782
+  - OrigID:          load-store-loop.load.783
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.786
+  - OrigID:          load-store-loop.load.788
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.790
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.794
+  - OrigID:          load-store-loop.load.793
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.798
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.802
+  - OrigID:          load-store-loop.load.803
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.806
+  - OrigID:          load-store-loop.load.808
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.810
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.814
+  - OrigID:          load-store-loop.load.813
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.818
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.822
+  - OrigID:          load-store-loop.load.823
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.826
+  - OrigID:          load-store-loop.load.828
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.830
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.834
+  - OrigID:          load-store-loop.load.833
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.838
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.842
+  - OrigID:          load-store-loop.load.843
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.846
+  - OrigID:          load-store-loop.load.848
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.850
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.854
+  - OrigID:          load-store-loop.load.853
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.858
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.862
+  - OrigID:          load-store-loop.load.863
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.866
+  - OrigID:          load-store-loop.load.868
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.870
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.874
+  - OrigID:          load-store-loop.load.873
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.878
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.882
+  - OrigID:          load-store-loop.load.883
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.886
+  - OrigID:          load-store-loop.load.888
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.890
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.894
+  - OrigID:          load-store-loop.load.893
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.898
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.902
+  - OrigID:          load-store-loop.load.903
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.906
+  - OrigID:          load-store-loop.load.908
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.910
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.914
+  - OrigID:          load-store-loop.load.913
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.918
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.922
+  - OrigID:          load-store-loop.load.923
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.926
+  - OrigID:          load-store-loop.load.928
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.930
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.934
+  - OrigID:          load-store-loop.load.933
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.938
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.942
+  - OrigID:          load-store-loop.load.943
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.946
+  - OrigID:          load-store-loop.load.948
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.950
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.954
+  - OrigID:          load-store-loop.load.953
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.958
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.962
+  - OrigID:          load-store-loop.load.963
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.966
+  - OrigID:          load-store-loop.load.968
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.970
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.974
+  - OrigID:          load-store-loop.load.973
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.978
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.982
+  - OrigID:          load-store-loop.load.983
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.986
+  - OrigID:          load-store-loop.load.988
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.990
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.994
+  - OrigID:          load-store-loop.load.993
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.998
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1002
+  - OrigID:          load-store-loop.load.1003
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1006
+  - OrigID:          load-store-loop.load.1008
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1010
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1014
+  - OrigID:          load-store-loop.load.1013
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.1018
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1022
+  - OrigID:          load-store-loop.load.1023
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1026
+  - OrigID:          load-store-loop.load.1028
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1030
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1034
+  - OrigID:          load-store-loop.load.1033
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.1038
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1042
+  - OrigID:          load-store-loop.load.1043
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1046
+  - OrigID:          load-store-loop.load.1048
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1050
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1054
+  - OrigID:          load-store-loop.load.1053
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.1058
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1062
+  - OrigID:          load-store-loop.load.1063
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1066
+  - OrigID:          load-store-loop.load.1068
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1070
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1074
+  - OrigID:          load-store-loop.load.1073
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.1078
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1082
+  - OrigID:          load-store-loop.load.1083
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1086
+  - OrigID:          load-store-loop.load.1088
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1090
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1094
+  - OrigID:          load-store-loop.load.1093
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.1098
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1102
+  - OrigID:          load-store-loop.load.1103
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1106
+  - OrigID:          load-store-loop.load.1108
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1110
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1114
+  - OrigID:          load-store-loop.load.1113
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.1118
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1122
+  - OrigID:          load-store-loop.load.1123
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1126
+  - OrigID:          load-store-loop.load.1128
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1130
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1134
+  - OrigID:          load-store-loop.load.1133
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.1138
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1142
+  - OrigID:          load-store-loop.load.1143
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1146
+  - OrigID:          load-store-loop.load.1148
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1150
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1154
+  - OrigID:          load-store-loop.load.1153
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.1158
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1162
+  - OrigID:          load-store-loop.load.1163
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1166
+  - OrigID:          load-store-loop.load.1168
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1170
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1174
+  - OrigID:          load-store-loop.load.1173
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.1178
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1182
+  - OrigID:          load-store-loop.load.1183
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1186
+  - OrigID:          load-store-loop.load.1188
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1190
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1194
+  - OrigID:          load-store-loop.load.1193
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.1198
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1202
+  - OrigID:          load-store-loop.load.1203
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1206
+  - OrigID:          load-store-loop.load.1208
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1210
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1214
+  - OrigID:          load-store-loop.load.1213
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.1218
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1222
+  - OrigID:          load-store-loop.load.1223
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1226
+  - OrigID:          load-store-loop.load.1228
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1230
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1234
+  - OrigID:          load-store-loop.load.1233
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.1238
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1242
+  - OrigID:          load-store-loop.load.1243
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1246
+  - OrigID:          load-store-loop.load.1248
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1250
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1254
+  - OrigID:          load-store-loop.load.1253
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.1258
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1262
+  - OrigID:          load-store-loop.load.1263
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1266
+  - OrigID:          load-store-loop.load.1268
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1270
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1274
+  - OrigID:          load-store-loop.load.1273
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.1278
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1282
+  - OrigID:          load-store-loop.load.1283
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1286
+  - OrigID:          load-store-loop.load.1288
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1290
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1294
+  - OrigID:          load-store-loop.load.1293
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.1298
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1302
+  - OrigID:          load-store-loop.load.1303
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          load-store-loop.load.1306
+  - OrigID:          load-store-loop.load.1308
   - OrigAccess:      load
-    DebugLoc:        { File: src/conv3.cpp, Line: 93, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1313
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1318
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1323
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1328
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1333
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1338
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1343
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1348
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1353
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1358
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1363
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1368
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1373
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1378
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1383
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1388
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1393
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1398
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1403
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1408
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1413
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1418
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1423
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1428
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1433
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1438
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1443
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1448
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1453
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1458
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1463
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1468
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1473
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1478
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1483
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1488
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1493
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1498
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1503
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1508
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1513
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1518
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1523
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1528
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1533
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1538
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1543
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1548
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1553
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          load-store-loop.load.1558
+  - OrigAccess:      load
+    DebugLoc:        { File: src/conv3.cpp, Line: 99, Column: 52 }
   - OrigDirection:   read
   - OrigID:          load-store-loop.load.279
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: src/conv3.cpp, Line: 92, Column: 18 }
-Function:        _Z20load_input_buffer_c3PA9_A259_fPA255_A255_fii
+DebugLoc:        { File: src/conv3.cpp, Line: 98, Column: 32 }
+Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv3.cpp, Line: 92, Column: 18 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 98, Column: 32 }
   - OrigDirection:   read
-  - OrigID:          scevgep509seq
+  - OrigID:          scevgep1seq
   - ArrayName:       input_ftmap
   - String:          ' '
   - BundleName:      i3
@@ -2300,7 +2384,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv3.cpp:87:9'
   - String:          ' '
-  - Function:        'load_input_buffer_c3(float (*) [9][259], float (*) [255][255], int, int)'
+  - Function:        'load_input_buffer_c3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [9][259], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
     DebugLoc:        { File: src/conv3.cpp, Line: 85, Column: 0 }
   - String:          ' '
 ...
@@ -2308,10 +2392,10 @@ Args:
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
 DebugLoc:        { File: src/conv1.cpp, Line: 135, Column: 6 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Could not widen since type '
-  - Type:            float
+  - Type:            i32
   - String:          ' size is greater than or equal to alignment '
   - Alignment:       '1'
   - String:          '(bytes)'
@@ -2319,7 +2403,7 @@ Args:
   - OrigAccess:      call
     DebugLoc:        { File: src/conv1.cpp, Line: 135, Column: 6 }
   - OrigDirection:   write
-  - OrigID:          scevgep998seq
+  - OrigID:          scevgep2seq
   - ArrayName:       output_ftmap
   - String:          ' '
   - BundleName:      i2
@@ -2328,7 +2412,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv1.cpp:148:3'
   - String:          ' '
-  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -2336,10 +2420,10 @@ Args:
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
 DebugLoc:        { File: src/conv1.cpp, Line: 33, Column: 13 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Could not widen since type '
-  - Type:            float
+  - Type:            i16
   - String:          ' size is greater than or equal to alignment '
   - Alignment:       '1'
   - String:          '(bytes)'
@@ -2347,7 +2431,7 @@ Args:
   - OrigAccess:      call
     DebugLoc:        { File: src/conv1.cpp, Line: 33, Column: 13 }
   - OrigDirection:   read
-  - OrigID:          conv1_weights997seq
+  - OrigID:          conv1_weights1seq
   - ArrayName:       conv1_weights
   - String:          ' '
   - BundleName:      w1
@@ -2356,7 +2440,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv1.cpp:121:2'
   - String:          ' '
-  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -2364,10 +2448,10 @@ Args:
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
 DebugLoc:        { File: src/conv1.cpp, Line: 105, Column: 3 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Could not widen since type '
-  - Type:            float
+  - Type:            i32
   - String:          ' size is greater than or equal to alignment '
   - Alignment:       '1'
   - String:          '(bytes)'
@@ -2384,7 +2468,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv1.cpp:105:3'
   - String:          ' '
-  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -2392,38 +2476,10 @@ Args:
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
 DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
 Args:            
   - String:          'Could not widen since type '
-  - Type:            float
-  - String:          ' size is greater than or equal to alignment '
-  - Alignment:       '1'
-  - String:          '(bytes)'
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      call
-    DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
-  - OrigDirection:   write
-  - OrigID:          scevgep4seq
-  - ArrayName:       output_ftmap
-  - String:          ' '
-  - BundleName:      i3
-  - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:118:3'
-  - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
-    DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-widen
-Name:            GreaterOrEqualAlignment
-DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
-Args:            
-  - String:          'Could not widen since type '
-  - Type:            float
+  - Type:            i32
   - String:          ' size is greater than or equal to alignment '
   - Alignment:       '1'
   - String:          '(bytes)'
@@ -2440,35 +2496,56 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv2.cpp:118:3'
   - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
-DebugLoc:        { File: src/conv2.cpp, Line: 36, Column: 13 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
 Args:            
   - String:          'Could not widen since type '
-  - Type:            float
+  - Type:            i32
   - String:          ' size is greater than or equal to alignment '
   - Alignment:       '1'
   - String:          '(bytes)'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
+    DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
+  - OrigDirection:   write
+  - OrigID:          scevgep2seq
+  - ArrayName:       output_ftmap
+  - String:          ' '
+  - BundleName:      i3
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'src/conv2.cpp:118:3'
+  - String:          ' '
+  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
+    DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            TypeAllocSizePaddingMemoryAccess
+DebugLoc:        { File: src/conv2.cpp, Line: 36, Column: 13 }
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
+Args:            
+  - Type:            i24
+  - String:          ' allocated space contains padding. This is unsupported'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
     DebugLoc:        { File: src/conv2.cpp, Line: 36, Column: 13 }
   - OrigDirection:   read
-  - OrigID:          conv2_weights2seq
+  - OrigID:          conv2_weights1seq
   - ArrayName:       conv2_weights
   - String:          ' '
   - BundleName:      w2
   - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'src/conv2.cpp:91:3'
-  - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -2476,10 +2553,10 @@ Args:
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
 DebugLoc:        { File: src/conv2.cpp, Line: 76, Column: 6 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
 Args:            
   - String:          'Could not widen since type '
-  - Type:            float
+  - Type:            i32
   - String:          ' size is greater than or equal to alignment '
   - Alignment:       '1'
   - String:          '(bytes)'
@@ -2496,7 +2573,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv2.cpp:78:3'
   - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -2504,10 +2581,10 @@ Args:
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
 DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Could not widen since type '
-  - Type:            float
+  - Type:            i32
   - String:          ' size is greater than or equal to alignment '
   - Alignment:       '1'
   - String:          '(bytes)'
@@ -2515,7 +2592,7 @@ Args:
   - OrigAccess:      call
     DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
   - OrigDirection:   write
-  - OrigID:          scevgep107seq
+  - OrigID:          scevgep2seq
   - ArrayName:       output_ftmap
   - String:          ' '
   - BundleName:      o
@@ -2524,7 +2601,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv3.cpp:148:3'
   - String:          ' '
-  - Function:        'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
+  - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
   - String:          ' '
 ...
@@ -2532,10 +2609,10 @@ Args:
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
 DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Could not widen since type '
-  - Type:            float
+  - Type:            i32
   - String:          ' size is greater than or equal to alignment '
   - Alignment:       '1'
   - String:          '(bytes)'
@@ -2552,7 +2629,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv3.cpp:148:3'
   - String:          ' '
-  - Function:        'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
+  - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
   - String:          ' '
 ...
@@ -2560,10 +2637,10 @@ Args:
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
 DebugLoc:        { File: src/conv3.cpp, Line: 118, Column: 11 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          'Could not widen since type '
-  - Type:            float
+  - Type:            i32
   - String:          ' size is greater than or equal to alignment '
   - Alignment:       '1'
   - String:          '(bytes)'
@@ -2571,7 +2648,7 @@ Args:
   - OrigAccess:      call
     DebugLoc:        { File: src/conv3.cpp, Line: 118, Column: 11 }
   - OrigDirection:   read
-  - OrigID:          conv3_weights106seq
+  - OrigID:          conv3_weights1seq
   - ArrayName:       conv3_weights
   - String:          ' '
   - BundleName:      w3
@@ -2580,38 +2657,38 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv3.cpp:121:3'
   - String:          ' '
-  - Function:        'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
+  - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
-DebugLoc:        { File: src/conv3.cpp, Line: 92, Column: 18 }
-Function:        _Z20load_input_buffer_c3PA9_A259_fPA255_A255_fii
+DebugLoc:        { File: src/conv3.cpp, Line: 98, Column: 32 }
+Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii
 Args:            
   - String:          'Could not widen since type '
-  - Type:            float
+  - Type:            i32
   - String:          ' size is greater than or equal to alignment '
   - Alignment:       '1'
   - String:          '(bytes)'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/conv3.cpp, Line: 92, Column: 18 }
+    DebugLoc:        { File: src/conv3.cpp, Line: 98, Column: 32 }
   - OrigDirection:   read
-  - OrigID:          scevgep509seq
+  - OrigID:          scevgep1seq
   - ArrayName:       input_ftmap
   - String:          ' '
   - BundleName:      i3
   - String:          ' '
-  - Function:        'load_input_buffer_c3(float (*) [9][259], float (*) [255][255], int, int)'
+  - Function:        'load_input_buffer_c3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [9][259], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)'
     DebugLoc:        { File: src/conv3.cpp, Line: 85, Column: 0 }
   - String:          ' '
 ...
 --- !Failure
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_
 Args:            
   - String:          The program may have out of bound array access
 ...
@@ -2619,7 +2696,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
 DebugLoc:        { File: src/conv1.cpp, Line: 105, Column: 3 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_.1
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -2639,7 +2716,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv1.cpp:105:3'
   - String:          ' '
-  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255]) (.1)'
+  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -2647,7 +2724,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
 DebugLoc:        { File: src/conv1.cpp, Line: 105, Column: 3 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_.1
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -2669,14 +2746,14 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
 DebugLoc:        { File: src/conv1.cpp, Line: 33, Column: 13 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_.1
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
   - String:          ' of length '
   - Length:          '5184'
   - String:          ' and bit width '
-  - Width:           '32'
+  - Width:           '16'
   - String:          ' has been inferred.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
   - String:          ' _XLX_SEP_ '
@@ -2689,7 +2766,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv1.cpp:33:13'
   - String:          ' '
-  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255]) (.1)'
+  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -2697,14 +2774,14 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
 DebugLoc:        { File: src/conv1.cpp, Line: 33, Column: 13 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_.1
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
   - String:          ' of length '
   - Length:          '5184'
   - String:          ' and bit width '
-  - Width:           '32'
+  - Width:           '16'
   - String:          ' in loop '''
   - LoopName:        TILE_OUT
   - String:          '''('
@@ -2719,7 +2796,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
 DebugLoc:        { File: src/conv1.cpp, Line: 135, Column: 6 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_.1
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
@@ -2739,7 +2816,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv1.cpp:135:6'
   - String:          ' '
-  - Function:        'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255]) (.1)'
+  - Function:        'conv1(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv1.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -2747,7 +2824,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
 DebugLoc:        { File: src/conv1.cpp, Line: 135, Column: 6 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_.1
+Function:        _Z5conv1PA255_A255_8ap_fixedILi24ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S_ILi12ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
@@ -2769,7 +2846,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
 DebugLoc:        { File: src/conv2.cpp, Line: 76, Column: 6 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_.1
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -2789,7 +2866,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv2.cpp:76:6'
   - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255]) (.1)'
+  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -2797,7 +2874,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
 DebugLoc:        { File: src/conv2.cpp, Line: 76, Column: 6 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_.1
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -2819,7 +2896,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
 DebugLoc:        { File: src/conv2.cpp, Line: 36, Column: 13 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_.1
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -2839,7 +2916,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv2.cpp:36:13'
   - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255]) (.1)'
+  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -2847,7 +2924,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
 DebugLoc:        { File: src/conv2.cpp, Line: 36, Column: 13 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_.1
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -2869,7 +2946,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
 DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_.1
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
@@ -2889,7 +2966,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv2.cpp:118:3'
   - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255]) (.1)'
+  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -2897,7 +2974,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
 DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_.1
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
@@ -2919,7 +2996,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
 DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_.1
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
@@ -2939,7 +3016,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv2.cpp:118:3'
   - String:          ' '
-  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255]) (.1)'
+  - Function:        'conv2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
   - String:          ' '
 ...
@@ -2947,7 +3024,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
 DebugLoc:        { File: src/conv2.cpp, Line: 118, Column: 3 }
-Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_.1
+Function:        _Z5conv2PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EES5_.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
@@ -2968,8 +3045,8 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/conv3.cpp, Line: 92, Column: 18 }
-Function:        _Z20load_input_buffer_c3PA9_A259_fPA255_A255_fii.1
+DebugLoc:        { File: src/conv3.cpp, Line: 98, Column: 32 }
+Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -2985,15 +3062,15 @@ Args:
   - String:          ' '
   - BundleName:      i3
   - String:          ' '
-  - Function:        'load_input_buffer_c3(float (*) [9][259], float (*) [255][255], int, int) (.1)'
+  - Function:        'load_input_buffer_c3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [9][259], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int) (.1)'
     DebugLoc:        { File: src/conv3.cpp, Line: 85, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/conv3.cpp, Line: 92, Column: 18 }
-Function:        _Z20load_input_buffer_c3PA9_A259_fPA255_A255_fii.1
+DebugLoc:        { File: src/conv3.cpp, Line: 98, Column: 32 }
+Function:        _Z20load_input_buffer_c3PA9_A259_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA255_A255_S2_ii.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -3010,7 +3087,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
 DebugLoc:        { File: src/conv3.cpp, Line: 118, Column: 11 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_.1
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -3030,7 +3107,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv3.cpp:118:11'
   - String:          ' '
-  - Function:        'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255]) (.1)'
+  - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
   - String:          ' '
 ...
@@ -3038,7 +3115,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
 DebugLoc:        { File: src/conv3.cpp, Line: 118, Column: 11 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_.1
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
@@ -3060,7 +3137,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
 DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_.1
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
@@ -3080,7 +3157,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv3.cpp:148:3'
   - String:          ' '
-  - Function:        'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255]) (.1)'
+  - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
   - String:          ' '
 ...
@@ -3088,7 +3165,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
 DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_.1
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
@@ -3110,7 +3187,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
 DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_.1
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
@@ -3130,7 +3207,7 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/conv3.cpp:148:3'
   - String:          ' '
-  - Function:        'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255]) (.1)'
+  - Function:        'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255]) (.1)'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
   - String:          ' '
 ...
@@ -3138,7 +3215,7 @@ Args:
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
 DebugLoc:        { File: src/conv3.cpp, Line: 148, Column: 3 }
-Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_.1
+Function:        _Z5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EE.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes

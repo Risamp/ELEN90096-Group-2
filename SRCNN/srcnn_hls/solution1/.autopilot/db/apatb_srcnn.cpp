@@ -1249,7 +1249,7 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 
   static hls::sim::Register port6 {
     .name = "conv3_biases",
-    .width = 32,
+    .width = 16,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
@@ -1398,8 +1398,8 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port12 {
 #endif
-    .width = 32,
-    .asize = 4,
+    .width = 16,
+    .asize = 2,
     .hbm = false,
     .name = { "w1" },
 #ifdef POST_CHECK
@@ -1413,7 +1413,7 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #endif
   };
   port12.param = { __xlx_apatb_param_conv1_weights };
-  port12.nbytes = { 20736 };
+  port12.nbytes = { 10368 };
   port12.offset = {  };
   port12.hasWrite = { false };
 
@@ -1470,8 +1470,8 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port15 {
 #endif
-    .width = 32,
-    .asize = 4,
+    .width = 10,
+    .asize = 2,
     .hbm = false,
     .name = { "conv1_biases" },
 #ifdef POST_CHECK
@@ -1485,7 +1485,7 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #endif
   };
   port15.param = { __xlx_apatb_param_conv1_biases };
-  port15.nbytes = { 256 };
+  port15.nbytes = { 128 };
   port15.offset = {  };
   port15.hasWrite = { false };
 
@@ -1494,8 +1494,8 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port16 {
 #endif
-    .width = 32,
-    .asize = 4,
+    .width = 10,
+    .asize = 2,
     .hbm = false,
     .name = { "conv2_biases" },
 #ifdef POST_CHECK
@@ -1509,7 +1509,7 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #endif
   };
   port16.param = { __xlx_apatb_param_conv2_biases };
-  port16.nbytes = { 128 };
+  port16.nbytes = { 64 };
   port16.offset = {  };
   port16.hasWrite = { false };
 

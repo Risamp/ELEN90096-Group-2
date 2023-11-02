@@ -34,7 +34,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>540947252</coreId>
+              <coreId>1852142702</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -70,7 +70,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>540947252</coreId>
+              <coreId>1702125900</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>62</bitwidth>
@@ -106,7 +106,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>540876873</coreId>
+              <coreId>1635147636</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>3</bitwidth>
@@ -124,7 +124,7 @@
             <Obj>
               <type>1</type>
               <id>4</id>
-              <name>conv3_float_255_255_float_32_5_5_float_float_255_255_o_1</name>
+              <name>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -142,10 +142,10 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1685021552</coreId>
+              <coreId>1852142702</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>32</bitwidth>
+            <bitwidth>24</bitwidth>
           </Value>
           <direction>0</direction>
           <if_type>1</if_type>
@@ -160,7 +160,7 @@
             <Obj>
               <type>1</type>
               <id>5</id>
-              <name>conv3_float_255_255_float_32_5_5_float_float_255_255_o</name>
+              <name>conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -178,10 +178,10 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>540876904</coreId>
+              <coreId>1852142702</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>32</bitwidth>
+            <bitwidth>24</bitwidth>
           </Value>
           <direction>0</direction>
           <if_type>1</if_type>
@@ -218,7 +218,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4228300630</coreId>
+              <coreId>4294967295</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -260,7 +260,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4294967295</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>3</bitwidth>
@@ -346,7 +346,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>4294967295</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -537,7 +537,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>32</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -562,7 +562,7 @@
             <Obj>
               <type>0</type>
               <id>17</id>
-              <name>exitcond16911</name>
+              <name>exitcond61711</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -573,7 +573,7 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>exitcond16911_fu_126_p2</rtlName>
+              <rtlName>exitcond61711_fu_126_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -692,7 +692,7 @@
             <Obj>
               <type>0</type>
               <id>21</id>
-              <name>empty_193</name>
+              <name>empty_199</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -703,14 +703,14 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>empty_193_fu_138_p1</rtlName>
+              <rtlName>empty_199_fu_138_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1871631968</coreId>
+              <coreId>4228300630</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -734,7 +734,7 @@
             <Obj>
               <type>0</type>
               <id>23</id>
-              <name>tmp_s</name>
+              <name>tmp_69</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -745,14 +745,14 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_s_fu_142_p3</rtlName>
+              <rtlName>tmp_69_fu_142_p3</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1871453456</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -778,7 +778,7 @@
             <Obj>
               <type>0</type>
               <id>24</id>
-              <name>tmp_138_cast</name>
+              <name>tmp_69_cast</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -789,14 +789,14 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_138_cast_fu_150_p1</rtlName>
+              <rtlName>tmp_69_cast_fu_150_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4294967295</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -820,7 +820,7 @@
             <Obj>
               <type>0</type>
               <id>25</id>
-              <name>conv3_float_255_255_float_32_5_5_float_float_255_255_o_32</name>
+              <name>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_433</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -838,7 +838,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>6775040</coreId>
+              <coreId>4294967295</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -864,7 +864,7 @@
             <Obj>
               <type>0</type>
               <id>26</id>
-              <name>conv3_float_255_255_float_32_5_5_float_float_255_255_o_33</name>
+              <name>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_434</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -882,7 +882,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>4169633272</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -926,7 +926,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1557029376</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -952,7 +952,7 @@
             <Obj>
               <type>0</type>
               <id>28</id>
-              <name>conv3_float_255_255_float_32_5_5_float_float_255_255_o_34</name>
+              <name>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_435</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -973,7 +973,7 @@
               <coreId>83</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>32</bitwidth>
+            <bitwidth>24</bitwidth>
           </Value>
           <oprand_edges>
             <count>1</count>
@@ -994,7 +994,7 @@
             <Obj>
               <type>0</type>
               <id>29</id>
-              <name>conv3_float_255_255_float_32_5_5_float_float_255_255_o_35</name>
+              <name>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_436</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -1015,7 +1015,7 @@
               <coreId>83</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>32</bitwidth>
+            <bitwidth>24</bitwidth>
           </Value>
           <oprand_edges>
             <count>1</count>
@@ -1036,7 +1036,7 @@
             <Obj>
               <type>0</type>
               <id>30</id>
-              <name>tmp_113</name>
+              <name>tmp_10</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -1047,7 +1047,7 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>mux_2_1_32_1_1_U226</rtlName>
+              <rtlName>mux_2_1_24_1_1_U291</rtlName>
               <control>auto</control>
               <opType>mux</opType>
               <implIndex>auto</implIndex>
@@ -1057,7 +1057,7 @@
               <coreId>76</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>32</bitwidth>
+            <bitwidth>24</bitwidth>
           </Value>
           <oprand_edges>
             <count>4</count>
@@ -1081,7 +1081,7 @@
             <Obj>
               <type>0</type>
               <id>31</id>
-              <name>empty_194</name>
+              <name>tmp_11_cast</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -1099,7 +1099,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1871620648</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1109,7 +1109,7 @@
             <item_version>0</item_version>
             <item>88</item>
           </oprand_edges>
-          <opcode>bitcast</opcode>
+          <opcode>zext</opcode>
           <m_Display>0</m_Display>
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
@@ -1252,7 +1252,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>2089491456</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1294,7 +1294,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1871454976</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1339,7 +1339,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1953066581</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1370,7 +1370,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1852142702</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1401,7 +1401,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1852142689</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1432,7 +1432,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>540876921</coreId>
+              <coreId>895439701</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1463,7 +1463,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1635147636</coreId>
+              <coreId>2095614096</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1494,7 +1494,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1852142702</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1525,7 +1525,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>540876921</coreId>
+              <coreId>2095606656</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>4</bitwidth>
@@ -1559,7 +1559,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>843141169</coreId>
+            <coreId>1685024095</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -1595,7 +1595,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>892678721</coreId>
+            <coreId>1685024095</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -1630,7 +1630,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>843141169</coreId>
+            <coreId>1685024095</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -1673,7 +1673,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>843141169</coreId>
+            <coreId>1685024095</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -2346,7 +2346,7 @@
           </second>
         </item>
         <item>
-          <first>mux_2_1_32_1_1_U226 (mux_2_1_32_1_1)</first>
+          <first>mux_2_1_24_1_1_U291 (mux_2_1_24_1_1)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -2434,7 +2434,7 @@
           </second>
         </item>
         <item>
-          <first>exitcond16911_fu_126_p2 ( icmp ) </first>
+          <first>exitcond61711_fu_126_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -2683,7 +2683,7 @@
           </second>
         </item>
         <item>
-          <first>exitcond16911_reg_199</first>
+          <first>exitcond61711_reg_199</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -2721,13 +2721,13 @@
           </second>
         </item>
         <item>
-          <first>tmp_113_reg_223</first>
+          <first>tmp_10_reg_223</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
             <item>
               <first>(Bits)</first>
-              <second>32</second>
+              <second>24</second>
             </item>
             <item>
               <first>(Consts)</first>
@@ -2735,7 +2735,7 @@
             </item>
             <item>
               <first>FF</first>
-              <second>32</second>
+              <second>24</second>
             </item>
           </second>
         </item>
@@ -2770,7 +2770,7 @@
           </second>
         </item>
         <item>
-          <first>mux_2_1_32_1_1_U226</first>
+          <first>mux_2_1_24_1_1_U291</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -2781,7 +2781,7 @@
         <count>1</count>
         <item_version>0</item_version>
         <item class_id="40" tracking_level="0" version="0">
-          <first>mux_2_1_32_1_1_U226 (mux_2_1_32_1_1)</first>
+          <first>mux_2_1_24_1_1_U291 (mux_2_1_24_1_1)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -2801,7 +2801,7 @@
           </second>
         </item>
         <item>
-          <first>exitcond16911_fu_126_p2 ( icmp ) </first>
+          <first>exitcond61711_fu_126_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -3232,7 +3232,7 @@
       <count>13</count>
       <item_version>0</item_version>
       <item class_id="54" tracking_level="0" version="0">
-        <first>conv3_float_255_255_float_32_5_5_float_float_255_255_o_32_gep_fu_88</first>
+        <first>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_433_gep_fu_88</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3240,7 +3240,7 @@
         </second>
       </item>
       <item>
-        <first>conv3_float_255_255_float_32_5_5_float_float_255_255_o_33_gep_fu_95</first>
+        <first>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_434_gep_fu_95</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3248,19 +3248,11 @@
         </second>
       </item>
       <item>
-        <first>empty_193_fu_138</first>
+        <first>empty_199_fu_138</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>21</item>
-        </second>
-      </item>
-      <item>
-        <first>empty_194_fu_183</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>31</item>
         </second>
       </item>
       <item>
@@ -3272,7 +3264,7 @@
         </second>
       </item>
       <item>
-        <first>exitcond16911_fu_126</first>
+        <first>exitcond61711_fu_126</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3304,7 +3296,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_113_fu_174</first>
+        <first>tmp_10_fu_174</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3312,11 +3304,27 @@
         </second>
       </item>
       <item>
-        <first>tmp_138_cast_fu_150</first>
+        <first>tmp_11_cast_fu_183</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>31</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_69_cast_fu_150</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>24</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_69_fu_142</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>23</item>
         </second>
       </item>
       <item>
@@ -3325,14 +3333,6 @@
           <count>1</count>
           <item_version>0</item_version>
           <item>27</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_s_fu_142</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>23</item>
         </second>
       </item>
     </dp_fu_nodes_expression>
@@ -3401,26 +3401,26 @@
       <item_version>0</item_version>
       <item class_id="56" tracking_level="0" version="0">
         <first class_id="57" tracking_level="0" version="0">
-          <first>conv3_float_255_255_float_32_5_5_float_float_255_255_o</first>
+          <first>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1</first>
           <second>0</second>
         </first>
         <second>
           <count>2</count>
           <item_version>0</item_version>
-          <item>29</item>
-          <item>29</item>
+          <item>28</item>
+          <item>28</item>
         </second>
       </item>
       <item>
         <first>
-          <first>conv3_float_255_255_float_32_5_5_float_float_255_255_o_1</first>
+          <first>conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255</first>
           <second>0</second>
         </first>
         <second>
           <count>2</count>
           <item_version>0</item_version>
-          <item>28</item>
-          <item>28</item>
+          <item>29</item>
+          <item>29</item>
         </second>
       </item>
     </dp_mem_port_nodes>
@@ -3496,7 +3496,7 @@
       <count>8</count>
       <item_version>0</item_version>
       <item>
-        <first>conv3_float_255_255_float_32_5_5_float_float_255_255_o_32_reg_203</first>
+        <first>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_433_reg_203</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3504,7 +3504,7 @@
         </second>
       </item>
       <item>
-        <first>conv3_float_255_255_float_32_5_5_float_float_255_255_o_33_reg_208</first>
+        <first>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_434_reg_208</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3512,7 +3512,7 @@
         </second>
       </item>
       <item>
-        <first>exitcond16911_reg_199</first>
+        <first>exitcond61711_reg_199</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3544,7 +3544,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_113_reg_223</first>
+        <first>tmp_10_reg_223</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3587,7 +3587,7 @@
         </second>
       </item>
       <item>
-        <first>conv3_float_255_255_float_32_5_5_float_float_255_255_o(p0)</first>
+        <first>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1(p0)</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3596,14 +3596,14 @@
             <second>
               <count>2</count>
               <item_version>0</item_version>
-              <item>29</item>
-              <item>29</item>
+              <item>28</item>
+              <item>28</item>
             </second>
           </item>
         </second>
       </item>
       <item>
-        <first>conv3_float_255_255_float_32_5_5_float_float_255_255_o_1(p0)</first>
+        <first>conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255(p0)</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3612,8 +3612,8 @@
             <second>
               <count>2</count>
               <item_version>0</item_version>
-              <item>28</item>
-              <item>28</item>
+              <item>29</item>
+              <item>29</item>
             </second>
           </item>
         </second>

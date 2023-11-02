@@ -7,15 +7,15 @@
 
 using namespace std;
 
-ftmap_t input_ftmap[N0][H][W];    // low resolution input image
-ftmap_t output_ftmap[N1][H][W];   // output feature map
+input_t input_ftmap[N0][H][W];    // low resolution input image
+conv1o_t output_ftmap[N1][H][W];   // output feature map
 ftmap_t golden_ftmap[N1][H][W];   // golden reference output feature map
 
 // parameter dimensions
 //   weights: output features x input features x kernel height x kernel width
 //   biases: output features
-param_t weights[N1][N0][F1][F1];  // conv1 weights
-param_t biases[N1];               // conv1 biases
+conv1w_t weights[N1][N0][F1][F1];  // conv1 weights
+conv1b_t biases[N1];               // conv1 biases
 
 // SRCNN conv1 layer testbench
 int tb_conv1()
@@ -27,10 +27,10 @@ int tb_conv1()
     load_image(fname_LR, &input_ftmap[0][0][0], N0*H*W);
 
     // load conv1 layer weights and biases
-    load_param("./weights/conv1_weights_3x_flp.bin",
+    load_conv1w("./weights/conv1_weights_3x_flp.bin",
                &weights[0][0][0][0],
                N1*N0*F1*F1);
-    load_param("./weights/conv1_biases_3x_flp.bin",
+    load_conv1b("./weights/conv1_biases_3x_flp.bin",
                &biases[0],
                N1);
 
@@ -44,7 +44,7 @@ int tb_conv1()
     load_ftmap(fname_GR, &golden_ftmap[0][0][0], N1*H*W);
 
     // compare 
-    double mse = calculate_mse(&golden_ftmap[0][0][0],
+    double mse = calculate_mse_conv1(&golden_ftmap[0][0][0],
                                &output_ftmap[0][0][0],
                                N1*H*W);
     

@@ -18,7 +18,7 @@ set C_modelArgList {
 	{ i3 int 32 regular {axi_master 1}  }
 	{ sext_ln118_1 int 62 regular  }
 	{ sub_ln111_2 int 12 regular  }
-	{ output_fm_buffer float 32 regular {array 3060 { 1 3 } 1 1 } {global 0}  }
+	{ output_fm_buffer int 32 regular {array 3060 { 1 3 } 1 1 } {global 0}  }
 }
 set hasAXIMCache 0
 set C_modelArgMapList {[ 

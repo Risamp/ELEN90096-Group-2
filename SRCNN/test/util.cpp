@@ -5,6 +5,27 @@
 
 // load image from uint8_t file and normalize to interval [0, 1]
 void load_image(std::string  fname,
+                input_t     *image,
+                int          count)
+{
+    uint8_t p;
+    float   p_flp;
+
+    std::ifstream ifs(fname, std::ios::in | std::ios::binary);
+    if (!ifs)
+        throw std::runtime_error("File not found");
+
+    for (int i = 0; i < count; i++) {
+        ifs.read((char *) &p, sizeof(uint8_t));
+        p_flp = ((float) p) / 255;
+        image[i] = (input_t) p_flp;
+    }
+
+    ifs.close();
+}
+
+// load image from uint8_t file and normalize to interval [0, 1]
+void load_golden_image(std::string  fname,
                 ftmap_t     *image,
                 int          count)
 {
@@ -62,9 +83,137 @@ void load_param(std::string  fname,
     ifs.close();
 }
 
+// load conv1 weights from flp file
+void load_conv1w(std::string  fname,
+                conv1w_t     *param,
+                int          count)
+{
+    float p;
+
+    std::ifstream ifs(fname, std::ios::in | std::ios::binary);
+    if (!ifs)
+        throw std::runtime_error("File not found");
+
+    for (int i = 0; i < count; i++) {
+        ifs.read((char *) &p, sizeof(float));
+        param[i] = (conv1w_t) p;
+    }
+
+    ifs.close();
+}
+
+// load conv1 biases from flp file
+void load_conv1b(std::string  fname,
+                conv1b_t     *param,
+                int          count)
+{
+    float p;
+
+    std::ifstream ifs(fname, std::ios::in | std::ios::binary);
+    if (!ifs)
+        throw std::runtime_error("File not found");
+
+    for (int i = 0; i < count; i++) {
+        ifs.read((char *) &p, sizeof(float));
+        param[i] = (conv1b_t) p;
+    }
+
+    ifs.close();
+}
+
+// load conv2 weights from flp file
+void load_conv2w(std::string  fname,
+                conv2w_t     *param,
+                int          count)
+{
+    float p;
+
+    std::ifstream ifs(fname, std::ios::in | std::ios::binary);
+    if (!ifs)
+        throw std::runtime_error("File not found");
+
+    for (int i = 0; i < count; i++) {
+        ifs.read((char *) &p, sizeof(float));
+        param[i] = (conv2w_t) p;
+    }
+
+    ifs.close();
+}
+
+// load conv2 biases from flp file
+void load_conv2b(std::string  fname,
+                conv2b_t     *param,
+                int          count)
+{
+    float p;
+
+    std::ifstream ifs(fname, std::ios::in | std::ios::binary);
+    if (!ifs)
+        throw std::runtime_error("File not found");
+
+    for (int i = 0; i < count; i++) {
+        ifs.read((char *) &p, sizeof(float));
+        param[i] = (conv2b_t) p;
+    }
+
+    ifs.close();
+}
+
+// load conv3 weights from flp file
+void load_conv3w(std::string  fname,
+                conv3w_t     *param,
+                int          count)
+{
+    float p;
+
+    std::ifstream ifs(fname, std::ios::in | std::ios::binary);
+    if (!ifs)
+        throw std::runtime_error("File not found");
+
+    for (int i = 0; i < count; i++) {
+        ifs.read((char *) &p, sizeof(float));
+        param[i] = (conv3w_t) p;
+    }
+
+    ifs.close();
+}
+
+// load conv3 biases from flp file
+void load_conv3b(std::string  fname,
+                conv3b_t     *param,
+                int          count)
+{
+    float p;
+
+    std::ifstream ifs(fname, std::ios::in | std::ios::binary);
+    if (!ifs)
+        throw std::runtime_error("File not found");
+
+    for (int i = 0; i < count; i++) {
+        ifs.read((char *) &p, sizeof(float));
+        param[i] = (conv3b_t) p;
+    }
+
+    ifs.close();
+}
+// returns MSE conv1
+double calculate_mse_conv1(ftmap_t *img1,
+                     conv1o_t *img2,
+                     int      count)
+{
+    double mse = 0.0;
+
+    for (int i = 0; i < count; i++) {
+        mse += std::pow(img1[i] - (float)img2[i], 2);
+    }
+    mse = mse / count;
+
+    return mse;
+}
+
 // returns MSE between two images
 double calculate_mse(ftmap_t *img1,
-                     ftmap_t *img2,
+                     output_t *img2,
                      int      count)
 {
     double mse = 0.0;
@@ -79,7 +228,7 @@ double calculate_mse(ftmap_t *img1,
 
 // return PSNR between two images
 double calculate_PSNR(ftmap_t *img1,
-					  ftmap_t *img2,
+					  output_t *img2,
 					  int      count)
 {
 	double rmse = 0.0;
