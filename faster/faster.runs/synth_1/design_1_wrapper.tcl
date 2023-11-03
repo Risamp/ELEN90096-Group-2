@@ -90,7 +90,7 @@ set_property ip_output_repo c:/SPB_Data/ELEN90096-Group-2/faster/faster.cache/ip
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib c:/SPB_Data/ELEN90096-Group-2/faster/faster.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+read_verilog -library xil_defaultlib C:/SPB_Data/ELEN90096-Group-2/faster/faster.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
 add_files C:/SPB_Data/ELEN90096-Group-2/faster/faster.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all c:/SPB_Data/ELEN90096-Group-2/faster/faster.gen/sources_1/bd/design_1/ip/design_1_srcnn_0_0/constraints/srcnn_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/SPB_Data/ELEN90096-Group-2/faster/faster.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc]
@@ -123,6 +123,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/SPB_Data/ELEN90096-Group-2/faster/faster.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
