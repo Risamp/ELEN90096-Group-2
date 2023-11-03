@@ -33567,7 +33567,7 @@ void conv1(input_t input_ftmap[1][255][255],
 {
 
  static conv1o_t output_fm_buffer[8][15][255] = {0};
-#pragma HLS BIND_STORAGE variable=output_fm_buffer type=RAM_T2P impl=BRAM
+
 #pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=2
 
  static input_t input_fm_buffer[1][15 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)];
@@ -33691,11 +33691,13 @@ void export_output_buffer_c1(
  RELU: for (int bw = 0; bw < 255; bw++) {
 #pragma HLS PIPELINE II=2
 
- output_fm_buffer[bout][bh][bw] = output_fm_buffer[bout][bh][bw] + biases[bout + out];
+ conv1o_t value = output_fm_buffer[bout][bh][bw] + biases[bout + out];
 
-   if (output_fm_buffer[bout][bh][bw] < 0) {
-    output_fm_buffer[bout][bh][bw] = 0;
+   if (value < 0) {
+    value = 0;
    }
+
+   output_fm_buffer[bout][bh][bw] = value;
   }
 
   memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], 255 * sizeof(conv1o_t));

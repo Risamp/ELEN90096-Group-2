@@ -137,11 +137,13 @@ void export_output_buffer_c1(
 		RELU: for (int bw = 0; bw < W; bw++) {
 			#pragma HLS PIPELINE II=2
 
-			output_fm_buffer[bout][bh][bw] = output_fm_buffer[bout][bh][bw] + biases[bout + out];
+			conv1o_t value = output_fm_buffer[bout][bh][bw] + biases[bout + out];
 
-			if (output_fm_buffer[bout][bh][bw] < 0) {
-				output_fm_buffer[bout][bh][bw] = 0;
+			if (value < 0) {
+				value = 0;
 			}
+
+			output_fm_buffer[bout][bh][bw] = value;
 		}
 
 		memcpy(&output_ftmap[out + bout][h + bh], &output_fm_buffer[bout][bh], W * sizeof(conv1o_t));

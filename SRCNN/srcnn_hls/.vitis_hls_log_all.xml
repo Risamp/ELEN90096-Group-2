@@ -3,19 +3,19 @@
   <errorLogs>
     <logs>
       <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="srcnn_hls" solutionName="solution1" date="2023-11-03T04:17:59.595+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_BREADY' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-03T04:17:55.953+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWUSER' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-03T04:17:55.920+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWREGION' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-03T04:17:55.894+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWQOS' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-03T04:17:55.858+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWPROT' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-03T04:17:55.824+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWCACHE' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-03T04:17:55.799+1100" type="Warning"/>
-      </synLog>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>
