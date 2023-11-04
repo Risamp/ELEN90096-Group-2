@@ -18,16 +18,16 @@ set C_modelArgList {
 	{ i3 int 32 regular {axi_master 0}  }
 	{ input_ftmap int 64 regular  }
 	{ h int 8 regular  }
-	{ conv3_float_255_255_float_32_5_5_float_float_255_255_i_1 float 32 regular {array 37440 { 0 0 } 0 1 } {global 1}  }
-	{ conv3_float_255_255_float_32_5_5_float_float_255_255_i float 32 regular {array 37440 { 0 0 } 0 1 } {global 1}  }
+	{ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3 int 32 regular {array 37440 { 0 0 } 0 1 } {global 1}  }
+	{ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2 int 32 regular {array 37440 { 0 0 } 0 1 } {global 1}  }
 }
 set hasAXIMCache 0
 set C_modelArgMapList {[ 
 	{ "Name" : "i3", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "conv2_output_ftmap","offset": { "type": "dynamic","port_name": "conv2_output_ftmap","bundle": "control"},"direction": "READWRITE"}]}]} , 
  	{ "Name" : "input_ftmap", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY"} , 
  	{ "Name" : "h", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY"} , 
- 	{ "Name" : "conv3_float_255_255_float_32_5_5_float_float_255_255_i_1", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} , 
- 	{ "Name" : "conv3_float_255_255_float_32_5_5_float_float_255_255_i", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} ]}
+ 	{ "Name" : "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} , 
+ 	{ "Name" : "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} ]}
 # RTL Port declarations: 
 set portNum 70
 set portList { 
@@ -85,22 +85,22 @@ set portList {
 	{ m_axi_i3_BUSER sc_in sc_lv 1 signal 0 } 
 	{ input_ftmap sc_in sc_lv 64 signal 1 } 
 	{ h sc_in sc_lv 8 signal 2 } 
-	{ conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_address0 sc_out sc_lv 16 signal 3 } 
-	{ conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_ce0 sc_out sc_logic 1 signal 3 } 
-	{ conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_we0 sc_out sc_logic 1 signal 3 } 
-	{ conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_d0 sc_out sc_lv 32 signal 3 } 
-	{ conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_address1 sc_out sc_lv 16 signal 3 } 
-	{ conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_ce1 sc_out sc_logic 1 signal 3 } 
-	{ conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_we1 sc_out sc_logic 1 signal 3 } 
-	{ conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_d1 sc_out sc_lv 32 signal 3 } 
-	{ conv3_float_255_255_float_32_5_5_float_float_255_255_i_address0 sc_out sc_lv 16 signal 4 } 
-	{ conv3_float_255_255_float_32_5_5_float_float_255_255_i_ce0 sc_out sc_logic 1 signal 4 } 
-	{ conv3_float_255_255_float_32_5_5_float_float_255_255_i_we0 sc_out sc_logic 1 signal 4 } 
-	{ conv3_float_255_255_float_32_5_5_float_float_255_255_i_d0 sc_out sc_lv 32 signal 4 } 
-	{ conv3_float_255_255_float_32_5_5_float_float_255_255_i_address1 sc_out sc_lv 16 signal 4 } 
-	{ conv3_float_255_255_float_32_5_5_float_float_255_255_i_ce1 sc_out sc_logic 1 signal 4 } 
-	{ conv3_float_255_255_float_32_5_5_float_float_255_255_i_we1 sc_out sc_logic 1 signal 4 } 
-	{ conv3_float_255_255_float_32_5_5_float_float_255_255_i_d1 sc_out sc_lv 32 signal 4 } 
+	{ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_address0 sc_out sc_lv 16 signal 3 } 
+	{ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_ce0 sc_out sc_logic 1 signal 3 } 
+	{ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_we0 sc_out sc_logic 1 signal 3 } 
+	{ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_d0 sc_out sc_lv 32 signal 3 } 
+	{ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_address1 sc_out sc_lv 16 signal 3 } 
+	{ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_ce1 sc_out sc_logic 1 signal 3 } 
+	{ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_we1 sc_out sc_logic 1 signal 3 } 
+	{ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_d1 sc_out sc_lv 32 signal 3 } 
+	{ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_address0 sc_out sc_lv 16 signal 4 } 
+	{ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_ce0 sc_out sc_logic 1 signal 4 } 
+	{ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_we0 sc_out sc_logic 1 signal 4 } 
+	{ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_d0 sc_out sc_lv 32 signal 4 } 
+	{ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_address1 sc_out sc_lv 16 signal 4 } 
+	{ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_ce1 sc_out sc_logic 1 signal 4 } 
+	{ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_we1 sc_out sc_logic 1 signal 4 } 
+	{ conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_d1 sc_out sc_lv 32 signal 4 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -157,22 +157,22 @@ set NewPortList {[
  	{ "name": "m_axi_i3_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "i3", "role": "BUSER" }} , 
  	{ "name": "input_ftmap", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "input_ftmap", "role": "default" }} , 
  	{ "name": "h", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "h", "role": "default" }} , 
- 	{ "name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_1", "role": "address0" }} , 
- 	{ "name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_1", "role": "ce0" }} , 
- 	{ "name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_1", "role": "we0" }} , 
- 	{ "name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_1", "role": "d0" }} , 
- 	{ "name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_1", "role": "address1" }} , 
- 	{ "name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_1", "role": "ce1" }} , 
- 	{ "name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_1", "role": "we1" }} , 
- 	{ "name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_d1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_1", "role": "d1" }} , 
- 	{ "name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i", "role": "address0" }} , 
- 	{ "name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i", "role": "ce0" }} , 
- 	{ "name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i", "role": "we0" }} , 
- 	{ "name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i", "role": "d0" }} , 
- 	{ "name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i", "role": "address1" }} , 
- 	{ "name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i", "role": "ce1" }} , 
- 	{ "name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i", "role": "we1" }} , 
- 	{ "name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i_d1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv3_float_255_255_float_32_5_5_float_float_255_255_i", "role": "d1" }}  ]}
+ 	{ "name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3", "role": "address0" }} , 
+ 	{ "name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3", "role": "ce0" }} , 
+ 	{ "name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3", "role": "we0" }} , 
+ 	{ "name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3", "role": "d0" }} , 
+ 	{ "name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3", "role": "address1" }} , 
+ 	{ "name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3", "role": "ce1" }} , 
+ 	{ "name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3", "role": "we1" }} , 
+ 	{ "name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_d1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3", "role": "d1" }} , 
+ 	{ "name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2", "role": "address0" }} , 
+ 	{ "name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2", "role": "ce0" }} , 
+ 	{ "name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2", "role": "we0" }} , 
+ 	{ "name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2", "role": "d0" }} , 
+ 	{ "name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2", "role": "address1" }} , 
+ 	{ "name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2", "role": "ce1" }} , 
+ 	{ "name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2", "role": "we1" }} , 
+ 	{ "name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_d1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2", "role": "d1" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2"],
@@ -196,12 +196,12 @@ set RtlHierarchyInfo {[
 					{"Name" : "i3_blk_n_R", "Type" : "RtlSignal"}]},
 			{"Name" : "input_ftmap", "Type" : "None", "Direction" : "I"},
 			{"Name" : "h", "Type" : "None", "Direction" : "I"},
-			{"Name" : "conv3_float_255_255_float_32_5_5_float_float_255_255_i_1", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "conv3_float_255_255_float_32_5_5_float_float_255_255_i", "Type" : "Memory", "Direction" : "O"}],
+			{"Name" : "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "LOADI_LOADH", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "256", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage9", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage9_subdone", "QuitState" : "ap_ST_fsm_pp0_stage9", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage9_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_6ns_19ns_24_1_1_U466", "Parent" : "0"},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_6ns_19ns_24_1_1_U542", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
 
 
@@ -210,8 +210,8 @@ set ArgLastReadFirstWriteLatency {
 		i3 {Type I LastRead 263 FirstWrite -1}
 		input_ftmap {Type I LastRead 0 FirstWrite -1}
 		h {Type I LastRead 0 FirstWrite -1}
-		conv3_float_255_255_float_32_5_5_float_float_255_255_i_1 {Type O LastRead -1 FirstWrite 10}
-		conv3_float_255_255_float_32_5_5_float_float_255_255_i {Type O LastRead -1 FirstWrite 138}}}
+		conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3 {Type O LastRead -1 FirstWrite 10}
+		conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2 {Type O LastRead -1 FirstWrite 138}}}
 
 set hasDtUnsupportedChannel 0
 
@@ -228,6 +228,6 @@ set Spec2ImplPortList {
 	 { m_axi {  { m_axi_i3_AWVALID VALID 1 1 }  { m_axi_i3_AWREADY READY 0 1 }  { m_axi_i3_AWADDR ADDR 1 64 }  { m_axi_i3_AWID ID 1 1 }  { m_axi_i3_AWLEN SIZE 1 32 }  { m_axi_i3_AWSIZE BURST 1 3 }  { m_axi_i3_AWBURST LOCK 1 2 }  { m_axi_i3_AWLOCK CACHE 1 2 }  { m_axi_i3_AWCACHE PROT 1 4 }  { m_axi_i3_AWPROT QOS 1 3 }  { m_axi_i3_AWQOS REGION 1 4 }  { m_axi_i3_AWREGION USER 1 4 }  { m_axi_i3_AWUSER DATA 1 1 }  { m_axi_i3_WVALID VALID 1 1 }  { m_axi_i3_WREADY READY 0 1 }  { m_axi_i3_WDATA FIFONUM 1 32 }  { m_axi_i3_WSTRB STRB 1 4 }  { m_axi_i3_WLAST LAST 1 1 }  { m_axi_i3_WID ID 1 1 }  { m_axi_i3_WUSER DATA 1 1 }  { m_axi_i3_ARVALID VALID 1 1 }  { m_axi_i3_ARREADY READY 0 1 }  { m_axi_i3_ARADDR ADDR 1 64 }  { m_axi_i3_ARID ID 1 1 }  { m_axi_i3_ARLEN SIZE 1 32 }  { m_axi_i3_ARSIZE BURST 1 3 }  { m_axi_i3_ARBURST LOCK 1 2 }  { m_axi_i3_ARLOCK CACHE 1 2 }  { m_axi_i3_ARCACHE PROT 1 4 }  { m_axi_i3_ARPROT QOS 1 3 }  { m_axi_i3_ARQOS REGION 1 4 }  { m_axi_i3_ARREGION USER 1 4 }  { m_axi_i3_ARUSER DATA 1 1 }  { m_axi_i3_RVALID VALID 0 1 }  { m_axi_i3_RREADY READY 1 1 }  { m_axi_i3_RDATA FIFONUM 0 32 }  { m_axi_i3_RLAST LAST 0 1 }  { m_axi_i3_RID ID 0 1 }  { m_axi_i3_RFIFONUM LEN 0 13 }  { m_axi_i3_RUSER DATA 0 1 }  { m_axi_i3_RRESP RESP 0 2 }  { m_axi_i3_BVALID VALID 0 1 }  { m_axi_i3_BREADY READY 1 1 }  { m_axi_i3_BRESP RESP 0 2 }  { m_axi_i3_BID ID 0 1 }  { m_axi_i3_BUSER DATA 0 1 } } }
 	input_ftmap { ap_none {  { input_ftmap in_data 0 64 } } }
 	h { ap_none {  { h in_data 0 8 } } }
-	conv3_float_255_255_float_32_5_5_float_float_255_255_i_1 { ap_memory {  { conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_address0 mem_address 1 16 }  { conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_ce0 mem_ce 1 1 }  { conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_we0 mem_we 1 1 }  { conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_d0 mem_din 1 32 }  { conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_address1 MemPortADDR2 1 16 }  { conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_ce1 MemPortCE2 1 1 }  { conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_we1 MemPortWE2 1 1 }  { conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_d1 MemPortDIN2 1 32 } } }
-	conv3_float_255_255_float_32_5_5_float_float_255_255_i { ap_memory {  { conv3_float_255_255_float_32_5_5_float_float_255_255_i_address0 mem_address 1 16 }  { conv3_float_255_255_float_32_5_5_float_float_255_255_i_ce0 mem_ce 1 1 }  { conv3_float_255_255_float_32_5_5_float_float_255_255_i_we0 mem_we 1 1 }  { conv3_float_255_255_float_32_5_5_float_float_255_255_i_d0 mem_din 1 32 }  { conv3_float_255_255_float_32_5_5_float_float_255_255_i_address1 MemPortADDR2 1 16 }  { conv3_float_255_255_float_32_5_5_float_float_255_255_i_ce1 MemPortCE2 1 1 }  { conv3_float_255_255_float_32_5_5_float_float_255_255_i_we1 MemPortWE2 1 1 }  { conv3_float_255_255_float_32_5_5_float_float_255_255_i_d1 MemPortDIN2 1 32 } } }
+	conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3 { ap_memory {  { conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_address0 mem_address 1 16 }  { conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_ce0 mem_ce 1 1 }  { conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_we0 mem_we 1 1 }  { conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_d0 mem_din 1 32 }  { conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_address1 MemPortADDR2 1 16 }  { conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_ce1 MemPortCE2 1 1 }  { conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_we1 MemPortWE2 1 1 }  { conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_d1 MemPortDIN2 1 32 } } }
+	conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2 { ap_memory {  { conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_address0 mem_address 1 16 }  { conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_ce0 mem_ce 1 1 }  { conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_we0 mem_we 1 1 }  { conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_d0 mem_din 1 32 }  { conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_address1 MemPortADDR2 1 16 }  { conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_ce1 MemPortCE2 1 1 }  { conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_we1 MemPortWE2 1 1 }  { conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_d1 MemPortDIN2 1 32 } } }
 }

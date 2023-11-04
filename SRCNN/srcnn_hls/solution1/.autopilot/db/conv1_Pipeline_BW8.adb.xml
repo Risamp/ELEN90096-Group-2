@@ -34,10 +34,10 @@ newFuncRoot:0 %w = alloca i32 1
 
 <Node id="5" bw="7" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-newFuncRoot:1 %tmp_550_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %tmp_550
+newFuncRoot:1 %tmp_299_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %tmp_299
 
 ]]></Node>
-<StgValue><ssdm name="tmp_550_read"/></StgValue>
+<StgValue><ssdm name="tmp_299_read"/></StgValue>
 </operation>
 
 <operation id="6" st_id="1" stage="1" lat="1">
@@ -64,7 +64,7 @@ newFuncRoot:2 %store_ln0 = store i8 0, i8 %w
 
 <Node id="7" bw="0" op_0_bw="0">
 <![CDATA[
-newFuncRoot:3 %br_ln0 = br void %for.inc.1.i.i
+newFuncRoot:3 %br_ln0 = br void %for.body8.1.i.i
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -79,7 +79,7 @@ newFuncRoot:3 %br_ln0 = br void %for.inc.1.i.i
 
 <Node id="9" bw="8" op_0_bw="8" op_1_bw="0">
 <![CDATA[
-for.inc.1.i.i:0 %w_5 = load i8 %w
+for.body8.1.i.i:0 %w_5 = load i8 %w
 
 ]]></Node>
 <StgValue><ssdm name="w_5"/></StgValue>
@@ -94,7 +94,7 @@ for.inc.1.i.i:0 %w_5 = load i8 %w
 
 <Node id="10" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.inc.1.i.i:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
+for.body8.1.i.i:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln0"/></StgValue>
@@ -109,7 +109,7 @@ for.inc.1.i.i:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i3
 
 <Node id="11" bw="1" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.inc.1.i.i:2 %icmp_ln73 = icmp_eq  i8 %w_5, i8 255
+for.body8.1.i.i:2 %icmp_ln73 = icmp_eq  i8 %w_5, i8 255
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln73"/></StgValue>
@@ -124,7 +124,7 @@ for.inc.1.i.i:2 %icmp_ln73 = icmp_eq  i8 %w_5, i8 255
 
 <Node id="12" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.inc.1.i.i:3 %add_ln73 = add i8 %w_5, i8 1
+for.body8.1.i.i:3 %add_ln73 = add i8 %w_5, i8 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln73"/></StgValue>
@@ -139,7 +139,7 @@ for.inc.1.i.i:3 %add_ln73 = add i8 %w_5, i8 1
 
 <Node id="13" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-for.inc.1.i.i:4 %br_ln73 = br i1 %icmp_ln73, void %for.inc.1.i.i.split, void %for.inc13.1.i.i.exitStub
+for.body8.1.i.i:4 %br_ln73 = br i1 %icmp_ln73, void %for.body8.1.i.i.split, void %for.inc13.1.i.i.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln73"/></StgValue>
@@ -155,7 +155,7 @@ for.inc.1.i.i:4 %br_ln73 = br i1 %icmp_ln73, void %for.inc.1.i.i.split, void %fo
 
 <Node id="15" bw="7" op_0_bw="8">
 <![CDATA[
-for.inc.1.i.i.split:0 %empty = trunc i8 %w_5
+for.body8.1.i.i.split:0 %empty = trunc i8 %w_5
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -171,7 +171,7 @@ for.inc.1.i.i.split:0 %empty = trunc i8 %w_5
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-for.inc.1.i.i.split:1 %speclooptripcount_ln73 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255
+for.body8.1.i.i.split:1 %speclooptripcount_ln73 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255
 
 ]]></Node>
 <StgValue><ssdm name="speclooptripcount_ln73"/></StgValue>
@@ -187,7 +187,7 @@ for.inc.1.i.i.split:1 %speclooptripcount_ln73 = speclooptripcount void @_ssdm_op
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.1.i.i.split:2 %specloopname_ln73 = specloopname void @_ssdm_op_SpecLoopName, void @empty_24
+for.body8.1.i.i.split:2 %specloopname_ln73 = specloopname void @_ssdm_op_SpecLoopName, void @empty_35
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln73"/></StgValue>
@@ -203,10 +203,10 @@ for.inc.1.i.i.split:2 %specloopname_ln73 = specloopname void @_ssdm_op_SpecLoopN
 
 <Node id="18" bw="14" op_0_bw="14" op_1_bw="7" op_2_bw="7">
 <![CDATA[
-for.inc.1.i.i.split:3 %tmp_s = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i7.i7, i7 %tmp_550_read, i7 %empty
+for.body8.1.i.i.split:3 %tmp_303 = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i7.i7, i7 %tmp_299_read, i7 %empty
 
 ]]></Node>
-<StgValue><ssdm name="tmp_s"/></StgValue>
+<StgValue><ssdm name="tmp_303"/></StgValue>
 </operation>
 
 <operation id="17" st_id="1" stage="1" lat="1">
@@ -219,7 +219,7 @@ for.inc.1.i.i.split:3 %tmp_s = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i
 
 <Node id="19" bw="64" op_0_bw="14">
 <![CDATA[
-for.inc.1.i.i.split:4 %zext_ln75 = zext i14 %tmp_s
+for.body8.1.i.i.split:4 %zext_ln75 = zext i14 %tmp_303
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln75"/></StgValue>
@@ -233,12 +233,12 @@ for.inc.1.i.i.split:4 %zext_ln75 = zext i14 %tmp_s
 </and_exp></or_exp>
 </condition>
 
-<Node id="20" bw="14" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="20" bw="14" op_0_bw="16" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc.1.i.i.split:5 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_22 = getelementptr i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i64 0, i64 %zext_ln75
+for.body8.1.i.i.split:5 %conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_619 = getelementptr i16 %conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1, i64 0, i64 %zext_ln75
 
 ]]></Node>
-<StgValue><ssdm name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_22"/></StgValue>
+<StgValue><ssdm name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_619"/></StgValue>
 </operation>
 
 <operation id="19" st_id="1" stage="1" lat="1">
@@ -249,12 +249,12 @@ for.inc.1.i.i.split:5 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_22
 </and_exp></or_exp>
 </condition>
 
-<Node id="21" bw="14" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="21" bw="14" op_0_bw="16" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc.1.i.i.split:6 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_23 = getelementptr i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou, i64 0, i64 %zext_ln75
+for.body8.1.i.i.split:6 %conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_620 = getelementptr i16 %conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2, i64 0, i64 %zext_ln75
 
 ]]></Node>
-<StgValue><ssdm name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_23"/></StgValue>
+<StgValue><ssdm name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_620"/></StgValue>
 </operation>
 
 <operation id="20" st_id="1" stage="1" lat="1">
@@ -267,7 +267,7 @@ for.inc.1.i.i.split:6 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_23
 
 <Node id="22" bw="1" op_0_bw="1" op_1_bw="8" op_2_bw="32">
 <![CDATA[
-for.inc.1.i.i.split:7 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %w_5, i32 7
+for.body8.1.i.i.split:7 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %w_5, i32 7
 
 ]]></Node>
 <StgValue><ssdm name="tmp"/></StgValue>
@@ -283,7 +283,7 @@ for.inc.1.i.i.split:7 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %w_5
 
 <Node id="23" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-for.inc.1.i.i.split:8 %br_ln75 = br i1 %tmp, void %arrayidx1223.1.i.i.case.0, void %arrayidx1223.1.i.i.case.1
+for.body8.1.i.i.split:8 %br_ln75 = br i1 %tmp, void %arrayidx1225.1.i.i.case.0, void %arrayidx1225.1.i.i.case.1
 
 ]]></Node>
 <StgValue><ssdm name="br_ln75"/></StgValue>
@@ -298,9 +298,9 @@ for.inc.1.i.i.split:8 %br_ln75 = br i1 %tmp, void %arrayidx1223.1.i.i.case.0, vo
 </and_exp></or_exp>
 </condition>
 
-<Node id="25" bw="0" op_0_bw="32" op_1_bw="14">
+<Node id="25" bw="0" op_0_bw="16" op_1_bw="14">
 <![CDATA[
-arrayidx1223.1.i.i.case.0:0 %store_ln75 = store i32 0, i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_22
+arrayidx1225.1.i.i.case.0:0 %store_ln75 = store i16 0, i14 %conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_619
 
 ]]></Node>
 <StgValue><ssdm name="store_ln75"/></StgValue>
@@ -317,7 +317,7 @@ arrayidx1223.1.i.i.case.0:0 %store_ln75 = store i32 0, i14 %conv1_float_255_255_
 
 <Node id="26" bw="0" op_0_bw="0">
 <![CDATA[
-arrayidx1223.1.i.i.case.0:1 %br_ln75 = br void %arrayidx1223.1.i.i.exit
+arrayidx1225.1.i.i.case.0:1 %br_ln75 = br void %arrayidx1225.1.i.i.exit
 
 ]]></Node>
 <StgValue><ssdm name="br_ln75"/></StgValue>
@@ -332,9 +332,9 @@ arrayidx1223.1.i.i.case.0:1 %br_ln75 = br void %arrayidx1223.1.i.i.exit
 </and_exp></or_exp>
 </condition>
 
-<Node id="28" bw="0" op_0_bw="32" op_1_bw="14">
+<Node id="28" bw="0" op_0_bw="16" op_1_bw="14">
 <![CDATA[
-arrayidx1223.1.i.i.case.1:0 %store_ln75 = store i32 0, i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_23
+arrayidx1225.1.i.i.case.1:0 %store_ln75 = store i16 0, i14 %conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_620
 
 ]]></Node>
 <StgValue><ssdm name="store_ln75"/></StgValue>
@@ -351,7 +351,7 @@ arrayidx1223.1.i.i.case.1:0 %store_ln75 = store i32 0, i14 %conv1_float_255_255_
 
 <Node id="29" bw="0" op_0_bw="0">
 <![CDATA[
-arrayidx1223.1.i.i.case.1:1 %br_ln75 = br void %arrayidx1223.1.i.i.exit
+arrayidx1225.1.i.i.case.1:1 %br_ln75 = br void %arrayidx1225.1.i.i.exit
 
 ]]></Node>
 <StgValue><ssdm name="br_ln75"/></StgValue>
@@ -367,7 +367,7 @@ arrayidx1223.1.i.i.case.1:1 %br_ln75 = br void %arrayidx1223.1.i.i.exit
 
 <Node id="31" bw="0" op_0_bw="8" op_1_bw="8" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-arrayidx1223.1.i.i.exit:0 %store_ln73 = store i8 %add_ln73, i8 %w
+arrayidx1225.1.i.i.exit:0 %store_ln73 = store i8 %add_ln73, i8 %w
 
 ]]></Node>
 <StgValue><ssdm name="store_ln73"/></StgValue>
@@ -383,7 +383,7 @@ arrayidx1223.1.i.i.exit:0 %store_ln73 = store i8 %add_ln73, i8 %w
 
 <Node id="32" bw="0" op_0_bw="0">
 <![CDATA[
-arrayidx1223.1.i.i.exit:1 %br_ln73 = br void %for.inc.1.i.i
+arrayidx1225.1.i.i.exit:1 %br_ln73 = br void %for.body8.1.i.i
 
 ]]></Node>
 <StgValue><ssdm name="br_ln73"/></StgValue>
@@ -409,15 +409,15 @@ for.inc13.1.i.i.exitStub:0 %ret_ln0 = ret
 
 
 <ports>
-<port id="35" name="tmp_550" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="tmp_550"/></StgValue>
+<port id="35" name="tmp_299" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="tmp_299"/></StgValue>
 </port>
-<port id="36" name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1" dir="1" iftype="1">
-<core>RAM</core><StgValue><ssdm name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1"/><MemPortTyVec>0 3 </MemPortTyVec>
+<port id="36" name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1" dir="1" iftype="1">
+<core>RAM</core><StgValue><ssdm name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1"/><MemPortTyVec>0 3 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="37" name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou" dir="1" iftype="1">
-<core>RAM</core><StgValue><ssdm name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou"/><MemPortTyVec>0 3 </MemPortTyVec>
+<port id="37" name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2" dir="1" iftype="1">
+<core>RAM</core><StgValue><ssdm name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2"/><MemPortTyVec>0 3 </MemPortTyVec>
 </StgValue>
 </port>
 </ports>
@@ -426,9 +426,9 @@ for.inc13.1.i.i.exitStub:0 %ret_ln0 = ret
 <dataflows>
 <dataflow id="39" from="StgValue_38" to="w" fromId="38" toId="4">
 </dataflow>
-<dataflow id="41" from="_ssdm_op_Read.ap_auto.i7" to="tmp_550_read" fromId="40" toId="5">
+<dataflow id="41" from="_ssdm_op_Read.ap_auto.i7" to="tmp_299_read" fromId="40" toId="5">
 </dataflow>
-<dataflow id="42" from="tmp_550" to="tmp_550_read" fromId="35" toId="5">
+<dataflow id="42" from="tmp_299" to="tmp_299_read" fromId="35" toId="5">
 </dataflow>
 <dataflow id="44" from="StgValue_43" to="store_ln0" fromId="43" toId="6">
 </dataflow>
@@ -470,27 +470,27 @@ for.inc13.1.i.i.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="72" from="_ssdm_op_SpecLoopName" to="specloopname_ln73" fromId="71" toId="15">
 </dataflow>
-<dataflow id="74" from="empty_24" to="specloopname_ln73" fromId="73" toId="15">
+<dataflow id="74" from="empty_35" to="specloopname_ln73" fromId="73" toId="15">
 </dataflow>
-<dataflow id="76" from="_ssdm_op_BitConcatenate.i14.i7.i7" to="tmp_s" fromId="75" toId="16">
+<dataflow id="76" from="_ssdm_op_BitConcatenate.i14.i7.i7" to="tmp_303" fromId="75" toId="16">
 </dataflow>
-<dataflow id="77" from="tmp_550_read" to="tmp_s" fromId="5" toId="16">
+<dataflow id="77" from="tmp_299_read" to="tmp_303" fromId="5" toId="16">
 </dataflow>
-<dataflow id="78" from="empty" to="tmp_s" fromId="13" toId="16">
+<dataflow id="78" from="empty" to="tmp_303" fromId="13" toId="16">
 </dataflow>
-<dataflow id="79" from="tmp_s" to="zext_ln75" fromId="16" toId="17">
+<dataflow id="79" from="tmp_303" to="zext_ln75" fromId="16" toId="17">
 </dataflow>
-<dataflow id="80" from="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1" to="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_22" fromId="36" toId="18">
+<dataflow id="80" from="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1" to="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_619" fromId="36" toId="18">
 </dataflow>
-<dataflow id="82" from="StgValue_81" to="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_22" fromId="81" toId="18">
+<dataflow id="82" from="StgValue_81" to="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_619" fromId="81" toId="18">
 </dataflow>
-<dataflow id="83" from="zext_ln75" to="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_22" fromId="17" toId="18">
+<dataflow id="83" from="zext_ln75" to="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_619" fromId="17" toId="18">
 </dataflow>
-<dataflow id="84" from="conv1_float_255_255_float_1_9_9_float_float_255_255_ou" to="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_23" fromId="37" toId="19">
+<dataflow id="84" from="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2" to="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_620" fromId="37" toId="19">
 </dataflow>
-<dataflow id="85" from="StgValue_81" to="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_23" fromId="81" toId="19">
+<dataflow id="85" from="StgValue_81" to="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_620" fromId="81" toId="19">
 </dataflow>
-<dataflow id="86" from="zext_ln75" to="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_23" fromId="17" toId="19">
+<dataflow id="86" from="zext_ln75" to="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_620" fromId="17" toId="19">
 </dataflow>
 <dataflow id="88" from="_ssdm_op_BitSelect.i1.i8.i32" to="tmp" fromId="87" toId="20">
 </dataflow>
@@ -502,11 +502,11 @@ for.inc13.1.i.i.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="94" from="StgValue_93" to="store_ln75" fromId="93" toId="22">
 </dataflow>
-<dataflow id="95" from="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_22" to="store_ln75" fromId="18" toId="22">
+<dataflow id="95" from="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_619" to="store_ln75" fromId="18" toId="22">
 </dataflow>
 <dataflow id="96" from="StgValue_93" to="store_ln75" fromId="93" toId="24">
 </dataflow>
-<dataflow id="97" from="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_23" to="store_ln75" fromId="19" toId="24">
+<dataflow id="97" from="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_620" to="store_ln75" fromId="19" toId="24">
 </dataflow>
 <dataflow id="98" from="add_ln73" to="store_ln73" fromId="11" toId="26">
 </dataflow>

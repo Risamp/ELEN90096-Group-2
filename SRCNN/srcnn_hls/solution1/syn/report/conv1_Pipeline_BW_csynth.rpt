@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv1_Pipeline_BW'
 ================================================================
-* Date:           Sat Nov  4 17:40:40 2023
+* Date:           Sat Nov  4 18:07:55 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -119,23 +119,23 @@
 == Interface
 ================================================================
 * Summary: 
-+-------------------------------------------------------------------+-----+-----+------------+----------------------------------------------------------+--------------+
-|                             RTL Ports                             | Dir | Bits|  Protocol  |                       Source Object                      |    C Type    |
-+-------------------------------------------------------------------+-----+-----+------------+----------------------------------------------------------+--------------+
-|ap_clk                                                             |   in|    1|  ap_ctrl_hs|                                         conv1_Pipeline_BW|  return value|
-|ap_rst                                                             |   in|    1|  ap_ctrl_hs|                                         conv1_Pipeline_BW|  return value|
-|ap_start                                                           |   in|    1|  ap_ctrl_hs|                                         conv1_Pipeline_BW|  return value|
-|ap_done                                                            |  out|    1|  ap_ctrl_hs|                                         conv1_Pipeline_BW|  return value|
-|ap_idle                                                            |  out|    1|  ap_ctrl_hs|                                         conv1_Pipeline_BW|  return value|
-|ap_ready                                                           |  out|    1|  ap_ctrl_hs|                                         conv1_Pipeline_BW|  return value|
-|tmp_548                                                            |   in|    7|     ap_none|                                                   tmp_548|        scalar|
-|conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0  |  out|   14|   ap_memory|  conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1|         array|
-|conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0       |  out|    1|   ap_memory|  conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1|         array|
-|conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0       |  out|    1|   ap_memory|  conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1|         array|
-|conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_d0        |  out|   32|   ap_memory|  conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1|         array|
-|conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address0    |  out|   14|   ap_memory|    conv1_float_255_255_float_1_9_9_float_float_255_255_ou|         array|
-|conv1_float_255_255_float_1_9_9_float_float_255_255_ou_ce0         |  out|    1|   ap_memory|    conv1_float_255_255_float_1_9_9_float_float_255_255_ou|         array|
-|conv1_float_255_255_float_1_9_9_float_float_255_255_ou_we0         |  out|    1|   ap_memory|    conv1_float_255_255_float_1_9_9_float_float_255_255_ou|         array|
-|conv1_float_255_255_float_1_9_9_float_float_255_255_ou_d0          |  out|   32|   ap_memory|    conv1_float_255_255_float_1_9_9_float_float_255_255_ou|         array|
-+-------------------------------------------------------------------+-----+-----+------------+----------------------------------------------------------+--------------+
++--------------------------------------------------------------------------+-----+-----+------------+-----------------------------------------------------------------+--------------+
+|                                 RTL Ports                                | Dir | Bits|  Protocol  |                          Source Object                          |    C Type    |
++--------------------------------------------------------------------------+-----+-----+------------+-----------------------------------------------------------------+--------------+
+|ap_clk                                                                    |   in|    1|  ap_ctrl_hs|                                                conv1_Pipeline_BW|  return value|
+|ap_rst                                                                    |   in|    1|  ap_ctrl_hs|                                                conv1_Pipeline_BW|  return value|
+|ap_start                                                                  |   in|    1|  ap_ctrl_hs|                                                conv1_Pipeline_BW|  return value|
+|ap_done                                                                   |  out|    1|  ap_ctrl_hs|                                                conv1_Pipeline_BW|  return value|
+|ap_idle                                                                   |  out|    1|  ap_ctrl_hs|                                                conv1_Pipeline_BW|  return value|
+|ap_ready                                                                  |  out|    1|  ap_ctrl_hs|                                                conv1_Pipeline_BW|  return value|
+|tmp_287                                                                   |   in|    7|     ap_none|                                                          tmp_287|        scalar|
+|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_address0  |  out|   14|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
+|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_ce0       |  out|    1|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
+|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_we0       |  out|    1|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
+|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_d0        |  out|   16|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
+|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_address0    |  out|   14|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
+|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_ce0         |  out|    1|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
+|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_we0         |  out|    1|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
+|conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_d0          |  out|   16|   ap_memory|    conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2|         array|
++--------------------------------------------------------------------------+-----+-----+------------+-----------------------------------------------------------------+--------------+
 

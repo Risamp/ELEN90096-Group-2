@@ -34,7 +34,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852142702</coreId>
+						<coreId>1931485194</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -52,7 +52,7 @@
 					<Obj>
 						<type>1</type>
 						<id>2</id>
-						<name>conv3_float_255_255_float_32_5_5_float_float_255_255_o_1</name>
+						<name>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -70,10 +70,10 @@
 						<coreName>RAM_T2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852142702</coreId>
+						<coreId>876047980</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>32</bitwidth>
+					<bitwidth>24</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>1</if_type>
@@ -88,7 +88,7 @@
 					<Obj>
 						<type>1</type>
 						<id>3</id>
-						<name>conv3_float_255_255_float_32_5_5_float_float_255_255_o</name>
+						<name>conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -106,10 +106,10 @@
 						<coreName>RAM_T2P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1266049040</coreId>
+						<coreId>1635147636</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>32</bitwidth>
+					<bitwidth>24</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>1</if_type>
@@ -188,7 +188,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2</coreId>
+						<coreId>650165808</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -274,7 +274,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>323</coreId>
+						<coreId>673065808</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -344,7 +344,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1266332592</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -557,7 +557,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>1684957440</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -653,7 +653,7 @@
 					<Obj>
 						<type>0</type>
 						<id>20</id>
-						<name>tmp_s</name>
+						<name>tmp_84</name>
 						<fileName>src/conv3.cpp</fileName>
 						<fileDirectory>C:\SPB_Data\ELEN90096-Group-2\SRCNN</fileDirectory>
 						<lineNumber>76</lineNumber>
@@ -699,7 +699,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1254935520</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -771,7 +771,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1266351280</coreId>
+						<coreId>673076944</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -795,79 +795,7 @@
 					<Obj>
 						<type>0</type>
 						<id>22</id>
-						<name>conv3_float_255_255_float_32_5_5_float_float_255_255_o_24</name>
-						<fileName>src/conv3.cpp</fileName>
-						<fileDirectory>C:\SPB_Data\ELEN90096-Group-2\SRCNN</fileDirectory>
-						<lineNumber>76</lineNumber>
-						<contextFuncName>clear_buffer_c3</contextFuncName>
-						<contextNormFuncName>clear_buffer_c3</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\SPB_Data\ELEN90096-Group-2\SRCNN</first>
-								<second>
-									<count>3</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>src/conv3.cpp</first>
-											<second>clear_buffer_c3</second>
-										</first>
-										<second>76</second>
-									</item>
-									<item>
-										<first>
-											<first>src/conv3.cpp</first>
-											<second>conv3</second>
-										</first>
-										<second>65</second>
-									</item>
-									<item>
-										<first>
-											<first>src/conv3.cpp</first>
-											<second>export_output_buffer_c3</second>
-										</first>
-										<second>152</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>2</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>10</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>70</item>
-					<item>72</item>
-					<item>73</item>
-				</oprand_edges>
-				<opcode>getelementptr</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>12</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_16">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>23</id>
-						<name>conv3_float_255_255_float_32_5_5_float_float_255_255_o_25</name>
+						<name>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_425</name>
 						<fileName>src/conv3.cpp</fileName>
 						<fileDirectory>C:\SPB_Data\ELEN90096-Group-2\SRCNN</fileDirectory>
 						<lineNumber>76</lineNumber>
@@ -914,6 +842,78 @@
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
 						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>10</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>70</item>
+					<item>72</item>
+					<item>73</item>
+				</oprand_edges>
+				<opcode>getelementptr</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>12</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_16">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>23</id>
+						<name>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_426</name>
+						<fileName>src/conv3.cpp</fileName>
+						<fileDirectory>C:\SPB_Data\ELEN90096-Group-2\SRCNN</fileDirectory>
+						<lineNumber>76</lineNumber>
+						<contextFuncName>clear_buffer_c3</contextFuncName>
+						<contextNormFuncName>clear_buffer_c3</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\SPB_Data\ELEN90096-Group-2\SRCNN</first>
+								<second>
+									<count>3</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>src/conv3.cpp</first>
+											<second>clear_buffer_c3</second>
+										</first>
+										<second>76</second>
+									</item>
+									<item>
+										<first>
+											<first>src/conv3.cpp</first>
+											<second>conv3</second>
+										</first>
+										<second>65</second>
+									</item>
+									<item>
+										<first>
+											<first>src/conv3.cpp</first>
+											<second>export_output_buffer_c3</second>
+										</first>
+										<second>152</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>673061456</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -985,7 +985,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>656295728</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1057,7 +1057,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1313423872</coreId>
+						<coreId>2984</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1083,7 +1083,7 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>conv3_float_255_255_float_32_5_5_float_float_255_255_o_24_write_ln76</name>
+						<name>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_425_write_ln76</name>
 						<fileName>src/conv3.cpp</fileName>
 						<fileDirectory>C:\SPB_Data\ELEN90096-Group-2\SRCNN</fileDirectory>
 						<lineNumber>76</lineNumber>
@@ -1200,7 +1200,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>789639936</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1224,7 +1224,7 @@
 					<Obj>
 						<type>0</type>
 						<id>30</id>
-						<name>conv3_float_255_255_float_32_5_5_float_float_255_255_o_25_write_ln76</name>
+						<name>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_426_write_ln76</name>
 						<fileName>src/conv3.cpp</fileName>
 						<fileDirectory>C:\SPB_Data\ELEN90096-Group-2\SRCNN</fileDirectory>
 						<lineNumber>76</lineNumber>
@@ -1341,7 +1341,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1266367512</coreId>
+						<coreId>2984</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1411,7 +1411,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1266377392</coreId>
+						<coreId>2984</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1484,7 +1484,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1268079440</coreId>
+						<coreId>673088592</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1526,7 +1526,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>674577152</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1571,7 +1571,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1254951280</coreId>
+						<coreId>1685021552</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1602,7 +1602,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>244902464</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1633,7 +1633,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1254950032</coreId>
+						<coreId>1685021552</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1664,7 +1664,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1254952288</coreId>
+						<coreId>1702129263</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1695,12 +1695,12 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1266049040</coreId>
+						<coreId>895439701</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>32</bitwidth>
+					<bitwidth>24</bitwidth>
 				</Value>
-				<const_type>1</const_type>
+				<const_type>0</const_type>
 				<content>0</content>
 			</item>
 			<item class_id_reference="16" object_id="_31">
@@ -1726,7 +1726,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1254952384</coreId>
+						<coreId>1918989395</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1757,7 +1757,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1254946336</coreId>
+						<coreId>1702129263</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1791,7 +1791,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1685024095</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1807,7 +1807,7 @@
 				<Obj>
 					<type>3</type>
 					<id>16</id>
-					<name>for.inc.1.i.i</name>
+					<name>for.body8.1.i.i</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1825,7 +1825,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1685024095</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1841,7 +1841,7 @@
 				<Obj>
 					<type>3</type>
 					<id>26</id>
-					<name>for.inc.1.i.i.split</name>
+					<name>for.body8.1.i.i.split</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1859,7 +1859,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1685024095</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1878,7 +1878,7 @@
 				<Obj>
 					<type>3</type>
 					<id>29</id>
-					<name>arrayidx1223.1.i.i.case.0</name>
+					<name>arrayidx1225.1.i.i.case.0</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1896,7 +1896,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1685024095</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1910,7 +1910,7 @@
 				<Obj>
 					<type>3</type>
 					<id>32</id>
-					<name>arrayidx1223.1.i.i.case.1</name>
+					<name>arrayidx1225.1.i.i.case.1</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1928,7 +1928,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1685024095</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1942,7 +1942,7 @@
 				<Obj>
 					<type>3</type>
 					<id>35</id>
-					<name>arrayidx1223.1.i.i.exit</name>
+					<name>arrayidx1225.1.i.i.exit</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1960,7 +1960,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1685024095</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1992,7 +1992,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1685024095</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -2973,7 +2973,7 @@
 			</second>
 		</item>
 		<item>
-			<first>conv3_float_255_255_float_32_5_5_float_float_255_255_o_24_gep_fu_60</first>
+			<first>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_425_gep_fu_60</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2981,7 +2981,7 @@
 			</second>
 		</item>
 		<item>
-			<first>conv3_float_255_255_float_32_5_5_float_float_255_255_o_25_gep_fu_67</first>
+			<first>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_426_gep_fu_67</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3005,19 +3005,19 @@
 			</second>
 		</item>
 		<item>
+			<first>tmp_84_fu_112</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>20</item>
+			</second>
+		</item>
+		<item>
 			<first>tmp_fu_126</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>24</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_s_fu_112</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>20</item>
 			</second>
 		</item>
 		<item>
@@ -3086,24 +3086,24 @@
 		<item_version>0</item_version>
 		<item class_id="46" tracking_level="0" version="0">
 			<first class_id="47" tracking_level="0" version="0">
-				<first>conv3_float_255_255_float_32_5_5_float_float_255_255_o</first>
-				<second>0</second>
-			</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>30</item>
-			</second>
-		</item>
-		<item>
-			<first>
-				<first>conv3_float_255_255_float_32_5_5_float_float_255_255_o_1</first>
+				<first>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1</first>
 				<second>0</second>
 			</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>27</item>
+			</second>
+		</item>
+		<item>
+			<first>
+				<first>conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255</first>
+				<second>0</second>
+			</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>30</item>
 			</second>
 		</item>
 	</dp_mem_port_nodes>
@@ -3158,22 +3158,7 @@
 			</second>
 		</item>
 		<item>
-			<first>conv3_float_255_255_float_32_5_5_float_float_255_255_o(p0)</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>
-					<first>store</first>
-					<second>
-						<count>1</count>
-						<item_version>0</item_version>
-						<item>30</item>
-					</second>
-				</item>
-			</second>
-		</item>
-		<item>
-			<first>conv3_float_255_255_float_32_5_5_float_float_255_255_o_1(p0)</first>
+			<first>conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1(p0)</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3183,6 +3168,21 @@
 						<count>1</count>
 						<item_version>0</item_version>
 						<item>27</item>
+					</second>
+				</item>
+			</second>
+		</item>
+		<item>
+			<first>conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255(p0)</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>
+					<first>store</first>
+					<second>
+						<count>1</count>
+						<item_version>0</item_version>
+						<item>30</item>
 					</second>
 				</item>
 			</second>

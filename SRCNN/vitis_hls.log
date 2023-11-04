@@ -2,7 +2,7 @@ ECHO is off.
 ECHO is off.
 NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'bcevans' on host '400p1t176rg0512' (Windows NT_amd64 version 6.2) on Sat Nov 04 17:16:27 +1100 2023
+INFO: [HLS 200-10] For user 'bcevans' on host '400p1t176rg0512' (Windows NT_amd64 version 6.2) on Sat Nov 04 18:05:41 +1100 2023
 INFO: [HLS 200-10] In directory 'C:/SPB_Data/ELEN90096-Group-2/SRCNN'
 Sourcing Tcl script 'C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl'
 INFO: [HLS 200-1510] Running: source C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl
@@ -56,18 +56,18 @@ INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/
 INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.233 seconds; current allocated memory: 92.285 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.243 seconds; current allocated memory: 156.383 MB.
 INFO: [HLS 200-10] Analyzing design file 'src/conv1.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file 'src/conv2.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file 'src/conv3.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file 'src/srcnn.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 22.014 seconds; current allocated memory: 93.000 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 25.547 seconds; current allocated memory: 156.383 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 INFO: [HLS 214-291] Loop 'KR1' is marked as complete unroll implied by the pipeline pragma (src/conv3.cpp:46:7)
 INFO: [HLS 214-291] Loop 'KC1' is marked as complete unroll implied by the pipeline pragma (src/conv3.cpp:52:7)
 INFO: [HLS 214-291] Loop 'PAD' is marked as complete unroll implied by the pipeline pragma (src/conv3.cpp:97:8)
 INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (src/conv3.cpp:108:3)
-INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (src/conv2.cpp:79:2)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (src/conv2.cpp:80:2)
 INFO: [HLS 214-291] Loop 'KR1' is marked as complete unroll implied by the pipeline pragma (src/conv1.cpp:43:7)
 INFO: [HLS 214-291] Loop 'KC1' is marked as complete unroll implied by the pipeline pragma (src/conv1.cpp:49:13)
 INFO: [HLS 214-188] Unrolling loop 'COL' (src/conv3.cpp:43:11) in function 'conv3' partially with a factor of 3 (src/conv3.cpp:14:0)
@@ -77,55 +77,59 @@ INFO: [HLS 214-188] Unrolling loop 'EXPORTH' (src/conv3.cpp:136:11) in function 
 INFO: [HLS 214-188] Unrolling loop 'CLEARH' (src/conv3.cpp:72:10) in function 'clear_buffer_c3' partially with a factor of 3 (src/conv3.cpp:70:0)
 INFO: [HLS 214-186] Unrolling loop 'PAD' (src/conv3.cpp:97:8) in function 'load_input_buffer_c3' completely with a factor of 2 (src/conv3.cpp:86:0)
 INFO: [HLS 214-186] Unrolling loop 'anonymous' (src/conv3.cpp:108:3) in function 'load_input_buffer_c3' completely with a factor of 255 (src/conv3.cpp:86:0)
-INFO: [HLS 214-188] Unrolling loop 'COL' (src/conv2.cpp:44:10) in function 'conv2' partially with a factor of 15 (src/conv2.cpp:13:0)
-INFO: [HLS 214-188] Unrolling loop 'BH' (src/conv2.cpp:106:6) in function 'export_output_buffer_c2' partially with a factor of 2 (src/conv2.cpp:103:0)
-INFO: [HLS 214-359] Unrolling loop 'BH' (src/conv2.cpp:60:6) in function 'clear_buffer_c2': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3). (src/conv2.cpp:58:0)
-INFO: [HLS 214-186] Unrolling loop 'BH' (src/conv2.cpp:60:6) in function 'clear_buffer_c2' completely with a factor of 3 (src/conv2.cpp:58:0)
-INFO: [HLS 214-186] Unrolling loop 'anonymous' (src/conv2.cpp:79:2) in function 'load_input_buffer_c2' completely with a factor of 255 (src/conv2.cpp:74:0)
+INFO: [HLS 214-188] Unrolling loop 'COL' (src/conv2.cpp:44:10) in function 'conv2' partially with a factor of 5 (src/conv2.cpp:13:0)
+INFO: [HLS 214-188] Unrolling loop 'BH' (src/conv2.cpp:107:6) in function 'export_output_buffer_c2' partially with a factor of 2 (src/conv2.cpp:104:0)
+INFO: [HLS 214-359] Unrolling loop 'BH' (src/conv2.cpp:61:6) in function 'clear_buffer_c2': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3). (src/conv2.cpp:59:0)
+INFO: [HLS 214-186] Unrolling loop 'BH' (src/conv2.cpp:61:6) in function 'clear_buffer_c2' completely with a factor of 3 (src/conv2.cpp:59:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (src/conv2.cpp:80:2) in function 'load_input_buffer_c2' completely with a factor of 255 (src/conv2.cpp:75:0)
 INFO: [HLS 214-188] Unrolling loop 'COL' (src/conv1.cpp:40:11) in function 'conv1' partially with a factor of 3 (src/conv1.cpp:13:0)
 INFO: [HLS 214-186] Unrolling loop 'KR1' (src/conv1.cpp:43:7) in function 'conv1' completely with a factor of 9 (src/conv1.cpp:13:0)
 INFO: [HLS 214-186] Unrolling loop 'KC1' (src/conv1.cpp:49:13) in function 'conv1' completely with a factor of 9 (src/conv1.cpp:13:0)
 INFO: [HLS 214-188] Unrolling loop 'BH' (src/conv1.cpp:134:6) in function 'export_output_buffer_c1' partially with a factor of 2 (src/conv1.cpp:131:0)
 INFO: [HLS 214-188] Unrolling loop 'BH' (src/conv1.cpp:71:6) in function 'clear_buffer_c1' partially with a factor of 2 (src/conv1.cpp:69:0)
 INFO: [HLS 214-188] Unrolling loop 'K' (src/conv1.cpp:116:5) in function 'load_weight_buffer_c1' partially with a factor of 2 (src/conv1.cpp:113:0)
-INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_input_buffer_c1(float (*) [23][263], float (*) [255][255], int, int)' (src/conv1.cpp:85:0)
-INFO: [HLS 214-178] Inlining function 'clear_buffer_c1(float (*) [15][255])' into 'export_output_buffer_c1(float (*) [15][255], float (*) [255][255], float*, int, int)' (src/conv1.cpp:131:0)
-INFO: [HLS 214-178] Inlining function 'load_input_buffer_c1(float (*) [23][263], float (*) [255][255], int, int)' into 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])' (src/conv1.cpp:13:0)
-INFO: [HLS 214-178] Inlining function 'load_weight_buffer_c1(float (*) [1][9][9], float (*) [1][9][9], int, int)' into 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])' (src/conv1.cpp:13:0)
-INFO: [HLS 214-178] Inlining function 'export_output_buffer_c1(float (*) [15][255], float (*) [255][255], float*, int, int)' into 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])' (src/conv1.cpp:13:0)
-INFO: [HLS 214-178] Inlining function 'clear_buffer_c2(float (*) [3][255])' into 'export_output_buffer_c2(float (*) [3][255], float (*) [255][255], float*, int, int)' (src/conv2.cpp:103:0)
-INFO: [HLS 214-178] Inlining function 'load_weight_buffer_c2(float (*) [64][1][1], float (*) [64][1][1], int, int)' into 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])' (src/conv2.cpp:13:0)
-INFO: [HLS 214-178] Inlining function 'export_output_buffer_c2(float (*) [3][255], float (*) [255][255], float*, int, int)' into 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])' (src/conv2.cpp:13:0)
-INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_input_buffer_c3(float (*) [9][259], float (*) [255][255], int, int)' (src/conv3.cpp:86:0)
-INFO: [HLS 214-178] Inlining function 'clear_buffer_c3(float (*) [5][255])' into 'export_output_buffer_c3(float (*) [5][255], float (*) [255][255], float*, int, int)' (src/conv3.cpp:133:0)
-INFO: [HLS 214-178] Inlining function 'load_weight_buffer_c3(float (*) [32][5][5], float (*) [32][5][5], int, int)' into 'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])' (src/conv3.cpp:14:0)
-INFO: [HLS 214-178] Inlining function 'export_output_buffer_c3(float (*) [5][255], float (*) [255][255], float*, int, int)' into 'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])' (src/conv3.cpp:14:0)
+INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_input_buffer_c1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [23][263], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)' (src/conv1.cpp:85:0)
+INFO: [HLS 214-178] Inlining function 'clear_buffer_c1(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [15][255])' into 'export_output_buffer_c1(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [15][255], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)' (src/conv1.cpp:131:0)
+INFO: [HLS 214-178] Inlining function 'load_input_buffer_c1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [23][263], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)' into 'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])' (src/conv1.cpp:13:0)
+INFO: [HLS 214-178] Inlining function 'load_weight_buffer_c1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], int, int)' into 'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])' (src/conv1.cpp:13:0)
+INFO: [HLS 214-178] Inlining function 'export_output_buffer_c1(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [15][255], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)' into 'conv1(ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<12, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [1][9][9], ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])' (src/conv1.cpp:13:0)
+INFO: [HLS 214-178] Inlining function 'clear_buffer_c2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][255])' into 'export_output_buffer_c2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][255], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)' (src/conv2.cpp:104:0)
+INFO: [HLS 214-178] Inlining function 'load_weight_buffer_c2(ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], int, int)' into 'conv2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])' (src/conv2.cpp:13:0)
+INFO: [HLS 214-178] Inlining function 'export_output_buffer_c2(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][255], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)' into 'conv2(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64][1][1], ap_fixed<10, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])' (src/conv2.cpp:13:0)
+INFO: [HLS 214-178] Inlining function 'clamp(int, int, int)' into 'load_input_buffer_c3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [9][259], ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], int, int)' (src/conv3.cpp:86:0)
+INFO: [HLS 214-178] Inlining function 'clear_buffer_c3(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [5][255])' into 'export_output_buffer_c3(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [5][255], ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)' (src/conv3.cpp:133:0)
+INFO: [HLS 214-178] Inlining function 'load_weight_buffer_c3(ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], int, int)' into 'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])' (src/conv3.cpp:14:0)
+INFO: [HLS 214-178] Inlining function 'export_output_buffer_c3(ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [5][255], ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)' into 'conv3(ap_fixed<32, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255], ap_fixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32][5][5], ap_fixed<15, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [255][255])' (src/conv3.cpp:14:0)
 WARNING: [HLS 214-167] The program may have out of bound array access
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E15input_fm_buffer': Block partitioning with factor 2 on dimension 3. (src/conv3.cpp:23:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E16output_fm_buffer': Block partitioning with factor 2 on dimension 3. (src/conv3.cpp:18:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer': Cyclic partitioning with factor 2 on dimension 2. Block partitioning with factor 15 on dimension 3. (src/conv2.cpp:21:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E16output_fm_buffer': Block partitioning with factor 15 on dimension 3. (src/conv2.cpp:17:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer': Cyclic partitioning with factor 2 on dimension 1. Cyclic partitioning with factor 2 on dimension 2. (src/conv1.cpp:22:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer': Block partitioning with factor 3 on dimension 3. (src/conv1.cpp:19:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E16output_fm_buffer': Block partitioning with factor 2 on dimension 3. (src/conv1.cpp:15:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EEE15input_fm_buffer': Block partitioning with factor 2 on dimension 3. (src/conv3.cpp:23:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ5conv3PA255_A255_8ap_fixedILi32ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_A5_A5_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi15ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi24ELi3ELS0_5ELS1_3ELi0EEE16output_fm_buffer': Block partitioning with factor 2 on dimension 3. (src/conv3.cpp:18:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EEE15input_fm_buffer': Cyclic partitioning with factor 2 on dimension 2. Block partitioning with factor 5 on dimension 3. (src/conv2.cpp:21:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_S_ILi18ELi1ELS0_5ELS1_3ELi0EEPS_ILi10ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi32ELi3ELS0_5ELS1_3ELi0EEE16output_fm_buffer': Block partitioning with factor 5 on dimension 3. (src/conv2.cpp:17:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EEE13weight_buffer': Cyclic partitioning with factor 2 on dimension 1. Cyclic partitioning with factor 2 on dimension 2. (src/conv1.cpp:22:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EEE15input_fm_buffer': Block partitioning with factor 3 on dimension 3. (src/conv1.cpp:19:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_S2_PS_ILi8ELi1ELS0_5ELS1_3ELi0EEPA255_A255_S_ILi16ELi3ELS0_5ELS1_3ELi0EEE16output_fm_buffer': Block partitioning with factor 2 on dimension 3. (src/conv1.cpp:15:0)
+INFO: [HLS 214-241] Aggregating maxi variable 'output_ftmap' with compact=none mode in 32-bits
+INFO: [HLS 214-241] Aggregating maxi variable 'conv3_weights' with compact=none mode in 32-bits (src/srcnn.cpp:18:0)
+INFO: [HLS 214-241] Aggregating maxi variable 'conv2_output_ftmap' with compact=none mode in 32-bits
+INFO: [HLS 214-241] Aggregating maxi variable 'conv1_output_ftmap' with compact=none mode in 16-bits
+INFO: [HLS 214-241] Aggregating maxi variable 'conv1_weights' with compact=none mode in 16-bits
+INFO: [HLS 214-241] Aggregating maxi variable 'input_ftmap' with compact=none mode in 16-bits
 INFO: [HLS 214-188] Unrolling loop 'BH' (src/conv1.cpp:87:6) in function 'conv1' partially with a factor of 2 (src/conv1.cpp:13:0)
-INFO: [HLS 214-115] Multiple burst reads of length 255 and bit width 32 in loop 'anonymous'(src/conv1.cpp:104:3) has been inferred on bundle 'i1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv1.cpp:104:3)
-INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 32 in loop 'TILE_OUT'(src/conv1.cpp:32:13) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv1.cpp:32:13)
-INFO: [HLS 214-115] Multiple burst reads of length 9 and bit width 32 in loop 'anonymous'(src/conv1.cpp:120:2) has been inferred on bundle 'w1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv1.cpp:120:2)
-INFO: [HLS 214-115] Multiple burst writes of length 255 and bit width 32 in loop 'anonymous'(src/conv1.cpp:149:3) has been inferred on bundle 'i2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv1.cpp:149:3)
-INFO: [HLS 214-115] Multiple burst reads of length 765 and bit width 32 in loop 'BH'(src/conv2.cpp:76:6) has been inferred on bundle 'i2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv2.cpp:76:6)
+INFO: [HLS 214-115] Multiple burst reads of length 255 and bit width 16 in loop 'anonymous'(src/conv1.cpp:104:3) has been inferred on bundle 'i1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv1.cpp:104:3)
+INFO: [HLS 214-115] Multiple burst reads of length 9 and bit width 16 in loop 'anonymous'(src/conv1.cpp:120:2) has been inferred on bundle 'w1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv1.cpp:120:2)
+INFO: [HLS 214-115] Multiple burst writes of length 255 and bit width 16 in loop 'anonymous'(src/conv1.cpp:149:3) has been inferred on bundle 'i2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv1.cpp:149:3)
+INFO: [HLS 214-115] Multiple burst reads of length 765 and bit width 16 in loop 'BH'(src/conv2.cpp:77:6) has been inferred on bundle 'i2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv2.cpp:77:6)
 INFO: [HLS 214-115] Multiple burst reads of length 2048 and bit width 32 in loop 'TILE_OUT'(src/conv2.cpp:34:13) has been inferred on bundle 'w2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv2.cpp:34:13)
-INFO: [HLS 214-115] Multiple burst reads of length 32 and bit width 32 in loop 'TILE_OUT'(src/conv2.cpp:34:13) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv2.cpp:34:13)
-INFO: [HLS 214-115] Multiple burst writes of length 255 and bit width 32 in loop 'anonymous'(src/conv2.cpp:119:3) has been inferred on bundle 'i3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv2.cpp:119:3)
-INFO: [HLS 214-115] Multiple burst reads of length 255 and bit width 32 has been inferred on bundle 'i3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv3.cpp:93:19)
+INFO: [HLS 214-115] Multiple burst writes of length 255 and bit width 32 in loop 'anonymous'(src/conv2.cpp:120:3) has been inferred on bundle 'i3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv2.cpp:120:3)
+INFO: [HLS 214-115] Multiple burst reads of length 255 and bit width 32 has been inferred on bundle 'i3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv3.cpp:99:32)
 INFO: [HLS 214-115] Multiple burst reads of length 800 and bit width 32 in loop 'WEIGHTI'(src/conv3.cpp:119:11) has been inferred on bundle 'w3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv3.cpp:119:11)
 INFO: [HLS 214-115] Multiple burst writes of length 255 and bit width 32 in loop 'anonymous'(src/conv3.cpp:149:3) has been inferred on bundle 'o'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/conv3.cpp:149:3)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 15.992 seconds; current allocated memory: 93.000 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.011 seconds; current allocated memory: 93.000 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 16.655 seconds; current allocated memory: 156.383 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 156.383 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 402 seconds. CPU system time: 0 seconds. Elapsed time: 403.399 seconds; current allocated memory: 93.000 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.494 seconds; current allocated memory: 156.383 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 450 seconds. CPU system time: 0 seconds. Elapsed time: 450.065 seconds; current allocated memory: 93.000 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 3.686 seconds; current allocated memory: 156.383 MB.
 INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.1.1' in function 'conv3' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'Loop-2.3.2' in function 'conv3' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'Loop-2.3.4' in function 'conv3' automatically.
@@ -135,20 +139,20 @@ INFO: [XFORM 203-510] Pipelining loop 'CLEARW' (src/conv3.cpp:74) in function 'c
 INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.1.1' in function 'conv2' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.3.1.2' in function 'conv2' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.3.1.4' in function 'conv2' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'BW' (src/conv2.cpp:62) in function 'conv2' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'BW' (src/conv2.cpp:62) in function 'conv2' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'BW' (src/conv2.cpp:62) in function 'conv2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'BW' (src/conv2.cpp:63) in function 'conv2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'BW' (src/conv2.cpp:63) in function 'conv2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'BW' (src/conv2.cpp:63) in function 'conv2' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'Loop-2.2.3.1.2' in function 'conv1' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'Loop-2.2.3.1.4' in function 'conv1' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'BW' (src/conv1.cpp:73) in function 'conv1' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'BW' (src/conv1.cpp:73) in function 'conv1' automatically.
 INFO: [XFORM 203-102] Partitioning array 'weight_buffer' in dimension 1 automatically.
-INFO: [XFORM 203-102] Partitioning array 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])input_fm_buffer.3' in dimension 1 automatically.
-INFO: [XFORM 203-102] Partitioning array 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])input_fm_buffer.2' in dimension 1 automatically.
-INFO: [XFORM 203-102] Partitioning array 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])input_fm_buffer' in dimension 1 automatically.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 410 seconds. CPU system time: 0 seconds. Elapsed time: 411.417 seconds; current allocated memory: 93.000 MB.
+INFO: [XFORM 203-102] Partitioning array 'conv1(ap_fixed<12, 1, 5, 3, 0> (*) [255][255], ap_fixed<12, 1, 5, 3, 0> (*) [1][9][9], ap_fixed<8, 1, 5, 3, 0>*, ap_fixed<16, 3, 5, 3, 0> (*) [255][255])input_fm_buffer.3' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv1(ap_fixed<12, 1, 5, 3, 0> (*) [255][255], ap_fixed<12, 1, 5, 3, 0> (*) [1][9][9], ap_fixed<8, 1, 5, 3, 0>*, ap_fixed<16, 3, 5, 3, 0> (*) [255][255])input_fm_buffer.2' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv1(ap_fixed<12, 1, 5, 3, 0> (*) [255][255], ap_fixed<12, 1, 5, 3, 0> (*) [1][9][9], ap_fixed<8, 1, 5, 3, 0>*, ap_fixed<16, 3, 5, 3, 0> (*) [255][255])input_fm_buffer' in dimension 1 automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 7 seconds. CPU system time: 1 seconds. Elapsed time: 7.34 seconds; current allocated memory: 156.383 MB.
 INFO: [XFORM 203-541] Flattening a loop nest 'LOADI' (src/conv3.cpp:87:9) in function 'load_input_buffer_c3'.
-INFO: [XFORM 203-541] Flattening a loop nest 'LOAD_INPUT' (src/conv2.cpp:75:14) in function 'load_input_buffer_c2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'LOAD_INPUT' (src/conv2.cpp:76:14) in function 'load_input_buffer_c2'.
 INFO: [XFORM 203-541] Flattening a loop nest 'WEIGHTK' (src/conv3.cpp:120:11) in function 'conv3'.
 INFO: [XFORM 203-541] Flattening a loop nest 'WEIGHTI' (src/conv3.cpp:119:11) in function 'conv3'.
 INFO: [XFORM 203-541] Flattening a loop nest 'ROW' (src/conv3.cpp:41:10) in function 'conv3'.
@@ -159,12 +163,15 @@ WARNING: [HLS 200-960] Cannot flatten loop 'CLEARH' (src/conv3.cpp:72:10) in fun
 Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
 WARNING: [HLS 200-960] Cannot flatten loop 'TILE_ROW' (src/conv3.cpp:32:12) in function 'conv3' more than one sub loop.
 Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
-INFO: [XFORM 203-541] Flattening a loop nest 'LOAD_WEIGHTS' (src/conv2.cpp:90:16) in function 'conv2'.
-WARNING: [HLS 200-960] Cannot flatten loop 'BH' (src/conv2.cpp:106:6) in function 'conv2' more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'LOAD_WEIGHTS' (src/conv2.cpp:91:16) in function 'conv2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'ROW' (src/conv2.cpp:43:10) in function 'conv2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'IN' (src/conv2.cpp:39:8) in function 'conv2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'OUT' (src/conv2.cpp:38:9) in function 'conv2'.
+WARNING: [HLS 200-960] Cannot flatten loop 'BH' (src/conv2.cpp:107:6) in function 'conv2' more than one sub loop.
 Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
-WARNING: [HLS 200-960] Cannot flatten loop 'EXPORT' (src/conv2.cpp:105:10) in function 'conv2' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'EXPORT' (src/conv2.cpp:106:10) in function 'conv2' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
 Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
-WARNING: [HLS 200-960] Cannot flatten loop 'CLEAR' (src/conv2.cpp:59:9) in function 'conv2' more than one sub loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'CLEAR' (src/conv2.cpp:60:9) in function 'conv2' more than one sub loop.
 Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
 WARNING: [HLS 200-960] Cannot flatten loop 'TILE_OUT' (src/conv2.cpp:34:13) in function 'conv2' more than one sub loop.
 Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
@@ -184,37 +191,253 @@ WARNING: [HLS 200-960] Cannot flatten loop 'TILE_OUT' (src/conv1.cpp:32:13) in f
 Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
 WARNING: [HLS 200-960] Cannot flatten loop 'TILE_ROW' (src/conv1.cpp:28:12) in function 'conv1' more than one sub loop.
 Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 42 seconds. CPU system time: 0 seconds. Elapsed time: 41.839 seconds; current allocated memory: 315.965 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 10 seconds. CPU system time: 0 seconds. Elapsed time: 9.722 seconds; current allocated memory: 335.195 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'srcnn' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv1_Pipeline_OUT_ROW_COL' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_14) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_26) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_24) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_22) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_21) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_20) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_34) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_33) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_32) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_31) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_30) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_29) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_28) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_44) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_43) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_42) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_41) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_40) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_39) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_38) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_37) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_53) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_52) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_51) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_50) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_49) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_48) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_47) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_46) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_62) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_61) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_60) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_59) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_58) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_57) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_56) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_55) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_71) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_70) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_69) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_68) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_67) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_66) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_65) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_64) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_80) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_79) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_78) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_77) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_76) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_75) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_74) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_73) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_89) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_88) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_87) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_86) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_85) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_84) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_83) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_82) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_98) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_97) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_96) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_95) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_94) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_93) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_92) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_91) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_107) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_106) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_105) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_104) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_103) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_102) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_101) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_100) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_116) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_115) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_114) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_113) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_112) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_111) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_110) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_109) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_125) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_124) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_123) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_122) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_121) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_120) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_119) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_118) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_134) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_133) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_132) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_131) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_130) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_129) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_128) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_127) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_143) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_142) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_141) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_140) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_139) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_138) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_137) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_136) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_152) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_151) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_150) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_149) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_148) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_147) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_146) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_145) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_161) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_160) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_159) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_158) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_157) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_156) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_155) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_154) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_170) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_169) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_168) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_167) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_166) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_165) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_164) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_163) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_179) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_178) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_177) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_176) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_175) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_174) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_173) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_172) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_188) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_187) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_186) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_185) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_184) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_183) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_182) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_181) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_197) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_196) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_195) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_194) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_193) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_192) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_191) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_190) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_206) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_205) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_204) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_203) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_202) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_201) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_200) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_199) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_215) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_214) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_213) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_212) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_211) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_210) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_209) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_208) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_224) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_223) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_222) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_221) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_220) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_219) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_218) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_217) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_233) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_232) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_231) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_230) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_229) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_228) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_227) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_226) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_242) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_241) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_240) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_239) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_238) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_237) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_236) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_235) to 3 in order to utilize available DSP registers.
 INFO: [SCHED 204-61] Pipelining loop 'OUT_ROW_COL'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 51, Final II = 51, Depth = 94, loop 'OUT_ROW_COL'
+INFO: [HLS 200-1470] Pipelining result : Target II = 51, Final II = 51, Depth = 121, loop 'OUT_ROW_COL'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 23 seconds. CPU system time: 0 seconds. Elapsed time: 23.459 seconds; current allocated memory: 386.816 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 14 seconds. CPU system time: 0 seconds. Elapsed time: 15.017 seconds; current allocated memory: 388.461 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.039 seconds; current allocated memory: 394.344 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.143 seconds; current allocated memory: 388.461 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv1_Pipeline_RELU' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'RELU'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 8, loop 'RELU'
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 2, loop 'RELU'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 4.18 seconds; current allocated memory: 394.344 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.36 seconds; current allocated memory: 388.461 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 394.344 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.075 seconds; current allocated memory: 388.461 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv1_Pipeline_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -222,27 +445,27 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Loop 1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 394.344 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.115 seconds; current allocated memory: 388.461 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 394.344 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 388.461 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv1_Pipeline_RELU7' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'RELU'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 8, loop 'RELU'
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 2, loop 'RELU'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.324 seconds; current allocated memory: 394.344 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.119 seconds; current allocated memory: 388.461 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.123 seconds; current allocated memory: 394.344 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 388.461 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv1_Pipeline_5' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -250,13 +473,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Loop 1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.101 seconds; current allocated memory: 394.344 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 388.461 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 394.344 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 388.461 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv1_Pipeline_BW' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -264,13 +487,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'BW'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'BW'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.082 seconds; current allocated memory: 394.344 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 388.461 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.052 seconds; current allocated memory: 394.344 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.065 seconds; current allocated memory: 388.461 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv1_Pipeline_BW8' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -278,25 +501,25 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'BW'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'BW'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 394.344 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 388.461 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 394.344 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 388.461 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.6 seconds; current allocated memory: 394.344 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.535 seconds; current allocated memory: 388.461 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.612 seconds; current allocated memory: 394.344 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.679 seconds; current allocated memory: 388.461 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'load_input_buffer_c2_Pipeline_BH' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -304,25 +527,25 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'LOAD_INPUT_BH'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 256, Final II = 256, Depth = 265, loop 'LOAD_INPUT_BH'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 2.694 seconds; current allocated memory: 412.941 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.557 seconds; current allocated memory: 407.676 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 2.976 seconds; current allocated memory: 413.105 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 2.986 seconds; current allocated memory: 407.688 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'load_input_buffer_c2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.753 seconds; current allocated memory: 413.109 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.741 seconds; current allocated memory: 407.688 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 413.109 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 407.691 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_LOAD_WEIGHTS_L' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -330,69 +553,84 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'LOAD_WEIGHTS_L'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'LOAD_WEIGHTS_L'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.155 seconds; current allocated memory: 413.125 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.155 seconds; current allocated memory: 407.703 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 413.125 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.091 seconds; current allocated memory: 407.707 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_OUT_ROW_COL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln48) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'OUT_ROW_COL'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 10, Final II = 10, Depth = 23, loop 'OUT_ROW_COL'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.078 seconds; current allocated memory: 407.848 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.407 seconds; current allocated memory: 407.848 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_RELU' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'RELU'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 8, loop 'RELU'
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 2, loop 'RELU'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.425 seconds; current allocated memory: 413.156 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.317 seconds; current allocated memory: 407.848 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.158 seconds; current allocated memory: 413.156 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.089 seconds; current allocated memory: 407.848 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_3' 
+INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Loop 1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.197 seconds; current allocated memory: 413.156 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.159 seconds; current allocated memory: 407.848 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.088 seconds; current allocated memory: 413.164 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.096 seconds; current allocated memory: 407.848 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_RELU4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'RELU'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 8, loop 'RELU'
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 2, loop 'RELU'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.388 seconds; current allocated memory: 413.207 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.173 seconds; current allocated memory: 407.848 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.162 seconds; current allocated memory: 413.211 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 407.848 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_5' 
+INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_6' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Loop 1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.199 seconds; current allocated memory: 413.227 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.162 seconds; current allocated memory: 407.848 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.094 seconds; current allocated memory: 413.250 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 407.848 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_BW' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -400,13 +638,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'BW'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'BW'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 413.262 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.153 seconds; current allocated memory: 407.848 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 413.262 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 407.848 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_BW5' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -414,13 +652,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'BW'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'BW'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.159 seconds; current allocated memory: 413.285 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.156 seconds; current allocated memory: 407.895 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 413.285 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 407.895 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv2_Pipeline_BW6' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -428,25 +666,25 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'BW'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'BW'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.162 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.159 seconds; current allocated memory: 407.922 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.088 seconds; current allocated memory: 407.922 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 12 seconds. CPU system time: 1 seconds. Elapsed time: 12.215 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.464 seconds; current allocated memory: 407.965 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.712 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.568 seconds; current allocated memory: 407.973 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'load_input_buffer_c3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -454,13 +692,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'LOADI_LOADH'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 256, Final II = 256, Depth = 266, loop 'LOADI_LOADH'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.924 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.074 seconds; current allocated memory: 425.066 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 2.946 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 2.976 seconds; current allocated memory: 425.234 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv3_Pipeline_WEIGHTI_WEIGHTK_L' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -468,41 +706,41 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'WEIGHTI_WEIGHTK_L'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'WEIGHTI_WEIGHTK_L'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.784 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.791 seconds; current allocated memory: 425.246 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.095 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 425.254 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv3_Pipeline_IN_ROW_COL' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'IN_ROW_COL'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 19, Final II = 19, Depth = 52, loop 'IN_ROW_COL'
+INFO: [HLS 200-1470] Pipelining result : Target II = 19, Final II = 19, Depth = 31, loop 'IN_ROW_COL'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 11 seconds. CPU system time: 0 seconds. Elapsed time: 10.807 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 3.81 seconds; current allocated memory: 427.453 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.74 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.663 seconds; current allocated memory: 427.695 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv3_Pipeline_RELU' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'RELU'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 8, loop 'RELU'
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 2, loop 'RELU'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 3.615 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.426 seconds; current allocated memory: 427.863 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 427.887 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv3_Pipeline_4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -510,27 +748,27 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Loop 1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.123 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.134 seconds; current allocated memory: 427.898 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 427.977 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv3_Pipeline_RELU1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'RELU'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 8, loop 'RELU'
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 2, loop 'RELU'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.338 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.144 seconds; current allocated memory: 427.984 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.141 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 427.984 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv3_Pipeline_6' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -538,13 +776,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Loop 1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.125 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.136 seconds; current allocated memory: 427.988 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 427.988 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv3_Pipeline_CLEARW' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -552,13 +790,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'CLEARW'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'CLEARW'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.103 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.127 seconds; current allocated memory: 427.992 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.068 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 428.156 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv3_Pipeline_CLEARW2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -566,13 +804,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'CLEARW'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'CLEARW'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.103 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.119 seconds; current allocated memory: 428.156 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.068 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 428.156 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv3_Pipeline_CLEARW3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -580,65 +818,64 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'CLEARW'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'CLEARW'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.101 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.121 seconds; current allocated memory: 428.160 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.068 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 428.160 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.305 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.322 seconds; current allocated memory: 428.312 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.456 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.471 seconds; current allocated memory: 428.312 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'srcnn' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.252 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 428.328 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.333 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.313 seconds; current allocated memory: 428.367 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1_Pipeline_OUT_ROW_COL' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'OUT_ROW_COL' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv1_Pipeline_OUT_ROW_COL' pipeline 'OUT_ROW_COL' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 6 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_12s_12s_24s_25_4_1': 27 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_12s_12s_25s_25_4_1': 189 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_12s_12s_24_1_1': 27 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_2ns_8ns_9_1_1': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_4ns_8ns_11_1_1': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_5ns_8ns_11_1_1': 7 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_8ns_10ns_17_1_1': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_9ns_11ns_19_1_1': 9 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_2_1_32_1_1': 7 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_3_2_32_1_1': 22 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_2_1_12_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_2_1_16_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_3_2_12_1_1': 21 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'urem_8ns_8ns_8_12_1': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'urem_9ns_8ns_9_13_1': 9 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1_Pipeline_OUT_ROW_COL'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.262 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.509 seconds; current allocated memory: 458.305 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1_Pipeline_RELU' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'RELU' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv1_Pipeline_RELU' pipeline 'RELU' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_2_1_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_2_1_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1_Pipeline_RELU'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 5 seconds. CPU system time: 3 seconds. Elapsed time: 8.013 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 6 seconds. CPU system time: 4 seconds. Elapsed time: 10.556 seconds; current allocated memory: 525.598 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1_Pipeline_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -656,19 +893,16 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_3/m_axi_i2_AW
 WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_3/m_axi_i2_AWREGION' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_3/m_axi_i2_AWUSER' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_3/m_axi_i2_BREADY' to 0.
-INFO: [RTGEN 206-100] Generating core module 'mux_2_1_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_2_1_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1_Pipeline_3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.436 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.443 seconds; current allocated memory: 525.598 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1_Pipeline_RELU7' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'RELU' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv1_Pipeline_RELU7' pipeline 'RELU' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_2_1_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_2_1_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1_Pipeline_RELU7'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.244 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.252 seconds; current allocated memory: 525.598 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1_Pipeline_5' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -686,54 +920,52 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_5/m_axi_i2_AW
 WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_5/m_axi_i2_AWREGION' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_5/m_axi_i2_AWUSER' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'conv1_Pipeline_5/m_axi_i2_BREADY' to 0.
-INFO: [RTGEN 206-100] Generating core module 'mux_2_1_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_2_1_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1_Pipeline_5'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.454 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.46 seconds; current allocated memory: 525.598 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1_Pipeline_BW' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1_Pipeline_BW'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.182 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.258 seconds; current allocated memory: 525.598 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1_Pipeline_BW8' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1_Pipeline_BW8'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.185 seconds; current allocated memory: 525.641 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SYN 201-210] Renamed object name 'conv1_p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0_RAM_2P_LUTRAM_1R1W' to 'conv1_p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0_RAM_2P_LUTRAbkb' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv1_p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0_RAM_2P_LUTRAM_1R1W' to 'conv1_p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0_RAM_2P_LUTRAcud' due to the length limit 80
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv1/grp_fu_561_p_opcode' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv1/grp_fu_565_p_opcode' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv1/grp_fu_569_p_opcode' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv1/grp_fu_573_p_opcode' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv1/grp_fu_577_p_opcode' to 0.
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 5 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 4 instance(s).
+INFO: [SYN 201-210] Renamed object name 'conv1_conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_4_RAM_AUTO_1R1W' to 'conv1_conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_4_RAM_AUTbkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv1_conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_2_RAM_AUTO_1R1W' to 'conv1_conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_2_RAM_AUTcud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv1_conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_3_RAM_AUTO_1R1W' to 'conv1_conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_3_RAM_AUTdEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv1_p_ZZ5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_1_RAM_2P_LUTRAM_1R1W' to 'conv1_p_ZZ5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEeOg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv1_p_ZZ5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_s_RAM_2P_LUTRAM_1R1W' to 'conv1_p_ZZ5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEfYi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv1_conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_RAM_AUTO_1R1W' to 'conv1_conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_RAM_AUTg8j' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv1_conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_RAM_AUTO_1R1W' to 'conv1_conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_RAM_AUTO_hbi' due to the length limit 80
 INFO: [RTGEN 206-100] Generating core module 'mul_64s_8ns_64_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_6ns_10ns_15_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_6ns_19ns_24_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_6ns_18ns_23_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_6ns_9ns_14_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_9ns_11ns_19_1_1': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'urem_9ns_8ns_9_13_seq_1': 4 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1'.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0_RAM_2P_LUTRAbkb' using distributed RAMs.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.554 seconds; current allocated memory: 413.301 MB.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_4_RAM_AUTbkb' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_p_ZZ5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEeOg' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_RAM_AUTg8j' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.618 seconds; current allocated memory: 526.598 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'load_input_buffer_c2_Pipeline_BH' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'load_input_buffer_c2_Pipeline_BH' pipeline 'LOAD_INPUT_BH' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'mul_7ns_19ns_25_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_18ns_24_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8ns_7ns_14_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'load_input_buffer_c2_Pipeline_BH'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 2.649 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.878 seconds; current allocated memory: 547.113 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'load_input_buffer_c2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'load_input_buffer_c2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 2 seconds. Elapsed time: 3.097 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 2 seconds. Elapsed time: 3.045 seconds; current allocated memory: 569.219 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_LOAD_WEIGHTS_L' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -751,154 +983,129 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_LOAD_WEIGHTS_
 WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_LOAD_WEIGHTS_L/m_axi_w2_ARREGION' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_LOAD_WEIGHTS_L/m_axi_w2_ARUSER' to 0.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_LOAD_WEIGHTS_L'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.38 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.462 seconds; current allocated memory: 572.957 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_OUT_ROW_COL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'OUT_ROW_COL' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2_Pipeline_OUT_ROW_COL' pipeline 'OUT_ROW_COL' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_18s_16s_33s_34_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_18s_16s_34_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7s_7ns_10_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8ns_10ns_17_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8ns_7ns_13_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_9ns_11ns_19_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_2_1_16_1_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_5_3_16_1_1': 10 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_5_3_32_1_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_8ns_7ns_8_12_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_9ns_7ns_9_13_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_OUT_ROW_COL'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.55 seconds; current allocated memory: 575.836 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_RELU' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'RELU' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2_Pipeline_RELU' pipeline 'RELU' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_15_4_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_5_3_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_RELU'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.314 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.254 seconds; current allocated memory: 580.145 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_3' 
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2_Pipeline_3' pipeline 'Loop 1' pipeline type 'loop pipeline'
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_3/m_axi_i3_AWVALID' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_3/m_axi_i3_AWADDR' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_3/m_axi_i3_AWID' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_3/m_axi_i3_AWLEN' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_3/m_axi_i3_AWSIZE' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_3/m_axi_i3_AWBURST' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_3/m_axi_i3_AWLOCK' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_3/m_axi_i3_AWCACHE' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_3/m_axi_i3_AWPROT' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_3/m_axi_i3_AWQOS' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_3/m_axi_i3_AWREGION' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_3/m_axi_i3_AWUSER' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_3/m_axi_i3_BREADY' to 0.
-INFO: [RTGEN 206-100] Generating core module 'mux_15_4_32_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.855 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2_Pipeline_4' pipeline 'Loop 1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_4/m_axi_i3_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_4/m_axi_i3_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_4/m_axi_i3_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_4/m_axi_i3_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_4/m_axi_i3_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_4/m_axi_i3_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_4/m_axi_i3_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_4/m_axi_i3_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_4/m_axi_i3_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_4/m_axi_i3_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_4/m_axi_i3_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_4/m_axi_i3_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_4/m_axi_i3_BREADY' to 0.
+INFO: [RTGEN 206-100] Generating core module 'mux_5_3_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.568 seconds; current allocated memory: 586.102 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_RELU4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'RELU' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2_Pipeline_RELU4' pipeline 'RELU' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_15_4_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_5_3_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_RELU4'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.316 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.297 seconds; current allocated memory: 588.973 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_5' 
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_6' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2_Pipeline_5' pipeline 'Loop 1' pipeline type 'loop pipeline'
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWVALID' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWADDR' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWID' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWLEN' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWSIZE' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWBURST' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWLOCK' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWCACHE' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWPROT' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWQOS' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWREGION' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWUSER' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_BREADY' to 0.
-INFO: [RTGEN 206-100] Generating core module 'mux_15_4_32_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_5'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.93 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2_Pipeline_6' pipeline 'Loop 1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_6/m_axi_i3_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_6/m_axi_i3_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_6/m_axi_i3_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_6/m_axi_i3_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_6/m_axi_i3_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_6/m_axi_i3_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_6/m_axi_i3_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_6/m_axi_i3_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_6/m_axi_i3_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_6/m_axi_i3_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_6/m_axi_i3_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_6/m_axi_i3_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_6/m_axi_i3_BREADY' to 0.
+INFO: [RTGEN 206-100] Generating core module 'mux_5_3_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.636 seconds; current allocated memory: 590.262 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_BW' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2_Pipeline_BW' pipeline 'BW' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_BW'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.243 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.264 seconds; current allocated memory: 591.562 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_BW5' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2_Pipeline_BW5' pipeline 'BW' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_BW5'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.299 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 593.609 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv2_Pipeline_BW6' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2_Pipeline_BW6' pipeline 'BW' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2_Pipeline_BW6'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.302 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.281 seconds; current allocated memory: 594.918 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_0_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_0_RAM_AUTO_dEe' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_1_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_1_RAM_AUTO_eOg' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_2_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_2_RAM_AUTO_fYi' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_3_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_3_RAM_AUTO_g8j' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_4_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_4_RAM_AUTO_hbi' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_5_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_5_RAM_AUTO_ibs' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_6_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_6_RAM_AUTO_jbC' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_7_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_7_RAM_AUTO_kbM' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_8_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_8_RAM_AUTO_lbW' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_9_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_9_RAM_AUTO_mb6' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_10_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_10_RAM_AUTOncg' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_11_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_11_RAM_AUTOocq' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_12_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_12_RAM_AUTOpcA' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_13_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_13_RAM_AUTOqcK' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_14_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_14_RAM_AUTOrcU' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_0_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_0_RAM_AUTO_sc4' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_1_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_1_RAM_AUTO_tde' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_2_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_2_RAM_AUTO_udo' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_3_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_3_RAM_AUTO_vdy' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_4_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_4_RAM_AUTO_wdI' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_5_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_5_RAM_AUTO_xdS' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_6_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_6_RAM_AUTO_yd2' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_7_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_7_RAM_AUTO_zec' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_8_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_8_RAM_AUTO_Aem' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_9_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_9_RAM_AUTO_Bew' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_10_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_10_RAM_AUTOCeG' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_11_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_11_RAM_AUTODeQ' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_12_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_12_RAM_AUTOEe0' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_13_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_13_RAM_AUTOFfa' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_14_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_1_14_RAM_AUTOGfk' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_9_RAM_T2P_BRAM_1R1W' to 'conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_9_RAM_T2P_BRAM_1Hfu' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_5_RAM_T2P_BRAM_1R1W' to 'conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_5_RAM_T2P_BRAM_1IfE' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_4_RAM_T2P_BRAM_1R1W' to 'conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_4_RAM_T2P_BRAM_1JfO' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_3_RAM_T2P_BRAM_1R1W' to 'conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_3_RAM_T2P_BRAM_1KfY' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_RAM_T2P_BRAM_1R1W' to 'conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_RAM_T2P_BRAM_1Lf8' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_1_RAM_T2P_BRAM_1R1W' to 'conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_1_RAM_T2P_BRAM_1Mgi' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_8_RAM_T2P_BRAM_1R1W' to 'conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_8_RAM_T2P_BRAM_1Ngs' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_7_RAM_T2P_BRAM_1R1W' to 'conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_7_RAM_T2P_BRAM_1OgC' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_6_RAM_T2P_BRAM_1R1W' to 'conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_6_RAM_T2P_BRAM_1PgM' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E16output_fm_buffer_10_RAM_T2P_BRAM_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E16output_fm_buffer_10_RAM_T2P_BQgW' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E16output_fm_buffer_11_RAM_T2P_BRAM_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E16output_fm_buffer_11_RAM_T2P_BRg6' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E16output_fm_buffer_12_RAM_T2P_BRAM_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E16output_fm_buffer_12_RAM_T2P_BShg' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E16output_fm_buffer_13_RAM_T2P_BRAM_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E16output_fm_buffer_13_RAM_T2P_BThq' due to the length limit 80
-INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E16output_fm_buffer_14_RAM_T2P_BRAM_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E16output_fm_buffer_14_RAM_T2P_BUhA' due to the length limit 80
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 2 instance(s).
+INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_9_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEibs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_8_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEjbC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_7_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEkbM' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_6_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EElbW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_5_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEmb6' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_4_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEncg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_3_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEocq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_2_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEpcA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_1_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEqcK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_RAM_AUTO_1R1W' to 'conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EErcU' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv2_conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_4_RAM_T2P_BRAM_1R1W' to 'conv2_conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_4_RAM_T2P_sc4' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv2_conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_3_RAM_T2P_BRAM_1R1W' to 'conv2_conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_3_RAM_T2P_tde' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv2_conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_2_RAM_T2P_BRAM_1R1W' to 'conv2_conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_2_RAM_T2P_udo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv2_conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_1_RAM_T2P_BRAM_1R1W' to 'conv2_conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_1_RAM_T2P_vdy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv2_conv2_mulmulmulmulap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_RAM_T2P_BRAM_1R1W' to 'conv2_conv2_mulmulmulmulap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_25wdI' due to the length limit 80
 INFO: [RTGEN 206-100] Generating core module 'mul_5ns_19ns_23_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_8ns_10ns_17_1_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_9ns_11ns_19_1_1': 13 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_15_4_32_1_1': 45 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_2_1_32_1_1': 15 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'urem_8ns_6ns_8_12_seq_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'urem_9ns_6ns_9_13_seq_1': 13 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7s_7ns_10_1_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2'.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv2_p_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer_0_0_RAM_AUTO_dEe' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv2_p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEibs' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'srcnn_conv2_weight_buffer_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv2_conv2_float_255_255_float_64_1_1_float_float_255_255_o_9_RAM_T2P_BRAM_1Hfu' using block RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.452 seconds; current allocated memory: 413.301 MB.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv2_conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_4_RAM_T2P_sc4' using block RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.66 seconds; current allocated memory: 596.691 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'load_input_buffer_c3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'load_input_buffer_c3' pipeline 'LOADI_LOADH' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mul_6ns_19ns_24_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'load_input_buffer_c3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3 seconds. CPU system time: 2 seconds. Elapsed time: 5.708 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.27 seconds; current allocated memory: 615.008 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv3_Pipeline_WEIGHTI_WEIGHTK_L' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -916,30 +1123,27 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_WEIGHTI_WEIGH
 WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_WEIGHTI_WEIGHTK_L/m_axi_w3_ARREGION' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_WEIGHTI_WEIGHTK_L/m_axi_w3_ARUSER' to 0.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3_Pipeline_WEIGHTI_WEIGHTK_L'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 2 seconds. Elapsed time: 3.329 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 3.001 seconds; current allocated memory: 631.973 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv3_Pipeline_IN_ROW_COL' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'IN_ROW_COL' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv3_Pipeline_IN_ROW_COL' pipeline 'IN_ROW_COL' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 5 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_18s_49_1_1': 5 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_6ns_6ns_11_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_9ns_11ns_19_1_1': 5 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_2_1_32_1_1': 15 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_2_1_24_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_2_1_32_1_1': 14 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'urem_9ns_9ns_9_13_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3_Pipeline_IN_ROW_COL'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.601 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.711 seconds; current allocated memory: 638.469 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv3_Pipeline_RELU' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'RELU' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv3_Pipeline_RELU' pipeline 'RELU' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_2_1_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_2_1_24_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3_Pipeline_RELU'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.923 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.608 seconds; current allocated memory: 653.699 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv3_Pipeline_4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -957,19 +1161,16 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_4/m_axi_o_AWQ
 WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_4/m_axi_o_AWREGION' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_4/m_axi_o_AWUSER' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_4/m_axi_o_BREADY' to 0.
-INFO: [RTGEN 206-100] Generating core module 'mux_2_1_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_2_1_24_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3_Pipeline_4'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.57 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.524 seconds; current allocated memory: 661.258 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv3_Pipeline_RELU1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'RELU' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv3_Pipeline_RELU1' pipeline 'RELU' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_2_1_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_2_1_24_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3_Pipeline_RELU1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.311 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.318 seconds; current allocated memory: 664.105 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv3_Pipeline_6' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -987,41 +1188,36 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWQ
 WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWREGION' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWUSER' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_BREADY' to 0.
-INFO: [RTGEN 206-100] Generating core module 'mux_2_1_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_2_1_24_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3_Pipeline_6'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.569 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.562 seconds; current allocated memory: 664.879 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv3_Pipeline_CLEARW' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3_Pipeline_CLEARW'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.213 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.304 seconds; current allocated memory: 666.207 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv3_Pipeline_CLEARW2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3_Pipeline_CLEARW2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.187 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.237 seconds; current allocated memory: 667.551 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv3_Pipeline_CLEARW3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3_Pipeline_CLEARW3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 668.590 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SYN 201-210] Renamed object name 'conv3_conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_RAM_T2P_BRAM_1R1W' to 'conv3_conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_RAM_T2P_BRAM_1VhK' due to the length limit 80
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_561_p_opcode' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_565_p_opcode' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_569_p_opcode' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_573_p_opcode' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_577_p_opcode' to 0.
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 5 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 4 instance(s).
+INFO: [SYN 201-210] Renamed object name 'conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_RAM_AUTO_1R1W' to 'conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_RAM_AUTOxdS' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_RAM_AUTO_1R1W' to 'conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_RAM_AUTOyd2' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_RAM_T2P_BRAM_1R1W' to 'conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_RAM_T2P_zec' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'conv3_conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_RAM_T2P_BRAM_1R1W' to 'conv3_conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_25Aem' due to the length limit 80
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3'.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv3_conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_RAM_AUTOxdS' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'srcnn_conv3_weight_buffer_0_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv3_conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_RAM_T2P_BRAM_1VhK' using block RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.467 seconds; current allocated memory: 413.301 MB.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_RAM_T2P_zec' using block RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.398 seconds; current allocated memory: 669.348 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'srcnn' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1046,17 +1242,14 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/conv3_biases' to 's_
 INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/output_ftmap' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'srcnn' to 's_axilite & ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Bundling port 'input_ftmap', 'conv1_weights', 'conv1_biases', 'conv1_output_ftmap', 'conv2_weights', 'conv2_biases', 'conv2_output_ftmap', 'conv3_weights', 'conv3_biases', 'output_ftmap' and 'return' to AXI-Lite port control.
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 5 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 4 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'srcnn'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.445 seconds; current allocated memory: 413.301 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 4.897 seconds; current allocated memory: 413.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.453 seconds; current allocated memory: 671.984 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 5.122 seconds; current allocated memory: 697.773 MB.
 INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 10 seconds. CPU system time: 1 seconds. Elapsed time: 10.184 seconds; current allocated memory: 436.723 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 10 seconds. CPU system time: 1 seconds. Elapsed time: 10.923 seconds; current allocated memory: 733.699 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for srcnn.
 INFO: [VLOG 209-307] Generating Verilog RTL for srcnn.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 129.79 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1435 seconds. CPU system time: 19 seconds. Elapsed time: 1493.57 seconds; current allocated memory: 344.512 MB.
-INFO: [HLS 200-112] Total CPU user time: 1436 seconds. Total CPU system time: 20 seconds. Total elapsed time: 1495.43 seconds; peak allocated memory: 459.285 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 112 seconds. CPU system time: 18 seconds. Elapsed time: 173.415 seconds; current allocated memory: 612.719 MB.
+INFO: [HLS 200-112] Total CPU user time: 113 seconds. Total CPU system time: 19 seconds. Total elapsed time: 176.656 seconds; peak allocated memory: 733.699 MB.

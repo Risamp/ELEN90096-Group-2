@@ -13,15 +13,15 @@ module srcnn_conv1_Pipeline_BW8 (
         ap_done,
         ap_idle,
         ap_ready,
-        tmp_550,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_d0,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address0,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_ce0,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_we0,
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_d0
+        tmp_299,
+        conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_address0,
+        conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_ce0,
+        conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_we0,
+        conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_d0,
+        conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_address0,
+        conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_ce0,
+        conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_we0,
+        conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_d0
 );
 
 parameter    ap_ST_fsm_state1 = 1'd1;
@@ -32,21 +32,21 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-input  [6:0] tmp_550;
-output  [13:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0;
-output   conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0;
-output   conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0;
-output  [31:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_d0;
-output  [13:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address0;
-output   conv1_float_255_255_float_1_9_9_float_float_255_255_ou_ce0;
-output   conv1_float_255_255_float_1_9_9_float_float_255_255_ou_we0;
-output  [31:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_d0;
+input  [6:0] tmp_299;
+output  [13:0] conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_address0;
+output   conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_ce0;
+output   conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_we0;
+output  [15:0] conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_d0;
+output  [13:0] conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_address0;
+output   conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_ce0;
+output   conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_we0;
+output  [15:0] conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_d0;
 
 reg ap_idle;
-reg conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0;
-reg conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0;
-reg conv1_float_255_255_float_1_9_9_float_float_255_255_ou_ce0;
-reg conv1_float_255_255_float_1_9_9_float_float_255_255_ou_we0;
+reg conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_ce0;
+reg conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_we0;
+reg conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_ce0;
+reg conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_we0;
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
@@ -62,7 +62,7 @@ wire    ap_loop_init;
 reg   [7:0] ap_sig_allocacmp_w_5;
 wire   [0:0] tmp_fu_118_p3;
 wire   [6:0] empty_fu_100_p1;
-wire   [13:0] tmp_s_fu_104_p3;
+wire   [13:0] tmp_303_fu_104_p3;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -172,33 +172,33 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0 = 1'b1;
+        conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_ce0 = 1'b1;
     end else begin
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0 = 1'b0;
+        conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
     if (((tmp_fu_118_p3 == 1'd0) & (icmp_ln73_fu_88_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0 = 1'b1;
+        conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_we0 = 1'b1;
     end else begin
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0 = 1'b0;
+        conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_ce0 = 1'b1;
+        conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_ce0 = 1'b1;
     end else begin
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_ce0 = 1'b0;
+        conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
     if (((tmp_fu_118_p3 == 1'd1) & (icmp_ln73_fu_88_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_we0 = 1'b1;
+        conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_we0 = 1'b1;
     end else begin
-        conv1_float_255_255_float_1_9_9_float_float_255_255_ou_we0 = 1'b0;
+        conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_we0 = 1'b0;
     end
 end
 
@@ -223,22 +223,22 @@ end
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0 = zext_ln75_fu_112_p1;
+assign conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_address0 = zext_ln75_fu_112_p1;
 
-assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_d0 = 32'd0;
+assign conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_d0 = 16'd0;
 
-assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address0 = zext_ln75_fu_112_p1;
+assign conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_address0 = zext_ln75_fu_112_p1;
 
-assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_d0 = 32'd0;
+assign conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_d0 = 16'd0;
 
 assign empty_fu_100_p1 = ap_sig_allocacmp_w_5[6:0];
 
 assign icmp_ln73_fu_88_p2 = ((ap_sig_allocacmp_w_5 == 8'd255) ? 1'b1 : 1'b0);
 
+assign tmp_303_fu_104_p3 = {{tmp_299}, {empty_fu_100_p1}};
+
 assign tmp_fu_118_p3 = ap_sig_allocacmp_w_5[32'd7];
 
-assign tmp_s_fu_104_p3 = {{tmp_550}, {empty_fu_100_p1}};
-
-assign zext_ln75_fu_112_p1 = tmp_s_fu_104_p3;
+assign zext_ln75_fu_112_p1 = tmp_303_fu_104_p3;
 
 endmodule //srcnn_conv1_Pipeline_BW8

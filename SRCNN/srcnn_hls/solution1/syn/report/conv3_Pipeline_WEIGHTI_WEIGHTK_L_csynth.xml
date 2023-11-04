@@ -47,7 +47,7 @@
 
 <AreaEstimates>
 <Resources>
-<FF>66</FF>
+<FF>52</FF>
 <LUT>289</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
@@ -687,7 +687,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>32</Bits>
+<Bits>18</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 </InterfaceSummary>

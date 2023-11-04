@@ -5708,20 +5708,20 @@ inline __attribute__((nodebug)) bool operator!=(
 # 366 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\\ap_fixed.h" 2
 # 5 "src/srcnn.h" 2
 # 42 "src/srcnn.h"
-typedef float input_t;
-typedef float conv1w_t;
-typedef float conv1b_t;
-typedef float conv1o_t;
+typedef ap_fixed<12,1> input_t;
+typedef ap_fixed<12,1> conv1w_t;
+typedef ap_fixed<8,1> conv1b_t;
+typedef ap_fixed<16,3> conv1o_t;
 
 
-typedef float conv2w_t;
-typedef float conv2b_t;
-typedef float conv2o_t;
+typedef ap_fixed<18,1> conv2w_t;
+typedef ap_fixed<10,1> conv2b_t;
+typedef ap_fixed<32,3> conv2o_t;
 
 
-typedef float conv3w_t;
-typedef float conv3b_t;
-typedef float output_t;
+typedef ap_fixed<18,1> conv3w_t;
+typedef ap_fixed<15,1> conv3b_t;
+typedef ap_fixed<24,3> output_t;
 
 
 

@@ -1,5 +1,11 @@
 # This script segment is generated automatically by AutoPilot
 
+set name srcnn_mul_6ns_19ns_24_1_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+}
+
+
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -11,17 +17,17 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 470 \
-    name conv3_float_255_255_float_32_5_5_float_float_255_255_i_1 \
+    id 547 \
+    name conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3 \
     reset_level 1 \
     sync_rst true \
     dir O \
-    corename conv3_float_255_255_float_32_5_5_float_float_255_255_i_1 \
+    corename conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3 \
     op interface \
-    ports { conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_address0 { O 16 vector } conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_ce0 { O 1 bit } conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_we0 { O 1 bit } conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_d0 { O 32 vector } conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_address1 { O 16 vector } conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_ce1 { O 1 bit } conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_we1 { O 1 bit } conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_d1 { O 32 vector } } \
+    ports { conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_address0 { O 16 vector } conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_ce0 { O 1 bit } conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_we0 { O 1 bit } conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_d0 { O 32 vector } conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_address1 { O 16 vector } conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_ce1 { O 1 bit } conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_we1 { O 1 bit } conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_d1 { O 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv3_float_255_255_float_32_5_5_float_float_255_255_i_1'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3'"
 }
 }
 
@@ -30,17 +36,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 471 \
-    name conv3_float_255_255_float_32_5_5_float_float_255_255_i \
+    id 548 \
+    name conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2 \
     reset_level 1 \
     sync_rst true \
     dir O \
-    corename conv3_float_255_255_float_32_5_5_float_float_255_255_i \
+    corename conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2 \
     op interface \
-    ports { conv3_float_255_255_float_32_5_5_float_float_255_255_i_address0 { O 16 vector } conv3_float_255_255_float_32_5_5_float_float_255_255_i_ce0 { O 1 bit } conv3_float_255_255_float_32_5_5_float_float_255_255_i_we0 { O 1 bit } conv3_float_255_255_float_32_5_5_float_float_255_255_i_d0 { O 32 vector } conv3_float_255_255_float_32_5_5_float_float_255_255_i_address1 { O 16 vector } conv3_float_255_255_float_32_5_5_float_float_255_255_i_ce1 { O 1 bit } conv3_float_255_255_float_32_5_5_float_float_255_255_i_we1 { O 1 bit } conv3_float_255_255_float_32_5_5_float_float_255_255_i_d1 { O 32 vector } } \
+    ports { conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_address0 { O 16 vector } conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_ce0 { O 1 bit } conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_we0 { O 1 bit } conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_d0 { O 32 vector } conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_address1 { O 16 vector } conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_ce1 { O 1 bit } conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_we1 { O 1 bit } conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_d1 { O 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv3_float_255_255_float_32_5_5_float_float_255_255_i'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2'"
 }
 }
 
@@ -48,7 +54,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 467 \
+    id 544 \
     name i3 \
     type other \
     dir I \
@@ -63,7 +69,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 468 \
+    id 545 \
     name input_ftmap \
     type other \
     dir I \
@@ -78,7 +84,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 469 \
+    id 546 \
     name h \
     type other \
     dir I \

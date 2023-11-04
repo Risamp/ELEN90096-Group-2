@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2_Pipeline_RELU4'" level="0">
-<item name = "Date">Sat Nov  4 17:39:45 2023
+<item name = "Date">Sat Nov  4 18:07:25 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.437 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 4.482 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="">512, 512, 5.120 us, 5.120 us, 512, 512, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- RELU">515, 515, 8, 2, 2, 255, yes</column>
+<column name="- RELU">510, 510, 2, 2, 2, 255, yes</column>
 </table>
 </item>
 </section>

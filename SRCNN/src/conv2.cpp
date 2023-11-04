@@ -16,13 +16,13 @@ void conv2(conv1o_t input_ftmap[N1][H][W],
 
 	static conv2o_t output_fm_buffer[C2_OD][C2_TH][W] = {0};
 	#pragma HLS BIND_STORAGE variable=output_fm_buffer type=RAM_T2P impl=BRAM
-	#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=15
+	#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=5
 
 	static conv1o_t input_fm_buffer[C2_ID][C2_TH + (2 * P2)][W + (2 * P2)];
 	//#pragma HLS bind_storage variable=input_fm_buffer type=RAM_2P impl=LUTRAM
 
 	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=2 type=cyclic factor=2
-	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=block factor=15
+	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=block factor=5
 
 	static conv2w_t weight_buffer[C2_OD][C2_ID][F2][F2];
 
@@ -42,10 +42,11 @@ void conv2(conv1o_t input_ftmap[N1][H][W],
 
 				ROW: for (int r = 0; r < C2_TH; r++) {
 				COL: for (int c = 0; c < W; c++) {
-					#pragma HLS UNROLL factor=15
-					#pragma HLS PIPELINE off
+					#pragma HLS UNROLL factor=5
+					#pragma HLS PIPELINE II=10
 
 					output_fm_buffer[o][r][c] += weight * input_fm_buffer[i][r][c];
+
 				}}
 			}}
 

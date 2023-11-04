@@ -1303,8 +1303,8 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port10 {
 #endif
-    .width = 32,
-    .asize = 4,
+    .width = 16,
+    .asize = 2,
     .hbm = false,
     .name = { "gmem" },
 #ifdef POST_CHECK
@@ -1317,12 +1317,12 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #endif
 #endif
   };
-  __xlx_offset_byte_param_conv1_biases = 0*4;
-  __xlx_offset_byte_param_conv2_biases = 64*4;
-  __xlx_offset_byte_param_conv3_biases = 96*4;
+  __xlx_offset_byte_param_conv1_biases = 0*2;
+  __xlx_offset_byte_param_conv2_biases = 32*2;
+  __xlx_offset_byte_param_conv3_biases = 64*2;
   port10.param = { __xlx_apatb_param_conv1_biases, __xlx_apatb_param_conv2_biases, __xlx_apatb_param_conv3_biases };
-  port10.nbytes = { 256, 128, 4 };
-  port10.offset = { 0, 64, 96 };
+  port10.nbytes = { 64, 64, 2 };
+  port10.offset = { 0, 32, 64 };
   port10.hasWrite = { false, false, false };
 
 #ifdef USE_BINARY_TV_FILE
@@ -1330,8 +1330,8 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port11 {
 #endif
-    .width = 32,
-    .asize = 4,
+    .width = 16,
+    .asize = 2,
     .hbm = false,
     .name = { "i1" },
 #ifdef POST_CHECK
@@ -1345,7 +1345,7 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #endif
   };
   port11.param = { __xlx_apatb_param_input_ftmap };
-  port11.nbytes = { 260100 };
+  port11.nbytes = { 130050 };
   port11.offset = {  };
   port11.hasWrite = { false };
 
@@ -1354,8 +1354,8 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port12 {
 #endif
-    .width = 32,
-    .asize = 4,
+    .width = 16,
+    .asize = 2,
     .hbm = false,
     .name = { "i2" },
 #ifdef POST_CHECK
@@ -1378,7 +1378,7 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #endif
   };
   port12.param = { __xlx_apatb_param_conv1_output_ftmap };
-  port12.nbytes = { 16646400 };
+  port12.nbytes = { 8323200 };
   port12.offset = {  };
   port12.hasWrite = { true };
 
@@ -1453,8 +1453,8 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port15 {
 #endif
-    .width = 32,
-    .asize = 4,
+    .width = 16,
+    .asize = 2,
     .hbm = false,
     .name = { "w1" },
 #ifdef POST_CHECK
@@ -1468,7 +1468,7 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #endif
   };
   port15.param = { __xlx_apatb_param_conv1_weights };
-  port15.nbytes = { 20736 };
+  port15.nbytes = { 10368 };
   port15.offset = {  };
   port15.hasWrite = { false };
 

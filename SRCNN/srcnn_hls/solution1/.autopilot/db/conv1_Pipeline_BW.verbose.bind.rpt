@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv1_Pipeline_BW'
 ================================================================
-* Date:           Sat Nov  4 17:39:27 2023
+* Date:           Sat Nov  4 18:07:10 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -85,29 +85,29 @@ IsGatedGlobalClock: 0
 
 State 1 <SV = 0> <Delay = 2.00>
 ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%w = alloca i32 1"   --->   Operation 4 'alloca' 'w' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%tmp_548_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %tmp_548"   --->   Operation 5 'read' 'tmp_548_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%tmp_287_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %tmp_287"   --->   Operation 5 'read' 'tmp_287_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 6 [1/1] (0.42ns)   --->   "%store_ln0 = store i8 0, i8 %w"   --->   Operation 6 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.0.i.i"   --->   Operation 7 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body8.0.i.i"   --->   Operation 7 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%w_6 = load i8 %w" [src/conv1.cpp:73->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 8 'load' 'w_6' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 9 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 10 [1/1] (0.76ns)   --->   "%icmp_ln73 = icmp_eq  i8 %w_6, i8 255" [src/conv1.cpp:73->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 10 'icmp' 'icmp_ln73' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 11 [1/1] (0.76ns)   --->   "%add_ln73 = add i8 %w_6, i8 1" [src/conv1.cpp:73->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 11 'add' 'add_ln73' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln73 = br i1 %icmp_ln73, void %for.inc.0.i.i.split, void %for.inc13.0.i.i.exitStub" [src/conv1.cpp:73->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 12 'br' 'br_ln73' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln73 = br i1 %icmp_ln73, void %for.body8.0.i.i.split, void %for.inc13.0.i.i.exitStub" [src/conv1.cpp:73->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 12 'br' 'br_ln73' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%empty = trunc i8 %w_6" [src/conv1.cpp:73->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 13 'trunc' 'empty' <Predicate = (!icmp_ln73)> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%speclooptripcount_ln73 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv1.cpp:73->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 14 'speclooptripcount' 'speclooptripcount_ln73' <Predicate = (!icmp_ln73)> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specloopname_ln73 = specloopname void @_ssdm_op_SpecLoopName, void @empty_24" [src/conv1.cpp:73->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 15 'specloopname' 'specloopname_ln73' <Predicate = (!icmp_ln73)> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i7.i7, i7 %tmp_548_read, i7 %empty" [src/conv1.cpp:75->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 16 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln73)> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln75 = zext i14 %tmp_s" [src/conv1.cpp:75->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 17 'zext' 'zext_ln75' <Predicate = (!icmp_ln73)> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_24 = getelementptr i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i64 0, i64 %zext_ln75" [src/conv1.cpp:75->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 18 'getelementptr' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_24' <Predicate = (!icmp_ln73)> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_25 = getelementptr i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou, i64 0, i64 %zext_ln75" [src/conv1.cpp:75->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 19 'getelementptr' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_25' <Predicate = (!icmp_ln73)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specloopname_ln73 = specloopname void @_ssdm_op_SpecLoopName, void @empty_35" [src/conv1.cpp:73->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 15 'specloopname' 'specloopname_ln73' <Predicate = (!icmp_ln73)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_300 = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i7.i7, i7 %tmp_287_read, i7 %empty" [src/conv1.cpp:75->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 16 'bitconcatenate' 'tmp_300' <Predicate = (!icmp_ln73)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln75 = zext i14 %tmp_300" [src/conv1.cpp:75->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 17 'zext' 'zext_ln75' <Predicate = (!icmp_ln73)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_621 = getelementptr i16 %conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1, i64 0, i64 %zext_ln75" [src/conv1.cpp:75->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 18 'getelementptr' 'conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_621' <Predicate = (!icmp_ln73)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_622 = getelementptr i16 %conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2, i64 0, i64 %zext_ln75" [src/conv1.cpp:75->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 19 'getelementptr' 'conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_622' <Predicate = (!icmp_ln73)> <Delay = 0.00>
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %w_6, i32 7" [src/conv1.cpp:73->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 20 'bitselect' 'tmp' <Predicate = (!icmp_ln73)> <Delay = 0.00>
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln75 = br i1 %tmp, void %arrayidx1223.0.i.i.case.0, void %arrayidx1223.0.i.i.case.1" [src/conv1.cpp:75->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 21 'br' 'br_ln75' <Predicate = (!icmp_ln73)> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (1.23ns)   --->   "%store_ln75 = store i32 0, i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_24" [src/conv1.cpp:75->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 22 'store' 'store_ln75' <Predicate = (!icmp_ln73 & !tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15360> <RAM>
-ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln75 = br void %arrayidx1223.0.i.i.exit" [src/conv1.cpp:75->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 23 'br' 'br_ln75' <Predicate = (!icmp_ln73 & !tmp)> <Delay = 0.00>
-ST_1 : Operation 24 [1/1] (1.23ns)   --->   "%store_ln75 = store i32 0, i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_25" [src/conv1.cpp:75->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 24 'store' 'store_ln75' <Predicate = (!icmp_ln73 & tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15360> <RAM>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%br_ln75 = br void %arrayidx1223.0.i.i.exit" [src/conv1.cpp:75->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 25 'br' 'br_ln75' <Predicate = (!icmp_ln73 & tmp)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln75 = br i1 %tmp, void %arrayidx1225.0.i.i.case.0, void %arrayidx1225.0.i.i.case.1" [src/conv1.cpp:75->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 21 'br' 'br_ln75' <Predicate = (!icmp_ln73)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (1.23ns)   --->   "%store_ln75 = store i16 0, i14 %conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_621" [src/conv1.cpp:75->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 22 'store' 'store_ln75' <Predicate = (!icmp_ln73 & !tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15360> <RAM>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln75 = br void %arrayidx1225.0.i.i.exit" [src/conv1.cpp:75->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 23 'br' 'br_ln75' <Predicate = (!icmp_ln73 & !tmp)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (1.23ns)   --->   "%store_ln75 = store i16 0, i14 %conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_622" [src/conv1.cpp:75->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 24 'store' 'store_ln75' <Predicate = (!icmp_ln73 & tmp)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15360> <RAM>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%br_ln75 = br void %arrayidx1225.0.i.i.exit" [src/conv1.cpp:75->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 25 'br' 'br_ln75' <Predicate = (!icmp_ln73 & tmp)> <Delay = 0.00>
 ST_1 : Operation 26 [1/1] (0.42ns)   --->   "%store_ln73 = store i8 %add_ln73, i8 %w" [src/conv1.cpp:73->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 26 'store' 'store_ln73' <Predicate = (!icmp_ln73)> <Delay = 0.42>
-ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln73 = br void %for.inc.0.i.i" [src/conv1.cpp:73->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 27 'br' 'br_ln73' <Predicate = (!icmp_ln73)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln73 = br void %for.body8.0.i.i" [src/conv1.cpp:73->src/conv1.cpp:152->src/conv1.cpp:63]   --->   Operation 27 'br' 'br_ln73' <Predicate = (!icmp_ln73)> <Delay = 0.00>
 ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 28 'ret' 'ret_ln0' <Predicate = (icmp_ln73)> <Delay = 0.00>
 
 
@@ -122,70 +122,70 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ tmp_548]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
-Port [ conv1_float_255_255_float_1_9_9_float_float_255_255_ou]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ tmp_287]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
 
 <LifeTime>
 <method=bitvector/>
-w                                                         (alloca           ) [ 01]
-tmp_548_read                                              (read             ) [ 00]
-store_ln0                                                 (store            ) [ 00]
-br_ln0                                                    (br               ) [ 00]
-w_6                                                       (load             ) [ 00]
-specpipeline_ln0                                          (specpipeline     ) [ 00]
-icmp_ln73                                                 (icmp             ) [ 01]
-add_ln73                                                  (add              ) [ 00]
-br_ln73                                                   (br               ) [ 00]
-empty                                                     (trunc            ) [ 00]
-speclooptripcount_ln73                                    (speclooptripcount) [ 00]
-specloopname_ln73                                         (specloopname     ) [ 00]
-tmp_s                                                     (bitconcatenate   ) [ 00]
-zext_ln75                                                 (zext             ) [ 00]
-conv1_float_255_255_float_1_9_9_float_float_255_255_ou_24 (getelementptr    ) [ 00]
-conv1_float_255_255_float_1_9_9_float_float_255_255_ou_25 (getelementptr    ) [ 00]
-tmp                                                       (bitselect        ) [ 01]
-br_ln75                                                   (br               ) [ 00]
-store_ln75                                                (store            ) [ 00]
-br_ln75                                                   (br               ) [ 00]
-store_ln75                                                (store            ) [ 00]
-br_ln75                                                   (br               ) [ 00]
-store_ln73                                                (store            ) [ 00]
-br_ln73                                                   (br               ) [ 00]
-ret_ln0                                                   (ret              ) [ 00]
+w                                                                 (alloca           ) [ 01]
+tmp_287_read                                                      (read             ) [ 00]
+store_ln0                                                         (store            ) [ 00]
+br_ln0                                                            (br               ) [ 00]
+w_6                                                               (load             ) [ 00]
+specpipeline_ln0                                                  (specpipeline     ) [ 00]
+icmp_ln73                                                         (icmp             ) [ 01]
+add_ln73                                                          (add              ) [ 00]
+br_ln73                                                           (br               ) [ 00]
+empty                                                             (trunc            ) [ 00]
+speclooptripcount_ln73                                            (speclooptripcount) [ 00]
+specloopname_ln73                                                 (specloopname     ) [ 00]
+tmp_300                                                           (bitconcatenate   ) [ 00]
+zext_ln75                                                         (zext             ) [ 00]
+conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_621 (getelementptr    ) [ 00]
+conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_622 (getelementptr    ) [ 00]
+tmp                                                               (bitselect        ) [ 01]
+br_ln75                                                           (br               ) [ 00]
+store_ln75                                                        (store            ) [ 00]
+br_ln75                                                           (br               ) [ 00]
+store_ln75                                                        (store            ) [ 00]
+br_ln75                                                           (br               ) [ 00]
+store_ln73                                                        (store            ) [ 00]
+br_ln73                                                           (br               ) [ 00]
+ret_ln0                                                           (ret              ) [ 00]
 </LifeTime>
 
 <model>
 
 <comp_list>
-<comp id="0" class="1000" name="tmp_548">
+<comp id="0" class="1000" name="tmp_287">
 <pin_list>
 <pin id="1" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="tmp_548"/></StgValue>
+<StgValue><ssdm name="tmp_287"/></StgValue>
 </bind>
 </comp>
 
-<comp id="2" class="1000" name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1">
+<comp id="2" class="1000" name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1">
 <pin_list>
 <pin id="3" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1"/><MemPortTyVec>0 3 </MemPortTyVec>
+<StgValue><ssdm name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1"/><MemPortTyVec>0 3 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="4" class="1000" name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou">
+<comp id="4" class="1000" name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2">
 <pin_list>
 <pin id="5" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou"/><MemPortTyVec>0 3 </MemPortTyVec>
+<StgValue><ssdm name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2"/><MemPortTyVec>0 3 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
@@ -303,7 +303,7 @@ ret_ln0                                                   (ret              ) [ 
 <pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_24"/></StgValue>
+<StgValue><ssdm name="empty_35"/></StgValue>
 </bind>
 </comp>
 
@@ -363,7 +363,7 @@ ret_ln0                                                   (ret              ) [ 
 </bind>
 </comp>
 
-<comp id="46" class="1004" name="tmp_548_read_read_fu_46">
+<comp id="46" class="1004" name="tmp_287_read_read_fu_46">
 <pin_list>
 <pin id="47" dir="0" index="0" bw="7" slack="0"/>
 <pin id="48" dir="0" index="1" bw="7" slack="0"/>
@@ -371,42 +371,42 @@ ret_ln0                                                   (ret              ) [ 
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
-<opset="tmp_548_read/1 "/>
+<opset="tmp_287_read/1 "/>
 </bind>
 </comp>
 
-<comp id="52" class="1004" name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_24_gep_fu_52">
+<comp id="52" class="1004" name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_621_gep_fu_52">
 <pin_list>
-<pin id="53" dir="0" index="0" bw="32" slack="0"/>
+<pin id="53" dir="0" index="0" bw="16" slack="0"/>
 <pin id="54" dir="0" index="1" bw="1" slack="0"/>
 <pin id="55" dir="0" index="2" bw="14" slack="0"/>
 <pin id="56" dir="1" index="3" bw="14" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_24/1 "/>
+<opset="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_621/1 "/>
 </bind>
 </comp>
 
-<comp id="59" class="1004" name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_25_gep_fu_59">
+<comp id="59" class="1004" name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_622_gep_fu_59">
 <pin_list>
-<pin id="60" dir="0" index="0" bw="32" slack="0"/>
+<pin id="60" dir="0" index="0" bw="16" slack="0"/>
 <pin id="61" dir="0" index="1" bw="1" slack="0"/>
 <pin id="62" dir="0" index="2" bw="14" slack="0"/>
 <pin id="63" dir="1" index="3" bw="14" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_25/1 "/>
+<opset="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_622/1 "/>
 </bind>
 </comp>
 
 <comp id="66" class="1004" name="store_ln75_access_fu_66">
 <pin_list>
 <pin id="67" dir="0" index="0" bw="14" slack="0"/>
-<pin id="68" dir="0" index="1" bw="32" slack="0"/>
+<pin id="68" dir="0" index="1" bw="16" slack="0"/>
 <pin id="69" dir="0" index="2" bw="0" slack="2147483647"/>
-<pin id="70" dir="1" index="3" bw="32" slack="2147483647"/>
+<pin id="70" dir="1" index="3" bw="16" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
@@ -417,9 +417,9 @@ ret_ln0                                                   (ret              ) [ 
 <comp id="73" class="1004" name="store_ln75_access_fu_73">
 <pin_list>
 <pin id="74" dir="0" index="0" bw="14" slack="0"/>
-<pin id="75" dir="0" index="1" bw="32" slack="0"/>
+<pin id="75" dir="0" index="1" bw="16" slack="0"/>
 <pin id="76" dir="0" index="2" bw="0" slack="2147483647"/>
-<pin id="77" dir="1" index="3" bw="32" slack="2147483647"/>
+<pin id="77" dir="1" index="3" bw="16" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
@@ -485,7 +485,7 @@ ret_ln0                                                   (ret              ) [ 
 </bind>
 </comp>
 
-<comp id="104" class="1004" name="tmp_s_fu_104">
+<comp id="104" class="1004" name="tmp_300_fu_104">
 <pin_list>
 <pin id="105" dir="0" index="0" bw="14" slack="0"/>
 <pin id="106" dir="0" index="1" bw="7" slack="0"/>
@@ -494,7 +494,7 @@ ret_ln0                                                   (ret              ) [ 
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="tmp_s/1 "/>
+<opset="tmp_300/1 "/>
 </bind>
 </comp>
 
@@ -616,10 +616,10 @@ ret_ln0                                                   (ret              ) [ 
 
 * FSMD analyzer results:
   - Output states:
-	Port: conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1 | {1 }
-	Port: conv1_float_255_255_float_1_9_9_float_float_255_255_ou | {1 }
+	Port: conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1 | {1 }
+	Port: conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2 | {1 }
  - Input state : 
-	Port: conv1_Pipeline_BW : tmp_548 | {1 }
+	Port: conv1_Pipeline_BW : tmp_287 | {1 }
   - Chain level:
 	State 1
 		store_ln0 : 1
@@ -628,10 +628,10 @@ ret_ln0                                                   (ret              ) [ 
 		add_ln73 : 2
 		br_ln73 : 3
 		empty : 2
-		tmp_s : 3
+		tmp_300 : 3
 		zext_ln75 : 4
-		conv1_float_255_255_float_1_9_9_float_float_255_255_ou_24 : 5
-		conv1_float_255_255_float_1_9_9_float_float_255_255_ou_25 : 5
+		conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_621 : 5
+		conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_622 : 5
 		tmp : 2
 		br_ln75 : 3
 		store_ln75 : 6
@@ -651,11 +651,11 @@ ret_ln0                                                   (ret              ) [ 
 |----------|-------------------------|---------|---------|
 |    add   |      add_ln73_fu_94     |    0    |    15   |
 |----------|-------------------------|---------|---------|
-|   read   | tmp_548_read_read_fu_46 |    0    |    0    |
+|   read   | tmp_287_read_read_fu_46 |    0    |    0    |
 |----------|-------------------------|---------|---------|
 |   trunc  |       empty_fu_100      |    0    |    0    |
 |----------|-------------------------|---------|---------|
-|bitconcatenate|       tmp_s_fu_104      |    0    |    0    |
+|bitconcatenate|      tmp_300_fu_104     |    0    |    0    |
 |----------|-------------------------|---------|---------|
 |   zext   |     zext_ln75_fu_112    |    0    |    0    |
 |----------|-------------------------|---------|---------|

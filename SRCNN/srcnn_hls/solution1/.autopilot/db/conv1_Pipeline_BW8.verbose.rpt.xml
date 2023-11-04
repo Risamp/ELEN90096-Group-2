@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1_Pipeline_BW8'" level="0">
-<item name = "Date">Sat Nov  4 17:40:40 2023
+<item name = "Date">Sat Nov  4 18:07:56 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -109,15 +109,15 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, conv1_Pipeline_BW8, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv1_Pipeline_BW8, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv1_Pipeline_BW8, return value</column>
-<column name="tmp_550">in, 7, ap_none, tmp_550, scalar</column>
-<column name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0">out, 14, ap_memory, conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, array</column>
-<column name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_ce0">out, 1, ap_memory, conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, array</column>
-<column name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_we0">out, 1, ap_memory, conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, array</column>
-<column name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_d0">out, 32, ap_memory, conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, array</column>
-<column name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address0">out, 14, ap_memory, conv1_float_255_255_float_1_9_9_float_float_255_255_ou, array</column>
-<column name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_ce0">out, 1, ap_memory, conv1_float_255_255_float_1_9_9_float_float_255_255_ou, array</column>
-<column name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_we0">out, 1, ap_memory, conv1_float_255_255_float_1_9_9_float_float_255_255_ou, array</column>
-<column name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_d0">out, 32, ap_memory, conv1_float_255_255_float_1_9_9_float_float_255_255_ou, array</column>
+<column name="tmp_299">in, 7, ap_none, tmp_299, scalar</column>
+<column name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_address0">out, 14, ap_memory, conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1, array</column>
+<column name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_ce0">out, 1, ap_memory, conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1, array</column>
+<column name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_we0">out, 1, ap_memory, conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1, array</column>
+<column name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_d0">out, 16, ap_memory, conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1, array</column>
+<column name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_address0">out, 14, ap_memory, conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2, array</column>
+<column name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_ce0">out, 1, ap_memory, conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2, array</column>
+<column name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_we0">out, 1, ap_memory, conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2, array</column>
+<column name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_d0">out, 16, ap_memory, conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2, array</column>
 </table>
 </item>
 </section>

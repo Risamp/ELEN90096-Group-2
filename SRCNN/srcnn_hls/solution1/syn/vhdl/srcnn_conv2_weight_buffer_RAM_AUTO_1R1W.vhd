@@ -13,13 +13,15 @@ entity srcnn_conv2_weight_buffer_RAM_AUTO_1R1W is
         MEM_TYPE        : string    := "auto"; 
         DataWidth       : integer   := 32; 
         AddressWidth    : integer   := 8;
-        AddressRange    : integer   := 256
+        AddressRange    : integer   := 256;
+        COL_WIDTH       : integer := 8;
+        NUM_COL         : integer := 32/8
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 
         ce0         : in std_logic; 
         d0          : in std_logic_vector(DataWidth-1 downto 0); 
-        we0         : in std_logic; 
+        we0         : in std_logic_vector(NUM_COL-1 downto 0); 
         q0          : out std_logic_vector(DataWidth-1 downto 0);
         reset           : in std_logic; 
         clk             : in std_logic 
@@ -64,13 +66,14 @@ begin
     if (clk'event and clk = '1') then
         if (ce0 = '1') then 
             q0 <= ram(CONV_INTEGER(address0_tmp));
-            if (we0 = '1') then 
-                ram(CONV_INTEGER(address0_tmp)) := d0; 
-            end if; 
+            for i in 0 to NUM_COL - 1 loop
+                if (we0(i) = '1') then
+                    ram(CONV_INTEGER(address0_tmp))((i + 1) * COL_WIDTH - 1 downto i * COL_WIDTH) := d0((i + 1) * COL_WIDTH - 1 downto i * COL_WIDTH); 
+                end if;
+            end loop;
         end if;
     end if;
 end process;
-
 
  
 
