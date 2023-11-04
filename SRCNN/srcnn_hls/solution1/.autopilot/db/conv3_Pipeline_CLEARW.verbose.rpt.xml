@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3_Pipeline_CLEARW'" level="0">
-<item name = "Date">Thu Nov  2 22:33:50 2023
+<item name = "Date">Sat Nov  4 22:07:41 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -78,22 +78,22 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln73_fu_94_p2">+, 0, 0, 15, 8, 1</column>
-<column name="icmp_ln73_fu_88_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="add_ln72_fu_62_p2">+, 0, 0, 15, 8, 1</column>
+<column name="icmp_ln72_fu_56_p2">icmp, 0, 0, 15, 8, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_done_int">9, 2, 1, 2</column>
-<column name="ap_sig_allocacmp_w_2">9, 2, 8, 16</column>
-<column name="w_fu_42">9, 2, 8, 16</column>
+<column name="ap_sig_allocacmp_w_4">9, 2, 8, 16</column>
+<column name="w_fu_30">9, 2, 8, 16</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="w_fu_42">8, 0, 8, 0</column>
+<column name="w_fu_30">8, 0, 8, 0</column>
 </table>
 </item>
 </section>
@@ -109,15 +109,10 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, conv3_Pipeline_CLEARW, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv3_Pipeline_CLEARW, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv3_Pipeline_CLEARW, return value</column>
-<column name="h">in, 3, ap_none, h, scalar</column>
-<column name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_address0">out, 10, ap_memory, conv3_float_255_255_float_32_5_5_float_float_255_255_o_1, array</column>
-<column name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_ce0">out, 1, ap_memory, conv3_float_255_255_float_32_5_5_float_float_255_255_o_1, array</column>
-<column name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_we0">out, 1, ap_memory, conv3_float_255_255_float_32_5_5_float_float_255_255_o_1, array</column>
-<column name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_d0">out, 32, ap_memory, conv3_float_255_255_float_32_5_5_float_float_255_255_o_1, array</column>
-<column name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_address0">out, 10, ap_memory, conv3_float_255_255_float_32_5_5_float_float_255_255_o, array</column>
-<column name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_ce0">out, 1, ap_memory, conv3_float_255_255_float_32_5_5_float_float_255_255_o, array</column>
-<column name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_we0">out, 1, ap_memory, conv3_float_255_255_float_32_5_5_float_float_255_255_o, array</column>
-<column name="conv3_float_255_255_float_32_5_5_float_float_255_255_o_d0">out, 32, ap_memory, conv3_float_255_255_float_32_5_5_float_float_255_255_o, array</column>
+<column name="output_fm_buffer_0_address0">out, 10, ap_memory, output_fm_buffer_0, array</column>
+<column name="output_fm_buffer_0_ce0">out, 1, ap_memory, output_fm_buffer_0, array</column>
+<column name="output_fm_buffer_0_we0">out, 1, ap_memory, output_fm_buffer_0, array</column>
+<column name="output_fm_buffer_0_d0">out, 32, ap_memory, output_fm_buffer_0, array</column>
 </table>
 </item>
 </section>

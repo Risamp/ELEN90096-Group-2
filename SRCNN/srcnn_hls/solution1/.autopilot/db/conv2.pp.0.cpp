@@ -5806,7 +5806,7 @@ void clear_buffer_c2(
 
 
 void load_input_buffer_c3(
- ftmap_t input_fm_buffer[32][5 + (2 * (5 - 1) / 2)][255 + (2 * (5 - 1) / 2)],
+ ftmap_t input_fm_buffer[32][3 + (2 * (5 - 1) / 2)][255 + (2 * (5 - 1) / 2)],
  ftmap_t input_ftmap[32][255][255],
  int in,
  int h
@@ -5820,7 +5820,7 @@ void load_weight_buffer_c3(
 );
 
 void export_output_buffer_c3(
- ftmap_t output_fm_buffer[1][5][255],
+ ftmap_t output_fm_buffer[1][3][255],
  ftmap_t output_ftmap[1][255][255],
  param_t biases[1],
  int out,
@@ -5828,7 +5828,7 @@ void export_output_buffer_c3(
 );
 
 void clear_buffer_c3(
- ftmap_t output_fm_buffer[1][5][255]
+ ftmap_t output_fm_buffer[1][3][255]
 );
 # 2 "src/conv2.cpp" 2
 # 1 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\iostream" 1 3
@@ -33552,11 +33552,11 @@ void conv2(ftmap_t input_ftmap[64][255][255],
 
 
  static ftmap_t output_fm_buffer[4][3][255] = {0};
-
+#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=block factor=3 dim=3
 
  static ftmap_t input_fm_buffer[64][3 + (2 * (1 - 1) / 2)][255 + (2 * (1 - 1) / 2)];
-#pragma HLS bind_storage variable=input_fm_buffer type=RAM_2P impl=LUTRAM
 
+#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=block factor=3 dim=3
 
  static param_t weight_buffer[4][64][1][1];
 
@@ -33577,10 +33577,14 @@ void conv2(ftmap_t input_ftmap[64][255][255],
    OUT: for (int o = 0; o < 4; o++) {
    IN: for (int i = 0; i < 64; i++) {
 
+    param_t weight = weight_buffer[o][i][0][0];
+
     ROW: for (int r = 0; r < 3; r++) {
     COL: for (int c = 0; c < 255; c++) {
+#pragma HLS PIPELINE II=9
+#pragma HLS UNROLL factor=3
 
-      output_fm_buffer[o][r][c] += weight_buffer[o][i][0][0] * input_fm_buffer[i][r][c];
+ output_fm_buffer[o][r][c] += weight * input_fm_buffer[i][r][c];
 
     }}
    }}

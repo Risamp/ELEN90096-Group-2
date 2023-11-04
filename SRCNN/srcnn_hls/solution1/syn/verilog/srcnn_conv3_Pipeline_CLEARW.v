@@ -13,15 +13,10 @@ module srcnn_conv3_Pipeline_CLEARW (
         ap_done,
         ap_idle,
         ap_ready,
-        h,
-        conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_address0,
-        conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_ce0,
-        conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_we0,
-        conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_d0,
-        conv3_float_255_255_float_32_5_5_float_float_255_255_o_address0,
-        conv3_float_255_255_float_32_5_5_float_float_255_255_o_ce0,
-        conv3_float_255_255_float_32_5_5_float_float_255_255_o_we0,
-        conv3_float_255_255_float_32_5_5_float_float_255_255_o_d0
+        output_fm_buffer_0_address0,
+        output_fm_buffer_0_ce0,
+        output_fm_buffer_0_we0,
+        output_fm_buffer_0_d0
 );
 
 parameter    ap_ST_fsm_state1 = 1'd1;
@@ -32,37 +27,27 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-input  [2:0] h;
-output  [9:0] conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_address0;
-output   conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_ce0;
-output   conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_we0;
-output  [31:0] conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_d0;
-output  [9:0] conv3_float_255_255_float_32_5_5_float_float_255_255_o_address0;
-output   conv3_float_255_255_float_32_5_5_float_float_255_255_o_ce0;
-output   conv3_float_255_255_float_32_5_5_float_float_255_255_o_we0;
-output  [31:0] conv3_float_255_255_float_32_5_5_float_float_255_255_o_d0;
+output  [9:0] output_fm_buffer_0_address0;
+output   output_fm_buffer_0_ce0;
+output   output_fm_buffer_0_we0;
+output  [31:0] output_fm_buffer_0_d0;
 
 reg ap_idle;
-reg conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_ce0;
-reg conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_we0;
-reg conv3_float_255_255_float_32_5_5_float_float_255_255_o_ce0;
-reg conv3_float_255_255_float_32_5_5_float_float_255_255_o_we0;
+reg output_fm_buffer_0_ce0;
+reg output_fm_buffer_0_we0;
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    ap_block_state1_pp0_stage0_iter0;
-wire   [0:0] icmp_ln73_fu_88_p2;
+wire   [0:0] icmp_ln72_fu_56_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-wire   [63:0] zext_ln75_fu_112_p1;
-reg   [7:0] w_fu_42;
-wire   [7:0] add_ln73_fu_94_p2;
+wire   [63:0] w_cast_fu_68_p1;
+reg   [7:0] w_fu_30;
+wire   [7:0] add_ln72_fu_62_p2;
 wire    ap_loop_init;
-reg   [7:0] ap_sig_allocacmp_w_2;
-wire   [0:0] tmp_fu_118_p3;
-wire   [6:0] empty_fu_100_p1;
-wire   [9:0] tmp_s_fu_104_p3;
+reg   [7:0] ap_sig_allocacmp_w_4;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -106,18 +91,18 @@ always @ (posedge ap_clk) begin
     end else begin
         if ((ap_continue_int == 1'b1)) begin
             ap_done_reg <= 1'b0;
-        end else if (((ap_loop_exit_ready == 1'b1) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
+        end else if (((ap_start_int == 1'b1) & (ap_loop_exit_ready == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
             ap_done_reg <= 1'b1;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
-        if ((icmp_ln73_fu_88_p2 == 1'd0)) begin
-            w_fu_42 <= add_ln73_fu_94_p2;
+    if (((ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+        if ((icmp_ln72_fu_56_p2 == 1'd0)) begin
+            w_fu_30 <= add_ln72_fu_62_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            w_fu_42 <= 8'd0;
+            w_fu_30 <= 8'd0;
         end
     end
 end
@@ -131,7 +116,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln73_fu_88_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
+    if (((ap_start_int == 1'b1) & (icmp_ln72_fu_56_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -139,7 +124,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_loop_exit_ready == 1'b1) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
+    if (((ap_start_int == 1'b1) & (ap_loop_exit_ready == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_done_int = 1'b1;
     end else begin
         ap_done_int = ap_done_reg;
@@ -147,7 +132,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b0))) begin
+    if (((ap_start_int == 1'b0) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_idle = 1'b1;
     end else begin
         ap_idle = 1'b0;
@@ -155,7 +140,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
+    if (((ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_ready_int = 1'b1;
     end else begin
         ap_ready_int = 1'b0;
@@ -164,41 +149,25 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        ap_sig_allocacmp_w_2 = 8'd0;
+        ap_sig_allocacmp_w_4 = 8'd0;
     end else begin
-        ap_sig_allocacmp_w_2 = w_fu_42;
+        ap_sig_allocacmp_w_4 = w_fu_30;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
-        conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_ce0 = 1'b1;
+    if (((ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+        output_fm_buffer_0_ce0 = 1'b1;
     end else begin
-        conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_ce0 = 1'b0;
+        output_fm_buffer_0_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((tmp_fu_118_p3 == 1'd0) & (icmp_ln73_fu_88_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
-        conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_we0 = 1'b1;
+    if (((ap_start_int == 1'b1) & (icmp_ln72_fu_56_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1))) begin
+        output_fm_buffer_0_we0 = 1'b1;
     end else begin
-        conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
-        conv3_float_255_255_float_32_5_5_float_float_255_255_o_ce0 = 1'b1;
-    end else begin
-        conv3_float_255_255_float_32_5_5_float_float_255_255_o_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((tmp_fu_118_p3 == 1'd1) & (icmp_ln73_fu_88_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
-        conv3_float_255_255_float_32_5_5_float_float_255_255_o_we0 = 1'b1;
-    end else begin
-        conv3_float_255_255_float_32_5_5_float_float_255_255_o_we0 = 1'b0;
+        output_fm_buffer_0_we0 = 1'b0;
     end
 end
 
@@ -213,7 +182,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln73_fu_94_p2 = (ap_sig_allocacmp_w_2 + 8'd1);
+assign add_ln72_fu_62_p2 = (ap_sig_allocacmp_w_4 + 8'd1);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -223,22 +192,12 @@ end
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_address0 = zext_ln75_fu_112_p1;
+assign icmp_ln72_fu_56_p2 = ((ap_sig_allocacmp_w_4 == 8'd255) ? 1'b1 : 1'b0);
 
-assign conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_d0 = 32'd0;
+assign output_fm_buffer_0_address0 = w_cast_fu_68_p1;
 
-assign conv3_float_255_255_float_32_5_5_float_float_255_255_o_address0 = zext_ln75_fu_112_p1;
+assign output_fm_buffer_0_d0 = 32'd0;
 
-assign conv3_float_255_255_float_32_5_5_float_float_255_255_o_d0 = 32'd0;
-
-assign empty_fu_100_p1 = ap_sig_allocacmp_w_2[6:0];
-
-assign icmp_ln73_fu_88_p2 = ((ap_sig_allocacmp_w_2 == 8'd255) ? 1'b1 : 1'b0);
-
-assign tmp_fu_118_p3 = ap_sig_allocacmp_w_2[32'd7];
-
-assign tmp_s_fu_104_p3 = {{h}, {empty_fu_100_p1}};
-
-assign zext_ln75_fu_112_p1 = tmp_s_fu_104_p3;
+assign w_cast_fu_68_p1 = ap_sig_allocacmp_w_4;
 
 endmodule //srcnn_conv3_Pipeline_CLEARW

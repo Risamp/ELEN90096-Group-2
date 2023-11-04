@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3'" level="0">
-<item name = "Date">Thu Nov  2 22:33:19 2023
+<item name = "Date">Sat Nov  4 22:07:06 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.558 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,30 +24,30 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">17260543, 17261206, 0.173 sec, 0.173 sec, 17260543, 17261206, no</column>
+<column name="">25306711, 25307476, 0.253 sec, 0.253 sec, 25306711, 25307476, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_load_input_buffer_c3_fu_205">load_input_buffer_c3, 73739, 73739, 0.737 ms, 0.737 ms, 73739, 73739, no</column>
-<column name="grp_conv3_Pipeline_WEIGHTI_WEIGHTK_L_fu_217">conv3_Pipeline_WEIGHTI_WEIGHTK_L, 803, 803, 8.030 us, 8.030 us, 803, 803, no</column>
-<column name="grp_conv3_Pipeline_IN_ROW_COL_fu_226">conv3_Pipeline_IN_ROW_COL, 258433, 258433, 2.584 ms, 2.584 ms, 258433, 258433, no</column>
-<column name="grp_conv3_Pipeline_RELU_fu_240">conv3_Pipeline_RELU, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
-<column name="grp_conv3_Pipeline_4_fu_251">conv3_Pipeline_4, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
-<column name="grp_conv3_Pipeline_RELU1_fu_264">conv3_Pipeline_RELU1, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
-<column name="grp_conv3_Pipeline_6_fu_274">conv3_Pipeline_6, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
-<column name="grp_conv3_Pipeline_CLEARW_fu_286">conv3_Pipeline_CLEARW, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
-<column name="grp_conv3_Pipeline_CLEARW2_fu_296">conv3_Pipeline_CLEARW2, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
-<column name="grp_conv3_Pipeline_CLEARW3_fu_305">conv3_Pipeline_CLEARW3, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_load_input_buffer_c3_fu_619">load_input_buffer_c3, 57355, 57355, 0.574 ms, 0.574 ms, 57355, 57355, no</column>
+<column name="grp_conv3_Pipeline_WEIGHTI_WEIGHTK_L_fu_629">conv3_Pipeline_WEIGHTI_WEIGHTK_L, 803, 803, 8.030 us, 8.030 us, 803, 803, no</column>
+<column name="grp_conv3_Pipeline_COL_fu_686">conv3_Pipeline_COL, 2460, 2460, 24.600 us, 24.600 us, 2460, 2460, no</column>
+<column name="grp_conv3_Pipeline_RELU_fu_750">conv3_Pipeline_RELU, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_conv3_Pipeline_4_fu_758">conv3_Pipeline_4, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_conv3_Pipeline_RELU3_fu_768">conv3_Pipeline_RELU3, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_conv3_Pipeline_CLEARW_fu_776">conv3_Pipeline_CLEARW, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_conv3_Pipeline_6_fu_782">conv3_Pipeline_6, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_conv3_Pipeline_CLEARW4_fu_792">conv3_Pipeline_CLEARW4, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_conv3_Pipeline_CLEARW5_fu_798">conv3_Pipeline_CLEARW5, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILE_ROW">17260542, 17261205, 338442 ~ 338455, -, -, 51, no</column>
-<column name=" + EXPORTH">4701, 4709, 1567, -, -, 3, no</column>
-<column name=" + CLEARH">1554, 1557, 777, -, -, 2, no</column>
+<column name="- TILE_ROW">25306710, 25307475, 297726 ~ 297735, -, -, 85, no</column>
+<column name=" + IN_ROW">236448, 236448, 2463, -, -, 96, no</column>
+<column name=" + EXPORTH">3134, 3142, 1567, -, -, 2, no</column>
 </table>
 </item>
 </section>

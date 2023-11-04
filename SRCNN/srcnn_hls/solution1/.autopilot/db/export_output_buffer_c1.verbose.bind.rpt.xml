@@ -1,0 +1,55 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'export_output_buffer_c1'" level="0">
+<item name = "Date">Sat Nov  4 22:05:18 2023
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">srcnn_hls</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck24-ubva530-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">133482, 133570, 1.335 ms, 1.336 ms, 133482, 133570, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_export_output_buffer_c1_Pipeline_RELU_fu_189">export_output_buffer_c1_Pipeline_RELU, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_export_output_buffer_c1_Pipeline_2_fu_199">export_output_buffer_c1_Pipeline_2, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_export_output_buffer_c1_Pipeline_RELU1_fu_211">export_output_buffer_c1_Pipeline_RELU1, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_export_output_buffer_c1_Pipeline_4_fu_221">export_output_buffer_c1_Pipeline_4, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_export_output_buffer_c1_Pipeline_BW_fu_233">export_output_buffer_c1_Pipeline_BW, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_export_output_buffer_c1_Pipeline_BW2_fu_242">export_output_buffer_c1_Pipeline_BW2, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- EXPORT">100312, 100384, 12539 ~ 12548, -, -, 8, no</column>
+<column name=" + BH">12536, 12544, 1567, -, -, 8, no</column>
+<column name="- CLEAR">33168, 33184, 4146 ~ 4148, -, -, 8, no</column>
+<column name=" + BH">4144, 4145, 518, -, -, 8, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

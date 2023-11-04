@@ -20,52 +20,85 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:26:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=weight_buffer dim=2 type=cyclic factor=3" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:43:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=3" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:44:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=51" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:50:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=3" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:73:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clear_buffer_c1" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:89:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="load_input_buffer_c1" ARG_PragmaIsValid="1" ARG_PragmaOptions="OFF" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:90:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="load_input_buffer_c1" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:118:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="load_weight_buffer_c1" ARG_PragmaIsValid="1" ARG_PragmaOptions="OFF" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv2.cpp:21:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input_fm_buffer type=RAM_2P impl=LUTRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:119:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="load_weight_buffer_c1" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv2.cpp:60:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:136:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="export_output_buffer_c1" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:139:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="export_output_buffer_c1" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=2" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv2.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=output_fm_buffer type=block factor=3 dim=3" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv2.cpp:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input_fm_buffer type=block factor=3 dim=3" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv2.cpp:47:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=9" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv2.cpp:48:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=3" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv2.cpp:64:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="clear_buffer_c2" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=3" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv2.cpp:106:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv2.cpp:110:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="export_output_buffer_c2" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv2.cpp:109:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv2.cpp:113:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="export_output_buffer_c2" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=2" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:19:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="conv3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=output_fm_buffer dim=3 type=block factor=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:25:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=weight_buffer dim=3 type=complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:23:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="conv3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input_fm_buffer dim=3 type=block factor=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:26:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=weight_buffer dim=4 type=complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:42:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv3" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:43:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="conv3" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=3" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:44:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="conv3" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=19" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:50:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:49:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="conv3" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=5" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:72:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:71:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="clear_buffer_c3" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=3" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:88:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:87:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="load_input_buffer_c3" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=256" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:136:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:135:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="export_output_buffer_c3" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:139:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:138:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="export_output_buffer_c3" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=2" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl:29:9" msg_body="HLS pragma dump">
@@ -98,59 +131,80 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/srcnn.cpp:31:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="srcnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/conv3.cpp:45:7" msg_body="Loop 'KR1' is marked as complete unroll implied by the pipeline pragma">
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/conv3.cpp:44:7" msg_body="Loop 'KR1' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="KR1"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/conv3.cpp:51:7" msg_body="Loop 'KC1' is marked as complete unroll implied by the pipeline pragma">
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/conv3.cpp:50:7" msg_body="Loop 'KC1' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="KC1"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/conv3.cpp:96:8" msg_body="Loop 'PAD' is marked as complete unroll implied by the pipeline pragma">
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/conv3.cpp:95:8" msg_body="Loop 'PAD' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="PAD"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/conv3.cpp:107:3" msg_body="Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma">
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/conv3.cpp:106:3" msg_body="Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="anonymous"/>
     </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/conv1.cpp:45:7" msg_body="Loop 'KR1' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="KR1"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/conv1.cpp:51:13" msg_body="Loop 'KC1' is marked as complete unroll implied by the pipeline pragma">
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/conv1.cpp:51:7" msg_body="Loop 'KC1' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="KC1"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv3.cpp:14:0" msg_body="Unrolling loop 'COL' (src/conv3.cpp:42:11) in function 'conv3' partially with a factor of 3">
-        <args Factor="3" LoopLoc="src/conv3.cpp:42:11" LoopName="COL"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv3.cpp:14:0" msg_body="Unrolling loop 'COL' (src/conv3.cpp:41:11) in function 'conv3' partially with a factor of 2">
+        <args Factor="2" LoopLoc="src/conv3.cpp:41:11" LoopName="COL"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv3.cpp:14:0" msg_body="Unrolling loop 'KR1' (src/conv3.cpp:45:7) in function 'conv3' completely with a factor of 5">
-        <args Factor="5" LoopLoc="src/conv3.cpp:45:7" LoopName="KR1"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv3.cpp:14:0" msg_body="Unrolling loop 'KR1' (src/conv3.cpp:44:7) in function 'conv3' completely with a factor of 5">
+        <args Factor="5" LoopLoc="src/conv3.cpp:44:7" LoopName="KR1"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv3.cpp:14:0" msg_body="Unrolling loop 'KC1' (src/conv3.cpp:51:7) in function 'conv3' completely with a factor of 5">
-        <args Factor="5" LoopLoc="src/conv3.cpp:51:7" LoopName="KC1"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv3.cpp:14:0" msg_body="Unrolling loop 'KC1' (src/conv3.cpp:50:7) in function 'conv3' completely with a factor of 5">
+        <args Factor="5" LoopLoc="src/conv3.cpp:50:7" LoopName="KC1"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv3.cpp:132:0" msg_body="Unrolling loop 'EXPORTH' (src/conv3.cpp:135:11) in function 'export_output_buffer_c3' partially with a factor of 2">
-        <args Factor="2" LoopLoc="src/conv3.cpp:135:11" LoopName="EXPORTH"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv3.cpp:131:0" msg_body="Unrolling loop 'EXPORTH' (src/conv3.cpp:134:11) in function 'export_output_buffer_c3' partially with a factor of 2">
+        <args Factor="2" LoopLoc="src/conv3.cpp:134:11" LoopName="EXPORTH"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv3.cpp:69:0" msg_body="Unrolling loop 'CLEARH' (src/conv3.cpp:71:10) in function 'clear_buffer_c3' partially with a factor of 3">
-        <args Factor="3" LoopLoc="src/conv3.cpp:71:10" LoopName="CLEARH"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-359" msg_severity="INFO" msg_loc="src/conv3.cpp:68:0" msg_body="Unrolling loop 'CLEARH' (src/conv3.cpp:70:10) in function 'clear_buffer_c3': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).">
+        <args Factor="3" LoopLoc="src/conv3.cpp:70:10" LoopName="CLEARH" TripCount="3"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv3.cpp:85:0" msg_body="Unrolling loop 'PAD' (src/conv3.cpp:96:8) in function 'load_input_buffer_c3' completely with a factor of 2">
-        <args Factor="2" LoopLoc="src/conv3.cpp:96:8" LoopName="PAD"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv3.cpp:68:0" msg_body="Unrolling loop 'CLEARH' (src/conv3.cpp:70:10) in function 'clear_buffer_c3' completely with a factor of 3">
+        <args Factor="3" LoopLoc="src/conv3.cpp:70:10" LoopName="CLEARH"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv3.cpp:85:0" msg_body="Unrolling loop 'anonymous' (src/conv3.cpp:107:3) in function 'load_input_buffer_c3' completely with a factor of 255">
-        <args Factor="255" LoopLoc="src/conv3.cpp:107:3" LoopName="anonymous"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv3.cpp:84:0" msg_body="Unrolling loop 'PAD' (src/conv3.cpp:95:8) in function 'load_input_buffer_c3' completely with a factor of 2">
+        <args Factor="2" LoopLoc="src/conv3.cpp:95:8" LoopName="PAD"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv2.cpp:102:0" msg_body="Unrolling loop 'BH' (src/conv2.cpp:105:6) in function 'export_output_buffer_c2' partially with a factor of 2">
-        <args Factor="2" LoopLoc="src/conv2.cpp:105:6" LoopName="BH"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv3.cpp:84:0" msg_body="Unrolling loop 'anonymous' (src/conv3.cpp:106:3) in function 'load_input_buffer_c3' completely with a factor of 255">
+        <args Factor="255" LoopLoc="src/conv3.cpp:106:3" LoopName="anonymous"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-359" msg_severity="INFO" msg_loc="src/conv2.cpp:57:0" msg_body="Unrolling loop 'BH' (src/conv2.cpp:59:6) in function 'clear_buffer_c2': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).">
-        <args Factor="3" LoopLoc="src/conv2.cpp:59:6" LoopName="BH" TripCount="3"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv2.cpp:13:0" msg_body="Unrolling loop 'COL' (src/conv2.cpp:46:10) in function 'conv2' partially with a factor of 3">
+        <args Factor="3" LoopLoc="src/conv2.cpp:46:10" LoopName="COL"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv2.cpp:57:0" msg_body="Unrolling loop 'BH' (src/conv2.cpp:59:6) in function 'clear_buffer_c2' completely with a factor of 3">
-        <args Factor="3" LoopLoc="src/conv2.cpp:59:6" LoopName="BH"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv2.cpp:106:0" msg_body="Unrolling loop 'BH' (src/conv2.cpp:109:6) in function 'export_output_buffer_c2' partially with a factor of 2">
+        <args Factor="2" LoopLoc="src/conv2.cpp:109:6" LoopName="BH"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-359" msg_severity="INFO" msg_loc="src/conv2.cpp:61:0" msg_body="Unrolling loop 'BH' (src/conv2.cpp:63:6) in function 'clear_buffer_c2': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).">
+        <args Factor="3" LoopLoc="src/conv2.cpp:63:6" LoopName="BH" TripCount="3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv2.cpp:61:0" msg_body="Unrolling loop 'BH' (src/conv2.cpp:63:6) in function 'clear_buffer_c2' completely with a factor of 3">
+        <args Factor="3" LoopLoc="src/conv2.cpp:63:6" LoopName="BH"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv1.cpp:13:0" msg_body="Unrolling loop 'TILE_OUT' (src/conv1.cpp:33:13) in function 'conv1' partially with a factor of 2">
+        <args Factor="2" LoopLoc="src/conv1.cpp:33:13" LoopName="TILE_OUT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv1.cpp:13:0" msg_body="Unrolling loop 'COL' (src/conv1.cpp:42:11) in function 'conv1' partially with a factor of 3">
+        <args Factor="3" LoopLoc="src/conv1.cpp:42:11" LoopName="COL"/>
     </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv1.cpp:13:0" msg_body="Unrolling loop 'KR1' (src/conv1.cpp:45:7) in function 'conv1' completely with a factor of 9">
         <args Factor="9" LoopLoc="src/conv1.cpp:45:7" LoopName="KR1"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv1.cpp:13:0" msg_body="Unrolling loop 'KC1' (src/conv1.cpp:51:13) in function 'conv1' completely with a factor of 9">
-        <args Factor="9" LoopLoc="src/conv1.cpp:51:13" LoopName="KC1"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv1.cpp:13:0" msg_body="Unrolling loop 'KC1' (src/conv1.cpp:51:7) in function 'conv1' completely with a factor of 9">
+        <args Factor="9" LoopLoc="src/conv1.cpp:51:7" LoopName="KC1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv1.cpp:132:0" msg_body="Unrolling loop 'BH' (src/conv1.cpp:135:6) in function 'export_output_buffer_c1' partially with a factor of 2">
+        <args Factor="2" LoopLoc="src/conv1.cpp:135:6" LoopName="BH"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv1.cpp:70:0" msg_body="Unrolling loop 'BH' (src/conv1.cpp:72:6) in function 'clear_buffer_c1' partially with a factor of 2">
+        <args Factor="2" LoopLoc="src/conv1.cpp:72:6" LoopName="BH"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv1.cpp:114:0" msg_body="Unrolling loop 'K' (src/conv1.cpp:117:5) in function 'load_weight_buffer_c1' partially with a factor of 2">
+        <args Factor="2" LoopLoc="src/conv1.cpp:117:5" LoopName="K"/>
     </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv1.cpp:86:0" msg_body="Inlining function 'clamp(int, int, int)' into 'load_input_buffer_c1(float (*) [23][263], float (*) [255][255], int, int)'">
         <args Callee="clamp(int, int, int)" Callee-DebugLoc="File src/srcnn.cpp Line 54 Column 0" Caller="load_input_buffer_c1(float (*) [23][263], float (*) [255][255], int, int)" Caller-DebugLoc="File src/conv1.cpp Line 86 Column 0"/>
@@ -164,38 +218,38 @@
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv1.cpp:13:0" msg_body="Inlining function 'load_weight_buffer_c1(float (*) [1][9][9], float (*) [1][9][9], int, int)' into 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'">
         <args Callee="load_weight_buffer_c1(float (*) [1][9][9], float (*) [1][9][9], int, int)" Callee-DebugLoc="File src/conv1.cpp Line 114 Column 0" Caller="conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])" Caller-DebugLoc="File src/conv1.cpp Line 13 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv1.cpp:13:0" msg_body="Inlining function 'export_output_buffer_c1(float (*) [15][255], float (*) [255][255], float*, int, int)' into 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'">
-        <args Callee="export_output_buffer_c1(float (*) [15][255], float (*) [255][255], float*, int, int)" Callee-DebugLoc="File src/conv1.cpp Line 132 Column 0" Caller="conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])" Caller-DebugLoc="File src/conv1.cpp Line 13 Column 0"/>
-    </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv2.cpp:102:0" msg_body="Inlining function 'clear_buffer_c2(float (*) [3][255])' into 'export_output_buffer_c2(float (*) [3][255], float (*) [255][255], float*, int, int)'">
-        <args Callee="clear_buffer_c2(float (*) [3][255])" Callee-DebugLoc="File src/conv2.cpp Line 57 Column 0" Caller="export_output_buffer_c2(float (*) [3][255], float (*) [255][255], float*, int, int)" Caller-DebugLoc="File src/conv2.cpp Line 102 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv2.cpp:106:0" msg_body="Inlining function 'clear_buffer_c2(float (*) [3][255])' into 'export_output_buffer_c2(float (*) [3][255], float (*) [255][255], float*, int, int)'">
+        <args Callee="clear_buffer_c2(float (*) [3][255])" Callee-DebugLoc="File src/conv2.cpp Line 61 Column 0" Caller="export_output_buffer_c2(float (*) [3][255], float (*) [255][255], float*, int, int)" Caller-DebugLoc="File src/conv2.cpp Line 106 Column 0"/>
     </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv2.cpp:13:0" msg_body="Inlining function 'load_input_buffer_c2(float (*) [3][255], float (*) [255][255], int, int)' into 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'">
-        <args Callee="load_input_buffer_c2(float (*) [3][255], float (*) [255][255], int, int)" Callee-DebugLoc="File src/conv2.cpp Line 73 Column 0" Caller="conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])" Caller-DebugLoc="File src/conv2.cpp Line 13 Column 0"/>
+        <args Callee="load_input_buffer_c2(float (*) [3][255], float (*) [255][255], int, int)" Callee-DebugLoc="File src/conv2.cpp Line 77 Column 0" Caller="conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])" Caller-DebugLoc="File src/conv2.cpp Line 13 Column 0"/>
     </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv2.cpp:13:0" msg_body="Inlining function 'load_weight_buffer_c2(float (*) [64][1][1], float (*) [64][1][1], int, int)' into 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'">
-        <args Callee="load_weight_buffer_c2(float (*) [64][1][1], float (*) [64][1][1], int, int)" Callee-DebugLoc="File src/conv2.cpp Line 88 Column 0" Caller="conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])" Caller-DebugLoc="File src/conv2.cpp Line 13 Column 0"/>
+        <args Callee="load_weight_buffer_c2(float (*) [64][1][1], float (*) [64][1][1], int, int)" Callee-DebugLoc="File src/conv2.cpp Line 92 Column 0" Caller="conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])" Caller-DebugLoc="File src/conv2.cpp Line 13 Column 0"/>
     </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv2.cpp:13:0" msg_body="Inlining function 'export_output_buffer_c2(float (*) [3][255], float (*) [255][255], float*, int, int)' into 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'">
-        <args Callee="export_output_buffer_c2(float (*) [3][255], float (*) [255][255], float*, int, int)" Callee-DebugLoc="File src/conv2.cpp Line 102 Column 0" Caller="conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])" Caller-DebugLoc="File src/conv2.cpp Line 13 Column 0"/>
+        <args Callee="export_output_buffer_c2(float (*) [3][255], float (*) [255][255], float*, int, int)" Callee-DebugLoc="File src/conv2.cpp Line 106 Column 0" Caller="conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])" Caller-DebugLoc="File src/conv2.cpp Line 13 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv3.cpp:85:0" msg_body="Inlining function 'clamp(int, int, int)' into 'load_input_buffer_c3(float (*) [9][259], float (*) [255][255], int, int)'">
-        <args Callee="clamp(int, int, int)" Callee-DebugLoc="File src/srcnn.cpp Line 54 Column 0" Caller="load_input_buffer_c3(float (*) [9][259], float (*) [255][255], int, int)" Caller-DebugLoc="File src/conv3.cpp Line 85 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv3.cpp:84:0" msg_body="Inlining function 'clamp(int, int, int)' into 'load_input_buffer_c3(float (*) [7][259], float (*) [255][255], int, int)'">
+        <args Callee="clamp(int, int, int)" Callee-DebugLoc="File src/srcnn.cpp Line 54 Column 0" Caller="load_input_buffer_c3(float (*) [7][259], float (*) [255][255], int, int)" Caller-DebugLoc="File src/conv3.cpp Line 84 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv3.cpp:132:0" msg_body="Inlining function 'clear_buffer_c3(float (*) [5][255])' into 'export_output_buffer_c3(float (*) [5][255], float (*) [255][255], float*, int, int)'">
-        <args Callee="clear_buffer_c3(float (*) [5][255])" Callee-DebugLoc="File src/conv3.cpp Line 69 Column 0" Caller="export_output_buffer_c3(float (*) [5][255], float (*) [255][255], float*, int, int)" Caller-DebugLoc="File src/conv3.cpp Line 132 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv3.cpp:131:0" msg_body="Inlining function 'clear_buffer_c3(float (*) [3][255])' into 'export_output_buffer_c3(float (*) [3][255], float (*) [255][255], float*, int, int)'">
+        <args Callee="clear_buffer_c3(float (*) [3][255])" Callee-DebugLoc="File src/conv3.cpp Line 68 Column 0" Caller="export_output_buffer_c3(float (*) [3][255], float (*) [255][255], float*, int, int)" Caller-DebugLoc="File src/conv3.cpp Line 131 Column 0"/>
     </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv3.cpp:14:0" msg_body="Inlining function 'load_weight_buffer_c3(float (*) [32][5][5], float (*) [32][5][5], int, int)' into 'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'">
-        <args Callee="load_weight_buffer_c3(float (*) [32][5][5], float (*) [32][5][5], int, int)" Callee-DebugLoc="File src/conv3.cpp Line 116 Column 0" Caller="conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])" Caller-DebugLoc="File src/conv3.cpp Line 14 Column 0"/>
+        <args Callee="load_weight_buffer_c3(float (*) [32][5][5], float (*) [32][5][5], int, int)" Callee-DebugLoc="File src/conv3.cpp Line 115 Column 0" Caller="conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])" Caller-DebugLoc="File src/conv3.cpp Line 14 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv3.cpp:14:0" msg_body="Inlining function 'export_output_buffer_c3(float (*) [5][255], float (*) [255][255], float*, int, int)' into 'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'">
-        <args Callee="export_output_buffer_c3(float (*) [5][255], float (*) [255][255], float*, int, int)" Callee-DebugLoc="File src/conv3.cpp Line 132 Column 0" Caller="conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])" Caller-DebugLoc="File src/conv3.cpp Line 14 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv3.cpp:14:0" msg_body="Inlining function 'export_output_buffer_c3(float (*) [3][255], float (*) [255][255], float*, int, int)' into 'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'">
+        <args Callee="export_output_buffer_c3(float (*) [3][255], float (*) [255][255], float*, int, int)" Callee-DebugLoc="File src/conv3.cpp Line 131 Column 0" Caller="conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])" Caller-DebugLoc="File src/conv3.cpp Line 14 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/conv3.cpp:22:0" msg_body="Applying array_partition to '_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E15input_fm_buffer': Block partitioning with factor 2 on dimension 3.">
-        <args Dim="3" Factor="2" Mode="Block" UOName="_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E15input_fm_buffer"/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/conv3.cpp:24:0" msg_body="Applying array_partition to '_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer': Complete partitioning on dimension 3. Complete partitioning on dimension 4.">
+        <args Dim="islist 3 4" Mode="islist Complete Complete" UOName="_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/conv3.cpp:18:0" msg_body="Applying array_partition to '_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E16output_fm_buffer': Block partitioning with factor 2 on dimension 3.">
-        <args Dim="3" Factor="2" Mode="Block" UOName="_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E16output_fm_buffer"/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/conv2.cpp:20:0" msg_body="Applying array_partition to '_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer': Block partitioning with factor 3 on dimension 3.">
+        <args Dim="3" Factor="3" Mode="Block" UOName="_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/conv2.cpp:17:0" msg_body="Applying array_partition to '_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E16output_fm_buffer': Block partitioning with factor 3 on dimension 3.">
+        <args Dim="3" Factor="3" Mode="Block" UOName="_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E16output_fm_buffer"/>
     </msg>
     <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/conv1.cpp:23:0" msg_body="Applying array_partition to '_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer': Cyclic partitioning with factor 3 on dimension 1. Cyclic partitioning with factor 3 on dimension 2.">
         <args Dim="islist 1 2" Factor="islist 3 3" Mode="islist Cyclic Cyclic" UOName="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer"/>
@@ -205,6 +259,9 @@
     </msg>
     <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/conv1.cpp:15:0" msg_body="Applying array_partition to '_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E16output_fm_buffer': Block partitioning with factor 2 on dimension 3.">
         <args Dim="3" Factor="2" Mode="Block" UOName="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E16output_fm_buffer"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv1.cpp:13:0" msg_body="Unrolling loop 'BH' (src/conv1.cpp:88:6) in function 'conv1' partially with a factor of 2">
+        <args Factor="2" LoopLoc="src/conv1.cpp:88:6" LoopName="BH"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

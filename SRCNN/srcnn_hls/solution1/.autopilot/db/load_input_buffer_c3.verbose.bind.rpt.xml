@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'load_input_buffer_c3'" level="0">
-<item name = "Date">Thu Nov  2 22:33:01 2023
+<item name = "Date">Sat Nov  4 22:06:35 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">73739, 73739, 0.737 ms, 0.737 ms, 73739, 73739, no</column>
+<column name="">57355, 57355, 0.574 ms, 0.574 ms, 57355, 57355, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- LOADI_LOADH">73737, 73737, 266, 256, 256, 288, yes</column>
+<column name="- LOADI_LOADH">57353, 57353, 266, 256, 256, 224, yes</column>
 </table>
 </item>
 </section>

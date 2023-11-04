@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2_Pipeline_LOAD_INPUT_BH_L'" level="0">
-<item name = "Date">Thu Nov  2 22:32:39 2023
+<item name = "Date">Sat Nov  4 22:05:59 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">48971, 48971, 0.490 ms, 0.490 ms, 48971, 48971, no</column>
+<column name="">48972, 48972, 0.490 ms, 0.490 ms, 48972, 48972, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- LOAD_INPUT_BH_L">48969, 48969, 11, 1, 1, 48960, yes</column>
+<column name="- LOAD_INPUT_BH_L">48970, 48970, 12, 1, 1, 48960, yes</column>
 </table>
 </item>
 </section>

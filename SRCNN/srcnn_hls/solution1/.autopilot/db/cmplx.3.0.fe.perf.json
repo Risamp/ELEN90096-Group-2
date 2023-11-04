@@ -1,7 +1,7 @@
 {
   "0": {
     "basicblocks": 1,
-    "calls": "3 4 2",
+    "calls": "3 1 5",
     "file": "srcnn.cpp",
     "fileloc": 8,
     "instructions": 28,
@@ -9,65 +9,81 @@
       "T": 1
     },
     "name": "srcnn",
-    "total_instructions": 3340
+    "total_instructions": 6115
   },
   "1": {
-    "basicblocks": 5,
-    "calls": "",
-    "file": "conv3.cpp",
-    "fileloc": 80,
-    "instructions": 801,
-    "name": "load_input_buffer_c3",
-    "stores": {
-      "G": 259
-    },
-    "total_instructions": 801
-  },
-  "2": {
-    "basicblocks": 69,
-    "calls": "1",
-    "file": "conv3.cpp",
-    "fileloc": 10,
-    "instructions": 693,
-    "loads": {
-      "G": 109
-    },
-    "name": "conv3",
-    "stores": {
-      "G": 21
-    },
-    "total_instructions": 1494
-  },
-  "3": {
-    "basicblocks": 59,
-    "calls": "",
-    "file": "conv1.cpp",
-    "fileloc": 9,
-    "instructions": 1637,
-    "loads": {
-      "G": 492,
-      "L": 3
-    },
-    "name": "conv1",
-    "stores": {
-      "G": 16
-    },
-    "total_instructions": 1637
-  },
-  "4": {
-    "basicblocks": 48,
+    "basicblocks": 92,
     "calls": "",
     "file": "conv2.cpp",
     "fileloc": 9,
-    "instructions": 181,
+    "instructions": 398,
     "loads": {
-      "G": 7,
+      "G": 31,
       "L": 1
     },
     "name": "conv2",
     "stores": {
-      "G": 10
+      "G": 34
     },
-    "total_instructions": 181
+    "total_instructions": 398
+  },
+  "2": {
+    "basicblocks": 45,
+    "calls": "",
+    "file": "conv1.cpp",
+    "fileloc": 126,
+    "instructions": 167,
+    "loads": {
+      "G": 8,
+      "L": 1
+    },
+    "name": "export_output_buffer_c1",
+    "stores": {
+      "G": 12
+    },
+    "total_instructions": 167
+  },
+  "3": {
+    "basicblocks": 88,
+    "calls": "2 2",
+    "file": "conv1.cpp",
+    "fileloc": 9,
+    "instructions": 4072,
+    "loads": {
+      "G": 1092,
+      "L": 4
+    },
+    "name": "conv1",
+    "stores": {
+      "G": 34
+    },
+    "total_instructions": 4406
+  },
+  "4": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "conv3.cpp",
+    "fileloc": 79,
+    "instructions": 797,
+    "name": "load_input_buffer_c3",
+    "stores": {
+      "G": 259
+    },
+    "total_instructions": 797
+  },
+  "5": {
+    "basicblocks": 73,
+    "calls": "4",
+    "file": "conv3.cpp",
+    "fileloc": 10,
+    "instructions": 486,
+    "loads": {
+      "G": 61
+    },
+    "name": "conv3",
+    "stores": {
+      "G": 34
+    },
+    "total_instructions": 1283
   }
 }

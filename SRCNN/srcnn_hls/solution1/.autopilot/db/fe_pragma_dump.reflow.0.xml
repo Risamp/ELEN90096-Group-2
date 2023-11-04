@@ -1,13 +1,28 @@
 <pragmas>
-<pragma file="src/conv2.cpp" line="21" pragmaType="bind_storage" parentfunction="conv2" op="666" impl="23" latency="-1" variable="_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer"/>
-<pragma file="src/conv2.cpp" line="60" pragmaType="unroll" parentfunction="clear_buffer_c2" factor="3" skip_exit_check="0"/>
-<pragma file="src/conv1.cpp" line="89" pragmaType="pipeline" parentfunction="load_input_buffer_c1" off="1" ii="0" rewind="0" style=""/>
-<pragma file="src/conv3.cpp" line="43" pragmaType="unroll" parentfunction="conv3" factor="3" skip_exit_check="0"/>
-<pragma file="src/conv3.cpp" line="44" pragmaType="pipeline" parentfunction="conv3" off="0" ii="19" rewind="0" style=""/>
-<pragma file="src/conv3.cpp" line="50" pragmaType="unroll" parentfunction="conv3" factor="5" skip_exit_check="0"/>
-<pragma file="src/conv3.cpp" line="19" pragmaType="array_partition" parentfunction="conv3" dim="3" factor="2" mode="block" dynamic="0" variable="_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E16output_fm_buffer"/>
-<pragma file="src/conv3.cpp" line="23" pragmaType="array_partition" parentfunction="conv3" dim="3" factor="2" mode="block" dynamic="0" variable="_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E15input_fm_buffer"/>
-<pragma file="src/conv1.cpp" line="44" pragmaType="pipeline" parentfunction="conv1" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="src/conv1.cpp" line="119" pragmaType="unroll" parentfunction="load_weight_buffer_c1" factor="2" skip_exit_check="0"/>
+<pragma file="src/conv1.cpp" line="118" pragmaType="pipeline" parentfunction="load_weight_buffer_c1" off="1" ii="0" rewind="0" style=""/>
+<pragma file="src/conv3.cpp" line="135" pragmaType="unroll" parentfunction="export_output_buffer_c3" factor="2" skip_exit_check="0"/>
+<pragma file="src/conv3.cpp" line="138" pragmaType="pipeline" parentfunction="export_output_buffer_c3" off="0" ii="2" rewind="0" style=""/>
+<pragma file="src/conv2.cpp" line="64" pragmaType="unroll" parentfunction="clear_buffer_c2" factor="3" skip_exit_check="0"/>
+<pragma file="src/conv3.cpp" line="42" pragmaType="unroll" parentfunction="conv3" factor="2" skip_exit_check="0"/>
+<pragma file="src/conv3.cpp" line="43" pragmaType="pipeline" parentfunction="conv3" off="0" ii="19" rewind="0" style=""/>
+<pragma file="src/conv3.cpp" line="49" pragmaType="unroll" parentfunction="conv3" factor="5" skip_exit_check="0"/>
+<pragma file="src/conv3.cpp" line="25" pragmaType="array_partition" parentfunction="conv3" dim="3" factor="0" mode="complete" dynamic="0" variable="_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer"/>
+<pragma file="src/conv3.cpp" line="26" pragmaType="array_partition" parentfunction="conv3" dim="4" factor="0" mode="complete" dynamic="0" variable="_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer"/>
+<pragma file="src/conv1.cpp" line="136" pragmaType="unroll" parentfunction="export_output_buffer_c1" factor="2" skip_exit_check="0"/>
+<pragma file="src/conv1.cpp" line="139" pragmaType="pipeline" parentfunction="export_output_buffer_c1" off="0" ii="2" rewind="0" style=""/>
+<pragma file="src/conv1.cpp" line="73" pragmaType="unroll" parentfunction="clear_buffer_c1" factor="2" skip_exit_check="0"/>
+<pragma file="src/conv2.cpp" line="48" pragmaType="unroll" parentfunction="conv2" factor="3" skip_exit_check="0"/>
+<pragma file="src/conv2.cpp" line="47" pragmaType="pipeline" parentfunction="conv2" off="0" ii="9" rewind="0" style=""/>
+<pragma file="src/conv2.cpp" line="18" pragmaType="array_partition" parentfunction="conv2" dim="3" factor="3" mode="block" dynamic="0" variable="_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E16output_fm_buffer"/>
+<pragma file="src/conv2.cpp" line="22" pragmaType="array_partition" parentfunction="conv2" dim="3" factor="3" mode="block" dynamic="0" variable="_ZZ5conv2PA255_A255_fPA64_A1_A1_fPfS1_E15input_fm_buffer"/>
+<pragma file="src/conv2.cpp" line="110" pragmaType="unroll" parentfunction="export_output_buffer_c2" factor="2" skip_exit_check="0"/>
+<pragma file="src/conv2.cpp" line="113" pragmaType="pipeline" parentfunction="export_output_buffer_c2" off="0" ii="2" rewind="0" style=""/>
+<pragma file="src/conv3.cpp" line="87" pragmaType="pipeline" parentfunction="load_input_buffer_c3" off="0" ii="256" rewind="0" style=""/>
+<pragma file="src/conv1.cpp" line="37" pragmaType="unroll" parentfunction="conv1" factor="2" skip_exit_check="0"/>
+<pragma file="src/conv1.cpp" line="43" pragmaType="unroll" parentfunction="conv1" factor="3" skip_exit_check="0"/>
+<pragma file="src/conv1.cpp" line="44" pragmaType="pipeline" parentfunction="conv1" off="0" ii="51" rewind="0" style=""/>
+<pragma file="src/conv1.cpp" line="50" pragmaType="unroll" parentfunction="conv1" factor="3" skip_exit_check="0"/>
 <pragma file="src/conv1.cpp" line="16" pragmaType="array_partition" parentfunction="conv1" dim="3" factor="2" mode="block" dynamic="0" variable="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E16output_fm_buffer"/>
 <pragma file="src/conv1.cpp" line="17" pragmaType="array_partition" parentfunction="conv1" dim="3" factor="2" mode="block" dynamic="0" variable="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E16output_fm_buffer"/>
 <pragma file="src/conv1.cpp" line="20" pragmaType="array_partition" parentfunction="conv1" dim="1" factor="2" mode="block" dynamic="0" variable="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer"/>
@@ -15,12 +30,9 @@
 <pragma file="src/conv1.cpp" line="24" pragmaType="bind_storage" parentfunction="conv1" op="666" impl="23" latency="-1" variable="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer"/>
 <pragma file="src/conv1.cpp" line="25" pragmaType="array_partition" parentfunction="conv1" dim="1" factor="3" mode="cyclic" dynamic="0" variable="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer"/>
 <pragma file="src/conv1.cpp" line="26" pragmaType="array_partition" parentfunction="conv1" dim="2" factor="3" mode="cyclic" dynamic="0" variable="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer"/>
-<pragma file="src/conv3.cpp" line="136" pragmaType="unroll" parentfunction="export_output_buffer_c3" factor="2" skip_exit_check="0"/>
-<pragma file="src/conv3.cpp" line="139" pragmaType="pipeline" parentfunction="export_output_buffer_c3" off="0" ii="2" rewind="0" style=""/>
-<pragma file="src/conv2.cpp" line="106" pragmaType="unroll" parentfunction="export_output_buffer_c2" factor="2" skip_exit_check="0"/>
-<pragma file="src/conv2.cpp" line="109" pragmaType="pipeline" parentfunction="export_output_buffer_c2" off="0" ii="2" rewind="0" style=""/>
-<pragma file="src/conv3.cpp" line="88" pragmaType="pipeline" parentfunction="load_input_buffer_c3" off="0" ii="256" rewind="0" style=""/>
-<pragma file="src/conv3.cpp" line="72" pragmaType="unroll" parentfunction="clear_buffer_c3" factor="3" skip_exit_check="0"/>
+<pragma file="src/conv1.cpp" line="90" pragmaType="unroll" parentfunction="load_input_buffer_c1" factor="2" skip_exit_check="0"/>
+<pragma file="src/conv1.cpp" line="89" pragmaType="pipeline" parentfunction="load_input_buffer_c1" off="1" ii="0" rewind="0" style=""/>
+<pragma file="src/conv3.cpp" line="71" pragmaType="unroll" parentfunction="clear_buffer_c3" factor="3" skip_exit_check="0"/>
 <pragma file="src/srcnn.cpp" line="24" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="input_ftmap" bundle="i1" offset="slave" name="" depth="512" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="256" max_burst_write_length="256" latency="-1" max_widen_bitwidth="512" channel=""/>
 <pragma file="src/srcnn.cpp" line="25" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv1_weights" bundle="w1" offset="slave" name="" depth="512" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="256" max_burst_write_length="256" latency="-1" max_widen_bitwidth="512" channel=""/>
 <pragma file="src/srcnn.cpp" line="26" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv1_output_ftmap" bundle="i2" offset="slave" name="" depth="512" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="256" max_burst_write_length="256" latency="-1" max_widen_bitwidth="512" channel=""/>
@@ -29,5 +41,4 @@
 <pragma file="src/srcnn.cpp" line="29" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv3_weights" bundle="w3" offset="slave" name="" depth="512" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="256" max_burst_write_length="256" latency="-1" max_widen_bitwidth="512" channel=""/>
 <pragma file="src/srcnn.cpp" line="30" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="output_ftmap" bundle="o" offset="slave" name="" depth="512" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="256" max_burst_write_length="256" latency="-1" max_widen_bitwidth="512" channel=""/>
 <pragma file="src/srcnn.cpp" line="31" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="src/conv1.cpp" line="118" pragmaType="pipeline" parentfunction="load_weight_buffer_c1" off="1" ii="0" rewind="0" style=""/>
 </pragmas>

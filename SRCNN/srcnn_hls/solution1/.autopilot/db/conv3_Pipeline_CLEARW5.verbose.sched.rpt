@@ -1,0 +1,135 @@
+
+
+================================================================
+== Vitis HLS Report for 'conv3_Pipeline_CLEARW5'
+================================================================
+* Date:           Sat Nov  4 22:07:05 2023
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        srcnn_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck24-ubva530-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.024 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      257|      257|  2.570 us|  2.570 us|  257|  257|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- CLEARW  |      255|      255|         1|          1|          1|   255|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.02>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%w = alloca i32 1"   --->   Operation 4 'alloca' 'w' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.42ns)   --->   "%store_ln0 = store i8 0, i8 %w"   --->   Operation 5 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.2.i.i"   --->   Operation 6 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%w_3 = load i8 %w" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 7 'load' 'w_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 8 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.76ns)   --->   "%icmp_ln72 = icmp_eq  i8 %w_3, i8 255" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 9 'icmp' 'icmp_ln72' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (0.76ns)   --->   "%add_ln72_2 = add i8 %w_3, i8 1" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 10 'add' 'add_ln72_2' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln72 = br i1 %icmp_ln72, void %for.inc.2.i.i.split, void %_Z23export_output_buffer_c3PA3_A255_fPA255_S_Pfii.exit.exitStub" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 11 'br' 'br_ln72' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%zext_ln74 = zext i8 %w_3" [src/conv3.cpp:74->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 12 'zext' 'zext_ln74' <Predicate = (!icmp_ln72)> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.78ns)   --->   "%add_ln74 = add i10 %zext_ln74, i10 510" [src/conv3.cpp:74->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 13 'add' 'add_ln74' <Predicate = (!icmp_ln72)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln74_1 = zext i10 %add_ln74" [src/conv3.cpp:74->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 14 'zext' 'zext_ln74_1' <Predicate = (!icmp_ln72)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%output_fm_buffer_0_addr = getelementptr i32 %output_fm_buffer_0, i64 0, i64 %zext_ln74_1" [src/conv3.cpp:74->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 15 'getelementptr' 'output_fm_buffer_0_addr' <Predicate = (!icmp_ln72)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%speclooptripcount_ln72 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 16 'speclooptripcount' 'speclooptripcount_ln72' <Predicate = (!icmp_ln72)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specloopname_ln72 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 17 'specloopname' 'specloopname_ln72' <Predicate = (!icmp_ln72)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (1.23ns)   --->   "%store_ln74 = store i32 0, i10 %output_fm_buffer_0_addr" [src/conv3.cpp:74->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 18 'store' 'store_ln74' <Predicate = (!icmp_ln72)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 765> <RAM>
+ST_1 : Operation 19 [1/1] (0.42ns)   --->   "%store_ln72 = store i8 %add_ln72_2, i8 %w" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 19 'store' 'store_ln72' <Predicate = (!icmp_ln72)> <Delay = 0.42>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln72 = br void %for.inc.2.i.i" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 20 'br' 'br_ln72' <Predicate = (!icmp_ln72)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 21 'ret' 'ret_ln0' <Predicate = (icmp_ln72)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 2.024ns
+The critical path consists of the following:
+	'alloca' operation ('w') [2]  (0.000 ns)
+	'load' operation ('w', src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63) on local variable 'w' [6]  (0.000 ns)
+	'add' operation ('add_ln74', src/conv3.cpp:74->src/conv3.cpp:150->src/conv3.cpp:63) [13]  (0.787 ns)
+	'getelementptr' operation ('output_fm_buffer_0_addr', src/conv3.cpp:74->src/conv3.cpp:150->src/conv3.cpp:63) [15]  (0.000 ns)
+	'store' operation ('store_ln74', src/conv3.cpp:74->src/conv3.cpp:150->src/conv3.cpp:63) of constant 0 on array 'output_fm_buffer_0' [18]  (1.237 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

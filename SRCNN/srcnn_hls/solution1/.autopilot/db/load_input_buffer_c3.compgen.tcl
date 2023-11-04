@@ -1,5 +1,17 @@
 # This script segment is generated automatically by AutoPilot
 
+set name srcnn_mul_6ns_19ns_24_1_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_mul_11s_10ns_21_1_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+}
+
+
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -11,36 +23,17 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 175 \
-    name conv3_float_255_255_float_32_5_5_float_float_255_255_i_1 \
+    id 368 \
+    name input_fm_buffer \
     reset_level 1 \
     sync_rst true \
     dir O \
-    corename conv3_float_255_255_float_32_5_5_float_float_255_255_i_1 \
+    corename input_fm_buffer \
     op interface \
-    ports { conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_address0 { O 16 vector } conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_ce0 { O 1 bit } conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_we0 { O 1 bit } conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_d0 { O 32 vector } conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_address1 { O 16 vector } conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_ce1 { O 1 bit } conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_we1 { O 1 bit } conv3_float_255_255_float_32_5_5_float_float_255_255_i_1_d1 { O 32 vector } } \
+    ports { input_fm_buffer_address0 { O 16 vector } input_fm_buffer_ce0 { O 1 bit } input_fm_buffer_we0 { O 1 bit } input_fm_buffer_d0 { O 32 vector } input_fm_buffer_address1 { O 16 vector } input_fm_buffer_ce1 { O 1 bit } input_fm_buffer_we1 { O 1 bit } input_fm_buffer_d1 { O 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv3_float_255_255_float_32_5_5_float_float_255_255_i_1'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 176 \
-    name conv3_float_255_255_float_32_5_5_float_float_255_255_i \
-    reset_level 1 \
-    sync_rst true \
-    dir O \
-    corename conv3_float_255_255_float_32_5_5_float_float_255_255_i \
-    op interface \
-    ports { conv3_float_255_255_float_32_5_5_float_float_255_255_i_address0 { O 16 vector } conv3_float_255_255_float_32_5_5_float_float_255_255_i_ce0 { O 1 bit } conv3_float_255_255_float_32_5_5_float_float_255_255_i_we0 { O 1 bit } conv3_float_255_255_float_32_5_5_float_float_255_255_i_d0 { O 32 vector } conv3_float_255_255_float_32_5_5_float_float_255_255_i_address1 { O 16 vector } conv3_float_255_255_float_32_5_5_float_float_255_255_i_ce1 { O 1 bit } conv3_float_255_255_float_32_5_5_float_float_255_255_i_we1 { O 1 bit } conv3_float_255_255_float_32_5_5_float_float_255_255_i_d1 { O 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv3_float_255_255_float_32_5_5_float_float_255_255_i'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_fm_buffer'"
 }
 }
 
@@ -48,7 +41,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 172 \
+    id 365 \
     name i3 \
     type other \
     dir I \
@@ -63,7 +56,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 173 \
+    id 366 \
     name input_ftmap \
     type other \
     dir I \
@@ -78,7 +71,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 174 \
+    id 367 \
     name h \
     type other \
     dir I \

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_CLEARW'
 ================================================================
-* Date:           Thu Nov  2 22:33:50 2023
+* Date:           Sat Nov  4 22:07:41 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -85,8 +85,8 @@
     +--------------------+----------+----+---+----+------------+------------+
     |    Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------+----------+----+---+----+------------+------------+
-    |add_ln73_fu_94_p2   |         +|   0|  0|  15|           8|           1|
-    |icmp_ln73_fu_88_p2  |      icmp|   0|  0|  15|           8|           2|
+    |add_ln72_fu_62_p2   |         +|   0|  0|  15|           8|           1|
+    |icmp_ln72_fu_56_p2  |      icmp|   0|  0|  15|           8|           2|
     +--------------------+----------+----+---+----+------------+------------+
     |Total               |          |   0|  0|  30|          16|           3|
     +--------------------+----------+----+---+----+------------+------------+
@@ -96,8 +96,8 @@
     |         Name         | LUT| Input Size| Bits| Total Bits|
     +----------------------+----+-----------+-----+-----------+
     |ap_done_int           |   9|          2|    1|          2|
-    |ap_sig_allocacmp_w_2  |   9|          2|    8|         16|
-    |w_fu_42               |   9|          2|    8|         16|
+    |ap_sig_allocacmp_w_4  |   9|          2|    8|         16|
+    |w_fu_30               |   9|          2|    8|         16|
     +----------------------+----+-----------+-----+-----------+
     |Total                 |  27|          6|   17|         34|
     +----------------------+----+-----------+-----+-----------+
@@ -108,7 +108,7 @@
     +-------------+---+----+-----+-----------+
     |ap_CS_fsm    |  1|   0|    1|          0|
     |ap_done_reg  |  1|   0|    1|          0|
-    |w_fu_42      |  8|   0|    8|          0|
+    |w_fu_30      |  8|   0|    8|          0|
     +-------------+---+----+-----+-----------+
     |Total        | 10|   0|   10|          0|
     +-------------+---+----+-----+-----------+
@@ -119,23 +119,18 @@
 == Interface
 ================================================================
 * Summary: 
-+-------------------------------------------------------------------+-----+-----+------------+----------------------------------------------------------+--------------+
-|                             RTL Ports                             | Dir | Bits|  Protocol  |                       Source Object                      |    C Type    |
-+-------------------------------------------------------------------+-----+-----+------------+----------------------------------------------------------+--------------+
-|ap_clk                                                             |   in|    1|  ap_ctrl_hs|                                     conv3_Pipeline_CLEARW|  return value|
-|ap_rst                                                             |   in|    1|  ap_ctrl_hs|                                     conv3_Pipeline_CLEARW|  return value|
-|ap_start                                                           |   in|    1|  ap_ctrl_hs|                                     conv3_Pipeline_CLEARW|  return value|
-|ap_done                                                            |  out|    1|  ap_ctrl_hs|                                     conv3_Pipeline_CLEARW|  return value|
-|ap_idle                                                            |  out|    1|  ap_ctrl_hs|                                     conv3_Pipeline_CLEARW|  return value|
-|ap_ready                                                           |  out|    1|  ap_ctrl_hs|                                     conv3_Pipeline_CLEARW|  return value|
-|h                                                                  |   in|    3|     ap_none|                                                         h|        scalar|
-|conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_address0  |  out|   10|   ap_memory|  conv3_float_255_255_float_32_5_5_float_float_255_255_o_1|         array|
-|conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_ce0       |  out|    1|   ap_memory|  conv3_float_255_255_float_32_5_5_float_float_255_255_o_1|         array|
-|conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_we0       |  out|    1|   ap_memory|  conv3_float_255_255_float_32_5_5_float_float_255_255_o_1|         array|
-|conv3_float_255_255_float_32_5_5_float_float_255_255_o_1_d0        |  out|   32|   ap_memory|  conv3_float_255_255_float_32_5_5_float_float_255_255_o_1|         array|
-|conv3_float_255_255_float_32_5_5_float_float_255_255_o_address0    |  out|   10|   ap_memory|    conv3_float_255_255_float_32_5_5_float_float_255_255_o|         array|
-|conv3_float_255_255_float_32_5_5_float_float_255_255_o_ce0         |  out|    1|   ap_memory|    conv3_float_255_255_float_32_5_5_float_float_255_255_o|         array|
-|conv3_float_255_255_float_32_5_5_float_float_255_255_o_we0         |  out|    1|   ap_memory|    conv3_float_255_255_float_32_5_5_float_float_255_255_o|         array|
-|conv3_float_255_255_float_32_5_5_float_float_255_255_o_d0          |  out|   32|   ap_memory|    conv3_float_255_255_float_32_5_5_float_float_255_255_o|         array|
-+-------------------------------------------------------------------+-----+-----+------------+----------------------------------------------------------+--------------+
++-----------------------------+-----+-----+------------+-----------------------+--------------+
+|          RTL Ports          | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++-----------------------------+-----+-----+------------+-----------------------+--------------+
+|ap_clk                       |   in|    1|  ap_ctrl_hs|  conv3_Pipeline_CLEARW|  return value|
+|ap_rst                       |   in|    1|  ap_ctrl_hs|  conv3_Pipeline_CLEARW|  return value|
+|ap_start                     |   in|    1|  ap_ctrl_hs|  conv3_Pipeline_CLEARW|  return value|
+|ap_done                      |  out|    1|  ap_ctrl_hs|  conv3_Pipeline_CLEARW|  return value|
+|ap_idle                      |  out|    1|  ap_ctrl_hs|  conv3_Pipeline_CLEARW|  return value|
+|ap_ready                     |  out|    1|  ap_ctrl_hs|  conv3_Pipeline_CLEARW|  return value|
+|output_fm_buffer_0_address0  |  out|   10|   ap_memory|     output_fm_buffer_0|         array|
+|output_fm_buffer_0_ce0       |  out|    1|   ap_memory|     output_fm_buffer_0|         array|
+|output_fm_buffer_0_we0       |  out|    1|   ap_memory|     output_fm_buffer_0|         array|
+|output_fm_buffer_0_d0        |  out|   32|   ap_memory|     output_fm_buffer_0|         array|
++-----------------------------+-----+-----+------------+-----------------------+--------------+
 

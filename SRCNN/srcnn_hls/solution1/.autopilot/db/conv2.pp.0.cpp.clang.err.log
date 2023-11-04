@@ -1,13 +1,22 @@
-src/conv2.cpp:21:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv2_XLX_SEP_ PragmaOptions=variable=input_fm_buffer type=RAM_2P impl=LUTRAM_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS bind_storage variable=input_fm_buffer type=RAM_2P impl=LUTRAM
+src/conv2.cpp:18:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv2_XLX_SEP_ PragmaOptions=variable=output_fm_buffer type=block factor=3 dim=3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=output_fm_buffer type=block factor=3 dim=3
         ^
-src/conv2.cpp:60:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=clear_buffer_c2_XLX_SEP_ PragmaOptions=factor=3_XLX_SEP_ [-Wdump-hls-pragmas]
+src/conv2.cpp:22:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv2_XLX_SEP_ PragmaOptions=variable=input_fm_buffer type=block factor=3 dim=3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=block factor=3 dim=3
+        ^
+src/conv2.cpp:47:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv2_XLX_SEP_ PragmaOptions=II=9_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=9
+        ^
+src/conv2.cpp:48:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv2_XLX_SEP_ PragmaOptions=factor=3_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS UNROLL factor=3
         ^
-src/conv2.cpp:106:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=export_output_buffer_c2_XLX_SEP_ PragmaOptions=factor=2_XLX_SEP_ [-Wdump-hls-pragmas]
+src/conv2.cpp:64:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=clear_buffer_c2_XLX_SEP_ PragmaOptions=factor=3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL factor=3
+        ^
+src/conv2.cpp:110:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=export_output_buffer_c2_XLX_SEP_ PragmaOptions=factor=2_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS UNROLL factor=2
         ^
-src/conv2.cpp:109:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=export_output_buffer_c2_XLX_SEP_ PragmaOptions=II=2_XLX_SEP_ [-Wdump-hls-pragmas]
+src/conv2.cpp:113:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=export_output_buffer_c2_XLX_SEP_ PragmaOptions=II=2_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS PIPELINE II=2
         ^
-4 warnings generated.
+7 warnings generated.

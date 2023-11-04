@@ -16,15 +16,14 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 	//#pragma HLS PIPELINE off
 
 	static ftmap_t output_fm_buffer[C3_OD][C3_TH][W] = {0};
-	#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=2
 	//#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=2
 
 	static ftmap_t input_fm_buffer[C3_ID][C3_TH + (2 * P3)][W + (2 * P3)];
-	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=block factor=2
+	//#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=block factor=2
 
 	static param_t weight_buffer[C3_OD][C3_ID][F3][F3];
-	//#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=3 type=complete
-	//#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=4 type=complete
+	#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=3 type=complete
+	#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=4 type=complete
 
 
 	TILE_OUT: for (int out = 0; out < N3; out += C3_OD) {
@@ -40,7 +39,7 @@ void conv3(ftmap_t input_ftmap[N2][H][W],
 				ROW: for (int r = 0; r < C3_TH; r++) {
 
 					COL: for (int c = 0; c < W; c++) {
-						#pragma HLS UNROLL factor=3
+						#pragma HLS UNROLL factor=2
 						#pragma HLS PIPELINE II=19
 						KR1: for (int kr = 0; kr < F3; kr++) {
 

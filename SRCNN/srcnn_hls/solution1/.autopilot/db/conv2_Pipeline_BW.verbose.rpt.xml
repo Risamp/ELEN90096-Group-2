@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2_Pipeline_BW'" level="0">
-<item name = "Date">Thu Nov  2 22:33:36 2023
+<item name = "Date">Sat Nov  4 22:07:30 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 2.046 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 2.350 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -48,12 +48,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 49, -</column>
+<column name="Expression">-, -, 0, 111, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 27, -</column>
-<column name="Register">-, -, 10, -, -</column>
+<column name="Multiplexer">-, -, -, 45, -</column>
+<column name="Register">-, -, 36, -, -</column>
 <specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -78,23 +78,33 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln61_fu_72_p2">+, 0, 0, 15, 8, 1</column>
-<column name="add_ln63_fu_82_p2">+, 0, 0, 19, 12, 12</column>
-<column name="icmp_ln61_fu_66_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="add_ln65_4_fu_166_p2">+, 0, 0, 24, 17, 9</column>
+<column name="add_ln65_5_fu_185_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln65_fu_138_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln67_fu_154_p2">+, 0, 0, 17, 10, 10</column>
+<column name="icmp_ln65_2_fu_191_p2">icmp, 0, 0, 15, 8, 7</column>
+<column name="icmp_ln65_fu_132_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="select_ln65_fu_197_p3">select, 0, 0, 8, 1, 8</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_done_int">9, 2, 1, 2</column>
-<column name="ap_sig_allocacmp_w_4">9, 2, 8, 16</column>
-<column name="w_fu_34">9, 2, 8, 16</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="phi_mul443_fu_58">9, 2, 17, 34</column>
+<column name="phi_urem445_fu_54">9, 2, 8, 16</column>
+<column name="w_fu_62">9, 2, 8, 16</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="w_fu_34">8, 0, 8, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="phi_mul443_fu_58">17, 0, 17, 0</column>
+<column name="phi_urem445_fu_54">8, 0, 8, 0</column>
+<column name="w_fu_62">8, 0, 8, 0</column>
 </table>
 </item>
 </section>
@@ -110,11 +120,19 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, conv2_Pipeline_BW, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv2_Pipeline_BW, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv2_Pipeline_BW, return value</column>
-<column name="phi_mul">in, 12, ap_none, phi_mul, scalar</column>
-<column name="output_fm_buffer_address0">out, 12, ap_memory, output_fm_buffer, array</column>
-<column name="output_fm_buffer_ce0">out, 1, ap_memory, output_fm_buffer, array</column>
-<column name="output_fm_buffer_we0">out, 1, ap_memory, output_fm_buffer, array</column>
-<column name="output_fm_buffer_d0">out, 32, ap_memory, output_fm_buffer, array</column>
+<column name="sub_ln67">in, 10, ap_none, sub_ln67, scalar</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_address0">out, 10, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o_2, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_ce0">out, 1, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o_2, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_we0">out, 1, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o_2, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_d0">out, 32, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o_2, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_1_address0">out, 10, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o_1, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_1_ce0">out, 1, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o_1, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_1_we0">out, 1, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o_1, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_1_d0">out, 32, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o_1, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_address0">out, 10, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_ce0">out, 1, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_we0">out, 1, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_d0">out, 32, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o, array</column>
 </table>
 </item>
 </section>

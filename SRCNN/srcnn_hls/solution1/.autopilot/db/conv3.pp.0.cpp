@@ -5806,7 +5806,7 @@ void clear_buffer_c2(
 
 
 void load_input_buffer_c3(
- ftmap_t input_fm_buffer[32][5 + (2 * (5 - 1) / 2)][255 + (2 * (5 - 1) / 2)],
+ ftmap_t input_fm_buffer[32][3 + (2 * (5 - 1) / 2)][255 + (2 * (5 - 1) / 2)],
  ftmap_t input_ftmap[32][255][255],
  int in,
  int h
@@ -5820,7 +5820,7 @@ void load_weight_buffer_c3(
 );
 
 void export_output_buffer_c3(
- ftmap_t output_fm_buffer[1][5][255],
+ ftmap_t output_fm_buffer[1][3][255],
  ftmap_t output_ftmap[1][255][255],
  param_t biases[1],
  int out,
@@ -5828,7 +5828,7 @@ void export_output_buffer_c3(
 );
 
 void clear_buffer_c3(
- ftmap_t output_fm_buffer[1][5][255]
+ ftmap_t output_fm_buffer[1][3][255]
 );
 # 2 "src/conv3.cpp" 2
 # 1 "C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\iostream" 1 3
@@ -33589,20 +33589,19 @@ void conv3(ftmap_t input_ftmap[32][255][255],
 
 
 
- static ftmap_t output_fm_buffer[1][5][255] = {0};
-#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=2
+ static ftmap_t output_fm_buffer[1][3][255] = {0};
 
 
- static ftmap_t input_fm_buffer[32][5 + (2 * (5 - 1) / 2)][255 + (2 * (5 - 1) / 2)];
-#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=block factor=2
+ static ftmap_t input_fm_buffer[32][3 + (2 * (5 - 1) / 2)][255 + (2 * (5 - 1) / 2)];
+
 
  static param_t weight_buffer[1][32][5][5];
-
-
+#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=3 type=complete
+#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=4 type=complete
 
 
  TILE_OUT: for (int out = 0; out < 1; out += 1) {
- TILE_ROW: for (int h = 0; h < 255; h += 5) {
+ TILE_ROW: for (int h = 0; h < 255; h += 3) {
  TILE_IN: for (int in = 0; in < 32; in += 32) {
 
   load_input_buffer_c3(input_fm_buffer, input_ftmap, in, h);
@@ -33611,10 +33610,10 @@ void conv3(ftmap_t input_ftmap[32][255][255],
    OUT: for (int o = 0; o < 1; o++) {
    IN: for (int i = 0; i < 32; i++) {
 
-    ROW: for (int r = 0; r < 5; r++) {
+    ROW: for (int r = 0; r < 3; r++) {
 
      COL: for (int c = 0; c < 255; c++) {
-#pragma HLS UNROLL factor=3
+#pragma HLS UNROLL factor=2
 #pragma HLS PIPELINE II=19
  KR1: for (int kr = 0; kr < 5; kr++) {
 
@@ -33640,9 +33639,9 @@ void conv3(ftmap_t input_ftmap[32][255][255],
  }}
 }
 
-void clear_buffer_c3(ftmap_t output_fm_buffer[1][5][255]) {
+void clear_buffer_c3(ftmap_t output_fm_buffer[1][3][255]) {
  CLEARO: for (int o = 0; o < 1; o++) {
- CLEARH: for (int h = 0; h < 5; h++) {
+ CLEARH: for (int h = 0; h < 3; h++) {
 #pragma HLS UNROLL factor=3
  CLEARW: for (int w = 0; w < 255; w++) {
 
@@ -33652,13 +33651,13 @@ void clear_buffer_c3(ftmap_t output_fm_buffer[1][5][255]) {
 
 
 void load_input_buffer_c3(
- ftmap_t input_fm_buffer[32][5 + (2 * (5 - 1) / 2)][255 + (2 * (5 - 1) / 2)],
+ ftmap_t input_fm_buffer[32][3 + (2 * (5 - 1) / 2)][255 + (2 * (5 - 1) / 2)],
  ftmap_t input_ftmap[32][255][255],
  int in,
  int h
 ) {
  LOADI: for (int bin = 0; bin < 32; bin++) {
- LOADH: for (int bh = 0; bh < 5 + (2 * (5 - 1) / 2); bh++) {
+ LOADH: for (int bh = 0; bh < 3 + (2 * (5 - 1) / 2); bh++) {
 #pragma HLS PIPELINE II=256
 
  int hclamp = clamp(h + bh - (5 - 1) / 2, 0, 255 - 1);
@@ -33698,7 +33697,7 @@ void load_weight_buffer_c3(
 }
 
 void export_output_buffer_c3(
- ftmap_t output_fm_buffer[1][5][255],
+ ftmap_t output_fm_buffer[1][3][255],
  ftmap_t output_ftmap[1][255][255],
  param_t biases[1],
  int out,
@@ -33706,7 +33705,7 @@ void export_output_buffer_c3(
 ) {
 
  EXPORTO: for (int bout = 0; bout < 1; bout++) {
- EXPORTH: for (int bh = 0; bh < 5; bh++) {
+ EXPORTH: for (int bh = 0; bh < 3; bh++) {
 #pragma HLS UNROLL factor=2
 
  RELU: for (int bw = 0; bw < 255; bw++) {

@@ -30,7 +30,7 @@
 // CONV3
 #define C3_OD 1 		// conv1 output tile depth
 #define C3_ID N2 		// conv1 input tile depth
-#define C3_TH 5 		// conv1 tile height
+#define C3_TH 3 		// conv1 tile height
 
 // PADDING
 #define P1 (F1 - 1) / 2	// padding conv1

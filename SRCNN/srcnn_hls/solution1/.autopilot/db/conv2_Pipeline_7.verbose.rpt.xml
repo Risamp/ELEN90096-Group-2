@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2_Pipeline_7'" level="0">
-<item name = "Date">Thu Nov  2 22:33:36 2023
+<item name = "Date">Sat Nov  4 22:07:30 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -48,12 +48,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 53, -</column>
+<column name="Expression">-, -, 0, 113, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, -, -, -, -</column>
+<column name="Instance">-, -, 0, 14, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 45, -</column>
-<column name="Register">-, -, 46, -, -</column>
+<column name="Multiplexer">-, -, -, 72, -</column>
+<column name="Register">-, -, 71, -, -</column>
 <specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -62,6 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mux_3_2_32_1_1_U325">mux_3_2_32_1_1, 0, 0, 0, 14, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -78,10 +79,14 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="empty_212_fu_119_p2">+, 0, 0, 19, 12, 12</column>
-<column name="empty_fu_109_p2">+, 0, 0, 15, 8, 1</column>
+<column name="empty_346_fu_202_p2">+, 0, 0, 17, 10, 10</column>
+<column name="empty_fu_169_p2">+, 0, 0, 15, 8, 1</column>
+<column name="next_mul439_fu_233_p2">+, 0, 0, 24, 17, 9</column>
+<column name="next_urem441_fu_178_p2">+, 0, 0, 15, 8, 1</column>
 <column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
-<column name="exitcond5418_fu_103_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="empty_345_fu_184_p2">icmp, 0, 0, 15, 8, 7</column>
+<column name="exitcond5518_fu_163_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="idx_urem442_fu_190_p3">select, 0, 0, 8, 1, 8</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -90,8 +95,11 @@
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter2">9, 2, 1, 2</column>
 <column name="ap_sig_allocacmp_loop_index_1_i_load">9, 2, 8, 16</column>
+<column name="ap_sig_allocacmp_phi_urem440_load">9, 2, 8, 16</column>
 <column name="i3_blk_n_W">9, 2, 1, 2</column>
-<column name="loop_index_1_i_fu_54">9, 2, 8, 16</column>
+<column name="loop_index_1_i_fu_78">9, 2, 8, 16</column>
+<column name="phi_mul438_fu_74">9, 2, 17, 34</column>
+<column name="phi_urem440_fu_70">9, 2, 8, 16</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -101,9 +109,11 @@
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
-<column name="exitcond5418_reg_156">1, 0, 1, 0</column>
-<column name="loop_index_1_i_fu_54">8, 0, 8, 0</column>
-<column name="output_fm_buffer_load_reg_170">32, 0, 32, 0</column>
+<column name="exitcond5518_reg_296">1, 0, 1, 0</column>
+<column name="loop_index_1_i_fu_78">8, 0, 8, 0</column>
+<column name="phi_mul438_fu_74">17, 0, 17, 0</column>
+<column name="phi_urem440_fu_70">8, 0, 8, 0</column>
+<column name="tmp_8_reg_320">32, 0, 32, 0</column>
 </table>
 </item>
 </section>
@@ -165,11 +175,17 @@
 <column name="m_axi_i3_BRESP">in, 2, m_axi, i3, pointer</column>
 <column name="m_axi_i3_BID">in, 1, m_axi, i3, pointer</column>
 <column name="m_axi_i3_BUSER">in, 1, m_axi, i3, pointer</column>
-<column name="sext_ln118_1">in, 62, ap_none, sext_ln118_1, scalar</column>
-<column name="sub_ln111_2">in, 12, ap_none, sub_ln111_2, scalar</column>
-<column name="output_fm_buffer_address0">out, 12, ap_memory, output_fm_buffer, array</column>
-<column name="output_fm_buffer_ce0">out, 1, ap_memory, output_fm_buffer, array</column>
-<column name="output_fm_buffer_q0">in, 32, ap_memory, output_fm_buffer, array</column>
+<column name="sext_ln122_1">in, 62, ap_none, sext_ln122_1, scalar</column>
+<column name="mul_ln115_1">in, 10, ap_none, mul_ln115_1, scalar</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_address0">out, 10, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o_2, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_ce0">out, 1, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o_2, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_q0">in, 32, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o_2, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_1_address0">out, 10, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o_1, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_1_ce0">out, 1, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o_1, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_1_q0">in, 32, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o_1, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_address0">out, 10, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_ce0">out, 1, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o, array</column>
+<column name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_q0">in, 32, ap_memory, conv2_float_255_255_float_64_1_1_float_float_255_255_o, array</column>
 </table>
 </item>
 </section>

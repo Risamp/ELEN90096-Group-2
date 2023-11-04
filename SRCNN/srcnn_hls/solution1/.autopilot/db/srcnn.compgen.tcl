@@ -18,9 +18,9 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
 }
 
 
@@ -30,9 +30,15 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set name srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fcmp} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
@@ -150,7 +156,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 282 \
+			id 496 \
 			corename srcnn_control_axilite \
 			name srcnn_control_s_axi \
 			ports {$port_control} \
@@ -174,7 +180,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 290 \
+    id 504 \
     name conv1_biases \
     reset_level 0 \
     sync_rst true \
@@ -193,7 +199,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 291 \
+    id 505 \
     name conv2_biases \
     reset_level 0 \
     sync_rst true \
@@ -211,7 +217,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 292 \
+    id 506 \
     name conv3_biases \
     type other \
     dir I \

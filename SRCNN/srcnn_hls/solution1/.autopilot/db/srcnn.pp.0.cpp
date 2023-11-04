@@ -5806,7 +5806,7 @@ void clear_buffer_c2(
 
 
 void load_input_buffer_c3(
- ftmap_t input_fm_buffer[32][5 + (2 * (5 - 1) / 2)][255 + (2 * (5 - 1) / 2)],
+ ftmap_t input_fm_buffer[32][3 + (2 * (5 - 1) / 2)][255 + (2 * (5 - 1) / 2)],
  ftmap_t input_ftmap[32][255][255],
  int in,
  int h
@@ -5820,7 +5820,7 @@ void load_weight_buffer_c3(
 );
 
 void export_output_buffer_c3(
- ftmap_t output_fm_buffer[1][5][255],
+ ftmap_t output_fm_buffer[1][3][255],
  ftmap_t output_ftmap[1][255][255],
  param_t biases[1],
  int out,
@@ -5828,7 +5828,7 @@ void export_output_buffer_c3(
 );
 
 void clear_buffer_c3(
- ftmap_t output_fm_buffer[1][5][255]
+ ftmap_t output_fm_buffer[1][3][255]
 );
 # 2 "src/srcnn.cpp" 2
 # 1 "src/util.h" 1
