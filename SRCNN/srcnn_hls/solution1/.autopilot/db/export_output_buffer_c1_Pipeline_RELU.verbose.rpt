@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'export_output_buffer_c1_Pipeline_RELU'
 ================================================================
-* Date:           Sat Nov  4 22:07:14 2023
+* Date:           Sat Nov  4 22:43:07 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -163,16 +163,16 @@
 |ap_done                                                            |  out|    1|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
 |ap_idle                                                            |  out|    1|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
 |ap_ready                                                           |  out|    1|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
-|grp_fu_827_p_din0                                                  |  out|   32|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
-|grp_fu_827_p_din1                                                  |  out|   32|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
-|grp_fu_827_p_opcode                                                |  out|    2|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
-|grp_fu_827_p_dout0                                                 |   in|   32|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
-|grp_fu_827_p_ce                                                    |  out|    1|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
-|grp_fu_831_p_din0                                                  |  out|   32|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
-|grp_fu_831_p_din1                                                  |  out|   32|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
-|grp_fu_831_p_opcode                                                |  out|    5|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
-|grp_fu_831_p_dout0                                                 |   in|    1|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
-|grp_fu_831_p_ce                                                    |  out|    1|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
+|grp_fu_860_p_din0                                                  |  out|   32|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
+|grp_fu_860_p_din1                                                  |  out|   32|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
+|grp_fu_860_p_opcode                                                |  out|    2|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
+|grp_fu_860_p_dout0                                                 |   in|   32|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
+|grp_fu_860_p_ce                                                    |  out|    1|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
+|grp_fu_864_p_din0                                                  |  out|   32|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
+|grp_fu_864_p_din1                                                  |  out|   32|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
+|grp_fu_864_p_opcode                                                |  out|    5|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
+|grp_fu_864_p_dout0                                                 |   in|    1|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
+|grp_fu_864_p_ce                                                    |  out|    1|  ap_ctrl_hs|                     export_output_buffer_c1_Pipeline_RELU|  return value|
 |tmp_10                                                             |   in|    7|     ap_none|                                                    tmp_10|        scalar|
 |empty                                                              |   in|   32|     ap_none|                                                     empty|        scalar|
 |conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0  |  out|   14|   ap_memory|  conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1|         array|
@@ -275,9 +275,9 @@ State 5 <SV = 4> <Delay = 6.43>
 ST_5 : Operation 36 [2/4] (6.43ns)   --->   "%add = fadd i32 %tmp, i32 %tmp_6" [src/conv1.cpp:141]   --->   Operation 36 'fadd' 'add' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 6 <SV = 5> <Delay = 6.43>
-ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%specpipeline_ln139 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_19" [src/conv1.cpp:139]   --->   Operation 37 'specpipeline' 'specpipeline_ln139' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%specpipeline_ln139 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_36" [src/conv1.cpp:139]   --->   Operation 37 'specpipeline' 'specpipeline_ln139' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%speclooptripcount_ln138 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv1.cpp:138]   --->   Operation 38 'speclooptripcount' 'speclooptripcount_ln138' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%specloopname_ln138 = specloopname void @_ssdm_op_SpecLoopName, void @empty_21" [src/conv1.cpp:138]   --->   Operation 39 'specloopname' 'specloopname_ln138' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%specloopname_ln138 = specloopname void @_ssdm_op_SpecLoopName, void @empty_22" [src/conv1.cpp:138]   --->   Operation 39 'specloopname' 'specloopname_ln138' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 40 [1/4] (6.43ns)   --->   "%add = fadd i32 %tmp, i32 %tmp_6" [src/conv1.cpp:141]   --->   Operation 40 'fadd' 'add' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 ST_6 : Operation 61 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 61 'ret' 'ret_ln0' <Predicate = (icmp_ln138)> <Delay = 0.00>
 
@@ -547,7 +547,7 @@ ret_ln0                                                  (ret              ) [ 0
 <pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_19"/></StgValue>
+<StgValue><ssdm name="empty_36"/></StgValue>
 </bind>
 </comp>
 
@@ -583,7 +583,7 @@ ret_ln0                                                  (ret              ) [ 0
 <pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_21"/></StgValue>
+<StgValue><ssdm name="empty_22"/></StgValue>
 </bind>
 </comp>
 

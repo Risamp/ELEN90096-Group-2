@@ -147,14 +147,14 @@ wire    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state2_pp0_stage0_iter1;
 wire    ap_block_state3_pp0_stage0_iter2;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] exitcond349_fu_126_p2;
+wire   [0:0] exitcond3411_fu_126_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 reg    i2_blk_n_W;
 wire    ap_block_pp0_stage0;
 reg    ap_block_pp0_stage0_11001;
-reg   [0:0] exitcond349_reg_199;
+reg   [0:0] exitcond3411_reg_199;
 reg   [0:0] tmp_reg_213;
 wire   [31:0] tmp_3_fu_174_p4;
 reg   [31:0] tmp_3_reg_223;
@@ -165,7 +165,7 @@ reg   [7:0] loop_index_1_fu_64;
 wire   [7:0] empty_fu_132_p2;
 wire    ap_loop_init;
 reg   [7:0] ap_sig_allocacmp_loop_index_1_load;
-wire   [6:0] empty_311_fu_138_p1;
+wire   [6:0] empty_314_fu_138_p1;
 wire   [13:0] tmp_s_fu_142_p3;
 reg    ap_done_reg;
 wire    ap_continue_int;
@@ -257,7 +257,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if (((exitcond349_fu_126_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if (((exitcond3411_fu_126_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
             loop_index_1_fu_64 <= empty_fu_132_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             loop_index_1_fu_64 <= 8'd0;
@@ -268,24 +268,24 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_loop_exit_ready_pp0_iter1_reg <= ap_loop_exit_ready;
-        exitcond349_reg_199 <= exitcond349_fu_126_p2;
+        exitcond3411_reg_199 <= exitcond3411_fu_126_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (exitcond349_reg_199 == 1'd0))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (exitcond3411_reg_199 == 1'd0))) begin
         tmp_3_reg_223 <= tmp_3_fu_174_p4;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((exitcond349_fu_126_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((exitcond3411_fu_126_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         tmp_reg_213 <= ap_sig_allocacmp_loop_index_1_load[32'd7];
     end
 end
 
 always @ (*) begin
-    if (((exitcond349_fu_126_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((exitcond3411_fu_126_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -293,7 +293,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (exitcond349_reg_199 == 1'd1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (exitcond3411_reg_199 == 1'd1))) begin
         ap_condition_exit_pp0_iter1_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter1_stage0 = 1'b0;
@@ -413,11 +413,11 @@ assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0 = tmp_1
 
 assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address0 = tmp_19_cast_fu_150_p1;
 
-assign empty_311_fu_138_p1 = ap_sig_allocacmp_loop_index_1_load[6:0];
+assign empty_314_fu_138_p1 = ap_sig_allocacmp_loop_index_1_load[6:0];
 
 assign empty_fu_132_p2 = (ap_sig_allocacmp_loop_index_1_load + 8'd1);
 
-assign exitcond349_fu_126_p2 = ((ap_sig_allocacmp_loop_index_1_load == 8'd255) ? 1'b1 : 1'b0);
+assign exitcond3411_fu_126_p2 = ((ap_sig_allocacmp_loop_index_1_load == 8'd255) ? 1'b1 : 1'b0);
 
 assign m_axi_i2_ARADDR = 64'd0;
 
@@ -483,6 +483,6 @@ assign m_axi_i2_WUSER = 1'd0;
 
 assign tmp_19_cast_fu_150_p1 = tmp_s_fu_142_p3;
 
-assign tmp_s_fu_142_p3 = {{tmp_15}, {empty_311_fu_138_p1}};
+assign tmp_s_fu_142_p3 = {{tmp_15}, {empty_314_fu_138_p1}};
 
 endmodule //srcnn_export_output_buffer_c1_Pipeline_4

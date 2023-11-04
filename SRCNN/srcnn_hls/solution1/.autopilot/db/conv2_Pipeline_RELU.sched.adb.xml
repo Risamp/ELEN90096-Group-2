@@ -715,7 +715,7 @@ for.body8.0.i.split:16 %add15_0_i = fadd i32 %tmp, i32 %tmp_51
 
 <Node id="23" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.body8.0.i.split:1 %specpipeline_ln113 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_19
+for.body8.0.i.split:1 %specpipeline_ln113 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_36
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln113"/></StgValue>
@@ -745,7 +745,7 @@ for.body8.0.i.split:2 %speclooptripcount_ln112 = speclooptripcount void @_ssdm_o
 
 <Node id="25" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body8.0.i.split:3 %specloopname_ln112 = specloopname void @_ssdm_op_SpecLoopName, void @empty_21
+for.body8.0.i.split:3 %specloopname_ln112 = specloopname void @_ssdm_op_SpecLoopName, void @empty_22
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln112"/></StgValue>

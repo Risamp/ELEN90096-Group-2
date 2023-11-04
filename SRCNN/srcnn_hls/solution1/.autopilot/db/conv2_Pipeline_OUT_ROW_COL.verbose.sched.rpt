@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_OUT_ROW_COL'
 ================================================================
-* Date:           Sat Nov  4 22:06:14 2023
+* Date:           Sat Nov  4 22:42:06 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -413,8 +413,8 @@ ST_24 : Operation 275 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname 
 ST_24 : Operation 276 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 65280, i64 65280, i64 65280"   --->   Operation 276 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
 ST_24 : Operation 277 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @IN_ROW_COL_str"   --->   Operation 277 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
 ST_24 : Operation 278 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @ROW_COL_str"   --->   Operation 278 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
-ST_24 : Operation 279 [1/1] (0.00ns)   --->   "%specpipeline_ln47 = specpipeline void @_ssdm_op_SpecPipeline, i32 9, i32 0, i32 0, i32 0, void @empty_19" [src/conv2.cpp:47]   --->   Operation 279 'specpipeline' 'specpipeline_ln47' <Predicate = true> <Delay = 0.00>
-ST_24 : Operation 280 [1/1] (0.00ns)   --->   "%specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty_34" [src/conv2.cpp:46]   --->   Operation 280 'specloopname' 'specloopname_ln46' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 279 [1/1] (0.00ns)   --->   "%specpipeline_ln47 = specpipeline void @_ssdm_op_SpecPipeline, i32 9, i32 0, i32 0, i32 0, void @empty_36" [src/conv2.cpp:47]   --->   Operation 279 'specpipeline' 'specpipeline_ln47' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 280 [1/1] (0.00ns)   --->   "%specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [src/conv2.cpp:46]   --->   Operation 280 'specloopname' 'specloopname_ln46' <Predicate = true> <Delay = 0.00>
 ST_24 : Operation 281 [1/4] (6.43ns)   --->   "%add_2 = fadd i32 %tmp_5, i32 %mul_2" [src/conv2.cpp:50]   --->   Operation 281 'fadd' 'add_2' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 ST_24 : Operation 282 [1/1] (1.23ns)   --->   "%store_ln50 = store i32 %add_1, i10 %conv2_float_255_255_float_64_1_1_float_float_255_255_o_22" [src/conv2.cpp:50]   --->   Operation 282 'store' 'store_ln50' <Predicate = (trunc_ln1 == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1020> <RAM>
 ST_24 : Operation 283 [1/1] (0.00ns)   --->   "%br_ln50 = br void %arrayidx407.1.exit" [src/conv2.cpp:50]   --->   Operation 283 'br' 'br_ln50' <Predicate = (trunc_ln1 == 1)> <Delay = 0.00>

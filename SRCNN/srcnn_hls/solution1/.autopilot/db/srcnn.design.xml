@@ -5,142 +5,142 @@
 <ModuleName>srcnn</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>grp_conv1_fu_238</InstName>
+<InstName>grp_conv1_fu_280</InstName>
 <ModuleName>conv1</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>238</ID>
+<ID>280</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_conv1_Pipeline_OUT_ROW_COL_fu_770</InstName>
+<InstName>grp_conv1_Pipeline_OUT_ROW_COL_fu_778</InstName>
 <ModuleName>conv1_Pipeline_OUT_ROW_COL</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>770</ID>
+<ID>778</ID>
 </Instance>
 <Instance>
-<InstName>grp_export_output_buffer_c1_fu_790</InstName>
+<InstName>grp_export_output_buffer_c1_fu_798</InstName>
 <ModuleName>export_output_buffer_c1</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>790</ID>
+<ID>798</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_export_output_buffer_c1_Pipeline_RELU_fu_189</InstName>
+<InstName>grp_export_output_buffer_c1_Pipeline_RELU_fu_202</InstName>
 <ModuleName>export_output_buffer_c1_Pipeline_RELU</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>189</ID>
+<ID>202</ID>
 </Instance>
 <Instance>
-<InstName>grp_export_output_buffer_c1_Pipeline_2_fu_199</InstName>
+<InstName>grp_export_output_buffer_c1_Pipeline_2_fu_212</InstName>
 <ModuleName>export_output_buffer_c1_Pipeline_2</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>199</ID>
+<ID>212</ID>
 </Instance>
 <Instance>
-<InstName>grp_export_output_buffer_c1_Pipeline_RELU1_fu_211</InstName>
+<InstName>grp_export_output_buffer_c1_Pipeline_RELU1_fu_224</InstName>
 <ModuleName>export_output_buffer_c1_Pipeline_RELU1</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>211</ID>
+<ID>224</ID>
 </Instance>
 <Instance>
-<InstName>grp_export_output_buffer_c1_Pipeline_4_fu_221</InstName>
+<InstName>grp_export_output_buffer_c1_Pipeline_4_fu_234</InstName>
 <ModuleName>export_output_buffer_c1_Pipeline_4</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>221</ID>
+<ID>234</ID>
 </Instance>
 <Instance>
-<InstName>grp_export_output_buffer_c1_Pipeline_BW_fu_233</InstName>
+<InstName>grp_export_output_buffer_c1_Pipeline_BW_fu_246</InstName>
 <ModuleName>export_output_buffer_c1_Pipeline_BW</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>233</ID>
+<ID>246</ID>
 </Instance>
 <Instance>
-<InstName>grp_export_output_buffer_c1_Pipeline_BW2_fu_242</InstName>
+<InstName>grp_export_output_buffer_c1_Pipeline_BW2_fu_255</InstName>
 <ModuleName>export_output_buffer_c1_Pipeline_BW2</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>242</ID>
+<ID>255</ID>
 </Instance>
 </InstancesList>
 </Instance>
 <Instance>
-<InstName>grp_conv1_Pipeline_OUT_ROW_COL9_fu_805</InstName>
+<InstName>grp_conv1_Pipeline_OUT_ROW_COL9_fu_814</InstName>
 <ModuleName>conv1_Pipeline_OUT_ROW_COL9</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>805</ID>
+<ID>814</ID>
 </Instance>
 </InstancesList>
 </Instance>
 <Instance>
-<InstName>grp_conv2_fu_272</InstName>
+<InstName>grp_conv2_fu_316</InstName>
 <ModuleName>conv2</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>272</ID>
+<ID>316</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_conv2_Pipeline_LOAD_INPUT_BH_L_fu_286</InstName>
+<InstName>grp_conv2_Pipeline_LOAD_INPUT_BH_L_fu_295</InstName>
 <ModuleName>conv2_Pipeline_LOAD_INPUT_BH_L</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>286</ID>
+<ID>295</ID>
 </Instance>
 <Instance>
-<InstName>grp_conv2_Pipeline_LOAD_WEIGHTS_L_fu_300</InstName>
+<InstName>grp_conv2_Pipeline_LOAD_WEIGHTS_L_fu_309</InstName>
 <ModuleName>conv2_Pipeline_LOAD_WEIGHTS_L</ModuleName>
-<IsCompInst>true</IsCompInst>
-<ID>300</ID>
-</Instance>
-<Instance>
-<InstName>grp_conv2_Pipeline_OUT_ROW_COL_fu_309</InstName>
-<ModuleName>conv2_Pipeline_OUT_ROW_COL</ModuleName>
 <IsCompInst>true</IsCompInst>
 <ID>309</ID>
 </Instance>
 <Instance>
-<InstName>grp_conv2_Pipeline_RELU_fu_327</InstName>
+<InstName>grp_conv2_Pipeline_OUT_ROW_COL_fu_318</InstName>
+<ModuleName>conv2_Pipeline_OUT_ROW_COL</ModuleName>
+<IsCompInst>true</IsCompInst>
+<ID>318</ID>
+</Instance>
+<Instance>
+<InstName>grp_conv2_Pipeline_RELU_fu_336</InstName>
 <ModuleName>conv2_Pipeline_RELU</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>327</ID>
+<ID>336</ID>
 </Instance>
 <Instance>
-<InstName>grp_conv2_Pipeline_5_fu_339</InstName>
+<InstName>grp_conv2_Pipeline_5_fu_348</InstName>
 <ModuleName>conv2_Pipeline_5</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>339</ID>
+<ID>348</ID>
 </Instance>
 <Instance>
-<InstName>grp_conv2_Pipeline_RELU6_fu_353</InstName>
+<InstName>grp_conv2_Pipeline_RELU6_fu_362</InstName>
 <ModuleName>conv2_Pipeline_RELU6</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>353</ID>
+<ID>362</ID>
 </Instance>
 <Instance>
-<InstName>grp_conv2_Pipeline_7_fu_365</InstName>
+<InstName>grp_conv2_Pipeline_7_fu_374</InstName>
 <ModuleName>conv2_Pipeline_7</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>365</ID>
+<ID>374</ID>
 </Instance>
 <Instance>
-<InstName>grp_conv2_Pipeline_BW_fu_379</InstName>
+<InstName>grp_conv2_Pipeline_BW_fu_388</InstName>
 <ModuleName>conv2_Pipeline_BW</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>379</ID>
+<ID>388</ID>
 </Instance>
 <Instance>
-<InstName>grp_conv2_Pipeline_BW7_fu_390</InstName>
+<InstName>grp_conv2_Pipeline_BW7_fu_399</InstName>
 <ModuleName>conv2_Pipeline_BW7</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>390</ID>
+<ID>399</ID>
 </Instance>
 <Instance>
-<InstName>grp_conv2_Pipeline_BW8_fu_401</InstName>
+<InstName>grp_conv2_Pipeline_BW8_fu_410</InstName>
 <ModuleName>conv2_Pipeline_BW8</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>401</ID>
+<ID>410</ID>
 </Instance>
 </InstancesList>
 </Instance>
 <Instance>
-<InstName>grp_conv3_fu_301</InstName>
+<InstName>grp_conv3_fu_346</InstName>
 <ModuleName>conv3</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>301</ID>
+<ID>346</ID>
 <InstancesList>
 <Instance>
 <InstName>grp_load_input_buffer_c3_fu_619</InstName>
@@ -332,7 +332,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2590_p_din0</name>
+<name>grp_fu_2604_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -343,7 +343,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2590_p_din1</name>
+<name>grp_fu_2604_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -354,7 +354,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2590_p_opcode</name>
+<name>grp_fu_2604_p_opcode</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -365,7 +365,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2590_p_dout0</name>
+<name>grp_fu_2604_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -376,7 +376,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2590_p_ce</name>
+<name>grp_fu_2604_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -387,7 +387,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2594_p_din0</name>
+<name>grp_fu_2608_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -398,7 +398,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2594_p_din1</name>
+<name>grp_fu_2608_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -409,7 +409,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2594_p_opcode</name>
+<name>grp_fu_2608_p_opcode</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -420,7 +420,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2594_p_dout0</name>
+<name>grp_fu_2608_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -431,7 +431,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2594_p_ce</name>
+<name>grp_fu_2608_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -442,7 +442,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2598_p_din0</name>
+<name>grp_fu_2612_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -453,7 +453,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2598_p_din1</name>
+<name>grp_fu_2612_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -464,7 +464,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2598_p_opcode</name>
+<name>grp_fu_2612_p_opcode</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -475,7 +475,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2598_p_dout0</name>
+<name>grp_fu_2612_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -486,7 +486,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2598_p_ce</name>
+<name>grp_fu_2612_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -497,7 +497,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2602_p_din0</name>
+<name>grp_fu_2616_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -508,7 +508,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2602_p_din1</name>
+<name>grp_fu_2616_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -519,7 +519,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2602_p_opcode</name>
+<name>grp_fu_2616_p_opcode</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -530,7 +530,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2602_p_dout0</name>
+<name>grp_fu_2616_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -541,7 +541,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2602_p_ce</name>
+<name>grp_fu_2616_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -552,7 +552,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2606_p_din0</name>
+<name>grp_fu_2620_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -563,7 +563,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2606_p_din1</name>
+<name>grp_fu_2620_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -574,7 +574,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2606_p_opcode</name>
+<name>grp_fu_2620_p_opcode</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -585,7 +585,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2606_p_dout0</name>
+<name>grp_fu_2620_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -596,7 +596,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2606_p_ce</name>
+<name>grp_fu_2620_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -607,7 +607,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2610_p_din0</name>
+<name>grp_fu_2624_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -618,7 +618,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2610_p_din1</name>
+<name>grp_fu_2624_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -629,7 +629,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2610_p_opcode</name>
+<name>grp_fu_2624_p_opcode</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -640,7 +640,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2610_p_dout0</name>
+<name>grp_fu_2624_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -651,7 +651,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2610_p_ce</name>
+<name>grp_fu_2624_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -662,7 +662,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2614_p_din0</name>
+<name>grp_fu_2628_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -673,7 +673,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2614_p_din1</name>
+<name>grp_fu_2628_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -684,7 +684,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2614_p_dout0</name>
+<name>grp_fu_2628_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -695,7 +695,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2614_p_ce</name>
+<name>grp_fu_2628_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -706,7 +706,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2618_p_din0</name>
+<name>grp_fu_2632_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -717,7 +717,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2618_p_din1</name>
+<name>grp_fu_2632_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -728,7 +728,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2618_p_dout0</name>
+<name>grp_fu_2632_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -739,7 +739,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2618_p_ce</name>
+<name>grp_fu_2632_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -750,7 +750,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2622_p_din0</name>
+<name>grp_fu_2636_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -761,7 +761,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2622_p_din1</name>
+<name>grp_fu_2636_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -772,7 +772,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2622_p_dout0</name>
+<name>grp_fu_2636_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -783,7 +783,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2622_p_ce</name>
+<name>grp_fu_2636_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -794,7 +794,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2626_p_din0</name>
+<name>grp_fu_2640_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -805,7 +805,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2626_p_din1</name>
+<name>grp_fu_2640_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -816,7 +816,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2626_p_dout0</name>
+<name>grp_fu_2640_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -827,7 +827,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2626_p_ce</name>
+<name>grp_fu_2640_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -838,7 +838,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2630_p_din0</name>
+<name>grp_fu_2644_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -849,7 +849,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2630_p_din1</name>
+<name>grp_fu_2644_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -860,7 +860,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2630_p_dout0</name>
+<name>grp_fu_2644_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -871,7 +871,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2630_p_ce</name>
+<name>grp_fu_2644_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -1622,7 +1622,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_827_p_din0</name>
+<name>grp_fu_860_p_din0</name>
 <Object>export_output_buffer_c1_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -1633,7 +1633,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_827_p_din1</name>
+<name>grp_fu_860_p_din1</name>
 <Object>export_output_buffer_c1_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -1644,7 +1644,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_827_p_opcode</name>
+<name>grp_fu_860_p_opcode</name>
 <Object>export_output_buffer_c1_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -1655,7 +1655,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_827_p_dout0</name>
+<name>grp_fu_860_p_dout0</name>
 <Object>export_output_buffer_c1_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -1666,7 +1666,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_827_p_ce</name>
+<name>grp_fu_860_p_ce</name>
 <Object>export_output_buffer_c1_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -1677,7 +1677,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_831_p_din0</name>
+<name>grp_fu_864_p_din0</name>
 <Object>export_output_buffer_c1_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -1688,7 +1688,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_831_p_din1</name>
+<name>grp_fu_864_p_din1</name>
 <Object>export_output_buffer_c1_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -1699,7 +1699,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_831_p_opcode</name>
+<name>grp_fu_864_p_opcode</name>
 <Object>export_output_buffer_c1_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -1710,7 +1710,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_831_p_dout0</name>
+<name>grp_fu_864_p_dout0</name>
 <Object>export_output_buffer_c1_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -1721,7 +1721,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_831_p_ce</name>
+<name>grp_fu_864_p_ce</name>
 <Object>export_output_buffer_c1_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -2750,7 +2750,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_827_p_din0</name>
+<name>grp_fu_860_p_din0</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -2761,7 +2761,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_827_p_din1</name>
+<name>grp_fu_860_p_din1</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -2772,7 +2772,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_827_p_opcode</name>
+<name>grp_fu_860_p_opcode</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -2783,7 +2783,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_827_p_dout0</name>
+<name>grp_fu_860_p_dout0</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -2794,7 +2794,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_827_p_ce</name>
+<name>grp_fu_860_p_ce</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -2805,7 +2805,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_831_p_din0</name>
+<name>grp_fu_864_p_din0</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -2816,7 +2816,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_831_p_din1</name>
+<name>grp_fu_864_p_din1</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -2827,7 +2827,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_831_p_opcode</name>
+<name>grp_fu_864_p_opcode</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -2838,7 +2838,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_831_p_dout0</name>
+<name>grp_fu_864_p_dout0</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -2849,7 +2849,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_831_p_ce</name>
+<name>grp_fu_864_p_ce</name>
 <Object>export_output_buffer_c1_Pipeline_RELU1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -4218,13 +4218,13 @@
 <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>133482</Best-caseLatency>
-<Average-caseLatency>133538</Average-caseLatency>
-<Worst-caseLatency>133570</Worst-caseLatency>
+<Best-caseLatency>133490</Best-caseLatency>
+<Average-caseLatency>133546</Average-caseLatency>
+<Worst-caseLatency>133578</Worst-caseLatency>
 <Best-caseRealTimeLatency>1.335 ms</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>1.335 ms</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>1.336 ms</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>133482 ~ 133570</PipelineInitiationInterval>
+<PipelineInitiationInterval>133490 ~ 133578</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -4254,10 +4254,10 @@
 <PipelineDepth>1567</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_export_output_buffer_c1_Pipeline_RELU_fu_189</Instance>
-<Instance>grp_export_output_buffer_c1_Pipeline_2_fu_199</Instance>
-<Instance>grp_export_output_buffer_c1_Pipeline_RELU1_fu_211</Instance>
-<Instance>grp_export_output_buffer_c1_Pipeline_4_fu_221</Instance>
+<Instance>grp_export_output_buffer_c1_Pipeline_RELU_fu_202</Instance>
+<Instance>grp_export_output_buffer_c1_Pipeline_2_fu_212</Instance>
+<Instance>grp_export_output_buffer_c1_Pipeline_RELU1_fu_224</Instance>
+<Instance>grp_export_output_buffer_c1_Pipeline_4_fu_234</Instance>
 </InstanceList>
 </BH>
 </EXPORT>
@@ -4287,8 +4287,8 @@
 <PipelineDepth>518</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_export_output_buffer_c1_Pipeline_BW_fu_233</Instance>
-<Instance>grp_export_output_buffer_c1_Pipeline_BW2_fu_242</Instance>
+<Instance>grp_export_output_buffer_c1_Pipeline_BW_fu_246</Instance>
+<Instance>grp_export_output_buffer_c1_Pipeline_BW2_fu_255</Instance>
 </InstanceList>
 </BH>
 </CLEAR>
@@ -4299,10 +4299,10 @@
 <DSP>3</DSP>
 <AVAIL_DSP>360</AVAIL_DSP>
 <UTIL_DSP>~0</UTIL_DSP>
-<FF>1400</FF>
+<FF>1472</FF>
 <AVAIL_FF>141120</AVAIL_FF>
-<UTIL_FF>~0</UTIL_FF>
-<LUT>2559</LUT>
+<UTIL_FF>1</UTIL_FF>
+<LUT>2660</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
 <UTIL_LUT>3</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
@@ -4898,36 +4898,520 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>conv1_biases_address0</name>
-<Object>conv1_biases</Object>
-<Type>array</Type>
+<name>m_axi_gmem_AWVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>6</Bits>
-<Attribute>address</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>conv1_biases_ce0</name>
-<Object>conv1_biases</Object>
-<Type>array</Type>
-<Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
+<IOProtocol>m_axi</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>
-<Attribute>control</Attribute>
+<Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>conv1_biases_q0</name>
-<Object>conv1_biases</Object>
-<Type>array</Type>
+<name>m_axi_gmem_AWREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWADDR</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>64</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWLEN</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWSIZE</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>3</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWBURST</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWLOCK</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWCACHE</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWPROT</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>3</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWQOS</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWREGION</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WDATA</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WSTRB</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WLAST</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARADDR</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>64</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARLEN</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARSIZE</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>3</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARBURST</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARLOCK</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARCACHE</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARPROT</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>3</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARQOS</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARREGION</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RDATA</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>32</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RLAST</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RFIFONUM</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>9</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RRESP</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BRESP</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>biases</name>
+<Object>biases</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>64</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -5253,7 +5737,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2590_p_din0</name>
+<name>grp_fu_2604_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5264,7 +5748,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2590_p_din1</name>
+<name>grp_fu_2604_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5275,7 +5759,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2590_p_opcode</name>
+<name>grp_fu_2604_p_opcode</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5286,7 +5770,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2590_p_dout0</name>
+<name>grp_fu_2604_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5297,7 +5781,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2590_p_ce</name>
+<name>grp_fu_2604_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5308,7 +5792,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2594_p_din0</name>
+<name>grp_fu_2608_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5319,7 +5803,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2594_p_din1</name>
+<name>grp_fu_2608_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5330,7 +5814,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2594_p_opcode</name>
+<name>grp_fu_2608_p_opcode</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5341,7 +5825,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2594_p_dout0</name>
+<name>grp_fu_2608_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5352,7 +5836,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2594_p_ce</name>
+<name>grp_fu_2608_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5363,7 +5847,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2598_p_din0</name>
+<name>grp_fu_2612_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5374,7 +5858,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2598_p_din1</name>
+<name>grp_fu_2612_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5385,7 +5869,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2598_p_opcode</name>
+<name>grp_fu_2612_p_opcode</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5396,7 +5880,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2598_p_dout0</name>
+<name>grp_fu_2612_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5407,7 +5891,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2598_p_ce</name>
+<name>grp_fu_2612_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5418,7 +5902,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2602_p_din0</name>
+<name>grp_fu_2616_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5429,7 +5913,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2602_p_din1</name>
+<name>grp_fu_2616_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5440,7 +5924,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2602_p_opcode</name>
+<name>grp_fu_2616_p_opcode</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5451,7 +5935,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2602_p_dout0</name>
+<name>grp_fu_2616_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5462,7 +5946,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2602_p_ce</name>
+<name>grp_fu_2616_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5473,7 +5957,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2606_p_din0</name>
+<name>grp_fu_2620_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5484,7 +5968,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2606_p_din1</name>
+<name>grp_fu_2620_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5495,7 +5979,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2606_p_opcode</name>
+<name>grp_fu_2620_p_opcode</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5506,7 +5990,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2606_p_dout0</name>
+<name>grp_fu_2620_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5517,7 +6001,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2606_p_ce</name>
+<name>grp_fu_2620_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5528,7 +6012,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2610_p_din0</name>
+<name>grp_fu_2624_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5539,7 +6023,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2610_p_din1</name>
+<name>grp_fu_2624_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5550,7 +6034,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2610_p_opcode</name>
+<name>grp_fu_2624_p_opcode</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5561,7 +6045,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2610_p_dout0</name>
+<name>grp_fu_2624_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5572,7 +6056,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2610_p_ce</name>
+<name>grp_fu_2624_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5583,7 +6067,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2614_p_din0</name>
+<name>grp_fu_2628_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5594,7 +6078,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2614_p_din1</name>
+<name>grp_fu_2628_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5605,7 +6089,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2614_p_dout0</name>
+<name>grp_fu_2628_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5616,7 +6100,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2614_p_ce</name>
+<name>grp_fu_2628_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5627,7 +6111,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2618_p_din0</name>
+<name>grp_fu_2632_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5638,7 +6122,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2618_p_din1</name>
+<name>grp_fu_2632_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5649,7 +6133,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2618_p_dout0</name>
+<name>grp_fu_2632_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5660,7 +6144,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2618_p_ce</name>
+<name>grp_fu_2632_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5671,7 +6155,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2622_p_din0</name>
+<name>grp_fu_2636_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5682,7 +6166,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2622_p_din1</name>
+<name>grp_fu_2636_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5693,7 +6177,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2622_p_dout0</name>
+<name>grp_fu_2636_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5704,7 +6188,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2622_p_ce</name>
+<name>grp_fu_2636_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5715,7 +6199,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2626_p_din0</name>
+<name>grp_fu_2640_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5726,7 +6210,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2626_p_din1</name>
+<name>grp_fu_2640_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5737,7 +6221,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2626_p_dout0</name>
+<name>grp_fu_2640_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5748,7 +6232,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2626_p_ce</name>
+<name>grp_fu_2640_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5759,7 +6243,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2630_p_din0</name>
+<name>grp_fu_2644_p_din0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5770,7 +6254,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2630_p_din1</name>
+<name>grp_fu_2644_p_din1</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5781,7 +6265,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2630_p_dout0</name>
+<name>grp_fu_2644_p_dout0</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5792,7 +6276,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_2630_p_ce</name>
+<name>grp_fu_2644_p_ce</name>
 <Object>conv1_Pipeline_OUT_ROW_COL9</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6453,13 +6937,13 @@
 <EstimatedClockPeriod>7.705</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>90697568</Best-caseLatency>
-<Average-caseLatency>90711712</Average-caseLatency>
-<Worst-caseLatency>90720416</Worst-caseLatency>
+<Best-caseLatency>90698656</Best-caseLatency>
+<Average-caseLatency>90712800</Average-caseLatency>
+<Worst-caseLatency>90721504</Worst-caseLatency>
 <Best-caseRealTimeLatency>0.907 sec</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>0.907 sec</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>0.907 sec</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>90697568 ~ 90720416</PipelineInitiationInterval>
+<PipelineInitiationInterval>90698656 ~ 90721504</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -6467,15 +6951,15 @@
 <Name>TILE_ROW</Name>
 <Slack>7.30</Slack>
 <TripCount>17</TripCount>
-<Latency>90697567 ~ 90720415</Latency>
+<Latency>90698655 ~ 90721503</Latency>
 <AbsoluteTimeLatency>0.907 sec</AbsoluteTimeLatency>
 <IterationLatency>
 <range>
-<min>5335151</min>
-<max>5336495</max>
+<min>5335215</min>
+<max>5336559</max>
 </range>
 </IterationLatency>
-<PipelineDepth>5335151 ~ 5336495</PipelineDepth>
+<PipelineDepth>5335215 ~ 5336559</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
 </InstanceList>
@@ -6543,20 +7027,20 @@
 <Name>TILE_OUT</Name>
 <Slack>7.30</Slack>
 <TripCount>4</TripCount>
-<Latency>5253828 ~ 5255172</Latency>
-<AbsoluteTimeLatency>52.538 ms ~ 52.552 ms</AbsoluteTimeLatency>
+<Latency>5253892 ~ 5255236</Latency>
+<AbsoluteTimeLatency>52.539 ms ~ 52.552 ms</AbsoluteTimeLatency>
 <IterationLatency>
 <range>
-<min>1313457</min>
-<max>1313793</max>
+<min>1313473</min>
+<max>1313809</max>
 </range>
 </IterationLatency>
-<PipelineDepth>1313457 ~ 1313793</PipelineDepth>
+<PipelineDepth>1313473 ~ 1313809</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_conv1_Pipeline_OUT_ROW_COL_fu_770</Instance>
-<Instance>grp_export_output_buffer_c1_fu_790</Instance>
-<Instance>grp_conv1_Pipeline_OUT_ROW_COL9_fu_805</Instance>
+<Instance>grp_conv1_Pipeline_OUT_ROW_COL_fu_778</Instance>
+<Instance>grp_export_output_buffer_c1_fu_798</Instance>
+<Instance>grp_conv1_Pipeline_OUT_ROW_COL9_fu_814</Instance>
 </InstanceList>
 <LOAD_WEIGHTS>
 <Name>LOAD_WEIGHTS</Name>
@@ -6676,10 +7160,10 @@
 <DSP>38</DSP>
 <AVAIL_DSP>360</AVAIL_DSP>
 <UTIL_DSP>10</UTIL_DSP>
-<FF>22128</FF>
+<FF>22200</FF>
 <AVAIL_FF>141120</AVAIL_FF>
 <UTIL_FF>15</UTIL_FF>
-<LUT>38654</LUT>
+<LUT>38764</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
 <UTIL_LUT>54</UTIL_LUT>
 <URAM>0</URAM>
@@ -6755,7 +7239,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_416_p_din0</name>
+<name>grp_fu_497_p_din0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6766,7 +7250,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_416_p_din1</name>
+<name>grp_fu_497_p_din1</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6777,7 +7261,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_416_p_opcode</name>
+<name>grp_fu_497_p_opcode</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6788,7 +7272,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_416_p_dout0</name>
+<name>grp_fu_497_p_dout0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6799,7 +7283,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_416_p_ce</name>
+<name>grp_fu_497_p_ce</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6810,7 +7294,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_420_p_din0</name>
+<name>grp_fu_501_p_din0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6821,7 +7305,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_420_p_din1</name>
+<name>grp_fu_501_p_din1</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6832,7 +7316,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_420_p_opcode</name>
+<name>grp_fu_501_p_opcode</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6843,7 +7327,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_420_p_dout0</name>
+<name>grp_fu_501_p_dout0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6854,7 +7338,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_420_p_ce</name>
+<name>grp_fu_501_p_ce</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6865,7 +7349,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_424_p_din0</name>
+<name>grp_fu_505_p_din0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6876,7 +7360,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_424_p_din1</name>
+<name>grp_fu_505_p_din1</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6887,7 +7371,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_424_p_opcode</name>
+<name>grp_fu_505_p_opcode</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6898,7 +7382,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_424_p_dout0</name>
+<name>grp_fu_505_p_dout0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6909,7 +7393,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_424_p_ce</name>
+<name>grp_fu_505_p_ce</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6920,7 +7404,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_428_p_din0</name>
+<name>grp_fu_509_p_din0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6931,7 +7415,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_428_p_din1</name>
+<name>grp_fu_509_p_din1</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6942,7 +7426,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_428_p_opcode</name>
+<name>grp_fu_509_p_opcode</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6953,7 +7437,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_428_p_dout0</name>
+<name>grp_fu_509_p_dout0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6964,7 +7448,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_428_p_ce</name>
+<name>grp_fu_509_p_ce</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6975,7 +7459,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_432_p_din0</name>
+<name>grp_fu_513_p_din0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6986,7 +7470,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_432_p_din1</name>
+<name>grp_fu_513_p_din1</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -6997,7 +7481,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_432_p_dout0</name>
+<name>grp_fu_513_p_dout0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -7008,7 +7492,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_432_p_ce</name>
+<name>grp_fu_513_p_ce</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -7019,7 +7503,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_436_p_din0</name>
+<name>grp_fu_517_p_din0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -7030,7 +7514,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_436_p_din1</name>
+<name>grp_fu_517_p_din1</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -7041,7 +7525,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_436_p_dout0</name>
+<name>grp_fu_517_p_dout0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -7052,7 +7536,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_436_p_ce</name>
+<name>grp_fu_517_p_ce</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -7063,7 +7547,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_440_p_din0</name>
+<name>grp_fu_521_p_din0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -7074,7 +7558,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_440_p_din1</name>
+<name>grp_fu_521_p_din1</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -7085,7 +7569,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_440_p_dout0</name>
+<name>grp_fu_521_p_dout0</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -7096,7 +7580,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_440_p_ce</name>
+<name>grp_fu_521_p_ce</name>
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -8141,36 +8625,520 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>conv1_biases_address0</name>
-<Object>conv1_biases</Object>
-<Type>array</Type>
+<name>m_axi_gmem_AWVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>6</Bits>
-<Attribute>address</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>conv1_biases_ce0</name>
-<Object>conv1_biases</Object>
-<Type>array</Type>
-<Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
+<IOProtocol>m_axi</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>
-<Attribute>control</Attribute>
+<Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>conv1_biases_q0</name>
-<Object>conv1_biases</Object>
-<Type>array</Type>
+<name>m_axi_gmem_AWREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWADDR</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>64</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWLEN</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWSIZE</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>3</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWBURST</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWLOCK</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWCACHE</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWPROT</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>3</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWQOS</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWREGION</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WDATA</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WSTRB</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WLAST</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARADDR</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>64</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARLEN</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARSIZE</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>3</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARBURST</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARLOCK</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARCACHE</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARPROT</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>3</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARQOS</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARREGION</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RDATA</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>32</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RLAST</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RFIFONUM</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>9</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RRESP</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BRESP</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>conv1_biases</name>
+<Object>conv1_biases</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>64</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -10284,7 +11252,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_din0</name>
+<name>grp_fu_1036_p_din0</name>
 <Object>conv2_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10295,7 +11263,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_din1</name>
+<name>grp_fu_1036_p_din1</name>
 <Object>conv2_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10306,7 +11274,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_opcode</name>
+<name>grp_fu_1036_p_opcode</name>
 <Object>conv2_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10317,7 +11285,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_dout0</name>
+<name>grp_fu_1036_p_dout0</name>
 <Object>conv2_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10328,7 +11296,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_ce</name>
+<name>grp_fu_1036_p_ce</name>
 <Object>conv2_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10339,7 +11307,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1015_p_din0</name>
+<name>grp_fu_1040_p_din0</name>
 <Object>conv2_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10350,7 +11318,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1015_p_din1</name>
+<name>grp_fu_1040_p_din1</name>
 <Object>conv2_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10361,7 +11329,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1015_p_dout0</name>
+<name>grp_fu_1040_p_dout0</name>
 <Object>conv2_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10372,7 +11340,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1015_p_ce</name>
+<name>grp_fu_1040_p_ce</name>
 <Object>conv2_Pipeline_OUT_ROW_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10903,7 +11871,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_din0</name>
+<name>grp_fu_1036_p_din0</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10914,7 +11882,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_din1</name>
+<name>grp_fu_1036_p_din1</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10925,7 +11893,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_opcode</name>
+<name>grp_fu_1036_p_opcode</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10936,7 +11904,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_dout0</name>
+<name>grp_fu_1036_p_dout0</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10947,7 +11915,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_ce</name>
+<name>grp_fu_1036_p_ce</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10958,7 +11926,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_din0</name>
+<name>grp_fu_1044_p_din0</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10969,7 +11937,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_din1</name>
+<name>grp_fu_1044_p_din1</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10980,7 +11948,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_opcode</name>
+<name>grp_fu_1044_p_opcode</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10991,7 +11959,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_dout0</name>
+<name>grp_fu_1044_p_dout0</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -11002,7 +11970,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_ce</name>
+<name>grp_fu_1044_p_ce</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12141,7 +13109,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_din0</name>
+<name>grp_fu_1036_p_din0</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12152,7 +13120,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_din1</name>
+<name>grp_fu_1036_p_din1</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12163,7 +13131,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_opcode</name>
+<name>grp_fu_1036_p_opcode</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12174,7 +13142,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_dout0</name>
+<name>grp_fu_1036_p_dout0</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12185,7 +13153,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_ce</name>
+<name>grp_fu_1036_p_ce</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12196,7 +13164,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_din0</name>
+<name>grp_fu_1044_p_din0</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12207,7 +13175,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_din1</name>
+<name>grp_fu_1044_p_din1</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12218,7 +13186,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_opcode</name>
+<name>grp_fu_1044_p_opcode</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12229,7 +13197,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_dout0</name>
+<name>grp_fu_1044_p_dout0</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12240,7 +13208,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_ce</name>
+<name>grp_fu_1044_p_ce</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -14101,7 +15069,7 @@
 <PipelineDepth>4876638 ~ 4876926</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_conv2_Pipeline_LOAD_INPUT_BH_L_fu_286</Instance>
+<Instance>grp_conv2_Pipeline_LOAD_INPUT_BH_L_fu_295</Instance>
 </InstanceList>
 <TILE_OUT>
 <Name>TILE_OUT</Name>
@@ -14118,8 +15086,8 @@
 <PipelineDepth>603457 ~ 603493</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_conv2_Pipeline_LOAD_WEIGHTS_L_fu_300</Instance>
-<Instance>grp_conv2_Pipeline_OUT_ROW_COL_fu_309</Instance>
+<Instance>grp_conv2_Pipeline_LOAD_WEIGHTS_L_fu_309</Instance>
+<Instance>grp_conv2_Pipeline_OUT_ROW_COL_fu_318</Instance>
 </InstanceList>
 <EXPORT>
 <Name>EXPORT</Name>
@@ -14147,10 +15115,10 @@
 <PipelineDepth>1567</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_conv2_Pipeline_RELU_fu_327</Instance>
-<Instance>grp_conv2_Pipeline_5_fu_339</Instance>
-<Instance>grp_conv2_Pipeline_RELU6_fu_353</Instance>
-<Instance>grp_conv2_Pipeline_7_fu_365</Instance>
+<Instance>grp_conv2_Pipeline_RELU_fu_336</Instance>
+<Instance>grp_conv2_Pipeline_5_fu_348</Instance>
+<Instance>grp_conv2_Pipeline_RELU6_fu_362</Instance>
+<Instance>grp_conv2_Pipeline_7_fu_374</Instance>
 </InstanceList>
 </BH>
 </EXPORT>
@@ -14164,9 +15132,9 @@
 <PipelineDepth>777</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_conv2_Pipeline_BW_fu_379</Instance>
-<Instance>grp_conv2_Pipeline_BW7_fu_390</Instance>
-<Instance>grp_conv2_Pipeline_BW8_fu_401</Instance>
+<Instance>grp_conv2_Pipeline_BW_fu_388</Instance>
+<Instance>grp_conv2_Pipeline_BW7_fu_399</Instance>
+<Instance>grp_conv2_Pipeline_BW8_fu_410</Instance>
 </InstanceList>
 </CLEAR>
 </TILE_OUT>
@@ -14181,10 +15149,10 @@
 <DSP>5</DSP>
 <AVAIL_DSP>360</AVAIL_DSP>
 <UTIL_DSP>1</UTIL_DSP>
-<FF>3846</FF>
+<FF>3910</FF>
 <AVAIL_FF>141120</AVAIL_FF>
 <UTIL_FF>2</UTIL_FF>
-<LUT>6562</LUT>
+<LUT>6582</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
 <UTIL_LUT>9</UTIL_LUT>
 <URAM>0</URAM>
@@ -14260,7 +15228,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_416_p_din0</name>
+<name>grp_fu_497_p_din0</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -14271,7 +15239,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_416_p_din1</name>
+<name>grp_fu_497_p_din1</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -14282,7 +15250,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_416_p_opcode</name>
+<name>grp_fu_497_p_opcode</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -14293,7 +15261,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_416_p_dout0</name>
+<name>grp_fu_497_p_dout0</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -14304,7 +15272,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_416_p_ce</name>
+<name>grp_fu_497_p_ce</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -14315,7 +15283,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_432_p_din0</name>
+<name>grp_fu_513_p_din0</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -14326,7 +15294,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_432_p_din1</name>
+<name>grp_fu_513_p_din1</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -14337,7 +15305,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_432_p_dout0</name>
+<name>grp_fu_513_p_dout0</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -14348,7 +15316,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_432_p_ce</name>
+<name>grp_fu_513_p_ce</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -14359,7 +15327,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_444_p_din0</name>
+<name>grp_fu_525_p_din0</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -14370,7 +15338,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_444_p_din1</name>
+<name>grp_fu_525_p_din1</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -14381,7 +15349,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_444_p_opcode</name>
+<name>grp_fu_525_p_opcode</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -14392,7 +15360,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_444_p_dout0</name>
+<name>grp_fu_525_p_dout0</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -14403,7 +15371,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_444_p_ce</name>
+<name>grp_fu_525_p_ce</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -15448,36 +16416,520 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>conv2_biases_address0</name>
-<Object>conv2_biases</Object>
-<Type>array</Type>
+<name>m_axi_gmem_AWVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>5</Bits>
-<Attribute>address</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>conv2_biases_ce0</name>
-<Object>conv2_biases</Object>
-<Type>array</Type>
-<Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
+<IOProtocol>m_axi</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>
-<Attribute>control</Attribute>
+<Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>conv2_biases_q0</name>
-<Object>conv2_biases</Object>
-<Type>array</Type>
+<name>m_axi_gmem_AWREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWADDR</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>64</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWLEN</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWSIZE</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>3</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWBURST</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWLOCK</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWCACHE</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWPROT</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>3</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWQOS</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWREGION</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WDATA</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WSTRB</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WLAST</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARADDR</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>64</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARLEN</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARSIZE</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>3</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARBURST</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARLOCK</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARCACHE</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARPROT</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>3</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARQOS</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARREGION</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RDATA</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>32</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RLAST</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RFIFONUM</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>9</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RRESP</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BRESP</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>conv2_biases</name>
+<Object>conv2_biases</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>64</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -22134,7 +23586,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_416_p_din0</name>
+<name>grp_fu_497_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22145,7 +23597,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_416_p_din1</name>
+<name>grp_fu_497_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22156,7 +23608,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_416_p_opcode</name>
+<name>grp_fu_497_p_opcode</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22167,7 +23619,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_416_p_dout0</name>
+<name>grp_fu_497_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22178,7 +23630,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_416_p_ce</name>
+<name>grp_fu_497_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22189,7 +23641,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_420_p_din0</name>
+<name>grp_fu_501_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22200,7 +23652,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_420_p_din1</name>
+<name>grp_fu_501_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22211,7 +23663,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_420_p_opcode</name>
+<name>grp_fu_501_p_opcode</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22222,7 +23674,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_420_p_dout0</name>
+<name>grp_fu_501_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22233,7 +23685,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_420_p_ce</name>
+<name>grp_fu_501_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22244,7 +23696,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_424_p_din0</name>
+<name>grp_fu_505_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22255,7 +23707,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_424_p_din1</name>
+<name>grp_fu_505_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22266,7 +23718,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_424_p_opcode</name>
+<name>grp_fu_505_p_opcode</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22277,7 +23729,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_424_p_dout0</name>
+<name>grp_fu_505_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22288,7 +23740,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_424_p_ce</name>
+<name>grp_fu_505_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22299,7 +23751,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_428_p_din0</name>
+<name>grp_fu_509_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22310,7 +23762,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_428_p_din1</name>
+<name>grp_fu_509_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22321,7 +23773,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_428_p_opcode</name>
+<name>grp_fu_509_p_opcode</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22332,7 +23784,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_428_p_dout0</name>
+<name>grp_fu_509_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22343,7 +23795,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_428_p_ce</name>
+<name>grp_fu_509_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22354,7 +23806,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_432_p_din0</name>
+<name>grp_fu_513_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22365,7 +23817,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_432_p_din1</name>
+<name>grp_fu_513_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22376,7 +23828,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_432_p_dout0</name>
+<name>grp_fu_513_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22387,7 +23839,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_432_p_ce</name>
+<name>grp_fu_513_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22398,7 +23850,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_436_p_din0</name>
+<name>grp_fu_517_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22409,7 +23861,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_436_p_din1</name>
+<name>grp_fu_517_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22420,7 +23872,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_436_p_dout0</name>
+<name>grp_fu_517_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22431,7 +23883,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_436_p_ce</name>
+<name>grp_fu_517_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22442,7 +23894,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_440_p_din0</name>
+<name>grp_fu_521_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22453,7 +23905,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_440_p_din1</name>
+<name>grp_fu_521_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22464,7 +23916,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_440_p_dout0</name>
+<name>grp_fu_521_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22475,7 +23927,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_440_p_ce</name>
+<name>grp_fu_521_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22486,7 +23938,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_444_p_din0</name>
+<name>grp_fu_525_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22497,7 +23949,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_444_p_din1</name>
+<name>grp_fu_525_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22508,7 +23960,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_444_p_opcode</name>
+<name>grp_fu_525_p_opcode</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22519,7 +23971,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_444_p_dout0</name>
+<name>grp_fu_525_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -22530,7 +23982,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_444_p_ce</name>
+<name>grp_fu_525_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -24113,30 +25565,30 @@
 <EstimatedClockPeriod>7.705</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>530518515</Best-caseLatency>
-<Average-caseLatency>530546684</Average-caseLatency>
-<Worst-caseLatency>530566608</Worst-caseLatency>
+<Best-caseLatency>530519611</Best-caseLatency>
+<Average-caseLatency>530547780</Average-caseLatency>
+<Worst-caseLatency>530567704</Worst-caseLatency>
 <Best-caseRealTimeLatency>5.305 sec</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>5.305 sec</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>5.306 sec</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>530518516 ~ 530566609</PipelineInitiationInterval>
+<PipelineInitiationInterval>530519612 ~ 530567705</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<BRAM_18K>416</BRAM_18K>
+<BRAM_18K>420</BRAM_18K>
 <AVAIL_BRAM>432</AVAIL_BRAM>
-<UTIL_BRAM>96</UTIL_BRAM>
+<UTIL_BRAM>97</UTIL_BRAM>
 <DSP>67</DSP>
 <AVAIL_DSP>360</AVAIL_DSP>
 <UTIL_DSP>18</UTIL_DSP>
-<FF>38771</FF>
+<FF>40147</FF>
 <AVAIL_FF>141120</AVAIL_FF>
-<UTIL_FF>27</UTIL_FF>
-<LUT>69265</LUT>
+<UTIL_FF>28</UTIL_FF>
+<LUT>70599</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
-<UTIL_LUT>98</UTIL_LUT>
+<UTIL_LUT>100</UTIL_LUT>
 <URAM>0</URAM>
 <AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>
@@ -24171,7 +25623,7 @@
 <Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>8</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
 <HasCtrl>1</HasCtrl>
@@ -24248,7 +25700,7 @@
 <Type>scalar</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>in</Dir>
-<Bits>7</Bits>
+<Bits>8</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
 <HasCtrl>1</HasCtrl>
@@ -25434,6 +26886,546 @@
 <RtlPorts>
 <name>m_axi_w1_BUSER</name>
 <Object>w1</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWADDR</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>64</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWLEN</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWSIZE</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>3</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWBURST</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWLOCK</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWCACHE</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWPROT</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>3</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWQOS</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWREGION</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_AWUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WDATA</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WSTRB</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WLAST</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_WUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARADDR</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>64</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARLEN</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARSIZE</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>3</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARBURST</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARLOCK</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARCACHE</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARPROT</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>3</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARQOS</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARREGION</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>4</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_ARUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RDATA</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RLAST</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RUSER</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_RRESP</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BVALID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BREADY</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BRESP</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BID</name>
+<Object>gmem</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>m_axi</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>m_axi_gmem_BUSER</name>
+<Object>gmem</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>m_axi</IOProtocol>
@@ -28141,90 +30133,6 @@
 <Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>conv1_biases_address0</name>
-<Object>conv1_biases</Object>
-<Type>array</Type>
-<Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>6</Bits>
-<Attribute>address</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>conv1_biases_ce0</name>
-<Object>conv1_biases</Object>
-<Type>array</Type>
-<Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>conv1_biases_q0</name>
-<Object>conv1_biases</Object>
-<Type>array</Type>
-<Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>conv2_biases_address0</name>
-<Object>conv2_biases</Object>
-<Type>array</Type>
-<Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>5</Bits>
-<Attribute>address</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>conv2_biases_ce0</name>
-<Object>conv2_biases</Object>
-<Type>array</Type>
-<Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>conv2_biases_q0</name>
-<Object>conv2_biases</Object>
-<Type>array</Type>
-<Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>conv3_biases</name>
-<Object>conv3_biases</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
 </InterfaceSummary>

@@ -151,19 +151,19 @@ wire    ap_block_pp0_stage0;
 reg    ap_block_pp0_stage0_11001;
 reg   [31:0] w2_addr_read_reg_246;
 reg    ap_condition_exit_pp0_iter1_stage0;
-wire   [63:0] p_cast20_fu_195_p1;
+wire   [63:0] p_cast19_fu_195_p1;
 reg   [6:0] loop_index_i16_fu_64;
-wire   [6:0] empty_337_fu_200_p2;
+wire   [6:0] empty_339_fu_200_p2;
 wire    ap_loop_init;
 reg   [2:0] bout_fu_68;
 wire   [2:0] select_ln93_1_fu_171_p3;
 reg   [8:0] indvar_flatten24_fu_72;
 wire   [8:0] add_ln93_1_fu_128_p2;
 reg   [8:0] ap_sig_allocacmp_indvar_flatten24_load;
-wire   [0:0] exitcond309412_fu_157_p2;
+wire   [0:0] exitcond3011409_fu_157_p2;
 wire   [2:0] add_ln93_fu_151_p2;
 wire   [6:0] select_ln93_fu_163_p3;
-wire   [1:0] empty_336_fu_183_p1;
+wire   [1:0] empty_338_fu_183_p1;
 wire   [5:0] empty_fu_179_p1;
 wire   [7:0] tmp_s_fu_187_p3;
 reg    ap_done_reg;
@@ -265,7 +265,7 @@ always @ (posedge ap_clk) begin
         if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
             loop_index_i16_fu_64 <= 7'd0;
         end else if ((ap_enable_reg_pp0_iter2 == 1'b1)) begin
-            loop_index_i16_fu_64 <= empty_337_fu_200_p2;
+            loop_index_i16_fu_64 <= empty_339_fu_200_p2;
         end
     end
 end
@@ -412,13 +412,13 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign empty_336_fu_183_p1 = select_ln93_1_fu_171_p3[1:0];
+assign empty_338_fu_183_p1 = select_ln93_1_fu_171_p3[1:0];
 
-assign empty_337_fu_200_p2 = (select_ln93_fu_163_p3 + 7'd1);
+assign empty_339_fu_200_p2 = (select_ln93_fu_163_p3 + 7'd1);
 
 assign empty_fu_179_p1 = select_ln93_fu_163_p3[5:0];
 
-assign exitcond309412_fu_157_p2 = ((loop_index_i16_fu_64 == 7'd64) ? 1'b1 : 1'b0);
+assign exitcond3011409_fu_157_p2 = ((loop_index_i16_fu_64 == 7'd64) ? 1'b1 : 1'b0);
 
 assign icmp_ln93_fu_122_p2 = ((ap_sig_allocacmp_indvar_flatten24_load == 9'd256) ? 1'b1 : 1'b0);
 
@@ -484,15 +484,15 @@ assign m_axi_w2_WUSER = 1'd0;
 
 assign m_axi_w2_WVALID = 1'b0;
 
-assign p_cast20_fu_195_p1 = tmp_s_fu_187_p3;
+assign p_cast19_fu_195_p1 = tmp_s_fu_187_p3;
 
-assign select_ln93_1_fu_171_p3 = ((exitcond309412_fu_157_p2[0:0] == 1'b1) ? add_ln93_fu_151_p2 : bout_fu_68);
+assign select_ln93_1_fu_171_p3 = ((exitcond3011409_fu_157_p2[0:0] == 1'b1) ? add_ln93_fu_151_p2 : bout_fu_68);
 
-assign select_ln93_fu_163_p3 = ((exitcond309412_fu_157_p2[0:0] == 1'b1) ? 7'd0 : loop_index_i16_fu_64);
+assign select_ln93_fu_163_p3 = ((exitcond3011409_fu_157_p2[0:0] == 1'b1) ? 7'd0 : loop_index_i16_fu_64);
 
-assign tmp_s_fu_187_p3 = {{empty_336_fu_183_p1}, {empty_fu_179_p1}};
+assign tmp_s_fu_187_p3 = {{empty_338_fu_183_p1}, {empty_fu_179_p1}};
 
-assign weight_buffer_address0 = p_cast20_fu_195_p1;
+assign weight_buffer_address0 = p_cast19_fu_195_p1;
 
 assign weight_buffer_d0 = w2_addr_read_reg_246;
 

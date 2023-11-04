@@ -1,65 +1,32 @@
 {
   "0": {
     "basicblocks": 1,
-    "calls": "3 1 5",
+    "calls": "4 1 3",
     "file": "srcnn.cpp",
     "fileloc": 8,
-    "instructions": 28,
+    "instructions": 36,
     "loads": {
       "T": 1
     },
     "name": "srcnn",
-    "total_instructions": 6115
+    "total_instructions": 6129
   },
   "1": {
     "basicblocks": 92,
     "calls": "",
     "file": "conv2.cpp",
     "fileloc": 9,
-    "instructions": 398,
+    "instructions": 400,
     "loads": {
-      "G": 31,
-      "L": 1
+      "G": 31
     },
     "name": "conv2",
     "stores": {
       "G": 34
     },
-    "total_instructions": 398
+    "total_instructions": 400
   },
   "2": {
-    "basicblocks": 45,
-    "calls": "",
-    "file": "conv1.cpp",
-    "fileloc": 126,
-    "instructions": 167,
-    "loads": {
-      "G": 8,
-      "L": 1
-    },
-    "name": "export_output_buffer_c1",
-    "stores": {
-      "G": 12
-    },
-    "total_instructions": 167
-  },
-  "3": {
-    "basicblocks": 88,
-    "calls": "2 2",
-    "file": "conv1.cpp",
-    "fileloc": 9,
-    "instructions": 4072,
-    "loads": {
-      "G": 1092,
-      "L": 4
-    },
-    "name": "conv1",
-    "stores": {
-      "G": 34
-    },
-    "total_instructions": 4406
-  },
-  "4": {
     "basicblocks": 5,
     "calls": "",
     "file": "conv3.cpp",
@@ -71,9 +38,9 @@
     },
     "total_instructions": 797
   },
-  "5": {
+  "3": {
     "basicblocks": 73,
-    "calls": "4",
+    "calls": "2",
     "file": "conv3.cpp",
     "fileloc": 10,
     "instructions": 486,
@@ -85,5 +52,36 @@
       "G": 34
     },
     "total_instructions": 1283
+  },
+  "4": {
+    "basicblocks": 88,
+    "calls": "5 5",
+    "file": "conv1.cpp",
+    "fileloc": 9,
+    "instructions": 4072,
+    "loads": {
+      "G": 1092,
+      "L": 4
+    },
+    "name": "conv1",
+    "stores": {
+      "G": 34
+    },
+    "total_instructions": 4410
+  },
+  "5": {
+    "basicblocks": 45,
+    "calls": "",
+    "file": "conv1.cpp",
+    "fileloc": 126,
+    "instructions": 169,
+    "loads": {
+      "G": 8
+    },
+    "name": "export_output_buffer_c1",
+    "stores": {
+      "G": 12
+    },
+    "total_instructions": 169
   }
 }

@@ -71,6 +71,7 @@ srcnn_fmul_32ns_32ns_32_3_max_dsp_1
 srcnn_fmul_32ns_32ns_32_3_max_dsp_1
 srcnn_i1_m_axi
 srcnn_w1_m_axi
+srcnn_gmem_m_axi
 srcnn_i2_m_axi
 srcnn_w2_m_axi
 srcnn_i3_m_axi

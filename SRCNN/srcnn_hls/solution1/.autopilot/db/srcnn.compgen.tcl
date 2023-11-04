@@ -53,6 +53,11 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler srcnn_gmem_m_axi BINDTYPE {interface} TYPE {adapter} IMPL {m_axi}
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler srcnn_i2_m_axi BINDTYPE {interface} TYPE {adapter} IMPL {m_axi}
 }
 
@@ -102,7 +107,7 @@ conv1_weights {
 	offset 28
 	offset_end 39
 }
-conv1_output_ftmap { 
+conv1_biases { 
 	dir I
 	width 64
 	depth 1
@@ -110,7 +115,7 @@ conv1_output_ftmap {
 	offset 40
 	offset_end 51
 }
-conv2_weights { 
+conv1_output_ftmap { 
 	dir I
 	width 64
 	depth 1
@@ -118,7 +123,7 @@ conv2_weights {
 	offset 52
 	offset_end 63
 }
-conv2_output_ftmap { 
+conv2_weights { 
 	dir I
 	width 64
 	depth 1
@@ -126,7 +131,7 @@ conv2_output_ftmap {
 	offset 64
 	offset_end 75
 }
-conv3_weights { 
+conv2_biases { 
 	dir I
 	width 64
 	depth 1
@@ -134,13 +139,37 @@ conv3_weights {
 	offset 76
 	offset_end 87
 }
-output_ftmap { 
+conv2_output_ftmap { 
 	dir I
 	width 64
 	depth 1
 	mode ap_none
 	offset 88
 	offset_end 99
+}
+conv3_weights { 
+	dir I
+	width 64
+	depth 1
+	mode ap_none
+	offset 100
+	offset_end 111
+}
+conv3_biases { 
+	dir I
+	width 64
+	depth 1
+	mode ap_none
+	offset 112
+	offset_end 123
+}
+output_ftmap { 
+	dir I
+	width 64
+	depth 1
+	mode ap_none
+	offset 124
+	offset_end 135
 }
 ap_start { }
 ap_done { }
@@ -156,7 +185,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 496 \
+			id 499 \
 			corename srcnn_control_axilite \
 			name srcnn_control_s_axi \
 			ports {$port_control} \
@@ -174,59 +203,6 @@ if {${::AESL::PGuard_simmodel_gen}} {
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler srcnn_control_s_axi BINDTYPE interface TYPE interface_s_axilite
-}
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 504 \
-    name conv1_biases \
-    reset_level 0 \
-    sync_rst true \
-    dir I \
-    corename conv1_biases \
-    op interface \
-    ports { conv1_biases_address0 { O 6 vector } conv1_biases_ce0 { O 1 bit } conv1_biases_q0 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_biases'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 505 \
-    name conv2_biases \
-    reset_level 0 \
-    sync_rst true \
-    dir I \
-    corename conv2_biases \
-    op interface \
-    ports { conv2_biases_address0 { O 5 vector } conv2_biases_ce0 { O 1 bit } conv2_biases_q0 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv2_biases'"
-}
-}
-
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 506 \
-    name conv3_biases \
-    type other \
-    dir I \
-    reset_level 0 \
-    sync_rst true \
-    corename dc_conv3_biases \
-    op interface \
-    ports { conv3_biases { I 32 vector } } \
-} "
 }
 
 

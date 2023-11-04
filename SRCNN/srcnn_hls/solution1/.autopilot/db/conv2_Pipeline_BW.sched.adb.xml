@@ -25,10 +25,10 @@
 
 <Node id="5" bw="8" op_0_bw="32">
 <![CDATA[
-newFuncRoot:0 %phi_urem445 = alloca i32 1
+newFuncRoot:0 %phi_urem442 = alloca i32 1
 
 ]]></Node>
-<StgValue><ssdm name="phi_urem445"/></StgValue>
+<StgValue><ssdm name="phi_urem442"/></StgValue>
 </operation>
 
 <operation id="5" st_id="1" stage="1" lat="1">
@@ -40,10 +40,10 @@ newFuncRoot:0 %phi_urem445 = alloca i32 1
 
 <Node id="6" bw="17" op_0_bw="32">
 <![CDATA[
-newFuncRoot:1 %phi_mul443 = alloca i32 1
+newFuncRoot:1 %phi_mul440 = alloca i32 1
 
 ]]></Node>
-<StgValue><ssdm name="phi_mul443"/></StgValue>
+<StgValue><ssdm name="phi_mul440"/></StgValue>
 </operation>
 
 <operation id="6" st_id="1" stage="1" lat="1">
@@ -100,7 +100,7 @@ newFuncRoot:4 %store_ln0 = store i8 0, i8 %w
 
 <Node id="10" bw="0" op_0_bw="17" op_1_bw="17">
 <![CDATA[
-newFuncRoot:5 %store_ln0 = store i17 0, i17 %phi_mul443
+newFuncRoot:5 %store_ln0 = store i17 0, i17 %phi_mul440
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -115,7 +115,7 @@ newFuncRoot:5 %store_ln0 = store i17 0, i17 %phi_mul443
 
 <Node id="11" bw="0" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-newFuncRoot:6 %store_ln0 = store i8 0, i8 %phi_urem445
+newFuncRoot:6 %store_ln0 = store i8 0, i8 %phi_urem442
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -224,10 +224,10 @@ for.inc.i.i:4 %br_ln65 = br i1 %icmp_ln65, void %for.inc.i.i.split, void %for.in
 
 <Node id="20" bw="8" op_0_bw="8" op_1_bw="0">
 <![CDATA[
-for.inc.i.i.split:0 %phi_urem445_load_1 = load i8 %phi_urem445
+for.inc.i.i.split:0 %phi_urem442_load_1 = load i8 %phi_urem442
 
 ]]></Node>
-<StgValue><ssdm name="phi_urem445_load_1"/></StgValue>
+<StgValue><ssdm name="phi_urem442_load_1"/></StgValue>
 </operation>
 
 <operation id="18" st_id="2" stage="1" lat="1">
@@ -240,10 +240,10 @@ for.inc.i.i.split:0 %phi_urem445_load_1 = load i8 %phi_urem445
 
 <Node id="21" bw="17" op_0_bw="17" op_1_bw="0">
 <![CDATA[
-for.inc.i.i.split:1 %phi_mul443_load = load i17 %phi_mul443
+for.inc.i.i.split:1 %phi_mul440_load = load i17 %phi_mul440
 
 ]]></Node>
-<StgValue><ssdm name="phi_mul443_load"/></StgValue>
+<StgValue><ssdm name="phi_mul440_load"/></StgValue>
 </operation>
 
 <operation id="19" st_id="2" stage="1" lat="1">
@@ -272,7 +272,7 @@ for.inc.i.i.split:2 %speclooptripcount_ln65 = speclooptripcount void @_ssdm_op_S
 
 <Node id="23" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.i.i.split:3 %specloopname_ln65 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4
+for.inc.i.i.split:3 %specloopname_ln65 = specloopname void @_ssdm_op_SpecLoopName, void @empty_21
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln65"/></StgValue>
@@ -288,7 +288,7 @@ for.inc.i.i.split:3 %specloopname_ln65 = specloopname void @_ssdm_op_SpecLoopNam
 
 <Node id="24" bw="10" op_0_bw="8">
 <![CDATA[
-for.inc.i.i.split:4 %zext_ln67 = zext i8 %phi_urem445_load_1
+for.inc.i.i.split:4 %zext_ln67 = zext i8 %phi_urem442_load_1
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln67"/></StgValue>
@@ -384,7 +384,7 @@ for.inc.i.i.split:9 %conv2_float_255_255_float_64_1_1_float_float_255_255_o_41 =
 
 <Node id="30" bw="17" op_0_bw="17" op_1_bw="17">
 <![CDATA[
-for.inc.i.i.split:10 %add_ln65_4 = add i17 %phi_mul443_load, i17 386
+for.inc.i.i.split:10 %add_ln65_4 = add i17 %phi_mul440_load, i17 386
 
 ]]></Node>
 <StgValue><ssdm name="add_ln65_4"/></StgValue>
@@ -400,7 +400,7 @@ for.inc.i.i.split:10 %add_ln65_4 = add i17 %phi_mul443_load, i17 386
 
 <Node id="31" bw="2" op_0_bw="2" op_1_bw="17" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-for.inc.i.i.split:11 %trunc_ln = partselect i2 @_ssdm_op_PartSelect.i2.i17.i32.i32, i17 %phi_mul443_load, i32 15, i32 16
+for.inc.i.i.split:11 %trunc_ln = partselect i2 @_ssdm_op_PartSelect.i2.i17.i32.i32, i17 %phi_mul440_load, i32 15, i32 16
 
 ]]></Node>
 <StgValue><ssdm name="trunc_ln"/></StgValue>
@@ -536,10 +536,10 @@ arrayidx1223.i.i.case.2:1 %br_ln67 = br void %arrayidx1223.i.i.exit
 
 <Node id="43" bw="8" op_0_bw="8" op_1_bw="0">
 <![CDATA[
-arrayidx1223.i.i.exit:0 %phi_urem445_load = load i8 %phi_urem445
+arrayidx1223.i.i.exit:0 %phi_urem442_load = load i8 %phi_urem442
 
 ]]></Node>
-<StgValue><ssdm name="phi_urem445_load"/></StgValue>
+<StgValue><ssdm name="phi_urem442_load"/></StgValue>
 </operation>
 
 <operation id="37" st_id="2" stage="1" lat="1">
@@ -552,7 +552,7 @@ arrayidx1223.i.i.exit:0 %phi_urem445_load = load i8 %phi_urem445
 
 <Node id="44" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-arrayidx1223.i.i.exit:1 %add_ln65_5 = add i8 %phi_urem445_load, i8 1
+arrayidx1223.i.i.exit:1 %add_ln65_5 = add i8 %phi_urem442_load, i8 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln65_5"/></StgValue>
@@ -616,7 +616,7 @@ arrayidx1223.i.i.exit:4 %store_ln65 = store i8 %add_ln65, i8 %w
 
 <Node id="48" bw="0" op_0_bw="17" op_1_bw="17" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-arrayidx1223.i.i.exit:5 %store_ln65 = store i17 %add_ln65_4, i17 %phi_mul443
+arrayidx1223.i.i.exit:5 %store_ln65 = store i17 %add_ln65_4, i17 %phi_mul440
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>
@@ -632,7 +632,7 @@ arrayidx1223.i.i.exit:5 %store_ln65 = store i17 %add_ln65_4, i17 %phi_mul443
 
 <Node id="49" bw="0" op_0_bw="8" op_1_bw="8" op_2_bw="0" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-arrayidx1223.i.i.exit:6 %store_ln65 = store i8 %select_ln65, i8 %phi_urem445
+arrayidx1223.i.i.exit:6 %store_ln65 = store i8 %select_ln65, i8 %phi_urem442
 
 ]]></Node>
 <StgValue><ssdm name="store_ln65"/></StgValue>

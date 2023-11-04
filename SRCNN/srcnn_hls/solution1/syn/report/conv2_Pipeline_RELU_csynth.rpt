@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_RELU'
 ================================================================
-* Date:           Sat Nov  4 22:07:28 2023
+* Date:           Sat Nov  4 22:43:23 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -73,7 +73,7 @@
     +---------------------+----------------+---------+----+---+----+-----+
     |       Instance      |     Module     | BRAM_18K| DSP| FF| LUT| URAM|
     +---------------------+----------------+---------+----+---+----+-----+
-    |mux_3_2_32_1_1_U304  |mux_3_2_32_1_1  |        0|   0|  0|  14|    0|
+    |mux_3_2_32_1_1_U306  |mux_3_2_32_1_1  |        0|   0|  0|  14|    0|
     +---------------------+----------------+---------+----+---+----+-----+
     |Total                |                |        0|   0|  0|  14|    0|
     +---------------------+----------------+---------+----+---+----+-----+
@@ -177,16 +177,16 @@
 |ap_done                                                            |  out|    1|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
 |ap_idle                                                            |  out|    1|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
 |ap_ready                                                           |  out|    1|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
-|grp_fu_1011_p_din0                                                 |  out|   32|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
-|grp_fu_1011_p_din1                                                 |  out|   32|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
-|grp_fu_1011_p_opcode                                               |  out|    2|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
-|grp_fu_1011_p_dout0                                                |   in|   32|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
-|grp_fu_1011_p_ce                                                   |  out|    1|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
-|grp_fu_1019_p_din0                                                 |  out|   32|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
-|grp_fu_1019_p_din1                                                 |  out|   32|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
-|grp_fu_1019_p_opcode                                               |  out|    5|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
-|grp_fu_1019_p_dout0                                                |   in|    1|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
-|grp_fu_1019_p_ce                                                   |  out|    1|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
+|grp_fu_1036_p_din0                                                 |  out|   32|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
+|grp_fu_1036_p_din1                                                 |  out|   32|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
+|grp_fu_1036_p_opcode                                               |  out|    2|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
+|grp_fu_1036_p_dout0                                                |   in|   32|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
+|grp_fu_1036_p_ce                                                   |  out|    1|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
+|grp_fu_1044_p_din0                                                 |  out|   32|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
+|grp_fu_1044_p_din1                                                 |  out|   32|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
+|grp_fu_1044_p_opcode                                               |  out|    5|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
+|grp_fu_1044_p_dout0                                                |   in|    1|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
+|grp_fu_1044_p_ce                                                   |  out|    1|  ap_ctrl_hs|                                       conv2_Pipeline_RELU|  return value|
 |mul_ln115                                                          |   in|   10|     ap_none|                                                 mul_ln115|        scalar|
 |empty                                                              |   in|   32|     ap_none|                                                     empty|        scalar|
 |conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_address0  |  out|   10|   ap_memory|  conv2_float_255_255_float_64_1_1_float_float_255_255_o_2|         array|

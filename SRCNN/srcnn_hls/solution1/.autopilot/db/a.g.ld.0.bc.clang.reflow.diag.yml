@@ -2179,6 +2179,35 @@ Args:
   - OrigDirection:   write
   - OrigID:          load-store-loop.1.i.store.13
 ...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: src/conv2.cpp, Line: 36, Column: 13 }
+Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '32'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        conv2_biases76seq
+  - ArrayName:       conv2_biases
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        TILE_OUT
+  - String:          ' '
+  - LoopLoc:         'src/conv2.cpp:36:13'
+  - String:          ' '
+  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          BH.i23.load.10
+...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzeBoundsPattern
@@ -2234,6 +2263,30 @@ Args:
   - ArrayName:       conv2_weights
   - String:          ' '
   - BundleName:      w2
+  - String:          ' '
+  - LoopName:        TILE_ROW
+  - String:          ' '
+  - LoopLoc:         'src/conv2.cpp:32:12'
+  - String:          ' '
+  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: src/conv2.cpp, Line: 36, Column: 13 }
+Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/conv2.cpp, Line: 36, Column: 13 }
+  - OrigDirection:   read
+  - OrigID:          conv2_biases76seq
+  - ArrayName:       conv2_biases
+  - String:          ' '
+  - BundleName:      gmem
   - String:          ' '
   - LoopName:        TILE_ROW
   - String:          ' '
@@ -2341,6 +2394,28 @@ Args:
   - LoopName:        EXPORTH
   - String:          ' '
   - LoopLoc:         'src/conv3.cpp:134:11'
+  - String:          ' '
+  - Function:        'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+Function:        _Z5conv3PA255_A255_fPA32_A5_A5_fPfS1_
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          for.inc69.load.8
+  - ArrayName:       conv3_biases
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        TILE_ROW
+  - String:          ' '
+  - LoopLoc:         'src/conv3.cpp:30:12'
   - String:          ' '
   - Function:        'conv3(float (*) [255][255], float (*) [32][5][5], float*, float (*) [255][255])'
     DebugLoc:        { File: src/conv3.cpp, Line: 14, Column: 0 }
@@ -3245,6 +3320,35 @@ Args:
   - OrigDirection:   write
   - OrigID:          load-store-loop.1.store.11
 ...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: src/conv1.cpp, Line: 134, Column: 10 }
+Function:        _Z23export_output_buffer_c1PA15_A255_fPA255_S_Pfii
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '8'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep27seq
+  - ArrayName:       biases
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        EXPORT
+  - String:          ' '
+  - LoopLoc:         'src/conv1.cpp:134:10'
+  - String:          ' '
+  - Function:        'export_output_buffer_c1(float (*) [15][255], float (*) [255][255], float*, int, int)'
+    DebugLoc:        { File: src/conv1.cpp, Line: 132, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          BH.load.9
+...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzeBoundsPattern
@@ -3475,6 +3579,33 @@ Args:
 ...
 --- !Missed
 Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: src/conv2.cpp, Line: 36, Column: 13 }
+Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/conv2.cpp, Line: 36, Column: 13 }
+  - OrigDirection:   read
+  - OrigID:          conv2_biases76seq
+  - ArrayName:       conv2_biases
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        EXPORT
+  - String:          ' '
+  - LoopLoc:         'src/conv2.cpp:108:10'
+  - String:          ' '
+  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
 Name:            GreaterOrEqualAlignment
 DebugLoc:        { File: src/conv2.cpp, Line: 36, Column: 13 }
 Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_
@@ -3693,6 +3824,33 @@ Args:
     DebugLoc:        { File: src/conv1.cpp, Line: 132, Column: 0 }
   - String:          ' '
 ...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: src/conv1.cpp, Line: 134, Column: 10 }
+Function:        _Z23export_output_buffer_c1PA15_A255_fPA255_S_Pfii
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/conv1.cpp, Line: 134, Column: 10 }
+  - OrigDirection:   read
+  - OrigID:          scevgep27seq
+  - ArrayName:       biases
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        EXPORT
+  - String:          ' '
+  - LoopLoc:         'src/conv1.cpp:134:10'
+  - String:          ' '
+  - Function:        'export_output_buffer_c1(float (*) [15][255], float (*) [255][255], float*, int, int)'
+    DebugLoc:        { File: src/conv1.cpp, Line: 132, Column: 0 }
+  - String:          ' '
+...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
@@ -3721,6 +3879,56 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: src/conv1.cpp, Line: 134, Column: 10 }
+Function:        _Z23export_output_buffer_c1PA15_A255_fPA255_S_Pfii.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '8'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        EXPORT
+  - String:          ' '
+  - LoopLoc:         'src/conv1.cpp:134:10'
+  - String:          ' '
+  - Function:        'export_output_buffer_c1(float (*) [15][255], float (*) [255][255], float*, int, int) (.1)'
+    DebugLoc:        { File: src/conv1.cpp, Line: 132, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: src/conv1.cpp, Line: 134, Column: 10 }
+Function:        _Z23export_output_buffer_c1PA15_A255_fPA255_S_Pfii.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '8'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        EXPORT
+  - String:          '''('
+  - LoopLoc:         'src/conv1.cpp:134:10'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
 DebugLoc:        { File: src/conv1.cpp, Line: 148, Column: 3 }
 Function:        _Z23export_output_buffer_c1PA15_A255_fPA255_S_Pfii.1
 Args:            
@@ -3733,7 +3941,7 @@ Args:
   - String:          ' has been inferred.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        seq
+  - AccessID:        seq1
   - ArrayName:       ''
   - String:          ' '
   - BundleName:      i2
@@ -3783,7 +3991,7 @@ Args:
   - String:          ' has been inferred.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        seq1
+  - AccessID:        seq2
   - ArrayName:       ''
   - String:          ' '
   - BundleName:      i2
@@ -4221,6 +4429,56 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: src/conv2.cpp, Line: 36, Column: 13 }
+Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '32'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        TILE_OUT
+  - String:          ' '
+  - LoopLoc:         'src/conv2.cpp:36:13'
+  - String:          ' '
+  - Function:        'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255]) (.1)'
+    DebugLoc:        { File: src/conv2.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: src/conv2.cpp, Line: 36, Column: 13 }
+Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '32'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        TILE_OUT
+  - String:          '''('
+  - LoopLoc:         'src/conv2.cpp:36:13'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
 DebugLoc:        { File: src/conv2.cpp, Line: 122, Column: 3 }
 Function:        _Z5conv2PA255_A255_fPA64_A1_A1_fPfS1_.1
 Args:            
@@ -4233,7 +4491,7 @@ Args:
   - String:          ' has been inferred.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        seq2
+  - AccessID:        seq3
   - ArrayName:       ''
   - String:          ' '
   - BundleName:      i3
@@ -4283,7 +4541,7 @@ Args:
   - String:          ' has been inferred.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        seq3
+  - AccessID:        seq4
   - ArrayName:       ''
   - String:          ' '
   - BundleName:      i3

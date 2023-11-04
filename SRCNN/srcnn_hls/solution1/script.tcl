@@ -25,8 +25,9 @@ add_files -tb src/weights -cflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
 set_part {xck24-ubva530-2LV-c}
 create_clock -period 10 -name default
+config_export -format ip_catalog -output C:/Users/rpais/Desktop -rtl verilog
 source "./srcnn_hls/solution1/directives.tcl"
 csim_design -ldflags {-I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include} -clean
 csynth_design
 cosim_design -ldflags {-I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include}
-export_design -format ip_catalog
+export_design -rtl verilog -format ip_catalog -output C:/Users/rpais/Desktop

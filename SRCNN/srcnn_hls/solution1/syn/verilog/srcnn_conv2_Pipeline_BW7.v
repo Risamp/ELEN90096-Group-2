@@ -73,10 +73,10 @@ reg    ap_ready_int;
 wire    ap_block_pp0_stage0_11001;
 wire   [63:0] zext_ln67_2_fu_159_p1;
 wire    ap_block_pp0_stage0;
-reg   [7:0] phi_urem450_fu_54;
+reg   [7:0] phi_urem447_fu_54;
 wire   [7:0] select_ln65_fu_197_p3;
 wire    ap_loop_init;
-reg   [16:0] phi_mul448_fu_58;
+reg   [16:0] phi_mul445_fu_58;
 wire   [16:0] add_ln65_fu_166_p2;
 reg   [7:0] w_4_fu_62;
 wire   [7:0] add_ln65_1_fu_138_p2;
@@ -150,9 +150,9 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if ((ap_loop_init == 1'b1)) begin
-            phi_mul448_fu_58 <= 17'd0;
+            phi_mul445_fu_58 <= 17'd0;
         end else if (((icmp_ln65_1_fu_132_p2 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
-            phi_mul448_fu_58 <= add_ln65_fu_166_p2;
+            phi_mul445_fu_58 <= add_ln65_fu_166_p2;
         end
     end
 end
@@ -160,9 +160,9 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if ((ap_loop_init == 1'b1)) begin
-            phi_urem450_fu_54 <= 8'd0;
+            phi_urem447_fu_54 <= 8'd0;
         end else if (((icmp_ln65_1_fu_132_p2 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
-            phi_urem450_fu_54 <= select_ln65_fu_197_p3;
+            phi_urem447_fu_54 <= select_ln65_fu_197_p3;
         end
     end
 end
@@ -278,9 +278,9 @@ end
 
 assign add_ln65_1_fu_138_p2 = (w_4_fu_62 + 8'd1);
 
-assign add_ln65_3_fu_185_p2 = (phi_urem450_fu_54 + 8'd1);
+assign add_ln65_3_fu_185_p2 = (phi_urem447_fu_54 + 8'd1);
 
-assign add_ln65_fu_166_p2 = (phi_mul448_fu_58 + 17'd386);
+assign add_ln65_fu_166_p2 = (phi_mul445_fu_58 + 17'd386);
 
 assign add_ln67_1_fu_154_p2 = (add_ln67 + zext_ln67_fu_150_p1);
 
@@ -320,10 +320,10 @@ assign icmp_ln65_fu_191_p2 = ((add_ln65_3_fu_185_p2 < 8'd85) ? 1'b1 : 1'b0);
 
 assign select_ln65_fu_197_p3 = ((icmp_ln65_fu_191_p2[0:0] == 1'b1) ? add_ln65_3_fu_185_p2 : 8'd0);
 
-assign trunc_ln65_1_fu_172_p4 = {{phi_mul448_fu_58[16:15]}};
+assign trunc_ln65_1_fu_172_p4 = {{phi_mul445_fu_58[16:15]}};
 
 assign zext_ln67_2_fu_159_p1 = add_ln67_1_fu_154_p2;
 
-assign zext_ln67_fu_150_p1 = phi_urem450_fu_54;
+assign zext_ln67_fu_150_p1 = phi_urem447_fu_54;
 
 endmodule //srcnn_conv2_Pipeline_BW7

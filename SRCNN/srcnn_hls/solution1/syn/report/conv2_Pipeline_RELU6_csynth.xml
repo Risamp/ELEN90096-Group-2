@@ -130,7 +130,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_din0</name>
+<name>grp_fu_1036_p_din0</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -141,7 +141,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_din1</name>
+<name>grp_fu_1036_p_din1</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -152,7 +152,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_opcode</name>
+<name>grp_fu_1036_p_opcode</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -163,7 +163,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_dout0</name>
+<name>grp_fu_1036_p_dout0</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -174,7 +174,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_ce</name>
+<name>grp_fu_1036_p_ce</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -185,7 +185,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_din0</name>
+<name>grp_fu_1044_p_din0</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -196,7 +196,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_din1</name>
+<name>grp_fu_1044_p_din1</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -207,7 +207,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_opcode</name>
+<name>grp_fu_1044_p_opcode</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -218,7 +218,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_dout0</name>
+<name>grp_fu_1044_p_dout0</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -229,7 +229,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_ce</name>
+<name>grp_fu_1044_p_ce</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>

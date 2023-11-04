@@ -29,16 +29,16 @@ module srcnn_export_output_buffer_c1_Pipeline_RELU (
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address1,
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_ce1,
         conv1_float_255_255_float_1_9_9_float_float_255_255_ou_q1,
-        grp_fu_827_p_din0,
-        grp_fu_827_p_din1,
-        grp_fu_827_p_opcode,
-        grp_fu_827_p_dout0,
-        grp_fu_827_p_ce,
-        grp_fu_831_p_din0,
-        grp_fu_831_p_din1,
-        grp_fu_831_p_opcode,
-        grp_fu_831_p_dout0,
-        grp_fu_831_p_ce
+        grp_fu_860_p_din0,
+        grp_fu_860_p_din1,
+        grp_fu_860_p_opcode,
+        grp_fu_860_p_dout0,
+        grp_fu_860_p_ce,
+        grp_fu_864_p_din0,
+        grp_fu_864_p_din1,
+        grp_fu_864_p_opcode,
+        grp_fu_864_p_dout0,
+        grp_fu_864_p_ce
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 2'd1;
@@ -66,16 +66,16 @@ output  [31:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_d0;
 output  [13:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address1;
 output   conv1_float_255_255_float_1_9_9_float_float_255_255_ou_ce1;
 input  [31:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_q1;
-output  [31:0] grp_fu_827_p_din0;
-output  [31:0] grp_fu_827_p_din1;
-output  [1:0] grp_fu_827_p_opcode;
-input  [31:0] grp_fu_827_p_dout0;
-output   grp_fu_827_p_ce;
-output  [31:0] grp_fu_831_p_din0;
-output  [31:0] grp_fu_831_p_din1;
-output  [4:0] grp_fu_831_p_opcode;
-input  [0:0] grp_fu_831_p_dout0;
-output   grp_fu_831_p_ce;
+output  [31:0] grp_fu_860_p_din0;
+output  [31:0] grp_fu_860_p_din1;
+output  [1:0] grp_fu_860_p_opcode;
+input  [31:0] grp_fu_860_p_dout0;
+output   grp_fu_860_p_ce;
+output  [31:0] grp_fu_864_p_din0;
+output  [31:0] grp_fu_864_p_din1;
+output  [4:0] grp_fu_864_p_opcode;
+input  [0:0] grp_fu_864_p_dout0;
+output   grp_fu_864_p_ce;
 
 reg ap_idle;
 reg[13:0] conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0;
@@ -273,7 +273,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-        add_reg_254 <= grp_fu_827_p_dout0;
+        add_reg_254 <= grp_fu_860_p_dout0;
         ap_loop_exit_ready_pp0_iter1_reg <= ap_loop_exit_ready;
         ap_loop_exit_ready_pp0_iter2_reg <= ap_loop_exit_ready_pp0_iter1_reg;
     end
@@ -502,7 +502,7 @@ end
 
 assign add_ln138_fu_131_p2 = (ap_sig_allocacmp_bw_2 + 8'd1);
 
-assign and_ln143_fu_210_p2 = (or_ln143_fu_206_p2 & grp_fu_831_p_dout0);
+assign and_ln143_fu_210_p2 = (or_ln143_fu_206_p2 & grp_fu_864_p_dout0);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -548,21 +548,21 @@ assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address1 = zext_
 
 assign conv1_float_255_255_float_1_9_9_float_float_255_255_ou_address1 = zext_ln141_fu_149_p1;
 
-assign grp_fu_827_p_ce = 1'b1;
+assign grp_fu_860_p_ce = 1'b1;
 
-assign grp_fu_827_p_din0 = tmp_reg_249;
+assign grp_fu_860_p_din0 = tmp_reg_249;
 
-assign grp_fu_827_p_din1 = empty;
+assign grp_fu_860_p_din1 = empty;
 
-assign grp_fu_827_p_opcode = 2'd0;
+assign grp_fu_860_p_opcode = 2'd0;
 
-assign grp_fu_831_p_ce = 1'b1;
+assign grp_fu_864_p_ce = 1'b1;
 
-assign grp_fu_831_p_din0 = add_reg_254;
+assign grp_fu_864_p_din0 = add_reg_254;
 
-assign grp_fu_831_p_din1 = 32'd0;
+assign grp_fu_864_p_din1 = 32'd0;
 
-assign grp_fu_831_p_opcode = 5'd4;
+assign grp_fu_864_p_opcode = 5'd4;
 
 assign icmp_ln138_fu_125_p2 = ((ap_sig_allocacmp_bw_2 == 8'd255) ? 1'b1 : 1'b0);
 

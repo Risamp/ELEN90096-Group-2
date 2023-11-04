@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2_Pipeline_BW7'" level="0">
-<item name = "Date">Sat Nov  4 22:07:30 2023
+<item name = "Date">Sat Nov  4 22:43:26 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -92,8 +92,8 @@
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
-<column name="phi_mul448_fu_58">9, 2, 17, 34</column>
-<column name="phi_urem450_fu_54">9, 2, 8, 16</column>
+<column name="phi_mul445_fu_58">9, 2, 17, 34</column>
+<column name="phi_urem447_fu_54">9, 2, 8, 16</column>
 <column name="w_4_fu_62">9, 2, 8, 16</column>
 </table>
 </item>
@@ -102,8 +102,8 @@
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
-<column name="phi_mul448_fu_58">17, 0, 17, 0</column>
-<column name="phi_urem450_fu_54">8, 0, 8, 0</column>
+<column name="phi_mul445_fu_58">17, 0, 17, 0</column>
+<column name="phi_urem447_fu_54">8, 0, 8, 0</column>
 <column name="w_4_fu_62">8, 0, 8, 0</column>
 </table>
 </item>

@@ -36,16 +36,16 @@ module srcnn_conv2_Pipeline_RELU (
         conv2_float_255_255_float_64_1_1_float_float_255_255_o_address1,
         conv2_float_255_255_float_64_1_1_float_float_255_255_o_ce1,
         conv2_float_255_255_float_64_1_1_float_float_255_255_o_q1,
-        grp_fu_1011_p_din0,
-        grp_fu_1011_p_din1,
-        grp_fu_1011_p_opcode,
-        grp_fu_1011_p_dout0,
-        grp_fu_1011_p_ce,
-        grp_fu_1019_p_din0,
-        grp_fu_1019_p_din1,
-        grp_fu_1019_p_opcode,
-        grp_fu_1019_p_dout0,
-        grp_fu_1019_p_ce
+        grp_fu_1036_p_din0,
+        grp_fu_1036_p_din1,
+        grp_fu_1036_p_opcode,
+        grp_fu_1036_p_dout0,
+        grp_fu_1036_p_ce,
+        grp_fu_1044_p_din0,
+        grp_fu_1044_p_din1,
+        grp_fu_1044_p_opcode,
+        grp_fu_1044_p_dout0,
+        grp_fu_1044_p_ce
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 2'd1;
@@ -80,16 +80,16 @@ output  [31:0] conv2_float_255_255_float_64_1_1_float_float_255_255_o_d0;
 output  [9:0] conv2_float_255_255_float_64_1_1_float_float_255_255_o_address1;
 output   conv2_float_255_255_float_64_1_1_float_float_255_255_o_ce1;
 input  [31:0] conv2_float_255_255_float_64_1_1_float_float_255_255_o_q1;
-output  [31:0] grp_fu_1011_p_din0;
-output  [31:0] grp_fu_1011_p_din1;
-output  [1:0] grp_fu_1011_p_opcode;
-input  [31:0] grp_fu_1011_p_dout0;
-output   grp_fu_1011_p_ce;
-output  [31:0] grp_fu_1019_p_din0;
-output  [31:0] grp_fu_1019_p_din1;
-output  [4:0] grp_fu_1019_p_opcode;
-input  [0:0] grp_fu_1019_p_dout0;
-output   grp_fu_1019_p_ce;
+output  [31:0] grp_fu_1036_p_din0;
+output  [31:0] grp_fu_1036_p_din1;
+output  [1:0] grp_fu_1036_p_opcode;
+input  [31:0] grp_fu_1036_p_dout0;
+output   grp_fu_1036_p_ce;
+output  [31:0] grp_fu_1044_p_din0;
+output  [31:0] grp_fu_1044_p_din1;
+output  [4:0] grp_fu_1044_p_opcode;
+input  [0:0] grp_fu_1044_p_dout0;
+output   grp_fu_1044_p_ce;
 
 reg ap_idle;
 reg[9:0] conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_address0;
@@ -208,7 +208,7 @@ srcnn_mux_3_2_32_1_1 #(
     .din2_WIDTH( 32 ),
     .din3_WIDTH( 2 ),
     .dout_WIDTH( 32 ))
-mux_3_2_32_1_1_U304(
+mux_3_2_32_1_1_U306(
     .din0(conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_q1),
     .din1(conv2_float_255_255_float_64_1_1_float_float_255_255_o_1_q1),
     .din2(conv2_float_255_255_float_64_1_1_float_float_255_255_o_q1),
@@ -323,7 +323,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-        add15_0_i_reg_367 <= grp_fu_1011_p_dout0;
+        add15_0_i_reg_367 <= grp_fu_1036_p_dout0;
         ap_loop_exit_ready_pp0_iter1_reg <= ap_loop_exit_ready;
         ap_loop_exit_ready_pp0_iter2_reg <= ap_loop_exit_ready_pp0_iter1_reg;
         trunc_ln_reg_358_pp0_iter1_reg <= trunc_ln_reg_358;
@@ -621,7 +621,7 @@ assign add_ln112_fu_182_p2 = (ap_sig_allocacmp_bw_4 + 8'd1);
 
 assign add_ln115_fu_192_p2 = (mul_ln115 + zext_ln115_fu_188_p1);
 
-assign and_ln117_fu_304_p2 = (or_ln117_fu_300_p2 & grp_fu_1019_p_dout0);
+assign and_ln117_fu_304_p2 = (or_ln117_fu_300_p2 & grp_fu_1044_p_dout0);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -669,21 +669,21 @@ assign conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_address1 = zext_
 
 assign conv2_float_255_255_float_64_1_1_float_float_255_255_o_address1 = zext_ln115_2_fu_198_p1;
 
-assign grp_fu_1011_p_ce = 1'b1;
+assign grp_fu_1036_p_ce = 1'b1;
 
-assign grp_fu_1011_p_din0 = tmp_reg_362;
+assign grp_fu_1036_p_din0 = tmp_reg_362;
 
-assign grp_fu_1011_p_din1 = empty;
+assign grp_fu_1036_p_din1 = empty;
 
-assign grp_fu_1011_p_opcode = 2'd0;
+assign grp_fu_1036_p_opcode = 2'd0;
 
-assign grp_fu_1019_p_ce = 1'b1;
+assign grp_fu_1044_p_ce = 1'b1;
 
-assign grp_fu_1019_p_din0 = add15_0_i_reg_367;
+assign grp_fu_1044_p_din0 = add15_0_i_reg_367;
 
-assign grp_fu_1019_p_din1 = 32'd0;
+assign grp_fu_1044_p_din1 = 32'd0;
 
-assign grp_fu_1019_p_opcode = 5'd4;
+assign grp_fu_1044_p_opcode = 5'd4;
 
 assign icmp_ln112_2_fu_211_p2 = ((add_ln112_4_fu_205_p2 < 8'd85) ? 1'b1 : 1'b0);
 

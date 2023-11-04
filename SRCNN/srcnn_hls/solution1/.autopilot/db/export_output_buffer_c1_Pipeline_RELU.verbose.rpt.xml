@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'export_output_buffer_c1_Pipeline_RELU'" level="0">
-<item name = "Date">Sat Nov  4 22:07:14 2023
+<item name = "Date">Sat Nov  4 22:43:07 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -139,16 +139,16 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
-<column name="grp_fu_827_p_din0">out, 32, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
-<column name="grp_fu_827_p_din1">out, 32, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
-<column name="grp_fu_827_p_opcode">out, 2, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
-<column name="grp_fu_827_p_dout0">in, 32, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
-<column name="grp_fu_827_p_ce">out, 1, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
-<column name="grp_fu_831_p_din0">out, 32, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
-<column name="grp_fu_831_p_din1">out, 32, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
-<column name="grp_fu_831_p_opcode">out, 5, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
-<column name="grp_fu_831_p_dout0">in, 1, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
-<column name="grp_fu_831_p_ce">out, 1, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
+<column name="grp_fu_860_p_din0">out, 32, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
+<column name="grp_fu_860_p_din1">out, 32, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
+<column name="grp_fu_860_p_opcode">out, 2, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
+<column name="grp_fu_860_p_dout0">in, 32, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
+<column name="grp_fu_860_p_ce">out, 1, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
+<column name="grp_fu_864_p_din0">out, 32, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
+<column name="grp_fu_864_p_din1">out, 32, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
+<column name="grp_fu_864_p_opcode">out, 5, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
+<column name="grp_fu_864_p_dout0">in, 1, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
+<column name="grp_fu_864_p_ce">out, 1, ap_ctrl_hs, export_output_buffer_c1_Pipeline_RELU, return value</column>
 <column name="tmp_10">in, 7, ap_none, tmp_10, scalar</column>
 <column name="empty">in, 32, ap_none, empty, scalar</column>
 <column name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1_address0">out, 14, ap_memory, conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, array</column>
