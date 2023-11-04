@@ -14,10 +14,9 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 
 	static ftmap_t output_fm_buffer[C1_OD][C1_TH][W] = {0};
 	#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=2
-	#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=2
 
 	static ftmap_t input_fm_buffer[C1_ID][C1_TH + (2 * P1)][W + (2 * P1)];
-	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=block factor=2
+	//#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=block factor=2
 	#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=block factor=3
 
 	static param_t weight_buffer[C1_OD][C1_ID][F1][F1];

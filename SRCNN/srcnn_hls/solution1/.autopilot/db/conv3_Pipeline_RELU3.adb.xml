@@ -229,10 +229,10 @@ for.body8.1.i.split:1 %add_ln140 = add i10 %sub_ln140_1_read, i10 %zext_ln140
 
 <Node id="17" bw="64" op_0_bw="10">
 <![CDATA[
-for.body8.1.i.split:2 %zext_ln140_1 = zext i10 %add_ln140
+for.body8.1.i.split:2 %zext_ln140_4 = zext i10 %add_ln140
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln140_1"/></StgValue>
+<StgValue><ssdm name="zext_ln140_4"/></StgValue>
 </operation>
 
 <operation id="23" st_id="1" stage="1" lat="1">
@@ -245,7 +245,7 @@ for.body8.1.i.split:2 %zext_ln140_1 = zext i10 %add_ln140
 
 <Node id="18" bw="10" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body8.1.i.split:3 %output_fm_buffer_0_addr = getelementptr i32 %output_fm_buffer_0, i64 0, i64 %zext_ln140_1
+for.body8.1.i.split:3 %output_fm_buffer_0_addr = getelementptr i32 %output_fm_buffer_0, i64 0, i64 %zext_ln140_4
 
 ]]></Node>
 <StgValue><ssdm name="output_fm_buffer_0_addr"/></StgValue>
@@ -525,10 +525,10 @@ for.body8.1.i.split:12 %icmp_ln142 = icmp_ne  i8 %tmp_s, i8 255
 
 <Node id="28" bw="1" op_0_bw="23" op_1_bw="23">
 <![CDATA[
-for.body8.1.i.split:13 %icmp_ln142_1 = icmp_eq  i23 %trunc_ln142, i23 0
+for.body8.1.i.split:13 %icmp_ln142_2 = icmp_eq  i23 %trunc_ln142, i23 0
 
 ]]></Node>
-<StgValue><ssdm name="icmp_ln142_1"/></StgValue>
+<StgValue><ssdm name="icmp_ln142_2"/></StgValue>
 </operation>
 
 <operation id="40" st_id="8" stage="1" lat="1">
@@ -540,7 +540,7 @@ for.body8.1.i.split:13 %icmp_ln142_1 = icmp_eq  i23 %trunc_ln142, i23 0
 
 <Node id="29" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-for.body8.1.i.split:14 %or_ln142 = or i1 %icmp_ln142_1, i1 %icmp_ln142
+for.body8.1.i.split:14 %or_ln142 = or i1 %icmp_ln142_2, i1 %icmp_ln142
 
 ]]></Node>
 <StgValue><ssdm name="or_ln142"/></StgValue>
@@ -671,13 +671,13 @@ for.body8.1.i.split:20 %br_ln137 = br void %for.body8.1.i
 </dataflow>
 <dataflow id="92" from="zext_ln140" to="add_ln140" fromId="20" toId="21">
 </dataflow>
-<dataflow id="93" from="add_ln140" to="zext_ln140_1" fromId="21" toId="22">
+<dataflow id="93" from="add_ln140" to="zext_ln140_4" fromId="21" toId="22">
 </dataflow>
 <dataflow id="94" from="output_fm_buffer_0" to="output_fm_buffer_0_addr" fromId="70" toId="23">
 </dataflow>
 <dataflow id="96" from="StgValue_95" to="output_fm_buffer_0_addr" fromId="95" toId="23">
 </dataflow>
-<dataflow id="97" from="zext_ln140_1" to="output_fm_buffer_0_addr" fromId="22" toId="23">
+<dataflow id="97" from="zext_ln140_4" to="output_fm_buffer_0_addr" fromId="22" toId="23">
 </dataflow>
 <dataflow id="98" from="output_fm_buffer_0_addr" to="output_fm_buffer_0_load" fromId="23" toId="24">
 </dataflow>
@@ -747,11 +747,11 @@ for.body8.1.i.split:20 %br_ln137 = br void %for.body8.1.i
 </dataflow>
 <dataflow id="143" from="StgValue_84" to="icmp_ln142" fromId="84" toId="38">
 </dataflow>
-<dataflow id="144" from="trunc_ln142" to="icmp_ln142_1" fromId="37" toId="39">
+<dataflow id="144" from="trunc_ln142" to="icmp_ln142_2" fromId="37" toId="39">
 </dataflow>
-<dataflow id="146" from="StgValue_145" to="icmp_ln142_1" fromId="145" toId="39">
+<dataflow id="146" from="StgValue_145" to="icmp_ln142_2" fromId="145" toId="39">
 </dataflow>
-<dataflow id="147" from="icmp_ln142_1" to="or_ln142" fromId="39" toId="40">
+<dataflow id="147" from="icmp_ln142_2" to="or_ln142" fromId="39" toId="40">
 </dataflow>
 <dataflow id="148" from="icmp_ln142" to="or_ln142" fromId="38" toId="40">
 </dataflow>

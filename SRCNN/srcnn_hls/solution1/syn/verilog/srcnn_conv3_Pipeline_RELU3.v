@@ -95,7 +95,7 @@ reg   [31:0] output_fm_buffer_0_load_reg_194;
 wire    ap_block_pp0_stage1_11001;
 reg   [31:0] add15_1_i_reg_199;
 reg    ap_enable_reg_pp0_iter0_reg;
-wire   [63:0] zext_ln140_1_fu_114_p1;
+wire   [63:0] zext_ln140_4_fu_114_p1;
 wire    ap_block_pp0_stage0;
 reg   [7:0] bw_2_fu_46;
 wire   [7:0] add_ln137_fu_98_p2;
@@ -107,7 +107,7 @@ wire   [9:0] add_ln140_fu_108_p2;
 wire   [31:0] bitcast_ln142_fu_124_p1;
 wire   [7:0] tmp_s_fu_127_p4;
 wire   [22:0] trunc_ln142_fu_137_p1;
-wire   [0:0] icmp_ln142_1_fu_147_p2;
+wire   [0:0] icmp_ln142_2_fu_147_p2;
 wire   [0:0] icmp_ln142_fu_141_p2;
 wire   [0:0] or_ln142_fu_153_p2;
 wire   [0:0] and_ln142_fu_159_p2;
@@ -240,7 +240,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((icmp_ln137_fu_92_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        output_fm_buffer_0_addr_reg_189 <= zext_ln140_1_fu_114_p1;
+        output_fm_buffer_0_addr_reg_189 <= zext_ln140_4_fu_114_p1;
     end
 end
 
@@ -318,7 +318,7 @@ always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage1) & (ap_enable_reg_pp0_iter3 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
         output_fm_buffer_0_address0 = output_fm_buffer_0_addr_reg_189_pp0_iter3_reg;
     end else if (((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        output_fm_buffer_0_address0 = zext_ln140_1_fu_114_p1;
+        output_fm_buffer_0_address0 = zext_ln140_4_fu_114_p1;
     end else begin
         output_fm_buffer_0_address0 = 'bx;
     end
@@ -426,11 +426,11 @@ assign grp_fu_1732_p_opcode = 5'd4;
 
 assign icmp_ln137_fu_92_p2 = ((ap_sig_allocacmp_bw == 8'd255) ? 1'b1 : 1'b0);
 
-assign icmp_ln142_1_fu_147_p2 = ((trunc_ln142_fu_137_p1 == 23'd0) ? 1'b1 : 1'b0);
+assign icmp_ln142_2_fu_147_p2 = ((trunc_ln142_fu_137_p1 == 23'd0) ? 1'b1 : 1'b0);
 
 assign icmp_ln142_fu_141_p2 = ((tmp_s_fu_127_p4 != 8'd255) ? 1'b1 : 1'b0);
 
-assign or_ln142_fu_153_p2 = (icmp_ln142_fu_141_p2 | icmp_ln142_1_fu_147_p2);
+assign or_ln142_fu_153_p2 = (icmp_ln142_fu_141_p2 | icmp_ln142_2_fu_147_p2);
 
 assign output_fm_buffer_0_d0 = ((and_ln142_fu_159_p2[0:0] == 1'b1) ? 32'd0 : add15_1_i_reg_199);
 
@@ -438,7 +438,7 @@ assign tmp_s_fu_127_p4 = {{bitcast_ln142_fu_124_p1[30:23]}};
 
 assign trunc_ln142_fu_137_p1 = bitcast_ln142_fu_124_p1[22:0];
 
-assign zext_ln140_1_fu_114_p1 = add_ln140_fu_108_p2;
+assign zext_ln140_4_fu_114_p1 = add_ln140_fu_108_p2;
 
 assign zext_ln140_fu_104_p1 = ap_sig_allocacmp_bw;
 

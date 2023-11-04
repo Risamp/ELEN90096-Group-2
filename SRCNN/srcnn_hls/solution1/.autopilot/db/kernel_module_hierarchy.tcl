@@ -64,83 +64,85 @@ set ModuleHierarchy {[{
 		"SubLoops" : [
 		{"Name" : "TILE_ROW","ID" : "39","Type" : "no",
 		"SubInsts" : [
-		{"Name" : "grp_conv2_Pipeline_LOAD_INPUT_BH_L_fu_286","ID" : "40","Type" : "sequential",
+		{"Name" : "grp_conv2_Pipeline_LOAD_INPUT_BH_L_fu_384","ID" : "40","Type" : "sequential",
 				"SubLoops" : [
 				{"Name" : "LOAD_INPUT_BH_L","ID" : "41","Type" : "pipeline"},]},],
 		"SubLoops" : [
 		{"Name" : "TILE_OUT","ID" : "42","Type" : "no",
 			"SubInsts" : [
-			{"Name" : "grp_conv2_Pipeline_LOAD_WEIGHTS_L_fu_300","ID" : "43","Type" : "sequential",
+			{"Name" : "grp_conv2_Pipeline_LOAD_WEIGHTS_L_fu_398","ID" : "43","Type" : "sequential",
 					"SubLoops" : [
-					{"Name" : "LOAD_WEIGHTS_L","ID" : "44","Type" : "pipeline"},]},
-			{"Name" : "grp_conv2_Pipeline_OUT_ROW_COL_fu_309","ID" : "45","Type" : "sequential",
-					"SubLoops" : [
-					{"Name" : "OUT_ROW_COL","ID" : "46","Type" : "pipeline"},]},],
+					{"Name" : "LOAD_WEIGHTS_L","ID" : "44","Type" : "pipeline"},]},],
 			"SubLoops" : [
-			{"Name" : "EXPORT","ID" : "47","Type" : "no",
-				"SubLoops" : [
-				{"Name" : "BH","ID" : "48","Type" : "no",
-					"SubInsts" : [
-					{"Name" : "grp_conv2_Pipeline_RELU_fu_327","ID" : "49","Type" : "sequential",
-							"SubLoops" : [
-							{"Name" : "RELU","ID" : "50","Type" : "pipeline"},]},
-					{"Name" : "grp_conv2_Pipeline_5_fu_339","ID" : "51","Type" : "sequential",
-							"SubLoops" : [
-							{"Name" : "Loop 1","ID" : "52","Type" : "pipeline"},]},
-					{"Name" : "grp_conv2_Pipeline_RELU6_fu_353","ID" : "53","Type" : "sequential",
-							"SubLoops" : [
-							{"Name" : "RELU","ID" : "54","Type" : "pipeline"},]},
-					{"Name" : "grp_conv2_Pipeline_7_fu_365","ID" : "55","Type" : "sequential",
-							"SubLoops" : [
-							{"Name" : "Loop 1","ID" : "56","Type" : "pipeline"},]},]},]},
-			{"Name" : "CLEAR","ID" : "57","Type" : "no",
+			{"Name" : "OUT_IN_ROW","ID" : "45","Type" : "no",
 				"SubInsts" : [
-				{"Name" : "grp_conv2_Pipeline_BW_fu_379","ID" : "58","Type" : "sequential",
+				{"Name" : "grp_conv2_Pipeline_COL_fu_407","ID" : "46","Type" : "sequential",
 						"SubLoops" : [
-						{"Name" : "BW","ID" : "59","Type" : "pipeline"},]},
-				{"Name" : "grp_conv2_Pipeline_BW7_fu_390","ID" : "60","Type" : "sequential",
+						{"Name" : "COL","ID" : "47","Type" : "pipeline"},]},]},
+			{"Name" : "EXPORT","ID" : "48","Type" : "no",
+				"SubLoops" : [
+				{"Name" : "BH","ID" : "49","Type" : "no",
+					"SubInsts" : [
+					{"Name" : "grp_conv2_Pipeline_RELU_fu_426","ID" : "50","Type" : "sequential",
+							"SubLoops" : [
+							{"Name" : "RELU","ID" : "51","Type" : "pipeline"},]},
+					{"Name" : "grp_conv2_Pipeline_5_fu_438","ID" : "52","Type" : "sequential",
+							"SubLoops" : [
+							{"Name" : "Loop 1","ID" : "53","Type" : "pipeline"},]},
+					{"Name" : "grp_conv2_Pipeline_RELU6_fu_452","ID" : "54","Type" : "sequential",
+							"SubLoops" : [
+							{"Name" : "RELU","ID" : "55","Type" : "pipeline"},]},
+					{"Name" : "grp_conv2_Pipeline_7_fu_464","ID" : "56","Type" : "sequential",
+							"SubLoops" : [
+							{"Name" : "Loop 1","ID" : "57","Type" : "pipeline"},]},]},]},
+			{"Name" : "CLEAR","ID" : "58","Type" : "no",
+				"SubInsts" : [
+				{"Name" : "grp_conv2_Pipeline_BW_fu_478","ID" : "59","Type" : "sequential",
 						"SubLoops" : [
-						{"Name" : "BW","ID" : "61","Type" : "pipeline"},]},
-				{"Name" : "grp_conv2_Pipeline_BW8_fu_401","ID" : "62","Type" : "sequential",
+						{"Name" : "BW","ID" : "60","Type" : "pipeline"},]},
+				{"Name" : "grp_conv2_Pipeline_BW7_fu_489","ID" : "61","Type" : "sequential",
 						"SubLoops" : [
-						{"Name" : "BW","ID" : "63","Type" : "pipeline"},]},]},]},]},]},
-	{"Name" : "grp_conv3_fu_301","ID" : "64","Type" : "sequential",
+						{"Name" : "BW","ID" : "62","Type" : "pipeline"},]},
+				{"Name" : "grp_conv2_Pipeline_BW8_fu_500","ID" : "63","Type" : "sequential",
+						"SubLoops" : [
+						{"Name" : "BW","ID" : "64","Type" : "pipeline"},]},]},]},]},]},
+	{"Name" : "grp_conv3_fu_301","ID" : "65","Type" : "sequential",
 		"SubLoops" : [
-		{"Name" : "TILE_ROW","ID" : "65","Type" : "no",
+		{"Name" : "TILE_ROW","ID" : "66","Type" : "no",
 		"SubInsts" : [
-		{"Name" : "grp_load_input_buffer_c3_fu_619","ID" : "66","Type" : "sequential",
+		{"Name" : "grp_load_input_buffer_c3_fu_619","ID" : "67","Type" : "sequential",
 				"SubLoops" : [
-				{"Name" : "LOADI_LOADH","ID" : "67","Type" : "pipeline"},]},
-		{"Name" : "grp_conv3_Pipeline_WEIGHTI_WEIGHTK_L_fu_629","ID" : "68","Type" : "sequential",
+				{"Name" : "LOADI_LOADH","ID" : "68","Type" : "pipeline"},]},
+		{"Name" : "grp_conv3_Pipeline_WEIGHTI_WEIGHTK_L_fu_629","ID" : "69","Type" : "sequential",
 				"SubLoops" : [
-				{"Name" : "WEIGHTI_WEIGHTK_L","ID" : "69","Type" : "pipeline"},]},
-		{"Name" : "grp_conv3_Pipeline_CLEARW_fu_776","ID" : "70","Type" : "sequential",
+				{"Name" : "WEIGHTI_WEIGHTK_L","ID" : "70","Type" : "pipeline"},]},
+		{"Name" : "grp_conv3_Pipeline_CLEARW_fu_776","ID" : "71","Type" : "sequential",
 				"SubLoops" : [
-				{"Name" : "CLEARW","ID" : "71","Type" : "pipeline"},]},
-		{"Name" : "grp_conv3_Pipeline_CLEARW4_fu_792","ID" : "72","Type" : "sequential",
+				{"Name" : "CLEARW","ID" : "72","Type" : "pipeline"},]},
+		{"Name" : "grp_conv3_Pipeline_CLEARW4_fu_792","ID" : "73","Type" : "sequential",
 				"SubLoops" : [
-				{"Name" : "CLEARW","ID" : "73","Type" : "pipeline"},]},
-		{"Name" : "grp_conv3_Pipeline_CLEARW5_fu_798","ID" : "74","Type" : "sequential",
+				{"Name" : "CLEARW","ID" : "74","Type" : "pipeline"},]},
+		{"Name" : "grp_conv3_Pipeline_CLEARW5_fu_798","ID" : "75","Type" : "sequential",
 				"SubLoops" : [
-				{"Name" : "CLEARW","ID" : "75","Type" : "pipeline"},]},],
+				{"Name" : "CLEARW","ID" : "76","Type" : "pipeline"},]},],
 		"SubLoops" : [
-		{"Name" : "IN_ROW","ID" : "76","Type" : "no",
+		{"Name" : "IN_ROW","ID" : "77","Type" : "no",
 			"SubInsts" : [
-			{"Name" : "grp_conv3_Pipeline_COL_fu_686","ID" : "77","Type" : "sequential",
+			{"Name" : "grp_conv3_Pipeline_COL_fu_686","ID" : "78","Type" : "sequential",
 					"SubLoops" : [
-					{"Name" : "COL","ID" : "78","Type" : "pipeline"},]},]},
-		{"Name" : "EXPORTH","ID" : "79","Type" : "no",
+					{"Name" : "COL","ID" : "79","Type" : "pipeline"},]},]},
+		{"Name" : "EXPORTH","ID" : "80","Type" : "no",
 			"SubInsts" : [
-			{"Name" : "grp_conv3_Pipeline_RELU_fu_750","ID" : "80","Type" : "sequential",
+			{"Name" : "grp_conv3_Pipeline_RELU_fu_750","ID" : "81","Type" : "sequential",
 					"SubLoops" : [
-					{"Name" : "RELU","ID" : "81","Type" : "pipeline"},]},
-			{"Name" : "grp_conv3_Pipeline_4_fu_758","ID" : "82","Type" : "sequential",
+					{"Name" : "RELU","ID" : "82","Type" : "pipeline"},]},
+			{"Name" : "grp_conv3_Pipeline_4_fu_758","ID" : "83","Type" : "sequential",
 					"SubLoops" : [
-					{"Name" : "Loop 1","ID" : "83","Type" : "pipeline"},]},
-			{"Name" : "grp_conv3_Pipeline_RELU3_fu_768","ID" : "84","Type" : "sequential",
+					{"Name" : "Loop 1","ID" : "84","Type" : "pipeline"},]},
+			{"Name" : "grp_conv3_Pipeline_RELU3_fu_768","ID" : "85","Type" : "sequential",
 					"SubLoops" : [
-					{"Name" : "RELU","ID" : "85","Type" : "pipeline"},]},
-			{"Name" : "grp_conv3_Pipeline_6_fu_782","ID" : "86","Type" : "sequential",
+					{"Name" : "RELU","ID" : "86","Type" : "pipeline"},]},
+			{"Name" : "grp_conv3_Pipeline_6_fu_782","ID" : "87","Type" : "sequential",
 					"SubLoops" : [
-					{"Name" : "Loop 1","ID" : "87","Type" : "pipeline"},]},]},]},]},]
+					{"Name" : "Loop 1","ID" : "88","Type" : "pipeline"},]},]},]},]},]
 }]}

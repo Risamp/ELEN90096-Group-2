@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1699096066960">
-  <ports id="1" name="i1" type="PortType" coreId="1228677182" bitwidth="32" iftype="IfTypeFifo">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1699104919227">
+  <ports id="1" name="i1" type="PortType" coreId="1852142702" bitwidth="32" iftype="IfTypeFifo">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="2" name="w1" type="PortType" coreId="0" bitwidth="32" iftype="IfTypeFifo">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="3" name="i2" type="PortType" coreId="0" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
+  <ports id="3" name="i2" type="PortType" coreId="1597068134" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
     <dataInputObjs>call</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
     <dataOutputObjs>call</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="4" name="w2" type="PortType" coreId="2036559461" bitwidth="32" iftype="IfTypeFifo">
+  <ports id="4" name="w2" type="PortType" coreId="0" bitwidth="32" iftype="IfTypeFifo">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="5" name="i3" type="PortType" coreId="1228677182" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
@@ -33,28 +33,28 @@
   <ports id="9" name="conv1_weights" type="PortType" originalName="conv1_weights" coreId="1228677182" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="10" name="conv1_biases" type="PortType" coreName="RAM" coreId="1702310705" bitwidth="32" iftype="IfTypeRegister" arraysize="64">
+  <ports id="10" name="conv1_biases" type="PortType" coreName="RAM" coreId="1597068134" bitwidth="32" iftype="IfTypeRegister" arraysize="64">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="11" name="conv1_output_ftmap" type="PortType" originalName="conv1_output_ftmap" coreId="0" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="12" name="conv2_weights" type="PortType" originalName="conv2_weights" coreId="1228677182" bitwidth="64">
+  <ports id="12" name="conv2_weights" type="PortType" originalName="conv2_weights" coreId="842230048" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="13" name="conv2_biases" type="PortType" coreName="RAM" coreId="1634692191" bitwidth="32" iftype="IfTypeRegister" arraysize="32">
+  <ports id="13" name="conv2_biases" type="PortType" coreName="RAM" coreId="1228677182" bitwidth="32" iftype="IfTypeRegister" arraysize="32">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="14" name="conv2_output_ftmap" type="PortType" originalName="conv2_output_ftmap" coreId="1597068134" bitwidth="64">
+  <ports id="14" name="conv2_output_ftmap" type="PortType" originalName="conv2_output_ftmap" coreId="1228677182" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="15" name="conv3_weights" type="PortType" originalName="conv3_weights" coreId="1025538403" bitwidth="64">
+  <ports id="15" name="conv3_weights" type="PortType" originalName="conv3_weights" coreId="1228677182" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="16" name="conv3_biases" type="PortType" originalName="conv3_biases" coreId="2036559461" bitwidth="32">
+  <ports id="16" name="conv3_biases" type="PortType" originalName="conv3_biases" coreId="1228677182" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="17" name="output_ftmap" type="PortType" originalName="output_ftmap" coreId="2036559461" bitwidth="64">
+  <ports id="17" name="output_ftmap" type="PortType" originalName="output_ftmap" coreId="1228677182" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="112" source_obj="//@ports.16" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -154,7 +154,7 @@
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="conv2_weights_read" lineNumber="8" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="conv2_weights_read" lineNumber="8" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="fadd_32ns_32ns_32_4_full_dsp_1_U496" coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="8" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>conv2_weights</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
@@ -187,7 +187,7 @@
       <dataOutputObjs>i2</dataOutputObjs>
       <constName>conv1</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="_ln47" lineNumber="47" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="grp_conv2_fu_272" coreId="623104696" contextFuncName="srcnn" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="_ln47" lineNumber="47" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="fadd_32ns_32ns_32_4_full_dsp_1_U496" coreId="4203981504" contextFuncName="srcnn" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="47" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>i2</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
@@ -204,11 +204,11 @@
       <dataInputObjs>conv3_biases</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="empty" rtlName="empty_fu_369_p1" coreId="1280" bitwidth="32" opcode="bitcast" nodeLabel="4.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="empty" rtlName="empty_fu_369_p1" coreId="0" bitwidth="32" opcode="bitcast" nodeLabel="4.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="_ln50" lineNumber="50" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="grp_conv3_fu_301" coreId="597825792" contextFuncName="srcnn" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="_ln50" lineNumber="50" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="grp_conv3_fu_301" coreId="4206365888" contextFuncName="srcnn" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="50" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>i3</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
@@ -220,7 +220,7 @@
       <dataOutputObjs>i3</dataOutputObjs>
       <constName>conv3</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="_ln51" lineNumber="51" fileName="src/srcnn.cpp" fileDirectory="../." coreId="623100600" contextFuncName="srcnn" opcode="ret" nodeLabel="5.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="_ln51" lineNumber="51" fileName="src/srcnn.cpp" fileDirectory="../." coreId="4214176512" contextFuncName="srcnn" opcode="ret" nodeLabel="5.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="51" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
     </node_objs>
     <fileValidLineNumbers fileName="src/srcnn.cpp">
@@ -297,6 +297,15 @@
   <ioNodes realName="conv3_weights_read_read_fu_196">
     <nodeIds>97</nodeIds>
   </ioNodes>
+  <memoryPorts dataString="conv1_float_255_255_float_1_9_9_float_float_255_255_in" portID="100">
+    <nodeIds>103</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="conv1_float_255_255_float_1_9_9_float_float_255_255_in_1" portID="100">
+    <nodeIds>103</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="conv1_float_255_255_float_1_9_9_float_float_255_255_in_2" portID="100">
+    <nodeIds>103</nodeIds>
+  </memoryPorts>
   <memoryPorts dataString="conv1_float_255_255_float_1_9_9_float_float_255_255_ou" portID="100">
     <nodeIds>103</nodeIds>
   </memoryPorts>
@@ -334,15 +343,6 @@
     <nodeIds>103</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_2_0" portID="100">
-    <nodeIds>103</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0" portID="100">
-    <nodeIds>103</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1" portID="100">
-    <nodeIds>103</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2" portID="100">
     <nodeIds>103</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0" portID="100">
@@ -582,7 +582,7 @@
     </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="srcnn" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="530518515" mMaxLatency="530566608">
+    <cfgRegions mId="1" mTag="srcnn" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="349811915" mMaxLatency="349860008">
       <basicBlocks>109</basicBlocks>
       <mDfPipe/>
     </cfgRegions>

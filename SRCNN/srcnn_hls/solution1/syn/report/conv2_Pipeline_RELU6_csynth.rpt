@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_RELU6'
 ================================================================
-* Date:           Sat Nov  4 22:07:29 2023
+* Date:           Sun Nov  5 00:35:01 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -73,7 +73,7 @@
     +---------------------+----------------+---------+----+---+----+-----+
     |       Instance      |     Module     | BRAM_18K| DSP| FF| LUT| URAM|
     +---------------------+----------------+---------+----+---+----+-----+
-    |mux_3_2_32_1_1_U319  |mux_3_2_32_1_1  |        0|   0|  0|  14|    0|
+    |mux_3_2_32_1_1_U331  |mux_3_2_32_1_1  |        0|   0|  0|  14|    0|
     +---------------------+----------------+---------+----+---+----+-----+
     |Total                |                |        0|   0|  0|  14|    0|
     +---------------------+----------------+---------+----+---+----+-----+
@@ -116,7 +116,7 @@
     |ap_enable_reg_pp0_iter0                                            |   9|          2|    1|          2|
     |ap_enable_reg_pp0_iter1                                            |   9|          2|    1|          2|
     |ap_sig_allocacmp_bw                                                |   9|          2|    8|         16|
-    |ap_sig_allocacmp_phi_urem435_load                                  |   9|          2|    8|         16|
+    |ap_sig_allocacmp_phi_urem519_load                                  |   9|          2|    8|         16|
     |bw_3_fu_76                                                         |   9|          2|    8|         16|
     |conv2_float_255_255_float_64_1_1_float_float_255_255_o_1_address0  |  14|          3|   10|         30|
     |conv2_float_255_255_float_64_1_1_float_float_255_255_o_1_d0        |  14|          3|   32|         96|
@@ -124,8 +124,8 @@
     |conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_d0        |  14|          3|   32|         96|
     |conv2_float_255_255_float_64_1_1_float_float_255_255_o_address0    |  14|          3|   10|         30|
     |conv2_float_255_255_float_64_1_1_float_float_255_255_o_d0          |  14|          3|   32|         96|
-    |phi_mul433_fu_72                                                   |   9|          2|   17|         34|
-    |phi_urem435_fu_68                                                  |   9|          2|    8|         16|
+    |phi_mul517_fu_72                                                   |   9|          2|   17|         34|
+    |phi_urem519_fu_68                                                  |   9|          2|    8|         16|
     +-------------------------------------------------------------------+----+-----------+-----+-----------+
     |Total                                                              | 170|         37|  179|        485|
     +-------------------------------------------------------------------+----+-----------+-----+-----------+
@@ -150,8 +150,8 @@
     |icmp_ln112_reg_336                                                |   1|   0|    1|          0|
     |icmp_ln117_1_reg_381                                              |   1|   0|    1|          0|
     |icmp_ln117_reg_376                                                |   1|   0|    1|          0|
-    |phi_mul433_fu_72                                                  |  17|   0|   17|          0|
-    |phi_urem435_fu_68                                                 |   8|   0|    8|          0|
+    |phi_mul517_fu_72                                                  |  17|   0|   17|          0|
+    |phi_urem519_fu_68                                                 |   8|   0|    8|          0|
     |tmp_7_reg_362                                                     |  32|   0|   32|          0|
     |trunc_ln112_1_reg_358                                             |   2|   0|    2|          0|
     |conv2_float_255_255_float_64_1_1_float_float_255_255_o_3_reg_340  |  64|  32|   10|          0|
@@ -177,16 +177,16 @@
 |ap_done                                                            |  out|    1|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
 |ap_idle                                                            |  out|    1|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
 |ap_ready                                                           |  out|    1|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
-|grp_fu_1011_p_din0                                                 |  out|   32|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
-|grp_fu_1011_p_din1                                                 |  out|   32|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
-|grp_fu_1011_p_opcode                                               |  out|    2|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
-|grp_fu_1011_p_dout0                                                |   in|   32|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
-|grp_fu_1011_p_ce                                                   |  out|    1|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
-|grp_fu_1019_p_din0                                                 |  out|   32|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
-|grp_fu_1019_p_din1                                                 |  out|   32|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
-|grp_fu_1019_p_opcode                                               |  out|    5|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
-|grp_fu_1019_p_dout0                                                |   in|    1|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
-|grp_fu_1019_p_ce                                                   |  out|    1|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
+|grp_fu_1426_p_din0                                                 |  out|   32|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
+|grp_fu_1426_p_din1                                                 |  out|   32|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
+|grp_fu_1426_p_opcode                                               |  out|    2|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
+|grp_fu_1426_p_dout0                                                |   in|   32|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
+|grp_fu_1426_p_ce                                                   |  out|    1|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
+|grp_fu_1434_p_din0                                                 |  out|   32|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
+|grp_fu_1434_p_din1                                                 |  out|   32|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
+|grp_fu_1434_p_opcode                                               |  out|    5|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
+|grp_fu_1434_p_dout0                                                |   in|    1|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
+|grp_fu_1434_p_ce                                                   |  out|    1|  ap_ctrl_hs|                                      conv2_Pipeline_RELU6|  return value|
 |mul_ln115_1                                                        |   in|   10|     ap_none|                                               mul_ln115_1|        scalar|
 |empty                                                              |   in|   32|     ap_none|                                                     empty|        scalar|
 |conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_address0  |  out|   10|   ap_memory|  conv2_float_255_255_float_64_1_1_float_float_255_255_o_2|         array|

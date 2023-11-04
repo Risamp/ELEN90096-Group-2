@@ -215,20 +215,20 @@ set RtlHierarchyInfo {[
 			{"Name" : "h", "Type" : "None", "Direction" : "I"},
 			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_export_output_buffer_c1_Pipeline_2_fu_199", "Port" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1", "Inst_start_state" : "6", "Inst_end_state" : "7"},
-					{"ID" : "10", "SubInstance" : "grp_export_output_buffer_c1_Pipeline_4_fu_221", "Port" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1", "Inst_start_state" : "14", "Inst_end_state" : "15"},
 					{"ID" : "13", "SubInstance" : "grp_export_output_buffer_c1_Pipeline_BW_fu_233", "Port" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1", "Inst_start_state" : "22", "Inst_end_state" : "23"},
+					{"ID" : "4", "SubInstance" : "grp_export_output_buffer_c1_Pipeline_2_fu_199", "Port" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1", "Inst_start_state" : "6", "Inst_end_state" : "7"},
 					{"ID" : "15", "SubInstance" : "grp_export_output_buffer_c1_Pipeline_BW2_fu_242", "Port" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1", "Inst_start_state" : "24", "Inst_end_state" : "25"},
 					{"ID" : "1", "SubInstance" : "grp_export_output_buffer_c1_Pipeline_RELU_fu_189", "Port" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1", "Inst_start_state" : "4", "Inst_end_state" : "5"},
-					{"ID" : "7", "SubInstance" : "grp_export_output_buffer_c1_Pipeline_RELU1_fu_211", "Port" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1", "Inst_start_state" : "12", "Inst_end_state" : "13"}]},
+					{"ID" : "7", "SubInstance" : "grp_export_output_buffer_c1_Pipeline_RELU1_fu_211", "Port" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1", "Inst_start_state" : "12", "Inst_end_state" : "13"},
+					{"ID" : "10", "SubInstance" : "grp_export_output_buffer_c1_Pipeline_4_fu_221", "Port" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1", "Inst_start_state" : "14", "Inst_end_state" : "15"}]},
 			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_export_output_buffer_c1_Pipeline_2_fu_199", "Port" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou", "Inst_start_state" : "6", "Inst_end_state" : "7"},
-					{"ID" : "10", "SubInstance" : "grp_export_output_buffer_c1_Pipeline_4_fu_221", "Port" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou", "Inst_start_state" : "14", "Inst_end_state" : "15"},
 					{"ID" : "13", "SubInstance" : "grp_export_output_buffer_c1_Pipeline_BW_fu_233", "Port" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou", "Inst_start_state" : "22", "Inst_end_state" : "23"},
+					{"ID" : "4", "SubInstance" : "grp_export_output_buffer_c1_Pipeline_2_fu_199", "Port" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou", "Inst_start_state" : "6", "Inst_end_state" : "7"},
 					{"ID" : "15", "SubInstance" : "grp_export_output_buffer_c1_Pipeline_BW2_fu_242", "Port" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou", "Inst_start_state" : "24", "Inst_end_state" : "25"},
 					{"ID" : "1", "SubInstance" : "grp_export_output_buffer_c1_Pipeline_RELU_fu_189", "Port" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou", "Inst_start_state" : "4", "Inst_end_state" : "5"},
-					{"ID" : "7", "SubInstance" : "grp_export_output_buffer_c1_Pipeline_RELU1_fu_211", "Port" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou", "Inst_start_state" : "12", "Inst_end_state" : "13"}]}],
+					{"ID" : "7", "SubInstance" : "grp_export_output_buffer_c1_Pipeline_RELU1_fu_211", "Port" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou", "Inst_start_state" : "12", "Inst_end_state" : "13"},
+					{"ID" : "10", "SubInstance" : "grp_export_output_buffer_c1_Pipeline_4_fu_221", "Port" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou", "Inst_start_state" : "14", "Inst_end_state" : "15"}]}],
 		"Loop" : [
 			{"Name" : "BH", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "25", "FirstState" : "ap_ST_fsm_state4", "LastState" : ["ap_ST_fsm_state20"], "QuitState" : ["ap_ST_fsm_state12"], "PreState" : ["ap_ST_fsm_state3"], "PostState" : ["ap_ST_fsm_state2"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
@@ -280,7 +280,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "i2", "Type" : "MAXI", "Direction" : "O",
 				"BlockSignal" : [
 					{"Name" : "i2_blk_n_W", "Type" : "RtlSignal"}]},
-			{"Name" : "sext_ln148", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln147", "Type" : "None", "Direction" : "I"},
 			{"Name" : "tmp_10", "Type" : "None", "Direction" : "I"},
 			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou", "Type" : "Memory", "Direction" : "I"}],
@@ -331,7 +331,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "i2", "Type" : "MAXI", "Direction" : "O",
 				"BlockSignal" : [
 					{"Name" : "i2_blk_n_W", "Type" : "RtlSignal"}]},
-			{"Name" : "sext_ln148_1", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln147_1", "Type" : "None", "Direction" : "I"},
 			{"Name" : "tmp_15", "Type" : "None", "Direction" : "I"},
 			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "conv1_float_255_255_float_1_9_9_float_float_255_255_ou", "Type" : "Memory", "Direction" : "I"}],
@@ -405,7 +405,7 @@ set ArgLastReadFirstWriteLatency {
 		conv1_float_255_255_float_1_9_9_float_float_255_255_ou {Type IO LastRead 0 FirstWrite 6}}
 	export_output_buffer_c1_Pipeline_2 {
 		i2 {Type O LastRead -1 FirstWrite 2}
-		sext_ln148 {Type I LastRead 0 FirstWrite -1}
+		sext_ln147 {Type I LastRead 0 FirstWrite -1}
 		tmp_10 {Type I LastRead 0 FirstWrite -1}
 		conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1 {Type I LastRead 0 FirstWrite -1}
 		conv1_float_255_255_float_1_9_9_float_float_255_255_ou {Type I LastRead 0 FirstWrite -1}}
@@ -416,7 +416,7 @@ set ArgLastReadFirstWriteLatency {
 		conv1_float_255_255_float_1_9_9_float_float_255_255_ou {Type IO LastRead 0 FirstWrite 6}}
 	export_output_buffer_c1_Pipeline_4 {
 		i2 {Type O LastRead -1 FirstWrite 2}
-		sext_ln148_1 {Type I LastRead 0 FirstWrite -1}
+		sext_ln147_1 {Type I LastRead 0 FirstWrite -1}
 		tmp_15 {Type I LastRead 0 FirstWrite -1}
 		conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1 {Type I LastRead 0 FirstWrite -1}
 		conv1_float_255_255_float_1_9_9_float_float_255_255_ou {Type I LastRead 0 FirstWrite -1}}

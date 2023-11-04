@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'export_output_buffer_c1_Pipeline_RELU'" level="0">
-<item name = "Date">Sat Nov  4 22:07:14 2023
+<item name = "Date">Sun Nov  5 00:34:46 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -79,12 +79,12 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln138_fu_131_p2">+, 0, 0, 15, 8, 1</column>
-<column name="and_ln143_fu_210_p2">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln138_fu_125_p2">icmp, 0, 0, 15, 8, 2</column>
-<column name="icmp_ln143_1_fu_200_p2">icmp, 0, 0, 30, 23, 1</column>
-<column name="icmp_ln143_fu_194_p2">icmp, 0, 0, 15, 8, 2</column>
-<column name="or_ln143_fu_206_p2">or, 0, 0, 2, 1, 1</column>
+<column name="add_ln137_fu_131_p2">+, 0, 0, 15, 8, 1</column>
+<column name="and_ln142_fu_210_p2">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln137_fu_125_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="icmp_ln142_1_fu_200_p2">icmp, 0, 0, 30, 23, 1</column>
+<column name="icmp_ln142_fu_194_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="or_ln142_fu_206_p2">or, 0, 0, 2, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -116,9 +116,9 @@
 <column name="bw_fu_56">8, 0, 8, 0</column>
 <column name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6_reg_232">14, 0, 14, 0</column>
 <column name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_reg_238">14, 0, 14, 0</column>
-<column name="icmp_ln138_reg_228">1, 0, 1, 0</column>
-<column name="icmp_ln143_1_reg_267">1, 0, 1, 0</column>
-<column name="icmp_ln143_reg_262">1, 0, 1, 0</column>
+<column name="icmp_ln137_reg_228">1, 0, 1, 0</column>
+<column name="icmp_ln142_1_reg_267">1, 0, 1, 0</column>
+<column name="icmp_ln142_reg_262">1, 0, 1, 0</column>
 <column name="tmp_7_reg_244">1, 0, 1, 0</column>
 <column name="tmp_reg_249">32, 0, 32, 0</column>
 <column name="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6_reg_232">64, 32, 14, 0</column>

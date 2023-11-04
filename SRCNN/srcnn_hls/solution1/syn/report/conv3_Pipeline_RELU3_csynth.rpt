@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_RELU3'
 ================================================================
-* Date:           Sat Nov  4 22:07:40 2023
+* Date:           Sun Nov  5 00:35:12 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -89,7 +89,7 @@
     |add_ln140_fu_108_p2     |         +|   0|  0|  17|          10|          10|
     |and_ln142_fu_159_p2     |       and|   0|  0|   2|           1|           1|
     |icmp_ln137_fu_92_p2     |      icmp|   0|  0|  15|           8|           2|
-    |icmp_ln142_1_fu_147_p2  |      icmp|   0|  0|  30|          23|           1|
+    |icmp_ln142_2_fu_147_p2  |      icmp|   0|  0|  30|          23|           1|
     |icmp_ln142_fu_141_p2    |      icmp|   0|  0|  15|           8|           2|
     |or_ln142_fu_153_p2      |        or|   0|  0|   2|           1|           1|
     |output_fm_buffer_0_d0   |    select|   0|  0|  32|           1|           1|

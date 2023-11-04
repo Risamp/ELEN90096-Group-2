@@ -154,7 +154,7 @@ entry:42 %input_ftmap_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %input_f
 
 <Node id="103" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="32" op_4_bw="64" op_5_bw="32" op_6_bw="32" op_7_bw="64" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32">
 <![CDATA[
-entry:43 %call_ln44 = call void @conv1, i32 %i1, i64 %input_ftmap_read, i32 %w1, i64 %conv1_weights_read, i32 %conv1_biases, i32 %i2, i64 %conv1_output_ftmap_read, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_2_0, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
+entry:43 %call_ln44 = call void @conv1, i32 %i1, i64 %input_ftmap_read, i32 %w1, i64 %conv1_weights_read, i32 %conv1_biases, i32 %i2, i64 %conv1_output_ftmap_read, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_in_2, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_in, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_in_1, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_2_0, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
 
 ]]></Node>
 <StgValue><ssdm name="call_ln44"/></StgValue>
@@ -172,7 +172,7 @@ entry:43 %call_ln44 = call void @conv1, i32 %i1, i64 %input_ftmap_read, i32 %w1,
 
 <Node id="103" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="32" op_4_bw="64" op_5_bw="32" op_6_bw="32" op_7_bw="64" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32">
 <![CDATA[
-entry:43 %call_ln44 = call void @conv1, i32 %i1, i64 %input_ftmap_read, i32 %w1, i64 %conv1_weights_read, i32 %conv1_biases, i32 %i2, i64 %conv1_output_ftmap_read, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_2_0, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
+entry:43 %call_ln44 = call void @conv1, i32 %i1, i64 %input_ftmap_read, i32 %w1, i64 %conv1_weights_read, i32 %conv1_biases, i32 %i2, i64 %conv1_output_ftmap_read, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_in_2, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_in, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_in_1, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_2_0, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
 
 ]]></Node>
 <StgValue><ssdm name="call_ln44"/></StgValue>
@@ -892,16 +892,16 @@ entry:48 %ret_ln51 = ret
 <port id="80" name="output_ftmap" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="output_ftmap"/></StgValue>
 </port>
-<port id="81" name="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0" dir="2" iftype="1">
-<core>RAM</core><StgValue><ssdm name="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0"/><MemPortTyVec>2 1 </MemPortTyVec>
+<port id="81" name="conv1_float_255_255_float_1_9_9_float_float_255_255_in_2" dir="2" iftype="1">
+<core>RAM</core><StgValue><ssdm name="conv1_float_255_255_float_1_9_9_float_float_255_255_in_2"/><MemPortTyVec>2 1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="82" name="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2" dir="2" iftype="1">
-<core>RAM</core><StgValue><ssdm name="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2"/><MemPortTyVec>2 1 </MemPortTyVec>
+<port id="82" name="conv1_float_255_255_float_1_9_9_float_float_255_255_in" dir="2" iftype="1">
+<core>RAM</core><StgValue><ssdm name="conv1_float_255_255_float_1_9_9_float_float_255_255_in"/><MemPortTyVec>2 1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="83" name="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1" dir="2" iftype="1">
-<core>RAM</core><StgValue><ssdm name="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1"/><MemPortTyVec>2 1 </MemPortTyVec>
+<port id="83" name="conv1_float_255_255_float_1_9_9_float_float_255_255_in_1" dir="2" iftype="1">
+<core>RAM</core><StgValue><ssdm name="conv1_float_255_255_float_1_9_9_float_float_255_255_in_1"/><MemPortTyVec>2 1 </MemPortTyVec>
 </StgValue>
 </port>
 <port id="84" name="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0" dir="2" iftype="1">
@@ -925,15 +925,15 @@ entry:48 %ret_ln51 = ret
 </StgValue>
 </port>
 <port id="89" name="conv2_float_255_255_float_64_1_1_float_float_255_255_i_2" dir="2" iftype="1">
-<core>RAM</core><StgValue><ssdm name="conv2_float_255_255_float_64_1_1_float_float_255_255_i_2"/><MemPortTyVec>2 3 </MemPortTyVec>
+<core>RAM</core><StgValue><ssdm name="conv2_float_255_255_float_64_1_1_float_float_255_255_i_2"/><MemPortTyVec>2 1 </MemPortTyVec>
 </StgValue>
 </port>
 <port id="90" name="conv2_float_255_255_float_64_1_1_float_float_255_255_i_1" dir="2" iftype="1">
-<core>RAM</core><StgValue><ssdm name="conv2_float_255_255_float_64_1_1_float_float_255_255_i_1"/><MemPortTyVec>2 3 </MemPortTyVec>
+<core>RAM</core><StgValue><ssdm name="conv2_float_255_255_float_64_1_1_float_float_255_255_i_1"/><MemPortTyVec>2 1 </MemPortTyVec>
 </StgValue>
 </port>
 <port id="91" name="conv2_float_255_255_float_64_1_1_float_float_255_255_i" dir="2" iftype="1">
-<core>RAM</core><StgValue><ssdm name="conv2_float_255_255_float_64_1_1_float_float_255_255_i"/><MemPortTyVec>2 3 </MemPortTyVec>
+<core>RAM</core><StgValue><ssdm name="conv2_float_255_255_float_64_1_1_float_float_255_255_i"/><MemPortTyVec>2 1 </MemPortTyVec>
 </StgValue>
 </port>
 <port id="92" name="weight_buffer" dir="2" iftype="1">
@@ -941,15 +941,15 @@ entry:48 %ret_ln51 = ret
 </StgValue>
 </port>
 <port id="93" name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_2" dir="2" iftype="1">
-<core>RAM</core><StgValue><ssdm name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_2"/><MemPortTyVec>2 1 </MemPortTyVec>
+<core>RAM</core><StgValue><ssdm name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_2"/><MemPortTyVec>2 2 </MemPortTyVec>
 </StgValue>
 </port>
 <port id="94" name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_1" dir="2" iftype="1">
-<core>RAM</core><StgValue><ssdm name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_1"/><MemPortTyVec>2 1 </MemPortTyVec>
+<core>RAM</core><StgValue><ssdm name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_1"/><MemPortTyVec>2 2 </MemPortTyVec>
 </StgValue>
 </port>
 <port id="95" name="conv2_float_255_255_float_64_1_1_float_float_255_255_o" dir="2" iftype="1">
-<core>RAM</core><StgValue><ssdm name="conv2_float_255_255_float_64_1_1_float_float_255_255_o"/><MemPortTyVec>2 1 </MemPortTyVec>
+<core>RAM</core><StgValue><ssdm name="conv2_float_255_255_float_64_1_1_float_float_255_255_o"/><MemPortTyVec>2 2 </MemPortTyVec>
 </StgValue>
 </port>
 <port id="96" name="input_fm_buffer" dir="2" iftype="1">
@@ -1108,11 +1108,11 @@ entry:48 %ret_ln51 = ret
 </dataflow>
 <dataflow id="146" from="conv1_output_ftmap_read" to="call_ln44" fromId="11" toId="14">
 </dataflow>
-<dataflow id="147" from="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0" to="call_ln44" fromId="81" toId="14">
+<dataflow id="147" from="conv1_float_255_255_float_1_9_9_float_float_255_255_in_2" to="call_ln44" fromId="81" toId="14">
 </dataflow>
-<dataflow id="148" from="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2" to="call_ln44" fromId="82" toId="14">
+<dataflow id="148" from="conv1_float_255_255_float_1_9_9_float_float_255_255_in" to="call_ln44" fromId="82" toId="14">
 </dataflow>
-<dataflow id="149" from="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1" to="call_ln44" fromId="83" toId="14">
+<dataflow id="149" from="conv1_float_255_255_float_1_9_9_float_float_255_255_in_1" to="call_ln44" fromId="83" toId="14">
 </dataflow>
 <dataflow id="150" from="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0" to="call_ln44" fromId="84" toId="14">
 </dataflow>
@@ -1140,11 +1140,11 @@ entry:48 %ret_ln51 = ret
 </dataflow>
 <dataflow id="162" from="conv1_output_ftmap_read" to="call_ln44" fromId="11" toId="15">
 </dataflow>
-<dataflow id="163" from="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0" to="call_ln44" fromId="81" toId="15">
+<dataflow id="163" from="conv1_float_255_255_float_1_9_9_float_float_255_255_in_2" to="call_ln44" fromId="81" toId="15">
 </dataflow>
-<dataflow id="164" from="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2" to="call_ln44" fromId="82" toId="15">
+<dataflow id="164" from="conv1_float_255_255_float_1_9_9_float_float_255_255_in" to="call_ln44" fromId="82" toId="15">
 </dataflow>
-<dataflow id="165" from="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1" to="call_ln44" fromId="83" toId="15">
+<dataflow id="165" from="conv1_float_255_255_float_1_9_9_float_float_255_255_in_1" to="call_ln44" fromId="83" toId="15">
 </dataflow>
 <dataflow id="166" from="p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0" to="call_ln44" fromId="84" toId="15">
 </dataflow>

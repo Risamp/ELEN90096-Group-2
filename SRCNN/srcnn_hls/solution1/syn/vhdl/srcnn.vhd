@@ -438,7 +438,7 @@ end;
 architecture behav of srcnn is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "srcnn_srcnn,hls_ip_2023_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck24-ubva530-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.704800,HLS_SYN_LAT=530546684,HLS_SYN_TPT=none,HLS_SYN_MEM=416,HLS_SYN_DSP=0,HLS_SYN_FF=38771,HLS_SYN_LUT=69265,HLS_VERSION=2023_1}";
+    "srcnn_srcnn,hls_ip_2023_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck24-ubva530-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.704800,HLS_SYN_LAT=349840084,HLS_SYN_TPT=none,HLS_SYN_MEM=416,HLS_SYN_DSP=0,HLS_SYN_FF=40438,HLS_SYN_LUT=70443,HLS_VERSION=2023_1}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (5 downto 0) := "000001";
@@ -3474,7 +3474,7 @@ begin
         I_BVALID => w3_BVALID,
         I_BREADY => ap_const_logic_0);
 
-    fadd_32ns_32ns_32_4_full_dsp_1_U481 : component srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+    fadd_32ns_32ns_32_4_full_dsp_1_U496 : component srcnn_fadd_32ns_32ns_32_4_full_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -3489,7 +3489,7 @@ begin
         ce => grp_fu_416_ce,
         dout => grp_fu_416_p2);
 
-    fadd_32ns_32ns_32_4_full_dsp_1_U482 : component srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+    fadd_32ns_32ns_32_4_full_dsp_1_U497 : component srcnn_fadd_32ns_32ns_32_4_full_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -3504,7 +3504,7 @@ begin
         ce => grp_fu_420_ce,
         dout => grp_fu_420_p2);
 
-    fadd_32ns_32ns_32_4_full_dsp_1_U483 : component srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+    fadd_32ns_32ns_32_4_full_dsp_1_U498 : component srcnn_fadd_32ns_32ns_32_4_full_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -3519,7 +3519,7 @@ begin
         ce => grp_fu_424_ce,
         dout => grp_fu_424_p2);
 
-    fadd_32ns_32ns_32_4_full_dsp_1_U484 : component srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+    fadd_32ns_32ns_32_4_full_dsp_1_U499 : component srcnn_fadd_32ns_32ns_32_4_full_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -3534,7 +3534,7 @@ begin
         ce => grp_fu_428_ce,
         dout => grp_fu_428_p2);
 
-    fmul_32ns_32ns_32_3_max_dsp_1_U485 : component srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+    fmul_32ns_32ns_32_3_max_dsp_1_U500 : component srcnn_fmul_32ns_32ns_32_3_max_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 3,
@@ -3549,7 +3549,7 @@ begin
         ce => grp_fu_432_ce,
         dout => grp_fu_432_p2);
 
-    fmul_32ns_32ns_32_3_max_dsp_1_U486 : component srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+    fmul_32ns_32ns_32_3_max_dsp_1_U501 : component srcnn_fmul_32ns_32ns_32_3_max_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 3,
@@ -3564,7 +3564,7 @@ begin
         ce => grp_fu_436_ce,
         dout => grp_fu_436_p2);
 
-    fmul_32ns_32ns_32_3_max_dsp_1_U487 : component srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+    fmul_32ns_32ns_32_3_max_dsp_1_U502 : component srcnn_fmul_32ns_32ns_32_3_max_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 3,
@@ -3579,7 +3579,7 @@ begin
         ce => grp_fu_440_ce,
         dout => grp_fu_440_p2);
 
-    fcmp_32ns_32ns_1_2_no_dsp_1_U488 : component srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
+    fcmp_32ns_32ns_1_2_no_dsp_1_U503 : component srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 2,

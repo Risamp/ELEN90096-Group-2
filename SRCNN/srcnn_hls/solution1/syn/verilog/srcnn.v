@@ -6,7 +6,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="srcnn_srcnn,hls_ip_2023_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck24-ubva530-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.704800,HLS_SYN_LAT=530546684,HLS_SYN_TPT=none,HLS_SYN_MEM=416,HLS_SYN_DSP=0,HLS_SYN_FF=38771,HLS_SYN_LUT=69265,HLS_VERSION=2023_1}" *)
+(* CORE_GENERATION_INFO="srcnn_srcnn,hls_ip_2023_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck24-ubva530-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.704800,HLS_SYN_LAT=349840084,HLS_SYN_TPT=none,HLS_SYN_MEM=416,HLS_SYN_DSP=0,HLS_SYN_FF=40438,HLS_SYN_LUT=70443,HLS_VERSION=2023_1}" *)
 
 module srcnn (
         ap_clk,
@@ -2529,7 +2529,7 @@ srcnn_fadd_32ns_32ns_32_4_full_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fadd_32ns_32ns_32_4_full_dsp_1_U481(
+fadd_32ns_32ns_32_4_full_dsp_1_U496(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .din0(grp_fu_416_p0),
@@ -2544,7 +2544,7 @@ srcnn_fadd_32ns_32ns_32_4_full_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fadd_32ns_32ns_32_4_full_dsp_1_U482(
+fadd_32ns_32ns_32_4_full_dsp_1_U497(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .din0(grp_fu_420_p0),
@@ -2559,7 +2559,7 @@ srcnn_fadd_32ns_32ns_32_4_full_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fadd_32ns_32ns_32_4_full_dsp_1_U483(
+fadd_32ns_32ns_32_4_full_dsp_1_U498(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .din0(grp_fu_424_p0),
@@ -2574,7 +2574,7 @@ srcnn_fadd_32ns_32ns_32_4_full_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fadd_32ns_32ns_32_4_full_dsp_1_U484(
+fadd_32ns_32ns_32_4_full_dsp_1_U499(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .din0(grp_fu_428_p0),
@@ -2589,7 +2589,7 @@ srcnn_fmul_32ns_32ns_32_3_max_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fmul_32ns_32ns_32_3_max_dsp_1_U485(
+fmul_32ns_32ns_32_3_max_dsp_1_U500(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .din0(grp_fu_432_p0),
@@ -2604,7 +2604,7 @@ srcnn_fmul_32ns_32ns_32_3_max_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fmul_32ns_32ns_32_3_max_dsp_1_U486(
+fmul_32ns_32ns_32_3_max_dsp_1_U501(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .din0(grp_fu_436_p0),
@@ -2619,7 +2619,7 @@ srcnn_fmul_32ns_32ns_32_3_max_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fmul_32ns_32ns_32_3_max_dsp_1_U487(
+fmul_32ns_32ns_32_3_max_dsp_1_U502(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .din0(grp_fu_440_p0),
@@ -2634,7 +2634,7 @@ srcnn_fcmp_32ns_32ns_1_2_no_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 1 ))
-fcmp_32ns_32ns_1_2_no_dsp_1_U488(
+fcmp_32ns_32ns_1_2_no_dsp_1_U503(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .din0(grp_fu_444_p0),

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3_Pipeline_CLEARW5'" level="0">
-<item name = "Date">Sat Nov  4 22:07:41 2023
+<item name = "Date">Sun Nov  5 00:35:13 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -78,7 +78,7 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln72_2_fu_64_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln72_fu_64_p2">+, 0, 0, 15, 8, 1</column>
 <column name="add_ln74_fu_74_p2">+, 0, 0, 17, 10, 9</column>
 <column name="icmp_ln72_fu_58_p2">icmp, 0, 0, 15, 8, 2</column>
 </table>

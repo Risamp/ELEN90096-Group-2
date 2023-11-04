@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3_Pipeline_RELU'" level="0">
-<item name = "Date">Sat Nov  4 22:07:39 2023
+<item name = "Date">Sun Nov  5 00:35:11 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -82,7 +82,7 @@
 <column name="add_ln140_fu_108_p2">+, 0, 0, 17, 10, 10</column>
 <column name="and_ln142_fu_159_p2">and, 0, 0, 2, 1, 1</column>
 <column name="icmp_ln137_fu_92_p2">icmp, 0, 0, 15, 8, 2</column>
-<column name="icmp_ln142_1_fu_147_p2">icmp, 0, 0, 30, 23, 1</column>
+<column name="icmp_ln142_3_fu_147_p2">icmp, 0, 0, 30, 23, 1</column>
 <column name="icmp_ln142_fu_141_p2">icmp, 0, 0, 15, 8, 2</column>
 <column name="or_ln142_fu_153_p2">or, 0, 0, 2, 1, 1</column>
 <column name="output_fm_buffer_0_d0">select, 0, 0, 32, 1, 1</column>

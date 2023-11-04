@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'export_output_buffer_c1_Pipeline_RELU'
 ================================================================
-* Date:           Sat Nov  4 22:07:14 2023
+* Date:           Sun Nov  5 00:34:46 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -91,12 +91,12 @@
     +------------------------+----------+----+---+----+------------+------------+
     |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +------------------------+----------+----+---+----+------------+------------+
-    |add_ln138_fu_131_p2     |         +|   0|  0|  15|           8|           1|
-    |and_ln143_fu_210_p2     |       and|   0|  0|   2|           1|           1|
-    |icmp_ln138_fu_125_p2    |      icmp|   0|  0|  15|           8|           2|
-    |icmp_ln143_1_fu_200_p2  |      icmp|   0|  0|  30|          23|           1|
-    |icmp_ln143_fu_194_p2    |      icmp|   0|  0|  15|           8|           2|
-    |or_ln143_fu_206_p2      |        or|   0|  0|   2|           1|           1|
+    |add_ln137_fu_131_p2     |         +|   0|  0|  15|           8|           1|
+    |and_ln142_fu_210_p2     |       and|   0|  0|   2|           1|           1|
+    |icmp_ln137_fu_125_p2    |      icmp|   0|  0|  15|           8|           2|
+    |icmp_ln142_1_fu_200_p2  |      icmp|   0|  0|  30|          23|           1|
+    |icmp_ln142_fu_194_p2    |      icmp|   0|  0|  15|           8|           2|
+    |or_ln142_fu_206_p2      |        or|   0|  0|   2|           1|           1|
     |ap_enable_pp0           |       xor|   0|  0|   2|           1|           2|
     +------------------------+----------+----+---+----+------------+------------+
     |Total                   |          |   0|  0|  81|          50|          10|
@@ -136,9 +136,9 @@
     |bw_fu_56                                                          |   8|   0|    8|          0|
     |conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6_reg_232  |  14|   0|   14|          0|
     |conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_reg_238  |  14|   0|   14|          0|
-    |icmp_ln138_reg_228                                                |   1|   0|    1|          0|
-    |icmp_ln143_1_reg_267                                              |   1|   0|    1|          0|
-    |icmp_ln143_reg_262                                                |   1|   0|    1|          0|
+    |icmp_ln137_reg_228                                                |   1|   0|    1|          0|
+    |icmp_ln142_1_reg_267                                              |   1|   0|    1|          0|
+    |icmp_ln142_reg_262                                                |   1|   0|    1|          0|
     |tmp_7_reg_244                                                     |   1|   0|    1|          0|
     |tmp_reg_249                                                       |  32|   0|   32|          0|
     |conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6_reg_232  |  64|  32|   14|          0|
@@ -243,68 +243,68 @@ ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%tmp_6 = read i32 @_ssdm_op_Read.ap
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tmp_10_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %tmp_10"   --->   Operation 13 'read' 'tmp_10_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.42ns)   --->   "%store_ln0 = store i8 0, i8 %bw"   --->   Operation 14 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body8.0"   --->   Operation 15 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%bw_2 = load i8 %bw" [src/conv1.cpp:138]   --->   Operation 16 'load' 'bw_2' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.76ns)   --->   "%icmp_ln138 = icmp_eq  i8 %bw_2, i8 255" [src/conv1.cpp:138]   --->   Operation 17 'icmp' 'icmp_ln138' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 18 [1/1] (0.76ns)   --->   "%add_ln138 = add i8 %bw_2, i8 1" [src/conv1.cpp:138]   --->   Operation 18 'add' 'add_ln138' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln138 = br i1 %icmp_ln138, void %for.body8.0.split, void %for.end.0.exitStub" [src/conv1.cpp:138]   --->   Operation 19 'br' 'br_ln138' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%trunc_ln138 = trunc i8 %bw_2" [src/conv1.cpp:138]   --->   Operation 20 'trunc' 'trunc_ln138' <Predicate = (!icmp_ln138)> <Delay = 0.00>
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i7.i7, i7 %tmp_10_read, i7 %trunc_ln138" [src/conv1.cpp:141]   --->   Operation 21 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln138)> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln141 = zext i14 %tmp_s" [src/conv1.cpp:141]   --->   Operation 22 'zext' 'zext_ln141' <Predicate = (!icmp_ln138)> <Delay = 0.00>
-ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6 = getelementptr i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i64 0, i64 %zext_ln141" [src/conv1.cpp:141]   --->   Operation 23 'getelementptr' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6' <Predicate = (!icmp_ln138)> <Delay = 0.00>
-ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7 = getelementptr i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou, i64 0, i64 %zext_ln141" [src/conv1.cpp:141]   --->   Operation 24 'getelementptr' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7' <Predicate = (!icmp_ln138)> <Delay = 0.00>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_7 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %bw_2, i32 7" [src/conv1.cpp:138]   --->   Operation 25 'bitselect' 'tmp_7' <Predicate = (!icmp_ln138)> <Delay = 0.00>
-ST_1 : Operation 26 [2/2] (1.23ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_8 = load i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6" [src/conv1.cpp:141]   --->   Operation 26 'load' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_8' <Predicate = (!icmp_ln138)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15360> <RAM>
-ST_1 : Operation 27 [2/2] (1.23ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_9 = load i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7" [src/conv1.cpp:141]   --->   Operation 27 'load' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_9' <Predicate = (!icmp_ln138)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15360> <RAM>
-ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln141 = br i1 %tmp_7, void %arrayidx12412.0.case.0, void %arrayidx12412.0.case.1" [src/conv1.cpp:141]   --->   Operation 28 'br' 'br_ln141' <Predicate = (!icmp_ln138)> <Delay = 0.00>
-ST_1 : Operation 29 [1/1] (0.42ns)   --->   "%store_ln138 = store i8 %add_ln138, i8 %bw" [src/conv1.cpp:138]   --->   Operation 29 'store' 'store_ln138' <Predicate = (!icmp_ln138)> <Delay = 0.42>
-ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln138 = br void %for.body8.0" [src/conv1.cpp:138]   --->   Operation 30 'br' 'br_ln138' <Predicate = (!icmp_ln138)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%bw_2 = load i8 %bw" [src/conv1.cpp:137]   --->   Operation 16 'load' 'bw_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.76ns)   --->   "%icmp_ln137 = icmp_eq  i8 %bw_2, i8 255" [src/conv1.cpp:137]   --->   Operation 17 'icmp' 'icmp_ln137' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.76ns)   --->   "%add_ln137 = add i8 %bw_2, i8 1" [src/conv1.cpp:137]   --->   Operation 18 'add' 'add_ln137' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln137 = br i1 %icmp_ln137, void %for.body8.0.split, void %for.end.0.exitStub" [src/conv1.cpp:137]   --->   Operation 19 'br' 'br_ln137' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%trunc_ln137 = trunc i8 %bw_2" [src/conv1.cpp:137]   --->   Operation 20 'trunc' 'trunc_ln137' <Predicate = (!icmp_ln137)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i7.i7, i7 %tmp_10_read, i7 %trunc_ln137" [src/conv1.cpp:140]   --->   Operation 21 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln137)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln140 = zext i14 %tmp_s" [src/conv1.cpp:140]   --->   Operation 22 'zext' 'zext_ln140' <Predicate = (!icmp_ln137)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6 = getelementptr i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i64 0, i64 %zext_ln140" [src/conv1.cpp:140]   --->   Operation 23 'getelementptr' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6' <Predicate = (!icmp_ln137)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7 = getelementptr i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou, i64 0, i64 %zext_ln140" [src/conv1.cpp:140]   --->   Operation 24 'getelementptr' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7' <Predicate = (!icmp_ln137)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_7 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %bw_2, i32 7" [src/conv1.cpp:137]   --->   Operation 25 'bitselect' 'tmp_7' <Predicate = (!icmp_ln137)> <Delay = 0.00>
+ST_1 : Operation 26 [2/2] (1.23ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_8 = load i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6" [src/conv1.cpp:140]   --->   Operation 26 'load' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_8' <Predicate = (!icmp_ln137)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15360> <RAM>
+ST_1 : Operation 27 [2/2] (1.23ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_9 = load i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7" [src/conv1.cpp:140]   --->   Operation 27 'load' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_9' <Predicate = (!icmp_ln137)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15360> <RAM>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln140 = br i1 %tmp_7, void %arrayidx12412.0.case.0, void %arrayidx12412.0.case.1" [src/conv1.cpp:140]   --->   Operation 28 'br' 'br_ln140' <Predicate = (!icmp_ln137)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.42ns)   --->   "%store_ln137 = store i8 %add_ln137, i8 %bw" [src/conv1.cpp:137]   --->   Operation 29 'store' 'store_ln137' <Predicate = (!icmp_ln137)> <Delay = 0.42>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln137 = br void %for.body8.0" [src/conv1.cpp:137]   --->   Operation 30 'br' 'br_ln137' <Predicate = (!icmp_ln137)> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 1.66>
-ST_2 : Operation 31 [1/2] (1.23ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_8 = load i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6" [src/conv1.cpp:141]   --->   Operation 31 'load' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_8' <Predicate = (!icmp_ln138)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15360> <RAM>
-ST_2 : Operation 32 [1/2] (1.23ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_9 = load i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7" [src/conv1.cpp:141]   --->   Operation 32 'load' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_9' <Predicate = (!icmp_ln138)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15360> <RAM>
-ST_2 : Operation 33 [1/1] (0.42ns)   --->   "%tmp = mux i32 @_ssdm_op_Mux.ap_auto.2f32.i1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_8, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_9, i1 %tmp_7" [src/conv1.cpp:141]   --->   Operation 33 'mux' 'tmp' <Predicate = (!icmp_ln138)> <Delay = 0.42> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 31 [1/2] (1.23ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_8 = load i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6" [src/conv1.cpp:140]   --->   Operation 31 'load' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_8' <Predicate = (!icmp_ln137)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15360> <RAM>
+ST_2 : Operation 32 [1/2] (1.23ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_9 = load i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7" [src/conv1.cpp:140]   --->   Operation 32 'load' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_9' <Predicate = (!icmp_ln137)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15360> <RAM>
+ST_2 : Operation 33 [1/1] (0.42ns)   --->   "%tmp = mux i32 @_ssdm_op_Mux.ap_auto.2f32.i1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_8, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_9, i1 %tmp_7" [src/conv1.cpp:140]   --->   Operation 33 'mux' 'tmp' <Predicate = (!icmp_ln137)> <Delay = 0.42> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
 
 State 3 <SV = 2> <Delay = 6.43>
 ST_3 : [1/1] (0.42ns)   --->   Input mux for Operation 34 '%add = fadd i32 %tmp, i32 %tmp_6'
-ST_3 : Operation 34 [4/4] (6.01ns)   --->   "%add = fadd i32 %tmp, i32 %tmp_6" [src/conv1.cpp:141]   --->   Operation 34 'fadd' 'add' <Predicate = true> <Delay = 6.01> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 34 [4/4] (6.01ns)   --->   "%add = fadd i32 %tmp, i32 %tmp_6" [src/conv1.cpp:140]   --->   Operation 34 'fadd' 'add' <Predicate = true> <Delay = 6.01> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 4 <SV = 3> <Delay = 6.43>
-ST_4 : Operation 35 [3/4] (6.43ns)   --->   "%add = fadd i32 %tmp, i32 %tmp_6" [src/conv1.cpp:141]   --->   Operation 35 'fadd' 'add' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 35 [3/4] (6.43ns)   --->   "%add = fadd i32 %tmp, i32 %tmp_6" [src/conv1.cpp:140]   --->   Operation 35 'fadd' 'add' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 5 <SV = 4> <Delay = 6.43>
-ST_5 : Operation 36 [2/4] (6.43ns)   --->   "%add = fadd i32 %tmp, i32 %tmp_6" [src/conv1.cpp:141]   --->   Operation 36 'fadd' 'add' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 36 [2/4] (6.43ns)   --->   "%add = fadd i32 %tmp, i32 %tmp_6" [src/conv1.cpp:140]   --->   Operation 36 'fadd' 'add' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 6 <SV = 5> <Delay = 6.43>
-ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%specpipeline_ln139 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_19" [src/conv1.cpp:139]   --->   Operation 37 'specpipeline' 'specpipeline_ln139' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%speclooptripcount_ln138 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv1.cpp:138]   --->   Operation 38 'speclooptripcount' 'speclooptripcount_ln138' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%specloopname_ln138 = specloopname void @_ssdm_op_SpecLoopName, void @empty_21" [src/conv1.cpp:138]   --->   Operation 39 'specloopname' 'specloopname_ln138' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 40 [1/4] (6.43ns)   --->   "%add = fadd i32 %tmp, i32 %tmp_6" [src/conv1.cpp:141]   --->   Operation 40 'fadd' 'add' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 61 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 61 'ret' 'ret_ln0' <Predicate = (icmp_ln138)> <Delay = 0.00>
+ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%specpipeline_ln138 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_19" [src/conv1.cpp:138]   --->   Operation 37 'specpipeline' 'specpipeline_ln138' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%speclooptripcount_ln137 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv1.cpp:137]   --->   Operation 38 'speclooptripcount' 'speclooptripcount_ln137' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%specloopname_ln137 = specloopname void @_ssdm_op_SpecLoopName, void @empty_21" [src/conv1.cpp:137]   --->   Operation 39 'specloopname' 'specloopname_ln137' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 40 [1/4] (6.43ns)   --->   "%add = fadd i32 %tmp, i32 %tmp_6" [src/conv1.cpp:140]   --->   Operation 40 'fadd' 'add' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 61 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 61 'ret' 'ret_ln0' <Predicate = (icmp_ln137)> <Delay = 0.00>
 
 State 7 <SV = 6> <Delay = 2.78>
-ST_7 : Operation 41 [1/1] (1.23ns)   --->   "%store_ln141 = store i32 %add, i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6" [src/conv1.cpp:141]   --->   Operation 41 'store' 'store_ln141' <Predicate = (!tmp_7)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15360> <RAM>
-ST_7 : Operation 42 [1/1] (0.00ns)   --->   "%br_ln141 = br void %arrayidx12412.0.exit" [src/conv1.cpp:141]   --->   Operation 42 'br' 'br_ln141' <Predicate = (!tmp_7)> <Delay = 0.00>
-ST_7 : Operation 43 [1/1] (1.23ns)   --->   "%store_ln141 = store i32 %add, i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7" [src/conv1.cpp:141]   --->   Operation 43 'store' 'store_ln141' <Predicate = (tmp_7)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15360> <RAM>
-ST_7 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln141 = br void %arrayidx12412.0.exit" [src/conv1.cpp:141]   --->   Operation 44 'br' 'br_ln141' <Predicate = (tmp_7)> <Delay = 0.00>
-ST_7 : Operation 45 [1/1] (0.00ns)   --->   "%bitcast_ln143 = bitcast i32 %add" [src/conv1.cpp:143]   --->   Operation 45 'bitcast' 'bitcast_ln143' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_4 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln143, i32 23, i32 30" [src/conv1.cpp:143]   --->   Operation 46 'partselect' 'tmp_4' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 47 [1/1] (0.00ns)   --->   "%trunc_ln143 = trunc i32 %bitcast_ln143" [src/conv1.cpp:143]   --->   Operation 47 'trunc' 'trunc_ln143' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 48 [1/1] (0.76ns)   --->   "%icmp_ln143 = icmp_ne  i8 %tmp_4, i8 255" [src/conv1.cpp:143]   --->   Operation 48 'icmp' 'icmp_ln143' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 49 [1/1] (0.92ns)   --->   "%icmp_ln143_1 = icmp_eq  i23 %trunc_ln143, i23 0" [src/conv1.cpp:143]   --->   Operation 49 'icmp' 'icmp_ln143_1' <Predicate = true> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 41 [1/1] (1.23ns)   --->   "%store_ln140 = store i32 %add, i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6" [src/conv1.cpp:140]   --->   Operation 41 'store' 'store_ln140' <Predicate = (!tmp_7)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15360> <RAM>
+ST_7 : Operation 42 [1/1] (0.00ns)   --->   "%br_ln140 = br void %arrayidx12412.0.exit" [src/conv1.cpp:140]   --->   Operation 42 'br' 'br_ln140' <Predicate = (!tmp_7)> <Delay = 0.00>
+ST_7 : Operation 43 [1/1] (1.23ns)   --->   "%store_ln140 = store i32 %add, i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7" [src/conv1.cpp:140]   --->   Operation 43 'store' 'store_ln140' <Predicate = (tmp_7)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15360> <RAM>
+ST_7 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln140 = br void %arrayidx12412.0.exit" [src/conv1.cpp:140]   --->   Operation 44 'br' 'br_ln140' <Predicate = (tmp_7)> <Delay = 0.00>
+ST_7 : Operation 45 [1/1] (0.00ns)   --->   "%bitcast_ln142 = bitcast i32 %add" [src/conv1.cpp:142]   --->   Operation 45 'bitcast' 'bitcast_ln142' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_4 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln142, i32 23, i32 30" [src/conv1.cpp:142]   --->   Operation 46 'partselect' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 47 [1/1] (0.00ns)   --->   "%trunc_ln142 = trunc i32 %bitcast_ln142" [src/conv1.cpp:142]   --->   Operation 47 'trunc' 'trunc_ln142' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 48 [1/1] (0.76ns)   --->   "%icmp_ln142 = icmp_ne  i8 %tmp_4, i8 255" [src/conv1.cpp:142]   --->   Operation 48 'icmp' 'icmp_ln142' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 49 [1/1] (0.92ns)   --->   "%icmp_ln142_1 = icmp_eq  i23 %trunc_ln142, i23 0" [src/conv1.cpp:142]   --->   Operation 49 'icmp' 'icmp_ln142_1' <Predicate = true> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_7 : [1/1] (0.42ns)   --->   Input mux for Operation 50 '%tmp_5 = fcmp_olt  i32 %add, i32 0'
-ST_7 : Operation 50 [2/2] (2.35ns)   --->   "%tmp_5 = fcmp_olt  i32 %add, i32 0" [src/conv1.cpp:143]   --->   Operation 50 'fcmp' 'tmp_5' <Predicate = true> <Delay = 2.35> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 50 [2/2] (2.35ns)   --->   "%tmp_5 = fcmp_olt  i32 %add, i32 0" [src/conv1.cpp:142]   --->   Operation 50 'fcmp' 'tmp_5' <Predicate = true> <Delay = 2.35> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
 
 State 8 <SV = 7> <Delay = 4.30>
-ST_8 : Operation 51 [1/1] (0.00ns) (grouped into LUT with out node and_ln143)   --->   "%or_ln143 = or i1 %icmp_ln143_1, i1 %icmp_ln143" [src/conv1.cpp:143]   --->   Operation 51 'or' 'or_ln143' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 52 [1/2] (2.78ns)   --->   "%tmp_5 = fcmp_olt  i32 %add, i32 0" [src/conv1.cpp:143]   --->   Operation 52 'fcmp' 'tmp_5' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 53 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln143 = and i1 %or_ln143, i1 %tmp_5" [src/conv1.cpp:143]   --->   Operation 53 'and' 'and_ln143' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 54 [1/1] (0.00ns)   --->   "%br_ln143 = br i1 %and_ln143, void %for.inc.0, void %if.then.0" [src/conv1.cpp:143]   --->   Operation 54 'br' 'br_ln143' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 55 [1/1] (0.00ns)   --->   "%br_ln144 = br i1 %tmp_7, void %arrayidx12412.0.case.012, void %arrayidx12412.0.case.113" [src/conv1.cpp:144]   --->   Operation 55 'br' 'br_ln144' <Predicate = (and_ln143)> <Delay = 0.00>
-ST_8 : Operation 56 [1/1] (1.23ns)   --->   "%store_ln144 = store i32 0, i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6" [src/conv1.cpp:144]   --->   Operation 56 'store' 'store_ln144' <Predicate = (!tmp_7 & and_ln143)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15360> <RAM>
-ST_8 : Operation 57 [1/1] (0.00ns)   --->   "%br_ln144 = br void %arrayidx12412.0.exit11" [src/conv1.cpp:144]   --->   Operation 57 'br' 'br_ln144' <Predicate = (!tmp_7 & and_ln143)> <Delay = 0.00>
-ST_8 : Operation 58 [1/1] (1.23ns)   --->   "%store_ln144 = store i32 0, i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7" [src/conv1.cpp:144]   --->   Operation 58 'store' 'store_ln144' <Predicate = (tmp_7 & and_ln143)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15360> <RAM>
-ST_8 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln144 = br void %arrayidx12412.0.exit11" [src/conv1.cpp:144]   --->   Operation 59 'br' 'br_ln144' <Predicate = (tmp_7 & and_ln143)> <Delay = 0.00>
-ST_8 : Operation 60 [1/1] (0.00ns)   --->   "%br_ln145 = br void %for.inc.0" [src/conv1.cpp:145]   --->   Operation 60 'br' 'br_ln145' <Predicate = (and_ln143)> <Delay = 0.00>
+ST_8 : Operation 51 [1/1] (0.00ns) (grouped into LUT with out node and_ln142)   --->   "%or_ln142 = or i1 %icmp_ln142_1, i1 %icmp_ln142" [src/conv1.cpp:142]   --->   Operation 51 'or' 'or_ln142' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 52 [1/2] (2.78ns)   --->   "%tmp_5 = fcmp_olt  i32 %add, i32 0" [src/conv1.cpp:142]   --->   Operation 52 'fcmp' 'tmp_5' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 53 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln142 = and i1 %or_ln142, i1 %tmp_5" [src/conv1.cpp:142]   --->   Operation 53 'and' 'and_ln142' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 54 [1/1] (0.00ns)   --->   "%br_ln142 = br i1 %and_ln142, void %for.inc.0, void %if.then.0" [src/conv1.cpp:142]   --->   Operation 54 'br' 'br_ln142' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 55 [1/1] (0.00ns)   --->   "%br_ln143 = br i1 %tmp_7, void %arrayidx12412.0.case.012, void %arrayidx12412.0.case.113" [src/conv1.cpp:143]   --->   Operation 55 'br' 'br_ln143' <Predicate = (and_ln142)> <Delay = 0.00>
+ST_8 : Operation 56 [1/1] (1.23ns)   --->   "%store_ln143 = store i32 0, i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6" [src/conv1.cpp:143]   --->   Operation 56 'store' 'store_ln143' <Predicate = (!tmp_7 & and_ln142)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15360> <RAM>
+ST_8 : Operation 57 [1/1] (0.00ns)   --->   "%br_ln143 = br void %arrayidx12412.0.exit11" [src/conv1.cpp:143]   --->   Operation 57 'br' 'br_ln143' <Predicate = (!tmp_7 & and_ln142)> <Delay = 0.00>
+ST_8 : Operation 58 [1/1] (1.23ns)   --->   "%store_ln143 = store i32 0, i14 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7" [src/conv1.cpp:143]   --->   Operation 58 'store' 'store_ln143' <Predicate = (tmp_7 & and_ln142)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15360> <RAM>
+ST_8 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln143 = br void %arrayidx12412.0.exit11" [src/conv1.cpp:143]   --->   Operation 59 'br' 'br_ln143' <Predicate = (tmp_7 & and_ln142)> <Delay = 0.00>
+ST_8 : Operation 60 [1/1] (0.00ns)   --->   "%br_ln144 = br void %for.inc.0" [src/conv1.cpp:144]   --->   Operation 60 'br' 'br_ln144' <Predicate = (and_ln142)> <Delay = 0.00>
 
 
 ============================================================
@@ -334,44 +334,44 @@ tmp_10_read                                              (read             ) [ 0
 store_ln0                                                (store            ) [ 000000000]
 br_ln0                                                   (br               ) [ 000000000]
 bw_2                                                     (load             ) [ 000000000]
-icmp_ln138                                               (icmp             ) [ 011111100]
-add_ln138                                                (add              ) [ 000000000]
-br_ln138                                                 (br               ) [ 000000000]
-trunc_ln138                                              (trunc            ) [ 000000000]
+icmp_ln137                                               (icmp             ) [ 011111100]
+add_ln137                                                (add              ) [ 000000000]
+br_ln137                                                 (br               ) [ 000000000]
+trunc_ln137                                              (trunc            ) [ 000000000]
 tmp_s                                                    (bitconcatenate   ) [ 000000000]
-zext_ln141                                               (zext             ) [ 000000000]
+zext_ln140                                               (zext             ) [ 000000000]
 conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6 (getelementptr    ) [ 011111111]
 conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7 (getelementptr    ) [ 011111111]
 tmp_7                                                    (bitselect        ) [ 011111111]
-br_ln141                                                 (br               ) [ 000000000]
-store_ln138                                              (store            ) [ 000000000]
-br_ln138                                                 (br               ) [ 000000000]
+br_ln140                                                 (br               ) [ 000000000]
+store_ln137                                              (store            ) [ 000000000]
+br_ln137                                                 (br               ) [ 000000000]
 conv1_float_255_255_float_1_9_9_float_float_255_255_ou_8 (load             ) [ 000000000]
 conv1_float_255_255_float_1_9_9_float_float_255_255_ou_9 (load             ) [ 000000000]
 tmp                                                      (mux              ) [ 011111100]
-specpipeline_ln139                                       (specpipeline     ) [ 000000000]
-speclooptripcount_ln138                                  (speclooptripcount) [ 000000000]
-specloopname_ln138                                       (specloopname     ) [ 000000000]
+specpipeline_ln138                                       (specpipeline     ) [ 000000000]
+speclooptripcount_ln137                                  (speclooptripcount) [ 000000000]
+specloopname_ln137                                       (specloopname     ) [ 000000000]
 add                                                      (fadd             ) [ 011000011]
-store_ln141                                              (store            ) [ 000000000]
-br_ln141                                                 (br               ) [ 000000000]
-store_ln141                                              (store            ) [ 000000000]
-br_ln141                                                 (br               ) [ 000000000]
-bitcast_ln143                                            (bitcast          ) [ 000000000]
+store_ln140                                              (store            ) [ 000000000]
+br_ln140                                                 (br               ) [ 000000000]
+store_ln140                                              (store            ) [ 000000000]
+br_ln140                                                 (br               ) [ 000000000]
+bitcast_ln142                                            (bitcast          ) [ 000000000]
 tmp_4                                                    (partselect       ) [ 000000000]
-trunc_ln143                                              (trunc            ) [ 000000000]
-icmp_ln143                                               (icmp             ) [ 001000001]
-icmp_ln143_1                                             (icmp             ) [ 001000001]
-or_ln143                                                 (or               ) [ 000000000]
+trunc_ln142                                              (trunc            ) [ 000000000]
+icmp_ln142                                               (icmp             ) [ 001000001]
+icmp_ln142_1                                             (icmp             ) [ 001000001]
+or_ln142                                                 (or               ) [ 000000000]
 tmp_5                                                    (fcmp             ) [ 000000000]
-and_ln143                                                (and              ) [ 001000001]
+and_ln142                                                (and              ) [ 001000001]
+br_ln142                                                 (br               ) [ 000000000]
+br_ln143                                                 (br               ) [ 000000000]
+store_ln143                                              (store            ) [ 000000000]
+br_ln143                                                 (br               ) [ 000000000]
+store_ln143                                              (store            ) [ 000000000]
 br_ln143                                                 (br               ) [ 000000000]
 br_ln144                                                 (br               ) [ 000000000]
-store_ln144                                              (store            ) [ 000000000]
-br_ln144                                                 (br               ) [ 000000000]
-store_ln144                                              (store            ) [ 000000000]
-br_ln144                                                 (br               ) [ 000000000]
-br_ln145                                                 (br               ) [ 000000000]
 ret_ln0                                                  (ret              ) [ 000000000]
 </LifeTime>
 
@@ -706,7 +706,7 @@ ret_ln0                                                  (ret              ) [ 0
 </pin_list>
 <bind>
 <opcode="load(27) store(28) " fcode="store"/>
-<opset="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_8/1 store_ln141/7 store_ln144/8 "/>
+<opset="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_8/1 store_ln140/7 store_ln143/8 "/>
 </bind>
 </comp>
 
@@ -723,7 +723,7 @@ ret_ln0                                                  (ret              ) [ 0
 </pin_list>
 <bind>
 <opcode="load(27) store(28) " fcode="store"/>
-<opset="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_9/1 store_ln141/7 store_ln144/8 "/>
+<opset="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_9/1 store_ln140/7 store_ln143/8 "/>
 </bind>
 </comp>
 
@@ -774,7 +774,7 @@ ret_ln0                                                  (ret              ) [ 0
 </bind>
 </comp>
 
-<comp id="125" class="1004" name="icmp_ln138_fu_125">
+<comp id="125" class="1004" name="icmp_ln137_fu_125">
 <pin_list>
 <pin id="126" dir="0" index="0" bw="8" slack="0"/>
 <pin id="127" dir="0" index="1" bw="8" slack="0"/>
@@ -782,11 +782,11 @@ ret_ln0                                                  (ret              ) [ 0
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="icmp_ln138/1 "/>
+<opset="icmp_ln137/1 "/>
 </bind>
 </comp>
 
-<comp id="131" class="1004" name="add_ln138_fu_131">
+<comp id="131" class="1004" name="add_ln137_fu_131">
 <pin_list>
 <pin id="132" dir="0" index="0" bw="8" slack="0"/>
 <pin id="133" dir="0" index="1" bw="1" slack="0"/>
@@ -794,18 +794,18 @@ ret_ln0                                                  (ret              ) [ 0
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln138/1 "/>
+<opset="add_ln137/1 "/>
 </bind>
 </comp>
 
-<comp id="137" class="1004" name="trunc_ln138_fu_137">
+<comp id="137" class="1004" name="trunc_ln137_fu_137">
 <pin_list>
 <pin id="138" dir="0" index="0" bw="8" slack="0"/>
 <pin id="139" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln138/1 "/>
+<opset="trunc_ln137/1 "/>
 </bind>
 </comp>
 
@@ -822,14 +822,14 @@ ret_ln0                                                  (ret              ) [ 0
 </bind>
 </comp>
 
-<comp id="149" class="1004" name="zext_ln141_fu_149">
+<comp id="149" class="1004" name="zext_ln140_fu_149">
 <pin_list>
 <pin id="150" dir="0" index="0" bw="14" slack="0"/>
 <pin id="151" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln141/1 "/>
+<opset="zext_ln140/1 "/>
 </bind>
 </comp>
 
@@ -846,7 +846,7 @@ ret_ln0                                                  (ret              ) [ 0
 </bind>
 </comp>
 
-<comp id="163" class="1004" name="store_ln138_store_fu_163">
+<comp id="163" class="1004" name="store_ln137_store_fu_163">
 <pin_list>
 <pin id="164" dir="0" index="0" bw="8" slack="0"/>
 <pin id="165" dir="0" index="1" bw="8" slack="0"/>
@@ -854,7 +854,7 @@ ret_ln0                                                  (ret              ) [ 0
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln138/1 "/>
+<opset="store_ln137/1 "/>
 </bind>
 </comp>
 
@@ -872,14 +872,14 @@ ret_ln0                                                  (ret              ) [ 0
 </bind>
 </comp>
 
-<comp id="177" class="1004" name="bitcast_ln143_fu_177">
+<comp id="177" class="1004" name="bitcast_ln142_fu_177">
 <pin_list>
 <pin id="178" dir="0" index="0" bw="32" slack="1"/>
 <pin id="179" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="bitcast(44) " fcode="bitcast"/>
-<opset="bitcast_ln143/7 "/>
+<opset="bitcast_ln142/7 "/>
 </bind>
 </comp>
 
@@ -897,18 +897,18 @@ ret_ln0                                                  (ret              ) [ 0
 </bind>
 </comp>
 
-<comp id="190" class="1004" name="trunc_ln143_fu_190">
+<comp id="190" class="1004" name="trunc_ln142_fu_190">
 <pin_list>
 <pin id="191" dir="0" index="0" bw="32" slack="0"/>
 <pin id="192" dir="1" index="1" bw="23" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln143/7 "/>
+<opset="trunc_ln142/7 "/>
 </bind>
 </comp>
 
-<comp id="194" class="1004" name="icmp_ln143_fu_194">
+<comp id="194" class="1004" name="icmp_ln142_fu_194">
 <pin_list>
 <pin id="195" dir="0" index="0" bw="8" slack="0"/>
 <pin id="196" dir="0" index="1" bw="8" slack="0"/>
@@ -916,11 +916,11 @@ ret_ln0                                                  (ret              ) [ 0
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="icmp_ln143/7 "/>
+<opset="icmp_ln142/7 "/>
 </bind>
 </comp>
 
-<comp id="200" class="1004" name="icmp_ln143_1_fu_200">
+<comp id="200" class="1004" name="icmp_ln142_1_fu_200">
 <pin_list>
 <pin id="201" dir="0" index="0" bw="23" slack="0"/>
 <pin id="202" dir="0" index="1" bw="23" slack="0"/>
@@ -928,11 +928,11 @@ ret_ln0                                                  (ret              ) [ 0
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="icmp_ln143_1/7 "/>
+<opset="icmp_ln142_1/7 "/>
 </bind>
 </comp>
 
-<comp id="206" class="1004" name="or_ln143_fu_206">
+<comp id="206" class="1004" name="or_ln142_fu_206">
 <pin_list>
 <pin id="207" dir="0" index="0" bw="1" slack="1"/>
 <pin id="208" dir="0" index="1" bw="1" slack="1"/>
@@ -940,11 +940,11 @@ ret_ln0                                                  (ret              ) [ 0
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="or_ln143/8 "/>
+<opset="or_ln142/8 "/>
 </bind>
 </comp>
 
-<comp id="210" class="1004" name="and_ln143_fu_210">
+<comp id="210" class="1004" name="and_ln142_fu_210">
 <pin_list>
 <pin id="211" dir="0" index="0" bw="1" slack="0"/>
 <pin id="212" dir="0" index="1" bw="1" slack="0"/>
@@ -952,7 +952,7 @@ ret_ln0                                                  (ret              ) [ 0
 </pin_list>
 <bind>
 <opcode="and(23) " fcode="and"/>
-<opset="and_ln143/8 "/>
+<opset="and_ln142/8 "/>
 </bind>
 </comp>
 
@@ -976,13 +976,13 @@ ret_ln0                                                  (ret              ) [ 0
 </bind>
 </comp>
 
-<comp id="228" class="1005" name="icmp_ln138_reg_228">
+<comp id="228" class="1005" name="icmp_ln137_reg_228">
 <pin_list>
 <pin id="229" dir="0" index="0" bw="1" slack="1"/>
 <pin id="230" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="icmp_ln138 "/>
+<opset="icmp_ln137 "/>
 </bind>
 </comp>
 
@@ -1036,23 +1036,23 @@ ret_ln0                                                  (ret              ) [ 0
 </bind>
 </comp>
 
-<comp id="262" class="1005" name="icmp_ln143_reg_262">
+<comp id="262" class="1005" name="icmp_ln142_reg_262">
 <pin_list>
 <pin id="263" dir="0" index="0" bw="1" slack="1"/>
 <pin id="264" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="icmp_ln143 "/>
+<opset="icmp_ln142 "/>
 </bind>
 </comp>
 
-<comp id="267" class="1005" name="icmp_ln143_1_reg_267">
+<comp id="267" class="1005" name="icmp_ln142_1_reg_267">
 <pin_list>
 <pin id="268" dir="0" index="0" bw="1" slack="1"/>
 <pin id="269" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="icmp_ln143_1 "/>
+<opset="icmp_ln142_1 "/>
 </bind>
 </comp>
 
@@ -1217,19 +1217,19 @@ ret_ln0                                                  (ret              ) [ 0
 	State 1
 		store_ln0 : 1
 		bw_2 : 1
-		icmp_ln138 : 2
-		add_ln138 : 2
-		br_ln138 : 3
-		trunc_ln138 : 2
+		icmp_ln137 : 2
+		add_ln137 : 2
+		br_ln137 : 3
+		trunc_ln137 : 2
 		tmp_s : 3
-		zext_ln141 : 4
+		zext_ln140 : 4
 		conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6 : 5
 		conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7 : 5
 		tmp_7 : 2
 		conv1_float_255_255_float_1_9_9_float_float_255_255_ou_8 : 6
 		conv1_float_255_255_float_1_9_9_float_float_255_255_ou_9 : 6
-		br_ln141 : 3
-		store_ln138 : 3
+		br_ln140 : 3
+		store_ln137 : 3
 	State 2
 		tmp : 1
 	State 3
@@ -1238,12 +1238,12 @@ ret_ln0                                                  (ret              ) [ 0
 	State 6
 	State 7
 		tmp_4 : 1
-		trunc_ln143 : 1
-		icmp_ln143 : 2
-		icmp_ln143_1 : 2
+		trunc_ln142 : 1
+		icmp_ln142 : 2
+		icmp_ln142_1 : 2
 	State 8
-		and_ln143 : 1
-		br_ln143 : 1
+		and_ln142 : 1
+		br_ln142 : 1
 
 
 ============================================================
@@ -1256,29 +1256,29 @@ ret_ln0                                                  (ret              ) [ 0
 |----------|------------------------|---------|---------|---------|
 |   fadd   |       grp_fu_108       |    2    |   227   |   214   |
 |----------|------------------------|---------|---------|---------|
-|          |    icmp_ln138_fu_125   |    0    |    0    |    15   |
-|   icmp   |    icmp_ln143_fu_194   |    0    |    0    |    15   |
-|          |   icmp_ln143_1_fu_200  |    0    |    0    |    30   |
+|          |    icmp_ln137_fu_125   |    0    |    0    |    15   |
+|   icmp   |    icmp_ln142_fu_194   |    0    |    0    |    15   |
+|          |   icmp_ln142_1_fu_200  |    0    |    0    |    30   |
 |----------|------------------------|---------|---------|---------|
-|    add   |    add_ln138_fu_131    |    0    |    0    |    15   |
+|    add   |    add_ln137_fu_131    |    0    |    0    |    15   |
 |----------|------------------------|---------|---------|---------|
 |    mux   |       tmp_fu_168       |    0    |    0    |    9    |
 |----------|------------------------|---------|---------|---------|
-|    or    |     or_ln143_fu_206    |    0    |    0    |    2    |
+|    or    |     or_ln142_fu_206    |    0    |    0    |    2    |
 |----------|------------------------|---------|---------|---------|
-|    and   |    and_ln143_fu_210    |    0    |    0    |    2    |
+|    and   |    and_ln142_fu_210    |    0    |    0    |    2    |
 |----------|------------------------|---------|---------|---------|
 |   read   |    tmp_6_read_fu_60    |    0    |    0    |    0    |
 |          | tmp_10_read_read_fu_66 |    0    |    0    |    0    |
 |----------|------------------------|---------|---------|---------|
 |   fcmp   |       grp_fu_112       |    0    |    0    |    0    |
 |----------|------------------------|---------|---------|---------|
-|   trunc  |   trunc_ln138_fu_137   |    0    |    0    |    0    |
-|          |   trunc_ln143_fu_190   |    0    |    0    |    0    |
+|   trunc  |   trunc_ln137_fu_137   |    0    |    0    |    0    |
+|          |   trunc_ln142_fu_190   |    0    |    0    |    0    |
 |----------|------------------------|---------|---------|---------|
 |bitconcatenate|      tmp_s_fu_141      |    0    |    0    |    0    |
 |----------|------------------------|---------|---------|---------|
-|   zext   |    zext_ln141_fu_149   |    0    |    0    |    0    |
+|   zext   |    zext_ln140_fu_149   |    0    |    0    |    0    |
 |----------|------------------------|---------|---------|---------|
 | bitselect|      tmp_7_fu_155      |    0    |    0    |    0    |
 |----------|------------------------|---------|---------|---------|
@@ -1298,9 +1298,9 @@ N/A
 |                           bw_reg_216                           |    8   |
 |conv1_float_255_255_float_1_9_9_float_float_255_255_ou_6_reg_232|   14   |
 |conv1_float_255_255_float_1_9_9_float_float_255_255_ou_7_reg_238|   14   |
-|                       icmp_ln138_reg_228                       |    1   |
-|                      icmp_ln143_1_reg_267                      |    1   |
-|                       icmp_ln143_reg_262                       |    1   |
+|                       icmp_ln137_reg_228                       |    1   |
+|                      icmp_ln142_1_reg_267                      |    1   |
+|                       icmp_ln142_reg_262                       |    1   |
 |                          tmp_6_reg_223                         |   32   |
 |                          tmp_7_reg_244                         |    1   |
 |                           tmp_reg_249                          |   32   |

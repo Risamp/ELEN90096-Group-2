@@ -59,7 +59,7 @@ module srcnn_conv3_Pipeline_6 (
         m_axi_o_BRESP,
         m_axi_o_BID,
         m_axi_o_BUSER,
-        sext_ln147_1,
+        sext_ln147_2,
         sub_ln140_1,
         output_fm_buffer_0_address0,
         output_fm_buffer_0_ce0,
@@ -120,7 +120,7 @@ output   m_axi_o_BREADY;
 input  [1:0] m_axi_o_BRESP;
 input  [0:0] m_axi_o_BID;
 input  [0:0] m_axi_o_BUSER;
-input  [61:0] sext_ln147_1;
+input  [61:0] sext_ln147_2;
 input  [9:0] sub_ln140_1;
 output  [9:0] output_fm_buffer_0_address0;
 output   output_fm_buffer_0_ce0;
@@ -157,7 +157,7 @@ wire   [7:0] empty_fu_109_p2;
 wire    ap_loop_init;
 reg   [7:0] ap_sig_allocacmp_loop_index_1_i_load;
 wire   [9:0] loop_index_1_i_cast1_fu_115_p1;
-wire   [9:0] empty_325_fu_119_p2;
+wire   [9:0] empty_327_fu_119_p2;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -372,7 +372,7 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign empty_325_fu_119_p2 = (sub_ln140_1 + loop_index_1_i_cast1_fu_115_p1);
+assign empty_327_fu_119_p2 = (sub_ln140_1 + loop_index_1_i_cast1_fu_115_p1);
 
 assign empty_fu_109_p2 = (ap_sig_allocacmp_loop_index_1_i_load + 8'd1);
 
@@ -444,6 +444,6 @@ assign m_axi_o_WUSER = 1'd0;
 
 assign output_fm_buffer_0_address0 = p_cast_fu_125_p1;
 
-assign p_cast_fu_125_p1 = empty_325_fu_119_p2;
+assign p_cast_fu_125_p1 = empty_327_fu_119_p2;
 
 endmodule //srcnn_conv3_Pipeline_6

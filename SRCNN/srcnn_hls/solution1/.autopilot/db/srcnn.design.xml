@@ -75,64 +75,64 @@
 <ID>272</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_conv2_Pipeline_LOAD_INPUT_BH_L_fu_286</InstName>
+<InstName>grp_conv2_Pipeline_LOAD_INPUT_BH_L_fu_384</InstName>
 <ModuleName>conv2_Pipeline_LOAD_INPUT_BH_L</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>286</ID>
+<ID>384</ID>
 </Instance>
 <Instance>
-<InstName>grp_conv2_Pipeline_LOAD_WEIGHTS_L_fu_300</InstName>
+<InstName>grp_conv2_Pipeline_LOAD_WEIGHTS_L_fu_398</InstName>
 <ModuleName>conv2_Pipeline_LOAD_WEIGHTS_L</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>300</ID>
+<ID>398</ID>
 </Instance>
 <Instance>
-<InstName>grp_conv2_Pipeline_OUT_ROW_COL_fu_309</InstName>
-<ModuleName>conv2_Pipeline_OUT_ROW_COL</ModuleName>
+<InstName>grp_conv2_Pipeline_COL_fu_407</InstName>
+<ModuleName>conv2_Pipeline_COL</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>309</ID>
+<ID>407</ID>
 </Instance>
 <Instance>
-<InstName>grp_conv2_Pipeline_RELU_fu_327</InstName>
+<InstName>grp_conv2_Pipeline_RELU_fu_426</InstName>
 <ModuleName>conv2_Pipeline_RELU</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>327</ID>
+<ID>426</ID>
 </Instance>
 <Instance>
-<InstName>grp_conv2_Pipeline_5_fu_339</InstName>
+<InstName>grp_conv2_Pipeline_5_fu_438</InstName>
 <ModuleName>conv2_Pipeline_5</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>339</ID>
+<ID>438</ID>
 </Instance>
 <Instance>
-<InstName>grp_conv2_Pipeline_RELU6_fu_353</InstName>
+<InstName>grp_conv2_Pipeline_RELU6_fu_452</InstName>
 <ModuleName>conv2_Pipeline_RELU6</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>353</ID>
+<ID>452</ID>
 </Instance>
 <Instance>
-<InstName>grp_conv2_Pipeline_7_fu_365</InstName>
+<InstName>grp_conv2_Pipeline_7_fu_464</InstName>
 <ModuleName>conv2_Pipeline_7</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>365</ID>
+<ID>464</ID>
 </Instance>
 <Instance>
-<InstName>grp_conv2_Pipeline_BW_fu_379</InstName>
+<InstName>grp_conv2_Pipeline_BW_fu_478</InstName>
 <ModuleName>conv2_Pipeline_BW</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>379</ID>
+<ID>478</ID>
 </Instance>
 <Instance>
-<InstName>grp_conv2_Pipeline_BW7_fu_390</InstName>
+<InstName>grp_conv2_Pipeline_BW7_fu_489</InstName>
 <ModuleName>conv2_Pipeline_BW7</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>390</ID>
+<ID>489</ID>
 </Instance>
 <Instance>
-<InstName>grp_conv2_Pipeline_BW8_fu_401</InstName>
+<InstName>grp_conv2_Pipeline_BW8_fu_500</InstName>
 <ModuleName>conv2_Pipeline_BW8</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>401</ID>
+<ID>500</ID>
 </Instance>
 </InstancesList>
 </Instance>
@@ -1190,8 +1190,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_address0</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_address0</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -1201,8 +1201,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_ce0</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_ce0</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -1212,8 +1212,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_q0</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_q0</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -1223,8 +1223,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_address1</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_address1</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -1234,8 +1234,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_ce1</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_ce1</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -1245,8 +1245,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_q1</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_q1</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -1256,8 +1256,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1_address0</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_address0</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -1267,8 +1267,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1_ce0</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_ce0</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -1278,8 +1278,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1_q0</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_q0</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -1289,8 +1289,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1_address1</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_address1</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -1300,8 +1300,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1_ce1</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_ce1</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -1311,8 +1311,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1_q1</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_q1</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -1322,8 +1322,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2_address0</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_address0</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -1333,8 +1333,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2_ce0</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_ce0</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -1344,8 +1344,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2_q0</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_q0</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -1355,8 +1355,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2_address1</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_address1</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -1366,8 +1366,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2_ce1</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_ce1</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -1377,8 +1377,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2_q1</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_q1</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -2538,8 +2538,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln148</name>
-<Object>sext_ln148</Object>
+<name>sext_ln147</name>
+<Object>sext_ln147</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -3666,8 +3666,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln148_1</name>
-<Object>sext_ln148_1</Object>
+<name>sext_ln147_1</name>
+<Object>sext_ln147_1</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -6111,8 +6111,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_address0</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_address0</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -6122,8 +6122,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_ce0</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_ce0</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -6133,8 +6133,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_q0</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_q0</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -6144,8 +6144,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_address1</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_address1</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -6155,8 +6155,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_ce1</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_ce1</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -6166,8 +6166,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_q1</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_q1</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -6177,8 +6177,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1_address0</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_address0</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -6188,8 +6188,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1_ce0</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_ce0</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -6199,8 +6199,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1_q0</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_q0</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -6210,8 +6210,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1_address1</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_address1</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -6221,8 +6221,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1_ce1</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_ce1</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -6232,8 +6232,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1_q1</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_q1</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -6243,8 +6243,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2_address0</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_address0</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -6254,8 +6254,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2_ce0</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_ce0</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -6265,8 +6265,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2_q0</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_q0</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -6276,8 +6276,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2_address1</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_address1</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -6287,8 +6287,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2_ce1</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_ce1</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -6298,8 +6298,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2_q1</name>
-<Object>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2</Object>
+<name>conv1_float_255_255_float_1_9_9_float_float_255_255_in_q1</name>
+<Object>conv1_float_255_255_float_1_9_9_float_float_255_255_in</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -10162,52 +10162,52 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>conv2_Pipeline_OUT_ROW_COL</Name>
+<Name>conv2_Pipeline_COL</Name>
 <Loops>
-<OUT_ROW_COL></OUT_ROW_COL>
+<COL></COL>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>7.016</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.390</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>587536</Best-caseLatency>
-<Average-caseLatency>587536</Average-caseLatency>
-<Worst-caseLatency>587536</Worst-caseLatency>
-<Best-caseRealTimeLatency>5.875 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>5.875 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>5.875 ms</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>587536</PipelineInitiationInterval>
+<Best-caseLatency>416</Best-caseLatency>
+<Average-caseLatency>416</Average-caseLatency>
+<Worst-caseLatency>416</Worst-caseLatency>
+<Best-caseRealTimeLatency>4.160 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>4.160 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>4.160 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>416</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<OUT_ROW_COL>
-<Name>OUT_ROW_COL</Name>
+<COL>
+<Name>COL</Name>
 <Slack>7.30</Slack>
-<TripCount>65280</TripCount>
-<Latency>587534</Latency>
-<AbsoluteTimeLatency>5.875 ms</AbsoluteTimeLatency>
+<TripCount>43</TripCount>
+<Latency>414</Latency>
+<AbsoluteTimeLatency>4.140 us</AbsoluteTimeLatency>
 <PipelineII>9</PipelineII>
-<PipelineDepth>24</PipelineDepth>
+<PipelineDepth>37</PipelineDepth>
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
-</OUT_ROW_COL>
+</COL>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<DSP>2</DSP>
+<DSP>5</DSP>
 <AVAIL_DSP>360</AVAIL_DSP>
-<UTIL_DSP>~0</UTIL_DSP>
-<FF>1400</FF>
+<UTIL_DSP>1</UTIL_DSP>
+<FF>2948</FF>
 <AVAIL_FF>141120</AVAIL_FF>
-<UTIL_FF>~0</UTIL_FF>
-<LUT>1503</LUT>
+<UTIL_FF>2</UTIL_FF>
+<LUT>2311</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
-<UTIL_LUT>2</UTIL_LUT>
+<UTIL_LUT>3</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
 <AVAIL_BRAM>432</AVAIL_BRAM>
 <UTIL_BRAM>0</UTIL_BRAM>
@@ -10219,7 +10219,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>conv2_Pipeline_OUT_ROW_COL</Object>
+<Object>conv2_Pipeline_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -10230,7 +10230,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>conv2_Pipeline_OUT_ROW_COL</Object>
+<Object>conv2_Pipeline_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -10241,7 +10241,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>conv2_Pipeline_OUT_ROW_COL</Object>
+<Object>conv2_Pipeline_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -10252,7 +10252,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>conv2_Pipeline_OUT_ROW_COL</Object>
+<Object>conv2_Pipeline_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -10263,7 +10263,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>conv2_Pipeline_OUT_ROW_COL</Object>
+<Object>conv2_Pipeline_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -10274,7 +10274,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>conv2_Pipeline_OUT_ROW_COL</Object>
+<Object>conv2_Pipeline_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -10284,8 +10284,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_din0</name>
-<Object>conv2_Pipeline_OUT_ROW_COL</Object>
+<name>grp_fu_1426_p_din0</name>
+<Object>conv2_Pipeline_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -10295,8 +10295,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_din1</name>
-<Object>conv2_Pipeline_OUT_ROW_COL</Object>
+<name>grp_fu_1426_p_din1</name>
+<Object>conv2_Pipeline_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -10306,8 +10306,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_opcode</name>
-<Object>conv2_Pipeline_OUT_ROW_COL</Object>
+<name>grp_fu_1426_p_opcode</name>
+<Object>conv2_Pipeline_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -10317,8 +10317,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_dout0</name>
-<Object>conv2_Pipeline_OUT_ROW_COL</Object>
+<name>grp_fu_1426_p_dout0</name>
+<Object>conv2_Pipeline_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -10328,8 +10328,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_ce</name>
-<Object>conv2_Pipeline_OUT_ROW_COL</Object>
+<name>grp_fu_1426_p_ce</name>
+<Object>conv2_Pipeline_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -10339,8 +10339,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1015_p_din0</name>
-<Object>conv2_Pipeline_OUT_ROW_COL</Object>
+<name>grp_fu_1430_p_din0</name>
+<Object>conv2_Pipeline_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -10350,8 +10350,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1015_p_din1</name>
-<Object>conv2_Pipeline_OUT_ROW_COL</Object>
+<name>grp_fu_1430_p_din1</name>
+<Object>conv2_Pipeline_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -10361,8 +10361,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1015_p_dout0</name>
-<Object>conv2_Pipeline_OUT_ROW_COL</Object>
+<name>grp_fu_1430_p_dout0</name>
+<Object>conv2_Pipeline_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -10372,14 +10372,47 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1015_p_ce</name>
-<Object>conv2_Pipeline_OUT_ROW_COL</Object>
+<name>grp_fu_1430_p_ce</name>
+<Object>conv2_Pipeline_COL</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>bitcast_ln41</name>
+<Object>bitcast_ln41</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>mul_ln50</name>
+<Object>mul_ln50</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>14</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>mul_ln50_1</name>
+<Object>mul_ln50_1</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>10</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -10460,30 +10493,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_q1</name>
+<name>conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_we1</name>
 <Object>conv2_float_255_255_float_64_1_1_float_float_255_255_o_2</Object>
-<Type>array</Type>
-<Scope>global</Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>weight_buffer_address0</name>
-<Object>weight_buffer</Object>
-<Type>array</Type>
-<Scope>global</Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>8</Bits>
-<Attribute>address</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>weight_buffer_ce0</name>
-<Object>weight_buffer</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -10493,8 +10504,19 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>weight_buffer_q0</name>
-<Object>weight_buffer</Object>
+<name>conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_d1</name>
+<Object>conv2_float_255_255_float_64_1_1_float_float_255_255_o_2</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_q1</name>
+<Object>conv2_float_255_255_float_64_1_1_float_float_255_255_o_2</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -10527,6 +10549,39 @@
 </RtlPorts>
 <RtlPorts>
 <name>conv2_float_255_255_float_64_1_1_float_float_255_255_i_2_q0</name>
+<Object>conv2_float_255_255_float_64_1_1_float_float_255_255_i_2</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>conv2_float_255_255_float_64_1_1_float_float_255_255_i_2_address1</name>
+<Object>conv2_float_255_255_float_64_1_1_float_float_255_255_i_2</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>14</Bits>
+<Attribute>address</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>conv2_float_255_255_float_64_1_1_float_float_255_255_i_2_ce1</name>
+<Object>conv2_float_255_255_float_64_1_1_float_float_255_255_i_2</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>conv2_float_255_255_float_64_1_1_float_float_255_255_i_2_q1</name>
 <Object>conv2_float_255_255_float_64_1_1_float_float_255_255_i_2</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -10570,6 +10625,39 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<name>conv2_float_255_255_float_64_1_1_float_float_255_255_i_1_address1</name>
+<Object>conv2_float_255_255_float_64_1_1_float_float_255_255_i_1</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>14</Bits>
+<Attribute>address</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>conv2_float_255_255_float_64_1_1_float_float_255_255_i_1_ce1</name>
+<Object>conv2_float_255_255_float_64_1_1_float_float_255_255_i_1</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>conv2_float_255_255_float_64_1_1_float_float_255_255_i_1_q1</name>
+<Object>conv2_float_255_255_float_64_1_1_float_float_255_255_i_1</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
 <name>conv2_float_255_255_float_64_1_1_float_float_255_255_i_address0</name>
 <Object>conv2_float_255_255_float_64_1_1_float_float_255_255_i</Object>
 <Type>array</Type>
@@ -10593,6 +10681,39 @@
 </RtlPorts>
 <RtlPorts>
 <name>conv2_float_255_255_float_64_1_1_float_float_255_255_i_q0</name>
+<Object>conv2_float_255_255_float_64_1_1_float_float_255_255_i</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>conv2_float_255_255_float_64_1_1_float_float_255_255_i_address1</name>
+<Object>conv2_float_255_255_float_64_1_1_float_float_255_255_i</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>14</Bits>
+<Attribute>address</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>conv2_float_255_255_float_64_1_1_float_float_255_255_i_ce1</name>
+<Object>conv2_float_255_255_float_64_1_1_float_float_255_255_i</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>conv2_float_255_255_float_64_1_1_float_float_255_255_i_q1</name>
 <Object>conv2_float_255_255_float_64_1_1_float_float_255_255_i</Object>
 <Type>array</Type>
 <Scope>global</Scope>
@@ -10678,6 +10799,28 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>conv2_float_255_255_float_64_1_1_float_float_255_255_o_1_we1</name>
+<Object>conv2_float_255_255_float_64_1_1_float_float_255_255_o_1</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>conv2_float_255_255_float_64_1_1_float_float_255_255_o_1_d1</name>
+<Object>conv2_float_255_255_float_64_1_1_float_float_255_255_o_1</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
 <name>conv2_float_255_255_float_64_1_1_float_float_255_255_o_1_q1</name>
@@ -10766,6 +10909,28 @@
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>conv2_float_255_255_float_64_1_1_float_float_255_255_o_we1</name>
+<Object>conv2_float_255_255_float_64_1_1_float_float_255_255_o</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>conv2_float_255_255_float_64_1_1_float_float_255_255_o_d1</name>
+<Object>conv2_float_255_255_float_64_1_1_float_float_255_255_o</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
 <name>conv2_float_255_255_float_64_1_1_float_float_255_255_o_q1</name>
@@ -10903,7 +11068,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_din0</name>
+<name>grp_fu_1426_p_din0</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10914,7 +11079,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_din1</name>
+<name>grp_fu_1426_p_din1</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10925,7 +11090,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_opcode</name>
+<name>grp_fu_1426_p_opcode</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10936,7 +11101,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_dout0</name>
+<name>grp_fu_1426_p_dout0</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10947,7 +11112,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_ce</name>
+<name>grp_fu_1426_p_ce</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10958,7 +11123,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_din0</name>
+<name>grp_fu_1434_p_din0</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10969,7 +11134,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_din1</name>
+<name>grp_fu_1434_p_din1</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10980,7 +11145,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_opcode</name>
+<name>grp_fu_1434_p_opcode</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -10991,7 +11156,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_dout0</name>
+<name>grp_fu_1434_p_dout0</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -11002,7 +11167,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_ce</name>
+<name>grp_fu_1434_p_ce</name>
 <Object>conv2_Pipeline_RELU</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12141,7 +12306,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_din0</name>
+<name>grp_fu_1426_p_din0</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12152,7 +12317,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_din1</name>
+<name>grp_fu_1426_p_din1</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12163,7 +12328,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_opcode</name>
+<name>grp_fu_1426_p_opcode</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12174,7 +12339,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_dout0</name>
+<name>grp_fu_1426_p_dout0</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12185,7 +12350,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1011_p_ce</name>
+<name>grp_fu_1426_p_ce</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12196,7 +12361,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_din0</name>
+<name>grp_fu_1434_p_din0</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12207,7 +12372,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_din1</name>
+<name>grp_fu_1434_p_din1</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12218,7 +12383,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_opcode</name>
+<name>grp_fu_1434_p_opcode</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12229,7 +12394,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_dout0</name>
+<name>grp_fu_1434_p_dout0</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -12240,7 +12405,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_1019_p_ce</name>
+<name>grp_fu_1434_p_ce</name>
 <Object>conv2_Pipeline_RELU6</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -14062,6 +14227,7 @@
 <Loops>
 <TILE_ROW>
 <TILE_OUT>
+<OUT_IN_ROW></OUT_IN_ROW>
 <EXPORT>
 <BH></BH>
 </EXPORT>
@@ -14073,16 +14239,16 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.390</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>414514231</Best-caseLatency>
-<Average-caseLatency>414527831</Average-caseLatency>
-<Worst-caseLatency>414538711</Worst-caseLatency>
-<Best-caseRealTimeLatency>4.145 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>4.145 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>4.145 sec</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>414514231 ~ 414538711</PipelineInitiationInterval>
+<Best-caseLatency>233807631</Best-caseLatency>
+<Average-caseLatency>233821231</Average-caseLatency>
+<Worst-caseLatency>233832111</Worst-caseLatency>
+<Best-caseRealTimeLatency>2.338 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>2.338 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>2.338 sec</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>233807631 ~ 233832111</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -14090,37 +14256,49 @@
 <Name>TILE_ROW</Name>
 <Slack>7.30</Slack>
 <TripCount>85</TripCount>
-<Latency>414514230 ~ 414538710</Latency>
-<AbsoluteTimeLatency>4.145 sec</AbsoluteTimeLatency>
+<Latency>233807630 ~ 233832110</Latency>
+<AbsoluteTimeLatency>2.338 sec</AbsoluteTimeLatency>
 <IterationLatency>
 <range>
-<min>4876638</min>
-<max>4876926</max>
+<min>2750678</min>
+<max>2750966</max>
 </range>
 </IterationLatency>
-<PipelineDepth>4876638 ~ 4876926</PipelineDepth>
+<PipelineDepth>2750678 ~ 2750966</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_conv2_Pipeline_LOAD_INPUT_BH_L_fu_286</Instance>
+<Instance>grp_conv2_Pipeline_LOAD_INPUT_BH_L_fu_384</Instance>
 </InstanceList>
 <TILE_OUT>
 <Name>TILE_OUT</Name>
 <Slack>7.30</Slack>
 <TripCount>8</TripCount>
-<Latency>4827656 ~ 4827944</Latency>
-<AbsoluteTimeLatency>48.277 ms ~ 48.279 ms</AbsoluteTimeLatency>
+<Latency>2701696 ~ 2701984</Latency>
+<AbsoluteTimeLatency>27.017 ms ~ 27.020 ms</AbsoluteTimeLatency>
 <IterationLatency>
 <range>
-<min>603457</min>
-<max>603493</max>
+<min>337712</min>
+<max>337748</max>
 </range>
 </IterationLatency>
-<PipelineDepth>603457 ~ 603493</PipelineDepth>
+<PipelineDepth>337712 ~ 337748</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_conv2_Pipeline_LOAD_WEIGHTS_L_fu_300</Instance>
-<Instance>grp_conv2_Pipeline_OUT_ROW_COL_fu_309</Instance>
+<Instance>grp_conv2_Pipeline_LOAD_WEIGHTS_L_fu_398</Instance>
 </InstanceList>
+<OUT_IN_ROW>
+<Name>OUT_IN_ROW</Name>
+<Slack>7.30</Slack>
+<TripCount>768</TripCount>
+<Latency>321792</Latency>
+<AbsoluteTimeLatency>3.218 ms</AbsoluteTimeLatency>
+<IterationLatency>419</IterationLatency>
+<PipelineDepth>419</PipelineDepth>
+<PipelineType>no</PipelineType>
+<InstanceList>
+<Instance>grp_conv2_Pipeline_COL_fu_407</Instance>
+</InstanceList>
+</OUT_IN_ROW>
 <EXPORT>
 <Name>EXPORT</Name>
 <Slack>7.30</Slack>
@@ -14147,10 +14325,10 @@
 <PipelineDepth>1567</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_conv2_Pipeline_RELU_fu_327</Instance>
-<Instance>grp_conv2_Pipeline_5_fu_339</Instance>
-<Instance>grp_conv2_Pipeline_RELU6_fu_353</Instance>
-<Instance>grp_conv2_Pipeline_7_fu_365</Instance>
+<Instance>grp_conv2_Pipeline_RELU_fu_426</Instance>
+<Instance>grp_conv2_Pipeline_5_fu_438</Instance>
+<Instance>grp_conv2_Pipeline_RELU6_fu_452</Instance>
+<Instance>grp_conv2_Pipeline_7_fu_464</Instance>
 </InstanceList>
 </BH>
 </EXPORT>
@@ -14164,9 +14342,9 @@
 <PipelineDepth>777</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_conv2_Pipeline_BW_fu_379</Instance>
-<Instance>grp_conv2_Pipeline_BW7_fu_390</Instance>
-<Instance>grp_conv2_Pipeline_BW8_fu_401</Instance>
+<Instance>grp_conv2_Pipeline_BW_fu_478</Instance>
+<Instance>grp_conv2_Pipeline_BW7_fu_489</Instance>
+<Instance>grp_conv2_Pipeline_BW8_fu_500</Instance>
 </InstanceList>
 </CLEAR>
 </TILE_OUT>
@@ -14178,15 +14356,15 @@
 <BRAM_18K>97</BRAM_18K>
 <AVAIL_BRAM>432</AVAIL_BRAM>
 <UTIL_BRAM>22</UTIL_BRAM>
-<DSP>5</DSP>
+<DSP>9</DSP>
 <AVAIL_DSP>360</AVAIL_DSP>
-<UTIL_DSP>1</UTIL_DSP>
-<FF>3846</FF>
+<UTIL_DSP>2</UTIL_DSP>
+<FF>5513</FF>
 <AVAIL_FF>141120</AVAIL_FF>
-<UTIL_FF>2</UTIL_FF>
-<LUT>6562</LUT>
+<UTIL_FF>3</UTIL_FF>
+<LUT>7740</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
-<UTIL_LUT>9</UTIL_LUT>
+<UTIL_LUT>10</UTIL_LUT>
 <URAM>0</URAM>
 <AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>
@@ -21409,8 +21587,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln147_1</name>
-<Object>sext_ln147_1</Object>
+<name>sext_ln147_2</name>
+<Object>sext_ln147_2</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -24113,13 +24291,13 @@
 <EstimatedClockPeriod>7.705</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>530518515</Best-caseLatency>
-<Average-caseLatency>530546684</Average-caseLatency>
-<Worst-caseLatency>530566608</Worst-caseLatency>
-<Best-caseRealTimeLatency>5.305 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>5.305 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>5.306 sec</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>530518516 ~ 530566609</PipelineInitiationInterval>
+<Best-caseLatency>349811915</Best-caseLatency>
+<Average-caseLatency>349840084</Average-caseLatency>
+<Worst-caseLatency>349860008</Worst-caseLatency>
+<Best-caseRealTimeLatency>3.498 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>3.498 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>3.499 sec</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>349811916 ~ 349860009</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
@@ -24128,15 +24306,15 @@
 <BRAM_18K>416</BRAM_18K>
 <AVAIL_BRAM>432</AVAIL_BRAM>
 <UTIL_BRAM>96</UTIL_BRAM>
-<DSP>67</DSP>
+<DSP>71</DSP>
 <AVAIL_DSP>360</AVAIL_DSP>
-<UTIL_DSP>18</UTIL_DSP>
-<FF>38771</FF>
+<UTIL_DSP>19</UTIL_DSP>
+<FF>40438</FF>
 <AVAIL_FF>141120</AVAIL_FF>
-<UTIL_FF>27</UTIL_FF>
-<LUT>69265</LUT>
+<UTIL_FF>28</UTIL_FF>
+<LUT>70443</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
-<UTIL_LUT>98</UTIL_LUT>
+<UTIL_LUT>99</UTIL_LUT>
 <URAM>0</URAM>
 <AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>

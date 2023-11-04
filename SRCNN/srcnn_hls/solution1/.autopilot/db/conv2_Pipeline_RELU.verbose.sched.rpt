@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_RELU'
 ================================================================
-* Date:           Sat Nov  4 22:06:20 2023
+* Date:           Sun Nov  5 00:33:51 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -169,13 +169,13 @@ ST_8 : Operation 68 [1/1] (0.00ns) (grouped into LUT with out node and_ln117)   
 ST_8 : Operation 69 [1/2] (2.78ns)   --->   "%tmp_28 = fcmp_olt  i32 %add15_0_i, i32 0" [src/conv2.cpp:117->src/conv2.cpp:55]   --->   Operation 69 'fcmp' 'tmp_28' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
 ST_8 : Operation 70 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln117 = and i1 %or_ln117, i1 %tmp_28" [src/conv2.cpp:117->src/conv2.cpp:55]   --->   Operation 70 'and' 'and_ln117' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_8 : Operation 71 [1/1] (0.00ns)   --->   "%br_ln117 = br i1 %and_ln117, void %for.inc.0.i, void %if.then.0.i" [src/conv2.cpp:117->src/conv2.cpp:55]   --->   Operation 71 'br' 'br_ln117' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 72 [1/1] (0.73ns)   --->   "%switch_ln118 = switch i2 %trunc_ln, void %arrayidx12412.0.i.case.262, i2 0, void %arrayidx12412.0.i.case.060, i2 1, void %arrayidx12412.0.i.case.161" [src/conv2.cpp:118->src/conv2.cpp:55]   --->   Operation 72 'switch' 'switch_ln118' <Predicate = (and_ln117)> <Delay = 0.73>
+ST_8 : Operation 72 [1/1] (0.73ns)   --->   "%switch_ln118 = switch i2 %trunc_ln, void %arrayidx12412.0.i.case.298, i2 0, void %arrayidx12412.0.i.case.096, i2 1, void %arrayidx12412.0.i.case.197" [src/conv2.cpp:118->src/conv2.cpp:55]   --->   Operation 72 'switch' 'switch_ln118' <Predicate = (and_ln117)> <Delay = 0.73>
 ST_8 : Operation 73 [1/1] (1.23ns)   --->   "%store_ln118 = store i32 0, i10 %conv2_float_255_255_float_64_1_1_float_float_255_255_o_10" [src/conv2.cpp:118->src/conv2.cpp:55]   --->   Operation 73 'store' 'store_ln118' <Predicate = (trunc_ln == 1 & and_ln117)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1020> <RAM>
-ST_8 : Operation 74 [1/1] (0.00ns)   --->   "%br_ln118 = br void %arrayidx12412.0.i.exit59" [src/conv2.cpp:118->src/conv2.cpp:55]   --->   Operation 74 'br' 'br_ln118' <Predicate = (trunc_ln == 1 & and_ln117)> <Delay = 0.00>
+ST_8 : Operation 74 [1/1] (0.00ns)   --->   "%br_ln118 = br void %arrayidx12412.0.i.exit95" [src/conv2.cpp:118->src/conv2.cpp:55]   --->   Operation 74 'br' 'br_ln118' <Predicate = (trunc_ln == 1 & and_ln117)> <Delay = 0.00>
 ST_8 : Operation 75 [1/1] (1.23ns)   --->   "%store_ln118 = store i32 0, i10 %conv2_float_255_255_float_64_1_1_float_float_255_255_o_9" [src/conv2.cpp:118->src/conv2.cpp:55]   --->   Operation 75 'store' 'store_ln118' <Predicate = (trunc_ln == 0 & and_ln117)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1020> <RAM>
-ST_8 : Operation 76 [1/1] (0.00ns)   --->   "%br_ln118 = br void %arrayidx12412.0.i.exit59" [src/conv2.cpp:118->src/conv2.cpp:55]   --->   Operation 76 'br' 'br_ln118' <Predicate = (trunc_ln == 0 & and_ln117)> <Delay = 0.00>
+ST_8 : Operation 76 [1/1] (0.00ns)   --->   "%br_ln118 = br void %arrayidx12412.0.i.exit95" [src/conv2.cpp:118->src/conv2.cpp:55]   --->   Operation 76 'br' 'br_ln118' <Predicate = (trunc_ln == 0 & and_ln117)> <Delay = 0.00>
 ST_8 : Operation 77 [1/1] (1.23ns)   --->   "%store_ln118 = store i32 0, i10 %conv2_float_255_255_float_64_1_1_float_float_255_255_o_11" [src/conv2.cpp:118->src/conv2.cpp:55]   --->   Operation 77 'store' 'store_ln118' <Predicate = (trunc_ln != 0 & trunc_ln != 1 & and_ln117)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1020> <RAM>
-ST_8 : Operation 78 [1/1] (0.00ns)   --->   "%br_ln118 = br void %arrayidx12412.0.i.exit59" [src/conv2.cpp:118->src/conv2.cpp:55]   --->   Operation 78 'br' 'br_ln118' <Predicate = (trunc_ln != 0 & trunc_ln != 1 & and_ln117)> <Delay = 0.00>
+ST_8 : Operation 78 [1/1] (0.00ns)   --->   "%br_ln118 = br void %arrayidx12412.0.i.exit95" [src/conv2.cpp:118->src/conv2.cpp:55]   --->   Operation 78 'br' 'br_ln118' <Predicate = (trunc_ln != 0 & trunc_ln != 1 & and_ln117)> <Delay = 0.00>
 ST_8 : Operation 79 [1/1] (0.00ns)   --->   "%br_ln119 = br void %for.inc.0.i" [src/conv2.cpp:119->src/conv2.cpp:55]   --->   Operation 79 'br' 'br_ln119' <Predicate = (and_ln117)> <Delay = 0.00>
 
 

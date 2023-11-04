@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1699096048868">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1699104900906">
   <ports id="1" name="mul_ln115" type="PortType" coreId="1852142702" bitwidth="10">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="2" name="empty" type="PortType" coreId="1852142702" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_2" type="PortType" coreName="RAM" coreId="808525885" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="1020">
+  <ports id="3" name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_2" type="PortType" coreName="RAM" coreId="824196384" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="1020">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="4" name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_1" type="PortType" coreName="RAM" coreId="1635000354" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="1020">
+  <ports id="4" name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_1" type="PortType" coreName="RAM" coreId="1008746033" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="1020">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="5" name="conv2_float_255_255_float_64_1_1_float_float_255_255_o" type="PortType" coreName="RAM" coreId="4294967294" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="1020">
+  <ports id="5" name="conv2_float_255_255_float_64_1_1_float_float_255_255_o" type="PortType" coreName="RAM" coreId="1852142702" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="1020">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
@@ -339,7 +339,7 @@
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>mux</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="tmp" lineNumber="115" fileName="src/conv2.cpp" fileDirectory="../." rtlName="mux_3_2_32_1_1_U304" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="export_output_buffer_c2" bitwidth="32" opcode="mux" nodeLabel="1.0" m_display="0" m_delay="0.47" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="tmp" lineNumber="115" fileName="src/conv2.cpp" fileDirectory="../." rtlName="mux_3_2_32_1_1_U316" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="export_output_buffer_c2" bitwidth="32" opcode="mux" nodeLabel="1.0" m_display="0" m_delay="0.47" m_topoIndex="32" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="55" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="115" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
         <dataInputObjs>load</dataInputObjs>
@@ -513,16 +513,16 @@
     <basic_blocks id="61" name="if.then.0.i" type="BlockType">
       <controlInputObjs>arrayidx12412.0.i.exit</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
-      <controlOutputObjs>arrayidx12412.0.i.case.262</controlOutputObjs>
-      <controlOutputObjs>arrayidx12412.0.i.case.060</controlOutputObjs>
-      <controlOutputObjs>arrayidx12412.0.i.case.161</controlOutputObjs>
+      <controlOutputObjs>arrayidx12412.0.i.case.298</controlOutputObjs>
+      <controlOutputObjs>arrayidx12412.0.i.case.096</controlOutputObjs>
+      <controlOutputObjs>arrayidx12412.0.i.case.197</controlOutputObjs>
       <node_objs xsi:type="cdfg:CdfgNode" id="60" name="_ln118" lineNumber="118" fileName="src/conv2.cpp" fileDirectory="../." coreId="0" contextFuncName="export_output_buffer_c2" opcode="switch" nodeLabel="7.0" m_display="0" m_delay="0.73" m_topoIndex="53" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="55" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="118" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
         <dataInputObjs>partselect</dataInputObjs>
-        <controlInputObjs>arrayidx12412.0.i.case.262</controlInputObjs>
-        <controlInputObjs>arrayidx12412.0.i.case.060</controlInputObjs>
-        <controlInputObjs>arrayidx12412.0.i.case.161</controlInputObjs>
+        <controlInputObjs>arrayidx12412.0.i.case.298</controlInputObjs>
+        <controlInputObjs>arrayidx12412.0.i.case.096</controlInputObjs>
+        <controlInputObjs>arrayidx12412.0.i.case.197</controlInputObjs>
         <constName>empty</constName>
       </node_objs>
       <fileValidLineNumbers fileName="src/conv2.cpp">
@@ -530,10 +530,10 @@
         <validLinenumbers>55</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
-    <basic_blocks id="64" name="arrayidx12412.0.i.case.161" type="BlockType">
+    <basic_blocks id="64" name="arrayidx12412.0.i.case.197" type="BlockType">
       <controlInputObjs>if.then.0.i</controlInputObjs>
       <controlOutputObjs>switch</controlOutputObjs>
-      <controlOutputObjs>arrayidx12412.0.i.exit59</controlOutputObjs>
+      <controlOutputObjs>arrayidx12412.0.i.exit95</controlOutputObjs>
       <node_objs xsi:type="cdfg:CdfgNode" id="62" name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_10_write_ln118" lineNumber="118" fileName="src/conv2.cpp" fileDirectory="../." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="export_output_buffer_c2" opcode="store" nodeLabel="7.0" m_display="0" m_delay="1.23" m_topoIndex="54" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="55" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="118" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
@@ -543,17 +543,17 @@
       <node_objs xsi:type="cdfg:CdfgNode" id="63" name="br_ln118" lineNumber="118" fileName="src/conv2.cpp" fileDirectory="../." coreId="0" contextFuncName="export_output_buffer_c2" opcode="br" nodeLabel="7.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="55" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="118" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
-        <controlInputObjs>arrayidx12412.0.i.exit59</controlInputObjs>
+        <controlInputObjs>arrayidx12412.0.i.exit95</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="src/conv2.cpp">
         <validLinenumbers>118</validLinenumbers>
         <validLinenumbers>55</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
-    <basic_blocks id="67" name="arrayidx12412.0.i.case.060" type="BlockType">
+    <basic_blocks id="67" name="arrayidx12412.0.i.case.096" type="BlockType">
       <controlInputObjs>if.then.0.i</controlInputObjs>
       <controlOutputObjs>switch</controlOutputObjs>
-      <controlOutputObjs>arrayidx12412.0.i.exit59</controlOutputObjs>
+      <controlOutputObjs>arrayidx12412.0.i.exit95</controlOutputObjs>
       <node_objs xsi:type="cdfg:CdfgNode" id="65" name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_9_write_ln118" lineNumber="118" fileName="src/conv2.cpp" fileDirectory="../." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="export_output_buffer_c2" opcode="store" nodeLabel="7.0" m_display="0" m_delay="1.23" m_topoIndex="56" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="55" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="118" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
@@ -563,17 +563,17 @@
       <node_objs xsi:type="cdfg:CdfgNode" id="66" name="br_ln118" lineNumber="118" fileName="src/conv2.cpp" fileDirectory="../." coreId="0" contextFuncName="export_output_buffer_c2" opcode="br" nodeLabel="7.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="55" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="118" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
-        <controlInputObjs>arrayidx12412.0.i.exit59</controlInputObjs>
+        <controlInputObjs>arrayidx12412.0.i.exit95</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="src/conv2.cpp">
         <validLinenumbers>118</validLinenumbers>
         <validLinenumbers>55</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
-    <basic_blocks id="70" name="arrayidx12412.0.i.case.262" type="BlockType">
+    <basic_blocks id="70" name="arrayidx12412.0.i.case.298" type="BlockType">
       <controlInputObjs>if.then.0.i</controlInputObjs>
       <controlOutputObjs>switch</controlOutputObjs>
-      <controlOutputObjs>arrayidx12412.0.i.exit59</controlOutputObjs>
+      <controlOutputObjs>arrayidx12412.0.i.exit95</controlOutputObjs>
       <node_objs xsi:type="cdfg:CdfgNode" id="68" name="conv2_float_255_255_float_64_1_1_float_float_255_255_o_11_write_ln118" lineNumber="118" fileName="src/conv2.cpp" fileDirectory="../." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="export_output_buffer_c2" opcode="store" nodeLabel="7.0" m_display="0" m_delay="1.23" m_topoIndex="58" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="55" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="118" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
@@ -583,17 +583,17 @@
       <node_objs xsi:type="cdfg:CdfgNode" id="69" name="br_ln118" lineNumber="118" fileName="src/conv2.cpp" fileDirectory="../." coreId="0" contextFuncName="export_output_buffer_c2" opcode="br" nodeLabel="7.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="55" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="118" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
-        <controlInputObjs>arrayidx12412.0.i.exit59</controlInputObjs>
+        <controlInputObjs>arrayidx12412.0.i.exit95</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="src/conv2.cpp">
         <validLinenumbers>118</validLinenumbers>
         <validLinenumbers>55</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
-    <basic_blocks id="72" name="arrayidx12412.0.i.exit59" type="BlockType">
-      <controlInputObjs>arrayidx12412.0.i.case.161</controlInputObjs>
-      <controlInputObjs>arrayidx12412.0.i.case.060</controlInputObjs>
-      <controlInputObjs>arrayidx12412.0.i.case.262</controlInputObjs>
+    <basic_blocks id="72" name="arrayidx12412.0.i.exit95" type="BlockType">
+      <controlInputObjs>arrayidx12412.0.i.case.197</controlInputObjs>
+      <controlInputObjs>arrayidx12412.0.i.case.096</controlInputObjs>
+      <controlInputObjs>arrayidx12412.0.i.case.298</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
@@ -610,7 +610,7 @@
     </basic_blocks>
     <basic_blocks id="80" name="for.inc.0.i" type="BlockType">
       <controlInputObjs>arrayidx12412.0.i.exit</controlInputObjs>
-      <controlInputObjs>arrayidx12412.0.i.exit59</controlInputObjs>
+      <controlInputObjs>arrayidx12412.0.i.exit95</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.body8.0.i</controlOutputObjs>

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2_Pipeline_LOAD_INPUT_BH_L'" level="0">
-<item name = "Date">Sat Nov  4 22:07:26 2023
+<item name = "Date">Sun Nov  5 00:34:58 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -88,15 +88,15 @@
 <column name="add_ln79_fu_269_p2">+, 0, 0, 14, 7, 1</column>
 <column name="add_ln80_1_fu_417_p2">+, 0, 0, 17, 10, 1</column>
 <column name="add_ln80_fu_501_p2">+, 0, 0, 9, 2, 1</column>
-<column name="empty_339_fu_538_p2">+, 0, 0, 21, 14, 14</column>
-<column name="empty_343_fu_518_p2">+, 0, 0, 18, 11, 11</column>
+<column name="empty_341_fu_538_p2">+, 0, 0, 21, 14, 14</column>
+<column name="empty_345_fu_518_p2">+, 0, 0, 18, 11, 11</column>
 <column name="empty_fu_411_p2">+, 0, 0, 15, 8, 1</column>
-<column name="empty_342_fu_491_p2">-, 0, 0, 17, 10, 10</column>
+<column name="empty_344_fu_491_p2">-, 0, 0, 17, 10, 10</column>
 <column name="and_ln79_fu_341_p2">and, 0, 0, 2, 1, 1</column>
 <column name="and_ln80_fu_373_p2">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state3_io">and, 0, 0, 2, 1, 1</column>
 <column name="ap_predicate_op77_readreq_state3">and, 0, 0, 2, 1, 1</column>
-<column name="exitcond6410_fu_335_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="exitcond6501_fu_335_p2">icmp, 0, 0, 15, 8, 2</column>
 <column name="icmp_ln79_fu_251_p2">icmp, 0, 0, 23, 16, 16</column>
 <column name="icmp_ln80_fu_275_p2">icmp, 0, 0, 17, 10, 10</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>

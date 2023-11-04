@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn'" level="0">
-<item name = "Date">Sat Nov  4 22:07:44 2023
+<item name = "Date">Sun Nov  5 00:35:16 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">530518515, 530566608, 5.305 sec, 5.306 sec, 530518516, 530566609, no</column>
+<column name="">349811915, 349860008, 3.498 sec, 3.499 sec, 349811916, 349860009, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -32,7 +32,7 @@
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="grp_conv1_fu_238">conv1, 90697568, 90720416, 0.907 sec, 0.907 sec, 90697568, 90720416, no</column>
-<column name="grp_conv2_fu_272">conv2, 414514231, 414538711, 4.145 sec, 4.145 sec, 414514231, 414538711, no</column>
+<column name="grp_conv2_fu_272">conv2, 233807631, 233832111, 2.338 sec, 2.338 sec, 233807631, 233832111, no</column>
 <column name="grp_conv3_fu_301">conv3, 25306711, 25307476, 0.253 sec, 0.253 sec, 25306711, 25307476, no</column>
 </table>
 </item>
@@ -52,12 +52,12 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, -, -, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">416, 67, 38282, 68653, 0</column>
+<column name="Instance">416, 71, 39949, 69831, 0</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 612, -</column>
 <column name="Register">-, -, 489, -, -</column>
 <specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
-<specialColumn name="Utilization (%)">96, 18, 27, 98, 0</specialColumn>
+<specialColumn name="Utilization (%)">96, 19, 28, 99, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -66,16 +66,16 @@
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="control_s_axi_U">control_s_axi, 0, 0, 526, 936, 0</column>
 <column name="grp_conv1_fu_238">conv1, 72, 38, 22128, 38654, 0</column>
-<column name="grp_conv2_fu_272">conv2, 97, 5, 3846, 6562, 0</column>
+<column name="grp_conv2_fu_272">conv2, 97, 9, 5513, 7740, 0</column>
 <column name="grp_conv3_fu_301">conv3, 135, 7, 4624, 16312, 0</column>
-<column name="fadd_32ns_32ns_32_4_full_dsp_1_U481">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
-<column name="fadd_32ns_32ns_32_4_full_dsp_1_U482">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
-<column name="fadd_32ns_32ns_32_4_full_dsp_1_U483">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
-<column name="fadd_32ns_32ns_32_4_full_dsp_1_U484">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
-<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U488">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
-<column name="fmul_32ns_32ns_32_3_max_dsp_1_U485">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
-<column name="fmul_32ns_32ns_32_3_max_dsp_1_U486">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
-<column name="fmul_32ns_32ns_32_3_max_dsp_1_U487">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
+<column name="fadd_32ns_32ns_32_4_full_dsp_1_U496">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
+<column name="fadd_32ns_32ns_32_4_full_dsp_1_U497">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
+<column name="fadd_32ns_32ns_32_4_full_dsp_1_U498">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
+<column name="fadd_32ns_32ns_32_4_full_dsp_1_U499">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
+<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U503">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fmul_32ns_32ns_32_3_max_dsp_1_U500">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
+<column name="fmul_32ns_32ns_32_3_max_dsp_1_U501">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
+<column name="fmul_32ns_32ns_32_3_max_dsp_1_U502">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
 <column name="i1_m_axi_U">i1_m_axi, 16, 0, 838, 704, 0</column>
 <column name="i2_m_axi_U">i2_m_axi, 16, 0, 838, 704, 0</column>
 <column name="i3_m_axi_U">i3_m_axi, 16, 0, 838, 704, 0</column>

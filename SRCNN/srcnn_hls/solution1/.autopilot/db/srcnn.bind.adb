@@ -34,7 +34,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1228677182</coreId>
+						<coreId>1852142702</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -106,7 +106,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1597068134</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -142,7 +142,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2036559461</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -358,7 +358,7 @@
 						<coreName>RAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702310705</coreId>
+						<coreId>1597068134</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -430,7 +430,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1228677182</coreId>
+						<coreId>842230048</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -466,7 +466,7 @@
 						<coreName>RAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1634692191</coreId>
+						<coreId>1228677182</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -502,7 +502,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1597068134</coreId>
+						<coreId>1228677182</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -538,7 +538,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1025538403</coreId>
+						<coreId>1228677182</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -574,7 +574,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2036559461</coreId>
+						<coreId>1228677182</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -610,7 +610,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2036559461</coreId>
+						<coreId>1228677182</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1134,7 +1134,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>623104696</coreId>
+						<coreId>4203981504</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1235,7 +1235,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1280</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1291,7 +1291,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>597825792</coreId>
+						<coreId>4206365888</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1383,7 +1383,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>623100600</coreId>
+						<coreId>4214176512</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1428,7 +1428,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702310705</coreId>
+						<coreId>1228677182</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1490,7 +1490,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>807419168</coreId>
+						<coreId>2036559461</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1524,7 +1524,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1701602107</coreId>
+					<coreId>4184289672</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -2125,8 +2125,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>530518515</mMinLatency>
-			<mMaxLatency>530566608</mMaxLatency>
+			<mMinLatency>349811915</mMinLatency>
+			<mMaxLatency>349860008</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -2852,6 +2852,39 @@
 		<item_version>0</item_version>
 		<item class_id="48" tracking_level="0" version="0">
 			<first class_id="49" tracking_level="0" version="0">
+				<first>conv1_float_255_255_float_1_9_9_float_float_255_255_in</first>
+				<second>100</second>
+			</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>103</item>
+			</second>
+		</item>
+		<item>
+			<first>
+				<first>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1</first>
+				<second>100</second>
+			</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>103</item>
+			</second>
+		</item>
+		<item>
+			<first>
+				<first>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2</first>
+				<second>100</second>
+			</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>103</item>
+			</second>
+		</item>
+		<item>
+			<first>
 				<first>conv1_float_255_255_float_1_9_9_float_float_255_255_ou</first>
 				<second>100</second>
 			</first>
@@ -2985,39 +3018,6 @@
 		<item>
 			<first>
 				<first>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_2_0</first>
-				<second>100</second>
-			</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>103</item>
-			</second>
-		</item>
-		<item>
-			<first>
-				<first>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0</first>
-				<second>100</second>
-			</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>103</item>
-			</second>
-		</item>
-		<item>
-			<first>
-				<first>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1</first>
-				<second>100</second>
-			</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>103</item>
-			</second>
-		</item>
-		<item>
-			<first>
-				<first>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2</first>
 				<second>100</second>
 			</first>
 			<second>

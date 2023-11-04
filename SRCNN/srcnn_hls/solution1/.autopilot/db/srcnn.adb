@@ -34,7 +34,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1228677182</coreId>
+              <coreId>1852142702</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -106,7 +106,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1597068134</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -142,7 +142,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2036559461</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -358,7 +358,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1702310705</coreId>
+              <coreId>1597068134</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -430,7 +430,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1228677182</coreId>
+              <coreId>842230048</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -466,7 +466,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1634692191</coreId>
+              <coreId>1228677182</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -502,7 +502,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1597068134</coreId>
+              <coreId>1228677182</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -538,7 +538,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1025538403</coreId>
+              <coreId>1228677182</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -574,7 +574,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2036559461</coreId>
+              <coreId>1228677182</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -610,7 +610,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2036559461</coreId>
+              <coreId>1228677182</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -828,7 +828,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName/>
+              <rtlName>fadd_32ns_32ns_32_4_full_dsp_1_U496</rtlName>
               <control>auto</control>
               <opType>adapter</opType>
               <implIndex>s_axilite</implIndex>
@@ -1127,14 +1127,14 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>grp_conv2_fu_272</rtlName>
+              <rtlName>fadd_32ns_32ns_32_4_full_dsp_1_U496</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>623104696</coreId>
+              <coreId>4203981504</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1235,7 +1235,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1280</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1291,7 +1291,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>597825792</coreId>
+              <coreId>4206365888</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1383,7 +1383,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>623100600</coreId>
+              <coreId>4214176512</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1428,7 +1428,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1702310705</coreId>
+              <coreId>1228677182</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1490,7 +1490,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>807419168</coreId>
+              <coreId>2036559461</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1524,7 +1524,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>1701602107</coreId>
+            <coreId>4184289672</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -2125,8 +2125,8 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>530518515</mMinLatency>
-        <mMaxLatency>530566608</mMaxLatency>
+        <mMinLatency>349811915</mMinLatency>
+        <mMaxLatency>349860008</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
       </item>
@@ -2546,7 +2546,7 @@
           </second>
         </item>
         <item>
-          <first>fadd_32ns_32ns_32_4_full_dsp_1_U481 (fadd_32ns_32ns_32_4_full_dsp_1)</first>
+          <first>fadd_32ns_32ns_32_4_full_dsp_1_U496 (fadd_32ns_32ns_32_4_full_dsp_1)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -2565,7 +2565,7 @@
           </second>
         </item>
         <item>
-          <first>fadd_32ns_32ns_32_4_full_dsp_1_U482 (fadd_32ns_32ns_32_4_full_dsp_1)</first>
+          <first>fadd_32ns_32ns_32_4_full_dsp_1_U497 (fadd_32ns_32ns_32_4_full_dsp_1)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -2584,7 +2584,7 @@
           </second>
         </item>
         <item>
-          <first>fadd_32ns_32ns_32_4_full_dsp_1_U483 (fadd_32ns_32ns_32_4_full_dsp_1)</first>
+          <first>fadd_32ns_32ns_32_4_full_dsp_1_U498 (fadd_32ns_32ns_32_4_full_dsp_1)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -2603,7 +2603,7 @@
           </second>
         </item>
         <item>
-          <first>fadd_32ns_32ns_32_4_full_dsp_1_U484 (fadd_32ns_32ns_32_4_full_dsp_1)</first>
+          <first>fadd_32ns_32ns_32_4_full_dsp_1_U499 (fadd_32ns_32ns_32_4_full_dsp_1)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -2622,14 +2622,14 @@
           </second>
         </item>
         <item>
-          <first>fcmp_32ns_32ns_1_2_no_dsp_1_U488 (fcmp_32ns_32ns_1_2_no_dsp_1)</first>
+          <first>fcmp_32ns_32ns_1_2_no_dsp_1_U503 (fcmp_32ns_32ns_1_2_no_dsp_1)</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>fmul_32ns_32ns_32_3_max_dsp_1_U485 (fmul_32ns_32ns_32_3_max_dsp_1)</first>
+          <first>fmul_32ns_32ns_32_3_max_dsp_1_U500 (fmul_32ns_32ns_32_3_max_dsp_1)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -2648,7 +2648,7 @@
           </second>
         </item>
         <item>
-          <first>fmul_32ns_32ns_32_3_max_dsp_1_U486 (fmul_32ns_32ns_32_3_max_dsp_1)</first>
+          <first>fmul_32ns_32ns_32_3_max_dsp_1_U501 (fmul_32ns_32ns_32_3_max_dsp_1)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -2667,7 +2667,7 @@
           </second>
         </item>
         <item>
-          <first>fmul_32ns_32ns_32_3_max_dsp_1_U487 (fmul_32ns_32ns_32_3_max_dsp_1)</first>
+          <first>fmul_32ns_32ns_32_3_max_dsp_1_U502 (fmul_32ns_32ns_32_3_max_dsp_1)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -2723,15 +2723,15 @@
             </item>
             <item>
               <first>DSP</first>
-              <second>5</second>
+              <second>9</second>
             </item>
             <item>
               <first>FF</first>
-              <second>3846</second>
+              <second>5513</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>6562</second>
+              <second>7740</second>
             </item>
             <item>
               <first>URAM</first>
@@ -4268,56 +4268,56 @@
           </second>
         </item>
         <item>
-          <first>fadd_32ns_32ns_32_4_full_dsp_1_U481</first>
+          <first>fadd_32ns_32ns_32_4_full_dsp_1_U496</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>fadd_32ns_32ns_32_4_full_dsp_1_U482</first>
+          <first>fadd_32ns_32ns_32_4_full_dsp_1_U497</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>fadd_32ns_32ns_32_4_full_dsp_1_U483</first>
+          <first>fadd_32ns_32ns_32_4_full_dsp_1_U498</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>fadd_32ns_32ns_32_4_full_dsp_1_U484</first>
+          <first>fadd_32ns_32ns_32_4_full_dsp_1_U499</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>fcmp_32ns_32ns_1_2_no_dsp_1_U488</first>
+          <first>fcmp_32ns_32ns_1_2_no_dsp_1_U503</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>fmul_32ns_32ns_32_3_max_dsp_1_U485</first>
+          <first>fmul_32ns_32ns_32_3_max_dsp_1_U500</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>fmul_32ns_32ns_32_3_max_dsp_1_U486</first>
+          <first>fmul_32ns_32ns_32_3_max_dsp_1_U501</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>fmul_32ns_32ns_32_3_max_dsp_1_U487</first>
+          <first>fmul_32ns_32ns_32_3_max_dsp_1_U502</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -4398,19 +4398,20 @@
         <count>11</count>
         <item_version>0</item_version>
         <item class_id="40" tracking_level="0" version="0">
-          <first>fadd_32ns_32ns_32_4_full_dsp_1_U481 (fadd_32ns_32ns_32_4_full_dsp_1)</first>
+          <first>fadd_32ns_32ns_32_4_full_dsp_1_U496 (fadd_32ns_32ns_32_4_full_dsp_1)</first>
           <second>
-            <count>75</count>
+            <count>77</count>
             <item_version>0</item_version>
             <item>23</item>
             <item>38</item>
+            <item>50</item>
             <item>95</item>
+            <item>99</item>
+            <item>104</item>
             <item>119</item>
-            <item>120</item>
             <item>139</item>
             <item>159</item>
-            <item>169</item>
-            <item>174</item>
+            <item>167</item>
             <item>179</item>
             <item>184</item>
             <item>187</item>
@@ -4423,6 +4424,7 @@
             <item>209</item>
             <item>216</item>
             <item>219</item>
+            <item>221</item>
             <item>222</item>
             <item>225</item>
             <item>283</item>
@@ -4480,7 +4482,7 @@
           </second>
         </item>
         <item>
-          <first>fadd_32ns_32ns_32_4_full_dsp_1_U482 (fadd_32ns_32ns_32_4_full_dsp_1)</first>
+          <first>fadd_32ns_32ns_32_4_full_dsp_1_U497 (fadd_32ns_32ns_32_4_full_dsp_1)</first>
           <second>
             <count>66</count>
             <item_version>0</item_version>
@@ -4553,7 +4555,7 @@
           </second>
         </item>
         <item>
-          <first>fadd_32ns_32ns_32_4_full_dsp_1_U483 (fadd_32ns_32ns_32_4_full_dsp_1)</first>
+          <first>fadd_32ns_32ns_32_4_full_dsp_1_U498 (fadd_32ns_32ns_32_4_full_dsp_1)</first>
           <second>
             <count>64</count>
             <item_version>0</item_version>
@@ -4624,7 +4626,7 @@
           </second>
         </item>
         <item>
-          <first>fadd_32ns_32ns_32_4_full_dsp_1_U484 (fadd_32ns_32ns_32_4_full_dsp_1)</first>
+          <first>fadd_32ns_32ns_32_4_full_dsp_1_U499 (fadd_32ns_32ns_32_4_full_dsp_1)</first>
           <second>
             <count>52</count>
             <item_version>0</item_version>
@@ -4683,7 +4685,7 @@
           </second>
         </item>
         <item>
-          <first>fcmp_32ns_32ns_1_2_no_dsp_1_U488 (fcmp_32ns_32ns_1_2_no_dsp_1)</first>
+          <first>fcmp_32ns_32ns_1_2_no_dsp_1_U503 (fcmp_32ns_32ns_1_2_no_dsp_1)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -4692,21 +4694,22 @@
           </second>
         </item>
         <item>
-          <first>fmul_32ns_32ns_32_3_max_dsp_1_U485 (fmul_32ns_32ns_32_3_max_dsp_1)</first>
+          <first>fmul_32ns_32ns_32_3_max_dsp_1_U500 (fmul_32ns_32ns_32_3_max_dsp_1)</first>
           <second>
-            <count>70</count>
+            <count>71</count>
             <item_version>0</item_version>
+            <item>45</item>
+            <item>89</item>
             <item>94</item>
-            <item>115</item>
             <item>138</item>
             <item>158</item>
-            <item>159</item>
-            <item>164</item>
+            <item>162</item>
             <item>178</item>
             <item>186</item>
             <item>189</item>
             <item>192</item>
             <item>195</item>
+            <item>206</item>
             <item>211</item>
             <item>224</item>
             <item>227</item>
@@ -4769,7 +4772,7 @@
           </second>
         </item>
         <item>
-          <first>fmul_32ns_32ns_32_3_max_dsp_1_U486 (fmul_32ns_32ns_32_3_max_dsp_1)</first>
+          <first>fmul_32ns_32ns_32_3_max_dsp_1_U501 (fmul_32ns_32ns_32_3_max_dsp_1)</first>
           <second>
             <count>67</count>
             <item_version>0</item_version>
@@ -4843,7 +4846,7 @@
           </second>
         </item>
         <item>
-          <first>fmul_32ns_32ns_32_3_max_dsp_1_U487 (fmul_32ns_32ns_32_3_max_dsp_1)</first>
+          <first>fmul_32ns_32ns_32_3_max_dsp_1_U502 (fmul_32ns_32ns_32_3_max_dsp_1)</first>
           <second>
             <count>66</count>
             <item_version>0</item_version>
@@ -5286,6 +5289,39 @@
       <item_version>0</item_version>
       <item class_id="54" tracking_level="0" version="0">
         <first class_id="55" tracking_level="0" version="0">
+          <first>conv1_float_255_255_float_1_9_9_float_float_255_255_in</first>
+          <second>100</second>
+        </first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>103</item>
+        </second>
+      </item>
+      <item>
+        <first>
+          <first>conv1_float_255_255_float_1_9_9_float_float_255_255_in_1</first>
+          <second>100</second>
+        </first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>103</item>
+        </second>
+      </item>
+      <item>
+        <first>
+          <first>conv1_float_255_255_float_1_9_9_float_float_255_255_in_2</first>
+          <second>100</second>
+        </first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>103</item>
+        </second>
+      </item>
+      <item>
+        <first>
           <first>conv1_float_255_255_float_1_9_9_float_float_255_255_ou</first>
           <second>100</second>
         </first>
@@ -5419,39 +5455,6 @@
       <item>
         <first>
           <first>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_2_0</first>
-          <second>100</second>
-        </first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>103</item>
-        </second>
-      </item>
-      <item>
-        <first>
-          <first>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0</first>
-          <second>100</second>
-        </first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>103</item>
-        </second>
-      </item>
-      <item>
-        <first>
-          <first>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1</first>
-          <second>100</second>
-        </first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>103</item>
-        </second>
-      </item>
-      <item>
-        <first>
-          <first>p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2</first>
           <second>100</second>
         </first>
         <second>

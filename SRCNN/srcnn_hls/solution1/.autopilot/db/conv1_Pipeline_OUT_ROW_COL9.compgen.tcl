@@ -88,16 +88,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     id 222 \
-    name p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0 \
+    name conv1_float_255_255_float_1_9_9_float_float_255_255_in_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0 \
+    corename conv1_float_255_255_float_1_9_9_float_float_255_255_in_2 \
     op interface \
-    ports { p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_address0 { O 11 vector } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_ce0 { O 1 bit } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_q0 { I 32 vector } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_address1 { O 11 vector } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_ce1 { O 1 bit } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0_q1 { I 32 vector } } \
+    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_address0 { O 11 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_q0 { I 32 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_address1 { O 11 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_ce1 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_in_2_q1 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_in_2'"
 }
 }
 
@@ -107,16 +107,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     id 223 \
-    name p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1 \
+    name conv1_float_255_255_float_1_9_9_float_float_255_255_in_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1 \
+    corename conv1_float_255_255_float_1_9_9_float_float_255_255_in_1 \
     op interface \
-    ports { p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1_address0 { O 11 vector } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1_ce0 { O 1 bit } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1_q0 { I 32 vector } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1_address1 { O 11 vector } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1_ce1 { O 1 bit } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1_q1 { I 32 vector } } \
+    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_address0 { O 11 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_q0 { I 32 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_address1 { O 11 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_ce1 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_in_1_q1 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_in_1'"
 }
 }
 
@@ -126,16 +126,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     id 224 \
-    name p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2 \
+    name conv1_float_255_255_float_1_9_9_float_float_255_255_in \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2 \
+    corename conv1_float_255_255_float_1_9_9_float_float_255_255_in \
     op interface \
-    ports { p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2_address0 { O 11 vector } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2_ce0 { O 1 bit } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2_q0 { I 32 vector } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2_address1 { O 11 vector } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2_ce1 { O 1 bit } p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2_q1 { I 32 vector } } \
+    ports { conv1_float_255_255_float_1_9_9_float_float_255_255_in_address0 { O 11 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_ce0 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_in_q0 { I 32 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_address1 { O 11 vector } conv1_float_255_255_float_1_9_9_float_float_255_255_in_ce1 { O 1 bit } conv1_float_255_255_float_1_9_9_float_float_255_255_in_q1 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_float_255_255_float_1_9_9_float_float_255_255_in'"
 }
 }
 

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_CLEARW4'
 ================================================================
-* Date:           Sat Nov  4 22:07:04 2023
+* Date:           Sun Nov  5 00:34:36 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -90,7 +90,7 @@ ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.1.i.i"   
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%w = load i8 %w_2" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 7 'load' 'w' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 8 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.76ns)   --->   "%icmp_ln72 = icmp_eq  i8 %w, i8 255" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 9 'icmp' 'icmp_ln72' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 10 [1/1] (0.76ns)   --->   "%add_ln72_1 = add i8 %w, i8 1" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 10 'add' 'add_ln72_1' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (0.76ns)   --->   "%add_ln72 = add i8 %w, i8 1" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 10 'add' 'add_ln72' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln72 = br i1 %icmp_ln72, void %for.inc.1.i.i.split, void %for.inc.2.i.i.preheader.exitStub" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 11 'br' 'br_ln72' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%zext_ln74 = zext i8 %w" [src/conv3.cpp:74->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 12 'zext' 'zext_ln74' <Predicate = (!icmp_ln72)> <Delay = 0.00>
 ST_1 : Operation 13 [1/1] (0.77ns)   --->   "%add_ln74 = add i9 %zext_ln74, i9 255" [src/conv3.cpp:74->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 13 'add' 'add_ln74' <Predicate = (!icmp_ln72)> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
@@ -99,7 +99,7 @@ ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%output_fm_buffer_0_addr = geteleme
 ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%speclooptripcount_ln72 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 16 'speclooptripcount' 'speclooptripcount_ln72' <Predicate = (!icmp_ln72)> <Delay = 0.00>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specloopname_ln72 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 17 'specloopname' 'specloopname_ln72' <Predicate = (!icmp_ln72)> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (1.23ns)   --->   "%store_ln74 = store i32 0, i10 %output_fm_buffer_0_addr" [src/conv3.cpp:74->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 18 'store' 'store_ln74' <Predicate = (!icmp_ln72)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 765> <RAM>
-ST_1 : Operation 19 [1/1] (0.42ns)   --->   "%store_ln72 = store i8 %add_ln72_1, i8 %w_2" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 19 'store' 'store_ln72' <Predicate = (!icmp_ln72)> <Delay = 0.42>
+ST_1 : Operation 19 [1/1] (0.42ns)   --->   "%store_ln72 = store i8 %add_ln72, i8 %w_2" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 19 'store' 'store_ln72' <Predicate = (!icmp_ln72)> <Delay = 0.42>
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln72 = br void %for.inc.1.i.i" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 20 'br' 'br_ln72' <Predicate = (!icmp_ln72)> <Delay = 0.00>
 ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 21 'ret' 'ret_ln0' <Predicate = (icmp_ln72)> <Delay = 0.00>
 
@@ -128,7 +128,7 @@ br_ln0                  (br               ) [ 00]
 w                       (load             ) [ 00]
 specpipeline_ln0        (specpipeline     ) [ 00]
 icmp_ln72               (icmp             ) [ 01]
-add_ln72_1              (add              ) [ 00]
+add_ln72                (add              ) [ 00]
 br_ln72                 (br               ) [ 00]
 zext_ln74               (zext             ) [ 00]
 add_ln74                (add              ) [ 00]
@@ -362,7 +362,7 @@ ret_ln0                 (ret              ) [ 00]
 </bind>
 </comp>
 
-<comp id="64" class="1004" name="add_ln72_1_fu_64">
+<comp id="64" class="1004" name="add_ln72_fu_64">
 <pin_list>
 <pin id="65" dir="0" index="0" bw="8" slack="0"/>
 <pin id="66" dir="0" index="1" bw="1" slack="0"/>
@@ -370,7 +370,7 @@ ret_ln0                 (ret              ) [ 00]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln72_1/1 "/>
+<opset="add_ln72/1 "/>
 </bind>
 </comp>
 
@@ -487,7 +487,7 @@ ret_ln0                 (ret              ) [ 00]
 		store_ln0 : 1
 		w : 1
 		icmp_ln72 : 2
-		add_ln72_1 : 2
+		add_ln72 : 2
 		br_ln72 : 3
 		zext_ln74 : 2
 		add_ln74 : 3
@@ -505,7 +505,7 @@ ret_ln0                 (ret              ) [ 00]
 |----------|-------------------|---------|---------|
 | Operation|  Functional Unit  |    FF   |   LUT   |
 |----------|-------------------|---------|---------|
-|    add   |  add_ln72_1_fu_64 |    0    |    15   |
+|    add   |   add_ln72_fu_64  |    0    |    15   |
 |          |   add_ln74_fu_74  |    0    |    16   |
 |----------|-------------------|---------|---------|
 |   icmp   |  icmp_ln72_fu_58  |    0    |    15   |

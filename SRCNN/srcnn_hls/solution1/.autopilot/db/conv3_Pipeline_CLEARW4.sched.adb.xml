@@ -109,10 +109,10 @@ for.inc.1.i.i:2 %icmp_ln72 = icmp_eq  i8 %w, i8 255
 
 <Node id="9" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.inc.1.i.i:3 %add_ln72_1 = add i8 %w, i8 1
+for.inc.1.i.i:3 %add_ln72 = add i8 %w, i8 1
 
 ]]></Node>
-<StgValue><ssdm name="add_ln72_1"/></StgValue>
+<StgValue><ssdm name="add_ln72"/></StgValue>
 </operation>
 
 <operation id="11" st_id="1" stage="1" lat="1">
@@ -252,7 +252,7 @@ for.inc.1.i.i.split:6 %store_ln74 = store i32 0, i10 %output_fm_buffer_0_addr
 
 <Node id="19" bw="0" op_0_bw="8" op_1_bw="8" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc.1.i.i.split:7 %store_ln72 = store i8 %add_ln72_1, i8 %w_2
+for.inc.1.i.i.split:7 %store_ln72 = store i8 %add_ln72, i8 %w_2
 
 ]]></Node>
 <StgValue><ssdm name="store_ln72"/></StgValue>

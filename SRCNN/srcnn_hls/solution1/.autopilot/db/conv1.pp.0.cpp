@@ -33551,10 +33551,9 @@ void conv1(ftmap_t input_ftmap[1][255][255],
 
  static ftmap_t output_fm_buffer[8][15][255] = {0};
 #pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=2
-#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=2
 
  static ftmap_t input_fm_buffer[1][15 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)];
-#pragma HLS ARRAY_PARTITION variable=input_fm_buffer type=block factor=2
+
 #pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=block factor=3
 
  static param_t weight_buffer[8][1][9][9];

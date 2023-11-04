@@ -1046,7 +1046,7 @@ arrayidx12412.0.i.exit:8 %br_ln117 = br i1 %and_ln117, void %for.inc.0.i, void %
 
 <Node id="60" bw="0" op_0_bw="2" op_1_bw="0" op_2_bw="2" op_3_bw="0" op_4_bw="2" op_5_bw="0">
 <![CDATA[
-if.then.0.i:0 %switch_ln118 = switch i2 %trunc_ln, void %arrayidx12412.0.i.case.262, i2 0, void %arrayidx12412.0.i.case.060, i2 1, void %arrayidx12412.0.i.case.161
+if.then.0.i:0 %switch_ln118 = switch i2 %trunc_ln, void %arrayidx12412.0.i.case.298, i2 0, void %arrayidx12412.0.i.case.096, i2 1, void %arrayidx12412.0.i.case.197
 
 ]]></Node>
 <StgValue><ssdm name="switch_ln118"/></StgValue>
@@ -1063,7 +1063,7 @@ if.then.0.i:0 %switch_ln118 = switch i2 %trunc_ln, void %arrayidx12412.0.i.case.
 
 <Node id="62" bw="0" op_0_bw="32" op_1_bw="10" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-arrayidx12412.0.i.case.161:0 %store_ln118 = store i32 0, i10 %conv2_float_255_255_float_64_1_1_float_float_255_255_o_10
+arrayidx12412.0.i.case.197:0 %store_ln118 = store i32 0, i10 %conv2_float_255_255_float_64_1_1_float_float_255_255_o_10
 
 ]]></Node>
 <StgValue><ssdm name="store_ln118"/></StgValue>
@@ -1080,7 +1080,7 @@ arrayidx12412.0.i.case.161:0 %store_ln118 = store i32 0, i10 %conv2_float_255_25
 
 <Node id="63" bw="0" op_0_bw="0">
 <![CDATA[
-arrayidx12412.0.i.case.161:1 %br_ln118 = br void %arrayidx12412.0.i.exit59
+arrayidx12412.0.i.case.197:1 %br_ln118 = br void %arrayidx12412.0.i.exit95
 
 ]]></Node>
 <StgValue><ssdm name="br_ln118"/></StgValue>
@@ -1097,7 +1097,7 @@ arrayidx12412.0.i.case.161:1 %br_ln118 = br void %arrayidx12412.0.i.exit59
 
 <Node id="65" bw="0" op_0_bw="32" op_1_bw="10" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-arrayidx12412.0.i.case.060:0 %store_ln118 = store i32 0, i10 %conv2_float_255_255_float_64_1_1_float_float_255_255_o_9
+arrayidx12412.0.i.case.096:0 %store_ln118 = store i32 0, i10 %conv2_float_255_255_float_64_1_1_float_float_255_255_o_9
 
 ]]></Node>
 <StgValue><ssdm name="store_ln118"/></StgValue>
@@ -1114,7 +1114,7 @@ arrayidx12412.0.i.case.060:0 %store_ln118 = store i32 0, i10 %conv2_float_255_25
 
 <Node id="66" bw="0" op_0_bw="0">
 <![CDATA[
-arrayidx12412.0.i.case.060:1 %br_ln118 = br void %arrayidx12412.0.i.exit59
+arrayidx12412.0.i.case.096:1 %br_ln118 = br void %arrayidx12412.0.i.exit95
 
 ]]></Node>
 <StgValue><ssdm name="br_ln118"/></StgValue>
@@ -1132,7 +1132,7 @@ arrayidx12412.0.i.case.060:1 %br_ln118 = br void %arrayidx12412.0.i.exit59
 
 <Node id="68" bw="0" op_0_bw="32" op_1_bw="10" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-arrayidx12412.0.i.case.262:0 %store_ln118 = store i32 0, i10 %conv2_float_255_255_float_64_1_1_float_float_255_255_o_11
+arrayidx12412.0.i.case.298:0 %store_ln118 = store i32 0, i10 %conv2_float_255_255_float_64_1_1_float_float_255_255_o_11
 
 ]]></Node>
 <StgValue><ssdm name="store_ln118"/></StgValue>
@@ -1150,7 +1150,7 @@ arrayidx12412.0.i.case.262:0 %store_ln118 = store i32 0, i10 %conv2_float_255_25
 
 <Node id="69" bw="0" op_0_bw="0">
 <![CDATA[
-arrayidx12412.0.i.case.262:1 %br_ln118 = br void %arrayidx12412.0.i.exit59
+arrayidx12412.0.i.case.298:1 %br_ln118 = br void %arrayidx12412.0.i.exit95
 
 ]]></Node>
 <StgValue><ssdm name="br_ln118"/></StgValue>
@@ -1166,7 +1166,7 @@ arrayidx12412.0.i.case.262:1 %br_ln118 = br void %arrayidx12412.0.i.exit59
 
 <Node id="71" bw="0" op_0_bw="0">
 <![CDATA[
-arrayidx12412.0.i.exit59:0 %br_ln119 = br void %for.inc.0.i
+arrayidx12412.0.i.exit95:0 %br_ln119 = br void %for.inc.0.i
 
 ]]></Node>
 <StgValue><ssdm name="br_ln119"/></StgValue>

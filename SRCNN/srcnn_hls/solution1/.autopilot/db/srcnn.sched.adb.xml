@@ -154,7 +154,7 @@ entry:42 %input_ftmap_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %input_f
 
 <Node id="103" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="32" op_4_bw="64" op_5_bw="32" op_6_bw="32" op_7_bw="64" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32">
 <![CDATA[
-entry:43 %call_ln44 = call void @conv1, i32 %i1, i64 %input_ftmap_read, i32 %w1, i64 %conv1_weights_read, i32 %conv1_biases, i32 %i2, i64 %conv1_output_ftmap_read, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_2_0, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
+entry:43 %call_ln44 = call void @conv1, i32 %i1, i64 %input_ftmap_read, i32 %w1, i64 %conv1_weights_read, i32 %conv1_biases, i32 %i2, i64 %conv1_output_ftmap_read, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_in_2, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_in, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_in_1, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_2_0, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
 
 ]]></Node>
 <StgValue><ssdm name="call_ln44"/></StgValue>
@@ -172,7 +172,7 @@ entry:43 %call_ln44 = call void @conv1, i32 %i1, i64 %input_ftmap_read, i32 %w1,
 
 <Node id="103" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="32" op_4_bw="64" op_5_bw="32" op_6_bw="32" op_7_bw="64" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32">
 <![CDATA[
-entry:43 %call_ln44 = call void @conv1, i32 %i1, i64 %input_ftmap_read, i32 %w1, i64 %conv1_weights_read, i32 %conv1_biases, i32 %i2, i64 %conv1_output_ftmap_read, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_2, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E15input_fm_buffer_0_1, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_2_0, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
+entry:43 %call_ln44 = call void @conv1, i32 %i1, i64 %input_ftmap_read, i32 %w1, i64 %conv1_weights_read, i32 %conv1_biases, i32 %i2, i64 %conv1_output_ftmap_read, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_in_2, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_in, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_in_1, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_0_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_1_0, i32 %p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E13weight_buffer_2_0, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
 
 ]]></Node>
 <StgValue><ssdm name="call_ln44"/></StgValue>
