@@ -95,10 +95,10 @@ reg   [9:0] add_ln65_cast_reg_290;
 wire    ap_block_pp0_stage0_11001;
 wire   [63:0] zext_ln65_2_fu_205_p1;
 wire    ap_block_pp0_stage0;
-reg   [7:0] phi_urem836_fu_68;
+reg   [7:0] phi_urem829_fu_68;
 wire   [7:0] select_ln63_fu_245_p3;
 wire    ap_loop_init;
-reg   [16:0] phi_mul834_fu_72;
+reg   [16:0] phi_mul827_fu_72;
 wire   [16:0] add_ln63_fu_214_p2;
 reg   [7:0] w_3_fu_76;
 wire   [7:0] add_ln63_1_fu_184_p2;
@@ -172,9 +172,9 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if ((ap_loop_init == 1'b1)) begin
-            phi_mul834_fu_72 <= 17'd0;
+            phi_mul827_fu_72 <= 17'd0;
         end else if (((icmp_ln63_1_fu_178_p2 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
-            phi_mul834_fu_72 <= add_ln63_fu_214_p2;
+            phi_mul827_fu_72 <= add_ln63_fu_214_p2;
         end
     end
 end
@@ -182,9 +182,9 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if ((ap_loop_init == 1'b1)) begin
-            phi_urem836_fu_68 <= 8'd0;
+            phi_urem829_fu_68 <= 8'd0;
         end else if (((icmp_ln63_1_fu_178_p2 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
-            phi_urem836_fu_68 <= select_ln63_fu_245_p3;
+            phi_urem829_fu_68 <= select_ln63_fu_245_p3;
         end
     end
 end
@@ -338,9 +338,9 @@ end
 
 assign add_ln63_1_fu_184_p2 = (w_3_fu_76 + 8'd1);
 
-assign add_ln63_3_fu_233_p2 = (phi_urem836_fu_68 + 8'd1);
+assign add_ln63_3_fu_233_p2 = (phi_urem829_fu_68 + 8'd1);
 
-assign add_ln63_fu_214_p2 = (phi_mul834_fu_72 + 17'd322);
+assign add_ln63_fu_214_p2 = (phi_mul827_fu_72 + 17'd322);
 
 assign add_ln65_1_fu_200_p2 = (add_ln65_cast_reg_290 + zext_ln65_fu_196_p1);
 
@@ -390,11 +390,11 @@ assign icmp_ln63_fu_239_p2 = ((add_ln63_3_fu_233_p2 < 8'd51) ? 1'b1 : 1'b0);
 
 assign select_ln63_fu_245_p3 = ((icmp_ln63_fu_239_p2[0:0] == 1'b1) ? add_ln63_3_fu_233_p2 : 8'd0);
 
-assign trunc_ln63_1_fu_220_p4 = {{phi_mul834_fu_72[16:14]}};
+assign trunc_ln63_1_fu_220_p4 = {{phi_mul827_fu_72[16:14]}};
 
 assign zext_ln65_2_fu_205_p1 = add_ln65_1_fu_200_p2;
 
-assign zext_ln65_fu_196_p1 = phi_urem836_fu_68;
+assign zext_ln65_fu_196_p1 = phi_urem829_fu_68;
 
 always @ (posedge ap_clk) begin
     add_ln65_cast_reg_290[9] <= 1'b0;

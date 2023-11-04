@@ -34,10 +34,10 @@ newFuncRoot:0 %w = alloca i32 1
 
 <Node id="5" bw="7" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-newFuncRoot:1 %tmp_287_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %tmp_287
+newFuncRoot:1 %tmp_285_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %tmp_285
 
 ]]></Node>
-<StgValue><ssdm name="tmp_287_read"/></StgValue>
+<StgValue><ssdm name="tmp_285_read"/></StgValue>
 </operation>
 
 <operation id="6" st_id="1" stage="1" lat="1">
@@ -203,10 +203,10 @@ for.body8.0.i.i.split:2 %specloopname_ln73 = specloopname void @_ssdm_op_SpecLoo
 
 <Node id="18" bw="14" op_0_bw="14" op_1_bw="7" op_2_bw="7">
 <![CDATA[
-for.body8.0.i.i.split:3 %tmp_300 = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i7.i7, i7 %tmp_287_read, i7 %empty
+for.body8.0.i.i.split:3 %tmp_297 = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i7.i7, i7 %tmp_285_read, i7 %empty
 
 ]]></Node>
-<StgValue><ssdm name="tmp_300"/></StgValue>
+<StgValue><ssdm name="tmp_297"/></StgValue>
 </operation>
 
 <operation id="17" st_id="1" stage="1" lat="1">
@@ -219,7 +219,7 @@ for.body8.0.i.i.split:3 %tmp_300 = bitconcatenate i14 @_ssdm_op_BitConcatenate.i
 
 <Node id="19" bw="64" op_0_bw="14">
 <![CDATA[
-for.body8.0.i.i.split:4 %zext_ln75 = zext i14 %tmp_300
+for.body8.0.i.i.split:4 %zext_ln75 = zext i14 %tmp_297
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln75"/></StgValue>

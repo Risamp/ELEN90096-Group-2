@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_RELU'
 ================================================================
-* Date:           Sat Nov  4 18:07:24 2023
+* Date:           Sat Nov  4 18:42:37 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -181,7 +181,7 @@ The critical path consists of the following:
 	'mux' operation ('tmp', src/conv2.cpp:113->src/conv2.cpp:53) [52]  (0.574 ns)
 	'add' operation ('add_ln113', src/conv2.cpp:113->src/conv2.cpp:53) [54]  (1.016 ns)
 	'select' operation ('select_ln115', src/conv2.cpp:115->src/conv2.cpp:53) [57]  (0.418 ns)
-	'store' operation ('store_ln115', src/conv2.cpp:115->src/conv2.cpp:53) of variable 'select_ln115_cast', src/conv2.cpp:115->src/conv2.cpp:53 on array 'conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_1' [61]  (1.237 ns)
+	'store' operation ('store_ln115', src/conv2.cpp:115->src/conv2.cpp:53) of variable 'select_ln115_cast', src/conv2.cpp:115->src/conv2.cpp:53 on array 'conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_3' [67]  (1.237 ns)
 
 
 ============================================================

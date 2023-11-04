@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv1_Pipeline_BW8'
 ================================================================
-* Date:           Sat Nov  4 18:07:55 2023
+* Date:           Sat Nov  4 18:43:20 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -128,7 +128,7 @@
 |ap_done                                                                   |  out|    1|  ap_ctrl_hs|                                               conv1_Pipeline_BW8|  return value|
 |ap_idle                                                                   |  out|    1|  ap_ctrl_hs|                                               conv1_Pipeline_BW8|  return value|
 |ap_ready                                                                  |  out|    1|  ap_ctrl_hs|                                               conv1_Pipeline_BW8|  return value|
-|tmp_299                                                                   |   in|    7|     ap_none|                                                          tmp_299|        scalar|
+|tmp_296                                                                   |   in|    7|     ap_none|                                                          tmp_296|        scalar|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_address0  |  out|   14|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_ce0       |  out|    1|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_we0       |  out|    1|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|

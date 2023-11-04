@@ -16,7 +16,7 @@ module srcnn_conv1_conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2
      
     reset, clk);
 
-parameter DataWidth = 12;
+parameter DataWidth = 16;
 parameter AddressWidth = 11;
 parameter AddressRange = 2024;
  

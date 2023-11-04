@@ -13,7 +13,7 @@ module srcnn_conv2_Pipeline_BW (
         ap_done,
         ap_idle,
         ap_ready,
-        phi_mul844,
+        phi_mul837,
         conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_4_address0,
         conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_4_ce0,
         conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_4_we0,
@@ -44,7 +44,7 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-input  [9:0] phi_mul844;
+input  [9:0] phi_mul837;
 output  [9:0] conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_4_address0;
 output   conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_4_ce0;
 output   conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_4_we0;
@@ -93,10 +93,10 @@ reg    ap_ready_int;
 wire    ap_block_pp0_stage0_11001;
 wire   [63:0] zext_ln65_3_fu_201_p1;
 wire    ap_block_pp0_stage0;
-reg   [7:0] phi_urem831_fu_68;
+reg   [7:0] phi_urem824_fu_68;
 wire   [7:0] select_ln63_fu_241_p3;
 wire    ap_loop_init;
-reg   [16:0] phi_mul829_fu_72;
+reg   [16:0] phi_mul822_fu_72;
 wire   [16:0] add_ln63_4_fu_210_p2;
 reg   [7:0] w_fu_76;
 wire   [7:0] add_ln63_fu_180_p2;
@@ -170,9 +170,9 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if ((ap_loop_init == 1'b1)) begin
-            phi_mul829_fu_72 <= 17'd0;
+            phi_mul822_fu_72 <= 17'd0;
         end else if (((icmp_ln63_fu_174_p2 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
-            phi_mul829_fu_72 <= add_ln63_4_fu_210_p2;
+            phi_mul822_fu_72 <= add_ln63_4_fu_210_p2;
         end
     end
 end
@@ -180,9 +180,9 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if ((ap_loop_init == 1'b1)) begin
-            phi_urem831_fu_68 <= 8'd0;
+            phi_urem824_fu_68 <= 8'd0;
         end else if (((icmp_ln63_fu_174_p2 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
-            phi_urem831_fu_68 <= select_ln63_fu_241_p3;
+            phi_urem824_fu_68 <= select_ln63_fu_241_p3;
         end
     end
 end
@@ -328,13 +328,13 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln63_4_fu_210_p2 = (phi_mul829_fu_72 + 17'd322);
+assign add_ln63_4_fu_210_p2 = (phi_mul822_fu_72 + 17'd322);
 
-assign add_ln63_5_fu_229_p2 = (phi_urem831_fu_68 + 8'd1);
+assign add_ln63_5_fu_229_p2 = (phi_urem824_fu_68 + 8'd1);
 
 assign add_ln63_fu_180_p2 = (w_fu_76 + 8'd1);
 
-assign add_ln65_fu_196_p2 = (phi_mul844 + zext_ln65_fu_192_p1);
+assign add_ln65_fu_196_p2 = (phi_mul837 + zext_ln65_fu_192_p1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -380,10 +380,10 @@ assign icmp_ln63_fu_174_p2 = ((w_fu_76 == 8'd255) ? 1'b1 : 1'b0);
 
 assign select_ln63_fu_241_p3 = ((icmp_ln63_2_fu_235_p2[0:0] == 1'b1) ? add_ln63_5_fu_229_p2 : 8'd0);
 
-assign trunc_ln_fu_216_p4 = {{phi_mul829_fu_72[16:14]}};
+assign trunc_ln_fu_216_p4 = {{phi_mul822_fu_72[16:14]}};
 
 assign zext_ln65_3_fu_201_p1 = add_ln65_fu_196_p2;
 
-assign zext_ln65_fu_192_p1 = phi_urem831_fu_68;
+assign zext_ln65_fu_192_p1 = phi_urem824_fu_68;
 
 endmodule //srcnn_conv2_Pipeline_BW

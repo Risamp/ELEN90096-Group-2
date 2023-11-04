@@ -166,7 +166,7 @@ srcnn_mux_5_3_32_1_1 #(
     .din4_WIDTH( 32 ),
     .din5_WIDTH( 3 ),
     .dout_WIDTH( 32 ))
-mux_5_3_32_1_1_U473(
+mux_5_3_32_1_1_U471(
     .din0(conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_4_q0),
     .din1(conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_3_q0),
     .din2(conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_2_q0),

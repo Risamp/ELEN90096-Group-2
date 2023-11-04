@@ -13,7 +13,7 @@ module srcnn_conv1_Pipeline_RELU7 (
         ap_done,
         ap_idle,
         ap_ready,
-        tmp_301,
+        tmp_299,
         sext_ln137,
         sext_ln140,
         conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_address0,
@@ -37,7 +37,7 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-input  [6:0] tmp_301;
+input  [6:0] tmp_299;
 input  [13:0] sext_ln137;
 input  [13:0] sext_ln140;
 output  [13:0] conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_address0;
@@ -84,7 +84,7 @@ reg   [7:0] ap_sig_allocacmp_bw;
 wire   [15:0] zext_ln140_1_fu_195_p1;
 wire   [6:0] trunc_ln137_fu_130_p1;
 wire   [13:0] tmp_s_fu_134_p3;
-wire   [15:0] tmp_126_fu_156_p4;
+wire   [15:0] tmp_125_fu_156_p4;
 wire   [14:0] trunc_ln140_fu_165_p1;
 wire   [15:0] value_fu_169_p2;
 wire   [0:0] tmp_113_fu_179_p3;
@@ -112,11 +112,11 @@ srcnn_mux_2_1_16_1_1 #(
     .din1_WIDTH( 16 ),
     .din2_WIDTH( 1 ),
     .dout_WIDTH( 16 ))
-mux_2_1_16_1_1_U337(
+mux_2_1_16_1_1_U336(
     .din0(conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_q0),
     .din1(conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_q0),
     .din2(tmp_reg_240),
-    .dout(tmp_126_fu_156_p4)
+    .dout(tmp_125_fu_156_p4)
 );
 
 srcnn_flow_control_loop_pipe_sequential_init flow_control_loop_pipe_sequential_init_U(
@@ -328,15 +328,15 @@ assign sext_ln140_cast_fu_102_p1 = $signed(sext_ln140);
 
 assign tmp_113_fu_179_p3 = value_fu_169_p2[32'd15];
 
-assign tmp_s_fu_134_p3 = {{tmp_301}, {trunc_ln137_fu_130_p1}};
+assign tmp_s_fu_134_p3 = {{tmp_299}, {trunc_ln137_fu_130_p1}};
 
 assign trunc_ln137_fu_130_p1 = ap_sig_allocacmp_bw[6:0];
 
-assign trunc_ln140_fu_165_p1 = tmp_126_fu_156_p4[14:0];
+assign trunc_ln140_fu_165_p1 = tmp_125_fu_156_p4[14:0];
 
 assign value_1_fu_187_p3 = ((tmp_113_fu_179_p3[0:0] == 1'b1) ? 15'd0 : add_ln140_1_fu_174_p2);
 
-assign value_fu_169_p2 = ($signed(tmp_126_fu_156_p4) + $signed(sext_ln137_cast_reg_217));
+assign value_fu_169_p2 = ($signed(tmp_125_fu_156_p4) + $signed(sext_ln137_cast_reg_217));
 
 assign zext_ln140_1_fu_195_p1 = value_1_fu_187_p3;
 

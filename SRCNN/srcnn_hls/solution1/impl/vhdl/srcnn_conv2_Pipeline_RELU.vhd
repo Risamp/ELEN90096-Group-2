@@ -170,7 +170,7 @@ attribute shreg_extract : string;
 
 
 begin
-    mux_5_3_32_1_1_U473 : component srcnn_mux_5_3_32_1_1
+    mux_5_3_32_1_1_U471 : component srcnn_mux_5_3_32_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,

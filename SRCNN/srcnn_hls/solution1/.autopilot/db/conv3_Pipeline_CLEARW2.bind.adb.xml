@@ -32,9 +32,9 @@ newFuncRoot:0 %w_1 = alloca i32 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="5" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="64" op_3_bw="64" op_4_bw="64">
+<Node id="5" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="64" op_4_bw="64">
 <![CDATA[
-newFuncRoot:1 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i24 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1, i64 666, i64 30, i64 18446744073709551615
+newFuncRoot:1 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1, i64 666, i64 30, i64 18446744073709551615
 
 ]]></Node>
 <StgValue><ssdm name="specmemcore_ln0"/></StgValue>
@@ -47,9 +47,9 @@ newFuncRoot:1 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i24 %co
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="6" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="64" op_3_bw="64" op_4_bw="64">
+<Node id="6" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="64" op_4_bw="64">
 <![CDATA[
-newFuncRoot:2 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i24 %conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255, i64 666, i64 30, i64 18446744073709551615
+newFuncRoot:2 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255, i64 666, i64 30, i64 18446744073709551615
 
 ]]></Node>
 <StgValue><ssdm name="specmemcore_ln0"/></StgValue>
@@ -263,9 +263,9 @@ for.body8.1.i.i.split:4 %zext_ln76 = zext i10 %tmp_84
 </and_exp></or_exp>
 </condition>
 
-<Node id="22" bw="10" op_0_bw="24" op_1_bw="64" op_2_bw="64">
+<Node id="22" bw="10" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body8.1.i.i.split:5 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_425 = getelementptr i24 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1, i64 0, i64 %zext_ln76
+for.body8.1.i.i.split:5 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_425 = getelementptr i32 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1, i64 0, i64 %zext_ln76
 
 ]]></Node>
 <StgValue><ssdm name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_425"/></StgValue>
@@ -279,9 +279,9 @@ for.body8.1.i.i.split:5 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixe
 </and_exp></or_exp>
 </condition>
 
-<Node id="23" bw="10" op_0_bw="24" op_1_bw="64" op_2_bw="64">
+<Node id="23" bw="10" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body8.1.i.i.split:6 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_426 = getelementptr i24 %conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255, i64 0, i64 %zext_ln76
+for.body8.1.i.i.split:6 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_426 = getelementptr i32 %conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255, i64 0, i64 %zext_ln76
 
 ]]></Node>
 <StgValue><ssdm name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_426"/></StgValue>
@@ -328,9 +328,9 @@ for.body8.1.i.i.split:8 %br_ln76 = br i1 %tmp, void %arrayidx1225.1.i.i.case.0, 
 </and_exp></or_exp>
 </condition>
 
-<Node id="27" bw="0" op_0_bw="24" op_1_bw="10">
+<Node id="27" bw="0" op_0_bw="32" op_1_bw="10">
 <![CDATA[
-arrayidx1225.1.i.i.case.0:0 %store_ln76 = store i24 0, i10 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_425
+arrayidx1225.1.i.i.case.0:0 %store_ln76 = store i32 0, i10 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_425
 
 ]]></Node>
 <StgValue><ssdm name="store_ln76"/></StgValue>
@@ -362,9 +362,9 @@ arrayidx1225.1.i.i.case.0:1 %br_ln76 = br void %arrayidx1225.1.i.i.exit
 </and_exp></or_exp>
 </condition>
 
-<Node id="30" bw="0" op_0_bw="24" op_1_bw="10">
+<Node id="30" bw="0" op_0_bw="32" op_1_bw="10">
 <![CDATA[
-arrayidx1225.1.i.i.case.1:0 %store_ln76 = store i24 0, i10 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_426
+arrayidx1225.1.i.i.case.1:0 %store_ln76 = store i32 0, i10 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_426
 
 ]]></Node>
 <StgValue><ssdm name="store_ln76"/></StgValue>
@@ -550,21 +550,21 @@ for.inc13.1.i.i.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="108" from="tmp" to="br_ln76" fromId="22" toId="23">
 </dataflow>
-<dataflow id="110" from="StgValue_109" to="store_ln76" fromId="109" toId="24">
+<dataflow id="109" from="StgValue_67" to="store_ln76" fromId="67" toId="24">
 </dataflow>
-<dataflow id="111" from="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_425" to="store_ln76" fromId="20" toId="24">
+<dataflow id="110" from="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_425" to="store_ln76" fromId="20" toId="24">
 </dataflow>
-<dataflow id="112" from="StgValue_109" to="store_ln76" fromId="109" toId="26">
+<dataflow id="111" from="StgValue_67" to="store_ln76" fromId="67" toId="26">
 </dataflow>
-<dataflow id="113" from="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_426" to="store_ln76" fromId="21" toId="26">
+<dataflow id="112" from="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_426" to="store_ln76" fromId="21" toId="26">
 </dataflow>
-<dataflow id="114" from="add_ln74" to="store_ln74" fromId="13" toId="28">
+<dataflow id="113" from="add_ln74" to="store_ln74" fromId="13" toId="28">
 </dataflow>
-<dataflow id="115" from="w_1" to="store_ln74" fromId="4" toId="28">
+<dataflow id="114" from="w_1" to="store_ln74" fromId="4" toId="28">
 </dataflow>
-<dataflow id="116" from="icmp_ln74" to="StgValue_2" fromId="12" toId="2">
+<dataflow id="115" from="icmp_ln74" to="StgValue_2" fromId="12" toId="2">
 </dataflow>
-<dataflow id="117" from="tmp" to="StgValue_2" fromId="22" toId="2">
+<dataflow id="116" from="tmp" to="StgValue_2" fromId="22" toId="2">
 </dataflow>
 </dataflows>
 

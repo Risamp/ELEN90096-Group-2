@@ -1,199 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1699081704224">
-  <ports id="1" name="i1" type="PortType" coreId="1702129263" bitwidth="16" iftype="IfTypeFifo">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1699083873061">
+  <ports id="1" name="i1" type="PortType" coreId="865" bitwidth="16" iftype="IfTypeFifo">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="w1" type="PortType" coreId="572538144" bitwidth="16" iftype="IfTypeFifo">
+  <ports id="2" name="w1" type="PortType" coreId="4139" bitwidth="16" iftype="IfTypeFifo">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="3" name="gmem" type="PortType" coreId="1431261768" bitwidth="16" iftype="IfTypeFifo">
+  <ports id="3" name="gmem" type="PortType" coreId="1042887007" bitwidth="8" iftype="IfTypeFifo">
     <dataOutputObjs>call</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="4" name="i2" type="PortType" coreId="244902464" bitwidth="16" direction="DirInOut" iftype="IfTypeFifo">
+  <ports id="4" name="i2" type="PortType" coreId="322" bitwidth="16" direction="DirInOut" iftype="IfTypeFifo">
     <dataInputObjs>call</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
     <dataOutputObjs>call</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="5" name="w2" type="PortType" coreId="656359232" bitwidth="32" iftype="IfTypeFifo">
+  <ports id="5" name="w2" type="PortType" coreId="1852142702" bitwidth="16" iftype="IfTypeFifo">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="6" name="i3" type="PortType" coreId="656356016" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
+  <ports id="6" name="i3" type="PortType" coreId="539111519" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
     <dataInputObjs>call</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
     <dataOutputObjs>call</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="7" name="w3" type="PortType" coreId="244902464" bitwidth="32" iftype="IfTypeFifo">
+  <ports id="7" name="w3" type="PortType" coreId="0" bitwidth="16" iftype="IfTypeFifo">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="8" name="o" type="PortType" coreId="1305" bitwidth="32" direction="DirOut" iftype="IfTypeFifo">
+  <ports id="8" name="o" type="PortType" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeFifo">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="9" name="input_ftmap" type="PortType" coreId="244902464" bitwidth="64">
+  <ports id="9" name="input_ftmap" type="PortType" coreId="572538144" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="10" name="conv1_weights" type="PortType" coreId="1162363731" bitwidth="64">
+  <ports id="10" name="conv1_weights" type="PortType" coreId="4294967295" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="11" name="conv1_biases" type="PortType" originalName="conv1_biases" coreId="1304" bitwidth="64">
+  <ports id="11" name="conv1_biases" type="PortType" originalName="conv1_biases" coreId="1314" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="12" name="conv1_output_ftmap" type="PortType" coreId="1768843590" bitwidth="64">
+  <ports id="12" name="conv1_output_ftmap" type="PortType" coreId="1411" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="13" name="conv2_weights" type="PortType" originalName="conv2_weights" coreId="1768843590" bitwidth="64">
+  <ports id="13" name="conv2_weights" type="PortType" originalName="conv2_weights" coreId="1222" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="14" name="conv2_biases" type="PortType" originalName="conv2_biases" coreId="895439701" bitwidth="64">
+  <ports id="14" name="conv2_biases" type="PortType" originalName="conv2_biases" coreId="1701869908" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="15" name="conv2_output_ftmap" type="PortType" coreId="244902464" bitwidth="64">
+  <ports id="15" name="conv2_output_ftmap" type="PortType" coreId="572538144" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="16" name="conv3_weights" type="PortType" coreId="244902464" bitwidth="64">
+  <ports id="16" name="conv3_weights" type="PortType" coreId="858" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="17" name="conv3_biases" type="PortType" originalName="conv3_biases" coreId="1096045407" bitwidth="64">
+  <ports id="17" name="conv3_biases" type="PortType" originalName="conv3_biases" coreId="1852142702" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="18" name="output_ftmap" type="PortType" coreId="0" bitwidth="64">
+  <ports id="18" name="output_ftmap" type="PortType" coreId="310" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <edges id="109" source_obj="//@ports.17" sink_obj="//@blocks.0/@node_objs.0"/>
-  <edges id="111" source_obj="//@ports.16" sink_obj="//@blocks.0/@node_objs.1"/>
-  <edges id="113" source_obj="//@ports.15" sink_obj="//@blocks.0/@node_objs.2"/>
-  <edges id="115" source_obj="//@ports.14" sink_obj="//@blocks.0/@node_objs.3"/>
-  <edges id="117" source_obj="//@ports.13" sink_obj="//@blocks.0/@node_objs.4"/>
-  <edges id="119" source_obj="//@ports.12" sink_obj="//@blocks.0/@node_objs.5"/>
-  <edges id="121" source_obj="//@ports.11" sink_obj="//@blocks.0/@node_objs.6"/>
-  <edges id="123" source_obj="//@ports.10" sink_obj="//@blocks.0/@node_objs.7"/>
-  <edges id="125" source_obj="//@ports.9" sink_obj="//@blocks.0/@node_objs.8"/>
-  <edges id="127" source_obj="//@ports.8" sink_obj="//@blocks.0/@node_objs.9"/>
-  <edges id="130" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.10"/>
-  <edges id="131" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.10"/>
-  <edges id="132" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.10"/>
-  <edges id="133" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.10"/>
-  <edges id="134" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.10"/>
-  <edges id="135" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.10"/>
-  <edges id="136" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.10"/>
-  <edges id="137" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.10"/>
-  <edges id="140" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="141" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="142" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="143" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="144" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="145" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="146" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="147" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="150" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.12"/>
-  <edges id="155" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.13"/>
-  <edges id="156" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.14"/>
-  <edges id="157" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="105" source_obj="//@ports.17" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="107" source_obj="//@ports.16" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="109" source_obj="//@ports.15" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="111" source_obj="//@ports.14" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="113" source_obj="//@ports.13" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="115" source_obj="//@ports.12" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="117" source_obj="//@ports.11" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="119" source_obj="//@ports.10" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="121" source_obj="//@ports.9" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="123" source_obj="//@ports.8" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="126" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="127" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="128" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="129" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="130" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="131" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="132" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="133" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="136" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="137" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="138" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="139" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="140" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="141" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="142" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="143" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="144" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="145" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="148" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="153" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="156" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="157" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="158" source_obj="//@ports.6" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="159" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.15"/>
   <edges id="160" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.0/@node_objs.15"/>
-  <edges id="164" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.0/@node_objs.16"/>
-  <edges id="165" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.0/@node_objs.17"/>
-  <edges id="168" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.18"/>
-  <edges id="169" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.18"/>
-  <edges id="170" source_obj="//@ports.6" sink_obj="//@blocks.0/@node_objs.18"/>
-  <edges id="171" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.18"/>
-  <edges id="172" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.0/@node_objs.18"/>
-  <edges id="173" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@ports.7"/>
-  <edges id="174" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.18"/>
-  <edges id="175" sink_obj="//@blocks.0/@node_objs.10"/>
-  <edges id="176" sink_obj="//@blocks.0/@node_objs.10"/>
-  <edges id="177" sink_obj="//@blocks.0/@node_objs.10"/>
-  <edges id="178" sink_obj="//@blocks.0/@node_objs.10"/>
-  <edges id="179" sink_obj="//@blocks.0/@node_objs.10"/>
-  <edges id="180" sink_obj="//@blocks.0/@node_objs.10"/>
-  <edges id="181" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="161" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@ports.7"/>
+  <edges id="162" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="163" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="164" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="165" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="166" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="167" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="168" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="169" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="170" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="171" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="172" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="173" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="174" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="175" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="176" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="177" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="178" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="179" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="180" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="181" sink_obj="//@blocks.0/@node_objs.11"/>
   <edges id="182" sink_obj="//@blocks.0/@node_objs.11"/>
   <edges id="183" sink_obj="//@blocks.0/@node_objs.11"/>
   <edges id="184" sink_obj="//@blocks.0/@node_objs.11"/>
   <edges id="185" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="186" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="187" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="188" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="189" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="190" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="191" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="192" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="193" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="194" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="195" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="196" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="197" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="198" sink_obj="//@blocks.0/@node_objs.18"/>
-  <edges id="199" sink_obj="//@blocks.0/@node_objs.18"/>
-  <edges id="200" sink_obj="//@blocks.0/@node_objs.18"/>
-  <edges id="201" sink_obj="//@blocks.0/@node_objs.18"/>
-  <edges id="202" sink_obj="//@blocks.0/@node_objs.18"/>
-  <edges id="809" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.0/@node_objs.16"/>
-  <edges id="810" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.15"/>
-  <edges id="811" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.18"/>
-  <edges id="812" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="813" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.11"/>
-  <edges id="814" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.18"/>
-  <edges id="-136" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@ports.3"/>
-  <edges id="-140" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@ports.3"/>
-  <edges id="-146" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@ports.5"/>
-  <edges id="-168" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@ports.5"/>
-  <blocks id="106" name="srcnn" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="output_ftmap_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+  <edges id="186" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="187" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="188" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="189" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="190" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="794" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="795" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="796" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="797" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="798" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="799" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="-132" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@ports.3"/>
+  <edges id="-136" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@ports.3"/>
+  <edges id="-142" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@ports.5"/>
+  <edges id="-156" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@ports.5"/>
+  <blocks id="102" name="srcnn" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="output_ftmap_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="10" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>output_ftmap</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="conv3_biases_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="conv3_biases_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="10" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>conv3_biases</dataInputObjs>
-      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="conv3_weights_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="conv3_weights_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="10" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>conv3_weights</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="conv2_output_ftmap_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="conv2_output_ftmap_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="10" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>conv2_output_ftmap</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="conv2_biases_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="conv2_biases_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="10" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>conv2_biases</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="conv2_weights_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="conv2_weights_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="6" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="10" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>conv2_weights</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="conv1_output_ftmap_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="conv1_output_ftmap_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="10" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>conv1_output_ftmap</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="conv1_biases_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="conv1_biases_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="8" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="10" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>conv1_biases</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="conv1_weights_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="conv1_weights_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="10" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>conv1_weights</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="input_ftmap_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="input_ftmap_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="srcnn" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="10" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="10" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>input_ftmap</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="_ln44" lineNumber="44" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="grp_conv1_fu_252" coreId="270785960" contextFuncName="srcnn" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="_ln44" lineNumber="44" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="grp_conv1_fu_246" coreId="176621776" contextFuncName="srcnn" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="44" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>i1</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
@@ -206,7 +203,7 @@
       <dataOutputObjs>i2</dataOutputObjs>
       <constName>conv1</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="_ln47" lineNumber="47" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="grp_conv2_fu_286" coreId="673147984" contextFuncName="srcnn" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="_ln47" lineNumber="47" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="grp_conv2_fu_280" coreId="542329856" contextFuncName="srcnn" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="47" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>i2</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
@@ -220,52 +217,36 @@
       <dataOutputObjs>i3</dataOutputObjs>
       <constName>conv2</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="p_cast" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="p_cast_fu_358_p4" coreId="673150776" contextFuncName="srcnn" bitwidth="63" opcode="partselect" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/srcnn.cpp" linenumber="10" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
-      <dataInputObjs>read</dataInputObjs>
-      <dataOutputObjs>sext</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="p_cast_cast" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="p_cast_cast_fu_368_p1" coreId="656310560" contextFuncName="srcnn" bitwidth="64" opcode="sext" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/srcnn.cpp" linenumber="10" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
-      <dataInputObjs>partselect</dataInputObjs>
-      <dataOutputObjs>getelementptr</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="gmem_addr" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1869833472" contextFuncName="srcnn" bitwidth="16" opcode="getelementptr" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="gmem_addr" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreId="0" contextFuncName="srcnn" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="10" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>gmem</dataInputObjs>
-      <dataInputObjs>sext</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>readreq</dataOutputObjs>
       <dataOutputObjs>read</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="gmem_load_req" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="srcnn" bitwidth="1" opcode="readreq" nodeLabel="4.0" nodeLatency="7" m_display="0" m_delay="7.3" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="gmem_load_req" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="srcnn" bitwidth="1" opcode="readreq" nodeLabel="4.0" nodeLatency="7" m_display="0" m_delay="7.3" m_topoIndex="14" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="10" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="gmem_addr_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="srcnn" bitwidth="16" opcode="read" nodeLabel="12.0" m_display="0" m_delay="7.3" m_topoIndex="17" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="gmem_addr_read" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="srcnn" bitwidth="8" opcode="read" nodeLabel="12.0" m_display="0" m_delay="7.3" m_topoIndex="15" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="10" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>getelementptr</dataInputObjs>
-      <dataOutputObjs>trunc</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="103" name="empty" lineNumber="10" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="empty_fu_378_p1" coreId="0" contextFuncName="srcnn" bitwidth="15" opcode="trunc" nodeLabel="12.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/srcnn.cpp" linenumber="10" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
-      <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="_ln50" lineNumber="50" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="grp_conv3_fu_334" coreId="650183232" contextFuncName="srcnn" opcode="call" nodeLabel="12.0" nodeLatency="1" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="_ln50" lineNumber="50" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="grp_conv3_fu_328" coreId="0" contextFuncName="srcnn" opcode="call" nodeLabel="12.0" nodeLatency="1" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="50" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
       <dataInputObjs>i3</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>w3</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
-      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>o</dataOutputObjs>
       <dataOutputObjs>i3</dataOutputObjs>
       <constName>conv3</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="_ln51" lineNumber="51" fileName="src/srcnn.cpp" fileDirectory="../." coreId="650184576" contextFuncName="srcnn" opcode="ret" nodeLabel="13.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="_ln51" lineNumber="51" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1717924352" contextFuncName="srcnn" opcode="ret" nodeLabel="13.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="51" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="srcnn"/>
     </node_objs>
     <fileValidLineNumbers fileName="src/srcnn.cpp">
@@ -290,281 +271,273 @@
   <ScheduleInfo time="11"/>
   <ScheduleInfo time="12"/>
   <ScheduleInfo time="13"/>
-  <regnodes realName="gmem_addr_reg_430">
-    <nodeIds>100</nodeIds>
+  <regnodes realName="conv2_output_ftmap_read_reg_369">
+    <nodeIds>88</nodeIds>
   </regnodes>
-  <regnodes realName="input_ftmap_read_reg_425">
-    <nodeIds>95</nodeIds>
+  <regnodes realName="output_ftmap_read_reg_359">
+    <nodeIds>85</nodeIds>
   </regnodes>
-  <regnodes realName="empty_reg_436">
-    <nodeIds>103</nodeIds>
-  </regnodes>
-  <regnodes realName="conv2_output_ftmap_read_reg_393">
-    <nodeIds>89</nodeIds>
-  </regnodes>
-  <regnodes realName="conv1_output_ftmap_read_reg_409">
+  <regnodes realName="conv1_biases_read_reg_391">
     <nodeIds>92</nodeIds>
   </regnodes>
-  <regnodes realName="conv2_biases_read_reg_399">
-    <nodeIds>90</nodeIds>
-  </regnodes>
-  <regnodes realName="conv1_weights_read_reg_420">
-    <nodeIds>94</nodeIds>
-  </regnodes>
-  <regnodes realName="conv2_weights_read_reg_404">
+  <regnodes realName="conv1_output_ftmap_read_reg_385">
     <nodeIds>91</nodeIds>
   </regnodes>
-  <regnodes realName="conv3_weights_read_reg_388">
-    <nodeIds>88</nodeIds>
+  <regnodes realName="conv3_weights_read_reg_364">
+    <nodeIds>87</nodeIds>
   </regnodes>
-  <regnodes realName="output_ftmap_read_reg_383">
-    <nodeIds>86</nodeIds>
+  <regnodes realName="conv2_biases_read_reg_375">
+    <nodeIds>89</nodeIds>
   </regnodes>
-  <regnodes realName="conv1_biases_read_reg_415">
+  <regnodes realName="gmem_addr_reg_406">
+    <nodeIds>97</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem_addr_read_reg_412">
+    <nodeIds>99</nodeIds>
+  </regnodes>
+  <regnodes realName="conv2_weights_read_reg_380">
+    <nodeIds>90</nodeIds>
+  </regnodes>
+  <regnodes realName="conv1_weights_read_reg_396">
     <nodeIds>93</nodeIds>
   </regnodes>
-  <expressionNodes realName="p_cast_fu_358">
-    <nodeIds>98</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="empty_fu_378">
-    <nodeIds>103</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="gmem_addr_fu_372">
-    <nodeIds>100</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="p_cast_cast_fu_368">
-    <nodeIds>99</nodeIds>
-  </expressionNodes>
-  <moduleNodes realName="grp_conv2_fu_286">
+  <regnodes realName="input_ftmap_read_reg_401">
+    <nodeIds>94</nodeIds>
+  </regnodes>
+  <expressionNodes realName="gmem_addr_fu_353">
     <nodeIds>97</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_conv1_fu_246">
+    <nodeIds>95</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_conv1_fu_252">
+  <moduleNodes realName="grp_conv3_fu_328">
+    <nodeIds>100</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_conv2_fu_280">
     <nodeIds>96</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_conv3_fu_334">
-    <nodeIds>104</nodeIds>
-  </moduleNodes>
-  <ioNodes realName="conv2_weights_read_read_fu_210">
-    <nodeIds>91</nodeIds>
+  <ioNodes realName="conv1_biases_read_read_fu_216">
+    <nodeIds>92</nodeIds>
   </ioNodes>
-  <ioNodes realName="conv3_weights_read_read_fu_192">
-    <nodeIds>88</nodeIds>
-  </ioNodes>
-  <ioNodes realName="conv2_biases_read_read_fu_204">
-    <nodeIds>90</nodeIds>
-  </ioNodes>
-  <ioNodes realName="conv1_weights_read_read_fu_228">
+  <ioNodes realName="input_ftmap_read_read_fu_228">
     <nodeIds>94</nodeIds>
   </ioNodes>
-  <ioNodes realName="gmem_addr_read_read_fu_247">
-    <nodeIds>102</nodeIds>
+  <ioNodes realName="conv1_output_ftmap_read_read_fu_210">
+    <nodeIds>91</nodeIds>
   </ioNodes>
-  <ioNodes realName="input_ftmap_read_read_fu_234">
-    <nodeIds>95</nodeIds>
-  </ioNodes>
-  <ioNodes realName="conv1_biases_read_read_fu_222">
+  <ioNodes realName="conv1_weights_read_read_fu_222">
     <nodeIds>93</nodeIds>
   </ioNodes>
-  <ioNodes realName="conv3_biases_read_read_fu_186">
+  <ioNodes realName="grp_readreq_fu_234">
+    <nodeIds>98</nodeIds>
+  </ioNodes>
+  <ioNodes realName="conv2_biases_read_read_fu_198">
+    <nodeIds>89</nodeIds>
+  </ioNodes>
+  <ioNodes realName="conv2_output_ftmap_read_read_fu_192">
+    <nodeIds>88</nodeIds>
+  </ioNodes>
+  <ioNodes realName="conv3_weights_read_read_fu_186">
     <nodeIds>87</nodeIds>
   </ioNodes>
-  <ioNodes realName="output_ftmap_read_read_fu_180">
+  <ioNodes realName="output_ftmap_read_read_fu_174">
+    <nodeIds>85</nodeIds>
+  </ioNodes>
+  <ioNodes realName="conv2_weights_read_read_fu_204">
+    <nodeIds>90</nodeIds>
+  </ioNodes>
+  <ioNodes realName="gmem_addr_read_read_fu_241">
+    <nodeIds>99</nodeIds>
+  </ioNodes>
+  <ioNodes realName="conv3_biases_read_read_fu_180">
     <nodeIds>86</nodeIds>
   </ioNodes>
-  <ioNodes realName="conv2_output_ftmap_read_read_fu_198">
-    <nodeIds>89</nodeIds>
-  </ioNodes>
-  <ioNodes realName="grp_readreq_fu_240">
-    <nodeIds>101</nodeIds>
-  </ioNodes>
-  <ioNodes realName="conv1_output_ftmap_read_read_fu_216">
-    <nodeIds>92</nodeIds>
-  </ioNodes>
   <memoryPorts dataString="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2" portID="100">
-    <nodeIds>96</nodeIds>
+    <nodeIds>95</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1" portID="100">
-    <nodeIds>96</nodeIds>
+    <nodeIds>95</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_2" portID="100">
-    <nodeIds>96</nodeIds>
+    <nodeIds>95</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_3" portID="100">
-    <nodeIds>96</nodeIds>
+    <nodeIds>95</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_4" portID="100">
-    <nodeIds>96</nodeIds>
+    <nodeIds>95</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_1" portID="100">
-    <nodeIds>97</nodeIds>
+    <nodeIds>96</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_2" portID="100">
-    <nodeIds>97</nodeIds>
+    <nodeIds>96</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_3" portID="100">
-    <nodeIds>97</nodeIds>
+    <nodeIds>96</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_4" portID="100">
-    <nodeIds>97</nodeIds>
+    <nodeIds>96</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="conv2_mulmulmulmulap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255" portID="100">
-    <nodeIds>97</nodeIds>
+    <nodeIds>96</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1" portID="100">
-    <nodeIds>104</nodeIds>
+    <nodeIds>100</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2" portID="100">
-    <nodeIds>104</nodeIds>
+    <nodeIds>100</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3" portID="100">
-    <nodeIds>104</nodeIds>
+    <nodeIds>100</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255" portID="100">
-    <nodeIds>104</nodeIds>
+    <nodeIds>100</nodeIds>
   </memoryPorts>
-  <memoryPorts dataString="p_ZZ5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_1" portID="100">
-    <nodeIds>96</nodeIds>
+  <memoryPorts dataString="p_ZZ5conv1PA255_A255_8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_1" portID="100">
+    <nodeIds>95</nodeIds>
   </memoryPorts>
-  <memoryPorts dataString="p_ZZ5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_s" portID="100">
-    <nodeIds>96</nodeIds>
+  <memoryPorts dataString="p_ZZ5conv1PA255_A255_8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA1_A9_A9_s" portID="100">
+    <nodeIds>95</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1" portID="100">
-    <nodeIds>97</nodeIds>
+    <nodeIds>96</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_1" portID="100">
-    <nodeIds>97</nodeIds>
+    <nodeIds>96</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_2" portID="100">
-    <nodeIds>97</nodeIds>
+    <nodeIds>96</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_3" portID="100">
-    <nodeIds>97</nodeIds>
+    <nodeIds>96</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_4" portID="100">
-    <nodeIds>97</nodeIds>
+    <nodeIds>96</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_5" portID="100">
-    <nodeIds>97</nodeIds>
+    <nodeIds>96</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_6" portID="100">
-    <nodeIds>97</nodeIds>
+    <nodeIds>96</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_7" portID="100">
-    <nodeIds>97</nodeIds>
+    <nodeIds>96</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_8" portID="100">
-    <nodeIds>97</nodeIds>
+    <nodeIds>96</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="p_ZZ5conv2PA255_A255_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA64_A1_A1_9" portID="100">
-    <nodeIds>97</nodeIds>
+    <nodeIds>96</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="weight_buffer" portID="100">
-    <nodeIds>97</nodeIds>
+    <nodeIds>96</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="weight_buffer_0" portID="100">
-    <nodeIds>104</nodeIds>
+    <nodeIds>100</nodeIds>
   </memoryPorts>
   <ioPorts name="conv1_biases">
-    <contents name="read">
-      <nodeIds>93</nodeIds>
-    </contents>
-  </ioPorts>
-  <ioPorts name="conv1_output_ftmap">
     <contents name="read">
       <nodeIds>92</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="conv1_weights">
-    <contents name="read">
-      <nodeIds>94</nodeIds>
-    </contents>
-  </ioPorts>
-  <ioPorts name="conv2_biases">
-    <contents name="read">
-      <nodeIds>90</nodeIds>
-    </contents>
-  </ioPorts>
-  <ioPorts name="conv2_output_ftmap">
-    <contents name="read">
-      <nodeIds>89</nodeIds>
-    </contents>
-  </ioPorts>
-  <ioPorts name="conv2_weights">
+  <ioPorts name="conv1_output_ftmap">
     <contents name="read">
       <nodeIds>91</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="conv3_biases">
+  <ioPorts name="conv1_weights">
     <contents name="read">
-      <nodeIds>87</nodeIds>
+      <nodeIds>93</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="conv3_weights">
+  <ioPorts name="conv2_biases">
+    <contents name="read">
+      <nodeIds>89</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="conv2_output_ftmap">
     <contents name="read">
       <nodeIds>88</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="gmem">
-    <contents name="call">
-      <nodeIds>96</nodeIds>
-      <nodeIds>97</nodeIds>
-    </contents>
+  <ioPorts name="conv2_weights">
     <contents name="read">
-      <nodeIds>102</nodeIds>
-    </contents>
-    <contents name="readreq">
-      <nodeIds>101</nodeIds>
+      <nodeIds>90</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="i1">
-    <contents name="call">
-      <nodeIds>96</nodeIds>
-    </contents>
-  </ioPorts>
-  <ioPorts name="i2">
-    <contents name="call">
-      <nodeIds>96</nodeIds>
-      <nodeIds>97</nodeIds>
-    </contents>
-  </ioPorts>
-  <ioPorts name="i3">
-    <contents name="call">
-      <nodeIds>97</nodeIds>
-      <nodeIds>104</nodeIds>
-    </contents>
-  </ioPorts>
-  <ioPorts name="input_ftmap">
-    <contents name="read">
-      <nodeIds>95</nodeIds>
-    </contents>
-  </ioPorts>
-  <ioPorts name="o">
-    <contents name="call">
-      <nodeIds>104</nodeIds>
-    </contents>
-  </ioPorts>
-  <ioPorts name="output_ftmap">
+  <ioPorts name="conv3_biases">
     <contents name="read">
       <nodeIds>86</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="w1">
+  <ioPorts name="conv3_weights">
+    <contents name="read">
+      <nodeIds>87</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gmem">
+    <contents name="call">
+      <nodeIds>95</nodeIds>
+      <nodeIds>96</nodeIds>
+    </contents>
+    <contents name="read">
+      <nodeIds>99</nodeIds>
+    </contents>
+    <contents name="readreq">
+      <nodeIds>98</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="i1">
+    <contents name="call">
+      <nodeIds>95</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="i2">
+    <contents name="call">
+      <nodeIds>95</nodeIds>
+      <nodeIds>96</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="i3">
     <contents name="call">
       <nodeIds>96</nodeIds>
+      <nodeIds>100</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="input_ftmap">
+    <contents name="read">
+      <nodeIds>94</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="o">
+    <contents name="call">
+      <nodeIds>100</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_ftmap">
+    <contents name="read">
+      <nodeIds>85</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="w1">
+    <contents name="call">
+      <nodeIds>95</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="w2">
     <contents name="call">
-      <nodeIds>97</nodeIds>
+      <nodeIds>96</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="w3">
     <contents name="call">
-      <nodeIds>104</nodeIds>
+      <nodeIds>100</nodeIds>
     </contents>
   </ioPorts>
   <fsm>
     <states id="1">
+      <operations id="85" stage="1" latency="1"/>
       <operations id="86" stage="1" latency="1"/>
       <operations id="87" stage="1" latency="1"/>
       <operations id="88" stage="1" latency="1"/>
@@ -574,49 +547,45 @@
       <operations id="92" stage="1" latency="1"/>
       <operations id="93" stage="1" latency="1"/>
       <operations id="94" stage="1" latency="1"/>
-      <operations id="95" stage="1" latency="1"/>
-      <operations id="96" stage="2" latency="2"/>
-      <operations id="98" stage="1" latency="1"/>
-      <operations id="99" stage="1" latency="1"/>
-      <operations id="100" stage="1" latency="1"/>
+      <operations id="95" stage="2" latency="2"/>
+      <operations id="97" stage="1" latency="1"/>
     </states>
     <states id="2">
-      <operations id="96" stage="1" latency="2"/>
+      <operations id="95" stage="1" latency="2"/>
     </states>
     <states id="3">
-      <operations id="97" stage="2" latency="2"/>
+      <operations id="96" stage="2" latency="2"/>
     </states>
     <states id="4">
-      <operations id="97" stage="1" latency="2"/>
+      <operations id="96" stage="1" latency="2"/>
     </states>
     <states id="5">
-      <operations id="101" stage="8" latency="8"/>
+      <operations id="98" stage="8" latency="8"/>
     </states>
     <states id="6">
-      <operations id="101" stage="7" latency="8"/>
+      <operations id="98" stage="7" latency="8"/>
     </states>
     <states id="7">
-      <operations id="101" stage="6" latency="8"/>
+      <operations id="98" stage="6" latency="8"/>
     </states>
     <states id="8">
-      <operations id="101" stage="5" latency="8"/>
+      <operations id="98" stage="5" latency="8"/>
     </states>
     <states id="9">
-      <operations id="101" stage="4" latency="8"/>
+      <operations id="98" stage="4" latency="8"/>
     </states>
     <states id="10">
-      <operations id="101" stage="3" latency="8"/>
+      <operations id="98" stage="3" latency="8"/>
     </states>
     <states id="11">
-      <operations id="101" stage="2" latency="8"/>
+      <operations id="98" stage="2" latency="8"/>
     </states>
     <states id="12">
-      <operations id="101" stage="1" latency="8"/>
+      <operations id="98" stage="1" latency="8"/>
     </states>
     <states id="13">
-      <operations id="102" stage="1" latency="1"/>
-      <operations id="103" stage="1" latency="1"/>
-      <operations id="104" stage="2" latency="2"/>
+      <operations id="99" stage="1" latency="1"/>
+      <operations id="100" stage="2" latency="2"/>
     </states>
     <states id="14">
       <operations id="47" stage="1" latency="1"/>
@@ -657,9 +626,8 @@
       <operations id="82" stage="1" latency="1"/>
       <operations id="83" stage="1" latency="1"/>
       <operations id="84" stage="1" latency="1"/>
-      <operations id="85" stage="1" latency="1"/>
-      <operations id="104" stage="1" latency="2"/>
-      <operations id="105" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="2"/>
+      <operations id="101" stage="1" latency="1"/>
     </states>
     <transitions inState="1" outState="2">
       <condition id="-1"/>
@@ -702,8 +670,8 @@
     </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="srcnn" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="389203201" mMaxLatency="389251192">
-      <basicBlocks>106</basicBlocks>
+    <cfgRegions mId="1" mTag="srcnn" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="389201433" mMaxLatency="389249424">
+      <basicBlocks>102</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
   </CFGRegionsRoot>

@@ -17,18 +17,18 @@ port (
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
     bh : IN STD_LOGIC_VECTOR (2 downto 0);
-    sext_ln119_1 : IN STD_LOGIC_VECTOR (21 downto 0);
-    sext_ln142 : IN STD_LOGIC_VECTOR (21 downto 0);
+    sext_ln119_1 : IN STD_LOGIC_VECTOR (29 downto 0);
+    sext_ln142 : IN STD_LOGIC_VECTOR (29 downto 0);
     conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_address0 : OUT STD_LOGIC_VECTOR (9 downto 0);
     conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_ce0 : OUT STD_LOGIC;
     conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_we0 : OUT STD_LOGIC;
-    conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_d0 : OUT STD_LOGIC_VECTOR (23 downto 0);
-    conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_q0 : IN STD_LOGIC_VECTOR (23 downto 0);
+    conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+    conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
     conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_address0 : OUT STD_LOGIC_VECTOR (9 downto 0);
     conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_ce0 : OUT STD_LOGIC;
     conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_we0 : OUT STD_LOGIC;
-    conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_d0 : OUT STD_LOGIC_VECTOR (23 downto 0);
-    conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_q0 : IN STD_LOGIC_VECTOR (23 downto 0) );
+    conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+    conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_q0 : IN STD_LOGIC_VECTOR (31 downto 0) );
 end;
 
 
@@ -46,8 +46,8 @@ architecture behav of srcnn_conv3_Pipeline_RELU is
     constant ap_const_lv8_FF : STD_LOGIC_VECTOR (7 downto 0) := "11111111";
     constant ap_const_lv8_1 : STD_LOGIC_VECTOR (7 downto 0) := "00000001";
     constant ap_const_lv32_7 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000111";
-    constant ap_const_lv32_17 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010111";
-    constant ap_const_lv23_0 : STD_LOGIC_VECTOR (22 downto 0) := "00000000000000000000000";
+    constant ap_const_lv32_1F : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011111";
+    constant ap_const_lv31_0 : STD_LOGIC_VECTOR (30 downto 0) := "0000000000000000000000000000000";
 
 attribute shreg_extract : string;
     signal ap_CS_fsm : STD_LOGIC_VECTOR (1 downto 0) := "01";
@@ -63,10 +63,10 @@ attribute shreg_extract : string;
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
     signal ap_block_state2_pp0_stage1_iter0 : BOOLEAN;
-    signal sext_ln142_cast_fu_110_p1 : STD_LOGIC_VECTOR (22 downto 0);
-    signal sext_ln142_cast_reg_220 : STD_LOGIC_VECTOR (22 downto 0);
-    signal sext_ln119_1_cast_fu_114_p1 : STD_LOGIC_VECTOR (23 downto 0);
-    signal sext_ln119_1_cast_reg_225 : STD_LOGIC_VECTOR (23 downto 0);
+    signal sext_ln142_cast_fu_110_p1 : STD_LOGIC_VECTOR (30 downto 0);
+    signal sext_ln142_cast_reg_220 : STD_LOGIC_VECTOR (30 downto 0);
+    signal sext_ln119_1_cast_fu_114_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal sext_ln119_1_cast_reg_225 : STD_LOGIC_VECTOR (31 downto 0);
     signal add_ln139_fu_132_p2 : STD_LOGIC_VECTOR (7 downto 0);
     signal add_ln139_reg_233 : STD_LOGIC_VECTOR (7 downto 0);
     signal conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_267_reg_238 : STD_LOGIC_VECTOR (9 downto 0);
@@ -76,15 +76,15 @@ attribute shreg_extract : string;
     signal bw_fu_62 : STD_LOGIC_VECTOR (7 downto 0);
     signal ap_loop_init : STD_LOGIC;
     signal ap_sig_allocacmp_bw_2 : STD_LOGIC_VECTOR (7 downto 0);
-    signal select_ln144_cast_fu_203_p1 : STD_LOGIC_VECTOR (23 downto 0);
+    signal select_ln144_cast_fu_203_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal trunc_ln139_fu_138_p1 : STD_LOGIC_VECTOR (6 downto 0);
     signal tmp_s_fu_142_p3 : STD_LOGIC_VECTOR (9 downto 0);
-    signal tmp_fu_164_p4 : STD_LOGIC_VECTOR (23 downto 0);
-    signal trunc_ln142_fu_173_p1 : STD_LOGIC_VECTOR (22 downto 0);
-    signal add_ln142_fu_177_p2 : STD_LOGIC_VECTOR (23 downto 0);
+    signal tmp_fu_164_p4 : STD_LOGIC_VECTOR (31 downto 0);
+    signal trunc_ln142_fu_173_p1 : STD_LOGIC_VECTOR (30 downto 0);
+    signal add_ln142_fu_177_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_5_fu_187_p3 : STD_LOGIC_VECTOR (0 downto 0);
-    signal add_ln144_fu_182_p2 : STD_LOGIC_VECTOR (22 downto 0);
-    signal select_ln144_fu_195_p3 : STD_LOGIC_VECTOR (22 downto 0);
+    signal add_ln144_fu_182_p2 : STD_LOGIC_VECTOR (30 downto 0);
+    signal select_ln144_fu_195_p3 : STD_LOGIC_VECTOR (30 downto 0);
     signal ap_done_reg : STD_LOGIC := '0';
     signal ap_continue_int : STD_LOGIC;
     signal ap_done_int : STD_LOGIC;
@@ -94,7 +94,7 @@ attribute shreg_extract : string;
     signal ap_start_int : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
 
-    component srcnn_mux_2_1_24_1_1 IS
+    component srcnn_mux_2_1_32_1_1 IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -103,10 +103,10 @@ attribute shreg_extract : string;
         din2_WIDTH : INTEGER;
         dout_WIDTH : INTEGER );
     port (
-        din0 : IN STD_LOGIC_VECTOR (23 downto 0);
-        din1 : IN STD_LOGIC_VECTOR (23 downto 0);
+        din0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        din1 : IN STD_LOGIC_VECTOR (31 downto 0);
         din2 : IN STD_LOGIC_VECTOR (0 downto 0);
-        dout : OUT STD_LOGIC_VECTOR (23 downto 0) );
+        dout : OUT STD_LOGIC_VECTOR (31 downto 0) );
     end component;
 
 
@@ -129,14 +129,14 @@ attribute shreg_extract : string;
 
 
 begin
-    mux_2_1_24_1_1_U592 : component srcnn_mux_2_1_24_1_1
+    mux_2_1_32_1_1_U589 : component srcnn_mux_2_1_32_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
-        din0_WIDTH => 24,
-        din1_WIDTH => 24,
+        din0_WIDTH => 32,
+        din1_WIDTH => 32,
         din2_WIDTH => 1,
-        dout_WIDTH => 24)
+        dout_WIDTH => 32)
     port map (
         din0 => conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_q0,
         din1 => conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_q0,
@@ -379,17 +379,17 @@ begin
     end process;
 
     icmp_ln139_fu_126_p2 <= "1" when (ap_sig_allocacmp_bw_2 = ap_const_lv8_FF) else "0";
-    select_ln144_cast_fu_203_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(select_ln144_fu_195_p3),24));
+    select_ln144_cast_fu_203_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(select_ln144_fu_195_p3),32));
     select_ln144_fu_195_p3 <= 
-        ap_const_lv23_0 when (tmp_5_fu_187_p3(0) = '1') else 
+        ap_const_lv31_0 when (tmp_5_fu_187_p3(0) = '1') else 
         add_ln144_fu_182_p2;
-        sext_ln119_1_cast_fu_114_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(sext_ln119_1),24));
+        sext_ln119_1_cast_fu_114_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(sext_ln119_1),32));
 
-        sext_ln142_cast_fu_110_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(sext_ln142),23));
+        sext_ln142_cast_fu_110_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(sext_ln142),31));
 
-    tmp_5_fu_187_p3 <= add_ln142_fu_177_p2(23 downto 23);
+    tmp_5_fu_187_p3 <= add_ln142_fu_177_p2(31 downto 31);
     tmp_s_fu_142_p3 <= (bh & trunc_ln139_fu_138_p1);
     trunc_ln139_fu_138_p1 <= ap_sig_allocacmp_bw_2(7 - 1 downto 0);
-    trunc_ln142_fu_173_p1 <= tmp_fu_164_p4(23 - 1 downto 0);
+    trunc_ln142_fu_173_p1 <= tmp_fu_164_p4(31 - 1 downto 0);
     zext_ln142_fu_150_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_s_fu_142_p3),64));
 end behav;

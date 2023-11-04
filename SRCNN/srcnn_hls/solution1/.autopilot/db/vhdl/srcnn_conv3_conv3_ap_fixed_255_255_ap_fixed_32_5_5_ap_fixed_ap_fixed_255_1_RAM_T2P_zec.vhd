@@ -11,7 +11,7 @@ use ieee.std_logic_unsigned.all;
 entity srcnn_conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_RAM_T2P_zec is 
     generic(
         MEM_TYPE        : string    := "block"; 
-        DataWidth       : integer   := 24; 
+        DataWidth       : integer   := 32; 
         AddressWidth    : integer   := 10;
         AddressRange    : integer   := 640
     ); 

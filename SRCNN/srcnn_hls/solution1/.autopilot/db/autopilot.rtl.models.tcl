@@ -1,19 +1,18 @@
 set SynModuleInfo {
   {SRCNAME conv1_Pipeline_OUT_ROW_COL MODELNAME conv1_Pipeline_OUT_ROW_COL RTLNAME srcnn_conv1_Pipeline_OUT_ROW_COL
     SUBMODULES {
-      {MODELNAME srcnn_mux_2_1_12_1_1 RTLNAME srcnn_mux_2_1_12_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_mux_3_2_12_1_1 RTLNAME srcnn_mux_3_2_12_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_mux_2_1_16_1_1 RTLNAME srcnn_mux_2_1_16_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_mux_3_2_16_1_1 RTLNAME srcnn_mux_3_2_16_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_mul_2ns_8ns_9_1_1 RTLNAME srcnn_mul_2ns_8ns_9_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_urem_9ns_8ns_9_13_1 RTLNAME srcnn_urem_9ns_8ns_9_13_1 BINDTYPE op TYPE urem IMPL auto LATENCY 12 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_mux_2_1_16_1_1 RTLNAME srcnn_mux_2_1_16_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_mul_4ns_8ns_11_1_1 RTLNAME srcnn_mul_4ns_8ns_11_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_urem_8ns_8ns_8_12_1 RTLNAME srcnn_urem_8ns_8ns_8_12_1 BINDTYPE op TYPE urem IMPL auto LATENCY 11 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_mul_8ns_10ns_17_1_1 RTLNAME srcnn_mul_8ns_10ns_17_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_mul_9ns_11ns_19_1_1 RTLNAME srcnn_mul_9ns_11ns_19_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_mul_5ns_8ns_11_1_1 RTLNAME srcnn_mul_5ns_8ns_11_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_mul_12s_12s_24_1_1 RTLNAME srcnn_mul_12s_12s_24_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_mac_muladd_12s_12s_24s_25_4_1 RTLNAME srcnn_mac_muladd_12s_12s_24s_25_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_mac_muladd_12s_12s_25s_25_4_1 RTLNAME srcnn_mac_muladd_12s_12s_25s_25_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_mul_16s_16s_32_1_1 RTLNAME srcnn_mul_16s_16s_32_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_mac_muladd_16s_16s_32s_33_4_1 RTLNAME srcnn_mac_muladd_16s_16s_32s_33_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_mac_muladd_16s_16s_33s_33_4_1 RTLNAME srcnn_mac_muladd_16s_16s_33s_33_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_flow_control_loop_pipe_sequential_init RTLNAME srcnn_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME srcnn_flow_control_loop_pipe_sequential_init_U}
     }
   }
@@ -30,7 +29,7 @@ set SynModuleInfo {
       {MODELNAME srcnn_mul_6ns_9ns_14_1_1 RTLNAME srcnn_mul_6ns_9ns_14_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_mul_6ns_18ns_23_1_1 RTLNAME srcnn_mul_6ns_18ns_23_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_conv1_conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_4_RAM_AUTbkb RTLNAME srcnn_conv1_conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_4_RAM_AUTbkb BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_conv1_p_ZZ5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEeOg RTLNAME srcnn_conv1_p_ZZ5conv1PA255_A255_8ap_fixedILi12ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEeOg BINDTYPE storage TYPE ram_2p IMPL lutram LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_conv1_p_ZZ5conv1PA255_A255_8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEeOg RTLNAME srcnn_conv1_p_ZZ5conv1PA255_A255_8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEeOg BINDTYPE storage TYPE ram_2p IMPL lutram LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_conv1_conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_RAM_AUTg8j RTLNAME srcnn_conv1_conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_RAM_AUTg8j BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
     }
   }
@@ -46,12 +45,11 @@ set SynModuleInfo {
     SUBMODULES {
       {MODELNAME srcnn_urem_8ns_7ns_8_12_1 RTLNAME srcnn_urem_8ns_7ns_8_12_1 BINDTYPE op TYPE urem IMPL auto LATENCY 11 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_urem_9ns_7ns_9_13_1 RTLNAME srcnn_urem_9ns_7ns_9_13_1 BINDTYPE op TYPE urem IMPL auto LATENCY 12 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_mul_8ns_7ns_13_1_1 RTLNAME srcnn_mul_8ns_7ns_13_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_mul_7s_7ns_10_1_1 RTLNAME srcnn_mul_7s_7ns_10_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_mul_8ns_7ns_13_1_1 RTLNAME srcnn_mul_8ns_7ns_13_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_mux_5_3_16_1_1 RTLNAME srcnn_mux_5_3_16_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_mul_18s_16s_34_1_1 RTLNAME srcnn_mul_18s_16s_34_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_mux_5_3_32_1_1 RTLNAME srcnn_mux_5_3_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_mac_muladd_18s_16s_33s_34_4_1 RTLNAME srcnn_mac_muladd_18s_16s_33s_34_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_mul_16s_16s_31_1_1 RTLNAME srcnn_mul_16s_16s_31_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
     }
   }
   {SRCNAME conv2_Pipeline_RELU MODELNAME conv2_Pipeline_RELU RTLNAME srcnn_conv2_Pipeline_RELU}
@@ -77,11 +75,10 @@ set SynModuleInfo {
   {SRCNAME conv3_Pipeline_WEIGHTI_WEIGHTK_L MODELNAME conv3_Pipeline_WEIGHTI_WEIGHTK_L RTLNAME srcnn_conv3_Pipeline_WEIGHTI_WEIGHTK_L}
   {SRCNAME conv3_Pipeline_IN_ROW_COL MODELNAME conv3_Pipeline_IN_ROW_COL RTLNAME srcnn_conv3_Pipeline_IN_ROW_COL
     SUBMODULES {
-      {MODELNAME srcnn_mul_32s_18s_49_1_1 RTLNAME srcnn_mul_32s_18s_49_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_mul_32s_16s_47_1_1 RTLNAME srcnn_mul_32s_16s_47_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_mux_2_1_32_1_1 RTLNAME srcnn_mux_2_1_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_mul_6ns_6ns_11_1_1 RTLNAME srcnn_mul_6ns_6ns_11_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_urem_9ns_9ns_9_13_1 RTLNAME srcnn_urem_9ns_9ns_9_13_1 BINDTYPE op TYPE urem IMPL auto LATENCY 12 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_mux_2_1_24_1_1 RTLNAME srcnn_mux_2_1_24_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
     }
   }
   {SRCNAME conv3_Pipeline_RELU MODELNAME conv3_Pipeline_RELU RTLNAME srcnn_conv3_Pipeline_RELU}

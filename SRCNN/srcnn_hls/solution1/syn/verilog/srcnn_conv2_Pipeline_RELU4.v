@@ -119,12 +119,12 @@ reg   [9:0] conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_7_reg_3
 reg   [9:0] conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_8_reg_399;
 reg   [9:0] conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_9_reg_404;
 wire   [63:0] zext_ln113_1_fu_228_p1;
-reg   [7:0] phi_urem821_fu_82;
+reg   [7:0] phi_urem814_fu_82;
 wire   [7:0] select_ln110_fu_323_p3;
 wire    ap_loop_init;
-reg   [7:0] ap_sig_allocacmp_phi_urem821_load_1;
+reg   [7:0] ap_sig_allocacmp_phi_urem814_load_1;
 reg   [7:0] grp_load_fu_177_p1;
-reg   [16:0] phi_mul819_fu_86;
+reg   [16:0] phi_mul812_fu_86;
 wire   [16:0] add_ln110_1_fu_240_p2;
 reg   [7:0] bw_2_fu_90;
 reg   [7:0] ap_sig_allocacmp_bw;
@@ -166,7 +166,7 @@ srcnn_mux_5_3_32_1_1 #(
     .din4_WIDTH( 32 ),
     .din5_WIDTH( 3 ),
     .dout_WIDTH( 32 ))
-mux_5_3_32_1_1_U491(
+mux_5_3_32_1_1_U489(
     .din0(conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_4_q0),
     .din1(conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_3_q0),
     .din2(conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_2_q0),
@@ -221,17 +221,17 @@ end
 
 always @ (posedge ap_clk) begin
     if (((ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_state1) & (ap_loop_init == 1'b1))) begin
-        phi_mul819_fu_86 <= 17'd0;
+        phi_mul812_fu_86 <= 17'd0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        phi_mul819_fu_86 <= add_ln110_1_fu_240_p2;
+        phi_mul812_fu_86 <= add_ln110_1_fu_240_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_state1) & (ap_loop_init == 1'b1))) begin
-        phi_urem821_fu_82 <= 8'd0;
+        phi_urem814_fu_82 <= 8'd0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        phi_urem821_fu_82 <= select_ln110_fu_323_p3;
+        phi_urem814_fu_82 <= select_ln110_fu_323_p3;
     end
 end
 
@@ -305,9 +305,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state1) & (ap_loop_init == 1'b1))) begin
-        ap_sig_allocacmp_phi_urem821_load_1 = 8'd0;
+        ap_sig_allocacmp_phi_urem814_load_1 = 8'd0;
     end else begin
-        ap_sig_allocacmp_phi_urem821_load_1 = phi_urem821_fu_82;
+        ap_sig_allocacmp_phi_urem814_load_1 = phi_urem814_fu_82;
     end
 end
 
@@ -443,9 +443,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_load_fu_177_p1 = phi_urem821_fu_82;
+        grp_load_fu_177_p1 = phi_urem814_fu_82;
     end else if (((icmp_ln110_fu_206_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1))) begin
-        grp_load_fu_177_p1 = ap_sig_allocacmp_phi_urem821_load_1;
+        grp_load_fu_177_p1 = ap_sig_allocacmp_phi_urem814_load_1;
     end else begin
         grp_load_fu_177_p1 = 'bx;
     end
@@ -471,7 +471,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln110_1_fu_240_p2 = (phi_mul819_fu_86 + 17'd322);
+assign add_ln110_1_fu_240_p2 = (phi_mul812_fu_86 + 17'd322);
 
 assign add_ln110_2_fu_311_p2 = (grp_load_fu_177_p1 + 8'd1);
 
@@ -519,11 +519,11 @@ assign sext_ln110_cast_fu_184_p1 = $signed(sext_ln110);
 
 assign sext_ln113_cast_fu_180_p1 = $signed(sext_ln113);
 
-assign tmp_56_fu_256_p6 = {{phi_mul819_fu_86[16:14]}};
+assign tmp_56_fu_256_p6 = {{phi_mul812_fu_86[16:14]}};
 
 assign tmp_fu_286_p3 = add_ln113_1_fu_276_p2[32'd31];
 
-assign trunc_ln110_1_fu_246_p4 = {{phi_mul819_fu_86[16:14]}};
+assign trunc_ln110_1_fu_246_p4 = {{phi_mul812_fu_86[16:14]}};
 
 assign trunc_ln113_fu_272_p1 = tmp_56_fu_256_p7[30:0];
 

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1_Pipeline_RELU'" level="0">
-<item name = "Date">Sat Nov  4 18:07:54 2023
+<item name = "Date">Sat Nov  4 18:43:17 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -62,7 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mux_2_1_16_1_1_U325">mux_2_1_16_1_1, 0, 0, 0, 9, 0</column>
+<column name="mux_2_1_16_1_1_U324">mux_2_1_16_1_1, 0, 0, 0, 9, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -122,7 +122,7 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, conv1_Pipeline_RELU, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv1_Pipeline_RELU, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv1_Pipeline_RELU, return value</column>
-<column name="tmp_286">in, 7, ap_none, tmp_286, scalar</column>
+<column name="tmp_284">in, 7, ap_none, tmp_284, scalar</column>
 <column name="sext_ln137">in, 14, ap_none, sext_ln137, scalar</column>
 <column name="sext_ln140">in, 14, ap_none, sext_ln140, scalar</column>
 <column name="conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_address0">out, 14, ap_memory, conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1, array</column>

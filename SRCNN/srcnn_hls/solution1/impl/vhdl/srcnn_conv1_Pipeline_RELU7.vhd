@@ -16,7 +16,7 @@ port (
     ap_done : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    tmp_301 : IN STD_LOGIC_VECTOR (6 downto 0);
+    tmp_299 : IN STD_LOGIC_VECTOR (6 downto 0);
     sext_ln137 : IN STD_LOGIC_VECTOR (13 downto 0);
     sext_ln140 : IN STD_LOGIC_VECTOR (13 downto 0);
     conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_address0 : OUT STD_LOGIC_VECTOR (13 downto 0);
@@ -79,7 +79,7 @@ attribute shreg_extract : string;
     signal zext_ln140_1_fu_195_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln137_fu_130_p1 : STD_LOGIC_VECTOR (6 downto 0);
     signal tmp_s_fu_134_p3 : STD_LOGIC_VECTOR (13 downto 0);
-    signal tmp_126_fu_156_p4 : STD_LOGIC_VECTOR (15 downto 0);
+    signal tmp_125_fu_156_p4 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln140_fu_165_p1 : STD_LOGIC_VECTOR (14 downto 0);
     signal value_fu_169_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal tmp_113_fu_179_p3 : STD_LOGIC_VECTOR (0 downto 0);
@@ -129,7 +129,7 @@ attribute shreg_extract : string;
 
 
 begin
-    mux_2_1_16_1_1_U337 : component srcnn_mux_2_1_16_1_1
+    mux_2_1_16_1_1_U336 : component srcnn_mux_2_1_16_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -141,7 +141,7 @@ begin
         din0 => conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_q0,
         din1 => conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_q0,
         din2 => tmp_reg_240,
-        dout => tmp_126_fu_156_p4);
+        dout => tmp_125_fu_156_p4);
 
     flow_control_loop_pipe_sequential_init_U : component srcnn_flow_control_loop_pipe_sequential_init
     port map (
@@ -383,13 +383,13 @@ begin
         sext_ln140_cast_fu_102_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(sext_ln140),15));
 
     tmp_113_fu_179_p3 <= value_fu_169_p2(15 downto 15);
-    tmp_s_fu_134_p3 <= (tmp_301 & trunc_ln137_fu_130_p1);
+    tmp_s_fu_134_p3 <= (tmp_299 & trunc_ln137_fu_130_p1);
     trunc_ln137_fu_130_p1 <= ap_sig_allocacmp_bw(7 - 1 downto 0);
-    trunc_ln140_fu_165_p1 <= tmp_126_fu_156_p4(15 - 1 downto 0);
+    trunc_ln140_fu_165_p1 <= tmp_125_fu_156_p4(15 - 1 downto 0);
     value_1_fu_187_p3 <= 
         ap_const_lv15_0 when (tmp_113_fu_179_p3(0) = '1') else 
         add_ln140_1_fu_174_p2;
-    value_fu_169_p2 <= std_logic_vector(unsigned(tmp_126_fu_156_p4) + unsigned(sext_ln137_cast_reg_217));
+    value_fu_169_p2 <= std_logic_vector(unsigned(tmp_125_fu_156_p4) + unsigned(sext_ln137_cast_reg_217));
     zext_ln140_1_fu_195_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(value_1_fu_187_p3),16));
     zext_ln140_fu_142_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_s_fu_134_p3),64));
 end behav;

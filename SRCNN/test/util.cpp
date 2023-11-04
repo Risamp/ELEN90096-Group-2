@@ -241,6 +241,21 @@ double calculate_PSNR(ftmap_t *img1,
 	return 20*std::log10(255.0 / rmse);
 }
 
+// return PSNR between two images
+double calculate_PSNR_input(ftmap_t *img1,
+					  input_t *img2,
+					  int      count)
+{
+	double rmse = 0.0;
+    for (int i = 0; i < count; i++) {
+    	// scale image values to uint8 in range [0 - 255] for RMSE calculation
+        rmse += std::pow((uint8_t)(img1[i]*255) - (uint8_t)(img2[i]*255), 2);
+    }
+    rmse = std::sqrt(rmse/count);
+
+	return 20*std::log10(255.0 / rmse);
+}
+
 // write ftmap image to output file
 void write_bin(std::string    fname,
 			   ftmap_t       *ftmap,

@@ -32,9 +32,9 @@ newFuncRoot:0 %w = alloca i32 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="5" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="64" op_3_bw="64" op_4_bw="64">
+<Node id="5" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="64" op_4_bw="64">
 <![CDATA[
-newFuncRoot:1 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i24 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1, i64 666, i64 30, i64 18446744073709551615
+newFuncRoot:1 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1, i64 666, i64 30, i64 18446744073709551615
 
 ]]></Node>
 <StgValue><ssdm name="specmemcore_ln0"/></StgValue>
@@ -47,9 +47,9 @@ newFuncRoot:1 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i24 %co
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="6" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="64" op_3_bw="64" op_4_bw="64">
+<Node id="6" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="64" op_4_bw="64">
 <![CDATA[
-newFuncRoot:2 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i24 %conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255, i64 666, i64 30, i64 18446744073709551615
+newFuncRoot:2 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255, i64 666, i64 30, i64 18446744073709551615
 
 ]]></Node>
 <StgValue><ssdm name="specmemcore_ln0"/></StgValue>
@@ -263,9 +263,9 @@ for.body8.0.i.i.split:4 %zext_ln76 = zext i10 %tmp_78
 </and_exp></or_exp>
 </condition>
 
-<Node id="22" bw="10" op_0_bw="24" op_1_bw="64" op_2_bw="64">
+<Node id="22" bw="10" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body8.0.i.i.split:5 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_427 = getelementptr i24 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1, i64 0, i64 %zext_ln76
+for.body8.0.i.i.split:5 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_427 = getelementptr i32 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1, i64 0, i64 %zext_ln76
 
 ]]></Node>
 <StgValue><ssdm name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_427"/></StgValue>
@@ -279,9 +279,9 @@ for.body8.0.i.i.split:5 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixe
 </and_exp></or_exp>
 </condition>
 
-<Node id="23" bw="10" op_0_bw="24" op_1_bw="64" op_2_bw="64">
+<Node id="23" bw="10" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body8.0.i.i.split:6 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_428 = getelementptr i24 %conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255, i64 0, i64 %zext_ln76
+for.body8.0.i.i.split:6 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_428 = getelementptr i32 %conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255, i64 0, i64 %zext_ln76
 
 ]]></Node>
 <StgValue><ssdm name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_428"/></StgValue>
@@ -328,9 +328,9 @@ for.body8.0.i.i.split:8 %br_ln76 = br i1 %tmp, void %arrayidx1225.0.i.i.case.0, 
 </and_exp></or_exp>
 </condition>
 
-<Node id="27" bw="0" op_0_bw="24" op_1_bw="10">
+<Node id="27" bw="0" op_0_bw="32" op_1_bw="10">
 <![CDATA[
-arrayidx1225.0.i.i.case.0:0 %store_ln76 = store i24 0, i10 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_427
+arrayidx1225.0.i.i.case.0:0 %store_ln76 = store i32 0, i10 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_427
 
 ]]></Node>
 <StgValue><ssdm name="store_ln76"/></StgValue>
@@ -362,9 +362,9 @@ arrayidx1225.0.i.i.case.0:1 %br_ln76 = br void %arrayidx1225.0.i.i.exit
 </and_exp></or_exp>
 </condition>
 
-<Node id="30" bw="0" op_0_bw="24" op_1_bw="10">
+<Node id="30" bw="0" op_0_bw="32" op_1_bw="10">
 <![CDATA[
-arrayidx1225.0.i.i.case.1:0 %store_ln76 = store i24 0, i10 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_428
+arrayidx1225.0.i.i.case.1:0 %store_ln76 = store i32 0, i10 %conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_428
 
 ]]></Node>
 <StgValue><ssdm name="store_ln76"/></StgValue>

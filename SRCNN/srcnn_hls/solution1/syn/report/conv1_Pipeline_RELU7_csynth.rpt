@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv1_Pipeline_RELU7'
 ================================================================
-* Date:           Sat Nov  4 18:07:55 2023
+* Date:           Sat Nov  4 18:43:18 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -73,7 +73,7 @@
     +---------------------+----------------+---------+----+---+----+-----+
     |       Instance      |     Module     | BRAM_18K| DSP| FF| LUT| URAM|
     +---------------------+----------------+---------+----+---+----+-----+
-    |mux_2_1_16_1_1_U337  |mux_2_1_16_1_1  |        0|   0|  0|   9|    0|
+    |mux_2_1_16_1_1_U336  |mux_2_1_16_1_1  |        0|   0|  0|   9|    0|
     +---------------------+----------------+---------+----+---+----+-----+
     |Total                |                |        0|   0|  0|   9|    0|
     +---------------------+----------------+---------+----+---+----+-----+
@@ -146,7 +146,7 @@
 |ap_done                                                                   |  out|    1|  ap_ctrl_hs|                                             conv1_Pipeline_RELU7|  return value|
 |ap_idle                                                                   |  out|    1|  ap_ctrl_hs|                                             conv1_Pipeline_RELU7|  return value|
 |ap_ready                                                                  |  out|    1|  ap_ctrl_hs|                                             conv1_Pipeline_RELU7|  return value|
-|tmp_301                                                                   |   in|    7|     ap_none|                                                          tmp_301|        scalar|
+|tmp_299                                                                   |   in|    7|     ap_none|                                                          tmp_299|        scalar|
 |sext_ln137                                                                |   in|   14|     ap_none|                                                       sext_ln137|        scalar|
 |sext_ln140                                                                |   in|   14|     ap_none|                                                       sext_ln140|        scalar|
 |conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1_address0  |  out|   14|   ap_memory|  conv1_ap_fixed_255_255_ap_fixed_1_9_9_ap_fixed_ap_fixed_255_2_1|         array|

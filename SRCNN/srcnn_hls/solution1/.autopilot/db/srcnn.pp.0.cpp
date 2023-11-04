@@ -5708,20 +5708,20 @@ inline __attribute__((nodebug)) bool operator!=(
 # 366 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\\ap_fixed.h" 2
 # 5 "src/srcnn.h" 2
 # 42 "src/srcnn.h"
-typedef ap_fixed<12,1> input_t;
-typedef ap_fixed<12,1> conv1w_t;
+typedef ap_fixed<16,1> input_t;
+typedef ap_fixed<16,1> conv1w_t;
 typedef ap_fixed<8,1> conv1b_t;
 typedef ap_fixed<16,3> conv1o_t;
 
 
-typedef ap_fixed<18,1> conv2w_t;
-typedef ap_fixed<10,1> conv2b_t;
+typedef ap_fixed<16,1> conv2w_t;
+typedef ap_fixed<8,1> conv2b_t;
 typedef ap_fixed<32,3> conv2o_t;
 
 
-typedef ap_fixed<18,1> conv3w_t;
-typedef ap_fixed<15,1> conv3b_t;
-typedef ap_fixed<24,3> output_t;
+typedef ap_fixed<16,1> conv3w_t;
+typedef ap_fixed<8,1> conv3b_t;
+typedef ap_fixed<32,3> output_t;
 
 
 
@@ -31624,7 +31624,7 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(input_t input_ftmap[1][255][2
            conv3b_t conv3_biases[1],
            output_t output_ftmap[1][255][255])
 {
-#line 30 "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl"
+#line 31 "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
 # 18 "src/srcnn.cpp"
 

@@ -130,8 +130,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>tmp_286</name>
-<Object>tmp_286</Object>
+<name>tmp_284</name>
+<Object>tmp_284</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

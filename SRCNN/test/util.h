@@ -71,6 +71,11 @@ double calculate_PSNR(ftmap_t *img1,
 					  output_t *img2,
 					  int      count);
 
+// return PSNR between two images
+double calculate_PSNR_input(ftmap_t *img1,
+					  input_t *img2,
+					  int      count);
+
 // write ftmap image to output file
 void write_bin(std::string    fname,
 			   ftmap_t       *ftmap,

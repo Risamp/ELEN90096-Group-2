@@ -16,7 +16,7 @@ module srcnn_conv3_weight_buffer_0_RAM_AUTO_1R1W (
      
     reset, clk);
 
-parameter DataWidth = 18;
+parameter DataWidth = 16;
 parameter AddressWidth = 10;
 parameter AddressRange = 800;
  

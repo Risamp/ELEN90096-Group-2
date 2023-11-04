@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_RELU'
 ================================================================
-* Date:           Sat Nov  4 18:08:16 2023
+* Date:           Sat Nov  4 18:43:58 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  4.167 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  4.335 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -54,14 +54,14 @@
 |       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
 +-----------------+---------+-----+--------+-------+-----+
 |DSP              |        -|    -|       -|      -|    -|
-|Expression       |        -|    -|       0|    113|    -|
+|Expression       |        -|    -|       0|    138|    -|
 |FIFO             |        -|    -|       -|      -|    -|
 |Instance         |        -|    -|       0|      9|    -|
 |Memory           |        -|    -|       -|      -|    -|
 |Multiplexer      |        -|    -|       -|     69|    -|
-|Register         |        -|    -|      87|      -|    -|
+|Register         |        -|    -|     103|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|    0|      87|    191|    0|
+|Total            |        0|    0|     103|    216|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      432|  360|  141120|  70560|    0|
 +-----------------+---------+-----+--------+-------+-----+
@@ -73,7 +73,7 @@
     +---------------------+----------------+---------+----+---+----+-----+
     |       Instance      |     Module     | BRAM_18K| DSP| FF| LUT| URAM|
     +---------------------+----------------+---------+----+---+----+-----+
-    |mux_2_1_24_1_1_U592  |mux_2_1_24_1_1  |        0|   0|  0|   9|    0|
+    |mux_2_1_32_1_1_U589  |mux_2_1_32_1_1  |        0|   0|  0|   9|    0|
     +---------------------+----------------+---------+----+---+----+-----+
     |Total                |                |        0|   0|  0|   9|    0|
     +---------------------+----------------+---------+----+---+----+-----+
@@ -92,12 +92,12 @@
     |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +------------------------+----------+----+---+----+------------+------------+
     |add_ln139_fu_132_p2     |         +|   0|  0|  15|           8|           1|
-    |add_ln142_fu_177_p2     |         +|   0|  0|  31|          24|          24|
-    |add_ln144_fu_182_p2     |         +|   0|  0|  30|          23|          23|
+    |add_ln142_fu_177_p2     |         +|   0|  0|  39|          32|          32|
+    |add_ln144_fu_182_p2     |         +|   0|  0|  38|          31|          31|
     |icmp_ln139_fu_126_p2    |      icmp|   0|  0|  15|           8|           2|
-    |select_ln144_fu_195_p3  |    select|   0|  0|  22|           1|           1|
+    |select_ln144_fu_195_p3  |    select|   0|  0|  31|           1|           1|
     +------------------------+----------+----+---+----+------------+------------+
-    |Total                   |          |   0|  0| 113|          64|          51|
+    |Total                   |          |   0|  0| 138|          80|          67|
     +------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -124,11 +124,11 @@
     |bw_fu_62                                                                  |   8|   0|    8|          0|
     |conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_267_reg_238  |  10|   0|   10|          0|
     |conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_268_reg_243  |  10|   0|   10|          0|
-    |sext_ln119_1_cast_reg_225                                                 |  24|   0|   24|          0|
-    |sext_ln142_cast_reg_220                                                   |  23|   0|   23|          0|
+    |sext_ln119_1_cast_reg_225                                                 |  32|   0|   32|          0|
+    |sext_ln142_cast_reg_220                                                   |  31|   0|   31|          0|
     |tmp_4_reg_248                                                             |   1|   0|    1|          0|
     +--------------------------------------------------------------------------+----+----+-----+-----------+
-    |Total                                                                     |  87|   0|   87|          0|
+    |Total                                                                     | 103|   0|  103|          0|
     +--------------------------------------------------------------------------+----+----+-----+-----------+
 
 
@@ -147,17 +147,17 @@
 |ap_idle                                                                            |  out|    1|  ap_ctrl_hs|                                                       conv3_Pipeline_RELU|  return value|
 |ap_ready                                                                           |  out|    1|  ap_ctrl_hs|                                                       conv3_Pipeline_RELU|  return value|
 |bh                                                                                 |   in|    3|     ap_none|                                                                        bh|        scalar|
-|sext_ln119_1                                                                       |   in|   22|     ap_none|                                                              sext_ln119_1|        scalar|
-|sext_ln142                                                                         |   in|   22|     ap_none|                                                                sext_ln142|        scalar|
+|sext_ln119_1                                                                       |   in|   30|     ap_none|                                                              sext_ln119_1|        scalar|
+|sext_ln142                                                                         |   in|   30|     ap_none|                                                                sext_ln142|        scalar|
 |conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_address0            |  out|   10|   ap_memory|            conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1|         array|
 |conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_ce0                 |  out|    1|   ap_memory|            conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1|         array|
 |conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_we0                 |  out|    1|   ap_memory|            conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1|         array|
-|conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_d0                  |  out|   24|   ap_memory|            conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1|         array|
-|conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_q0                  |   in|   24|   ap_memory|            conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1|         array|
+|conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_d0                  |  out|   32|   ap_memory|            conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1|         array|
+|conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_q0                  |   in|   32|   ap_memory|            conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1|         array|
 |conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_address0  |  out|   10|   ap_memory|  conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255|         array|
 |conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_ce0       |  out|    1|   ap_memory|  conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255|         array|
 |conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_we0       |  out|    1|   ap_memory|  conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255|         array|
-|conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_d0        |  out|   24|   ap_memory|  conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255|         array|
-|conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_q0        |   in|   24|   ap_memory|  conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255|         array|
+|conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_d0        |  out|   32|   ap_memory|  conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255|         array|
+|conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_q0        |   in|   32|   ap_memory|  conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255|         array|
 +-----------------------------------------------------------------------------------+-----+-----+------------+--------------------------------------------------------------------------+--------------+
 

@@ -130,8 +130,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>phi_mul844</name>
-<Object>phi_mul844</Object>
+<name>phi_mul837</name>
+<Object>phi_mul837</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

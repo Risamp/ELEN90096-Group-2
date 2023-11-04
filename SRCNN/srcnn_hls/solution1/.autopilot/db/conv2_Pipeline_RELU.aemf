@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1699081685107">
-  <ports id="1" name="mul_ln113" type="PortType" coreId="1702129263" bitwidth="10">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1699083817722">
+  <ports id="1" name="mul_ln113" type="PortType" coreId="1948590131" bitwidth="10">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="sext_ln110" type="PortType" coreId="1296126530" bitwidth="30">
+  <ports id="2" name="sext_ln110" type="PortType" coreId="1869358880" bitwidth="30">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="sext_ln113" type="PortType" coreId="1702129263" bitwidth="30">
+  <ports id="3" name="sext_ln113" type="PortType" coreId="1852142702" bitwidth="30">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_4" type="PortType" coreName="RAM_T2P_BRAM" coreId="1346117694" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="612">
+  <ports id="4" name="conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_4" type="PortType" coreName="RAM_T2P_BRAM" coreId="1597322546" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="612">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
@@ -17,15 +17,15 @@
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="6" name="conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_2" type="PortType" coreName="RAM_T2P_BRAM" coreId="1702129263" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="612">
+  <ports id="6" name="conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_2" type="PortType" coreName="RAM_T2P_BRAM" coreId="910250053" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="612">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="7" name="conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_1" type="PortType" coreName="RAM_T2P_BRAM" coreId="544825708" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="612">
+  <ports id="7" name="conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_1" type="PortType" coreName="RAM_T2P_BRAM" coreId="1852142702" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="612">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="8" name="conv2_mulmulmulmulap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255" type="PortType" coreName="RAM_T2P_BRAM" coreId="1597322546" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="612">
+  <ports id="8" name="conv2_mulmulmulmulap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255" type="PortType" coreName="RAM_T2P_BRAM" coreId="1852142702" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="612">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
@@ -152,14 +152,14 @@
   <edges id="-158" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@ports.7"/>
   <blocks id="26" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>for.body8.0.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="phi_urem" coreId="609987736" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="phi_urem" coreId="0" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="phi_mul" coreId="6775040" bitwidth="17" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="phi_mul" coreId="0" bitwidth="17" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -171,19 +171,19 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="sext_ln113_read" coreId="635774720" bitwidth="30" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="sext_ln113_read" coreId="0" bitwidth="30" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataInputObjs>sext_ln113</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="sext_ln110_read" coreId="27661" bitwidth="30" opcode="read" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="sext_ln110_read" coreId="0" bitwidth="30" opcode="read" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <dataInputObjs>sext_ln110</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="mul_ln113_read" coreId="0" bitwidth="10" opcode="read" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="mul_ln113_read" coreId="59" bitwidth="10" opcode="read" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
       <dataInputObjs>mul_ln113</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="sext_ln113_cast" rtlName="sext_ln113_cast_fu_180_p1" coreId="1869833472" bitwidth="31" opcode="sext" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="sext_ln113_cast" rtlName="sext_ln113_cast_fu_180_p1" coreId="2680" bitwidth="31" opcode="sext" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
@@ -191,19 +191,19 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="bw_write_ln0" coreId="28781" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="bw_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="9" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="phi_mul_write_ln0" coreId="609519168" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="phi_mul_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="10" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="phi_urem_write_ln0" coreId="609523624" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="phi_urem_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="11" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="br_ln0" coreId="609505216" opcode="br" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="br_ln0" coreId="0" opcode="br" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <controlInputObjs>for.body8.0.i</controlInputObjs>
     </node_objs>
   </blocks>
@@ -220,7 +220,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.end.0.i.exitStub</controlOutputObjs>
       <controlOutputObjs>for.body8.0.i.split</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="bw_3" lineNumber="110" originalName="bw" fileName="src/conv2.cpp" fileDirectory="../." coreId="609496384" contextFuncName="export_output_buffer_c2" bitwidth="8" opcode="load" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="bw_3" lineNumber="110" originalName="bw" fileName="src/conv2.cpp" fileDirectory="../." coreId="65" contextFuncName="export_output_buffer_c2" bitwidth="8" opcode="load" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="53" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="110" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
         <dataInputObjs>alloca</dataInputObjs>
@@ -267,14 +267,14 @@
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="phi_mul_load" lineNumber="110" fileName="src/conv2.cpp" fileDirectory="../." coreId="0" contextFuncName="export_output_buffer_c2" bitwidth="17" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="phi_mul_load" lineNumber="110" fileName="src/conv2.cpp" fileDirectory="../." coreId="65" contextFuncName="export_output_buffer_c2" bitwidth="17" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="53" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="110" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
         <dataOutputObjs>partselect</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="zext_ln113" lineNumber="113" fileName="src/conv2.cpp" fileDirectory="../." rtlName="zext_ln113_fu_218_p1" coreId="637804480" contextFuncName="export_output_buffer_c2" bitwidth="10" opcode="zext" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="zext_ln113" lineNumber="113" fileName="src/conv2.cpp" fileDirectory="../." rtlName="zext_ln113_fu_218_p1" coreId="0" contextFuncName="export_output_buffer_c2" bitwidth="10" opcode="zext" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="53" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="113" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
         <dataInputObjs>load</dataInputObjs>
@@ -287,7 +287,7 @@
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="zext_ln113_2" lineNumber="113" fileName="src/conv2.cpp" fileDirectory="../." rtlName="zext_ln113_2_fu_228_p1" coreId="635774960" contextFuncName="export_output_buffer_c2" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="zext_ln113_2" lineNumber="113" fileName="src/conv2.cpp" fileDirectory="../." rtlName="zext_ln113_2_fu_228_p1" coreId="1700" contextFuncName="export_output_buffer_c2" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="53" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="113" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
         <dataInputObjs>add</dataInputObjs>
@@ -297,7 +297,7 @@
         <dataOutputObjs>getelementptr</dataOutputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_15" lineNumber="113" fileName="src/conv2.cpp" fileDirectory="../." coreId="638462208" contextFuncName="export_output_buffer_c2" bitwidth="10" opcode="getelementptr" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_15" lineNumber="113" fileName="src/conv2.cpp" fileDirectory="../." coreId="0" contextFuncName="export_output_buffer_c2" bitwidth="10" opcode="getelementptr" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="53" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="113" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
         <dataInputObjs>conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_4</dataInputObjs>
@@ -307,7 +307,7 @@
         <dataOutputObjs>conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_4</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_16" lineNumber="113" fileName="src/conv2.cpp" fileDirectory="../." coreId="609500968" contextFuncName="export_output_buffer_c2" bitwidth="10" opcode="getelementptr" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_16" lineNumber="113" fileName="src/conv2.cpp" fileDirectory="../." coreId="1652" contextFuncName="export_output_buffer_c2" bitwidth="10" opcode="getelementptr" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="53" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="113" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
         <dataInputObjs>conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_3</dataInputObjs>
@@ -327,7 +327,7 @@
         <dataOutputObjs>conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_2</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_18" lineNumber="113" fileName="src/conv2.cpp" fileDirectory="../." coreId="609499048" contextFuncName="export_output_buffer_c2" bitwidth="10" opcode="getelementptr" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_18" lineNumber="113" fileName="src/conv2.cpp" fileDirectory="../." coreId="1604" contextFuncName="export_output_buffer_c2" bitwidth="10" opcode="getelementptr" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="53" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="113" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
         <dataInputObjs>conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_1</dataInputObjs>
@@ -337,7 +337,7 @@
         <dataOutputObjs>conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_1</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_19" lineNumber="113" fileName="src/conv2.cpp" fileDirectory="../." coreId="1717924352" contextFuncName="export_output_buffer_c2" bitwidth="10" opcode="getelementptr" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_19" lineNumber="113" fileName="src/conv2.cpp" fileDirectory="../." coreId="0" contextFuncName="export_output_buffer_c2" bitwidth="10" opcode="getelementptr" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="53" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="113" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
         <dataInputObjs>conv2_mulmulmulmulap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255</dataInputObjs>
@@ -392,7 +392,7 @@
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>mux</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="tmp" lineNumber="113" fileName="src/conv2.cpp" fileDirectory="../." rtlName="mux_5_3_32_1_1_U473" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="export_output_buffer_c2" bitwidth="32" opcode="mux" nodeLabel="1.0" m_display="0" m_delay="0.57" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="tmp" lineNumber="113" fileName="src/conv2.cpp" fileDirectory="../." rtlName="mux_5_3_32_1_1_U471" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="export_output_buffer_c2" bitwidth="32" opcode="mux" nodeLabel="1.0" m_display="0" m_delay="0.57" m_topoIndex="35" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="53" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="113" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
         <dataInputObjs>load</dataInputObjs>
@@ -404,7 +404,7 @@
         <dataOutputObjs>trunc</dataOutputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="trunc_ln113" lineNumber="113" fileName="src/conv2.cpp" fileDirectory="../." rtlName="trunc_ln113_fu_272_p1" coreId="6775040" contextFuncName="export_output_buffer_c2" bitwidth="31" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="trunc_ln113" lineNumber="113" fileName="src/conv2.cpp" fileDirectory="../." rtlName="trunc_ln113_fu_272_p1" coreId="0" contextFuncName="export_output_buffer_c2" bitwidth="31" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="53" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="113" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
         <dataInputObjs>mux</dataInputObjs>
@@ -424,7 +424,7 @@
         <dataInputObjs>sext</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="tmp_111" lineNumber="115" fileName="src/conv2.cpp" fileDirectory="../." rtlName="tmp_111_fu_286_p3" coreId="609493952" contextFuncName="export_output_buffer_c2" bitwidth="1" opcode="bitselect" nodeLabel="1.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="tmp_111" lineNumber="115" fileName="src/conv2.cpp" fileDirectory="../." rtlName="tmp_111_fu_286_p3" coreId="0" contextFuncName="export_output_buffer_c2" bitwidth="1" opcode="bitselect" nodeLabel="1.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="53" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="115" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
         <dataInputObjs>add</dataInputObjs>
@@ -449,7 +449,7 @@
         <dataOutputObjs>store</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="_ln110" lineNumber="110" fileName="src/conv2.cpp" fileDirectory="../." coreId="638465792" contextFuncName="export_output_buffer_c2" opcode="switch" nodeLabel="1.0" m_display="0" m_delay="0.73" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="_ln110" lineNumber="110" fileName="src/conv2.cpp" fileDirectory="../." coreId="0" contextFuncName="export_output_buffer_c2" opcode="switch" nodeLabel="1.0" m_display="0" m_delay="0.73" m_topoIndex="42" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="53" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="110" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
         <dataInputObjs>partselect</dataInputObjs>
@@ -477,7 +477,7 @@
         <dataInputObjs>zext</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="br_ln0" coreId="1717924352" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="br_ln0" coreId="0" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
         <controlInputObjs>V32.i.i.i46.0.i.exit</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="src/conv2.cpp">
@@ -513,7 +513,7 @@
         <dataInputObjs>zext</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="br_ln0" coreId="609523136" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="br_ln0" coreId="0" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
         <controlInputObjs>V32.i.i.i46.0.i.exit</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="src/conv2.cpp">
@@ -531,7 +531,7 @@
         <dataInputObjs>zext</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="br_ln0" coreId="609504552" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="br_ln0" coreId="0" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
         <controlInputObjs>V32.i.i.i46.0.i.exit</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="src/conv2.cpp">
@@ -569,7 +569,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.body8.0.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="phi_urem_load" lineNumber="110" fileName="src/conv2.cpp" fileDirectory="../." coreId="1869833472" contextFuncName="export_output_buffer_c2" bitwidth="8" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="phi_urem_load" lineNumber="110" fileName="src/conv2.cpp" fileDirectory="../." coreId="0" contextFuncName="export_output_buffer_c2" bitwidth="8" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="53" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="110" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
         <dataInputObjs>alloca</dataInputObjs>
@@ -610,13 +610,13 @@
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="phi_urem_write_ln110" lineNumber="110" fileName="src/conv2.cpp" fileDirectory="../." coreId="635771024" contextFuncName="export_output_buffer_c2" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.42" m_topoIndex="59" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="phi_urem_write_ln110" lineNumber="110" fileName="src/conv2.cpp" fileDirectory="../." coreId="0" contextFuncName="export_output_buffer_c2" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.42" m_topoIndex="59" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="53" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="110" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
         <dataInputObjs>select</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="br_ln110" lineNumber="110" fileName="src/conv2.cpp" fileDirectory="../." coreId="1717924352" contextFuncName="export_output_buffer_c2" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="br_ln110" lineNumber="110" fileName="src/conv2.cpp" fileDirectory="../." coreId="0" contextFuncName="export_output_buffer_c2" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="53" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="conv2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="110" fileDirectory="C:\SPB_Data\ELEN90096-Group-2\SRCNN" functionName="export_output_buffer_c2"/>
         <controlInputObjs>for.body8.0.i</controlInputObjs>

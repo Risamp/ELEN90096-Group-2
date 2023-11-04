@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2_Pipeline_6'" level="0">
-<item name = "Date">Sat Nov  4 18:08:06 2023
+<item name = "Date">Sat Nov  4 18:43:39 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -62,7 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mux_5_3_32_1_1_U500">mux_5_3_32_1_1, 0, 0, 0, 26, 0</column>
+<column name="mux_5_3_32_1_1_U498">mux_5_3_32_1_1, 0, 0, 0, 26, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -79,14 +79,14 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="empty_263_fu_240_p2">+, 0, 0, 17, 10, 10</column>
+<column name="empty_254_fu_240_p2">+, 0, 0, 17, 10, 10</column>
 <column name="empty_fu_207_p2">+, 0, 0, 15, 8, 1</column>
-<column name="next_mul825_fu_273_p2">+, 0, 0, 24, 17, 9</column>
-<column name="next_urem827_fu_216_p2">+, 0, 0, 15, 8, 1</column>
+<column name="next_mul818_fu_273_p2">+, 0, 0, 24, 17, 9</column>
+<column name="next_urem820_fu_216_p2">+, 0, 0, 15, 8, 1</column>
 <column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
-<column name="empty_262_fu_222_p2">icmp, 0, 0, 15, 8, 6</column>
+<column name="empty_253_fu_222_p2">icmp, 0, 0, 15, 8, 6</column>
 <column name="exitcond3513_fu_201_p2">icmp, 0, 0, 15, 8, 2</column>
-<column name="idx_urem828_fu_228_p3">select, 0, 0, 8, 1, 8</column>
+<column name="idx_urem821_fu_228_p3">select, 0, 0, 8, 1, 8</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -95,11 +95,11 @@
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter2">9, 2, 1, 2</column>
 <column name="ap_sig_allocacmp_loop_index_1_i_load">9, 2, 8, 16</column>
-<column name="ap_sig_allocacmp_phi_urem826_load">9, 2, 8, 16</column>
+<column name="ap_sig_allocacmp_phi_urem819_load">9, 2, 8, 16</column>
 <column name="i3_blk_n_W">9, 2, 1, 2</column>
 <column name="loop_index_1_i_fu_90">9, 2, 8, 16</column>
-<column name="phi_mul824_fu_86">9, 2, 17, 34</column>
-<column name="phi_urem826_fu_82">9, 2, 8, 16</column>
+<column name="phi_mul817_fu_86">9, 2, 17, 34</column>
+<column name="phi_urem819_fu_82">9, 2, 8, 16</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -111,8 +111,8 @@
 <column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="exitcond3513_reg_336">1, 0, 1, 0</column>
 <column name="loop_index_1_i_fu_90">8, 0, 8, 0</column>
-<column name="phi_mul824_fu_86">17, 0, 17, 0</column>
-<column name="phi_urem826_fu_82">8, 0, 8, 0</column>
+<column name="phi_mul817_fu_86">17, 0, 17, 0</column>
+<column name="phi_urem819_fu_82">8, 0, 8, 0</column>
 <column name="tmp_58_reg_370">32, 0, 32, 0</column>
 </table>
 </item>

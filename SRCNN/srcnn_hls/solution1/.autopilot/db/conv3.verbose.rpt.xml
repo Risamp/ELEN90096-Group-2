@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3'" level="0">
-<item name = "Date">Sat Nov  4 18:08:19 2023
+<item name = "Date">Sat Nov  4 18:44:03 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -31,16 +31,16 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_load_input_buffer_c3_fu_217">load_input_buffer_c3, 73739, 73739, 0.737 ms, 0.737 ms, 73739, 73739, no</column>
-<column name="grp_conv3_Pipeline_WEIGHTI_WEIGHTK_L_fu_229">conv3_Pipeline_WEIGHTI_WEIGHTK_L, 803, 803, 8.030 us, 8.030 us, 803, 803, no</column>
-<column name="grp_conv3_Pipeline_IN_ROW_COL_fu_238">conv3_Pipeline_IN_ROW_COL, 258412, 258412, 2.584 ms, 2.584 ms, 258412, 258412, no</column>
-<column name="grp_conv3_Pipeline_RELU_fu_252">conv3_Pipeline_RELU, 512, 512, 5.120 us, 5.120 us, 512, 512, no</column>
-<column name="grp_conv3_Pipeline_4_fu_264">conv3_Pipeline_4, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
-<column name="grp_conv3_Pipeline_RELU1_fu_277">conv3_Pipeline_RELU1, 512, 512, 5.120 us, 5.120 us, 512, 512, no</column>
-<column name="grp_conv3_Pipeline_6_fu_288">conv3_Pipeline_6, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
-<column name="grp_conv3_Pipeline_CLEARW_fu_300">conv3_Pipeline_CLEARW, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
-<column name="grp_conv3_Pipeline_CLEARW2_fu_310">conv3_Pipeline_CLEARW2, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
-<column name="grp_conv3_Pipeline_CLEARW3_fu_319">conv3_Pipeline_CLEARW3, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_load_input_buffer_c3_fu_219">load_input_buffer_c3, 73739, 73739, 0.737 ms, 0.737 ms, 73739, 73739, no</column>
+<column name="grp_conv3_Pipeline_WEIGHTI_WEIGHTK_L_fu_231">conv3_Pipeline_WEIGHTI_WEIGHTK_L, 803, 803, 8.030 us, 8.030 us, 803, 803, no</column>
+<column name="grp_conv3_Pipeline_IN_ROW_COL_fu_240">conv3_Pipeline_IN_ROW_COL, 258412, 258412, 2.584 ms, 2.584 ms, 258412, 258412, no</column>
+<column name="grp_conv3_Pipeline_RELU_fu_254">conv3_Pipeline_RELU, 512, 512, 5.120 us, 5.120 us, 512, 512, no</column>
+<column name="grp_conv3_Pipeline_4_fu_266">conv3_Pipeline_4, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_conv3_Pipeline_RELU1_fu_279">conv3_Pipeline_RELU1, 512, 512, 5.120 us, 5.120 us, 512, 512, no</column>
+<column name="grp_conv3_Pipeline_6_fu_290">conv3_Pipeline_6, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_conv3_Pipeline_CLEARW_fu_302">conv3_Pipeline_CLEARW, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_conv3_Pipeline_CLEARW2_fu_312">conv3_Pipeline_CLEARW2, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_conv3_Pipeline_CLEARW3_fu_321">conv3_Pipeline_CLEARW3, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -62,28 +62,28 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 347, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, 16, 6501, 16320, -</column>
+<column name="Instance">-, 16, 6924, 16608, -</column>
 <column name="Memory">149, -, 0, 0, 0</column>
 <column name="Multiplexer">-, -, -, 1243, -</column>
-<column name="Register">-, -, 414, -, -</column>
+<column name="Register">-, -, 408, -, -</column>
 <specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
-<specialColumn name="Utilization (%)">34, 4, 4, 25, 0</specialColumn>
+<specialColumn name="Utilization (%)">34, 4, 5, 25, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_conv3_Pipeline_4_fu_264">conv3_Pipeline_4, 0, 0, 39, 88, 0</column>
-<column name="grp_conv3_Pipeline_6_fu_288">conv3_Pipeline_6, 0, 0, 39, 88, 0</column>
-<column name="grp_conv3_Pipeline_CLEARW_fu_300">conv3_Pipeline_CLEARW, 0, 0, 10, 57, 0</column>
-<column name="grp_conv3_Pipeline_CLEARW2_fu_310">conv3_Pipeline_CLEARW2, 0, 0, 10, 57, 0</column>
-<column name="grp_conv3_Pipeline_CLEARW3_fu_319">conv3_Pipeline_CLEARW3, 0, 0, 10, 57, 0</column>
-<column name="grp_conv3_Pipeline_IN_ROW_COL_fu_238">conv3_Pipeline_IN_ROW_COL, 0, 15, 3800, 9271, 0</column>
-<column name="grp_conv3_Pipeline_RELU_fu_252">conv3_Pipeline_RELU, 0, 0, 87, 191, 0</column>
-<column name="grp_conv3_Pipeline_RELU1_fu_277">conv3_Pipeline_RELU1, 0, 0, 87, 191, 0</column>
-<column name="grp_conv3_Pipeline_WEIGHTI_WEIGHTK_L_fu_229">conv3_Pipeline_WEIGHTI_WEIGHTK_L, 0, 0, 52, 289, 0</column>
-<column name="grp_load_input_buffer_c3_fu_217">load_input_buffer_c3, 0, 1, 2367, 6031, 0</column>
+<column name="grp_conv3_Pipeline_4_fu_266">conv3_Pipeline_4, 0, 0, 47, 88, 0</column>
+<column name="grp_conv3_Pipeline_6_fu_290">conv3_Pipeline_6, 0, 0, 47, 88, 0</column>
+<column name="grp_conv3_Pipeline_CLEARW_fu_302">conv3_Pipeline_CLEARW, 0, 0, 10, 57, 0</column>
+<column name="grp_conv3_Pipeline_CLEARW2_fu_312">conv3_Pipeline_CLEARW2, 0, 0, 10, 57, 0</column>
+<column name="grp_conv3_Pipeline_CLEARW3_fu_321">conv3_Pipeline_CLEARW3, 0, 0, 10, 57, 0</column>
+<column name="grp_conv3_Pipeline_IN_ROW_COL_fu_240">conv3_Pipeline_IN_ROW_COL, 0, 15, 4178, 9511, 0</column>
+<column name="grp_conv3_Pipeline_RELU_fu_254">conv3_Pipeline_RELU, 0, 0, 103, 216, 0</column>
+<column name="grp_conv3_Pipeline_RELU1_fu_279">conv3_Pipeline_RELU1, 0, 0, 103, 216, 0</column>
+<column name="grp_conv3_Pipeline_WEIGHTI_WEIGHTK_L_fu_231">conv3_Pipeline_WEIGHTI_WEIGHTK_L, 0, 0, 49, 287, 0</column>
+<column name="grp_load_input_buffer_c3_fu_219">load_input_buffer_c3, 0, 1, 2367, 6031, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -92,11 +92,11 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_U">conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_RAM_T2P_zec, 2, 0, 0, 0, 640, 24, 1, 15360</column>
-<column name="conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_U">conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_RAM_T2P_zec, 2, 0, 0, 0, 640, 24, 1, 15360</column>
+<column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_U">conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_RAM_T2P_zec, 2, 0, 0, 0, 640, 32, 1, 20480</column>
+<column name="conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_U">conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_RAM_T2P_zec, 2, 0, 0, 0, 640, 32, 1, 20480</column>
 <column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_U">conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_RAM_AUTOxdS, 72, 0, 0, 0, 37440, 32, 1, 1198080</column>
 <column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_U">conv3_conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_3_RAM_AUTOxdS, 72, 0, 0, 0, 37440, 32, 1, 1198080</column>
-<column name="weight_buffer_0_U">conv3_weight_buffer_0_RAM_AUTO_1R1W, 1, 0, 0, 0, 800, 18, 1, 14400</column>
+<column name="weight_buffer_0_U">conv3_weight_buffer_0_RAM_AUTO_1R1W, 1, 0, 0, 0, 800, 16, 1, 12800</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
@@ -105,36 +105,36 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln136_fu_515_p2">+, 0, 0, 10, 3, 2</column>
-<column name="add_ln139_1_fu_422_p2">+, 0, 0, 71, 64, 64</column>
-<column name="add_ln139_2_fu_447_p2">+, 0, 0, 16, 9, 9</column>
-<column name="add_ln139_3_fu_486_p2">+, 0, 0, 71, 64, 64</column>
-<column name="add_ln139_fu_383_p2">+, 0, 0, 16, 9, 9</column>
-<column name="add_ln32_fu_562_p2">+, 0, 0, 15, 8, 3</column>
-<column name="add_ln72_1_fu_544_p2">+, 0, 0, 10, 3, 2</column>
-<column name="add_ln72_2_fu_556_p2">+, 0, 0, 10, 3, 2</column>
-<column name="add_ln72_fu_537_p2">+, 0, 0, 10, 3, 1</column>
-<column name="sub_ln139_1_fu_476_p2">-, 0, 0, 27, 20, 20</column>
-<column name="sub_ln139_fu_412_p2">-, 0, 0, 27, 20, 20</column>
+<column name="add_ln136_fu_517_p2">+, 0, 0, 10, 3, 2</column>
+<column name="add_ln139_1_fu_424_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln139_2_fu_449_p2">+, 0, 0, 16, 9, 9</column>
+<column name="add_ln139_3_fu_488_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln139_fu_385_p2">+, 0, 0, 16, 9, 9</column>
+<column name="add_ln32_fu_564_p2">+, 0, 0, 15, 8, 3</column>
+<column name="add_ln72_1_fu_546_p2">+, 0, 0, 10, 3, 2</column>
+<column name="add_ln72_2_fu_558_p2">+, 0, 0, 10, 3, 2</column>
+<column name="add_ln72_fu_539_p2">+, 0, 0, 10, 3, 1</column>
+<column name="sub_ln139_1_fu_478_p2">-, 0, 0, 27, 20, 20</column>
+<column name="sub_ln139_fu_414_p2">-, 0, 0, 27, 20, 20</column>
 <column name="ap_block_state23">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state35_on_subcall_done">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln136_1_fu_501_p2">icmp, 0, 0, 10, 3, 3</column>
-<column name="icmp_ln136_fu_373_p2">icmp, 0, 0, 10, 3, 3</column>
-<column name="icmp_ln32_fu_364_p2">icmp, 0, 0, 15, 8, 2</column>
-<column name="icmp_ln72_1_fu_550_p2">icmp, 0, 0, 10, 3, 3</column>
-<column name="icmp_ln72_fu_531_p2">icmp, 0, 0, 10, 3, 3</column>
+<column name="icmp_ln136_1_fu_503_p2">icmp, 0, 0, 10, 3, 3</column>
+<column name="icmp_ln136_fu_375_p2">icmp, 0, 0, 10, 3, 3</column>
+<column name="icmp_ln32_fu_366_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="icmp_ln72_1_fu_552_p2">icmp, 0, 0, 10, 3, 3</column>
+<column name="icmp_ln72_fu_533_p2">icmp, 0, 0, 10, 3, 3</column>
 <column name="ap_block_state12_on_subcall_done">or, 0, 0, 2, 1, 1</column>
-<column name="or_ln139_fu_437_p2">or, 0, 0, 3, 3, 1</column>
+<column name="or_ln139_fu_439_p2">or, 0, 0, 3, 3, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">169, 38, 1, 38</column>
-<column name="bh_reg_193">9, 2, 3, 6</column>
+<column name="bh_reg_195">9, 2, 3, 6</column>
 <column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_address0">49, 9, 10, 90</column>
 <column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_ce0">49, 9, 1, 9</column>
 <column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_ce1">9, 2, 1, 2</column>
-<column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_d0">37, 7, 24, 168</column>
+<column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_d0">37, 7, 32, 224</column>
 <column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_we0">37, 7, 1, 7</column>
 <column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_we1">9, 2, 1, 2</column>
 <column name="conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_2_address0">14, 3, 16, 48</column>
@@ -152,11 +152,11 @@
 <column name="conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_address0">49, 9, 10, 90</column>
 <column name="conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_ce0">49, 9, 1, 9</column>
 <column name="conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_ce1">9, 2, 1, 2</column>
-<column name="conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_d0">37, 7, 24, 168</column>
+<column name="conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_d0">37, 7, 32, 224</column>
 <column name="conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_we0">37, 7, 1, 7</column>
 <column name="conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_we1">9, 2, 1, 2</column>
-<column name="h_1_reg_205">9, 2, 3, 6</column>
-<column name="h_fu_142">9, 2, 8, 16</column>
+<column name="h_1_reg_207">9, 2, 3, 6</column>
+<column name="h_fu_144">9, 2, 8, 16</column>
 <column name="m_axi_i3_ARVALID">9, 2, 1, 2</column>
 <column name="m_axi_i3_RREADY">9, 2, 1, 2</column>
 <column name="m_axi_o_AWADDR">26, 5, 64, 320</column>
@@ -202,34 +202,34 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln136_reg_656">3, 0, 3, 0</column>
-<column name="add_ln139_3_reg_637">64, 0, 64, 0</column>
-<column name="add_ln72_1_reg_675">3, 0, 3, 0</column>
-<column name="add_ln72_2_reg_683">3, 0, 3, 0</column>
-<column name="add_ln72_reg_670">3, 0, 3, 0</column>
+<column name="add_ln136_reg_658">3, 0, 3, 0</column>
+<column name="add_ln139_3_reg_639">64, 0, 64, 0</column>
+<column name="add_ln72_1_reg_677">3, 0, 3, 0</column>
+<column name="add_ln72_2_reg_685">3, 0, 3, 0</column>
+<column name="add_ln72_reg_672">3, 0, 3, 0</column>
 <column name="ap_CS_fsm">37, 0, 37, 0</column>
-<column name="bh_reg_193">3, 0, 3, 0</column>
-<column name="grp_conv3_Pipeline_4_fu_264_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_conv3_Pipeline_6_fu_288_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_conv3_Pipeline_CLEARW2_fu_310_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_conv3_Pipeline_CLEARW3_fu_319_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_conv3_Pipeline_CLEARW_fu_300_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_conv3_Pipeline_IN_ROW_COL_fu_238_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_conv3_Pipeline_RELU1_fu_277_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_conv3_Pipeline_RELU_fu_252_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_conv3_Pipeline_WEIGHTI_WEIGHTK_L_fu_229_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_load_input_buffer_c3_fu_217_ap_start_reg">1, 0, 1, 0</column>
-<column name="h_1_reg_205">3, 0, 3, 0</column>
-<column name="h_fu_142">8, 0, 8, 0</column>
-<column name="icmp_ln136_reg_620">1, 0, 1, 0</column>
-<column name="icmp_ln72_reg_666">1, 0, 1, 0</column>
-<column name="or_ln139_reg_630">2, 0, 3, 1</column>
-<column name="shl_ln_reg_590">15, 0, 22, 7</column>
-<column name="trunc_ln149_1_reg_650">62, 0, 62, 0</column>
-<column name="trunc_ln4_reg_624">62, 0, 62, 0</column>
-<column name="trunc_ln_reg_598">62, 0, 62, 0</column>
-<column name="w3_addr_reg_603">64, 0, 64, 0</column>
-<column name="zext_ln132_reg_614">8, 0, 9, 1</column>
+<column name="bh_reg_195">3, 0, 3, 0</column>
+<column name="grp_conv3_Pipeline_4_fu_266_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_conv3_Pipeline_6_fu_290_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_conv3_Pipeline_CLEARW2_fu_312_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_conv3_Pipeline_CLEARW3_fu_321_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_conv3_Pipeline_CLEARW_fu_302_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_conv3_Pipeline_IN_ROW_COL_fu_240_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_conv3_Pipeline_RELU1_fu_279_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_conv3_Pipeline_RELU_fu_254_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_conv3_Pipeline_WEIGHTI_WEIGHTK_L_fu_231_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_load_input_buffer_c3_fu_219_ap_start_reg">1, 0, 1, 0</column>
+<column name="h_1_reg_207">3, 0, 3, 0</column>
+<column name="h_fu_144">8, 0, 8, 0</column>
+<column name="icmp_ln136_reg_622">1, 0, 1, 0</column>
+<column name="icmp_ln72_reg_668">1, 0, 1, 0</column>
+<column name="or_ln139_reg_632">2, 0, 3, 1</column>
+<column name="shl_ln_reg_592">8, 0, 30, 22</column>
+<column name="trunc_ln149_1_reg_652">62, 0, 62, 0</column>
+<column name="trunc_ln4_reg_626">62, 0, 62, 0</column>
+<column name="trunc_ln_reg_600">63, 0, 63, 0</column>
+<column name="w3_addr_reg_605">64, 0, 64, 0</column>
+<column name="zext_ln132_reg_616">8, 0, 9, 1</column>
 </table>
 </item>
 </section>
@@ -307,8 +307,8 @@
 <column name="m_axi_w3_AWUSER">out, 1, m_axi, w3, pointer</column>
 <column name="m_axi_w3_WVALID">out, 1, m_axi, w3, pointer</column>
 <column name="m_axi_w3_WREADY">in, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_WDATA">out, 32, m_axi, w3, pointer</column>
-<column name="m_axi_w3_WSTRB">out, 4, m_axi, w3, pointer</column>
+<column name="m_axi_w3_WDATA">out, 16, m_axi, w3, pointer</column>
+<column name="m_axi_w3_WSTRB">out, 2, m_axi, w3, pointer</column>
 <column name="m_axi_w3_WLAST">out, 1, m_axi, w3, pointer</column>
 <column name="m_axi_w3_WID">out, 1, m_axi, w3, pointer</column>
 <column name="m_axi_w3_WUSER">out, 1, m_axi, w3, pointer</column>
@@ -327,10 +327,10 @@
 <column name="m_axi_w3_ARUSER">out, 1, m_axi, w3, pointer</column>
 <column name="m_axi_w3_RVALID">in, 1, m_axi, w3, pointer</column>
 <column name="m_axi_w3_RREADY">out, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_RDATA">in, 32, m_axi, w3, pointer</column>
+<column name="m_axi_w3_RDATA">in, 16, m_axi, w3, pointer</column>
 <column name="m_axi_w3_RLAST">in, 1, m_axi, w3, pointer</column>
 <column name="m_axi_w3_RID">in, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_RFIFONUM">in, 13, m_axi, w3, pointer</column>
+<column name="m_axi_w3_RFIFONUM">in, 14, m_axi, w3, pointer</column>
 <column name="m_axi_w3_RUSER">in, 1, m_axi, w3, pointer</column>
 <column name="m_axi_w3_RRESP">in, 2, m_axi, w3, pointer</column>
 <column name="m_axi_w3_BVALID">in, 1, m_axi, w3, pointer</column>
@@ -339,7 +339,7 @@
 <column name="m_axi_w3_BID">in, 1, m_axi, w3, pointer</column>
 <column name="m_axi_w3_BUSER">in, 1, m_axi, w3, pointer</column>
 <column name="conv3_weights">in, 64, ap_none, conv3_weights, scalar</column>
-<column name="conv3_biases_0_0_val">in, 15, ap_none, conv3_biases_0_0_val, scalar</column>
+<column name="conv3_biases_0_0_val">in, 8, ap_none, conv3_biases_0_0_val, scalar</column>
 <column name="m_axi_o_AWVALID">out, 1, m_axi, o, pointer</column>
 <column name="m_axi_o_AWREADY">in, 1, m_axi, o, pointer</column>
 <column name="m_axi_o_AWADDR">out, 64, m_axi, o, pointer</column>

@@ -181,19 +181,19 @@ reg   [31:0] tmp_52_reg_370;
 reg    ap_condition_exit_pp0_iter1_stage0;
 wire   [63:0] p_cast_fu_246_p1;
 wire    ap_block_pp0_stage0_01001;
-reg   [7:0] phi_urem816_fu_82;
-wire   [7:0] idx_urem818_fu_228_p3;
+reg   [7:0] phi_urem809_fu_82;
+wire   [7:0] idx_urem811_fu_228_p3;
 wire    ap_loop_init;
-reg   [7:0] ap_sig_allocacmp_phi_urem816_load;
-reg   [16:0] phi_mul814_fu_86;
-wire   [16:0] next_mul815_fu_273_p2;
+reg   [7:0] ap_sig_allocacmp_phi_urem809_load;
+reg   [16:0] phi_mul807_fu_86;
+wire   [16:0] next_mul808_fu_273_p2;
 reg   [7:0] loop_index_0_i_fu_90;
 wire   [7:0] empty_fu_207_p2;
 reg   [7:0] ap_sig_allocacmp_loop_index_0_i_load;
-wire   [7:0] next_urem817_fu_216_p2;
-wire   [0:0] empty_264_fu_222_p2;
-wire   [9:0] phi_urem816_cast_fu_236_p1;
-wire   [9:0] empty_265_fu_240_p2;
+wire   [7:0] next_urem810_fu_216_p2;
+wire   [0:0] empty_255_fu_222_p2;
+wire   [9:0] phi_urem809_cast_fu_236_p1;
+wire   [9:0] empty_256_fu_240_p2;
 wire   [2:0] tmp_52_fu_289_p6;
 reg    ap_done_reg;
 wire    ap_continue_int;
@@ -222,7 +222,7 @@ srcnn_mux_5_3_32_1_1 #(
     .din4_WIDTH( 32 ),
     .din5_WIDTH( 3 ),
     .dout_WIDTH( 32 ))
-mux_5_3_32_1_1_U482(
+mux_5_3_32_1_1_U480(
     .din0(conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_4_q0),
     .din1(conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_3_q0),
     .din2(conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_2_q0),
@@ -302,9 +302,9 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if ((ap_loop_init == 1'b1)) begin
-            phi_mul814_fu_86 <= 17'd0;
+            phi_mul807_fu_86 <= 17'd0;
         end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (exitcond3111_reg_336 == 1'd0))) begin
-            phi_mul814_fu_86 <= next_mul815_fu_273_p2;
+            phi_mul807_fu_86 <= next_mul808_fu_273_p2;
         end
     end
 end
@@ -312,9 +312,9 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if (((exitcond3111_fu_201_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            phi_urem816_fu_82 <= idx_urem818_fu_228_p3;
+            phi_urem809_fu_82 <= idx_urem811_fu_228_p3;
         end else if ((ap_loop_init == 1'b1)) begin
-            phi_urem816_fu_82 <= 8'd0;
+            phi_urem809_fu_82 <= 8'd0;
         end
     end
 end
@@ -390,9 +390,9 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
-        ap_sig_allocacmp_phi_urem816_load = 8'd0;
+        ap_sig_allocacmp_phi_urem809_load = 8'd0;
     end else begin
-        ap_sig_allocacmp_phi_urem816_load = phi_urem816_fu_82;
+        ap_sig_allocacmp_phi_urem809_load = phi_urem809_fu_82;
     end
 end
 
@@ -499,15 +499,15 @@ assign conv2_ap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_4_address0 =
 
 assign conv2_mulmulmulmulap_fixed_255_255_ap_fixed_64_1_1_ap_fixed_ap_fixed_255_address0 = p_cast_fu_246_p1;
 
-assign empty_264_fu_222_p2 = ((next_urem817_fu_216_p2 < 8'd51) ? 1'b1 : 1'b0);
+assign empty_255_fu_222_p2 = ((next_urem810_fu_216_p2 < 8'd51) ? 1'b1 : 1'b0);
 
-assign empty_265_fu_240_p2 = (mul_ln113 + phi_urem816_cast_fu_236_p1);
+assign empty_256_fu_240_p2 = (mul_ln113 + phi_urem809_cast_fu_236_p1);
 
 assign empty_fu_207_p2 = (ap_sig_allocacmp_loop_index_0_i_load + 8'd1);
 
 assign exitcond3111_fu_201_p2 = ((ap_sig_allocacmp_loop_index_0_i_load == 8'd255) ? 1'b1 : 1'b0);
 
-assign idx_urem818_fu_228_p3 = ((empty_264_fu_222_p2[0:0] == 1'b1) ? next_urem817_fu_216_p2 : 8'd0);
+assign idx_urem811_fu_228_p3 = ((empty_255_fu_222_p2[0:0] == 1'b1) ? next_urem810_fu_216_p2 : 8'd0);
 
 assign m_axi_i3_ARADDR = 64'd0;
 
@@ -571,14 +571,14 @@ assign m_axi_i3_WSTRB = 4'd15;
 
 assign m_axi_i3_WUSER = 1'd0;
 
-assign next_mul815_fu_273_p2 = (phi_mul814_fu_86 + 17'd322);
+assign next_mul808_fu_273_p2 = (phi_mul807_fu_86 + 17'd322);
 
-assign next_urem817_fu_216_p2 = (ap_sig_allocacmp_phi_urem816_load + 8'd1);
+assign next_urem810_fu_216_p2 = (ap_sig_allocacmp_phi_urem809_load + 8'd1);
 
-assign p_cast_fu_246_p1 = empty_265_fu_240_p2;
+assign p_cast_fu_246_p1 = empty_256_fu_240_p2;
 
-assign phi_urem816_cast_fu_236_p1 = ap_sig_allocacmp_phi_urem816_load;
+assign phi_urem809_cast_fu_236_p1 = ap_sig_allocacmp_phi_urem809_load;
 
-assign tmp_52_fu_289_p6 = {{phi_mul814_fu_86[16:14]}};
+assign tmp_52_fu_289_p6 = {{phi_mul807_fu_86[16:14]}};
 
 endmodule //srcnn_conv2_Pipeline_4

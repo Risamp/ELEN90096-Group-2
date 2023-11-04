@@ -38,18 +38,18 @@ output   ap_done;
 output   ap_idle;
 output   ap_ready;
 input  [2:0] or_ln139;
-input  [21:0] sext_ln119_1;
-input  [21:0] sext_ln142;
+input  [29:0] sext_ln119_1;
+input  [29:0] sext_ln142;
 output  [9:0] conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_address0;
 output   conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_ce0;
 output   conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_we0;
-output  [23:0] conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_d0;
-input  [23:0] conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_q0;
+output  [31:0] conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_d0;
+input  [31:0] conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_q0;
 output  [9:0] conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_address0;
 output   conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_ce0;
 output   conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_we0;
-output  [23:0] conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_d0;
-input  [23:0] conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_q0;
+output  [31:0] conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_d0;
+input  [31:0] conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_q0;
 
 reg ap_idle;
 reg[9:0] conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_address0;
@@ -68,10 +68,10 @@ wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 wire    ap_CS_fsm_state2;
 wire    ap_block_state2_pp0_stage1_iter0;
-wire  signed [22:0] sext_ln142_cast_fu_110_p1;
-reg  signed [22:0] sext_ln142_cast_reg_220;
-wire  signed [23:0] sext_ln119_1_cast_fu_114_p1;
-reg  signed [23:0] sext_ln119_1_cast_reg_225;
+wire  signed [30:0] sext_ln142_cast_fu_110_p1;
+reg  signed [30:0] sext_ln142_cast_reg_220;
+wire  signed [31:0] sext_ln119_1_cast_fu_114_p1;
+reg  signed [31:0] sext_ln119_1_cast_reg_225;
 wire   [7:0] add_ln139_fu_132_p2;
 reg   [7:0] add_ln139_reg_233;
 reg   [9:0] conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_263_reg_238;
@@ -81,15 +81,15 @@ wire   [63:0] zext_ln142_fu_150_p1;
 reg   [7:0] bw_fu_62;
 wire    ap_loop_init;
 reg   [7:0] ap_sig_allocacmp_bw_1;
-wire   [23:0] select_ln144_1_cast_fu_203_p1;
+wire   [31:0] select_ln144_1_cast_fu_203_p1;
 wire   [6:0] trunc_ln139_fu_138_p1;
 wire   [9:0] tmp_s_fu_142_p3;
-wire   [23:0] tmp_1_fu_164_p4;
-wire   [22:0] trunc_ln142_fu_173_p1;
-wire   [23:0] add_ln142_fu_177_p2;
+wire   [31:0] tmp_1_fu_164_p4;
+wire   [30:0] trunc_ln142_fu_173_p1;
+wire   [31:0] add_ln142_fu_177_p2;
 wire   [0:0] tmp_3_fu_187_p3;
-wire   [22:0] add_ln144_fu_182_p2;
-wire   [22:0] select_ln144_fu_195_p3;
+wire   [30:0] add_ln144_fu_182_p2;
+wire   [30:0] select_ln144_fu_195_p3;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -105,14 +105,14 @@ initial begin
 #0 ap_done_reg = 1'b0;
 end
 
-srcnn_mux_2_1_24_1_1 #(
+srcnn_mux_2_1_32_1_1 #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
-    .din0_WIDTH( 24 ),
-    .din1_WIDTH( 24 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
     .din2_WIDTH( 1 ),
-    .dout_WIDTH( 24 ))
-mux_2_1_24_1_1_U604(
+    .dout_WIDTH( 32 ))
+mux_2_1_32_1_1_U601(
     .din0(conv3_ap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_1_q0),
     .din1(conv3_mulmulmulmulap_fixed_255_255_ap_fixed_32_5_5_ap_fixed_ap_fixed_255_q0),
     .din2(tmp_reg_248),
@@ -326,19 +326,19 @@ assign icmp_ln139_fu_126_p2 = ((ap_sig_allocacmp_bw_1 == 8'd255) ? 1'b1 : 1'b0);
 
 assign select_ln144_1_cast_fu_203_p1 = select_ln144_fu_195_p3;
 
-assign select_ln144_fu_195_p3 = ((tmp_3_fu_187_p3[0:0] == 1'b1) ? 23'd0 : add_ln144_fu_182_p2);
+assign select_ln144_fu_195_p3 = ((tmp_3_fu_187_p3[0:0] == 1'b1) ? 31'd0 : add_ln144_fu_182_p2);
 
 assign sext_ln119_1_cast_fu_114_p1 = $signed(sext_ln119_1);
 
 assign sext_ln142_cast_fu_110_p1 = $signed(sext_ln142);
 
-assign tmp_3_fu_187_p3 = add_ln142_fu_177_p2[32'd23];
+assign tmp_3_fu_187_p3 = add_ln142_fu_177_p2[32'd31];
 
 assign tmp_s_fu_142_p3 = {{or_ln139}, {trunc_ln139_fu_138_p1}};
 
 assign trunc_ln139_fu_138_p1 = ap_sig_allocacmp_bw_1[6:0];
 
-assign trunc_ln142_fu_173_p1 = tmp_1_fu_164_p4[22:0];
+assign trunc_ln142_fu_173_p1 = tmp_1_fu_164_p4[30:0];
 
 assign zext_ln142_fu_150_p1 = tmp_s_fu_142_p3;
 

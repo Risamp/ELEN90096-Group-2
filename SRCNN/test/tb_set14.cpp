@@ -129,7 +129,7 @@ int tb_set14()
                 std::cout << std::setw(15) << std::left << filename.substr(0,(filename).find("_")) 
                     << std::setw(20) << std::left <<  calculate_PSNR(&img_GT_set14[0][0][0], &img_HR_set14[0][0][0], H*W)
                     << std::setw(27) << std::left <<  software_HR_psnr[i]
-                    << std::setw(20) << std::left <<  calculate_PSNR(&img_GT_set14[0][0][0], &img_LR_set14[0][0][0], H*W) 
+                    << std::setw(20) << std::left <<  calculate_PSNR_input(&img_GT_set14[0][0][0], &img_LR_set14[0][0][0], H*W)
                     << std::setw(15) << std::left <<  calculate_mse(&img_GT_set14[0][0][0],&img_HR_set14[0][0][0],N3*H*W) 
                     << std::setw(27) << std::left <<  software_HR_mse[i++] << std::endl;
             }

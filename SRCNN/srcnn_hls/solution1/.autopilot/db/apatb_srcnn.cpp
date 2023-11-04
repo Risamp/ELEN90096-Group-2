@@ -1303,8 +1303,8 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port10 {
 #endif
-    .width = 16,
-    .asize = 2,
+    .width = 8,
+    .asize = 1,
     .hbm = false,
     .name = { "gmem" },
 #ifdef POST_CHECK
@@ -1317,12 +1317,12 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #endif
 #endif
   };
-  __xlx_offset_byte_param_conv1_biases = 0*2;
-  __xlx_offset_byte_param_conv2_biases = 32*2;
-  __xlx_offset_byte_param_conv3_biases = 64*2;
+  __xlx_offset_byte_param_conv1_biases = 0*1;
+  __xlx_offset_byte_param_conv2_biases = 64*1;
+  __xlx_offset_byte_param_conv3_biases = 96*1;
   port10.param = { __xlx_apatb_param_conv1_biases, __xlx_apatb_param_conv2_biases, __xlx_apatb_param_conv3_biases };
-  port10.nbytes = { 64, 64, 2 };
-  port10.offset = { 0, 32, 64 };
+  port10.nbytes = { 64, 32, 1 };
+  port10.offset = { 0, 64, 96 };
   port10.hasWrite = { false, false, false };
 
 #ifdef USE_BINARY_TV_FILE
@@ -1477,8 +1477,8 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port16 {
 #endif
-    .width = 32,
-    .asize = 4,
+    .width = 16,
+    .asize = 2,
     .hbm = false,
     .name = { "w2" },
 #ifdef POST_CHECK
@@ -1492,7 +1492,7 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #endif
   };
   port16.param = { __xlx_apatb_param_conv2_weights };
-  port16.nbytes = { 8192 };
+  port16.nbytes = { 4096 };
   port16.offset = {  };
   port16.hasWrite = { false };
 
@@ -1501,8 +1501,8 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port17 {
 #endif
-    .width = 32,
-    .asize = 4,
+    .width = 16,
+    .asize = 2,
     .hbm = false,
     .name = { "w3" },
 #ifdef POST_CHECK
@@ -1516,7 +1516,7 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 #endif
   };
   port17.param = { __xlx_apatb_param_conv3_weights };
-  port17.nbytes = { 3200 };
+  port17.nbytes = { 1600 };
   port17.offset = {  };
   port17.hasWrite = { false };
 
