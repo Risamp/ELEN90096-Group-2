@@ -1,0 +1,63 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'conv2'" level="0">
+<item name = "Date">Sat Nov  4 17:40:00 2023
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">srcnn_hls</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck24-ubva530-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.419 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">318432186, 318456666, 3.184 sec, 3.185 sec, 318432186, 318456666, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_load_input_buffer_c2_fu_6356">load_input_buffer_c2, 49163, 49163, 0.492 ms, 0.492 ms, 49163, 49163, no</column>
+<column name="grp_conv2_Pipeline_LOAD_WEIGHTS_L_fu_6424">conv2_Pipeline_LOAD_WEIGHTS_L, 259, 259, 2.590 us, 2.590 us, 259, 259, no</column>
+<column name="grp_conv2_Pipeline_RELU_fu_6433">conv2_Pipeline_RELU, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_conv2_Pipeline_3_fu_6469">conv2_Pipeline_3, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_conv2_Pipeline_RELU4_fu_6507">conv2_Pipeline_RELU4, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_conv2_Pipeline_5_fu_6543">conv2_Pipeline_5, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_conv2_Pipeline_BW_fu_6581">conv2_Pipeline_BW, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_conv2_Pipeline_BW5_fu_6617">conv2_Pipeline_BW5, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+<column name="grp_conv2_Pipeline_BW6_fu_6652">conv2_Pipeline_BW6, 257, 257, 2.570 us, 2.570 us, 257, 257, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- TILE_ROW">318432185, 318456665, 3746261 ~ 3746549, -, -, 85, no</column>
+<column name=" + TILE_OUT">3697088, 3697376, 462136 ~ 462172, -, -, 8, no</column>
+<column name="  ++ OUT">446216, 446216, 111554, -, -, 4, no</column>
+<column name="   +++ IN">111552, 111552, 1743, -, -, 64, no</column>
+<column name="    ++++ ROW">1740, 1740, 580, -, -, 3, no</column>
+<column name="     +++++ COL">578, 578, 34, -, -, 17, no</column>
+<column name="  ++ EXPORT">12548, 12584, 3137 ~ 3146, -, -, 4, no</column>
+<column name="   +++ BH">3134, 3142, 1567, -, -, 2, no</column>
+<column name="  ++ CLEAR">3108, 3108, 777, -, -, 4, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

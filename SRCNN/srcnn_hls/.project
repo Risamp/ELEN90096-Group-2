@@ -37,6 +37,11 @@
 			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/.apc/.tb</location>
 		</link>
 		<link>
+			<name>.reference/ap_fixed.h</name>
+			<type>1</type>
+			<location>C:/Xilinx/Vitis_HLS/2023.1/include/ap_fixed.h</location>
+		</link>
+		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
 			<location>C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/.tcls</location>

@@ -3,19 +3,75 @@
   <errorLogs>
     <logs>
       <synLog/>
-      <simLog/>
-      <mgLog/>
-      <packageLog/>
-      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog/>
-      <simLog/>
-      <mgLog/>
-      <packageLog/>
-      <csimLog/>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:06.982+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_577_p_opcode' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:05.959+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_573_p_opcode' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:05.925+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_569_p_opcode' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:05.909+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_565_p_opcode' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:05.885+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_561_p_opcode' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:05.860+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_BREADY' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:04.936+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWUSER' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:04.919+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWREGION' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:04.903+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWQOS' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:04.887+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWPROT' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:04.869+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWCACHE' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:04.850+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWLOCK' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:04.834+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWBURST' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:04.816+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWSIZE' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:04.801+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWLEN' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:04.783+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWID' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:04.769+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWADDR' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:04.753+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWVALID' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:04.737+1100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'RELU' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:04.302+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_4/m_axi_o_BREADY' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:04.015+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_4/m_axi_o_AWUSER' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:03.990+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_4/m_axi_o_AWREGION' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:03.974+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_4/m_axi_o_AWQOS' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:03.955+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_4/m_axi_o_AWPROT' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:03.940+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_4/m_axi_o_AWCACHE' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:03.923+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_4/m_axi_o_AWLOCK' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:03.907+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_4/m_axi_o_AWBURST' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:03.891+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_4/m_axi_o_AWSIZE' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:03.875+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_4/m_axi_o_AWLEN' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:03.852+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_4/m_axi_o_AWID' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:03.835+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_4/m_axi_o_AWADDR' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:03.819+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_4/m_axi_o_AWVALID' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:03.801+1100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'RELU' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:03.395+1100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'IN_ROW_COL' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:01.274+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_WEIGHTI_WEIGHTK_L/m_axi_w3_ARUSER' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:00.902+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_WEIGHTI_WEIGHTK_L/m_axi_w3_ARREGION' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:00.883+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_WEIGHTI_WEIGHTK_L/m_axi_w3_ARQOS' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:00.869+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_WEIGHTI_WEIGHTK_L/m_axi_w3_ARPROT' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:00.856+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_WEIGHTI_WEIGHTK_L/m_axi_w3_ARCACHE' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:00.841+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_WEIGHTI_WEIGHTK_L/m_axi_w3_ARLOCK' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:00.824+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_WEIGHTI_WEIGHTK_L/m_axi_w3_ARBURST' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:00.798+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_WEIGHTI_WEIGHTK_L/m_axi_w3_ARSIZE' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:00.782+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_WEIGHTI_WEIGHTK_L/m_axi_w3_ARLEN' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:00.764+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_WEIGHTI_WEIGHTK_L/m_axi_w3_ARID' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:00.749+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_WEIGHTI_WEIGHTK_L/m_axi_w3_ARADDR' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:00.735+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_WEIGHTI_WEIGHTK_L/m_axi_w3_ARVALID' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:41:00.721+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_BREADY' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:40:49.485+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWUSER' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:40:49.463+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWREGION' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:40:49.444+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWQOS' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:40:49.430+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWPROT' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:40:49.412+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWCACHE' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:40:49.396+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWLOCK' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:40:49.382+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWBURST' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:40:49.367+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWSIZE' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:40:49.354+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWLEN' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:40:49.339+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWID' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:40:49.325+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWADDR' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:40:49.309+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_5/m_axi_i3_AWVALID' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:40:49.295+1100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'RELU' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:40:48.484+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_3/m_axi_i3_BREADY' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:40:48.216+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv2_Pipeline_3/m_axi_i3_AWUSER' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-04T17:40:48.195+1100" type="Warning"/>
+      </synLog>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>
