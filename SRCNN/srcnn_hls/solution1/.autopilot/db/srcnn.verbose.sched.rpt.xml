@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn'" level="0">
-<item name = "Date">Sun Nov  5 00:34:38 2023
+<item name = "Date">Sun Nov  5 11:02:24 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">349811915, 349860008, 3.498 sec, 3.499 sec, 349811916, 349860009, no</column>
+<column name="">349813011, 349861104, 3.498 sec, 3.499 sec, 349813012, 349861105, no</column>
 </table>
 </item>
 <item name = "Detail">

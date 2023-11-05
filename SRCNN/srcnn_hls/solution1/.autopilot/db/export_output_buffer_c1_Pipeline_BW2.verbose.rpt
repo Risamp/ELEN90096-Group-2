@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'export_output_buffer_c1_Pipeline_BW2'
 ================================================================
-* Date:           Sun Nov  5 00:34:47 2023
+* Date:           Sun Nov  5 11:02:34 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -190,7 +190,7 @@ ST_1 : Operation 11 [1/1] (0.76ns)   --->   "%add_ln73 = add i8 %w_1, i8 1" [src
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln73 = br i1 %icmp_ln73, void %for.inc.1.i.split, void %for.inc13.1.i.exitStub" [src/conv1.cpp:73->src/conv1.cpp:150]   --->   Operation 12 'br' 'br_ln73' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%empty = trunc i8 %w_1" [src/conv1.cpp:73->src/conv1.cpp:150]   --->   Operation 13 'trunc' 'empty' <Predicate = (!icmp_ln73)> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%speclooptripcount_ln73 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv1.cpp:73->src/conv1.cpp:150]   --->   Operation 14 'speclooptripcount' 'speclooptripcount_ln73' <Predicate = (!icmp_ln73)> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specloopname_ln73 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [src/conv1.cpp:73->src/conv1.cpp:150]   --->   Operation 15 'specloopname' 'specloopname_ln73' <Predicate = (!icmp_ln73)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specloopname_ln73 = specloopname void @_ssdm_op_SpecLoopName, void @empty_21" [src/conv1.cpp:73->src/conv1.cpp:150]   --->   Operation 15 'specloopname' 'specloopname_ln73' <Predicate = (!icmp_ln73)> <Delay = 0.00>
 ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i7.i7, i7 %tmp_13_read, i7 %empty" [src/conv1.cpp:75->src/conv1.cpp:150]   --->   Operation 16 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln73)> <Delay = 0.00>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln75 = zext i14 %tmp_s" [src/conv1.cpp:75->src/conv1.cpp:150]   --->   Operation 17 'zext' 'zext_ln75' <Predicate = (!icmp_ln73)> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%conv1_float_255_255_float_1_9_9_float_float_255_255_ou_10 = getelementptr i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i64 0, i64 %zext_ln75" [src/conv1.cpp:75->src/conv1.cpp:150]   --->   Operation 18 'getelementptr' 'conv1_float_255_255_float_1_9_9_float_float_255_255_ou_10' <Predicate = (!icmp_ln73)> <Delay = 0.00>
@@ -398,7 +398,7 @@ ret_ln0                                                   (ret              ) [ 
 <pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_4"/></StgValue>
+<StgValue><ssdm name="empty_21"/></StgValue>
 </bind>
 </comp>
 

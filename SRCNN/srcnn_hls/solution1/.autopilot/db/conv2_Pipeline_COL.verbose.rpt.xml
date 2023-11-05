@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2_Pipeline_COL'" level="0">
-<item name = "Date">Sun Nov  5 00:34:59 2023
+<item name = "Date">Sun Nov  5 11:02:46 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -62,30 +62,30 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mul_8ns_10ns_17_1_1_U287">mul_8ns_10ns_17_1_1, 0, 0, 0, 62, 0</column>
-<column name="mul_9ns_11ns_18_1_1_U286">mul_9ns_11ns_18_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_9ns_11ns_19_1_1_U288">mul_9ns_11ns_19_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_9ns_11ns_19_1_1_U289">mul_9ns_11ns_19_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_9ns_11ns_19_1_1_U294">mul_9ns_11ns_19_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_9ns_11ns_19_1_1_U295">mul_9ns_11ns_19_1_1, 0, 1, 0, 5, 0</column>
-<column name="mux_3_2_32_1_1_U290">mux_3_2_32_1_1, 0, 0, 0, 14, 0</column>
-<column name="mux_3_2_32_1_1_U291">mux_3_2_32_1_1, 0, 0, 0, 14, 0</column>
+<column name="mul_8ns_10ns_17_1_1_U289">mul_8ns_10ns_17_1_1, 0, 0, 0, 62, 0</column>
+<column name="mul_9ns_11ns_18_1_1_U288">mul_9ns_11ns_18_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_9ns_11ns_19_1_1_U290">mul_9ns_11ns_19_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_9ns_11ns_19_1_1_U291">mul_9ns_11ns_19_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_9ns_11ns_19_1_1_U296">mul_9ns_11ns_19_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_9ns_11ns_19_1_1_U297">mul_9ns_11ns_19_1_1, 0, 1, 0, 5, 0</column>
 <column name="mux_3_2_32_1_1_U292">mux_3_2_32_1_1, 0, 0, 0, 14, 0</column>
 <column name="mux_3_2_32_1_1_U293">mux_3_2_32_1_1, 0, 0, 0, 14, 0</column>
-<column name="mux_3_2_32_1_1_U296">mux_3_2_32_1_1, 0, 0, 0, 14, 0</column>
-<column name="mux_3_2_32_1_1_U297">mux_3_2_32_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_3_2_32_1_1_U294">mux_3_2_32_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_3_2_32_1_1_U295">mux_3_2_32_1_1, 0, 0, 0, 14, 0</column>
 <column name="mux_3_2_32_1_1_U298">mux_3_2_32_1_1, 0, 0, 0, 14, 0</column>
 <column name="mux_3_2_32_1_1_U299">mux_3_2_32_1_1, 0, 0, 0, 14, 0</column>
 <column name="mux_3_2_32_1_1_U300">mux_3_2_32_1_1, 0, 0, 0, 14, 0</column>
 <column name="mux_3_2_32_1_1_U301">mux_3_2_32_1_1, 0, 0, 0, 14, 0</column>
 <column name="mux_3_2_32_1_1_U302">mux_3_2_32_1_1, 0, 0, 0, 14, 0</column>
 <column name="mux_3_2_32_1_1_U303">mux_3_2_32_1_1, 0, 0, 0, 14, 0</column>
-<column name="urem_8ns_8ns_8_12_1_U281">urem_8ns_8ns_8_12_1, 0, 0, 189, 106, 0</column>
-<column name="urem_9ns_8ns_9_13_1_U280">urem_9ns_8ns_9_13_1, 0, 0, 235, 150, 0</column>
+<column name="mux_3_2_32_1_1_U304">mux_3_2_32_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_3_2_32_1_1_U305">mux_3_2_32_1_1, 0, 0, 0, 14, 0</column>
+<column name="urem_8ns_8ns_8_12_1_U283">urem_8ns_8ns_8_12_1, 0, 0, 189, 106, 0</column>
 <column name="urem_9ns_8ns_9_13_1_U282">urem_9ns_8ns_9_13_1, 0, 0, 235, 150, 0</column>
-<column name="urem_9ns_8ns_9_13_1_U283">urem_9ns_8ns_9_13_1, 0, 0, 235, 150, 0</column>
 <column name="urem_9ns_8ns_9_13_1_U284">urem_9ns_8ns_9_13_1, 0, 0, 235, 150, 0</column>
 <column name="urem_9ns_8ns_9_13_1_U285">urem_9ns_8ns_9_13_1, 0, 0, 235, 150, 0</column>
+<column name="urem_9ns_8ns_9_13_1_U286">urem_9ns_8ns_9_13_1, 0, 0, 235, 150, 0</column>
+<column name="urem_9ns_8ns_9_13_1_U287">urem_9ns_8ns_9_13_1, 0, 0, 235, 150, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -274,15 +274,15 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
-<column name="grp_fu_1426_p_din0">out, 32, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
-<column name="grp_fu_1426_p_din1">out, 32, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
-<column name="grp_fu_1426_p_opcode">out, 2, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
-<column name="grp_fu_1426_p_dout0">in, 32, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
-<column name="grp_fu_1426_p_ce">out, 1, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
-<column name="grp_fu_1430_p_din0">out, 32, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
-<column name="grp_fu_1430_p_din1">out, 32, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
-<column name="grp_fu_1430_p_dout0">in, 32, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
-<column name="grp_fu_1430_p_ce">out, 1, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
+<column name="grp_fu_1453_p_din0">out, 32, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
+<column name="grp_fu_1453_p_din1">out, 32, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
+<column name="grp_fu_1453_p_opcode">out, 2, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
+<column name="grp_fu_1453_p_dout0">in, 32, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
+<column name="grp_fu_1453_p_ce">out, 1, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
+<column name="grp_fu_1457_p_din0">out, 32, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
+<column name="grp_fu_1457_p_din1">out, 32, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
+<column name="grp_fu_1457_p_dout0">in, 32, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
+<column name="grp_fu_1457_p_ce">out, 1, ap_ctrl_hs, conv2_Pipeline_COL, return value</column>
 <column name="bitcast_ln41">in, 32, ap_none, bitcast_ln41, scalar</column>
 <column name="mul_ln50">in, 14, ap_none, mul_ln50, scalar</column>
 <column name="mul_ln50_1">in, 10, ap_none, mul_ln50_1, scalar</column>

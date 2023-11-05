@@ -31,7 +31,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 489 \
+    id 492 \
     name i3 \
     type other \
     dir I \
@@ -46,7 +46,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 490 \
+    id 493 \
     name input_ftmap \
     type other \
     dir I \
@@ -61,7 +61,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 491 \
+    id 494 \
     name w3 \
     type other \
     dir I \
@@ -76,7 +76,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 492 \
+    id 495 \
     name conv3_weights \
     type other \
     dir I \
@@ -91,7 +91,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 493 \
+    id 496 \
     name conv3_biases_0_0_val \
     type other \
     dir I \
@@ -106,7 +106,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 494 \
+    id 497 \
     name o \
     type other \
     dir O \
@@ -121,7 +121,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 495 \
+    id 498 \
     name output_ftmap \
     type other \
     dir I \

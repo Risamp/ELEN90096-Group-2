@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'export_output_buffer_c1'" level="0">
-<item name = "Date">Sun Nov  5 00:32:49 2023
+<item name = "Date">Sun Nov  5 11:00:35 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">133482, 133570, 1.335 ms, 1.336 ms, 133482, 133570, no</column>
+<column name="">133490, 133578, 1.335 ms, 1.336 ms, 133490, 133578, no</column>
 </table>
 </item>
 <item name = "Detail">

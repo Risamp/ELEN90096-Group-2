@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <core name="" type="" target="">
+    <kernel name="srcnn" language="c" vlnv="xilinx.com:hls:srcnn:1.0" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" interrupt="true">
+      <port name="S_AXI_CONTROL" mode="slave" range="0x1000" dataWidth="64" portType="addressable" base="0x00000000"/>
+      <port name="M_AXI_I1" mode="master" range="0xFFFFFFFF" dataWidth="-1" portType="addressable" base="0x00000000"/>
+      <port name="M_AXI_W1" mode="master" range="0xFFFFFFFF" dataWidth="-1" portType="addressable" base="0x00000000"/>
+      <port name="M_AXI_GMEM" mode="master" range="0xFFFFFFFF" dataWidth="-1" portType="addressable" base="0x00000000"/>
+      <port name="M_AXI_I2" mode="master" range="0xFFFFFFFF" dataWidth="-1" portType="addressable" base="0x00000000"/>
+      <port name="M_AXI_W2" mode="master" range="0xFFFFFFFF" dataWidth="-1" portType="addressable" base="0x00000000"/>
+      <port name="M_AXI_I3" mode="master" range="0xFFFFFFFF" dataWidth="-1" portType="addressable" base="0x00000000"/>
+      <port name="M_AXI_W3" mode="master" range="0xFFFFFFFF" dataWidth="-1" portType="addressable" base="0x00000000"/>
+      <port name="M_AXI_O" mode="master" range="0xFFFFFFFF" dataWidth="-1" portType="addressable" base="0x00000000"/>
+      <arg name="input_ftmap" addressQualifier="1" id="0" port="M_AXI_I1" size="0x4" offset="0x10" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="conv1_weights" addressQualifier="1" id="1" port="M_AXI_W1" size="0x4" offset="0x1C" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="conv1_biases" addressQualifier="1" id="2" port="M_AXI_GMEM" size="0x4" offset="0x28" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="conv1_output_ftmap" addressQualifier="1" id="3" port="M_AXI_I2" size="0x4" offset="0x34" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="conv2_weights" addressQualifier="1" id="4" port="M_AXI_W2" size="0x4" offset="0x40" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="conv2_biases" addressQualifier="1" id="5" port="M_AXI_GMEM" size="0x4" offset="0x4C" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="conv2_output_ftmap" addressQualifier="1" id="6" port="M_AXI_I3" size="0x4" offset="0x58" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="conv3_weights" addressQualifier="1" id="7" port="M_AXI_W3" size="0x4" offset="0x64" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="conv3_biases" addressQualifier="1" id="8" port="M_AXI_GMEM" size="0x4" offset="0x70" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="output_ftmap" addressQualifier="1" id="9" port="M_AXI_O" size="0x4" offset="0x7C" hostOffset="0x0" hostSize="0x4" type=""/>
+      <compileWorkGroupSize x="1" y="1" z="1"/>
+    </kernel>
+  </core>
+</project>

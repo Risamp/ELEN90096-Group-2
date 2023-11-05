@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_COL'
 ================================================================
-* Date:           Sun Nov  5 00:34:59 2023
+* Date:           Sun Nov  5 11:02:46 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -73,30 +73,30 @@
     +--------------------------+---------------------+---------+----+-----+-----+-----+
     |         Instance         |        Module       | BRAM_18K| DSP|  FF | LUT | URAM|
     +--------------------------+---------------------+---------+----+-----+-----+-----+
-    |mul_8ns_10ns_17_1_1_U287  |mul_8ns_10ns_17_1_1  |        0|   0|    0|   62|    0|
-    |mul_9ns_11ns_18_1_1_U286  |mul_9ns_11ns_18_1_1  |        0|   1|    0|    5|    0|
-    |mul_9ns_11ns_19_1_1_U288  |mul_9ns_11ns_19_1_1  |        0|   1|    0|    5|    0|
-    |mul_9ns_11ns_19_1_1_U289  |mul_9ns_11ns_19_1_1  |        0|   1|    0|    5|    0|
-    |mul_9ns_11ns_19_1_1_U294  |mul_9ns_11ns_19_1_1  |        0|   1|    0|    5|    0|
-    |mul_9ns_11ns_19_1_1_U295  |mul_9ns_11ns_19_1_1  |        0|   1|    0|    5|    0|
-    |mux_3_2_32_1_1_U290       |mux_3_2_32_1_1       |        0|   0|    0|   14|    0|
-    |mux_3_2_32_1_1_U291       |mux_3_2_32_1_1       |        0|   0|    0|   14|    0|
+    |mul_8ns_10ns_17_1_1_U289  |mul_8ns_10ns_17_1_1  |        0|   0|    0|   62|    0|
+    |mul_9ns_11ns_18_1_1_U288  |mul_9ns_11ns_18_1_1  |        0|   1|    0|    5|    0|
+    |mul_9ns_11ns_19_1_1_U290  |mul_9ns_11ns_19_1_1  |        0|   1|    0|    5|    0|
+    |mul_9ns_11ns_19_1_1_U291  |mul_9ns_11ns_19_1_1  |        0|   1|    0|    5|    0|
+    |mul_9ns_11ns_19_1_1_U296  |mul_9ns_11ns_19_1_1  |        0|   1|    0|    5|    0|
+    |mul_9ns_11ns_19_1_1_U297  |mul_9ns_11ns_19_1_1  |        0|   1|    0|    5|    0|
     |mux_3_2_32_1_1_U292       |mux_3_2_32_1_1       |        0|   0|    0|   14|    0|
     |mux_3_2_32_1_1_U293       |mux_3_2_32_1_1       |        0|   0|    0|   14|    0|
-    |mux_3_2_32_1_1_U296       |mux_3_2_32_1_1       |        0|   0|    0|   14|    0|
-    |mux_3_2_32_1_1_U297       |mux_3_2_32_1_1       |        0|   0|    0|   14|    0|
+    |mux_3_2_32_1_1_U294       |mux_3_2_32_1_1       |        0|   0|    0|   14|    0|
+    |mux_3_2_32_1_1_U295       |mux_3_2_32_1_1       |        0|   0|    0|   14|    0|
     |mux_3_2_32_1_1_U298       |mux_3_2_32_1_1       |        0|   0|    0|   14|    0|
     |mux_3_2_32_1_1_U299       |mux_3_2_32_1_1       |        0|   0|    0|   14|    0|
     |mux_3_2_32_1_1_U300       |mux_3_2_32_1_1       |        0|   0|    0|   14|    0|
     |mux_3_2_32_1_1_U301       |mux_3_2_32_1_1       |        0|   0|    0|   14|    0|
     |mux_3_2_32_1_1_U302       |mux_3_2_32_1_1       |        0|   0|    0|   14|    0|
     |mux_3_2_32_1_1_U303       |mux_3_2_32_1_1       |        0|   0|    0|   14|    0|
-    |urem_8ns_8ns_8_12_1_U281  |urem_8ns_8ns_8_12_1  |        0|   0|  189|  106|    0|
-    |urem_9ns_8ns_9_13_1_U280  |urem_9ns_8ns_9_13_1  |        0|   0|  235|  150|    0|
+    |mux_3_2_32_1_1_U304       |mux_3_2_32_1_1       |        0|   0|    0|   14|    0|
+    |mux_3_2_32_1_1_U305       |mux_3_2_32_1_1       |        0|   0|    0|   14|    0|
+    |urem_8ns_8ns_8_12_1_U283  |urem_8ns_8ns_8_12_1  |        0|   0|  189|  106|    0|
     |urem_9ns_8ns_9_13_1_U282  |urem_9ns_8ns_9_13_1  |        0|   0|  235|  150|    0|
-    |urem_9ns_8ns_9_13_1_U283  |urem_9ns_8ns_9_13_1  |        0|   0|  235|  150|    0|
     |urem_9ns_8ns_9_13_1_U284  |urem_9ns_8ns_9_13_1  |        0|   0|  235|  150|    0|
     |urem_9ns_8ns_9_13_1_U285  |urem_9ns_8ns_9_13_1  |        0|   0|  235|  150|    0|
+    |urem_9ns_8ns_9_13_1_U286  |urem_9ns_8ns_9_13_1  |        0|   0|  235|  150|    0|
+    |urem_9ns_8ns_9_13_1_U287  |urem_9ns_8ns_9_13_1  |        0|   0|  235|  150|    0|
     +--------------------------+---------------------+---------+----+-----+-----+-----+
     |Total                     |                     |        0|   5| 1364| 1111|    0|
     +--------------------------+---------------------+---------+----+-----+-----+-----+
@@ -298,15 +298,15 @@
 |ap_done                                                            |  out|    1|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
 |ap_idle                                                            |  out|    1|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
 |ap_ready                                                           |  out|    1|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
-|grp_fu_1426_p_din0                                                 |  out|   32|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
-|grp_fu_1426_p_din1                                                 |  out|   32|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
-|grp_fu_1426_p_opcode                                               |  out|    2|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
-|grp_fu_1426_p_dout0                                                |   in|   32|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
-|grp_fu_1426_p_ce                                                   |  out|    1|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
-|grp_fu_1430_p_din0                                                 |  out|   32|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
-|grp_fu_1430_p_din1                                                 |  out|   32|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
-|grp_fu_1430_p_dout0                                                |   in|   32|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
-|grp_fu_1430_p_ce                                                   |  out|    1|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
+|grp_fu_1453_p_din0                                                 |  out|   32|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
+|grp_fu_1453_p_din1                                                 |  out|   32|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
+|grp_fu_1453_p_opcode                                               |  out|    2|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
+|grp_fu_1453_p_dout0                                                |   in|   32|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
+|grp_fu_1453_p_ce                                                   |  out|    1|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
+|grp_fu_1457_p_din0                                                 |  out|   32|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
+|grp_fu_1457_p_din1                                                 |  out|   32|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
+|grp_fu_1457_p_dout0                                                |   in|   32|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
+|grp_fu_1457_p_ce                                                   |  out|    1|  ap_ctrl_hs|                                        conv2_Pipeline_COL|  return value|
 |bitcast_ln41                                                       |   in|   32|     ap_none|                                              bitcast_ln41|        scalar|
 |mul_ln50                                                           |   in|   14|     ap_none|                                                  mul_ln50|        scalar|
 |mul_ln50_1                                                         |   in|   10|     ap_none|                                                mul_ln50_1|        scalar|
@@ -756,9 +756,9 @@ ST_22 : Operation 305 [2/4] (6.43ns)   --->   "%add_2 = fadd i32 %tmp_5, i32 %mu
 ST_22 : Operation 306 [1/3] (7.01ns)   --->   "%mul_5 = fmul i32 %bitcast_ln41_read, i32 %tmp_12" [src/conv2.cpp:50]   --->   Operation 306 'fmul' 'mul_5' <Predicate = (icmp_ln46 & icmp_ln46_1)> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 23 <SV = 22> <Delay = 6.43>
-ST_23 : Operation 307 [1/1] (0.00ns)   --->   "%specpipeline_ln47 = specpipeline void @_ssdm_op_SpecPipeline, i32 9, i32 0, i32 0, i32 0, void @empty_19" [src/conv2.cpp:47]   --->   Operation 307 'specpipeline' 'specpipeline_ln47' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_23 : Operation 307 [1/1] (0.00ns)   --->   "%specpipeline_ln47 = specpipeline void @_ssdm_op_SpecPipeline, i32 9, i32 0, i32 0, i32 0, void @empty_36" [src/conv2.cpp:47]   --->   Operation 307 'specpipeline' 'specpipeline_ln47' <Predicate = (icmp_ln46)> <Delay = 0.00>
 ST_23 : Operation 308 [1/1] (0.00ns)   --->   "%speclooptripcount_ln46 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 43, i64 43, i64 43" [src/conv2.cpp:46]   --->   Operation 308 'speclooptripcount' 'speclooptripcount_ln46' <Predicate = (icmp_ln46)> <Delay = 0.00>
-ST_23 : Operation 309 [1/1] (0.00ns)   --->   "%specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty_34" [src/conv2.cpp:46]   --->   Operation 309 'specloopname' 'specloopname_ln46' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_23 : Operation 309 [1/1] (0.00ns)   --->   "%specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [src/conv2.cpp:46]   --->   Operation 309 'specloopname' 'specloopname_ln46' <Predicate = (icmp_ln46)> <Delay = 0.00>
 ST_23 : Operation 310 [1/4] (6.43ns)   --->   "%add_2 = fadd i32 %tmp_5, i32 %mul_2" [src/conv2.cpp:50]   --->   Operation 310 'fadd' 'add_2' <Predicate = (icmp_ln46)> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 ST_23 : Operation 311 [1/1] (1.23ns)   --->   "%store_ln50 = store i32 %add, i10 %conv2_float_255_255_float_64_1_1_float_float_255_255_o_34" [src/conv2.cpp:50]   --->   Operation 311 'store' 'store_ln50' <Predicate = (icmp_ln46 & trunc_ln == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1020> <RAM>
 ST_23 : Operation 312 [1/1] (0.00ns)   --->   "%br_ln50 = br void %arrayidx407.0.exit" [src/conv2.cpp:50]   --->   Operation 312 'br' 'br_ln50' <Predicate = (icmp_ln46 & trunc_ln == 1)> <Delay = 0.00>
@@ -1496,7 +1496,7 @@ ret_ln0                                                   (ret              ) [ 
 <pin id="79" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_19"/></StgValue>
+<StgValue><ssdm name="empty_36"/></StgValue>
 </bind>
 </comp>
 
@@ -1532,7 +1532,7 @@ ret_ln0                                                   (ret              ) [ 
 <pin id="87" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_34"/></StgValue>
+<StgValue><ssdm name="empty_16"/></StgValue>
 </bind>
 </comp>
 

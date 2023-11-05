@@ -61,10 +61,10 @@
 
 <Node id="6" bw="8" op_0_bw="32">
 <![CDATA[
-newFuncRoot:0 %phi_urem519 = alloca i32 1
+newFuncRoot:0 %phi_urem516 = alloca i32 1
 
 ]]></Node>
-<StgValue><ssdm name="phi_urem519"/></StgValue>
+<StgValue><ssdm name="phi_urem516"/></StgValue>
 </operation>
 
 <operation id="12" st_id="1" stage="1" lat="1">
@@ -76,10 +76,10 @@ newFuncRoot:0 %phi_urem519 = alloca i32 1
 
 <Node id="7" bw="17" op_0_bw="32">
 <![CDATA[
-newFuncRoot:1 %phi_mul517 = alloca i32 1
+newFuncRoot:1 %phi_mul514 = alloca i32 1
 
 ]]></Node>
-<StgValue><ssdm name="phi_mul517"/></StgValue>
+<StgValue><ssdm name="phi_mul514"/></StgValue>
 </operation>
 
 <operation id="13" st_id="1" stage="1" lat="1">
@@ -151,7 +151,7 @@ newFuncRoot:5 %store_ln0 = store i8 0, i8 %bw_3
 
 <Node id="12" bw="0" op_0_bw="17" op_1_bw="17">
 <![CDATA[
-newFuncRoot:6 %store_ln0 = store i17 0, i17 %phi_mul517
+newFuncRoot:6 %store_ln0 = store i17 0, i17 %phi_mul514
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -166,7 +166,7 @@ newFuncRoot:6 %store_ln0 = store i17 0, i17 %phi_mul517
 
 <Node id="13" bw="0" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-newFuncRoot:7 %store_ln0 = store i8 0, i8 %phi_urem519
+newFuncRoot:7 %store_ln0 = store i8 0, i8 %phi_urem516
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -196,10 +196,10 @@ newFuncRoot:8 %br_ln0 = br void %for.body8.1.i
 
 <Node id="16" bw="8" op_0_bw="8" op_1_bw="0">
 <![CDATA[
-for.body8.1.i:0 %phi_urem519_load = load i8 %phi_urem519
+for.body8.1.i:0 %phi_urem516_load = load i8 %phi_urem516
 
 ]]></Node>
-<StgValue><ssdm name="phi_urem519_load"/></StgValue>
+<StgValue><ssdm name="phi_urem516_load"/></StgValue>
 </operation>
 
 <operation id="21" st_id="1" stage="1" lat="1">
@@ -272,7 +272,7 @@ for.body8.1.i:4 %br_ln112 = br i1 %icmp_ln112, void %for.body8.1.i.split, void %
 
 <Node id="26" bw="10" op_0_bw="8">
 <![CDATA[
-for.body8.1.i.split:4 %zext_ln115 = zext i8 %phi_urem519_load
+for.body8.1.i.split:4 %zext_ln115 = zext i8 %phi_urem516_load
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln115"/></StgValue>
@@ -416,7 +416,7 @@ for.body8.1.i.split:14 %conv2_float_255_255_float_64_1_1_float_float_255_255_o_8
 
 <Node id="73" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.inc.1.i:0 %add_ln112_2 = add i8 %phi_urem519_load, i8 1
+for.inc.1.i:0 %add_ln112_2 = add i8 %phi_urem516_load, i8 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln112_2"/></StgValue>
@@ -480,7 +480,7 @@ for.inc.1.i:3 %store_ln112 = store i8 %add_ln112, i8 %bw_3
 
 <Node id="78" bw="0" op_0_bw="8" op_1_bw="8" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc.1.i:5 %store_ln112 = store i8 %select_ln112, i8 %phi_urem519
+for.inc.1.i:5 %store_ln112 = store i8 %select_ln112, i8 %phi_urem516
 
 ]]></Node>
 <StgValue><ssdm name="store_ln112"/></StgValue>
@@ -499,10 +499,10 @@ for.inc.1.i:5 %store_ln112 = store i8 %select_ln112, i8 %phi_urem519
 
 <Node id="22" bw="17" op_0_bw="17" op_1_bw="0">
 <![CDATA[
-for.body8.1.i.split:0 %phi_mul517_load = load i17 %phi_mul517
+for.body8.1.i.split:0 %phi_mul514_load = load i17 %phi_mul514
 
 ]]></Node>
-<StgValue><ssdm name="phi_mul517_load"/></StgValue>
+<StgValue><ssdm name="phi_mul514_load"/></StgValue>
 </operation>
 
 <operation id="40" st_id="2" stage="1" lat="1">
@@ -515,7 +515,7 @@ for.body8.1.i.split:0 %phi_mul517_load = load i17 %phi_mul517
 
 <Node id="32" bw="17" op_0_bw="17" op_1_bw="17">
 <![CDATA[
-for.body8.1.i.split:10 %add_ln112_1 = add i17 %phi_mul517_load, i17 386
+for.body8.1.i.split:10 %add_ln112_1 = add i17 %phi_mul514_load, i17 386
 
 ]]></Node>
 <StgValue><ssdm name="add_ln112_1"/></StgValue>
@@ -531,7 +531,7 @@ for.body8.1.i.split:10 %add_ln112_1 = add i17 %phi_mul517_load, i17 386
 
 <Node id="33" bw="2" op_0_bw="2" op_1_bw="17" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-for.body8.1.i.split:11 %trunc_ln112_1 = partselect i2 @_ssdm_op_PartSelect.i2.i17.i32.i32, i17 %phi_mul517_load, i32 15, i32 16
+for.body8.1.i.split:11 %trunc_ln112_1 = partselect i2 @_ssdm_op_PartSelect.i2.i17.i32.i32, i17 %phi_mul514_load, i32 15, i32 16
 
 ]]></Node>
 <StgValue><ssdm name="trunc_ln112_1"/></StgValue>
@@ -627,7 +627,7 @@ for.body8.1.i.split:17 %switch_ln115 = switch i2 %trunc_ln112_1, void %arrayidx1
 
 <Node id="77" bw="0" op_0_bw="17" op_1_bw="17" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc.1.i:4 %store_ln112 = store i17 %add_ln112_1, i17 %phi_mul517
+for.inc.1.i:4 %store_ln112 = store i17 %add_ln112_1, i17 %phi_mul514
 
 ]]></Node>
 <StgValue><ssdm name="store_ln112"/></StgValue>
@@ -715,7 +715,7 @@ for.body8.1.i.split:16 %add15_1_i = fadd i32 %tmp_7, i32 %tmp
 
 <Node id="23" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.body8.1.i.split:1 %specpipeline_ln113 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_19
+for.body8.1.i.split:1 %specpipeline_ln113 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_36
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln113"/></StgValue>
@@ -745,7 +745,7 @@ for.body8.1.i.split:2 %speclooptripcount_ln112 = speclooptripcount void @_ssdm_o
 
 <Node id="25" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body8.1.i.split:3 %specloopname_ln112 = specloopname void @_ssdm_op_SpecLoopName, void @empty_21
+for.body8.1.i.split:3 %specloopname_ln112 = specloopname void @_ssdm_op_SpecLoopName, void @empty_22
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln112"/></StgValue>

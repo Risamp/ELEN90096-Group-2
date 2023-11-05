@@ -136,7 +136,7 @@ newFuncRoot:6 %sext_ln117_cast = sext i62 %sext_ln117_read
 
 <Node id="35" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:7 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w3, void @empty_9, i32 0, i32 0, void @empty_19, i32 0, i32 512, void @empty_30, void @empty_36, void @empty_19, i32 16, i32 16, i32 256, i32 256, void @empty_19, void @empty_19, i32 4294967295, i32 0
+newFuncRoot:7 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w3, void @empty_34, i32 0, i32 0, void @empty_36, i32 0, i32 512, void @empty_4, void @empty_31, void @empty_36, i32 16, i32 16, i32 256, i32 256, void @empty_36, void @empty_36, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -1000,10 +1000,10 @@ for.inc20.i:18 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32
 
 <Node id="72" bw="32" op_0_bw="32">
 <![CDATA[
-for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
+for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 ]]></Node>
-<StgValue><ssdm name="empty_324"/></StgValue>
+<StgValue><ssdm name="empty_326"/></StgValue>
 </operation>
 
 <operation id="67" st_id="3" stage="1" lat="1">
@@ -1034,7 +1034,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="78" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.327:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_3_0_addr
+.case.327:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_3_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1085,7 +1085,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="82" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.226:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_2_0_addr
+.case.226:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_2_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1136,7 +1136,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="86" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.125:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_1_0_addr
+.case.125:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_1_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1187,7 +1187,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="90" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.024:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_0_0_addr
+.case.024:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_0_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1244,7 +1244,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="94" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.428:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_4_0_addr
+.case.428:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_4_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1298,7 +1298,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="102" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.320:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_3_0_addr
+.case.320:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_3_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1349,7 +1349,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="106" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.219:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_2_0_addr
+.case.219:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_2_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1400,7 +1400,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="110" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.118:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_1_0_addr
+.case.118:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_1_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1451,7 +1451,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="114" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.017:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_0_0_addr
+.case.017:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_0_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1508,7 +1508,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="118" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.421:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_4_0_addr
+.case.421:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_4_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1562,7 +1562,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="126" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.313:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_3_0_addr
+.case.313:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_3_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1613,7 +1613,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="130" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.212:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_2_0_addr
+.case.212:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_2_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1664,7 +1664,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="134" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.111:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_1_0_addr
+.case.111:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_1_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1715,7 +1715,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="138" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.010:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_0_0_addr
+.case.010:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_0_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1772,7 +1772,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="142" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.414:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_4_0_addr
+.case.414:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_4_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1826,7 +1826,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="150" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.36:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_3_0_addr
+.case.36:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_3_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1877,7 +1877,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="154" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.25:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_2_0_addr
+.case.25:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_2_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1928,7 +1928,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="158" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.14:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_1_0_addr
+.case.14:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_1_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1979,7 +1979,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="162" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.03:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_addr
+.case.03:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -2036,7 +2036,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="166" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.47:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_4_0_addr
+.case.47:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_4_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -2096,7 +2096,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="174" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.334:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_3_0_addr
+.case.334:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_3_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -2156,7 +2156,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="178" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.233:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_2_0_addr
+.case.233:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_2_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -2216,7 +2216,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="182" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.132:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_1_0_addr
+.case.132:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_1_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -2276,7 +2276,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="186" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.031:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_0_0_addr
+.case.031:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_0_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -2342,7 +2342,7 @@ for.inc20.i:21 %empty_324 = bitcast i32 %w3_addr_read
 
 <Node id="190" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.435:1 %store_ln117 = store i32 %empty_324, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_4_0_addr
+.case.435:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_4_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>

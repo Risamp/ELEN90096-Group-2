@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sun Nov  5 11:14:29 2023
+# Process ID: 31256
+# Current directory: C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/impl/ip/vivado.log
+# Journal file: C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/impl/ip\vivado.jou
+# Running On: 400p1t176rg0511, OS: Windows, CPU Frequency: 3000 MHz, CPU Physical cores: 8, Host memory: 16943 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_BW8'
 ================================================================
-* Date:           Sun Nov  5 00:33:58 2023
+* Date:           Sun Nov  5 11:01:44 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -85,13 +85,13 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 0.42>
-ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%phi_urem539 = alloca i32 1"   --->   Operation 4 'alloca' 'phi_urem539' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%phi_mul537 = alloca i32 1"   --->   Operation 5 'alloca' 'phi_mul537' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%phi_urem536 = alloca i32 1"   --->   Operation 4 'alloca' 'phi_urem536' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%phi_mul534 = alloca i32 1"   --->   Operation 5 'alloca' 'phi_mul534' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%w = alloca i32 1"   --->   Operation 6 'alloca' 'w' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%add_ln67_1_read = read i10 @_ssdm_op_Read.ap_auto.i10, i10 %add_ln67_1"   --->   Operation 7 'read' 'add_ln67_1_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.42ns)   --->   "%store_ln0 = store i8 0, i8 %w"   --->   Operation 8 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
-ST_1 : Operation 9 [1/1] (0.42ns)   --->   "%store_ln0 = store i17 0, i17 %phi_mul537"   --->   Operation 9 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
-ST_1 : Operation 10 [1/1] (0.42ns)   --->   "%store_ln0 = store i8 0, i8 %phi_urem539"   --->   Operation 10 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 9 [1/1] (0.42ns)   --->   "%store_ln0 = store i17 0, i17 %phi_mul534"   --->   Operation 9 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 10 [1/1] (0.42ns)   --->   "%store_ln0 = store i8 0, i8 %phi_urem536"   --->   Operation 10 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.2.i.i"   --->   Operation 11 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 2.35>
@@ -100,18 +100,18 @@ ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline vo
 ST_2 : Operation 14 [1/1] (0.76ns)   --->   "%icmp_ln65 = icmp_eq  i8 %w_5, i8 255" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 14 'icmp' 'icmp_ln65' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 15 [1/1] (0.76ns)   --->   "%add_ln65 = add i8 %w_5, i8 1" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 15 'add' 'add_ln65' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln65 = br i1 %icmp_ln65, void %for.inc.2.i.i.split, void %for.inc13.2.i.i.exitStub" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 16 'br' 'br_ln65' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%phi_urem539_load_1 = load i8 %phi_urem539" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 17 'load' 'phi_urem539_load_1' <Predicate = (!icmp_ln65)> <Delay = 0.00>
-ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%phi_mul537_load = load i17 %phi_mul537" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 18 'load' 'phi_mul537_load' <Predicate = (!icmp_ln65)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%phi_urem536_load_1 = load i8 %phi_urem536" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 17 'load' 'phi_urem536_load_1' <Predicate = (!icmp_ln65)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%phi_mul534_load = load i17 %phi_mul534" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 18 'load' 'phi_mul534_load' <Predicate = (!icmp_ln65)> <Delay = 0.00>
 ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%speclooptripcount_ln65 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 19 'speclooptripcount' 'speclooptripcount_ln65' <Predicate = (!icmp_ln65)> <Delay = 0.00>
-ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%specloopname_ln65 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 20 'specloopname' 'specloopname_ln65' <Predicate = (!icmp_ln65)> <Delay = 0.00>
-ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%zext_ln67 = zext i8 %phi_urem539_load_1" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 21 'zext' 'zext_ln67' <Predicate = (!icmp_ln65)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%specloopname_ln65 = specloopname void @_ssdm_op_SpecLoopName, void @empty_21" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 20 'specloopname' 'specloopname_ln65' <Predicate = (!icmp_ln65)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%zext_ln67 = zext i8 %phi_urem536_load_1" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 21 'zext' 'zext_ln67' <Predicate = (!icmp_ln65)> <Delay = 0.00>
 ST_2 : Operation 22 [1/1] (0.78ns)   --->   "%add_ln67 = add i10 %add_ln67_1_read, i10 %zext_ln67" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 22 'add' 'add_ln67' <Predicate = (!icmp_ln65)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln67_1 = zext i10 %add_ln67" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 23 'zext' 'zext_ln67_1' <Predicate = (!icmp_ln65)> <Delay = 0.00>
 ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%conv2_float_255_255_float_64_1_1_float_float_255_255_o_51 = getelementptr i32 %conv2_float_255_255_float_64_1_1_float_float_255_255_o_2, i64 0, i64 %zext_ln67_1" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 24 'getelementptr' 'conv2_float_255_255_float_64_1_1_float_float_255_255_o_51' <Predicate = (!icmp_ln65)> <Delay = 0.00>
 ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%conv2_float_255_255_float_64_1_1_float_float_255_255_o_52 = getelementptr i32 %conv2_float_255_255_float_64_1_1_float_float_255_255_o_1, i64 0, i64 %zext_ln67_1" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 25 'getelementptr' 'conv2_float_255_255_float_64_1_1_float_float_255_255_o_52' <Predicate = (!icmp_ln65)> <Delay = 0.00>
 ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%conv2_float_255_255_float_64_1_1_float_float_255_255_o_53 = getelementptr i32 %conv2_float_255_255_float_64_1_1_float_float_255_255_o, i64 0, i64 %zext_ln67_1" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 26 'getelementptr' 'conv2_float_255_255_float_64_1_1_float_float_255_255_o_53' <Predicate = (!icmp_ln65)> <Delay = 0.00>
-ST_2 : Operation 27 [1/1] (0.86ns)   --->   "%add_ln65_1 = add i17 %phi_mul537_load, i17 386" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 27 'add' 'add_ln65_1' <Predicate = (!icmp_ln65)> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%trunc_ln65_2 = partselect i2 @_ssdm_op_PartSelect.i2.i17.i32.i32, i17 %phi_mul537_load, i32 15, i32 16" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 28 'partselect' 'trunc_ln65_2' <Predicate = (!icmp_ln65)> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.86ns)   --->   "%add_ln65_1 = add i17 %phi_mul534_load, i17 386" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 27 'add' 'add_ln65_1' <Predicate = (!icmp_ln65)> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%trunc_ln65_2 = partselect i2 @_ssdm_op_PartSelect.i2.i17.i32.i32, i17 %phi_mul534_load, i32 15, i32 16" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 28 'partselect' 'trunc_ln65_2' <Predicate = (!icmp_ln65)> <Delay = 0.00>
 ST_2 : Operation 29 [1/1] (0.73ns)   --->   "%switch_ln67 = switch i2 %trunc_ln65_2, void %arrayidx1223.2.i.i.case.2, i2 0, void %arrayidx1223.2.i.i.case.0, i2 1, void %arrayidx1223.2.i.i.case.1" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 29 'switch' 'switch_ln67' <Predicate = (!icmp_ln65)> <Delay = 0.73>
 ST_2 : Operation 30 [1/1] (1.23ns)   --->   "%store_ln67 = store i32 0, i10 %conv2_float_255_255_float_64_1_1_float_float_255_255_o_52" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 30 'store' 'store_ln67' <Predicate = (!icmp_ln65 & trunc_ln65_2 == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1020> <RAM>
 ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln67 = br void %arrayidx1223.2.i.i.exit" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 31 'br' 'br_ln67' <Predicate = (!icmp_ln65 & trunc_ln65_2 == 1)> <Delay = 0.00>
@@ -119,13 +119,13 @@ ST_2 : Operation 32 [1/1] (1.23ns)   --->   "%store_ln67 = store i32 0, i10 %con
 ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%br_ln67 = br void %arrayidx1223.2.i.i.exit" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 33 'br' 'br_ln67' <Predicate = (!icmp_ln65 & trunc_ln65_2 == 0)> <Delay = 0.00>
 ST_2 : Operation 34 [1/1] (1.23ns)   --->   "%store_ln67 = store i32 0, i10 %conv2_float_255_255_float_64_1_1_float_float_255_255_o_53" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 34 'store' 'store_ln67' <Predicate = (!icmp_ln65 & trunc_ln65_2 != 0 & trunc_ln65_2 != 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1020> <RAM>
 ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln67 = br void %arrayidx1223.2.i.i.exit" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 35 'br' 'br_ln67' <Predicate = (!icmp_ln65 & trunc_ln65_2 != 0 & trunc_ln65_2 != 1)> <Delay = 0.00>
-ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%phi_urem539_load = load i8 %phi_urem539" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 36 'load' 'phi_urem539_load' <Predicate = (!icmp_ln65)> <Delay = 0.00>
-ST_2 : Operation 37 [1/1] (0.76ns)   --->   "%add_ln65_2 = add i8 %phi_urem539_load, i8 1" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 37 'add' 'add_ln65_2' <Predicate = (!icmp_ln65)> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%phi_urem536_load = load i8 %phi_urem536" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 36 'load' 'phi_urem536_load' <Predicate = (!icmp_ln65)> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.76ns)   --->   "%add_ln65_2 = add i8 %phi_urem536_load, i8 1" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 37 'add' 'add_ln65_2' <Predicate = (!icmp_ln65)> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 38 [1/1] (0.76ns)   --->   "%icmp_ln65_1 = icmp_ult  i8 %add_ln65_2, i8 85" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 38 'icmp' 'icmp_ln65_1' <Predicate = (!icmp_ln65)> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 39 [1/1] (0.39ns)   --->   "%select_ln65 = select i1 %icmp_ln65_1, i8 %add_ln65_2, i8 0" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 39 'select' 'select_ln65' <Predicate = (!icmp_ln65)> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_2 : Operation 40 [1/1] (0.42ns)   --->   "%store_ln65 = store i8 %add_ln65, i8 %w" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 40 'store' 'store_ln65' <Predicate = (!icmp_ln65)> <Delay = 0.42>
-ST_2 : Operation 41 [1/1] (0.42ns)   --->   "%store_ln65 = store i17 %add_ln65_1, i17 %phi_mul537" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 41 'store' 'store_ln65' <Predicate = (!icmp_ln65)> <Delay = 0.42>
-ST_2 : Operation 42 [1/1] (0.42ns)   --->   "%store_ln65 = store i8 %select_ln65, i8 %phi_urem539" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 42 'store' 'store_ln65' <Predicate = (!icmp_ln65)> <Delay = 0.42>
+ST_2 : Operation 41 [1/1] (0.42ns)   --->   "%store_ln65 = store i17 %add_ln65_1, i17 %phi_mul534" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 41 'store' 'store_ln65' <Predicate = (!icmp_ln65)> <Delay = 0.42>
+ST_2 : Operation 42 [1/1] (0.42ns)   --->   "%store_ln65 = store i8 %select_ln65, i8 %phi_urem536" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 42 'store' 'store_ln65' <Predicate = (!icmp_ln65)> <Delay = 0.42>
 ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln65 = br void %for.inc.2.i.i" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 43 'br' 'br_ln65' <Predicate = (!icmp_ln65)> <Delay = 0.00>
 ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 44 'ret' 'ret_ln0' <Predicate = (icmp_ln65)> <Delay = 0.00>
 
@@ -142,11 +142,11 @@ The critical path consists of the following:
 
  <State 2>: 2.350ns
 The critical path consists of the following:
-	'load' operation ('phi_urem539_load', src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55) on local variable 'phi_urem539' [43]  (0.000 ns)
+	'load' operation ('phi_urem536_load', src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55) on local variable 'phi_urem536' [43]  (0.000 ns)
 	'add' operation ('add_ln65_2', src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55) [44]  (0.765 ns)
 	'icmp' operation ('icmp_ln65_1', src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55) [45]  (0.765 ns)
 	'select' operation ('select_ln65', src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55) [46]  (0.393 ns)
-	'store' operation ('store_ln65', src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55) of variable 'select_ln65', src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55 on local variable 'phi_urem539' [49]  (0.427 ns)
+	'store' operation ('store_ln65', src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55) of variable 'select_ln65', src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55 on local variable 'phi_urem536' [49]  (0.427 ns)
 
 
 ============================================================

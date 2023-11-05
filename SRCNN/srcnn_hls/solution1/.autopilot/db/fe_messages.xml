@@ -95,7 +95,7 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:138:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="export_output_buffer_c3" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=2" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl:29:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl:31:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="srcnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=srcnn" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
@@ -124,6 +124,15 @@
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/srcnn.cpp:31:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="srcnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/srcnn.cpp:34:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="srcnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=conv1_biases offset=slave depth=512" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/srcnn.cpp:35:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="srcnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=conv2_biases offset=slave depth=512" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/srcnn.cpp:36:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="srcnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=conv3_biases offset=slave depth=512" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/conv3.cpp:44:7" msg_body="Loop 'KR1' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="KR1"/>

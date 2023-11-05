@@ -1,17 +1,44 @@
 {
   "0": {
     "basicblocks": 1,
-    "calls": "1 2 3",
+    "calls": "3 4 1",
     "file": "srcnn.cpp",
     "fileloc": 8,
-    "instructions": 28,
+    "instructions": 36,
     "loads": {
       "T": 1
     },
     "name": "srcnn",
-    "total_instructions": 6190
+    "total_instructions": 6204
   },
   "1": {
+    "basicblocks": 73,
+    "calls": "2",
+    "file": "conv3.cpp",
+    "fileloc": 10,
+    "instructions": 486,
+    "loads": {
+      "G": 61
+    },
+    "name": "conv3",
+    "stores": {
+      "G": 34
+    },
+    "total_instructions": 1283
+  },
+  "2": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "conv3.cpp",
+    "fileloc": 79,
+    "instructions": 797,
+    "name": "load_input_buffer_c3",
+    "stores": {
+      "G": 259
+    },
+    "total_instructions": 797
+  },
+  "3": {
     "basicblocks": 88,
     "calls": "5 5",
     "file": "conv1.cpp",
@@ -25,65 +52,36 @@
     "stores": {
       "G": 34
     },
-    "total_instructions": 4392
+    "total_instructions": 4396
   },
-  "2": {
+  "4": {
     "basicblocks": 105,
     "calls": "",
     "file": "conv2.cpp",
     "fileloc": 9,
-    "instructions": 487,
+    "instructions": 489,
     "loads": {
-      "G": 49,
-      "L": 1
+      "G": 49
     },
     "name": "conv2",
     "stores": {
       "G": 43
     },
-    "total_instructions": 487
-  },
-  "3": {
-    "basicblocks": 73,
-    "calls": "4",
-    "file": "conv3.cpp",
-    "fileloc": 10,
-    "instructions": 486,
-    "loads": {
-      "G": 61
-    },
-    "name": "conv3",
-    "stores": {
-      "G": 34
-    },
-    "total_instructions": 1283
-  },
-  "4": {
-    "basicblocks": 5,
-    "calls": "",
-    "file": "conv3.cpp",
-    "fileloc": 79,
-    "instructions": 797,
-    "name": "load_input_buffer_c3",
-    "stores": {
-      "G": 259
-    },
-    "total_instructions": 797
+    "total_instructions": 489
   },
   "5": {
     "basicblocks": 45,
     "calls": "",
     "file": "conv1.cpp",
     "fileloc": 125,
-    "instructions": 167,
+    "instructions": 169,
     "loads": {
-      "G": 8,
-      "L": 1
+      "G": 8
     },
     "name": "export_output_buffer_c1",
     "stores": {
       "G": 12
     },
-    "total_instructions": 167
+    "total_instructions": 169
   }
 }

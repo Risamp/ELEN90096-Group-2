@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3_Pipeline_COL'" level="0">
-<item name = "Date">Sun Nov  5 00:35:10 2023
+<item name = "Date">Sun Nov  5 11:02:58 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -113,8 +113,8 @@
 <column name="add_ln54_8_fu_1000_p2">+, 0, 0, 23, 16, 16</column>
 <column name="add_ln54_9_fu_1055_p2">+, 0, 0, 23, 16, 16</column>
 <column name="add_ln54_fu_972_p2">+, 0, 0, 15, 8, 2</column>
-<column name="empty_325_fu_1221_p2">+, 0, 0, 17, 10, 10</column>
-<column name="empty_326_fu_1234_p2">+, 0, 0, 17, 10, 10</column>
+<column name="empty_327_fu_1221_p2">+, 0, 0, 17, 10, 10</column>
+<column name="empty_328_fu_1234_p2">+, 0, 0, 17, 10, 10</column>
 <column name="ap_condition_1616">and, 0, 0, 2, 1, 1</column>
 <column name="icmp_ln41_fu_906_p2">icmp, 0, 0, 15, 8, 2</column>
 <column name="or_ln52_fu_885_p2">or, 0, 0, 8, 8, 1</column>

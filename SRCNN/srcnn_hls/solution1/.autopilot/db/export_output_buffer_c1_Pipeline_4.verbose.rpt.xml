@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'export_output_buffer_c1_Pipeline_4'" level="0">
-<item name = "Date">Sun Nov  5 00:34:47 2023
+<item name = "Date">Sun Nov  5 11:02:34 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -81,7 +81,7 @@
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="empty_fu_132_p2">+, 0, 0, 15, 8, 1</column>
 <column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
-<column name="exitcond349_fu_126_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="exitcond3411_fu_126_p2">icmp, 0, 0, 15, 8, 2</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -101,7 +101,7 @@
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
-<column name="exitcond349_reg_199">1, 0, 1, 0</column>
+<column name="exitcond3411_reg_199">1, 0, 1, 0</column>
 <column name="loop_index_1_fu_64">8, 0, 8, 0</column>
 <column name="tmp_3_reg_223">32, 0, 32, 0</column>
 <column name="tmp_reg_213">1, 0, 1, 0</column>

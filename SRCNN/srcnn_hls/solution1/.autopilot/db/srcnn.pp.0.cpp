@@ -31607,7 +31607,7 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][2
            param_t conv3_biases[1],
            ftmap_t output_ftmap[1][255][255])
 {
-#line 29 "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl"
+#line 31 "C:/SPB_Data/ELEN90096-Group-2/SRCNN/srcnn_hls/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
 # 18 "src/srcnn.cpp"
 
@@ -31628,7 +31628,18 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][2
 #pragma HLS INTERFACE m_axi port=conv3_weights offset=slave depth=512 bundle=w3 max_read_burst_length=256 max_write_burst_length=256 max_widen_bitwidth=512
 #pragma HLS INTERFACE m_axi port=output_ftmap offset=slave depth=512 bundle=o max_read_burst_length=256 max_write_burst_length=256 max_widen_bitwidth=512
 #pragma HLS INTERFACE s_axilite port=return
-# 44 "src/srcnn.cpp"
+
+
+#pragma HLS INTERFACE m_axi port=conv1_biases offset=slave depth=512
+#pragma HLS INTERFACE m_axi port=conv2_biases offset=slave depth=512
+#pragma HLS INTERFACE m_axi port=conv3_biases offset=slave depth=512
+
+
+
+
+
+
+
  conv1(input_ftmap, conv1_weights, conv1_biases, conv1_output_ftmap);
 
 
