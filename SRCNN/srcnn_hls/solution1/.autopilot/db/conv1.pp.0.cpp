@@ -5709,12 +5709,12 @@ inline __attribute__((nodebug)) bool operator!=(
 # 5 "src/srcnn.h" 2
 # 42 "src/srcnn.h"
 typedef ap_fixed<16,1> input_t;
-typedef ap_fixed<16,1> conv1w_t;
+typedef ap_fixed<32,1> conv1w_t;
 typedef ap_fixed<8,1> conv1b_t;
 typedef ap_fixed<16,3> conv1o_t;
 
 
-typedef ap_fixed<16,1> conv2w_t;
+typedef ap_fixed<32,1> conv2w_t;
 typedef ap_fixed<8,1> conv2b_t;
 typedef ap_fixed<16,3> conv2o_t;
 
