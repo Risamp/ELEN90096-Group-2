@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_COL'
 ================================================================
-* Date:           Sun Nov  5 11:01:32 2023
+* Date:           Mon Nov  6 16:27:21 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -440,9 +440,9 @@ ST_22 : Operation 305 [2/4] (6.43ns)   --->   "%add_2 = fadd i32 %tmp_5, i32 %mu
 ST_22 : Operation 306 [1/3] (7.01ns)   --->   "%mul_5 = fmul i32 %bitcast_ln41_read, i32 %tmp_12" [src/conv2.cpp:50]   --->   Operation 306 'fmul' 'mul_5' <Predicate = (icmp_ln46 & icmp_ln46_1)> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 23 <SV = 22> <Delay = 6.43>
-ST_23 : Operation 307 [1/1] (0.00ns)   --->   "%specpipeline_ln47 = specpipeline void @_ssdm_op_SpecPipeline, i32 9, i32 0, i32 0, i32 0, void @empty_36" [src/conv2.cpp:47]   --->   Operation 307 'specpipeline' 'specpipeline_ln47' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_23 : Operation 307 [1/1] (0.00ns)   --->   "%specpipeline_ln47 = specpipeline void @_ssdm_op_SpecPipeline, i32 9, i32 0, i32 0, i32 0, void @empty" [src/conv2.cpp:47]   --->   Operation 307 'specpipeline' 'specpipeline_ln47' <Predicate = (icmp_ln46)> <Delay = 0.00>
 ST_23 : Operation 308 [1/1] (0.00ns)   --->   "%speclooptripcount_ln46 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 43, i64 43, i64 43" [src/conv2.cpp:46]   --->   Operation 308 'speclooptripcount' 'speclooptripcount_ln46' <Predicate = (icmp_ln46)> <Delay = 0.00>
-ST_23 : Operation 309 [1/1] (0.00ns)   --->   "%specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [src/conv2.cpp:46]   --->   Operation 309 'specloopname' 'specloopname_ln46' <Predicate = (icmp_ln46)> <Delay = 0.00>
+ST_23 : Operation 309 [1/1] (0.00ns)   --->   "%specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty_35" [src/conv2.cpp:46]   --->   Operation 309 'specloopname' 'specloopname_ln46' <Predicate = (icmp_ln46)> <Delay = 0.00>
 ST_23 : Operation 310 [1/4] (6.43ns)   --->   "%add_2 = fadd i32 %tmp_5, i32 %mul_2" [src/conv2.cpp:50]   --->   Operation 310 'fadd' 'add_2' <Predicate = (icmp_ln46)> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 ST_23 : Operation 311 [1/1] (1.23ns)   --->   "%store_ln50 = store i32 %add, i10 %conv2_float_255_255_float_64_1_1_float_float_255_255_o_34" [src/conv2.cpp:50]   --->   Operation 311 'store' 'store_ln50' <Predicate = (icmp_ln46 & trunc_ln == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1020> <RAM>
 ST_23 : Operation 312 [1/1] (0.00ns)   --->   "%br_ln50 = br void %arrayidx407.0.exit" [src/conv2.cpp:50]   --->   Operation 312 'br' 'br_ln50' <Predicate = (icmp_ln46 & trunc_ln == 1)> <Delay = 0.00>
@@ -1180,7 +1180,7 @@ ret_ln0                                                   (ret              ) [ 
 <pin id="79" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_36"/></StgValue>
+<StgValue><ssdm name="empty"/></StgValue>
 </bind>
 </comp>
 
@@ -1216,7 +1216,7 @@ ret_ln0                                                   (ret              ) [ 
 <pin id="87" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_16"/></StgValue>
+<StgValue><ssdm name="empty_35"/></StgValue>
 </bind>
 </comp>
 

@@ -4647,7 +4647,7 @@ for.inc.3:53 %mul_5 = fmul i32 %bitcast_ln41_read, i32 %tmp_12
 
 <Node id="22" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.inc.0.split:1 %specpipeline_ln47 = specpipeline void @_ssdm_op_SpecPipeline, i32 9, i32 0, i32 0, i32 0, void @empty_36
+for.inc.0.split:1 %specpipeline_ln47 = specpipeline void @_ssdm_op_SpecPipeline, i32 9, i32 0, i32 0, i32 0, void @empty
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln47"/></StgValue>
@@ -4679,7 +4679,7 @@ for.inc.0.split:2 %speclooptripcount_ln46 = speclooptripcount void @_ssdm_op_Spe
 
 <Node id="24" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.0.split:3 %specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16
+for.inc.0.split:3 %specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty_35
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln46"/></StgValue>
@@ -7292,7 +7292,7 @@ arrayidx407.5.case.2:1 %br_ln50 = br void %arrayidx407.5.exit
 </dataflow>
 <dataflow id="1084" from="StgValue_1081" to="specpipeline_ln47" fromId="1081" toId="307">
 </dataflow>
-<dataflow id="1086" from="empty_36" to="specpipeline_ln47" fromId="1085" toId="307">
+<dataflow id="1086" from="empty" to="specpipeline_ln47" fromId="1085" toId="307">
 </dataflow>
 <dataflow id="1088" from="_ssdm_op_SpecLoopTripCount" to="speclooptripcount_ln46" fromId="1087" toId="308">
 </dataflow>
@@ -7304,7 +7304,7 @@ arrayidx407.5.case.2:1 %br_ln50 = br void %arrayidx407.5.exit
 </dataflow>
 <dataflow id="1094" from="_ssdm_op_SpecLoopName" to="specloopname_ln46" fromId="1093" toId="309">
 </dataflow>
-<dataflow id="1096" from="empty_16" to="specloopname_ln46" fromId="1095" toId="309">
+<dataflow id="1096" from="empty_35" to="specloopname_ln46" fromId="1095" toId="309">
 </dataflow>
 <dataflow id="1097" from="tmp_5" to="add_2" fromId="235" toId="310">
 </dataflow>

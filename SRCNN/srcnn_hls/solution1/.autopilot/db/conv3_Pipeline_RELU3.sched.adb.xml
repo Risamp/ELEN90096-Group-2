@@ -420,7 +420,7 @@ for.body8.1.i.split:15 %tmp_1 = fcmp_olt  i32 %add15_1_i, i32 0
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.body8.1.i.split:4 %specpipeline_ln138 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_36
+for.body8.1.i.split:4 %specpipeline_ln138 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln138"/></StgValue>
@@ -450,7 +450,7 @@ for.body8.1.i.split:5 %speclooptripcount_ln137 = speclooptripcount void @_ssdm_o
 
 <Node id="21" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body8.1.i.split:6 %specloopname_ln137 = specloopname void @_ssdm_op_SpecLoopName, void @empty_22
+for.body8.1.i.split:6 %specloopname_ln137 = specloopname void @_ssdm_op_SpecLoopName, void @empty_29
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln137"/></StgValue>

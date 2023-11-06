@@ -121,7 +121,7 @@ newFuncRoot:5 %sext_ln122_1_cast = sext i62 %sext_ln122_1_read
 
 <Node id="13" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i3, void @empty_34, i32 0, i32 0, void @empty_36, i32 0, i32 512, void @empty_10, void @empty_31, void @empty_36, i32 16, i32 16, i32 256, i32 256, void @empty_36, void @empty_36, i32 4294967295, i32 0
+newFuncRoot:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %bundle_1, void @empty_6, i32 0, i32 0, void @empty, i32 0, i32 512, void @empty_0, void @empty_28, void @empty, i32 16, i32 16, i32 256, i32 256, void @empty, void @empty, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -289,10 +289,10 @@ load-store-loop.1.i.split:2 %next_urem522 = add i8 %phi_urem521_load, i8 1
 
 <Node id="29" bw="1" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-load-store-loop.1.i.split:3 %empty_349 = icmp_ult  i8 %next_urem522, i8 85
+load-store-loop.1.i.split:3 %empty_345 = icmp_ult  i8 %next_urem522, i8 85
 
 ]]></Node>
-<StgValue><ssdm name="empty_349"/></StgValue>
+<StgValue><ssdm name="empty_345"/></StgValue>
 </operation>
 
 <operation id="24" st_id="1" stage="1" lat="1">
@@ -305,7 +305,7 @@ load-store-loop.1.i.split:3 %empty_349 = icmp_ult  i8 %next_urem522, i8 85
 
 <Node id="30" bw="8" op_0_bw="1" op_1_bw="8" op_2_bw="8">
 <![CDATA[
-load-store-loop.1.i.split:4 %idx_urem523 = select i1 %empty_349, i8 %next_urem522, i8 0
+load-store-loop.1.i.split:4 %idx_urem523 = select i1 %empty_345, i8 %next_urem522, i8 0
 
 ]]></Node>
 <StgValue><ssdm name="idx_urem523"/></StgValue>
@@ -337,10 +337,10 @@ load-store-loop.1.i.split:6 %phi_urem521_cast = zext i8 %phi_urem521_load
 
 <Node id="33" bw="10" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-load-store-loop.1.i.split:7 %empty_350 = add i10 %mul_ln115_1_read, i10 %phi_urem521_cast
+load-store-loop.1.i.split:7 %empty_346 = add i10 %mul_ln115_1_read, i10 %phi_urem521_cast
 
 ]]></Node>
-<StgValue><ssdm name="empty_350"/></StgValue>
+<StgValue><ssdm name="empty_346"/></StgValue>
 </operation>
 
 <operation id="27" st_id="1" stage="1" lat="1">
@@ -353,7 +353,7 @@ load-store-loop.1.i.split:7 %empty_350 = add i10 %mul_ln115_1_read, i10 %phi_ure
 
 <Node id="34" bw="64" op_0_bw="10">
 <![CDATA[
-load-store-loop.1.i.split:8 %p_cast = zext i10 %empty_350
+load-store-loop.1.i.split:8 %p_cast = zext i10 %empty_346
 
 ]]></Node>
 <StgValue><ssdm name="p_cast"/></StgValue>
@@ -499,10 +499,10 @@ load-store-loop.1.i.split:22 %store_ln0 = store i8 %idx_urem523, i8 %phi_urem521
 
 <Node id="20" bw="32" op_0_bw="32" op_1_bw="64">
 <![CDATA[
-load-store-loop.1.i:1 %i3_addr = getelementptr i32 %i3, i64 %sext_ln122_1_cast
+load-store-loop.1.i:1 %bundle_1_addr = getelementptr i32 %bundle_1, i64 %sext_ln122_1_cast
 
 ]]></Node>
-<StgValue><ssdm name="i3_addr"/></StgValue>
+<StgValue><ssdm name="bundle_1_addr"/></StgValue>
 </operation>
 
 <operation id="37" st_id="2" stage="1" lat="1">
@@ -691,10 +691,10 @@ load-store-loop.1.i.split:5 %speclooptripcount_ln0 = speclooptripcount void @_ss
 
 <Node id="44" bw="32" op_0_bw="32">
 <![CDATA[
-load-store-loop.1.i.split:18 %empty_351 = bitcast i32 %tmp_8
+load-store-loop.1.i.split:18 %empty_347 = bitcast i32 %tmp_8
 
 ]]></Node>
-<StgValue><ssdm name="empty_351"/></StgValue>
+<StgValue><ssdm name="empty_347"/></StgValue>
 </operation>
 
 <operation id="48" st_id="3" stage="1" lat="1">
@@ -706,7 +706,7 @@ load-store-loop.1.i.split:18 %empty_351 = bitcast i32 %tmp_8
 
 <Node id="45" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="4">
 <![CDATA[
-load-store-loop.1.i.split:19 %write_ln122 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %i3_addr, i32 %empty_351, i4 15
+load-store-loop.1.i.split:19 %write_ln122 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %bundle_1_addr, i32 %empty_347, i4 15
 
 ]]></Node>
 <StgValue><ssdm name="write_ln122"/></StgValue>

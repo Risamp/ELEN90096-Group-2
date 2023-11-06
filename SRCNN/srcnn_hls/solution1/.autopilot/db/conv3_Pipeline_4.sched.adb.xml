@@ -91,7 +91,7 @@ newFuncRoot:3 %sext_ln147_cast = sext i62 %sext_ln147_read
 
 <Node id="9" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %o, void @empty_34, i32 0, i32 0, void @empty_36, i32 0, i32 512, void @empty_3, void @empty_31, void @empty_36, i32 16, i32 16, i32 256, i32 256, void @empty_36, void @empty_36, i32 4294967295, i32 0
+newFuncRoot:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %bundle_2, void @empty_6, i32 0, i32 0, void @empty, i32 0, i32 512, void @empty_19, void @empty_28, void @empty, i32 16, i32 16, i32 256, i32 256, void @empty, void @empty, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -213,10 +213,10 @@ load-store-loop.0.i.split:0 %loop_index_0_i_cast1 = zext i8 %loop_index_0_i_load
 
 <Node id="21" bw="10" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-load-store-loop.0.i.split:1 %empty_331 = add i10 %sub_ln140_read, i10 %loop_index_0_i_cast1
+load-store-loop.0.i.split:1 %empty_327 = add i10 %sub_ln140_read, i10 %loop_index_0_i_cast1
 
 ]]></Node>
-<StgValue><ssdm name="empty_331"/></StgValue>
+<StgValue><ssdm name="empty_327"/></StgValue>
 </operation>
 
 <operation id="19" st_id="1" stage="1" lat="1">
@@ -229,7 +229,7 @@ load-store-loop.0.i.split:1 %empty_331 = add i10 %sub_ln140_read, i10 %loop_inde
 
 <Node id="22" bw="64" op_0_bw="10">
 <![CDATA[
-load-store-loop.0.i.split:2 %p_cast = zext i10 %empty_331
+load-store-loop.0.i.split:2 %p_cast = zext i10 %empty_327
 
 ]]></Node>
 <StgValue><ssdm name="p_cast"/></StgValue>
@@ -295,10 +295,10 @@ load-store-loop.0.i.split:8 %store_ln0 = store i8 %empty, i8 %loop_index_0_i
 
 <Node id="14" bw="32" op_0_bw="32" op_1_bw="64">
 <![CDATA[
-load-store-loop.0.i:1 %o_addr = getelementptr i32 %o, i64 %sext_ln147_cast
+load-store-loop.0.i:1 %bundle_2_addr = getelementptr i32 %bundle_2, i64 %sext_ln147_cast
 
 ]]></Node>
-<StgValue><ssdm name="o_addr"/></StgValue>
+<StgValue><ssdm name="bundle_2_addr"/></StgValue>
 </operation>
 
 <operation id="24" st_id="2" stage="1" lat="1">
@@ -375,10 +375,10 @@ load-store-loop.0.i.split:4 %speclooptripcount_ln0 = speclooptripcount void @_ss
 
 <Node id="26" bw="32" op_0_bw="32">
 <![CDATA[
-load-store-loop.0.i.split:6 %empty_332 = bitcast i32 %output_fm_buffer_0_load
+load-store-loop.0.i.split:6 %empty_328 = bitcast i32 %output_fm_buffer_0_load
 
 ]]></Node>
-<StgValue><ssdm name="empty_332"/></StgValue>
+<StgValue><ssdm name="empty_328"/></StgValue>
 </operation>
 
 <operation id="28" st_id="3" stage="1" lat="1">
@@ -390,7 +390,7 @@ load-store-loop.0.i.split:6 %empty_332 = bitcast i32 %output_fm_buffer_0_load
 
 <Node id="27" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="4">
 <![CDATA[
-load-store-loop.0.i.split:7 %write_ln147 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %o_addr, i32 %empty_332, i4 15
+load-store-loop.0.i.split:7 %write_ln147 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %bundle_2_addr, i32 %empty_328, i4 15
 
 ]]></Node>
 <StgValue><ssdm name="write_ln147"/></StgValue>

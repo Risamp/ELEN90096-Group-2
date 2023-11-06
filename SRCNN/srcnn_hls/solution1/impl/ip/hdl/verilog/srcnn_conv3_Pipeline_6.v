@@ -13,52 +13,52 @@ module srcnn_conv3_Pipeline_6 (
         ap_done,
         ap_idle,
         ap_ready,
-        m_axi_o_AWVALID,
-        m_axi_o_AWREADY,
-        m_axi_o_AWADDR,
-        m_axi_o_AWID,
-        m_axi_o_AWLEN,
-        m_axi_o_AWSIZE,
-        m_axi_o_AWBURST,
-        m_axi_o_AWLOCK,
-        m_axi_o_AWCACHE,
-        m_axi_o_AWPROT,
-        m_axi_o_AWQOS,
-        m_axi_o_AWREGION,
-        m_axi_o_AWUSER,
-        m_axi_o_WVALID,
-        m_axi_o_WREADY,
-        m_axi_o_WDATA,
-        m_axi_o_WSTRB,
-        m_axi_o_WLAST,
-        m_axi_o_WID,
-        m_axi_o_WUSER,
-        m_axi_o_ARVALID,
-        m_axi_o_ARREADY,
-        m_axi_o_ARADDR,
-        m_axi_o_ARID,
-        m_axi_o_ARLEN,
-        m_axi_o_ARSIZE,
-        m_axi_o_ARBURST,
-        m_axi_o_ARLOCK,
-        m_axi_o_ARCACHE,
-        m_axi_o_ARPROT,
-        m_axi_o_ARQOS,
-        m_axi_o_ARREGION,
-        m_axi_o_ARUSER,
-        m_axi_o_RVALID,
-        m_axi_o_RREADY,
-        m_axi_o_RDATA,
-        m_axi_o_RLAST,
-        m_axi_o_RID,
-        m_axi_o_RFIFONUM,
-        m_axi_o_RUSER,
-        m_axi_o_RRESP,
-        m_axi_o_BVALID,
-        m_axi_o_BREADY,
-        m_axi_o_BRESP,
-        m_axi_o_BID,
-        m_axi_o_BUSER,
+        m_axi_bundle_2_AWVALID,
+        m_axi_bundle_2_AWREADY,
+        m_axi_bundle_2_AWADDR,
+        m_axi_bundle_2_AWID,
+        m_axi_bundle_2_AWLEN,
+        m_axi_bundle_2_AWSIZE,
+        m_axi_bundle_2_AWBURST,
+        m_axi_bundle_2_AWLOCK,
+        m_axi_bundle_2_AWCACHE,
+        m_axi_bundle_2_AWPROT,
+        m_axi_bundle_2_AWQOS,
+        m_axi_bundle_2_AWREGION,
+        m_axi_bundle_2_AWUSER,
+        m_axi_bundle_2_WVALID,
+        m_axi_bundle_2_WREADY,
+        m_axi_bundle_2_WDATA,
+        m_axi_bundle_2_WSTRB,
+        m_axi_bundle_2_WLAST,
+        m_axi_bundle_2_WID,
+        m_axi_bundle_2_WUSER,
+        m_axi_bundle_2_ARVALID,
+        m_axi_bundle_2_ARREADY,
+        m_axi_bundle_2_ARADDR,
+        m_axi_bundle_2_ARID,
+        m_axi_bundle_2_ARLEN,
+        m_axi_bundle_2_ARSIZE,
+        m_axi_bundle_2_ARBURST,
+        m_axi_bundle_2_ARLOCK,
+        m_axi_bundle_2_ARCACHE,
+        m_axi_bundle_2_ARPROT,
+        m_axi_bundle_2_ARQOS,
+        m_axi_bundle_2_ARREGION,
+        m_axi_bundle_2_ARUSER,
+        m_axi_bundle_2_RVALID,
+        m_axi_bundle_2_RREADY,
+        m_axi_bundle_2_RDATA,
+        m_axi_bundle_2_RLAST,
+        m_axi_bundle_2_RID,
+        m_axi_bundle_2_RFIFONUM,
+        m_axi_bundle_2_RUSER,
+        m_axi_bundle_2_RRESP,
+        m_axi_bundle_2_BVALID,
+        m_axi_bundle_2_BREADY,
+        m_axi_bundle_2_BRESP,
+        m_axi_bundle_2_BID,
+        m_axi_bundle_2_BUSER,
         sext_ln147_2,
         sub_ln140_1,
         output_fm_buffer_0_address0,
@@ -74,52 +74,52 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-output   m_axi_o_AWVALID;
-input   m_axi_o_AWREADY;
-output  [63:0] m_axi_o_AWADDR;
-output  [0:0] m_axi_o_AWID;
-output  [31:0] m_axi_o_AWLEN;
-output  [2:0] m_axi_o_AWSIZE;
-output  [1:0] m_axi_o_AWBURST;
-output  [1:0] m_axi_o_AWLOCK;
-output  [3:0] m_axi_o_AWCACHE;
-output  [2:0] m_axi_o_AWPROT;
-output  [3:0] m_axi_o_AWQOS;
-output  [3:0] m_axi_o_AWREGION;
-output  [0:0] m_axi_o_AWUSER;
-output   m_axi_o_WVALID;
-input   m_axi_o_WREADY;
-output  [31:0] m_axi_o_WDATA;
-output  [3:0] m_axi_o_WSTRB;
-output   m_axi_o_WLAST;
-output  [0:0] m_axi_o_WID;
-output  [0:0] m_axi_o_WUSER;
-output   m_axi_o_ARVALID;
-input   m_axi_o_ARREADY;
-output  [63:0] m_axi_o_ARADDR;
-output  [0:0] m_axi_o_ARID;
-output  [31:0] m_axi_o_ARLEN;
-output  [2:0] m_axi_o_ARSIZE;
-output  [1:0] m_axi_o_ARBURST;
-output  [1:0] m_axi_o_ARLOCK;
-output  [3:0] m_axi_o_ARCACHE;
-output  [2:0] m_axi_o_ARPROT;
-output  [3:0] m_axi_o_ARQOS;
-output  [3:0] m_axi_o_ARREGION;
-output  [0:0] m_axi_o_ARUSER;
-input   m_axi_o_RVALID;
-output   m_axi_o_RREADY;
-input  [31:0] m_axi_o_RDATA;
-input   m_axi_o_RLAST;
-input  [0:0] m_axi_o_RID;
-input  [12:0] m_axi_o_RFIFONUM;
-input  [0:0] m_axi_o_RUSER;
-input  [1:0] m_axi_o_RRESP;
-input   m_axi_o_BVALID;
-output   m_axi_o_BREADY;
-input  [1:0] m_axi_o_BRESP;
-input  [0:0] m_axi_o_BID;
-input  [0:0] m_axi_o_BUSER;
+output   m_axi_bundle_2_AWVALID;
+input   m_axi_bundle_2_AWREADY;
+output  [63:0] m_axi_bundle_2_AWADDR;
+output  [0:0] m_axi_bundle_2_AWID;
+output  [31:0] m_axi_bundle_2_AWLEN;
+output  [2:0] m_axi_bundle_2_AWSIZE;
+output  [1:0] m_axi_bundle_2_AWBURST;
+output  [1:0] m_axi_bundle_2_AWLOCK;
+output  [3:0] m_axi_bundle_2_AWCACHE;
+output  [2:0] m_axi_bundle_2_AWPROT;
+output  [3:0] m_axi_bundle_2_AWQOS;
+output  [3:0] m_axi_bundle_2_AWREGION;
+output  [0:0] m_axi_bundle_2_AWUSER;
+output   m_axi_bundle_2_WVALID;
+input   m_axi_bundle_2_WREADY;
+output  [31:0] m_axi_bundle_2_WDATA;
+output  [3:0] m_axi_bundle_2_WSTRB;
+output   m_axi_bundle_2_WLAST;
+output  [0:0] m_axi_bundle_2_WID;
+output  [0:0] m_axi_bundle_2_WUSER;
+output   m_axi_bundle_2_ARVALID;
+input   m_axi_bundle_2_ARREADY;
+output  [63:0] m_axi_bundle_2_ARADDR;
+output  [0:0] m_axi_bundle_2_ARID;
+output  [31:0] m_axi_bundle_2_ARLEN;
+output  [2:0] m_axi_bundle_2_ARSIZE;
+output  [1:0] m_axi_bundle_2_ARBURST;
+output  [1:0] m_axi_bundle_2_ARLOCK;
+output  [3:0] m_axi_bundle_2_ARCACHE;
+output  [2:0] m_axi_bundle_2_ARPROT;
+output  [3:0] m_axi_bundle_2_ARQOS;
+output  [3:0] m_axi_bundle_2_ARREGION;
+output  [0:0] m_axi_bundle_2_ARUSER;
+input   m_axi_bundle_2_RVALID;
+output   m_axi_bundle_2_RREADY;
+input  [31:0] m_axi_bundle_2_RDATA;
+input   m_axi_bundle_2_RLAST;
+input  [0:0] m_axi_bundle_2_RID;
+input  [12:0] m_axi_bundle_2_RFIFONUM;
+input  [0:0] m_axi_bundle_2_RUSER;
+input  [1:0] m_axi_bundle_2_RRESP;
+input   m_axi_bundle_2_BVALID;
+output   m_axi_bundle_2_BREADY;
+input  [1:0] m_axi_bundle_2_BRESP;
+input  [0:0] m_axi_bundle_2_BID;
+input  [0:0] m_axi_bundle_2_BUSER;
 input  [61:0] sext_ln147_2;
 input  [9:0] sub_ln140_1;
 output  [9:0] output_fm_buffer_0_address0;
@@ -127,7 +127,7 @@ output   output_fm_buffer_0_ce0;
 input  [31:0] output_fm_buffer_0_q0;
 
 reg ap_idle;
-reg m_axi_o_WVALID;
+reg m_axi_bundle_2_WVALID;
 reg output_fm_buffer_0_ce0;
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
@@ -144,7 +144,7 @@ wire   [0:0] exitcond9213_fu_103_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-reg    o_blk_n_W;
+reg    bundle_2_blk_n_W;
 wire    ap_block_pp0_stage0;
 reg    ap_block_pp0_stage0_11001;
 reg   [0:0] exitcond9213_reg_156;
@@ -157,7 +157,7 @@ wire   [7:0] empty_fu_109_p2;
 wire    ap_loop_init;
 reg   [7:0] ap_sig_allocacmp_loop_index_1_i_load;
 wire   [9:0] loop_index_1_i_cast1_fu_115_p1;
-wire   [9:0] empty_329_fu_119_p2;
+wire   [9:0] empty_325_fu_119_p2;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -312,18 +312,18 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-        m_axi_o_WVALID = 1'b1;
+    if (((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+        bundle_2_blk_n_W = m_axi_bundle_2_WREADY;
     end else begin
-        m_axi_o_WVALID = 1'b0;
+        bundle_2_blk_n_W = 1'b1;
     end
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-        o_blk_n_W = m_axi_o_WREADY;
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+        m_axi_bundle_2_WVALID = 1'b1;
     end else begin
-        o_blk_n_W = 1'b1;
+        m_axi_bundle_2_WVALID = 1'b0;
     end
 end
 
@@ -353,11 +353,11 @@ assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 assign ap_block_pp0_stage0_01001 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001 = ((m_axi_o_WREADY == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b1));
+    ap_block_pp0_stage0_11001 = ((m_axi_bundle_2_WREADY == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_subdone = ((m_axi_o_WREADY == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b1));
+    ap_block_pp0_stage0_subdone = ((m_axi_bundle_2_WREADY == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b1));
 end
 
 assign ap_block_state1_pp0_stage0_iter0 = ~(1'b1 == 1'b1);
@@ -372,7 +372,7 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign empty_329_fu_119_p2 = (sub_ln140_1 + loop_index_1_i_cast1_fu_115_p1);
+assign empty_325_fu_119_p2 = (sub_ln140_1 + loop_index_1_i_cast1_fu_115_p1);
 
 assign empty_fu_109_p2 = (ap_sig_allocacmp_loop_index_1_i_load + 8'd1);
 
@@ -380,70 +380,70 @@ assign exitcond9213_fu_103_p2 = ((ap_sig_allocacmp_loop_index_1_i_load == 8'd255
 
 assign loop_index_1_i_cast1_fu_115_p1 = ap_sig_allocacmp_loop_index_1_i_load;
 
-assign m_axi_o_ARADDR = 64'd0;
+assign m_axi_bundle_2_ARADDR = 64'd0;
 
-assign m_axi_o_ARBURST = 2'd0;
+assign m_axi_bundle_2_ARBURST = 2'd0;
 
-assign m_axi_o_ARCACHE = 4'd0;
+assign m_axi_bundle_2_ARCACHE = 4'd0;
 
-assign m_axi_o_ARID = 1'd0;
+assign m_axi_bundle_2_ARID = 1'd0;
 
-assign m_axi_o_ARLEN = 32'd0;
+assign m_axi_bundle_2_ARLEN = 32'd0;
 
-assign m_axi_o_ARLOCK = 2'd0;
+assign m_axi_bundle_2_ARLOCK = 2'd0;
 
-assign m_axi_o_ARPROT = 3'd0;
+assign m_axi_bundle_2_ARPROT = 3'd0;
 
-assign m_axi_o_ARQOS = 4'd0;
+assign m_axi_bundle_2_ARQOS = 4'd0;
 
-assign m_axi_o_ARREGION = 4'd0;
+assign m_axi_bundle_2_ARREGION = 4'd0;
 
-assign m_axi_o_ARSIZE = 3'd0;
+assign m_axi_bundle_2_ARSIZE = 3'd0;
 
-assign m_axi_o_ARUSER = 1'd0;
+assign m_axi_bundle_2_ARUSER = 1'd0;
 
-assign m_axi_o_ARVALID = 1'b0;
+assign m_axi_bundle_2_ARVALID = 1'b0;
 
-assign m_axi_o_AWADDR = 64'd0;
+assign m_axi_bundle_2_AWADDR = 64'd0;
 
-assign m_axi_o_AWBURST = 2'd0;
+assign m_axi_bundle_2_AWBURST = 2'd0;
 
-assign m_axi_o_AWCACHE = 4'd0;
+assign m_axi_bundle_2_AWCACHE = 4'd0;
 
-assign m_axi_o_AWID = 1'd0;
+assign m_axi_bundle_2_AWID = 1'd0;
 
-assign m_axi_o_AWLEN = 32'd0;
+assign m_axi_bundle_2_AWLEN = 32'd0;
 
-assign m_axi_o_AWLOCK = 2'd0;
+assign m_axi_bundle_2_AWLOCK = 2'd0;
 
-assign m_axi_o_AWPROT = 3'd0;
+assign m_axi_bundle_2_AWPROT = 3'd0;
 
-assign m_axi_o_AWQOS = 4'd0;
+assign m_axi_bundle_2_AWQOS = 4'd0;
 
-assign m_axi_o_AWREGION = 4'd0;
+assign m_axi_bundle_2_AWREGION = 4'd0;
 
-assign m_axi_o_AWSIZE = 3'd0;
+assign m_axi_bundle_2_AWSIZE = 3'd0;
 
-assign m_axi_o_AWUSER = 1'd0;
+assign m_axi_bundle_2_AWUSER = 1'd0;
 
-assign m_axi_o_AWVALID = 1'b0;
+assign m_axi_bundle_2_AWVALID = 1'b0;
 
-assign m_axi_o_BREADY = 1'b0;
+assign m_axi_bundle_2_BREADY = 1'b0;
 
-assign m_axi_o_RREADY = 1'b0;
+assign m_axi_bundle_2_RREADY = 1'b0;
 
-assign m_axi_o_WDATA = output_fm_buffer_0_load_reg_170;
+assign m_axi_bundle_2_WDATA = output_fm_buffer_0_load_reg_170;
 
-assign m_axi_o_WID = 1'd0;
+assign m_axi_bundle_2_WID = 1'd0;
 
-assign m_axi_o_WLAST = 1'b0;
+assign m_axi_bundle_2_WLAST = 1'b0;
 
-assign m_axi_o_WSTRB = 4'd15;
+assign m_axi_bundle_2_WSTRB = 4'd15;
 
-assign m_axi_o_WUSER = 1'd0;
+assign m_axi_bundle_2_WUSER = 1'd0;
 
 assign output_fm_buffer_0_address0 = p_cast_fu_125_p1;
 
-assign p_cast_fu_125_p1 = empty_329_fu_119_p2;
+assign p_cast_fu_125_p1 = empty_325_fu_119_p2;
 
 endmodule //srcnn_conv3_Pipeline_6

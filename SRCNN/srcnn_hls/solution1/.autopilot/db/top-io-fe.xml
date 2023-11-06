@@ -1,8 +1,8 @@
 <root versionMajor = "1" versionMinor = "5">
   <kernel src_name="srcnn" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
     <args>
-      <arg id="0" access_type="r" src_name="input_ftmap" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="65025">
-        <hw hw_usage="data" hw_interface="MAXI" hw_name="i1" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
+      <arg id="0" access_type="rw" src_name="input_ftmap" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="65025">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="bundle_1" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="256" max_write_burst_length="256" max_widen_bitwidth="512"/>
           <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32"/>
         </hw>
@@ -11,7 +11,7 @@
         </hw>
       </arg>
       <arg id="1" access_type="r" src_name="conv1_weights" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="5184">
-        <hw hw_usage="data" hw_interface="MAXI" hw_name="w1" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="weights" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="256" max_write_burst_length="256" max_widen_bitwidth="512"/>
           <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32"/>
         </hw>
@@ -20,7 +20,7 @@
         </hw>
       </arg>
       <arg id="2" access_type="r" src_name="conv1_biases" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="64">
-        <hw hw_usage="data" hw_interface="MAXI" hw_name="gmem" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="biases" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0"/>
           <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32"/>
         </hw>
@@ -29,7 +29,7 @@
         </hw>
       </arg>
       <arg id="3" access_type="rw" src_name="conv1_output_ftmap" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="4161600">
-        <hw hw_usage="data" hw_interface="MAXI" hw_name="i2" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="bundle_2" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="256" max_write_burst_length="256" max_widen_bitwidth="512"/>
           <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32"/>
         </hw>
@@ -38,7 +38,7 @@
         </hw>
       </arg>
       <arg id="4" access_type="r" src_name="conv2_weights" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="2048">
-        <hw hw_usage="data" hw_interface="MAXI" hw_name="w2" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="weights" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="256" max_write_burst_length="256" max_widen_bitwidth="512"/>
           <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32"/>
         </hw>
@@ -47,7 +47,7 @@
         </hw>
       </arg>
       <arg id="5" access_type="r" src_name="conv2_biases" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="32">
-        <hw hw_usage="data" hw_interface="MAXI" hw_name="gmem" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="biases" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0"/>
           <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32"/>
         </hw>
@@ -56,7 +56,7 @@
         </hw>
       </arg>
       <arg id="6" access_type="rw" src_name="conv2_output_ftmap" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="2080800">
-        <hw hw_usage="data" hw_interface="MAXI" hw_name="i3" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="bundle_1" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="256" max_write_burst_length="256" max_widen_bitwidth="512"/>
           <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32"/>
         </hw>
@@ -65,7 +65,7 @@
         </hw>
       </arg>
       <arg id="7" access_type="r" src_name="conv3_weights" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="800">
-        <hw hw_usage="data" hw_interface="MAXI" hw_name="w3" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="weights" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="256" max_write_burst_length="256" max_widen_bitwidth="512"/>
           <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32"/>
         </hw>
@@ -74,7 +74,7 @@
         </hw>
       </arg>
       <arg id="8" access_type="r" src_name="conv3_biases" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="MAXI" hw_name="gmem" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="biases" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0"/>
           <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32"/>
         </hw>
@@ -82,8 +82,8 @@
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="112"/>
         </hw>
       </arg>
-      <arg id="9" access_type="w" src_name="output_ftmap" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="65025">
-        <hw hw_usage="data" hw_interface="MAXI" hw_name="o" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
+      <arg id="9" access_type="rw" src_name="output_ftmap" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="65025">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="bundle_2" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="256" max_write_burst_length="256" max_widen_bitwidth="512"/>
           <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32"/>
         </hw>

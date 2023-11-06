@@ -272,7 +272,7 @@ for.inc.i.i.split:2 %speclooptripcount_ln65 = speclooptripcount void @_ssdm_op_S
 
 <Node id="23" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.i.i.split:3 %specloopname_ln65 = specloopname void @_ssdm_op_SpecLoopName, void @empty_21
+for.inc.i.i.split:3 %specloopname_ln65 = specloopname void @_ssdm_op_SpecLoopName, void @empty_1
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln65"/></StgValue>
@@ -753,7 +753,7 @@ for.inc.1.i.i.preheader.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="98" from="_ssdm_op_SpecLoopName" to="specloopname_ln65" fromId="97" toId="20">
 </dataflow>
-<dataflow id="100" from="empty_21" to="specloopname_ln65" fromId="99" toId="20">
+<dataflow id="100" from="empty_1" to="specloopname_ln65" fromId="99" toId="20">
 </dataflow>
 <dataflow id="101" from="phi_urem526_load_1" to="zext_ln67" fromId="17" toId="21">
 </dataflow>

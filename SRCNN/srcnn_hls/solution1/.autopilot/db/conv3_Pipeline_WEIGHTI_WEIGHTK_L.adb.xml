@@ -136,7 +136,7 @@ newFuncRoot:6 %sext_ln117_cast = sext i62 %sext_ln117_read
 
 <Node id="35" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:7 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w3, void @empty_34, i32 0, i32 0, void @empty_36, i32 0, i32 512, void @empty_4, void @empty_31, void @empty_36, i32 16, i32 16, i32 256, i32 256, void @empty_36, void @empty_36, i32 4294967295, i32 0
+newFuncRoot:7 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %weights, void @empty_6, i32 0, i32 0, void @empty, i32 0, i32 512, void @empty_21, void @empty_28, void @empty, i32 16, i32 16, i32 256, i32 256, void @empty, void @empty, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -335,10 +335,10 @@ load-store-loop.i:0 %indvar_flatten_load = load i6 %indvar_flatten
 
 <Node id="45" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-load-store-loop.i:2 %w3_addr = getelementptr i32 %w3, i64 %sext_ln117_cast
+load-store-loop.i:2 %weights_addr = getelementptr i32 %weights, i64 %sext_ln117_cast
 
 ]]></Node>
-<StgValue><ssdm name="w3_addr"/></StgValue>
+<StgValue><ssdm name="weights_addr"/></StgValue>
 </operation>
 
 <operation id="27" st_id="2" stage="1" lat="1">
@@ -542,10 +542,10 @@ for.inc20.i:19 %select_ln118_1 = select i1 %and_ln117, i3 %add_ln118, i3 %select
 
 <Node id="71" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.inc20.i:20 %w3_addr_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i64 %w3_addr
+for.inc20.i:20 %weights_addr_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i64 %weights_addr
 
 ]]></Node>
-<StgValue><ssdm name="w3_addr_read"/></StgValue>
+<StgValue><ssdm name="weights_addr_read"/></StgValue>
 </operation>
 
 <operation id="40" st_id="2" stage="1" lat="1">
@@ -1000,10 +1000,10 @@ for.inc20.i:18 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32
 
 <Node id="72" bw="32" op_0_bw="32">
 <![CDATA[
-for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
+for.inc20.i:21 %empty_322 = bitcast i32 %weights_addr_read
 
 ]]></Node>
-<StgValue><ssdm name="empty_326"/></StgValue>
+<StgValue><ssdm name="empty_322"/></StgValue>
 </operation>
 
 <operation id="67" st_id="3" stage="1" lat="1">
@@ -1034,7 +1034,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="78" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.327:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_3_0_addr
+.case.327:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_3_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1085,7 +1085,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="82" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.226:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_2_0_addr
+.case.226:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_2_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1136,7 +1136,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="86" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.125:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_1_0_addr
+.case.125:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_1_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1187,7 +1187,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="90" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.024:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_0_0_addr
+.case.024:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_0_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1244,7 +1244,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="94" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.428:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_4_0_addr
+.case.428:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_4_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1298,7 +1298,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="102" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.320:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_3_0_addr
+.case.320:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_3_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1349,7 +1349,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="106" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.219:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_2_0_addr
+.case.219:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_2_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1400,7 +1400,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="110" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.118:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_1_0_addr
+.case.118:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_1_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1451,7 +1451,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="114" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.017:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_0_0_addr
+.case.017:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_0_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1508,7 +1508,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="118" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.421:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_4_0_addr
+.case.421:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_4_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1562,7 +1562,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="126" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.313:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_3_0_addr
+.case.313:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_3_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1613,7 +1613,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="130" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.212:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_2_0_addr
+.case.212:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_2_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1664,7 +1664,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="134" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.111:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_1_0_addr
+.case.111:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_1_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1715,7 +1715,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="138" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.010:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_0_0_addr
+.case.010:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_0_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1772,7 +1772,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="142" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.414:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_4_0_addr
+.case.414:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_4_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1826,7 +1826,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="150" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.36:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_3_0_addr
+.case.36:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_3_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1877,7 +1877,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="154" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.25:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_2_0_addr
+.case.25:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_2_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1928,7 +1928,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="158" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.14:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_1_0_addr
+.case.14:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_1_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -1979,7 +1979,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="162" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.03:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_addr
+.case.03:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -2036,7 +2036,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="166" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.47:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_4_0_addr
+.case.47:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_4_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -2096,7 +2096,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="174" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.334:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_3_0_addr
+.case.334:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_3_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -2156,7 +2156,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="178" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.233:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_2_0_addr
+.case.233:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_2_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -2216,7 +2216,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="182" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.132:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_1_0_addr
+.case.132:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_1_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -2276,7 +2276,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="186" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.031:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_0_0_addr
+.case.031:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_0_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -2342,7 +2342,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 <Node id="190" bw="0" op_0_bw="32" op_1_bw="5">
 <![CDATA[
-.case.435:1 %store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_4_0_addr
+.case.435:1 %store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_4_0_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln117"/></StgValue>
@@ -2405,8 +2405,8 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 
 
 <ports>
-<port id="168" name="w3" dir="0" iftype="4">
-<core>NULL</core><StgValue><ssdm name="w3"/></StgValue>
+<port id="168" name="weights" dir="0" iftype="4">
+<core>NULL</core><StgValue><ssdm name="weights"/></StgValue>
 </port>
 <port id="169" name="sext_ln117" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="sext_ln117"/></StgValue>
@@ -2533,25 +2533,25 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="206" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="205" toId="13">
 </dataflow>
-<dataflow id="207" from="w3" to="specinterface_ln0" fromId="168" toId="13">
+<dataflow id="207" from="weights" to="specinterface_ln0" fromId="168" toId="13">
 </dataflow>
-<dataflow id="209" from="empty_34" to="specinterface_ln0" fromId="208" toId="13">
+<dataflow id="209" from="empty_6" to="specinterface_ln0" fromId="208" toId="13">
 </dataflow>
 <dataflow id="211" from="StgValue_210" to="specinterface_ln0" fromId="210" toId="13">
 </dataflow>
 <dataflow id="212" from="StgValue_210" to="specinterface_ln0" fromId="210" toId="13">
 </dataflow>
-<dataflow id="214" from="empty_36" to="specinterface_ln0" fromId="213" toId="13">
+<dataflow id="214" from="empty" to="specinterface_ln0" fromId="213" toId="13">
 </dataflow>
 <dataflow id="215" from="StgValue_210" to="specinterface_ln0" fromId="210" toId="13">
 </dataflow>
 <dataflow id="217" from="StgValue_216" to="specinterface_ln0" fromId="216" toId="13">
 </dataflow>
-<dataflow id="219" from="empty_4" to="specinterface_ln0" fromId="218" toId="13">
+<dataflow id="219" from="empty_21" to="specinterface_ln0" fromId="218" toId="13">
 </dataflow>
-<dataflow id="221" from="empty_31" to="specinterface_ln0" fromId="220" toId="13">
+<dataflow id="221" from="empty_28" to="specinterface_ln0" fromId="220" toId="13">
 </dataflow>
-<dataflow id="222" from="empty_36" to="specinterface_ln0" fromId="213" toId="13">
+<dataflow id="222" from="empty" to="specinterface_ln0" fromId="213" toId="13">
 </dataflow>
 <dataflow id="224" from="StgValue_223" to="specinterface_ln0" fromId="223" toId="13">
 </dataflow>
@@ -2561,9 +2561,9 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="228" from="StgValue_226" to="specinterface_ln0" fromId="226" toId="13">
 </dataflow>
-<dataflow id="229" from="empty_36" to="specinterface_ln0" fromId="213" toId="13">
+<dataflow id="229" from="empty" to="specinterface_ln0" fromId="213" toId="13">
 </dataflow>
-<dataflow id="230" from="empty_36" to="specinterface_ln0" fromId="213" toId="13">
+<dataflow id="230" from="empty" to="specinterface_ln0" fromId="213" toId="13">
 </dataflow>
 <dataflow id="232" from="StgValue_231" to="specinterface_ln0" fromId="231" toId="13">
 </dataflow>
@@ -2607,9 +2607,9 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="257" from="indvar_flatten" to="indvar_flatten_load" fromId="8" toId="25">
 </dataflow>
-<dataflow id="258" from="w3" to="w3_addr" fromId="168" toId="26">
+<dataflow id="258" from="weights" to="weights_addr" fromId="168" toId="26">
 </dataflow>
-<dataflow id="259" from="sext_ln117_cast" to="w3_addr" fromId="12" toId="26">
+<dataflow id="259" from="sext_ln117_cast" to="weights_addr" fromId="12" toId="26">
 </dataflow>
 <dataflow id="261" from="_ssdm_op_SpecPipeline" to="specpipeline_ln0" fromId="260" toId="27">
 </dataflow>
@@ -2669,9 +2669,9 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="294" from="select_ln117" to="select_ln118_1" fromId="31" toId="38">
 </dataflow>
-<dataflow id="296" from="_ssdm_op_Read.m_axi.p1i32" to="w3_addr_read" fromId="295" toId="39">
+<dataflow id="296" from="_ssdm_op_Read.m_axi.p1i32" to="weights_addr_read" fromId="295" toId="39">
 </dataflow>
-<dataflow id="297" from="w3_addr" to="w3_addr_read" fromId="26" toId="39">
+<dataflow id="297" from="weights_addr" to="weights_addr_read" fromId="26" toId="39">
 </dataflow>
 <dataflow id="298" from="select_ln118_1" to="switch_ln118" fromId="38" toId="40">
 </dataflow>
@@ -2813,7 +2813,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="375" from="p_str" to="specpipeline_ln0" fromId="266" toId="65">
 </dataflow>
-<dataflow id="376" from="w3_addr_read" to="empty_326" fromId="39" toId="66">
+<dataflow id="376" from="weights_addr_read" to="empty_322" fromId="39" toId="66">
 </dataflow>
 <dataflow id="377" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_3_0" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_3_0_addr" fromId="188" toId="67">
 </dataflow>
@@ -2821,7 +2821,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="380" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_3_0_addr" fromId="62" toId="67">
 </dataflow>
-<dataflow id="381" from="empty_326" to="store_ln117" fromId="66" toId="68">
+<dataflow id="381" from="empty_322" to="store_ln117" fromId="66" toId="68">
 </dataflow>
 <dataflow id="382" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_3_0_addr" to="store_ln117" fromId="67" toId="68">
 </dataflow>
@@ -2831,7 +2831,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="385" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_2_0_addr" fromId="62" toId="70">
 </dataflow>
-<dataflow id="386" from="empty_326" to="store_ln117" fromId="66" toId="71">
+<dataflow id="386" from="empty_322" to="store_ln117" fromId="66" toId="71">
 </dataflow>
 <dataflow id="387" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_2_0_addr" to="store_ln117" fromId="70" toId="71">
 </dataflow>
@@ -2841,7 +2841,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="390" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_1_0_addr" fromId="62" toId="73">
 </dataflow>
-<dataflow id="391" from="empty_326" to="store_ln117" fromId="66" toId="74">
+<dataflow id="391" from="empty_322" to="store_ln117" fromId="66" toId="74">
 </dataflow>
 <dataflow id="392" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_1_0_addr" to="store_ln117" fromId="73" toId="74">
 </dataflow>
@@ -2851,7 +2851,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="395" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_0_0_addr" fromId="62" toId="76">
 </dataflow>
-<dataflow id="396" from="empty_326" to="store_ln117" fromId="66" toId="77">
+<dataflow id="396" from="empty_322" to="store_ln117" fromId="66" toId="77">
 </dataflow>
 <dataflow id="397" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_0_0_addr" to="store_ln117" fromId="76" toId="77">
 </dataflow>
@@ -2861,7 +2861,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="400" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_4_0_addr" fromId="62" toId="79">
 </dataflow>
-<dataflow id="401" from="empty_326" to="store_ln117" fromId="66" toId="80">
+<dataflow id="401" from="empty_322" to="store_ln117" fromId="66" toId="80">
 </dataflow>
 <dataflow id="402" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_4_0_addr" to="store_ln117" fromId="79" toId="80">
 </dataflow>
@@ -2871,7 +2871,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="405" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_3_0_addr" fromId="62" toId="82">
 </dataflow>
-<dataflow id="406" from="empty_326" to="store_ln117" fromId="66" toId="83">
+<dataflow id="406" from="empty_322" to="store_ln117" fromId="66" toId="83">
 </dataflow>
 <dataflow id="407" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_3_0_addr" to="store_ln117" fromId="82" toId="83">
 </dataflow>
@@ -2881,7 +2881,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="410" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_2_0_addr" fromId="62" toId="85">
 </dataflow>
-<dataflow id="411" from="empty_326" to="store_ln117" fromId="66" toId="86">
+<dataflow id="411" from="empty_322" to="store_ln117" fromId="66" toId="86">
 </dataflow>
 <dataflow id="412" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_2_0_addr" to="store_ln117" fromId="85" toId="86">
 </dataflow>
@@ -2891,7 +2891,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="415" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_1_0_addr" fromId="62" toId="88">
 </dataflow>
-<dataflow id="416" from="empty_326" to="store_ln117" fromId="66" toId="89">
+<dataflow id="416" from="empty_322" to="store_ln117" fromId="66" toId="89">
 </dataflow>
 <dataflow id="417" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_1_0_addr" to="store_ln117" fromId="88" toId="89">
 </dataflow>
@@ -2901,7 +2901,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="420" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_0_0_addr" fromId="62" toId="91">
 </dataflow>
-<dataflow id="421" from="empty_326" to="store_ln117" fromId="66" toId="92">
+<dataflow id="421" from="empty_322" to="store_ln117" fromId="66" toId="92">
 </dataflow>
 <dataflow id="422" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_0_0_addr" to="store_ln117" fromId="91" toId="92">
 </dataflow>
@@ -2911,7 +2911,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="425" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_4_0_addr" fromId="62" toId="94">
 </dataflow>
-<dataflow id="426" from="empty_326" to="store_ln117" fromId="66" toId="95">
+<dataflow id="426" from="empty_322" to="store_ln117" fromId="66" toId="95">
 </dataflow>
 <dataflow id="427" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_4_0_addr" to="store_ln117" fromId="94" toId="95">
 </dataflow>
@@ -2921,7 +2921,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="430" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_3_0_addr" fromId="62" toId="97">
 </dataflow>
-<dataflow id="431" from="empty_326" to="store_ln117" fromId="66" toId="98">
+<dataflow id="431" from="empty_322" to="store_ln117" fromId="66" toId="98">
 </dataflow>
 <dataflow id="432" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_3_0_addr" to="store_ln117" fromId="97" toId="98">
 </dataflow>
@@ -2931,7 +2931,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="435" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_2_0_addr" fromId="62" toId="100">
 </dataflow>
-<dataflow id="436" from="empty_326" to="store_ln117" fromId="66" toId="101">
+<dataflow id="436" from="empty_322" to="store_ln117" fromId="66" toId="101">
 </dataflow>
 <dataflow id="437" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_2_0_addr" to="store_ln117" fromId="100" toId="101">
 </dataflow>
@@ -2941,7 +2941,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="440" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_1_0_addr" fromId="62" toId="103">
 </dataflow>
-<dataflow id="441" from="empty_326" to="store_ln117" fromId="66" toId="104">
+<dataflow id="441" from="empty_322" to="store_ln117" fromId="66" toId="104">
 </dataflow>
 <dataflow id="442" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_1_0_addr" to="store_ln117" fromId="103" toId="104">
 </dataflow>
@@ -2951,7 +2951,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="445" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_0_0_addr" fromId="62" toId="106">
 </dataflow>
-<dataflow id="446" from="empty_326" to="store_ln117" fromId="66" toId="107">
+<dataflow id="446" from="empty_322" to="store_ln117" fromId="66" toId="107">
 </dataflow>
 <dataflow id="447" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_0_0_addr" to="store_ln117" fromId="106" toId="107">
 </dataflow>
@@ -2961,7 +2961,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="450" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_4_0_addr" fromId="62" toId="109">
 </dataflow>
-<dataflow id="451" from="empty_326" to="store_ln117" fromId="66" toId="110">
+<dataflow id="451" from="empty_322" to="store_ln117" fromId="66" toId="110">
 </dataflow>
 <dataflow id="452" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_4_0_addr" to="store_ln117" fromId="109" toId="110">
 </dataflow>
@@ -2971,7 +2971,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="455" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_3_0_addr" fromId="62" toId="112">
 </dataflow>
-<dataflow id="456" from="empty_326" to="store_ln117" fromId="66" toId="113">
+<dataflow id="456" from="empty_322" to="store_ln117" fromId="66" toId="113">
 </dataflow>
 <dataflow id="457" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_3_0_addr" to="store_ln117" fromId="112" toId="113">
 </dataflow>
@@ -2981,7 +2981,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="460" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_2_0_addr" fromId="62" toId="115">
 </dataflow>
-<dataflow id="461" from="empty_326" to="store_ln117" fromId="66" toId="116">
+<dataflow id="461" from="empty_322" to="store_ln117" fromId="66" toId="116">
 </dataflow>
 <dataflow id="462" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_2_0_addr" to="store_ln117" fromId="115" toId="116">
 </dataflow>
@@ -2991,7 +2991,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="465" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_1_0_addr" fromId="62" toId="118">
 </dataflow>
-<dataflow id="466" from="empty_326" to="store_ln117" fromId="66" toId="119">
+<dataflow id="466" from="empty_322" to="store_ln117" fromId="66" toId="119">
 </dataflow>
 <dataflow id="467" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_1_0_addr" to="store_ln117" fromId="118" toId="119">
 </dataflow>
@@ -3001,7 +3001,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="470" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_addr" fromId="62" toId="121">
 </dataflow>
-<dataflow id="471" from="empty_326" to="store_ln117" fromId="66" toId="122">
+<dataflow id="471" from="empty_322" to="store_ln117" fromId="66" toId="122">
 </dataflow>
 <dataflow id="472" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_addr" to="store_ln117" fromId="121" toId="122">
 </dataflow>
@@ -3011,7 +3011,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="475" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_4_0_addr" fromId="62" toId="124">
 </dataflow>
-<dataflow id="476" from="empty_326" to="store_ln117" fromId="66" toId="125">
+<dataflow id="476" from="empty_322" to="store_ln117" fromId="66" toId="125">
 </dataflow>
 <dataflow id="477" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_4_0_addr" to="store_ln117" fromId="124" toId="125">
 </dataflow>
@@ -3021,7 +3021,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="480" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_3_0_addr" fromId="62" toId="127">
 </dataflow>
-<dataflow id="481" from="empty_326" to="store_ln117" fromId="66" toId="128">
+<dataflow id="481" from="empty_322" to="store_ln117" fromId="66" toId="128">
 </dataflow>
 <dataflow id="482" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_3_0_addr" to="store_ln117" fromId="127" toId="128">
 </dataflow>
@@ -3031,7 +3031,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="485" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_2_0_addr" fromId="62" toId="130">
 </dataflow>
-<dataflow id="486" from="empty_326" to="store_ln117" fromId="66" toId="131">
+<dataflow id="486" from="empty_322" to="store_ln117" fromId="66" toId="131">
 </dataflow>
 <dataflow id="487" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_2_0_addr" to="store_ln117" fromId="130" toId="131">
 </dataflow>
@@ -3041,7 +3041,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="490" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_1_0_addr" fromId="62" toId="133">
 </dataflow>
-<dataflow id="491" from="empty_326" to="store_ln117" fromId="66" toId="134">
+<dataflow id="491" from="empty_322" to="store_ln117" fromId="66" toId="134">
 </dataflow>
 <dataflow id="492" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_1_0_addr" to="store_ln117" fromId="133" toId="134">
 </dataflow>
@@ -3051,7 +3051,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="495" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_0_0_addr" fromId="62" toId="136">
 </dataflow>
-<dataflow id="496" from="empty_326" to="store_ln117" fromId="66" toId="137">
+<dataflow id="496" from="empty_322" to="store_ln117" fromId="66" toId="137">
 </dataflow>
 <dataflow id="497" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_0_0_addr" to="store_ln117" fromId="136" toId="137">
 </dataflow>
@@ -3061,7 +3061,7 @@ for.inc20.i:21 %empty_326 = bitcast i32 %w3_addr_read
 </dataflow>
 <dataflow id="500" from="zext_ln117" to="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_4_0_addr" fromId="62" toId="139">
 </dataflow>
-<dataflow id="501" from="empty_326" to="store_ln117" fromId="66" toId="140">
+<dataflow id="501" from="empty_322" to="store_ln117" fromId="66" toId="140">
 </dataflow>
 <dataflow id="502" from="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_4_0_addr" to="store_ln117" fromId="139" toId="140">
 </dataflow>

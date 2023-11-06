@@ -211,7 +211,7 @@ newFuncRoot:7 %sext_ln79_cast = sext i19 %sext_ln79_read
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:8 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i2, void @empty_34, i32 0, i32 0, void @empty_36, i32 0, i32 512, void @empty_6, void @empty_31, void @empty_36, i32 16, i32 16, i32 256, i32 256, void @empty_36, void @empty_36, i32 4294967295, i32 0
+newFuncRoot:8 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %bundle_2, void @empty_6, i32 0, i32 0, void @empty, i32 0, i32 512, void @empty_19, void @empty_28, void @empty, i32 16, i32 16, i32 256, i32 256, void @empty, void @empty, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -826,10 +826,10 @@ for.first.iter.load-store-loop.i:0 %br_ln0 = br void %load-store-loop.i.split
 
 <Node id="82" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
+load-store-loop.i.split:0 %empty_338 = urem i8 %select_ln80, i8 85
 
 ]]></Node>
-<StgValue><ssdm name="empty_342"/></StgValue>
+<StgValue><ssdm name="empty_338"/></StgValue>
 </operation>
 
 <operation id="63" st_id="2" stage="1" lat="1">
@@ -1054,10 +1054,10 @@ for.inc12.i:21 %sext_ln79_1 = sext i62 %sext_ln80_mid2_v
 
 <Node id="76" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-for.first.iter.for.body4.i:0 %i2_addr = getelementptr i32 %i2, i64 %sext_ln79_1
+for.first.iter.for.body4.i:0 %bundle_2_addr = getelementptr i32 %bundle_2, i64 %sext_ln79_1
 
 ]]></Node>
-<StgValue><ssdm name="i2_addr"/></StgValue>
+<StgValue><ssdm name="bundle_2_addr"/></StgValue>
 </operation>
 
 <operation id="77" st_id="3" stage="8" lat="8">
@@ -1071,10 +1071,10 @@ for.first.iter.for.body4.i:0 %i2_addr = getelementptr i32 %i2, i64 %sext_ln79_1
 
 <Node id="77" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.first.iter.for.body4.i:1 %empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %i2_addr, i32 765
+for.first.iter.for.body4.i:1 %empty_341 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %bundle_2_addr, i32 765
 
 ]]></Node>
-<StgValue><ssdm name="empty_345"/></StgValue>
+<StgValue><ssdm name="empty_341"/></StgValue>
 </operation>
 
 <operation id="78" st_id="3" stage="11" lat="12">
@@ -1086,10 +1086,10 @@ for.first.iter.for.body4.i:1 %empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i
 
 <Node id="82" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
+load-store-loop.i.split:0 %empty_338 = urem i8 %select_ln80, i8 85
 
 ]]></Node>
-<StgValue><ssdm name="empty_342"/></StgValue>
+<StgValue><ssdm name="empty_338"/></StgValue>
 </operation>
 
 <operation id="79" st_id="3" stage="1" lat="1">
@@ -1101,10 +1101,10 @@ load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
 
 <Node id="92" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-load-store-loop.i.split:10 %i2_addr_2 = getelementptr i32 %i2, i64 %sext_ln79_1
+load-store-loop.i.split:10 %bundle_2_addr_3 = getelementptr i32 %bundle_2, i64 %sext_ln79_1
 
 ]]></Node>
-<StgValue><ssdm name="i2_addr_2"/></StgValue>
+<StgValue><ssdm name="bundle_2_addr_3"/></StgValue>
 </operation>
 </state>
 
@@ -1121,10 +1121,10 @@ load-store-loop.i.split:10 %i2_addr_2 = getelementptr i32 %i2, i64 %sext_ln79_1
 
 <Node id="77" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.first.iter.for.body4.i:1 %empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %i2_addr, i32 765
+for.first.iter.for.body4.i:1 %empty_341 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %bundle_2_addr, i32 765
 
 ]]></Node>
-<StgValue><ssdm name="empty_345"/></StgValue>
+<StgValue><ssdm name="empty_341"/></StgValue>
 </operation>
 
 <operation id="81" st_id="4" stage="10" lat="12">
@@ -1136,10 +1136,10 @@ for.first.iter.for.body4.i:1 %empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i
 
 <Node id="82" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
+load-store-loop.i.split:0 %empty_338 = urem i8 %select_ln80, i8 85
 
 ]]></Node>
-<StgValue><ssdm name="empty_342"/></StgValue>
+<StgValue><ssdm name="empty_338"/></StgValue>
 </operation>
 </state>
 
@@ -1156,10 +1156,10 @@ load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
 
 <Node id="77" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.first.iter.for.body4.i:1 %empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %i2_addr, i32 765
+for.first.iter.for.body4.i:1 %empty_341 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %bundle_2_addr, i32 765
 
 ]]></Node>
-<StgValue><ssdm name="empty_345"/></StgValue>
+<StgValue><ssdm name="empty_341"/></StgValue>
 </operation>
 
 <operation id="83" st_id="5" stage="9" lat="12">
@@ -1171,10 +1171,10 @@ for.first.iter.for.body4.i:1 %empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i
 
 <Node id="82" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
+load-store-loop.i.split:0 %empty_338 = urem i8 %select_ln80, i8 85
 
 ]]></Node>
-<StgValue><ssdm name="empty_342"/></StgValue>
+<StgValue><ssdm name="empty_338"/></StgValue>
 </operation>
 </state>
 
@@ -1191,10 +1191,10 @@ load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
 
 <Node id="77" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.first.iter.for.body4.i:1 %empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %i2_addr, i32 765
+for.first.iter.for.body4.i:1 %empty_341 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %bundle_2_addr, i32 765
 
 ]]></Node>
-<StgValue><ssdm name="empty_345"/></StgValue>
+<StgValue><ssdm name="empty_341"/></StgValue>
 </operation>
 
 <operation id="85" st_id="6" stage="8" lat="12">
@@ -1206,10 +1206,10 @@ for.first.iter.for.body4.i:1 %empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i
 
 <Node id="82" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
+load-store-loop.i.split:0 %empty_338 = urem i8 %select_ln80, i8 85
 
 ]]></Node>
-<StgValue><ssdm name="empty_342"/></StgValue>
+<StgValue><ssdm name="empty_338"/></StgValue>
 </operation>
 </state>
 
@@ -1226,10 +1226,10 @@ load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
 
 <Node id="77" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.first.iter.for.body4.i:1 %empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %i2_addr, i32 765
+for.first.iter.for.body4.i:1 %empty_341 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %bundle_2_addr, i32 765
 
 ]]></Node>
-<StgValue><ssdm name="empty_345"/></StgValue>
+<StgValue><ssdm name="empty_341"/></StgValue>
 </operation>
 
 <operation id="87" st_id="7" stage="7" lat="12">
@@ -1241,10 +1241,10 @@ for.first.iter.for.body4.i:1 %empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i
 
 <Node id="82" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
+load-store-loop.i.split:0 %empty_338 = urem i8 %select_ln80, i8 85
 
 ]]></Node>
-<StgValue><ssdm name="empty_342"/></StgValue>
+<StgValue><ssdm name="empty_338"/></StgValue>
 </operation>
 </state>
 
@@ -1261,10 +1261,10 @@ load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
 
 <Node id="77" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.first.iter.for.body4.i:1 %empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %i2_addr, i32 765
+for.first.iter.for.body4.i:1 %empty_341 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %bundle_2_addr, i32 765
 
 ]]></Node>
-<StgValue><ssdm name="empty_345"/></StgValue>
+<StgValue><ssdm name="empty_341"/></StgValue>
 </operation>
 
 <operation id="89" st_id="8" stage="6" lat="12">
@@ -1276,10 +1276,10 @@ for.first.iter.for.body4.i:1 %empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i
 
 <Node id="82" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
+load-store-loop.i.split:0 %empty_338 = urem i8 %select_ln80, i8 85
 
 ]]></Node>
-<StgValue><ssdm name="empty_342"/></StgValue>
+<StgValue><ssdm name="empty_338"/></StgValue>
 </operation>
 </state>
 
@@ -1296,10 +1296,10 @@ load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
 
 <Node id="77" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.first.iter.for.body4.i:1 %empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %i2_addr, i32 765
+for.first.iter.for.body4.i:1 %empty_341 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %bundle_2_addr, i32 765
 
 ]]></Node>
-<StgValue><ssdm name="empty_345"/></StgValue>
+<StgValue><ssdm name="empty_341"/></StgValue>
 </operation>
 
 <operation id="91" st_id="9" stage="5" lat="12">
@@ -1311,10 +1311,10 @@ for.first.iter.for.body4.i:1 %empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i
 
 <Node id="82" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
+load-store-loop.i.split:0 %empty_338 = urem i8 %select_ln80, i8 85
 
 ]]></Node>
-<StgValue><ssdm name="empty_342"/></StgValue>
+<StgValue><ssdm name="empty_338"/></StgValue>
 </operation>
 </state>
 
@@ -1331,10 +1331,10 @@ load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
 
 <Node id="77" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.first.iter.for.body4.i:1 %empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %i2_addr, i32 765
+for.first.iter.for.body4.i:1 %empty_341 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %bundle_2_addr, i32 765
 
 ]]></Node>
-<StgValue><ssdm name="empty_345"/></StgValue>
+<StgValue><ssdm name="empty_341"/></StgValue>
 </operation>
 
 <operation id="93" st_id="10" stage="1" lat="1">
@@ -1363,10 +1363,10 @@ for.first.iter.for.body4.i:2 %br_ln80 = br void %for.first.iter.load-store-loop.
 
 <Node id="82" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
+load-store-loop.i.split:0 %empty_338 = urem i8 %select_ln80, i8 85
 
 ]]></Node>
-<StgValue><ssdm name="empty_342"/></StgValue>
+<StgValue><ssdm name="empty_338"/></StgValue>
 </operation>
 </state>
 
@@ -1381,10 +1381,10 @@ load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
 
 <Node id="82" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
+load-store-loop.i.split:0 %empty_338 = urem i8 %select_ln80, i8 85
 
 ]]></Node>
-<StgValue><ssdm name="empty_342"/></StgValue>
+<StgValue><ssdm name="empty_338"/></StgValue>
 </operation>
 </state>
 
@@ -1399,10 +1399,10 @@ load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
 
 <Node id="82" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
+load-store-loop.i.split:0 %empty_338 = urem i8 %select_ln80, i8 85
 
 ]]></Node>
-<StgValue><ssdm name="empty_342"/></StgValue>
+<StgValue><ssdm name="empty_338"/></StgValue>
 </operation>
 
 <operation id="97" st_id="12" stage="1" lat="1">
@@ -1414,10 +1414,10 @@ load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
 
 <Node id="93" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-load-store-loop.i.split:11 %i2_addr_2_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i64 %i2_addr_2
+load-store-loop.i.split:11 %bundle_2_addr_3_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i64 %bundle_2_addr_3
 
 ]]></Node>
-<StgValue><ssdm name="i2_addr_2_read"/></StgValue>
+<StgValue><ssdm name="bundle_2_addr_3_read"/></StgValue>
 </operation>
 
 <operation id="131" st_id="12" stage="1" lat="1">
@@ -1562,10 +1562,10 @@ for.inc12.i:12 %tmp_58_cast = zext i9 %tmp_s
 
 <Node id="45" bw="10" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-for.inc12.i:13 %empty_346 = sub i10 %tmp_58_cast, i10 %select_ln79_1_cast
+for.inc12.i:13 %empty_342 = sub i10 %tmp_58_cast, i10 %select_ln79_1_cast
 
 ]]></Node>
-<StgValue><ssdm name="empty_346"/></StgValue>
+<StgValue><ssdm name="empty_342"/></StgValue>
 </operation>
 
 <operation id="106" st_id="13" stage="1" lat="1">
@@ -1578,7 +1578,7 @@ for.inc12.i:13 %empty_346 = sub i10 %tmp_58_cast, i10 %select_ln79_1_cast
 
 <Node id="46" bw="11" op_0_bw="10">
 <![CDATA[
-for.inc12.i:14 %sext_ln79_2 = sext i10 %empty_346
+for.inc12.i:14 %sext_ln79_2 = sext i10 %empty_342
 
 ]]></Node>
 <StgValue><ssdm name="sext_ln79_2"/></StgValue>
@@ -1675,10 +1675,10 @@ for.inc12.i:32 %select_ln80_1_cast = zext i2 %select_ln80_1
 
 <Node id="65" bw="11" op_0_bw="11" op_1_bw="11">
 <![CDATA[
-for.inc12.i:33 %empty_347 = add i11 %sext_ln79_2, i11 %select_ln80_1_cast
+for.inc12.i:33 %empty_343 = add i11 %sext_ln79_2, i11 %select_ln80_1_cast
 
 ]]></Node>
-<StgValue><ssdm name="empty_347"/></StgValue>
+<StgValue><ssdm name="empty_343"/></StgValue>
 </operation>
 
 <operation id="113" st_id="13" stage="1" lat="1">
@@ -1691,7 +1691,7 @@ for.inc12.i:33 %empty_347 = add i11 %sext_ln79_2, i11 %select_ln80_1_cast
 
 <Node id="66" bw="14" op_0_bw="11">
 <![CDATA[
-for.inc12.i:34 %p_cast2 = sext i11 %empty_347
+for.inc12.i:34 %p_cast2 = sext i11 %empty_343
 
 ]]></Node>
 <StgValue><ssdm name="p_cast2"/></StgValue>
@@ -1707,10 +1707,10 @@ for.inc12.i:34 %p_cast2 = sext i11 %empty_347
 
 <Node id="67" bw="14" op_0_bw="14" op_1_bw="14">
 <![CDATA[
-for.inc12.i:35 %empty_348 = mul i14 %p_cast2, i14 85
+for.inc12.i:35 %empty_344 = mul i14 %p_cast2, i14 85
 
 ]]></Node>
-<StgValue><ssdm name="empty_348"/></StgValue>
+<StgValue><ssdm name="empty_344"/></StgValue>
 </operation>
 
 <operation id="115" st_id="13" stage="1" lat="1">
@@ -1738,10 +1738,10 @@ for.inc12.i:36 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32
 
 <Node id="82" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
+load-store-loop.i.split:0 %empty_338 = urem i8 %select_ln80, i8 85
 
 ]]></Node>
-<StgValue><ssdm name="empty_342"/></StgValue>
+<StgValue><ssdm name="empty_338"/></StgValue>
 </operation>
 
 <operation id="117" st_id="13" stage="1" lat="1">
@@ -1753,7 +1753,7 @@ load-store-loop.i.split:0 %empty_342 = urem i8 %select_ln80, i8 85
 
 <Node id="83" bw="14" op_0_bw="8">
 <![CDATA[
-load-store-loop.i.split:1 %p_cast4 = zext i8 %empty_342
+load-store-loop.i.split:1 %p_cast4 = zext i8 %empty_338
 
 ]]></Node>
 <StgValue><ssdm name="p_cast4"/></StgValue>
@@ -1768,10 +1768,10 @@ load-store-loop.i.split:1 %p_cast4 = zext i8 %empty_342
 
 <Node id="84" bw="14" op_0_bw="14" op_1_bw="14">
 <![CDATA[
-load-store-loop.i.split:2 %empty_343 = add i14 %empty_348, i14 %p_cast4
+load-store-loop.i.split:2 %empty_339 = add i14 %empty_344, i14 %p_cast4
 
 ]]></Node>
-<StgValue><ssdm name="empty_343"/></StgValue>
+<StgValue><ssdm name="empty_339"/></StgValue>
 </operation>
 
 <operation id="119" st_id="13" stage="1" lat="1">
@@ -1783,7 +1783,7 @@ load-store-loop.i.split:2 %empty_343 = add i14 %empty_348, i14 %p_cast4
 
 <Node id="85" bw="64" op_0_bw="14">
 <![CDATA[
-load-store-loop.i.split:3 %p_cast6 = zext i14 %empty_343
+load-store-loop.i.split:3 %p_cast6 = zext i14 %empty_339
 
 ]]></Node>
 <StgValue><ssdm name="p_cast6"/></StgValue>
@@ -1843,10 +1843,10 @@ load-store-loop.i.split:6 %conv2_float_255_255_float_64_1_1_float_float_255_255_
 
 <Node id="94" bw="32" op_0_bw="32">
 <![CDATA[
-load-store-loop.i.split:12 %empty_344 = bitcast i32 %i2_addr_2_read
+load-store-loop.i.split:12 %empty_340 = bitcast i32 %bundle_2_addr_3_read
 
 ]]></Node>
-<StgValue><ssdm name="empty_344"/></StgValue>
+<StgValue><ssdm name="empty_340"/></StgValue>
 </operation>
 
 <operation id="124" st_id="13" stage="1" lat="1">
@@ -1859,7 +1859,7 @@ load-store-loop.i.split:12 %empty_344 = bitcast i32 %i2_addr_2_read
 
 <Node id="97" bw="0" op_0_bw="32" op_1_bw="14">
 <![CDATA[
-.case.1:0 %store_ln80 = store i32 %empty_344, i14 %conv2_float_255_255_float_64_1_1_float_float_255_255_i_4
+.case.1:0 %store_ln80 = store i32 %empty_340, i14 %conv2_float_255_255_float_64_1_1_float_float_255_255_i_4
 
 ]]></Node>
 <StgValue><ssdm name="store_ln80"/></StgValue>
@@ -1891,7 +1891,7 @@ load-store-loop.i.split:12 %empty_344 = bitcast i32 %i2_addr_2_read
 
 <Node id="100" bw="0" op_0_bw="32" op_1_bw="14">
 <![CDATA[
-.case.0:0 %store_ln80 = store i32 %empty_344, i14 %conv2_float_255_255_float_64_1_1_float_float_255_255_i_3
+.case.0:0 %store_ln80 = store i32 %empty_340, i14 %conv2_float_255_255_float_64_1_1_float_float_255_255_i_3
 
 ]]></Node>
 <StgValue><ssdm name="store_ln80"/></StgValue>
@@ -1924,7 +1924,7 @@ load-store-loop.i.split:12 %empty_344 = bitcast i32 %i2_addr_2_read
 
 <Node id="103" bw="0" op_0_bw="32" op_1_bw="14">
 <![CDATA[
-.case.2:0 %store_ln80 = store i32 %empty_344, i14 %conv2_float_255_255_float_64_1_1_float_float_255_255_i_5
+.case.2:0 %store_ln80 = store i32 %empty_340, i14 %conv2_float_255_255_float_64_1_1_float_float_255_255_i_5
 
 ]]></Node>
 <StgValue><ssdm name="store_ln80"/></StgValue>
@@ -1967,8 +1967,8 @@ load-store-loop.i.split:12 %empty_344 = bitcast i32 %i2_addr_2_read
 
 
 <ports>
-<port id="193" name="i2" dir="0" iftype="4">
-<core>NULL</core><StgValue><ssdm name="i2"/></StgValue>
+<port id="193" name="bundle_2" dir="0" iftype="4">
+<core>NULL</core><StgValue><ssdm name="bundle_2"/></StgValue>
 </port>
 <port id="194" name="input_ftmap" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="input_ftmap"/></StgValue>
@@ -2014,25 +2014,25 @@ load-store-loop.i.split:12 %empty_344 = bitcast i32 %i2_addr_2_read
 </dataflow>
 <dataflow id="213" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="212" toId="23">
 </dataflow>
-<dataflow id="214" from="i2" to="specinterface_ln0" fromId="193" toId="23">
+<dataflow id="214" from="bundle_2" to="specinterface_ln0" fromId="193" toId="23">
 </dataflow>
-<dataflow id="216" from="empty_34" to="specinterface_ln0" fromId="215" toId="23">
+<dataflow id="216" from="empty_6" to="specinterface_ln0" fromId="215" toId="23">
 </dataflow>
 <dataflow id="218" from="StgValue_217" to="specinterface_ln0" fromId="217" toId="23">
 </dataflow>
 <dataflow id="219" from="StgValue_217" to="specinterface_ln0" fromId="217" toId="23">
 </dataflow>
-<dataflow id="221" from="empty_36" to="specinterface_ln0" fromId="220" toId="23">
+<dataflow id="221" from="empty" to="specinterface_ln0" fromId="220" toId="23">
 </dataflow>
 <dataflow id="222" from="StgValue_217" to="specinterface_ln0" fromId="217" toId="23">
 </dataflow>
 <dataflow id="224" from="StgValue_223" to="specinterface_ln0" fromId="223" toId="23">
 </dataflow>
-<dataflow id="226" from="empty_6" to="specinterface_ln0" fromId="225" toId="23">
+<dataflow id="226" from="empty_19" to="specinterface_ln0" fromId="225" toId="23">
 </dataflow>
-<dataflow id="228" from="empty_31" to="specinterface_ln0" fromId="227" toId="23">
+<dataflow id="228" from="empty_28" to="specinterface_ln0" fromId="227" toId="23">
 </dataflow>
-<dataflow id="229" from="empty_36" to="specinterface_ln0" fromId="220" toId="23">
+<dataflow id="229" from="empty" to="specinterface_ln0" fromId="220" toId="23">
 </dataflow>
 <dataflow id="231" from="StgValue_230" to="specinterface_ln0" fromId="230" toId="23">
 </dataflow>
@@ -2042,9 +2042,9 @@ load-store-loop.i.split:12 %empty_344 = bitcast i32 %i2_addr_2_read
 </dataflow>
 <dataflow id="235" from="StgValue_233" to="specinterface_ln0" fromId="233" toId="23">
 </dataflow>
-<dataflow id="236" from="empty_36" to="specinterface_ln0" fromId="220" toId="23">
+<dataflow id="236" from="empty" to="specinterface_ln0" fromId="220" toId="23">
 </dataflow>
-<dataflow id="237" from="empty_36" to="specinterface_ln0" fromId="220" toId="23">
+<dataflow id="237" from="empty" to="specinterface_ln0" fromId="220" toId="23">
 </dataflow>
 <dataflow id="239" from="StgValue_238" to="specinterface_ln0" fromId="238" toId="23">
 </dataflow>
@@ -2217,9 +2217,9 @@ load-store-loop.i.split:12 %empty_344 = bitcast i32 %i2_addr_2_read
 </dataflow>
 <dataflow id="333" from="or_ln80_2" to="br_ln80" fromId="58" toId="60">
 </dataflow>
-<dataflow id="334" from="select_ln80" to="empty_342" fromId="55" toId="62">
+<dataflow id="334" from="select_ln80" to="empty_338" fromId="55" toId="62">
 </dataflow>
-<dataflow id="336" from="StgValue_335" to="empty_342" fromId="335" toId="62">
+<dataflow id="336" from="StgValue_335" to="empty_338" fromId="335" toId="62">
 </dataflow>
 <dataflow id="337" from="select_ln80" to="select_ln80_cast" fromId="55" toId="63">
 </dataflow>
@@ -2273,105 +2273,105 @@ load-store-loop.i.split:12 %empty_344 = bitcast i32 %i2_addr_2_read
 </dataflow>
 <dataflow id="368" from="sext_ln80_mid2_v" to="sext_ln79_1" fromId="49" toId="75">
 </dataflow>
-<dataflow id="369" from="i2" to="i2_addr" fromId="193" toId="76">
+<dataflow id="369" from="bundle_2" to="bundle_2_addr" fromId="193" toId="76">
 </dataflow>
-<dataflow id="370" from="sext_ln79_1" to="i2_addr" fromId="75" toId="76">
+<dataflow id="370" from="sext_ln79_1" to="bundle_2_addr" fromId="75" toId="76">
 </dataflow>
-<dataflow id="372" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_345" fromId="371" toId="77">
+<dataflow id="372" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_341" fromId="371" toId="77">
 </dataflow>
-<dataflow id="373" from="i2_addr" to="empty_345" fromId="76" toId="77">
+<dataflow id="373" from="bundle_2_addr" to="empty_341" fromId="76" toId="77">
 </dataflow>
-<dataflow id="375" from="StgValue_374" to="empty_345" fromId="374" toId="77">
+<dataflow id="375" from="StgValue_374" to="empty_341" fromId="374" toId="77">
 </dataflow>
-<dataflow id="376" from="select_ln80" to="empty_342" fromId="55" toId="78">
+<dataflow id="376" from="select_ln80" to="empty_338" fromId="55" toId="78">
 </dataflow>
-<dataflow id="377" from="StgValue_335" to="empty_342" fromId="335" toId="78">
+<dataflow id="377" from="StgValue_335" to="empty_338" fromId="335" toId="78">
 </dataflow>
-<dataflow id="378" from="i2" to="i2_addr_2" fromId="193" toId="79">
+<dataflow id="378" from="bundle_2" to="bundle_2_addr_3" fromId="193" toId="79">
 </dataflow>
-<dataflow id="379" from="sext_ln79_1" to="i2_addr_2" fromId="75" toId="79">
+<dataflow id="379" from="sext_ln79_1" to="bundle_2_addr_3" fromId="75" toId="79">
 </dataflow>
-<dataflow id="380" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_345" fromId="371" toId="80">
+<dataflow id="380" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_341" fromId="371" toId="80">
 </dataflow>
-<dataflow id="381" from="i2_addr" to="empty_345" fromId="76" toId="80">
+<dataflow id="381" from="bundle_2_addr" to="empty_341" fromId="76" toId="80">
 </dataflow>
-<dataflow id="382" from="StgValue_374" to="empty_345" fromId="374" toId="80">
+<dataflow id="382" from="StgValue_374" to="empty_341" fromId="374" toId="80">
 </dataflow>
-<dataflow id="383" from="select_ln80" to="empty_342" fromId="55" toId="81">
+<dataflow id="383" from="select_ln80" to="empty_338" fromId="55" toId="81">
 </dataflow>
-<dataflow id="384" from="StgValue_335" to="empty_342" fromId="335" toId="81">
+<dataflow id="384" from="StgValue_335" to="empty_338" fromId="335" toId="81">
 </dataflow>
-<dataflow id="385" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_345" fromId="371" toId="82">
+<dataflow id="385" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_341" fromId="371" toId="82">
 </dataflow>
-<dataflow id="386" from="i2_addr" to="empty_345" fromId="76" toId="82">
+<dataflow id="386" from="bundle_2_addr" to="empty_341" fromId="76" toId="82">
 </dataflow>
-<dataflow id="387" from="StgValue_374" to="empty_345" fromId="374" toId="82">
+<dataflow id="387" from="StgValue_374" to="empty_341" fromId="374" toId="82">
 </dataflow>
-<dataflow id="388" from="select_ln80" to="empty_342" fromId="55" toId="83">
+<dataflow id="388" from="select_ln80" to="empty_338" fromId="55" toId="83">
 </dataflow>
-<dataflow id="389" from="StgValue_335" to="empty_342" fromId="335" toId="83">
+<dataflow id="389" from="StgValue_335" to="empty_338" fromId="335" toId="83">
 </dataflow>
-<dataflow id="390" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_345" fromId="371" toId="84">
+<dataflow id="390" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_341" fromId="371" toId="84">
 </dataflow>
-<dataflow id="391" from="i2_addr" to="empty_345" fromId="76" toId="84">
+<dataflow id="391" from="bundle_2_addr" to="empty_341" fromId="76" toId="84">
 </dataflow>
-<dataflow id="392" from="StgValue_374" to="empty_345" fromId="374" toId="84">
+<dataflow id="392" from="StgValue_374" to="empty_341" fromId="374" toId="84">
 </dataflow>
-<dataflow id="393" from="select_ln80" to="empty_342" fromId="55" toId="85">
+<dataflow id="393" from="select_ln80" to="empty_338" fromId="55" toId="85">
 </dataflow>
-<dataflow id="394" from="StgValue_335" to="empty_342" fromId="335" toId="85">
+<dataflow id="394" from="StgValue_335" to="empty_338" fromId="335" toId="85">
 </dataflow>
-<dataflow id="395" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_345" fromId="371" toId="86">
+<dataflow id="395" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_341" fromId="371" toId="86">
 </dataflow>
-<dataflow id="396" from="i2_addr" to="empty_345" fromId="76" toId="86">
+<dataflow id="396" from="bundle_2_addr" to="empty_341" fromId="76" toId="86">
 </dataflow>
-<dataflow id="397" from="StgValue_374" to="empty_345" fromId="374" toId="86">
+<dataflow id="397" from="StgValue_374" to="empty_341" fromId="374" toId="86">
 </dataflow>
-<dataflow id="398" from="select_ln80" to="empty_342" fromId="55" toId="87">
+<dataflow id="398" from="select_ln80" to="empty_338" fromId="55" toId="87">
 </dataflow>
-<dataflow id="399" from="StgValue_335" to="empty_342" fromId="335" toId="87">
+<dataflow id="399" from="StgValue_335" to="empty_338" fromId="335" toId="87">
 </dataflow>
-<dataflow id="400" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_345" fromId="371" toId="88">
+<dataflow id="400" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_341" fromId="371" toId="88">
 </dataflow>
-<dataflow id="401" from="i2_addr" to="empty_345" fromId="76" toId="88">
+<dataflow id="401" from="bundle_2_addr" to="empty_341" fromId="76" toId="88">
 </dataflow>
-<dataflow id="402" from="StgValue_374" to="empty_345" fromId="374" toId="88">
+<dataflow id="402" from="StgValue_374" to="empty_341" fromId="374" toId="88">
 </dataflow>
-<dataflow id="403" from="select_ln80" to="empty_342" fromId="55" toId="89">
+<dataflow id="403" from="select_ln80" to="empty_338" fromId="55" toId="89">
 </dataflow>
-<dataflow id="404" from="StgValue_335" to="empty_342" fromId="335" toId="89">
+<dataflow id="404" from="StgValue_335" to="empty_338" fromId="335" toId="89">
 </dataflow>
-<dataflow id="405" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_345" fromId="371" toId="90">
+<dataflow id="405" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_341" fromId="371" toId="90">
 </dataflow>
-<dataflow id="406" from="i2_addr" to="empty_345" fromId="76" toId="90">
+<dataflow id="406" from="bundle_2_addr" to="empty_341" fromId="76" toId="90">
 </dataflow>
-<dataflow id="407" from="StgValue_374" to="empty_345" fromId="374" toId="90">
+<dataflow id="407" from="StgValue_374" to="empty_341" fromId="374" toId="90">
 </dataflow>
-<dataflow id="408" from="select_ln80" to="empty_342" fromId="55" toId="91">
+<dataflow id="408" from="select_ln80" to="empty_338" fromId="55" toId="91">
 </dataflow>
-<dataflow id="409" from="StgValue_335" to="empty_342" fromId="335" toId="91">
+<dataflow id="409" from="StgValue_335" to="empty_338" fromId="335" toId="91">
 </dataflow>
-<dataflow id="410" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_345" fromId="371" toId="92">
+<dataflow id="410" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_341" fromId="371" toId="92">
 </dataflow>
-<dataflow id="411" from="i2_addr" to="empty_345" fromId="76" toId="92">
+<dataflow id="411" from="bundle_2_addr" to="empty_341" fromId="76" toId="92">
 </dataflow>
-<dataflow id="412" from="StgValue_374" to="empty_345" fromId="374" toId="92">
+<dataflow id="412" from="StgValue_374" to="empty_341" fromId="374" toId="92">
 </dataflow>
-<dataflow id="413" from="select_ln80" to="empty_342" fromId="55" toId="94">
+<dataflow id="413" from="select_ln80" to="empty_338" fromId="55" toId="94">
 </dataflow>
-<dataflow id="414" from="StgValue_335" to="empty_342" fromId="335" toId="94">
+<dataflow id="414" from="StgValue_335" to="empty_338" fromId="335" toId="94">
 </dataflow>
-<dataflow id="415" from="select_ln80" to="empty_342" fromId="55" toId="95">
+<dataflow id="415" from="select_ln80" to="empty_338" fromId="55" toId="95">
 </dataflow>
-<dataflow id="416" from="StgValue_335" to="empty_342" fromId="335" toId="95">
+<dataflow id="416" from="StgValue_335" to="empty_338" fromId="335" toId="95">
 </dataflow>
-<dataflow id="417" from="select_ln80" to="empty_342" fromId="55" toId="96">
+<dataflow id="417" from="select_ln80" to="empty_338" fromId="55" toId="96">
 </dataflow>
-<dataflow id="418" from="StgValue_335" to="empty_342" fromId="335" toId="96">
+<dataflow id="418" from="StgValue_335" to="empty_338" fromId="335" toId="96">
 </dataflow>
-<dataflow id="420" from="_ssdm_op_Read.m_axi.p1i32" to="i2_addr_2_read" fromId="419" toId="97">
+<dataflow id="420" from="_ssdm_op_Read.m_axi.p1i32" to="bundle_2_addr_3_read" fromId="419" toId="97">
 </dataflow>
-<dataflow id="421" from="i2_addr_2" to="i2_addr_2_read" fromId="79" toId="97">
+<dataflow id="421" from="bundle_2_addr_3" to="bundle_2_addr_3_read" fromId="79" toId="97">
 </dataflow>
 <dataflow id="422" from="bh" to="bh_load" fromId="16" toId="98">
 </dataflow>
@@ -2403,11 +2403,11 @@ load-store-loop.i.split:12 %empty_344 = bitcast i32 %i2_addr_2_read
 </dataflow>
 <dataflow id="441" from="tmp_s" to="tmp_58_cast" fromId="103" toId="104">
 </dataflow>
-<dataflow id="442" from="tmp_58_cast" to="empty_346" fromId="104" toId="105">
+<dataflow id="442" from="tmp_58_cast" to="empty_342" fromId="104" toId="105">
 </dataflow>
-<dataflow id="443" from="select_ln79_1_cast" to="empty_346" fromId="102" toId="105">
+<dataflow id="443" from="select_ln79_1_cast" to="empty_342" fromId="102" toId="105">
 </dataflow>
-<dataflow id="444" from="empty_346" to="sext_ln79_2" fromId="105" toId="106">
+<dataflow id="444" from="empty_342" to="sext_ln79_2" fromId="105" toId="106">
 </dataflow>
 <dataflow id="445" from="_ssdm_op_SpecPipeline" to="specpipeline_ln0" fromId="268" toId="107">
 </dataflow>
@@ -2437,15 +2437,15 @@ load-store-loop.i.split:12 %empty_344 = bitcast i32 %i2_addr_2_read
 </dataflow>
 <dataflow id="459" from="select_ln80_1" to="select_ln80_1_cast" fromId="110" toId="111">
 </dataflow>
-<dataflow id="460" from="sext_ln79_2" to="empty_347" fromId="106" toId="112">
+<dataflow id="460" from="sext_ln79_2" to="empty_343" fromId="106" toId="112">
 </dataflow>
-<dataflow id="461" from="select_ln80_1_cast" to="empty_347" fromId="111" toId="112">
+<dataflow id="461" from="select_ln80_1_cast" to="empty_343" fromId="111" toId="112">
 </dataflow>
-<dataflow id="462" from="empty_347" to="p_cast2" fromId="112" toId="113">
+<dataflow id="462" from="empty_343" to="p_cast2" fromId="112" toId="113">
 </dataflow>
-<dataflow id="463" from="p_cast2" to="empty_348" fromId="113" toId="114">
+<dataflow id="463" from="p_cast2" to="empty_344" fromId="113" toId="114">
 </dataflow>
-<dataflow id="465" from="StgValue_464" to="empty_348" fromId="464" toId="114">
+<dataflow id="465" from="StgValue_464" to="empty_344" fromId="464" toId="114">
 </dataflow>
 <dataflow id="466" from="_ssdm_op_SpecPipeline" to="specpipeline_ln0" fromId="268" toId="115">
 </dataflow>
@@ -2459,17 +2459,17 @@ load-store-loop.i.split:12 %empty_344 = bitcast i32 %i2_addr_2_read
 </dataflow>
 <dataflow id="471" from="p_str" to="specpipeline_ln0" fromId="274" toId="115">
 </dataflow>
-<dataflow id="472" from="select_ln80" to="empty_342" fromId="55" toId="116">
+<dataflow id="472" from="select_ln80" to="empty_338" fromId="55" toId="116">
 </dataflow>
-<dataflow id="473" from="StgValue_335" to="empty_342" fromId="335" toId="116">
+<dataflow id="473" from="StgValue_335" to="empty_338" fromId="335" toId="116">
 </dataflow>
-<dataflow id="474" from="empty_342" to="p_cast4" fromId="116" toId="117">
+<dataflow id="474" from="empty_338" to="p_cast4" fromId="116" toId="117">
 </dataflow>
-<dataflow id="475" from="empty_348" to="empty_343" fromId="114" toId="118">
+<dataflow id="475" from="empty_344" to="empty_339" fromId="114" toId="118">
 </dataflow>
-<dataflow id="476" from="p_cast4" to="empty_343" fromId="117" toId="118">
+<dataflow id="476" from="p_cast4" to="empty_339" fromId="117" toId="118">
 </dataflow>
-<dataflow id="477" from="empty_343" to="p_cast6" fromId="118" toId="119">
+<dataflow id="477" from="empty_339" to="p_cast6" fromId="118" toId="119">
 </dataflow>
 <dataflow id="478" from="conv2_float_255_255_float_64_1_1_float_float_255_255_i_2" to="conv2_float_255_255_float_64_1_1_float_float_255_255_i_3" fromId="196" toId="120">
 </dataflow>
@@ -2489,17 +2489,17 @@ load-store-loop.i.split:12 %empty_344 = bitcast i32 %i2_addr_2_read
 </dataflow>
 <dataflow id="487" from="p_cast6" to="conv2_float_255_255_float_64_1_1_float_float_255_255_i_5" fromId="119" toId="122">
 </dataflow>
-<dataflow id="488" from="i2_addr_2_read" to="empty_344" fromId="97" toId="123">
+<dataflow id="488" from="bundle_2_addr_3_read" to="empty_340" fromId="97" toId="123">
 </dataflow>
-<dataflow id="489" from="empty_344" to="store_ln80" fromId="123" toId="124">
+<dataflow id="489" from="empty_340" to="store_ln80" fromId="123" toId="124">
 </dataflow>
 <dataflow id="490" from="conv2_float_255_255_float_64_1_1_float_float_255_255_i_4" to="store_ln80" fromId="121" toId="124">
 </dataflow>
-<dataflow id="491" from="empty_344" to="store_ln80" fromId="123" toId="126">
+<dataflow id="491" from="empty_340" to="store_ln80" fromId="123" toId="126">
 </dataflow>
 <dataflow id="492" from="conv2_float_255_255_float_64_1_1_float_float_255_255_i_3" to="store_ln80" fromId="120" toId="126">
 </dataflow>
-<dataflow id="493" from="empty_344" to="store_ln80" fromId="123" toId="128">
+<dataflow id="493" from="empty_340" to="store_ln80" fromId="123" toId="128">
 </dataflow>
 <dataflow id="494" from="conv2_float_255_255_float_64_1_1_float_float_255_255_i_5" to="store_ln80" fromId="122" toId="128">
 </dataflow>

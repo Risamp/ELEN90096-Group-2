@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3_Pipeline_WEIGHTI_WEIGHTK_L'" level="0">
-<item name = "Date">Sun Nov  5 11:02:57 2023
+<item name = "Date">Mon Nov  6 16:29:14 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -109,7 +109,7 @@
 <column name="indvar_flatten_fu_128">9, 2, 6, 12</column>
 <column name="k_fu_124">9, 2, 3, 6</column>
 <column name="loop_index_i_fu_120">9, 2, 3, 6</column>
-<column name="w3_blk_n_R">9, 2, 1, 2</column>
+<column name="weights_blk_n_R">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -128,7 +128,7 @@
 <column name="loop_index_i_fu_120">3, 0, 3, 0</column>
 <column name="select_ln118_1_reg_766">3, 0, 3, 0</column>
 <column name="select_ln118_reg_762">3, 0, 3, 0</column>
-<column name="w3_addr_read_reg_770">32, 0, 32, 0</column>
+<column name="weights_addr_read_reg_770">32, 0, 32, 0</column>
 </table>
 </item>
 </section>
@@ -144,52 +144,52 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, conv3_Pipeline_WEIGHTI_WEIGHTK_L, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv3_Pipeline_WEIGHTI_WEIGHTK_L, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv3_Pipeline_WEIGHTI_WEIGHTK_L, return value</column>
-<column name="m_axi_w3_AWVALID">out, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_AWREADY">in, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_AWADDR">out, 64, m_axi, w3, pointer</column>
-<column name="m_axi_w3_AWID">out, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_AWLEN">out, 32, m_axi, w3, pointer</column>
-<column name="m_axi_w3_AWSIZE">out, 3, m_axi, w3, pointer</column>
-<column name="m_axi_w3_AWBURST">out, 2, m_axi, w3, pointer</column>
-<column name="m_axi_w3_AWLOCK">out, 2, m_axi, w3, pointer</column>
-<column name="m_axi_w3_AWCACHE">out, 4, m_axi, w3, pointer</column>
-<column name="m_axi_w3_AWPROT">out, 3, m_axi, w3, pointer</column>
-<column name="m_axi_w3_AWQOS">out, 4, m_axi, w3, pointer</column>
-<column name="m_axi_w3_AWREGION">out, 4, m_axi, w3, pointer</column>
-<column name="m_axi_w3_AWUSER">out, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_WVALID">out, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_WREADY">in, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_WDATA">out, 32, m_axi, w3, pointer</column>
-<column name="m_axi_w3_WSTRB">out, 4, m_axi, w3, pointer</column>
-<column name="m_axi_w3_WLAST">out, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_WID">out, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_WUSER">out, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_ARVALID">out, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_ARREADY">in, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_ARADDR">out, 64, m_axi, w3, pointer</column>
-<column name="m_axi_w3_ARID">out, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_ARLEN">out, 32, m_axi, w3, pointer</column>
-<column name="m_axi_w3_ARSIZE">out, 3, m_axi, w3, pointer</column>
-<column name="m_axi_w3_ARBURST">out, 2, m_axi, w3, pointer</column>
-<column name="m_axi_w3_ARLOCK">out, 2, m_axi, w3, pointer</column>
-<column name="m_axi_w3_ARCACHE">out, 4, m_axi, w3, pointer</column>
-<column name="m_axi_w3_ARPROT">out, 3, m_axi, w3, pointer</column>
-<column name="m_axi_w3_ARQOS">out, 4, m_axi, w3, pointer</column>
-<column name="m_axi_w3_ARREGION">out, 4, m_axi, w3, pointer</column>
-<column name="m_axi_w3_ARUSER">out, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_RVALID">in, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_RREADY">out, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_RDATA">in, 32, m_axi, w3, pointer</column>
-<column name="m_axi_w3_RLAST">in, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_RID">in, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_RFIFONUM">in, 13, m_axi, w3, pointer</column>
-<column name="m_axi_w3_RUSER">in, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_RRESP">in, 2, m_axi, w3, pointer</column>
-<column name="m_axi_w3_BVALID">in, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_BREADY">out, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_BRESP">in, 2, m_axi, w3, pointer</column>
-<column name="m_axi_w3_BID">in, 1, m_axi, w3, pointer</column>
-<column name="m_axi_w3_BUSER">in, 1, m_axi, w3, pointer</column>
+<column name="m_axi_weights_AWVALID">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWREADY">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWADDR">out, 64, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWID">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWLEN">out, 32, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWSIZE">out, 3, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWBURST">out, 2, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWLOCK">out, 2, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWCACHE">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWPROT">out, 3, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWQOS">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWREGION">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWUSER">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WVALID">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WREADY">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WDATA">out, 32, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WSTRB">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WLAST">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WID">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WUSER">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARVALID">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARREADY">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARADDR">out, 64, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARID">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARLEN">out, 32, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARSIZE">out, 3, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARBURST">out, 2, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARLOCK">out, 2, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARCACHE">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARPROT">out, 3, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARQOS">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARREGION">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARUSER">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RVALID">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RREADY">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RDATA">in, 32, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RLAST">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RID">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RFIFONUM">in, 13, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RUSER">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RRESP">in, 2, m_axi, weights, pointer</column>
+<column name="m_axi_weights_BVALID">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_BREADY">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_BRESP">in, 2, m_axi, weights, pointer</column>
+<column name="m_axi_weights_BID">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_BUSER">in, 1, m_axi, weights, pointer</column>
 <column name="sext_ln117">in, 62, ap_none, sext_ln117, scalar</column>
 <column name="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_address0">out, 5, ap_memory, p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0, array</column>
 <column name="p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_ce0">out, 1, ap_memory, p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0, array</column>

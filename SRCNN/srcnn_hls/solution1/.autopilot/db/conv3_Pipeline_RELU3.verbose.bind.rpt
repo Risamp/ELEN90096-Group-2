@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_RELU3'
 ================================================================
-* Date:           Sun Nov  5 11:02:22 2023
+* Date:           Mon Nov  6 16:28:27 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -129,9 +129,9 @@ ST_7 : [1/1] (0.52ns)   --->   Input mux for Operation 31 '%tmp_1 = fcmp_olt  i3
 ST_7 : Operation 31 [2/2] (2.25ns)   --->   "%tmp_1 = fcmp_olt  i32 %add15_1_i, i32 0" [src/conv3.cpp:142->src/conv3.cpp:63]   --->   Operation 31 'fcmp' 'tmp_1' <Predicate = true> <Delay = 2.25> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
 
 State 8 <SV = 7> <Delay = 4.46>
-ST_8 : Operation 32 [1/1] (0.00ns)   --->   "%specpipeline_ln138 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_36" [src/conv3.cpp:138->src/conv3.cpp:63]   --->   Operation 32 'specpipeline' 'specpipeline_ln138' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 32 [1/1] (0.00ns)   --->   "%specpipeline_ln138 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty" [src/conv3.cpp:138->src/conv3.cpp:63]   --->   Operation 32 'specpipeline' 'specpipeline_ln138' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 33 [1/1] (0.00ns)   --->   "%speclooptripcount_ln137 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv3.cpp:137->src/conv3.cpp:63]   --->   Operation 33 'speclooptripcount' 'speclooptripcount_ln137' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 34 [1/1] (0.00ns)   --->   "%specloopname_ln137 = specloopname void @_ssdm_op_SpecLoopName, void @empty_22" [src/conv3.cpp:137->src/conv3.cpp:63]   --->   Operation 34 'specloopname' 'specloopname_ln137' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 34 [1/1] (0.00ns)   --->   "%specloopname_ln137 = specloopname void @_ssdm_op_SpecLoopName, void @empty_29" [src/conv3.cpp:137->src/conv3.cpp:63]   --->   Operation 34 'specloopname' 'specloopname_ln137' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 35 [1/1] (0.00ns)   --->   "%bitcast_ln142 = bitcast i32 %add15_1_i" [src/conv3.cpp:142->src/conv3.cpp:63]   --->   Operation 35 'bitcast' 'bitcast_ln142' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_s = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln142, i32 23, i32 30" [src/conv3.cpp:142->src/conv3.cpp:63]   --->   Operation 36 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 37 [1/1] (0.00ns)   --->   "%trunc_ln142 = trunc i32 %bitcast_ln142" [src/conv3.cpp:142->src/conv3.cpp:63]   --->   Operation 37 'trunc' 'trunc_ln142' <Predicate = true> <Delay = 0.00>
@@ -333,7 +333,7 @@ ret_ln0                   (ret              ) [ 000000000]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_36"/></StgValue>
+<StgValue><ssdm name="empty"/></StgValue>
 </bind>
 </comp>
 
@@ -369,7 +369,7 @@ ret_ln0                   (ret              ) [ 000000000]
 <pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_22"/></StgValue>
+<StgValue><ssdm name="empty_29"/></StgValue>
 </bind>
 </comp>
 

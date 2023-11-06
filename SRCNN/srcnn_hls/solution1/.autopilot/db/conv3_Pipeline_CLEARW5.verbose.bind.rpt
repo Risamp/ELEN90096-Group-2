@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_CLEARW5'
 ================================================================
-* Date:           Sun Nov  5 11:02:23 2023
+* Date:           Mon Nov  6 16:28:28 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -97,7 +97,7 @@ ST_1 : Operation 13 [1/1] (0.78ns)   --->   "%add_ln74 = add i10 %zext_ln74, i10
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln74_1 = zext i10 %add_ln74" [src/conv3.cpp:74->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 14 'zext' 'zext_ln74_1' <Predicate = (!icmp_ln72)> <Delay = 0.00>
 ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%output_fm_buffer_0_addr = getelementptr i32 %output_fm_buffer_0, i64 0, i64 %zext_ln74_1" [src/conv3.cpp:74->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 15 'getelementptr' 'output_fm_buffer_0_addr' <Predicate = (!icmp_ln72)> <Delay = 0.00>
 ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%speclooptripcount_ln72 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 16 'speclooptripcount' 'speclooptripcount_ln72' <Predicate = (!icmp_ln72)> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specloopname_ln72 = specloopname void @_ssdm_op_SpecLoopName, void @empty_32" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 17 'specloopname' 'specloopname_ln72' <Predicate = (!icmp_ln72)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specloopname_ln72 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 17 'specloopname' 'specloopname_ln72' <Predicate = (!icmp_ln72)> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (1.23ns)   --->   "%store_ln74 = store i32 0, i10 %output_fm_buffer_0_addr" [src/conv3.cpp:74->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 18 'store' 'store_ln74' <Predicate = (!icmp_ln72)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 765> <RAM>
 ST_1 : Operation 19 [1/1] (0.42ns)   --->   "%store_ln72 = store i8 %add_ln72, i8 %w" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 19 'store' 'store_ln72' <Predicate = (!icmp_ln72)> <Delay = 0.42>
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln72 = br void %for.inc.2.i.i" [src/conv3.cpp:72->src/conv3.cpp:150->src/conv3.cpp:63]   --->   Operation 20 'br' 'br_ln72' <Predicate = (!icmp_ln72)> <Delay = 0.00>
@@ -277,7 +277,7 @@ ret_ln0                 (ret              ) [ 00]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_32"/></StgValue>
+<StgValue><ssdm name="empty_4"/></StgValue>
 </bind>
 </comp>
 

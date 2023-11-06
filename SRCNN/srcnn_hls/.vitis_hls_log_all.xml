@@ -9,24 +9,21 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="srcnn_hls" solutionName="solution1" date="2023-11-05T11:03:03.222+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_509_p_opcode' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-05T11:03:01.855+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_505_p_opcode' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-05T11:03:01.812+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_501_p_opcode' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-05T11:03:01.796+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_497_p_opcode' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-05T11:03:01.780+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_BREADY' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-05T11:03:00.425+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWUSER' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-05T11:03:00.399+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWREGION' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-05T11:03:00.372+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWQOS' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-05T11:03:00.345+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWPROT' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-05T11:03:00.326+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWCACHE' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-05T11:03:00.293+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWLOCK' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-05T11:03:00.267+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_o_AWBURST' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-05T11:03:00.249+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="srcnn_hls" solutionName="solution1" date="2023-11-06T16:29:23.728+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_493_p_opcode' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-06T16:29:21.720+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_489_p_opcode' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-06T16:29:21.674+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_485_p_opcode' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-06T16:29:21.650+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3/grp_fu_481_p_opcode' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-06T16:29:21.624+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_bundle_2_BREADY' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-06T16:29:19.884+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_bundle_2_AWUSER' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-06T16:29:19.854+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_bundle_2_AWREGION' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-06T16:29:19.831+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_bundle_2_AWQOS' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-06T16:29:19.804+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv3_Pipeline_6/m_axi_bundle_2_AWPROT' to 0." projectName="srcnn_hls" solutionName="solution1" date="2023-11-06T16:29:19.782+1100" type="Warning"/>
       </synLog>
       <packageLog>
-        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'srcnn_fmul_32ns_32ns_32_3_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="srcnn_hls" solutionName="solution1" date="2023-11-05T11:14:44.088+1100" type="Warning"/>
-        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'srcnn_fcmp_32ns_32ns_1_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="srcnn_hls" solutionName="solution1" date="2023-11-05T11:14:42.092+1100" type="Warning"/>
-        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'srcnn_fadd_32ns_32ns_32_4_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="srcnn_hls" solutionName="solution1" date="2023-11-05T11:14:42.084+1100" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'srcnn_fmul_32ns_32ns_32_3_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="srcnn_hls" solutionName="solution1" date="2023-11-06T16:30:51.174+1100" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'srcnn_fcmp_32ns_32ns_1_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="srcnn_hls" solutionName="solution1" date="2023-11-06T16:30:51.168+1100" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'srcnn_fadd_32ns_32ns_32_4_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;&#xD;&#xA;create_ip: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 505.363 ; gain = 73.203&#xD;" projectName="srcnn_hls" solutionName="solution1" date="2023-11-06T16:30:49.167+1100" type="Warning"/>
       </packageLog>
     </logs>
   </warningLogs>

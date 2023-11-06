@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_BW7'
 ================================================================
-* Date:           Sun Nov  5 11:01:44 2023
+* Date:           Mon Nov  6 16:27:36 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -103,7 +103,7 @@ ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln65 = br i1 %icmp_ln65_1, void
 ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%phi_urem531_load_1 = load i8 %phi_urem531" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 17 'load' 'phi_urem531_load_1' <Predicate = (!icmp_ln65_1)> <Delay = 0.00>
 ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%phi_mul529_load = load i17 %phi_mul529" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 18 'load' 'phi_mul529_load' <Predicate = (!icmp_ln65_1)> <Delay = 0.00>
 ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%speclooptripcount_ln65 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 19 'speclooptripcount' 'speclooptripcount_ln65' <Predicate = (!icmp_ln65_1)> <Delay = 0.00>
-ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%specloopname_ln65 = specloopname void @_ssdm_op_SpecLoopName, void @empty_21" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 20 'specloopname' 'specloopname_ln65' <Predicate = (!icmp_ln65_1)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%specloopname_ln65 = specloopname void @_ssdm_op_SpecLoopName, void @empty_1" [src/conv2.cpp:65->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 20 'specloopname' 'specloopname_ln65' <Predicate = (!icmp_ln65_1)> <Delay = 0.00>
 ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%zext_ln67 = zext i8 %phi_urem531_load_1" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 21 'zext' 'zext_ln67' <Predicate = (!icmp_ln65_1)> <Delay = 0.00>
 ST_2 : Operation 22 [1/1] (0.78ns)   --->   "%add_ln67_1 = add i10 %add_ln67_read, i10 %zext_ln67" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 22 'add' 'add_ln67_1' <Predicate = (!icmp_ln65_1)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln67_2 = zext i10 %add_ln67_1" [src/conv2.cpp:67->src/conv2.cpp:125->src/conv2.cpp:55]   --->   Operation 23 'zext' 'zext_ln67_2' <Predicate = (!icmp_ln65_1)> <Delay = 0.00>
@@ -358,7 +358,7 @@ ret_ln0                                                   (ret              ) [ 
 <pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_21"/></StgValue>
+<StgValue><ssdm name="empty_1"/></StgValue>
 </bind>
 </comp>
 

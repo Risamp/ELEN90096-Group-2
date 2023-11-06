@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'export_output_buffer_c1_Pipeline_RELU1'
 ================================================================
-* Date:           Sun Nov  5 11:00:34 2023
+* Date:           Mon Nov  6 16:26:07 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -128,9 +128,9 @@ State 5 <SV = 4> <Delay = 6.43>
 ST_5 : Operation 36 [2/4] (6.43ns)   --->   "%add15_1 = fadd i32 %tmp_2, i32 %tmp" [src/conv1.cpp:140]   --->   Operation 36 'fadd' 'add15_1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 6 <SV = 5> <Delay = 6.43>
-ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%specpipeline_ln138 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_36" [src/conv1.cpp:138]   --->   Operation 37 'specpipeline' 'specpipeline_ln138' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%specpipeline_ln138 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty" [src/conv1.cpp:138]   --->   Operation 37 'specpipeline' 'specpipeline_ln138' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%speclooptripcount_ln137 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv1.cpp:137]   --->   Operation 38 'speclooptripcount' 'speclooptripcount_ln137' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%specloopname_ln137 = specloopname void @_ssdm_op_SpecLoopName, void @empty_22" [src/conv1.cpp:137]   --->   Operation 39 'specloopname' 'specloopname_ln137' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%specloopname_ln137 = specloopname void @_ssdm_op_SpecLoopName, void @empty_29" [src/conv1.cpp:137]   --->   Operation 39 'specloopname' 'specloopname_ln137' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 40 [1/4] (6.43ns)   --->   "%add15_1 = fadd i32 %tmp_2, i32 %tmp" [src/conv1.cpp:140]   --->   Operation 40 'fadd' 'add15_1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 ST_6 : Operation 61 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 61 'ret' 'ret_ln0' <Predicate = (icmp_ln137)> <Delay = 0.00>
 
@@ -400,7 +400,7 @@ ret_ln0                                                  (ret              ) [ 0
 <pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_36"/></StgValue>
+<StgValue><ssdm name="empty"/></StgValue>
 </bind>
 </comp>
 
@@ -436,7 +436,7 @@ ret_ln0                                                  (ret              ) [ 0
 <pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_22"/></StgValue>
+<StgValue><ssdm name="empty_29"/></StgValue>
 </bind>
 </comp>
 

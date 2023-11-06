@@ -284,10 +284,10 @@ entry:2 %out_read = read i6 @_ssdm_op_Read.ap_auto.i6, i6 %out_r
 
 <Node id="12" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-entry:3 %biases_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %biases
+entry:3 %biases1_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %biases1
 
 ]]></Node>
-<StgValue><ssdm name="biases_read"/></StgValue>
+<StgValue><ssdm name="biases1_read"/></StgValue>
 </operation>
 
 <operation id="37" st_id="1" stage="1" lat="1">
@@ -329,7 +329,7 @@ entry:10 %zext_ln133_2 = zext i8 %shl_ln
 
 <Node id="20" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-entry:11 %add_ln133 = add i64 %zext_ln133_2, i64 %biases_read
+entry:11 %add_ln133 = add i64 %zext_ln133_2, i64 %biases1_read
 
 ]]></Node>
 <StgValue><ssdm name="add_ln133"/></StgValue>
@@ -374,10 +374,10 @@ entry:13 %sext_ln133 = sext i62 %trunc_ln
 
 <Node id="23" bw="32" op_0_bw="32" op_1_bw="64">
 <![CDATA[
-entry:14 %gmem_addr = getelementptr i32 %gmem, i64 %sext_ln133
+entry:14 %biases_addr = getelementptr i32 %biases, i64 %sext_ln133
 
 ]]></Node>
-<StgValue><ssdm name="gmem_addr"/></StgValue>
+<StgValue><ssdm name="biases_addr"/></StgValue>
 </operation>
 
 <operation id="43" st_id="1" stage="1" lat="1">
@@ -407,7 +407,7 @@ entry:18 %store_ln133 = store i4 0, i4 %bout
 
 <Node id="24" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 8
+entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %biases_addr, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -425,7 +425,7 @@ entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 
 
 <Node id="24" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 8
+entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %biases_addr, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -443,7 +443,7 @@ entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 
 
 <Node id="24" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 8
+entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %biases_addr, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -461,7 +461,7 @@ entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 
 
 <Node id="24" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 8
+entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %biases_addr, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -479,7 +479,7 @@ entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 
 
 <Node id="24" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 8
+entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %biases_addr, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -497,7 +497,7 @@ entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 
 
 <Node id="24" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 8
+entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %biases_addr, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -515,7 +515,7 @@ entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 
 
 <Node id="24" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 8
+entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %biases_addr, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -563,7 +563,7 @@ entry:4 %output_ftmap_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %output_ft
 
 <Node id="14" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_34, i32 0, i32 0, void @empty_36, i32 0, i32 512, void @empty_30, void @empty_31, void @empty_36, i32 16, i32 16, i32 16, i32 16, void @empty_36, void @empty_36, i32 4294967295, i32 0
+entry:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %biases, void @empty_6, i32 0, i32 0, void @empty, i32 0, i32 512, void @empty_32, void @empty_28, void @empty, i32 16, i32 16, i32 16, i32 16, void @empty, void @empty, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -578,7 +578,7 @@ entry:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gm
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i2, void @empty_34, i32 0, i32 0, void @empty_36, i32 0, i32 512, void @empty_6, void @empty_31, void @empty_36, i32 16, i32 16, i32 256, i32 256, void @empty_36, void @empty_36, i32 4294967295, i32 0
+entry:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %bundle_2, void @empty_6, i32 0, i32 0, void @empty, i32 0, i32 512, void @empty_19, void @empty_28, void @empty, i32 16, i32 16, i32 256, i32 256, void @empty, void @empty, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -623,7 +623,7 @@ entry:8 %zext_ln133_1 = zext i6 %out_read
 
 <Node id="24" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i32 8
+entry:15 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %biases_addr, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -763,10 +763,10 @@ BH.split:4 %zext_ln133_3 = zext i4 %bout_1
 
 <Node id="42" bw="7" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-BH.split:7 %empty_320 = add i7 %zext_ln133_3, i7 %zext_ln133_1
+BH.split:7 %empty_316 = add i7 %zext_ln133_3, i7 %zext_ln133_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_320"/></StgValue>
+<StgValue><ssdm name="empty_316"/></StgValue>
 </operation>
 
 <operation id="67" st_id="10" stage="1" lat="1">
@@ -779,7 +779,7 @@ BH.split:7 %empty_320 = add i7 %zext_ln133_3, i7 %zext_ln133_1
 
 <Node id="43" bw="25" op_0_bw="7">
 <![CDATA[
-BH.split:8 %p_cast = zext i7 %empty_320
+BH.split:8 %p_cast = zext i7 %empty_316
 
 ]]></Node>
 <StgValue><ssdm name="p_cast"/></StgValue>
@@ -968,7 +968,7 @@ BH.split:5 %speclooptripcount_ln133 = speclooptripcount void @_ssdm_op_SpecLoopT
 
 <Node id="41" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-BH.split:6 %specloopname_ln133 = specloopname void @_ssdm_op_SpecLoopName, void @empty
+BH.split:6 %specloopname_ln133 = specloopname void @_ssdm_op_SpecLoopName, void @empty_25
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln133"/></StgValue>
@@ -983,10 +983,10 @@ BH.split:6 %specloopname_ln133 = specloopname void @_ssdm_op_SpecLoopName, void 
 
 <Node id="44" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-BH.split:9 %gmem_addr_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr
+BH.split:9 %biases_addr_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %biases_addr
 
 ]]></Node>
-<StgValue><ssdm name="gmem_addr_read"/></StgValue>
+<StgValue><ssdm name="biases_addr_read"/></StgValue>
 </operation>
 
 <operation id="81" st_id="11" stage="1" lat="1">
@@ -998,10 +998,10 @@ BH.split:9 %gmem_addr_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr
 
 <Node id="45" bw="32" op_0_bw="32">
 <![CDATA[
-BH.split:10 %empty_321 = bitcast i32 %gmem_addr_read
+BH.split:10 %empty_317 = bitcast i32 %biases_addr_read
 
 ]]></Node>
-<StgValue><ssdm name="empty_321"/></StgValue>
+<StgValue><ssdm name="empty_317"/></StgValue>
 </operation>
 
 <operation id="82" st_id="11" stage="1" lat="1">
@@ -1140,7 +1140,7 @@ RELU.0.split:3 %zext_ln134 = zext i5 %bh
 
 <Node id="62" bw="0" op_0_bw="0" op_1_bw="7" op_2_bw="32" op_3_bw="32" op_4_bw="32">
 <![CDATA[
-RELU.0.split:6 %call_ln134 = call void @export_output_buffer_c1_Pipeline_RELU, i7 %add_ln134_1, i32 %empty_321, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
+RELU.0.split:6 %call_ln134 = call void @export_output_buffer_c1_Pipeline_RELU, i7 %add_ln134_1, i32 %empty_317, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
 
 ]]></Node>
 <StgValue><ssdm name="call_ln134"/></StgValue>
@@ -1446,7 +1446,7 @@ RELU.0.split:30 %trunc_ln140_1 = trunc i9 %sub_ln140
 
 <Node id="62" bw="0" op_0_bw="0" op_1_bw="7" op_2_bw="32" op_3_bw="32" op_4_bw="32">
 <![CDATA[
-RELU.0.split:6 %call_ln134 = call void @export_output_buffer_c1_Pipeline_RELU, i7 %add_ln134_1, i32 %empty_321, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
+RELU.0.split:6 %call_ln134 = call void @export_output_buffer_c1_Pipeline_RELU, i7 %add_ln134_1, i32 %empty_317, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
 
 ]]></Node>
 <StgValue><ssdm name="call_ln134"/></StgValue>
@@ -1476,10 +1476,10 @@ RELU.0.split:16 %sext_ln147 = sext i62 %trunc_ln4
 
 <Node id="73" bw="32" op_0_bw="32" op_1_bw="64">
 <![CDATA[
-RELU.0.split:17 %i2_addr = getelementptr i32 %i2, i64 %sext_ln147
+RELU.0.split:17 %bundle_2_addr = getelementptr i32 %bundle_2, i64 %sext_ln147
 
 ]]></Node>
-<StgValue><ssdm name="i2_addr"/></StgValue>
+<StgValue><ssdm name="bundle_2_addr"/></StgValue>
 </operation>
 
 <operation id="112" st_id="13" stage="1" lat="1">
@@ -1491,10 +1491,10 @@ RELU.0.split:17 %i2_addr = getelementptr i32 %i2, i64 %sext_ln147
 
 <Node id="74" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-RELU.0.split:18 %empty_322 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %i2_addr, i32 255
+RELU.0.split:18 %empty_318 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %bundle_2_addr, i32 255
 
 ]]></Node>
-<StgValue><ssdm name="empty_322"/></StgValue>
+<StgValue><ssdm name="empty_318"/></StgValue>
 </operation>
 </state>
 
@@ -1509,7 +1509,7 @@ RELU.0.split:18 %empty_322 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %i2
 
 <Node id="75" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="62" op_3_bw="7" op_4_bw="32" op_5_bw="32" op_6_bw="0" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-RELU.0.split:19 %call_ln147 = call void @export_output_buffer_c1_Pipeline_2, i32 %i2, i62 %trunc_ln4, i7 %add_ln134_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
+RELU.0.split:19 %call_ln147 = call void @export_output_buffer_c1_Pipeline_2, i32 %bundle_2, i62 %trunc_ln4, i7 %add_ln134_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
 
 ]]></Node>
 <StgValue><ssdm name="call_ln147"/></StgValue>
@@ -1527,7 +1527,7 @@ RELU.0.split:19 %call_ln147 = call void @export_output_buffer_c1_Pipeline_2, i32
 
 <Node id="75" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="62" op_3_bw="7" op_4_bw="32" op_5_bw="32" op_6_bw="0" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-RELU.0.split:19 %call_ln147 = call void @export_output_buffer_c1_Pipeline_2, i32 %i2, i62 %trunc_ln4, i7 %add_ln134_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
+RELU.0.split:19 %call_ln147 = call void @export_output_buffer_c1_Pipeline_2, i32 %bundle_2, i62 %trunc_ln4, i7 %add_ln134_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
 
 ]]></Node>
 <StgValue><ssdm name="call_ln147"/></StgValue>
@@ -1545,10 +1545,10 @@ RELU.0.split:19 %call_ln147 = call void @export_output_buffer_c1_Pipeline_2, i32
 
 <Node id="84" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-RELU.0.split:28 %empty_323 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %i2_addr
+RELU.0.split:28 %empty_319 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %bundle_2_addr
 
 ]]></Node>
-<StgValue><ssdm name="empty_323"/></StgValue>
+<StgValue><ssdm name="empty_319"/></StgValue>
 </operation>
 </state>
 
@@ -1563,10 +1563,10 @@ RELU.0.split:28 %empty_323 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %
 
 <Node id="84" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-RELU.0.split:28 %empty_323 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %i2_addr
+RELU.0.split:28 %empty_319 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %bundle_2_addr
 
 ]]></Node>
-<StgValue><ssdm name="empty_323"/></StgValue>
+<StgValue><ssdm name="empty_319"/></StgValue>
 </operation>
 </state>
 
@@ -1581,10 +1581,10 @@ RELU.0.split:28 %empty_323 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %
 
 <Node id="84" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-RELU.0.split:28 %empty_323 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %i2_addr
+RELU.0.split:28 %empty_319 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %bundle_2_addr
 
 ]]></Node>
-<StgValue><ssdm name="empty_323"/></StgValue>
+<StgValue><ssdm name="empty_319"/></StgValue>
 </operation>
 </state>
 
@@ -1599,10 +1599,10 @@ RELU.0.split:28 %empty_323 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %
 
 <Node id="84" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-RELU.0.split:28 %empty_323 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %i2_addr
+RELU.0.split:28 %empty_319 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %bundle_2_addr
 
 ]]></Node>
-<StgValue><ssdm name="empty_323"/></StgValue>
+<StgValue><ssdm name="empty_319"/></StgValue>
 </operation>
 </state>
 
@@ -1650,7 +1650,7 @@ RELU.0.split:4 %speclooptripcount_ln134 = speclooptripcount void @_ssdm_op_SpecL
 
 <Node id="61" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-RELU.0.split:5 %specloopname_ln134 = specloopname void @_ssdm_op_SpecLoopName, void @empty_13
+RELU.0.split:5 %specloopname_ln134 = specloopname void @_ssdm_op_SpecLoopName, void @empty_33
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln134"/></StgValue>
@@ -1666,10 +1666,10 @@ RELU.0.split:5 %specloopname_ln134 = specloopname void @_ssdm_op_SpecLoopName, v
 
 <Node id="84" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-RELU.0.split:28 %empty_323 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %i2_addr
+RELU.0.split:28 %empty_319 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %bundle_2_addr
 
 ]]></Node>
-<StgValue><ssdm name="empty_323"/></StgValue>
+<StgValue><ssdm name="empty_319"/></StgValue>
 </operation>
 
 <operation id="123" st_id="20" stage="1" lat="1">
@@ -1763,7 +1763,7 @@ RELU.0.split:34 %br_ln134 = br i1 %icmp_ln134_1, void %for.body8.1.preheader, vo
 
 <Node id="92" bw="0" op_0_bw="0" op_1_bw="7" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="0" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-for.body8.1.preheader:0 %call_ln134 = call void @export_output_buffer_c1_Pipeline_RELU1, i7 %add_ln134_2, i32 %empty_321, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
+for.body8.1.preheader:0 %call_ln134 = call void @export_output_buffer_c1_Pipeline_RELU1, i7 %add_ln134_2, i32 %empty_317, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
 
 ]]></Node>
 <StgValue><ssdm name="call_ln134"/></StgValue>
@@ -1849,7 +1849,7 @@ for.inc48:1 %br_ln133 = br void %BH
 
 <Node id="92" bw="0" op_0_bw="0" op_1_bw="7" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="0" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-for.body8.1.preheader:0 %call_ln134 = call void @export_output_buffer_c1_Pipeline_RELU1, i7 %add_ln134_2, i32 %empty_321, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
+for.body8.1.preheader:0 %call_ln134 = call void @export_output_buffer_c1_Pipeline_RELU1, i7 %add_ln134_2, i32 %empty_317, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
 
 ]]></Node>
 <StgValue><ssdm name="call_ln134"/></StgValue>
@@ -1879,10 +1879,10 @@ for.body8.1.preheader:2 %sext_ln147_1 = sext i62 %trunc_ln147_1
 
 <Node id="95" bw="32" op_0_bw="32" op_1_bw="64">
 <![CDATA[
-for.body8.1.preheader:3 %i2_addr_1 = getelementptr i32 %i2, i64 %sext_ln147_1
+for.body8.1.preheader:3 %bundle_2_addr_1 = getelementptr i32 %bundle_2, i64 %sext_ln147_1
 
 ]]></Node>
-<StgValue><ssdm name="i2_addr_1"/></StgValue>
+<StgValue><ssdm name="bundle_2_addr_1"/></StgValue>
 </operation>
 
 <operation id="136" st_id="21" stage="1" lat="1">
@@ -1894,10 +1894,10 @@ for.body8.1.preheader:3 %i2_addr_1 = getelementptr i32 %i2, i64 %sext_ln147_1
 
 <Node id="96" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-for.body8.1.preheader:4 %empty_324 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %i2_addr_1, i32 255
+for.body8.1.preheader:4 %empty_320 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %bundle_2_addr_1, i32 255
 
 ]]></Node>
-<StgValue><ssdm name="empty_324"/></StgValue>
+<StgValue><ssdm name="empty_320"/></StgValue>
 </operation>
 </state>
 
@@ -1912,7 +1912,7 @@ for.body8.1.preheader:4 %empty_324 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32,
 
 <Node id="97" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="62" op_3_bw="7" op_4_bw="32" op_5_bw="32" op_6_bw="0" op_7_bw="0" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="0" op_13_bw="0">
 <![CDATA[
-for.body8.1.preheader:5 %call_ln147 = call void @export_output_buffer_c1_Pipeline_4, i32 %i2, i62 %trunc_ln147_1, i7 %add_ln134_2, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
+for.body8.1.preheader:5 %call_ln147 = call void @export_output_buffer_c1_Pipeline_4, i32 %bundle_2, i62 %trunc_ln147_1, i7 %add_ln134_2, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
 
 ]]></Node>
 <StgValue><ssdm name="call_ln147"/></StgValue>
@@ -1930,7 +1930,7 @@ for.body8.1.preheader:5 %call_ln147 = call void @export_output_buffer_c1_Pipelin
 
 <Node id="97" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="62" op_3_bw="7" op_4_bw="32" op_5_bw="32" op_6_bw="0" op_7_bw="0" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="0" op_13_bw="0">
 <![CDATA[
-for.body8.1.preheader:5 %call_ln147 = call void @export_output_buffer_c1_Pipeline_4, i32 %i2, i62 %trunc_ln147_1, i7 %add_ln134_2, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
+for.body8.1.preheader:5 %call_ln147 = call void @export_output_buffer_c1_Pipeline_4, i32 %bundle_2, i62 %trunc_ln147_1, i7 %add_ln134_2, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1, i32 %conv1_float_255_255_float_1_9_9_float_float_255_255_ou
 
 ]]></Node>
 <StgValue><ssdm name="call_ln147"/></StgValue>
@@ -1948,10 +1948,10 @@ for.body8.1.preheader:5 %call_ln147 = call void @export_output_buffer_c1_Pipelin
 
 <Node id="98" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-for.body8.1.preheader:6 %empty_325 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %i2_addr_1
+for.body8.1.preheader:6 %empty_321 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %bundle_2_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_325"/></StgValue>
+<StgValue><ssdm name="empty_321"/></StgValue>
 </operation>
 </state>
 
@@ -1966,10 +1966,10 @@ for.body8.1.preheader:6 %empty_325 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i3
 
 <Node id="98" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-for.body8.1.preheader:6 %empty_325 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %i2_addr_1
+for.body8.1.preheader:6 %empty_321 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %bundle_2_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_325"/></StgValue>
+<StgValue><ssdm name="empty_321"/></StgValue>
 </operation>
 </state>
 
@@ -1984,10 +1984,10 @@ for.body8.1.preheader:6 %empty_325 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i3
 
 <Node id="98" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-for.body8.1.preheader:6 %empty_325 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %i2_addr_1
+for.body8.1.preheader:6 %empty_321 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %bundle_2_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_325"/></StgValue>
+<StgValue><ssdm name="empty_321"/></StgValue>
 </operation>
 </state>
 
@@ -2002,10 +2002,10 @@ for.body8.1.preheader:6 %empty_325 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i3
 
 <Node id="98" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-for.body8.1.preheader:6 %empty_325 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %i2_addr_1
+for.body8.1.preheader:6 %empty_321 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %bundle_2_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_325"/></StgValue>
+<StgValue><ssdm name="empty_321"/></StgValue>
 </operation>
 </state>
 
@@ -2020,10 +2020,10 @@ for.body8.1.preheader:6 %empty_325 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i3
 
 <Node id="98" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-for.body8.1.preheader:6 %empty_325 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %i2_addr_1
+for.body8.1.preheader:6 %empty_321 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %bundle_2_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_325"/></StgValue>
+<StgValue><ssdm name="empty_321"/></StgValue>
 </operation>
 
 <operation id="144" st_id="28" stage="1" lat="1">
@@ -2194,7 +2194,7 @@ BH.i.split:4 %speclooptripcount_ln70 = speclooptripcount void @_ssdm_op_SpecLoop
 
 <Node id="119" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-BH.i.split:5 %specloopname_ln70 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7
+BH.i.split:5 %specloopname_ln70 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln70"/></StgValue>
@@ -2405,7 +2405,7 @@ BW.0.i.split:3 %speclooptripcount_ln71 = speclooptripcount void @_ssdm_op_SpecLo
 
 <Node id="131" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-BW.0.i.split:4 %specloopname_ln71 = specloopname void @_ssdm_op_SpecLoopName, void @empty_13
+BW.0.i.split:4 %specloopname_ln71 = specloopname void @_ssdm_op_SpecLoopName, void @empty_33
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln71"/></StgValue>
@@ -2613,17 +2613,17 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 
 
 <ports>
-<port id="222" name="i2" dir="1" iftype="4">
-<core>NULL</core><StgValue><ssdm name="i2"/></StgValue>
+<port id="222" name="bundle_2" dir="1" iftype="4">
+<core>NULL</core><StgValue><ssdm name="bundle_2"/></StgValue>
 </port>
 <port id="223" name="output_ftmap" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="output_ftmap"/></StgValue>
 </port>
-<port id="224" name="gmem" dir="0" iftype="4">
-<core>NULL</core><StgValue><ssdm name="gmem"/></StgValue>
-</port>
-<port id="225" name="biases" dir="0" iftype="0">
+<port id="224" name="biases" dir="0" iftype="4">
 <core>NULL</core><StgValue><ssdm name="biases"/></StgValue>
+</port>
+<port id="225" name="biases1" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="biases1"/></StgValue>
 </port>
 <port id="226" name="out_r" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="out_r"/></StgValue>
@@ -2649,9 +2649,9 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="234" from="out_r" to="out_read" fromId="226" toId="35">
 </dataflow>
-<dataflow id="236" from="_ssdm_op_Read.ap_auto.i64" to="biases_read" fromId="235" toId="36">
+<dataflow id="236" from="_ssdm_op_Read.ap_auto.i64" to="biases1_read" fromId="235" toId="36">
 </dataflow>
-<dataflow id="237" from="biases" to="biases_read" fromId="225" toId="36">
+<dataflow id="237" from="biases1" to="biases1_read" fromId="225" toId="36">
 </dataflow>
 <dataflow id="239" from="_ssdm_op_BitConcatenate.i8.i6.i2" to="shl_ln" fromId="238" toId="37">
 </dataflow>
@@ -2663,7 +2663,7 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="244" from="zext_ln133_2" to="add_ln133" fromId="38" toId="39">
 </dataflow>
-<dataflow id="245" from="biases_read" to="add_ln133" fromId="36" toId="39">
+<dataflow id="245" from="biases1_read" to="add_ln133" fromId="36" toId="39">
 </dataflow>
 <dataflow id="247" from="_ssdm_op_PartSelect.i62.i64.i32.i32" to="trunc_ln" fromId="246" toId="40">
 </dataflow>
@@ -2675,9 +2675,9 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="253" from="trunc_ln" to="sext_ln133" fromId="40" toId="41">
 </dataflow>
-<dataflow id="254" from="gmem" to="gmem_addr" fromId="224" toId="42">
+<dataflow id="254" from="biases" to="biases_addr" fromId="224" toId="42">
 </dataflow>
-<dataflow id="255" from="sext_ln133" to="gmem_addr" fromId="41" toId="42">
+<dataflow id="255" from="sext_ln133" to="biases_addr" fromId="41" toId="42">
 </dataflow>
 <dataflow id="257" from="StgValue_256" to="store_ln133" fromId="256" toId="43">
 </dataflow>
@@ -2685,43 +2685,43 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="260" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty" fromId="259" toId="44">
 </dataflow>
-<dataflow id="261" from="gmem_addr" to="empty" fromId="42" toId="44">
+<dataflow id="261" from="biases_addr" to="empty" fromId="42" toId="44">
 </dataflow>
 <dataflow id="263" from="StgValue_262" to="empty" fromId="262" toId="44">
 </dataflow>
 <dataflow id="264" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty" fromId="259" toId="45">
 </dataflow>
-<dataflow id="265" from="gmem_addr" to="empty" fromId="42" toId="45">
+<dataflow id="265" from="biases_addr" to="empty" fromId="42" toId="45">
 </dataflow>
 <dataflow id="266" from="StgValue_262" to="empty" fromId="262" toId="45">
 </dataflow>
 <dataflow id="267" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty" fromId="259" toId="46">
 </dataflow>
-<dataflow id="268" from="gmem_addr" to="empty" fromId="42" toId="46">
+<dataflow id="268" from="biases_addr" to="empty" fromId="42" toId="46">
 </dataflow>
 <dataflow id="269" from="StgValue_262" to="empty" fromId="262" toId="46">
 </dataflow>
 <dataflow id="270" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty" fromId="259" toId="47">
 </dataflow>
-<dataflow id="271" from="gmem_addr" to="empty" fromId="42" toId="47">
+<dataflow id="271" from="biases_addr" to="empty" fromId="42" toId="47">
 </dataflow>
 <dataflow id="272" from="StgValue_262" to="empty" fromId="262" toId="47">
 </dataflow>
 <dataflow id="273" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty" fromId="259" toId="48">
 </dataflow>
-<dataflow id="274" from="gmem_addr" to="empty" fromId="42" toId="48">
+<dataflow id="274" from="biases_addr" to="empty" fromId="42" toId="48">
 </dataflow>
 <dataflow id="275" from="StgValue_262" to="empty" fromId="262" toId="48">
 </dataflow>
 <dataflow id="276" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty" fromId="259" toId="49">
 </dataflow>
-<dataflow id="277" from="gmem_addr" to="empty" fromId="42" toId="49">
+<dataflow id="277" from="biases_addr" to="empty" fromId="42" toId="49">
 </dataflow>
 <dataflow id="278" from="StgValue_262" to="empty" fromId="262" toId="49">
 </dataflow>
 <dataflow id="279" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty" fromId="259" toId="50">
 </dataflow>
-<dataflow id="280" from="gmem_addr" to="empty" fromId="42" toId="50">
+<dataflow id="280" from="biases_addr" to="empty" fromId="42" toId="50">
 </dataflow>
 <dataflow id="281" from="StgValue_262" to="empty" fromId="262" toId="50">
 </dataflow>
@@ -2735,25 +2735,25 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="288" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="287" toId="53">
 </dataflow>
-<dataflow id="289" from="gmem" to="specinterface_ln0" fromId="224" toId="53">
+<dataflow id="289" from="biases" to="specinterface_ln0" fromId="224" toId="53">
 </dataflow>
-<dataflow id="291" from="empty_34" to="specinterface_ln0" fromId="290" toId="53">
+<dataflow id="291" from="empty_6" to="specinterface_ln0" fromId="290" toId="53">
 </dataflow>
 <dataflow id="293" from="StgValue_292" to="specinterface_ln0" fromId="292" toId="53">
 </dataflow>
 <dataflow id="294" from="StgValue_292" to="specinterface_ln0" fromId="292" toId="53">
 </dataflow>
-<dataflow id="296" from="empty_36" to="specinterface_ln0" fromId="295" toId="53">
+<dataflow id="296" from="empty" to="specinterface_ln0" fromId="295" toId="53">
 </dataflow>
 <dataflow id="297" from="StgValue_292" to="specinterface_ln0" fromId="292" toId="53">
 </dataflow>
 <dataflow id="299" from="StgValue_298" to="specinterface_ln0" fromId="298" toId="53">
 </dataflow>
-<dataflow id="301" from="empty_30" to="specinterface_ln0" fromId="300" toId="53">
+<dataflow id="301" from="empty_32" to="specinterface_ln0" fromId="300" toId="53">
 </dataflow>
-<dataflow id="303" from="empty_31" to="specinterface_ln0" fromId="302" toId="53">
+<dataflow id="303" from="empty_28" to="specinterface_ln0" fromId="302" toId="53">
 </dataflow>
-<dataflow id="304" from="empty_36" to="specinterface_ln0" fromId="295" toId="53">
+<dataflow id="304" from="empty" to="specinterface_ln0" fromId="295" toId="53">
 </dataflow>
 <dataflow id="306" from="StgValue_305" to="specinterface_ln0" fromId="305" toId="53">
 </dataflow>
@@ -2763,9 +2763,9 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="309" from="StgValue_305" to="specinterface_ln0" fromId="305" toId="53">
 </dataflow>
-<dataflow id="310" from="empty_36" to="specinterface_ln0" fromId="295" toId="53">
+<dataflow id="310" from="empty" to="specinterface_ln0" fromId="295" toId="53">
 </dataflow>
-<dataflow id="311" from="empty_36" to="specinterface_ln0" fromId="295" toId="53">
+<dataflow id="311" from="empty" to="specinterface_ln0" fromId="295" toId="53">
 </dataflow>
 <dataflow id="313" from="StgValue_312" to="specinterface_ln0" fromId="312" toId="53">
 </dataflow>
@@ -2773,25 +2773,25 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="315" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="287" toId="54">
 </dataflow>
-<dataflow id="316" from="i2" to="specinterface_ln0" fromId="222" toId="54">
+<dataflow id="316" from="bundle_2" to="specinterface_ln0" fromId="222" toId="54">
 </dataflow>
-<dataflow id="317" from="empty_34" to="specinterface_ln0" fromId="290" toId="54">
+<dataflow id="317" from="empty_6" to="specinterface_ln0" fromId="290" toId="54">
 </dataflow>
 <dataflow id="318" from="StgValue_292" to="specinterface_ln0" fromId="292" toId="54">
 </dataflow>
 <dataflow id="319" from="StgValue_292" to="specinterface_ln0" fromId="292" toId="54">
 </dataflow>
-<dataflow id="320" from="empty_36" to="specinterface_ln0" fromId="295" toId="54">
+<dataflow id="320" from="empty" to="specinterface_ln0" fromId="295" toId="54">
 </dataflow>
 <dataflow id="321" from="StgValue_292" to="specinterface_ln0" fromId="292" toId="54">
 </dataflow>
 <dataflow id="322" from="StgValue_298" to="specinterface_ln0" fromId="298" toId="54">
 </dataflow>
-<dataflow id="324" from="empty_6" to="specinterface_ln0" fromId="323" toId="54">
+<dataflow id="324" from="empty_19" to="specinterface_ln0" fromId="323" toId="54">
 </dataflow>
-<dataflow id="325" from="empty_31" to="specinterface_ln0" fromId="302" toId="54">
+<dataflow id="325" from="empty_28" to="specinterface_ln0" fromId="302" toId="54">
 </dataflow>
-<dataflow id="326" from="empty_36" to="specinterface_ln0" fromId="295" toId="54">
+<dataflow id="326" from="empty" to="specinterface_ln0" fromId="295" toId="54">
 </dataflow>
 <dataflow id="327" from="StgValue_305" to="specinterface_ln0" fromId="305" toId="54">
 </dataflow>
@@ -2801,9 +2801,9 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="331" from="StgValue_329" to="specinterface_ln0" fromId="329" toId="54">
 </dataflow>
-<dataflow id="332" from="empty_36" to="specinterface_ln0" fromId="295" toId="54">
+<dataflow id="332" from="empty" to="specinterface_ln0" fromId="295" toId="54">
 </dataflow>
-<dataflow id="333" from="empty_36" to="specinterface_ln0" fromId="295" toId="54">
+<dataflow id="333" from="empty" to="specinterface_ln0" fromId="295" toId="54">
 </dataflow>
 <dataflow id="334" from="StgValue_312" to="specinterface_ln0" fromId="312" toId="54">
 </dataflow>
@@ -2815,7 +2815,7 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="338" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty" fromId="259" toId="57">
 </dataflow>
-<dataflow id="339" from="gmem_addr" to="empty" fromId="42" toId="57">
+<dataflow id="339" from="biases_addr" to="empty" fromId="42" toId="57">
 </dataflow>
 <dataflow id="340" from="StgValue_262" to="empty" fromId="262" toId="57">
 </dataflow>
@@ -2839,11 +2839,11 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="353" from="bout_1" to="zext_ln133_3" fromId="61" toId="65">
 </dataflow>
-<dataflow id="354" from="zext_ln133_3" to="empty_320" fromId="65" toId="66">
+<dataflow id="354" from="zext_ln133_3" to="empty_316" fromId="65" toId="66">
 </dataflow>
-<dataflow id="355" from="zext_ln133_1" to="empty_320" fromId="56" toId="66">
+<dataflow id="355" from="zext_ln133_1" to="empty_316" fromId="56" toId="66">
 </dataflow>
-<dataflow id="356" from="empty_320" to="p_cast" fromId="66" toId="67">
+<dataflow id="356" from="empty_316" to="p_cast" fromId="66" toId="67">
 </dataflow>
 <dataflow id="357" from="p_cast" to="mul_ln137" fromId="67" toId="68">
 </dataflow>
@@ -2885,13 +2885,13 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="381" from="_ssdm_op_SpecLoopName" to="specloopname_ln133" fromId="380" toId="79">
 </dataflow>
-<dataflow id="383" from="empty" to="specloopname_ln133" fromId="382" toId="79">
+<dataflow id="383" from="empty_25" to="specloopname_ln133" fromId="382" toId="79">
 </dataflow>
-<dataflow id="385" from="_ssdm_op_Read.m_axi.p1i32" to="gmem_addr_read" fromId="384" toId="80">
+<dataflow id="385" from="_ssdm_op_Read.m_axi.p1i32" to="biases_addr_read" fromId="384" toId="80">
 </dataflow>
-<dataflow id="386" from="gmem_addr" to="gmem_addr_read" fromId="42" toId="80">
+<dataflow id="386" from="biases_addr" to="biases_addr_read" fromId="42" toId="80">
 </dataflow>
-<dataflow id="387" from="gmem_addr_read" to="empty_321" fromId="80" toId="81">
+<dataflow id="387" from="biases_addr_read" to="empty_317" fromId="80" toId="81">
 </dataflow>
 <dataflow id="388" from="sub_ln140" to="trunc_ln140" fromId="77" toId="82">
 </dataflow>
@@ -2929,7 +2929,7 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="404" from="add_ln134_1" to="call_ln134" fromId="88" toId="90">
 </dataflow>
-<dataflow id="405" from="empty_321" to="call_ln134" fromId="81" toId="90">
+<dataflow id="405" from="empty_317" to="call_ln134" fromId="81" toId="90">
 </dataflow>
 <dataflow id="406" from="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1" to="call_ln134" fromId="228" toId="90">
 </dataflow>
@@ -3009,7 +3009,7 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="447" from="add_ln134_1" to="call_ln134" fromId="88" toId="109">
 </dataflow>
-<dataflow id="448" from="empty_321" to="call_ln134" fromId="81" toId="109">
+<dataflow id="448" from="empty_317" to="call_ln134" fromId="81" toId="109">
 </dataflow>
 <dataflow id="449" from="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1" to="call_ln134" fromId="228" toId="109">
 </dataflow>
@@ -3017,19 +3017,19 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="451" from="trunc_ln4" to="sext_ln147" fromId="99" toId="110">
 </dataflow>
-<dataflow id="452" from="i2" to="i2_addr" fromId="222" toId="111">
+<dataflow id="452" from="bundle_2" to="bundle_2_addr" fromId="222" toId="111">
 </dataflow>
-<dataflow id="453" from="sext_ln147" to="i2_addr" fromId="110" toId="111">
+<dataflow id="453" from="sext_ln147" to="bundle_2_addr" fromId="110" toId="111">
 </dataflow>
-<dataflow id="455" from="_ssdm_op_WriteReq.m_axi.p1i32" to="empty_322" fromId="454" toId="112">
+<dataflow id="455" from="_ssdm_op_WriteReq.m_axi.p1i32" to="empty_318" fromId="454" toId="112">
 </dataflow>
-<dataflow id="456" from="i2_addr" to="empty_322" fromId="111" toId="112">
+<dataflow id="456" from="bundle_2_addr" to="empty_318" fromId="111" toId="112">
 </dataflow>
-<dataflow id="458" from="StgValue_457" to="empty_322" fromId="457" toId="112">
+<dataflow id="458" from="StgValue_457" to="empty_318" fromId="457" toId="112">
 </dataflow>
 <dataflow id="460" from="export_output_buffer_c1_Pipeline_2" to="call_ln147" fromId="459" toId="113">
 </dataflow>
-<dataflow id="461" from="i2" to="call_ln147" fromId="222" toId="113">
+<dataflow id="461" from="bundle_2" to="call_ln147" fromId="222" toId="113">
 </dataflow>
 <dataflow id="462" from="trunc_ln4" to="call_ln147" fromId="99" toId="113">
 </dataflow>
@@ -3041,7 +3041,7 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="466" from="export_output_buffer_c1_Pipeline_2" to="call_ln147" fromId="459" toId="114">
 </dataflow>
-<dataflow id="467" from="i2" to="call_ln147" fromId="222" toId="114">
+<dataflow id="467" from="bundle_2" to="call_ln147" fromId="222" toId="114">
 </dataflow>
 <dataflow id="468" from="trunc_ln4" to="call_ln147" fromId="99" toId="114">
 </dataflow>
@@ -3051,21 +3051,21 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="471" from="conv1_float_255_255_float_1_9_9_float_float_255_255_ou" to="call_ln147" fromId="229" toId="114">
 </dataflow>
-<dataflow id="473" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_323" fromId="472" toId="115">
+<dataflow id="473" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_319" fromId="472" toId="115">
 </dataflow>
-<dataflow id="474" from="i2_addr" to="empty_323" fromId="111" toId="115">
+<dataflow id="474" from="bundle_2_addr" to="empty_319" fromId="111" toId="115">
 </dataflow>
-<dataflow id="475" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_323" fromId="472" toId="116">
+<dataflow id="475" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_319" fromId="472" toId="116">
 </dataflow>
-<dataflow id="476" from="i2_addr" to="empty_323" fromId="111" toId="116">
+<dataflow id="476" from="bundle_2_addr" to="empty_319" fromId="111" toId="116">
 </dataflow>
-<dataflow id="477" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_323" fromId="472" toId="117">
+<dataflow id="477" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_319" fromId="472" toId="117">
 </dataflow>
-<dataflow id="478" from="i2_addr" to="empty_323" fromId="111" toId="117">
+<dataflow id="478" from="bundle_2_addr" to="empty_319" fromId="111" toId="117">
 </dataflow>
-<dataflow id="479" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_323" fromId="472" toId="118">
+<dataflow id="479" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_319" fromId="472" toId="118">
 </dataflow>
-<dataflow id="480" from="i2_addr" to="empty_323" fromId="111" toId="118">
+<dataflow id="480" from="bundle_2_addr" to="empty_319" fromId="111" toId="118">
 </dataflow>
 <dataflow id="481" from="bh" to="trunc_ln134" fromId="84" toId="119">
 </dataflow>
@@ -3079,11 +3079,11 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="486" from="_ssdm_op_SpecLoopName" to="specloopname_ln134" fromId="380" toId="121">
 </dataflow>
-<dataflow id="488" from="empty_13" to="specloopname_ln134" fromId="487" toId="121">
+<dataflow id="488" from="empty_33" to="specloopname_ln134" fromId="487" toId="121">
 </dataflow>
-<dataflow id="489" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_323" fromId="472" toId="122">
+<dataflow id="489" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_319" fromId="472" toId="122">
 </dataflow>
-<dataflow id="490" from="i2_addr" to="empty_323" fromId="111" toId="122">
+<dataflow id="490" from="bundle_2_addr" to="empty_319" fromId="111" toId="122">
 </dataflow>
 <dataflow id="491" from="trunc_ln134" to="or_ln134" fromId="119" toId="123">
 </dataflow>
@@ -3105,7 +3105,7 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="502" from="add_ln134_2" to="call_ln134" fromId="125" toId="128">
 </dataflow>
-<dataflow id="503" from="empty_321" to="call_ln134" fromId="81" toId="128">
+<dataflow id="503" from="empty_317" to="call_ln134" fromId="81" toId="128">
 </dataflow>
 <dataflow id="504" from="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1" to="call_ln134" fromId="228" toId="128">
 </dataflow>
@@ -3131,7 +3131,7 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="516" from="add_ln134_2" to="call_ln134" fromId="125" toId="133">
 </dataflow>
-<dataflow id="517" from="empty_321" to="call_ln134" fromId="81" toId="133">
+<dataflow id="517" from="empty_317" to="call_ln134" fromId="81" toId="133">
 </dataflow>
 <dataflow id="518" from="conv1_float_255_255_float_1_9_9_float_float_255_255_ou_1" to="call_ln134" fromId="228" toId="133">
 </dataflow>
@@ -3139,19 +3139,19 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="520" from="trunc_ln147_1" to="sext_ln147_1" fromId="129" toId="134">
 </dataflow>
-<dataflow id="521" from="i2" to="i2_addr_1" fromId="222" toId="135">
+<dataflow id="521" from="bundle_2" to="bundle_2_addr_1" fromId="222" toId="135">
 </dataflow>
-<dataflow id="522" from="sext_ln147_1" to="i2_addr_1" fromId="134" toId="135">
+<dataflow id="522" from="sext_ln147_1" to="bundle_2_addr_1" fromId="134" toId="135">
 </dataflow>
-<dataflow id="523" from="_ssdm_op_WriteReq.m_axi.p1i32" to="empty_324" fromId="454" toId="136">
+<dataflow id="523" from="_ssdm_op_WriteReq.m_axi.p1i32" to="empty_320" fromId="454" toId="136">
 </dataflow>
-<dataflow id="524" from="i2_addr_1" to="empty_324" fromId="135" toId="136">
+<dataflow id="524" from="bundle_2_addr_1" to="empty_320" fromId="135" toId="136">
 </dataflow>
-<dataflow id="525" from="StgValue_457" to="empty_324" fromId="457" toId="136">
+<dataflow id="525" from="StgValue_457" to="empty_320" fromId="457" toId="136">
 </dataflow>
 <dataflow id="527" from="export_output_buffer_c1_Pipeline_4" to="call_ln147" fromId="526" toId="137">
 </dataflow>
-<dataflow id="528" from="i2" to="call_ln147" fromId="222" toId="137">
+<dataflow id="528" from="bundle_2" to="call_ln147" fromId="222" toId="137">
 </dataflow>
 <dataflow id="529" from="trunc_ln147_1" to="call_ln147" fromId="129" toId="137">
 </dataflow>
@@ -3163,7 +3163,7 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="533" from="export_output_buffer_c1_Pipeline_4" to="call_ln147" fromId="526" toId="138">
 </dataflow>
-<dataflow id="534" from="i2" to="call_ln147" fromId="222" toId="138">
+<dataflow id="534" from="bundle_2" to="call_ln147" fromId="222" toId="138">
 </dataflow>
 <dataflow id="535" from="trunc_ln147_1" to="call_ln147" fromId="129" toId="138">
 </dataflow>
@@ -3173,25 +3173,25 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="538" from="conv1_float_255_255_float_1_9_9_float_float_255_255_ou" to="call_ln147" fromId="229" toId="138">
 </dataflow>
-<dataflow id="539" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_325" fromId="472" toId="139">
+<dataflow id="539" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_321" fromId="472" toId="139">
 </dataflow>
-<dataflow id="540" from="i2_addr_1" to="empty_325" fromId="135" toId="139">
+<dataflow id="540" from="bundle_2_addr_1" to="empty_321" fromId="135" toId="139">
 </dataflow>
-<dataflow id="541" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_325" fromId="472" toId="140">
+<dataflow id="541" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_321" fromId="472" toId="140">
 </dataflow>
-<dataflow id="542" from="i2_addr_1" to="empty_325" fromId="135" toId="140">
+<dataflow id="542" from="bundle_2_addr_1" to="empty_321" fromId="135" toId="140">
 </dataflow>
-<dataflow id="543" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_325" fromId="472" toId="141">
+<dataflow id="543" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_321" fromId="472" toId="141">
 </dataflow>
-<dataflow id="544" from="i2_addr_1" to="empty_325" fromId="135" toId="141">
+<dataflow id="544" from="bundle_2_addr_1" to="empty_321" fromId="135" toId="141">
 </dataflow>
-<dataflow id="545" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_325" fromId="472" toId="142">
+<dataflow id="545" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_321" fromId="472" toId="142">
 </dataflow>
-<dataflow id="546" from="i2_addr_1" to="empty_325" fromId="135" toId="142">
+<dataflow id="546" from="bundle_2_addr_1" to="empty_321" fromId="135" toId="142">
 </dataflow>
-<dataflow id="547" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_325" fromId="472" toId="143">
+<dataflow id="547" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_321" fromId="472" toId="143">
 </dataflow>
-<dataflow id="548" from="i2_addr_1" to="empty_325" fromId="135" toId="143">
+<dataflow id="548" from="bundle_2_addr_1" to="empty_321" fromId="135" toId="143">
 </dataflow>
 <dataflow id="549" from="o" to="o_1" fromId="71" toId="145">
 </dataflow>
@@ -3229,7 +3229,7 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="566" from="_ssdm_op_SpecLoopName" to="specloopname_ln70" fromId="380" toId="154">
 </dataflow>
-<dataflow id="568" from="empty_7" to="specloopname_ln70" fromId="567" toId="154">
+<dataflow id="568" from="empty_2" to="specloopname_ln70" fromId="567" toId="154">
 </dataflow>
 <dataflow id="569" from="sub_ln75" to="trunc_ln75" fromId="152" toId="155">
 </dataflow>
@@ -3284,7 +3284,7 @@ for.inc.1.i.preheader:2 %br_ln71 = br void %BW.0.i
 </dataflow>
 <dataflow id="591" from="_ssdm_op_SpecLoopName" to="specloopname_ln71" fromId="380" toId="167">
 </dataflow>
-<dataflow id="592" from="empty_13" to="specloopname_ln71" fromId="487" toId="167">
+<dataflow id="592" from="empty_33" to="specloopname_ln71" fromId="487" toId="167">
 </dataflow>
 <dataflow id="593" from="export_output_buffer_c1_Pipeline_BW" to="call_ln71" fromId="580" toId="168">
 </dataflow>

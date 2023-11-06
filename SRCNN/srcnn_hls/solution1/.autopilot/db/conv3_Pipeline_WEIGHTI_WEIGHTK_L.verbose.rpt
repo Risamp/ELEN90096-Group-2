@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_WEIGHTI_WEIGHTK_L'
 ================================================================
-* Date:           Sun Nov  5 11:02:57 2023
+* Date:           Mon Nov  6 16:29:14 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -120,7 +120,7 @@
     |indvar_flatten_fu_128                   |   9|          2|    6|         12|
     |k_fu_124                                |   9|          2|    3|          6|
     |loop_index_i_fu_120                     |   9|          2|    3|          6|
-    |w3_blk_n_R                              |   9|          2|    1|          2|
+    |weights_blk_n_R                         |   9|          2|    1|          2|
     +----------------------------------------+----+-----------+-----+-----------+
     |Total                                   |  81|         18|   41|         82|
     +----------------------------------------+----+-----------+-----+-----------+
@@ -143,7 +143,7 @@
     |loop_index_i_fu_120               |   3|   0|    3|          0|
     |select_ln118_1_reg_766            |   3|   0|    3|          0|
     |select_ln118_reg_762              |   3|   0|    3|          0|
-    |w3_addr_read_reg_770              |  32|   0|   32|          0|
+    |weights_addr_read_reg_770         |  32|   0|   32|          0|
     +----------------------------------+----+----+-----+-----------+
     |Total                             |  73|   0|   73|          0|
     +----------------------------------+----+----+-----+-----------+
@@ -163,52 +163,52 @@
 |ap_done                                                                 |  out|    1|  ap_ctrl_hs|                               conv3_Pipeline_WEIGHTI_WEIGHTK_L|  return value|
 |ap_idle                                                                 |  out|    1|  ap_ctrl_hs|                               conv3_Pipeline_WEIGHTI_WEIGHTK_L|  return value|
 |ap_ready                                                                |  out|    1|  ap_ctrl_hs|                               conv3_Pipeline_WEIGHTI_WEIGHTK_L|  return value|
-|m_axi_w3_AWVALID                                                        |  out|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_AWREADY                                                        |   in|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_AWADDR                                                         |  out|   64|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_AWID                                                           |  out|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_AWLEN                                                          |  out|   32|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_AWSIZE                                                         |  out|    3|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_AWBURST                                                        |  out|    2|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_AWLOCK                                                         |  out|    2|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_AWCACHE                                                        |  out|    4|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_AWPROT                                                         |  out|    3|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_AWQOS                                                          |  out|    4|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_AWREGION                                                       |  out|    4|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_AWUSER                                                         |  out|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_WVALID                                                         |  out|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_WREADY                                                         |   in|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_WDATA                                                          |  out|   32|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_WSTRB                                                          |  out|    4|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_WLAST                                                          |  out|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_WID                                                            |  out|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_WUSER                                                          |  out|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_ARVALID                                                        |  out|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_ARREADY                                                        |   in|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_ARADDR                                                         |  out|   64|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_ARID                                                           |  out|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_ARLEN                                                          |  out|   32|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_ARSIZE                                                         |  out|    3|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_ARBURST                                                        |  out|    2|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_ARLOCK                                                         |  out|    2|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_ARCACHE                                                        |  out|    4|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_ARPROT                                                         |  out|    3|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_ARQOS                                                          |  out|    4|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_ARREGION                                                       |  out|    4|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_ARUSER                                                         |  out|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_RVALID                                                         |   in|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_RREADY                                                         |  out|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_RDATA                                                          |   in|   32|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_RLAST                                                          |   in|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_RID                                                            |   in|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_RFIFONUM                                                       |   in|   13|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_RUSER                                                          |   in|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_RRESP                                                          |   in|    2|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_BVALID                                                         |   in|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_BREADY                                                         |  out|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_BRESP                                                          |   in|    2|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_BID                                                            |   in|    1|       m_axi|                                                             w3|       pointer|
-|m_axi_w3_BUSER                                                          |   in|    1|       m_axi|                                                             w3|       pointer|
+|m_axi_weights_AWVALID                                                   |  out|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_AWREADY                                                   |   in|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_AWADDR                                                    |  out|   64|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_AWID                                                      |  out|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_AWLEN                                                     |  out|   32|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_AWSIZE                                                    |  out|    3|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_AWBURST                                                   |  out|    2|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_AWLOCK                                                    |  out|    2|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_AWCACHE                                                   |  out|    4|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_AWPROT                                                    |  out|    3|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_AWQOS                                                     |  out|    4|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_AWREGION                                                  |  out|    4|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_AWUSER                                                    |  out|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_WVALID                                                    |  out|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_WREADY                                                    |   in|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_WDATA                                                     |  out|   32|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_WSTRB                                                     |  out|    4|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_WLAST                                                     |  out|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_WID                                                       |  out|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_WUSER                                                     |  out|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_ARVALID                                                   |  out|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_ARREADY                                                   |   in|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_ARADDR                                                    |  out|   64|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_ARID                                                      |  out|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_ARLEN                                                     |  out|   32|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_ARSIZE                                                    |  out|    3|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_ARBURST                                                   |  out|    2|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_ARLOCK                                                    |  out|    2|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_ARCACHE                                                   |  out|    4|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_ARPROT                                                    |  out|    3|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_ARQOS                                                     |  out|    4|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_ARREGION                                                  |  out|    4|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_ARUSER                                                    |  out|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_RVALID                                                    |   in|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_RREADY                                                    |  out|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_RDATA                                                     |   in|   32|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_RLAST                                                     |   in|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_RID                                                       |   in|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_RFIFONUM                                                  |   in|   13|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_RUSER                                                     |   in|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_RRESP                                                     |   in|    2|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_BVALID                                                    |   in|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_BREADY                                                    |  out|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_BRESP                                                     |   in|    2|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_BID                                                       |   in|    1|       m_axi|                                                        weights|       pointer|
+|m_axi_weights_BUSER                                                     |   in|    1|       m_axi|                                                        weights|       pointer|
 |sext_ln117                                                              |   in|   62|     ap_none|                                                     sext_ln117|        scalar|
 |p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_address0  |  out|    5|   ap_memory|  p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0|         array|
 |p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_ce0       |  out|    1|   ap_memory|  p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0|         array|
@@ -361,7 +361,7 @@ ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%bin = alloca i32 1"   --->   Operat
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%indvar_flatten35 = alloca i32 1"   --->   Operation 10 'alloca' 'indvar_flatten35' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%sext_ln117_read = read i62 @_ssdm_op_Read.ap_auto.i62, i62 %sext_ln117"   --->   Operation 11 'read' 'sext_ln117_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%sext_ln117_cast = sext i62 %sext_ln117_read"   --->   Operation 12 'sext' 'sext_ln117_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %w3, void @empty_34, i32 0, i32 0, void @empty_36, i32 0, i32 512, void @empty_4, void @empty_31, void @empty_36, i32 16, i32 16, i32 256, i32 256, void @empty_36, void @empty_36, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %weights, void @empty_6, i32 0, i32 0, void @empty, i32 0, i32 512, void @empty_21, void @empty_28, void @empty, i32 16, i32 16, i32 256, i32 256, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.42ns)   --->   "%store_ln0 = store i10 0, i10 %indvar_flatten35"   --->   Operation 14 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 15 [1/1] (0.42ns)   --->   "%store_ln0 = store i6 0, i6 %bin"   --->   Operation 15 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 16 [1/1] (0.42ns)   --->   "%store_ln0 = store i6 0, i6 %indvar_flatten"   --->   Operation 16 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
@@ -376,7 +376,7 @@ ST_1 : Operation 24 [1/1] (0.42ns)   --->   "%store_ln117 = store i10 %add_ln117
 
 State 2 <SV = 1> <Delay = 7.30>
 ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i6 %indvar_flatten" [src/conv3.cpp:118->src/conv3.cpp:34]   --->   Operation 25 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%w3_addr = getelementptr i32 %w3, i64 %sext_ln117_cast" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 26 'getelementptr' 'w3_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%weights_addr = getelementptr i32 %weights, i64 %sext_ln117_cast" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 26 'getelementptr' 'weights_addr' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 27 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%loop_index_i_load = load i3 %loop_index_i"   --->   Operation 28 'load' 'loop_index_i_load' <Predicate = (!icmp_ln117)> <Delay = 0.00>
 ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%k_load = load i3 %k" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 29 'load' 'k_load' <Predicate = (!icmp_ln117)> <Delay = 0.00>
@@ -389,7 +389,7 @@ ST_2 : Operation 35 [1/1] (0.67ns)   --->   "%add_ln118 = add i3 %select_ln117, 
 ST_2 : Operation 36 [1/1] (0.00ns) (grouped into LUT with out node select_ln118)   --->   "%or_ln118 = or i1 %and_ln117, i1 %icmp_ln118" [src/conv3.cpp:118->src/conv3.cpp:34]   --->   Operation 36 'or' 'or_ln118' <Predicate = (!icmp_ln117)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 37 [1/1] (0.28ns) (out node of the LUT)   --->   "%select_ln118 = select i1 %or_ln118, i3 0, i3 %loop_index_i_load" [src/conv3.cpp:118->src/conv3.cpp:34]   --->   Operation 37 'select' 'select_ln118' <Predicate = (!icmp_ln117)> <Delay = 0.28> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.20> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_2 : Operation 38 [1/1] (0.20ns)   --->   "%select_ln118_1 = select i1 %and_ln117, i3 %add_ln118, i3 %select_ln117" [src/conv3.cpp:118->src/conv3.cpp:34]   --->   Operation 38 'select' 'select_ln118_1' <Predicate = (!icmp_ln117)> <Delay = 0.20> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.20> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_2 : Operation 39 [1/1] (7.30ns)   --->   "%w3_addr_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i64 %w3_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 39 'read' 'w3_addr_read' <Predicate = (!icmp_ln117)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 39 [1/1] (7.30ns)   --->   "%weights_addr_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i64 %weights_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 39 'read' 'weights_addr_read' <Predicate = (!icmp_ln117)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 ST_2 : Operation 40 [1/1] (0.73ns)   --->   "%switch_ln118 = switch i3 %select_ln118_1, void %.case.4, i3 0, void %.case.0, i3 1, void %.case.1, i3 2, void %.case.2, i3 3, void %.case.3" [src/conv3.cpp:118->src/conv3.cpp:34]   --->   Operation 40 'switch' 'switch_ln118' <Predicate = (!icmp_ln117)> <Delay = 0.73>
 ST_2 : Operation 41 [1/1] (0.73ns)   --->   "%switch_ln118 = switch i3 %select_ln118, void %.case.428, i3 0, void %.case.024, i3 1, void %.case.125, i3 2, void %.case.226, i3 3, void %.case.327" [src/conv3.cpp:118->src/conv3.cpp:34]   --->   Operation 41 'switch' 'switch_ln118' <Predicate = (!icmp_ln117 & select_ln118_1 == 3)> <Delay = 0.73>
 ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit"   --->   Operation 42 'br' 'br_ln0' <Predicate = (!icmp_ln117 & select_ln118_1 == 3)> <Delay = 0.00>
@@ -419,81 +419,81 @@ ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%zext_ln117 = zext i6 %select_ln117
 ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 63 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @WEIGHTK_L_str"   --->   Operation 64 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 65 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%empty_326 = bitcast i32 %w3_addr_read" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 66 'bitcast' 'empty_326' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%empty_322 = bitcast i32 %weights_addr_read" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 66 'bitcast' 'empty_322' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_3_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_3_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 67 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_3_0_addr' <Predicate = (select_ln118_1 == 3 & select_ln118 == 3)> <Delay = 0.00>
-ST_3 : Operation 68 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_3_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 68 'store' 'store_ln117' <Predicate = (select_ln118_1 == 3 & select_ln118 == 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 68 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_3_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 68 'store' 'store_ln117' <Predicate = (select_ln118_1 == 3 & select_ln118 == 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit23"   --->   Operation 69 'br' 'br_ln0' <Predicate = (select_ln118_1 == 3 & select_ln118 == 3)> <Delay = 0.00>
 ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_2_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_2_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 70 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_2_0_addr' <Predicate = (select_ln118_1 == 3 & select_ln118 == 2)> <Delay = 0.00>
-ST_3 : Operation 71 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_2_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 71 'store' 'store_ln117' <Predicate = (select_ln118_1 == 3 & select_ln118 == 2)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 71 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_2_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 71 'store' 'store_ln117' <Predicate = (select_ln118_1 == 3 & select_ln118 == 2)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit23"   --->   Operation 72 'br' 'br_ln0' <Predicate = (select_ln118_1 == 3 & select_ln118 == 2)> <Delay = 0.00>
 ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_1_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_1_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 73 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_1_0_addr' <Predicate = (select_ln118_1 == 3 & select_ln118 == 1)> <Delay = 0.00>
-ST_3 : Operation 74 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_1_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 74 'store' 'store_ln117' <Predicate = (select_ln118_1 == 3 & select_ln118 == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 74 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_1_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 74 'store' 'store_ln117' <Predicate = (select_ln118_1 == 3 & select_ln118 == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit23"   --->   Operation 75 'br' 'br_ln0' <Predicate = (select_ln118_1 == 3 & select_ln118 == 1)> <Delay = 0.00>
 ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_0_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_0_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 76 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_0_0_addr' <Predicate = (select_ln118_1 == 3 & select_ln118 == 0)> <Delay = 0.00>
-ST_3 : Operation 77 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_0_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 77 'store' 'store_ln117' <Predicate = (select_ln118_1 == 3 & select_ln118 == 0)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 77 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_0_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 77 'store' 'store_ln117' <Predicate = (select_ln118_1 == 3 & select_ln118 == 0)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit23"   --->   Operation 78 'br' 'br_ln0' <Predicate = (select_ln118_1 == 3 & select_ln118 == 0)> <Delay = 0.00>
 ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_4_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_4_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 79 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_4_0_addr' <Predicate = (select_ln118_1 == 3 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 0.00>
-ST_3 : Operation 80 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_4_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 80 'store' 'store_ln117' <Predicate = (select_ln118_1 == 3 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 80 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_4_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 80 'store' 'store_ln117' <Predicate = (select_ln118_1 == 3 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 81 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit23"   --->   Operation 81 'br' 'br_ln0' <Predicate = (select_ln118_1 == 3 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 0.00>
 ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_3_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_3_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 82 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_3_0_addr' <Predicate = (select_ln118_1 == 2 & select_ln118 == 3)> <Delay = 0.00>
-ST_3 : Operation 83 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_3_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 83 'store' 'store_ln117' <Predicate = (select_ln118_1 == 2 & select_ln118 == 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 83 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_3_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 83 'store' 'store_ln117' <Predicate = (select_ln118_1 == 2 & select_ln118 == 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 84 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit16"   --->   Operation 84 'br' 'br_ln0' <Predicate = (select_ln118_1 == 2 & select_ln118 == 3)> <Delay = 0.00>
 ST_3 : Operation 85 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_2_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_2_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 85 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_2_0_addr' <Predicate = (select_ln118_1 == 2 & select_ln118 == 2)> <Delay = 0.00>
-ST_3 : Operation 86 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_2_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 86 'store' 'store_ln117' <Predicate = (select_ln118_1 == 2 & select_ln118 == 2)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 86 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_2_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 86 'store' 'store_ln117' <Predicate = (select_ln118_1 == 2 & select_ln118 == 2)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 87 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit16"   --->   Operation 87 'br' 'br_ln0' <Predicate = (select_ln118_1 == 2 & select_ln118 == 2)> <Delay = 0.00>
 ST_3 : Operation 88 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_1_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_1_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 88 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_1_0_addr' <Predicate = (select_ln118_1 == 2 & select_ln118 == 1)> <Delay = 0.00>
-ST_3 : Operation 89 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_1_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 89 'store' 'store_ln117' <Predicate = (select_ln118_1 == 2 & select_ln118 == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 89 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_1_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 89 'store' 'store_ln117' <Predicate = (select_ln118_1 == 2 & select_ln118 == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 90 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit16"   --->   Operation 90 'br' 'br_ln0' <Predicate = (select_ln118_1 == 2 & select_ln118 == 1)> <Delay = 0.00>
 ST_3 : Operation 91 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_0_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_0_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 91 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_0_0_addr' <Predicate = (select_ln118_1 == 2 & select_ln118 == 0)> <Delay = 0.00>
-ST_3 : Operation 92 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_0_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 92 'store' 'store_ln117' <Predicate = (select_ln118_1 == 2 & select_ln118 == 0)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 92 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_0_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 92 'store' 'store_ln117' <Predicate = (select_ln118_1 == 2 & select_ln118 == 0)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 93 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit16"   --->   Operation 93 'br' 'br_ln0' <Predicate = (select_ln118_1 == 2 & select_ln118 == 0)> <Delay = 0.00>
 ST_3 : Operation 94 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_4_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_4_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 94 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_4_0_addr' <Predicate = (select_ln118_1 == 2 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 0.00>
-ST_3 : Operation 95 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_4_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 95 'store' 'store_ln117' <Predicate = (select_ln118_1 == 2 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 95 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_4_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 95 'store' 'store_ln117' <Predicate = (select_ln118_1 == 2 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit16"   --->   Operation 96 'br' 'br_ln0' <Predicate = (select_ln118_1 == 2 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 0.00>
 ST_3 : Operation 97 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_3_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_3_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 97 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_3_0_addr' <Predicate = (select_ln118_1 == 1 & select_ln118 == 3)> <Delay = 0.00>
-ST_3 : Operation 98 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_3_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 98 'store' 'store_ln117' <Predicate = (select_ln118_1 == 1 & select_ln118 == 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 98 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_3_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 98 'store' 'store_ln117' <Predicate = (select_ln118_1 == 1 & select_ln118 == 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 99 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit9"   --->   Operation 99 'br' 'br_ln0' <Predicate = (select_ln118_1 == 1 & select_ln118 == 3)> <Delay = 0.00>
 ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_2_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_2_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 100 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_2_0_addr' <Predicate = (select_ln118_1 == 1 & select_ln118 == 2)> <Delay = 0.00>
-ST_3 : Operation 101 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_2_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 101 'store' 'store_ln117' <Predicate = (select_ln118_1 == 1 & select_ln118 == 2)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 101 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_2_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 101 'store' 'store_ln117' <Predicate = (select_ln118_1 == 1 & select_ln118 == 2)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 102 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit9"   --->   Operation 102 'br' 'br_ln0' <Predicate = (select_ln118_1 == 1 & select_ln118 == 2)> <Delay = 0.00>
 ST_3 : Operation 103 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_1_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_1_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 103 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_1_0_addr' <Predicate = (select_ln118_1 == 1 & select_ln118 == 1)> <Delay = 0.00>
-ST_3 : Operation 104 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_1_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 104 'store' 'store_ln117' <Predicate = (select_ln118_1 == 1 & select_ln118 == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 104 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_1_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 104 'store' 'store_ln117' <Predicate = (select_ln118_1 == 1 & select_ln118 == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 105 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit9"   --->   Operation 105 'br' 'br_ln0' <Predicate = (select_ln118_1 == 1 & select_ln118 == 1)> <Delay = 0.00>
 ST_3 : Operation 106 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_0_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_0_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 106 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_0_0_addr' <Predicate = (select_ln118_1 == 1 & select_ln118 == 0)> <Delay = 0.00>
-ST_3 : Operation 107 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_0_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 107 'store' 'store_ln117' <Predicate = (select_ln118_1 == 1 & select_ln118 == 0)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 107 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_0_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 107 'store' 'store_ln117' <Predicate = (select_ln118_1 == 1 & select_ln118 == 0)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 108 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit9"   --->   Operation 108 'br' 'br_ln0' <Predicate = (select_ln118_1 == 1 & select_ln118 == 0)> <Delay = 0.00>
 ST_3 : Operation 109 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_4_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_4_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 109 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_4_0_addr' <Predicate = (select_ln118_1 == 1 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 0.00>
-ST_3 : Operation 110 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_4_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 110 'store' 'store_ln117' <Predicate = (select_ln118_1 == 1 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 110 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_4_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 110 'store' 'store_ln117' <Predicate = (select_ln118_1 == 1 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 111 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit9"   --->   Operation 111 'br' 'br_ln0' <Predicate = (select_ln118_1 == 1 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 0.00>
 ST_3 : Operation 112 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_3_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_3_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 112 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_3_0_addr' <Predicate = (select_ln118_1 == 0 & select_ln118 == 3)> <Delay = 0.00>
-ST_3 : Operation 113 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_3_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 113 'store' 'store_ln117' <Predicate = (select_ln118_1 == 0 & select_ln118 == 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 113 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_3_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 113 'store' 'store_ln117' <Predicate = (select_ln118_1 == 0 & select_ln118 == 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 114 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit2"   --->   Operation 114 'br' 'br_ln0' <Predicate = (select_ln118_1 == 0 & select_ln118 == 3)> <Delay = 0.00>
 ST_3 : Operation 115 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_2_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_2_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 115 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_2_0_addr' <Predicate = (select_ln118_1 == 0 & select_ln118 == 2)> <Delay = 0.00>
-ST_3 : Operation 116 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_2_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 116 'store' 'store_ln117' <Predicate = (select_ln118_1 == 0 & select_ln118 == 2)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 116 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_2_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 116 'store' 'store_ln117' <Predicate = (select_ln118_1 == 0 & select_ln118 == 2)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 117 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit2"   --->   Operation 117 'br' 'br_ln0' <Predicate = (select_ln118_1 == 0 & select_ln118 == 2)> <Delay = 0.00>
 ST_3 : Operation 118 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_1_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_1_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 118 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_1_0_addr' <Predicate = (select_ln118_1 == 0 & select_ln118 == 1)> <Delay = 0.00>
-ST_3 : Operation 119 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_1_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 119 'store' 'store_ln117' <Predicate = (select_ln118_1 == 0 & select_ln118 == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 119 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_1_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 119 'store' 'store_ln117' <Predicate = (select_ln118_1 == 0 & select_ln118 == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 120 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit2"   --->   Operation 120 'br' 'br_ln0' <Predicate = (select_ln118_1 == 0 & select_ln118 == 1)> <Delay = 0.00>
 ST_3 : Operation 121 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 121 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_addr' <Predicate = (select_ln118_1 == 0 & select_ln118 == 0)> <Delay = 0.00>
-ST_3 : Operation 122 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 122 'store' 'store_ln117' <Predicate = (select_ln118_1 == 0 & select_ln118 == 0)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 122 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 122 'store' 'store_ln117' <Predicate = (select_ln118_1 == 0 & select_ln118 == 0)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 123 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit2"   --->   Operation 123 'br' 'br_ln0' <Predicate = (select_ln118_1 == 0 & select_ln118 == 0)> <Delay = 0.00>
 ST_3 : Operation 124 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_4_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_4_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 124 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_4_0_addr' <Predicate = (select_ln118_1 == 0 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 0.00>
-ST_3 : Operation 125 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_4_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 125 'store' 'store_ln117' <Predicate = (select_ln118_1 == 0 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 125 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_4_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 125 'store' 'store_ln117' <Predicate = (select_ln118_1 == 0 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 126 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit2"   --->   Operation 126 'br' 'br_ln0' <Predicate = (select_ln118_1 == 0 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 0.00>
 ST_3 : Operation 127 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_3_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_3_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 127 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_3_0_addr' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 == 3)> <Delay = 0.00>
-ST_3 : Operation 128 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_3_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 128 'store' 'store_ln117' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 == 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 128 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_3_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 128 'store' 'store_ln117' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 == 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 129 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit30"   --->   Operation 129 'br' 'br_ln0' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 == 3)> <Delay = 0.00>
 ST_3 : Operation 130 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_2_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_2_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 130 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_2_0_addr' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 == 2)> <Delay = 0.00>
-ST_3 : Operation 131 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_2_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 131 'store' 'store_ln117' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 == 2)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 131 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_2_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 131 'store' 'store_ln117' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 == 2)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 132 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit30"   --->   Operation 132 'br' 'br_ln0' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 == 2)> <Delay = 0.00>
 ST_3 : Operation 133 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_1_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_1_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 133 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_1_0_addr' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 == 1)> <Delay = 0.00>
-ST_3 : Operation 134 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_1_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 134 'store' 'store_ln117' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 134 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_1_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 134 'store' 'store_ln117' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 135 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit30"   --->   Operation 135 'br' 'br_ln0' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 == 1)> <Delay = 0.00>
 ST_3 : Operation 136 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_0_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_0_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 136 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_0_0_addr' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 == 0)> <Delay = 0.00>
-ST_3 : Operation 137 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_0_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 137 'store' 'store_ln117' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 == 0)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 137 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_0_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 137 'store' 'store_ln117' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 == 0)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 138 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit30"   --->   Operation 138 'br' 'br_ln0' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 == 0)> <Delay = 0.00>
 ST_3 : Operation 139 [1/1] (0.00ns)   --->   "%p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_4_0_addr = getelementptr i32 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_4_0, i64 0, i64 %zext_ln117" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 139 'getelementptr' 'p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_4_0_addr' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 0.00>
-ST_3 : Operation 140 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_326, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_4_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 140 'store' 'store_ln117' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 140 [1/1] (1.23ns)   --->   "%store_ln117 = store i32 %empty_322, i5 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_4_0_addr" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 140 'store' 'store_ln117' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
 ST_3 : Operation 141 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit30"   --->   Operation 141 'br' 'br_ln0' <Predicate = (select_ln118_1 != 0 & select_ln118_1 != 1 & select_ln118_1 != 2 & select_ln118_1 != 3 & select_ln118 != 0 & select_ln118 != 1 & select_ln118 != 2 & select_ln118 != 3)> <Delay = 0.00>
 ST_3 : Operation 142 [1/1] (0.42ns)   --->   "%store_ln117 = store i6 %select_ln117_1, i6 %bin" [src/conv3.cpp:117->src/conv3.cpp:34]   --->   Operation 142 'store' 'store_ln117' <Predicate = true> <Delay = 0.42>
 ST_3 : Operation 143 [1/1] (0.00ns)   --->   "%br_ln0 = br void %load-store-loop.i"   --->   Operation 143 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
@@ -510,7 +510,7 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ w3]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=4; pingpong=0; private_global=0; IO mode=m_axi:ce=0
+Port [ weights]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=4; pingpong=0; private_global=0; IO mode=m_axi:ce=0
 Port [ sext_ln117]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
 Port [ p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
 Port [ p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_1_0]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
@@ -563,7 +563,7 @@ add_ln117_1                                                        (add         
 br_ln117                                                           (br               ) [ 0000]
 store_ln117                                                        (store            ) [ 0000]
 indvar_flatten_load                                                (load             ) [ 0000]
-w3_addr                                                            (getelementptr    ) [ 0000]
+weights_addr                                                       (getelementptr    ) [ 0000]
 specpipeline_ln0                                                   (specpipeline     ) [ 0000]
 loop_index_i_load                                                  (load             ) [ 0000]
 k_load                                                             (load             ) [ 0000]
@@ -576,7 +576,7 @@ add_ln118                                                          (add         
 or_ln118                                                           (or               ) [ 0000]
 select_ln118                                                       (select           ) [ 0101]
 select_ln118_1                                                     (select           ) [ 0111]
-w3_addr_read                                                       (read             ) [ 0101]
+weights_addr_read                                                  (read             ) [ 0101]
 switch_ln118                                                       (switch           ) [ 0000]
 switch_ln118                                                       (switch           ) [ 0000]
 br_ln0                                                             (br               ) [ 0000]
@@ -603,7 +603,7 @@ zext_ln117                                                         (zext        
 specpipeline_ln0                                                   (specpipeline     ) [ 0000]
 specloopname_ln0                                                   (specloopname     ) [ 0000]
 specpipeline_ln0                                                   (specpipeline     ) [ 0000]
-empty_326                                                          (bitcast          ) [ 0000]
+empty_322                                                          (bitcast          ) [ 0000]
 p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_3_0_addr (getelementptr    ) [ 0000]
 store_ln117                                                        (store            ) [ 0000]
 br_ln0                                                             (br               ) [ 0000]
@@ -687,12 +687,12 @@ ret_ln0                                                            (ret         
 <model>
 
 <comp_list>
-<comp id="0" class="1000" name="w3">
+<comp id="0" class="1000" name="weights">
 <pin_list>
 <pin id="1" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="w3"/></StgValue>
+<StgValue><ssdm name="weights"/></StgValue>
 </bind>
 </comp>
 
@@ -987,7 +987,7 @@ ret_ln0                                                            (ret         
 <pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_34"/></StgValue>
+<StgValue><ssdm name="empty_6"/></StgValue>
 </bind>
 </comp>
 
@@ -1005,7 +1005,7 @@ ret_ln0                                                            (ret         
 <pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_36"/></StgValue>
+<StgValue><ssdm name="empty"/></StgValue>
 </bind>
 </comp>
 
@@ -1023,7 +1023,7 @@ ret_ln0                                                            (ret         
 <pin id="69" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_4"/></StgValue>
+<StgValue><ssdm name="empty_21"/></StgValue>
 </bind>
 </comp>
 
@@ -1032,7 +1032,7 @@ ret_ln0                                                            (ret         
 <pin id="71" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_31"/></StgValue>
+<StgValue><ssdm name="empty_28"/></StgValue>
 </bind>
 </comp>
 
@@ -1319,7 +1319,7 @@ ret_ln0                                                            (ret         
 </bind>
 </comp>
 
-<comp id="146" class="1004" name="w3_addr_read_read_fu_146">
+<comp id="146" class="1004" name="weights_addr_read_read_fu_146">
 <pin_list>
 <pin id="147" dir="0" index="0" bw="32" slack="0"/>
 <pin id="148" dir="0" index="1" bw="32" slack="0"/>
@@ -1327,7 +1327,7 @@ ret_ln0                                                            (ret         
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
-<opset="w3_addr_read/2 "/>
+<opset="weights_addr_read/2 "/>
 </bind>
 </comp>
 
@@ -2110,7 +2110,7 @@ ret_ln0                                                            (ret         
 </bind>
 </comp>
 
-<comp id="528" class="1004" name="w3_addr_fu_528">
+<comp id="528" class="1004" name="weights_addr_fu_528">
 <pin_list>
 <pin id="529" dir="0" index="0" bw="64" slack="0"/>
 <pin id="530" dir="0" index="1" bw="64" slack="1"/>
@@ -2118,7 +2118,7 @@ ret_ln0                                                            (ret         
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="w3_addr/2 "/>
+<opset="weights_addr/2 "/>
 </bind>
 </comp>
 
@@ -2375,14 +2375,14 @@ ret_ln0                                                            (ret         
 </bind>
 </comp>
 
-<comp id="680" class="1004" name="empty_326_fu_680">
+<comp id="680" class="1004" name="empty_322_fu_680">
 <pin_list>
 <pin id="681" dir="0" index="0" bw="32" slack="1"/>
 <pin id="682" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="bitcast(44) " fcode="bitcast"/>
-<opset="empty_326/3 "/>
+<opset="empty_322/3 "/>
 </bind>
 </comp>
 
@@ -2498,13 +2498,13 @@ ret_ln0                                                            (ret         
 </bind>
 </comp>
 
-<comp id="770" class="1005" name="w3_addr_read_reg_770">
+<comp id="770" class="1005" name="weights_addr_read_reg_770">
 <pin_list>
 <pin id="771" dir="0" index="0" bw="32" slack="1"/>
 <pin id="772" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="w3_addr_read "/>
+<opset="weights_addr_read "/>
 </bind>
 </comp>
 
@@ -2942,7 +2942,7 @@ ret_ln0                                                            (ret         
 
 * FSMD analyzer results:
   - Output states:
-	Port: w3 | {}
+	Port: weights | {}
 	Port: p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0 | {3 }
 	Port: p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_1_0 | {3 }
 	Port: p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_2_0 | {3 }
@@ -2969,7 +2969,7 @@ ret_ln0                                                            (ret         
 	Port: p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_3_0 | {3 }
 	Port: p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_4_0 | {3 }
  - Input state : 
-	Port: conv3_Pipeline_WEIGHTI_WEIGHTK_L : w3 | {2 }
+	Port: conv3_Pipeline_WEIGHTI_WEIGHTK_L : weights | {2 }
 	Port: conv3_Pipeline_WEIGHTI_WEIGHTK_L : sext_ln117 | {1 }
 	Port: conv3_Pipeline_WEIGHTI_WEIGHTK_L : p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0 | {}
 	Port: conv3_Pipeline_WEIGHTI_WEIGHTK_L : p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_1_0 | {}
@@ -3018,7 +3018,7 @@ ret_ln0                                                            (ret         
 		or_ln118 : 2
 		select_ln118 : 2
 		select_ln118_1 : 2
-		w3_addr_read : 1
+		weights_addr_read : 1
 		switch_ln118 : 3
 		switch_ln118 : 3
 		switch_ln118 : 3
@@ -3093,62 +3093,62 @@ ret_ln0                                                            (ret         
 ============================================================
 
 * Functional unit list:
-|----------|-----------------------------|---------|---------|
-| Operation|       Functional Unit       |    FF   |   LUT   |
-|----------|-----------------------------|---------|---------|
-|          |      add_ln117_1_fu_514     |    0    |    17   |
-|          |       add_ln118_fu_572      |    0    |    10   |
-|    add   |         empty_fu_600        |    0    |    10   |
-|          |      add_ln118_1_fu_606     |    0    |    13   |
-|          |       add_ln117_fu_638      |    0    |    13   |
-|----------|-----------------------------|---------|---------|
-|          |      icmp_ln117_fu_508      |    0    |    17   |
-|   icmp   |      icmp_ln118_fu_540      |    0    |    13   |
-|          |     exitcond4641_fu_560     |    0    |    10   |
-|----------|-----------------------------|---------|---------|
-|          |     select_ln117_fu_546     |    0    |    3    |
-|          |     select_ln118_fu_584     |    0    |    3    |
-|  select  |    select_ln118_1_fu_592    |    0    |    3    |
-|          |    select_ln118_2_fu_612    |    0    |    6    |
-|          |    select_ln117_1_fu_644    |    0    |    6    |
-|----------|-----------------------------|---------|---------|
-|    xor   |       xor_ln117_fu_554      |    0    |    2    |
-|----------|-----------------------------|---------|---------|
-|    and   |       and_ln117_fu_566      |    0    |    2    |
-|----------|-----------------------------|---------|---------|
-|    or    |       or_ln118_fu_578       |    0    |    2    |
-|----------|-----------------------------|---------|---------|
-|   read   | sext_ln117_read_read_fu_140 |    0    |    0    |
-|          |   w3_addr_read_read_fu_146  |    0    |    0    |
-|----------|-----------------------------|---------|---------|
-|   sext   |    sext_ln117_cast_fu_476   |    0    |    0    |
-|----------|-----------------------------|---------|---------|
-|   zext   |      zext_ln117_fu_651      |    0    |    0    |
-|----------|-----------------------------|---------|---------|
-|   Total  |                             |    0    |   130   |
-|----------|-----------------------------|---------|---------|
+|----------|-------------------------------|---------|---------|
+| Operation|        Functional Unit        |    FF   |   LUT   |
+|----------|-------------------------------|---------|---------|
+|          |       add_ln117_1_fu_514      |    0    |    17   |
+|          |        add_ln118_fu_572       |    0    |    10   |
+|    add   |          empty_fu_600         |    0    |    10   |
+|          |       add_ln118_1_fu_606      |    0    |    13   |
+|          |        add_ln117_fu_638       |    0    |    13   |
+|----------|-------------------------------|---------|---------|
+|          |       icmp_ln117_fu_508       |    0    |    17   |
+|   icmp   |       icmp_ln118_fu_540       |    0    |    13   |
+|          |      exitcond4641_fu_560      |    0    |    10   |
+|----------|-------------------------------|---------|---------|
+|          |      select_ln117_fu_546      |    0    |    3    |
+|          |      select_ln118_fu_584      |    0    |    3    |
+|  select  |     select_ln118_1_fu_592     |    0    |    3    |
+|          |     select_ln118_2_fu_612     |    0    |    6    |
+|          |     select_ln117_1_fu_644     |    0    |    6    |
+|----------|-------------------------------|---------|---------|
+|    xor   |        xor_ln117_fu_554       |    0    |    2    |
+|----------|-------------------------------|---------|---------|
+|    and   |        and_ln117_fu_566       |    0    |    2    |
+|----------|-------------------------------|---------|---------|
+|    or    |        or_ln118_fu_578        |    0    |    2    |
+|----------|-------------------------------|---------|---------|
+|   read   |  sext_ln117_read_read_fu_140  |    0    |    0    |
+|          | weights_addr_read_read_fu_146 |    0    |    0    |
+|----------|-------------------------------|---------|---------|
+|   sext   |     sext_ln117_cast_fu_476    |    0    |    0    |
+|----------|-------------------------------|---------|---------|
+|   zext   |       zext_ln117_fu_651       |    0    |    0    |
+|----------|-------------------------------|---------|---------|
+|   Total  |                               |    0    |   130   |
+|----------|-------------------------------|---------|---------|
 
 Memories:
 N/A
 
 * Register list:
-+------------------------+--------+
-|                        |   FF   |
-+------------------------+--------+
-|       bin_reg_734      |    6   |
-|   icmp_ln117_reg_753   |    1   |
-|   icmp_ln118_reg_757   |    1   |
-|indvar_flatten35_reg_741|   10   |
-| indvar_flatten_reg_727 |    6   |
-|        k_reg_720       |    3   |
-|  loop_index_i_reg_713  |    3   |
-| select_ln118_1_reg_766 |    3   |
-|  select_ln118_reg_762  |    3   |
-| sext_ln117_cast_reg_748|   64   |
-|  w3_addr_read_reg_770  |   32   |
-+------------------------+--------+
-|          Total         |   132  |
-+------------------------+--------+
++-------------------------+--------+
+|                         |   FF   |
++-------------------------+--------+
+|       bin_reg_734       |    6   |
+|    icmp_ln117_reg_753   |    1   |
+|    icmp_ln118_reg_757   |    1   |
+| indvar_flatten35_reg_741|   10   |
+|  indvar_flatten_reg_727 |    6   |
+|        k_reg_720        |    3   |
+|   loop_index_i_reg_713  |    3   |
+|  select_ln118_1_reg_766 |    3   |
+|   select_ln118_reg_762  |    3   |
+| sext_ln117_cast_reg_748 |   64   |
+|weights_addr_read_reg_770|   32   |
++-------------------------+--------+
+|          Total          |   132  |
++-------------------------+--------+
 
 * Multiplexer (MUX) list: 
 |--------|------|------|------|--------|

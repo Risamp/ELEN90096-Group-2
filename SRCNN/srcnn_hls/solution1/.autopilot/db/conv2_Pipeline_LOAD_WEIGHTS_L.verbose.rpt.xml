@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2_Pipeline_LOAD_WEIGHTS_L'" level="0">
-<item name = "Date">Sun Nov  5 11:02:46 2023
+<item name = "Date">Mon Nov  6 16:28:59 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -80,7 +80,7 @@
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="add_ln93_1_fu_128_p2">+, 0, 0, 16, 9, 1</column>
 <column name="add_ln93_fu_151_p2">+, 0, 0, 10, 3, 1</column>
-<column name="empty_341_fu_200_p2">+, 0, 0, 14, 7, 1</column>
+<column name="empty_337_fu_200_p2">+, 0, 0, 14, 7, 1</column>
 <column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state2_pp0_stage0_iter1">and, 0, 0, 2, 1, 1</column>
 <column name="exitcond3011500_fu_157_p2">icmp, 0, 0, 15, 7, 8</column>
@@ -98,7 +98,7 @@
 <column name="bout_fu_68">9, 2, 3, 6</column>
 <column name="indvar_flatten24_fu_72">9, 2, 9, 18</column>
 <column name="loop_index_i16_fu_64">9, 2, 7, 14</column>
-<column name="w2_blk_n_R">9, 2, 1, 2</column>
+<column name="weights_blk_n_R">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -112,7 +112,7 @@
 <column name="icmp_ln93_reg_242">1, 0, 1, 0</column>
 <column name="indvar_flatten24_fu_72">9, 0, 9, 0</column>
 <column name="loop_index_i16_fu_64">7, 0, 7, 0</column>
-<column name="w2_addr_read_reg_246">32, 0, 32, 0</column>
+<column name="weights_addr_read_reg_246">32, 0, 32, 0</column>
 </table>
 </item>
 </section>
@@ -128,52 +128,52 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, conv2_Pipeline_LOAD_WEIGHTS_L, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv2_Pipeline_LOAD_WEIGHTS_L, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv2_Pipeline_LOAD_WEIGHTS_L, return value</column>
-<column name="m_axi_w2_AWVALID">out, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_AWREADY">in, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_AWADDR">out, 64, m_axi, w2, pointer</column>
-<column name="m_axi_w2_AWID">out, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_AWLEN">out, 32, m_axi, w2, pointer</column>
-<column name="m_axi_w2_AWSIZE">out, 3, m_axi, w2, pointer</column>
-<column name="m_axi_w2_AWBURST">out, 2, m_axi, w2, pointer</column>
-<column name="m_axi_w2_AWLOCK">out, 2, m_axi, w2, pointer</column>
-<column name="m_axi_w2_AWCACHE">out, 4, m_axi, w2, pointer</column>
-<column name="m_axi_w2_AWPROT">out, 3, m_axi, w2, pointer</column>
-<column name="m_axi_w2_AWQOS">out, 4, m_axi, w2, pointer</column>
-<column name="m_axi_w2_AWREGION">out, 4, m_axi, w2, pointer</column>
-<column name="m_axi_w2_AWUSER">out, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_WVALID">out, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_WREADY">in, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_WDATA">out, 32, m_axi, w2, pointer</column>
-<column name="m_axi_w2_WSTRB">out, 4, m_axi, w2, pointer</column>
-<column name="m_axi_w2_WLAST">out, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_WID">out, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_WUSER">out, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_ARVALID">out, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_ARREADY">in, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_ARADDR">out, 64, m_axi, w2, pointer</column>
-<column name="m_axi_w2_ARID">out, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_ARLEN">out, 32, m_axi, w2, pointer</column>
-<column name="m_axi_w2_ARSIZE">out, 3, m_axi, w2, pointer</column>
-<column name="m_axi_w2_ARBURST">out, 2, m_axi, w2, pointer</column>
-<column name="m_axi_w2_ARLOCK">out, 2, m_axi, w2, pointer</column>
-<column name="m_axi_w2_ARCACHE">out, 4, m_axi, w2, pointer</column>
-<column name="m_axi_w2_ARPROT">out, 3, m_axi, w2, pointer</column>
-<column name="m_axi_w2_ARQOS">out, 4, m_axi, w2, pointer</column>
-<column name="m_axi_w2_ARREGION">out, 4, m_axi, w2, pointer</column>
-<column name="m_axi_w2_ARUSER">out, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_RVALID">in, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_RREADY">out, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_RDATA">in, 32, m_axi, w2, pointer</column>
-<column name="m_axi_w2_RLAST">in, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_RID">in, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_RFIFONUM">in, 13, m_axi, w2, pointer</column>
-<column name="m_axi_w2_RUSER">in, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_RRESP">in, 2, m_axi, w2, pointer</column>
-<column name="m_axi_w2_BVALID">in, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_BREADY">out, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_BRESP">in, 2, m_axi, w2, pointer</column>
-<column name="m_axi_w2_BID">in, 1, m_axi, w2, pointer</column>
-<column name="m_axi_w2_BUSER">in, 1, m_axi, w2, pointer</column>
+<column name="m_axi_weights_AWVALID">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWREADY">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWADDR">out, 64, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWID">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWLEN">out, 32, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWSIZE">out, 3, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWBURST">out, 2, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWLOCK">out, 2, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWCACHE">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWPROT">out, 3, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWQOS">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWREGION">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWUSER">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WVALID">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WREADY">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WDATA">out, 32, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WSTRB">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WLAST">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WID">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WUSER">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARVALID">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARREADY">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARADDR">out, 64, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARID">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARLEN">out, 32, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARSIZE">out, 3, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARBURST">out, 2, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARLOCK">out, 2, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARCACHE">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARPROT">out, 3, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARQOS">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARREGION">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARUSER">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RVALID">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RREADY">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RDATA">in, 32, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RLAST">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RID">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RFIFONUM">in, 13, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RUSER">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RRESP">in, 2, m_axi, weights, pointer</column>
+<column name="m_axi_weights_BVALID">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_BREADY">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_BRESP">in, 2, m_axi, weights, pointer</column>
+<column name="m_axi_weights_BID">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_BUSER">in, 1, m_axi, weights, pointer</column>
 <column name="sext_ln36">in, 62, ap_none, sext_ln36, scalar</column>
 <column name="weight_buffer_address0">out, 8, ap_memory, weight_buffer, array</column>
 <column name="weight_buffer_ce0">out, 1, ap_memory, weight_buffer, array</column>

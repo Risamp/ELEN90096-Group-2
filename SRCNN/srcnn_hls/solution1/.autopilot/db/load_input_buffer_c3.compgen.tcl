@@ -42,14 +42,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 383 \
-    name i3 \
+    name bundle_1 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_i3 \
+    corename dc_bundle_1 \
     op interface \
-    ports { m_axi_i3_AWVALID { O 1 bit } m_axi_i3_AWREADY { I 1 bit } m_axi_i3_AWADDR { O 64 vector } m_axi_i3_AWID { O 1 vector } m_axi_i3_AWLEN { O 32 vector } m_axi_i3_AWSIZE { O 3 vector } m_axi_i3_AWBURST { O 2 vector } m_axi_i3_AWLOCK { O 2 vector } m_axi_i3_AWCACHE { O 4 vector } m_axi_i3_AWPROT { O 3 vector } m_axi_i3_AWQOS { O 4 vector } m_axi_i3_AWREGION { O 4 vector } m_axi_i3_AWUSER { O 1 vector } m_axi_i3_WVALID { O 1 bit } m_axi_i3_WREADY { I 1 bit } m_axi_i3_WDATA { O 32 vector } m_axi_i3_WSTRB { O 4 vector } m_axi_i3_WLAST { O 1 bit } m_axi_i3_WID { O 1 vector } m_axi_i3_WUSER { O 1 vector } m_axi_i3_ARVALID { O 1 bit } m_axi_i3_ARREADY { I 1 bit } m_axi_i3_ARADDR { O 64 vector } m_axi_i3_ARID { O 1 vector } m_axi_i3_ARLEN { O 32 vector } m_axi_i3_ARSIZE { O 3 vector } m_axi_i3_ARBURST { O 2 vector } m_axi_i3_ARLOCK { O 2 vector } m_axi_i3_ARCACHE { O 4 vector } m_axi_i3_ARPROT { O 3 vector } m_axi_i3_ARQOS { O 4 vector } m_axi_i3_ARREGION { O 4 vector } m_axi_i3_ARUSER { O 1 vector } m_axi_i3_RVALID { I 1 bit } m_axi_i3_RREADY { O 1 bit } m_axi_i3_RDATA { I 32 vector } m_axi_i3_RLAST { I 1 bit } m_axi_i3_RID { I 1 vector } m_axi_i3_RFIFONUM { I 13 vector } m_axi_i3_RUSER { I 1 vector } m_axi_i3_RRESP { I 2 vector } m_axi_i3_BVALID { I 1 bit } m_axi_i3_BREADY { O 1 bit } m_axi_i3_BRESP { I 2 vector } m_axi_i3_BID { I 1 vector } m_axi_i3_BUSER { I 1 vector } } \
+    ports { m_axi_bundle_1_AWVALID { O 1 bit } m_axi_bundle_1_AWREADY { I 1 bit } m_axi_bundle_1_AWADDR { O 64 vector } m_axi_bundle_1_AWID { O 1 vector } m_axi_bundle_1_AWLEN { O 32 vector } m_axi_bundle_1_AWSIZE { O 3 vector } m_axi_bundle_1_AWBURST { O 2 vector } m_axi_bundle_1_AWLOCK { O 2 vector } m_axi_bundle_1_AWCACHE { O 4 vector } m_axi_bundle_1_AWPROT { O 3 vector } m_axi_bundle_1_AWQOS { O 4 vector } m_axi_bundle_1_AWREGION { O 4 vector } m_axi_bundle_1_AWUSER { O 1 vector } m_axi_bundle_1_WVALID { O 1 bit } m_axi_bundle_1_WREADY { I 1 bit } m_axi_bundle_1_WDATA { O 32 vector } m_axi_bundle_1_WSTRB { O 4 vector } m_axi_bundle_1_WLAST { O 1 bit } m_axi_bundle_1_WID { O 1 vector } m_axi_bundle_1_WUSER { O 1 vector } m_axi_bundle_1_ARVALID { O 1 bit } m_axi_bundle_1_ARREADY { I 1 bit } m_axi_bundle_1_ARADDR { O 64 vector } m_axi_bundle_1_ARID { O 1 vector } m_axi_bundle_1_ARLEN { O 32 vector } m_axi_bundle_1_ARSIZE { O 3 vector } m_axi_bundle_1_ARBURST { O 2 vector } m_axi_bundle_1_ARLOCK { O 2 vector } m_axi_bundle_1_ARCACHE { O 4 vector } m_axi_bundle_1_ARPROT { O 3 vector } m_axi_bundle_1_ARQOS { O 4 vector } m_axi_bundle_1_ARREGION { O 4 vector } m_axi_bundle_1_ARUSER { O 1 vector } m_axi_bundle_1_RVALID { I 1 bit } m_axi_bundle_1_RREADY { O 1 bit } m_axi_bundle_1_RDATA { I 32 vector } m_axi_bundle_1_RLAST { I 1 bit } m_axi_bundle_1_RID { I 1 vector } m_axi_bundle_1_RFIFONUM { I 13 vector } m_axi_bundle_1_RUSER { I 1 vector } m_axi_bundle_1_RRESP { I 2 vector } m_axi_bundle_1_BVALID { I 1 bit } m_axi_bundle_1_BREADY { O 1 bit } m_axi_bundle_1_BRESP { I 2 vector } m_axi_bundle_1_BID { I 1 vector } m_axi_bundle_1_BUSER { I 1 vector } } \
 } "
 }
 

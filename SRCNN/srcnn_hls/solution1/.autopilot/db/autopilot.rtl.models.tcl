@@ -93,14 +93,10 @@ set SynModuleInfo {
   }
   {SRCNAME srcnn MODELNAME srcnn RTLNAME srcnn IS_TOP 1
     SUBMODULES {
-      {MODELNAME srcnn_i1_m_axi RTLNAME srcnn_i1_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
-      {MODELNAME srcnn_w1_m_axi RTLNAME srcnn_w1_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
-      {MODELNAME srcnn_gmem_m_axi RTLNAME srcnn_gmem_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
-      {MODELNAME srcnn_i2_m_axi RTLNAME srcnn_i2_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
-      {MODELNAME srcnn_w2_m_axi RTLNAME srcnn_w2_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
-      {MODELNAME srcnn_i3_m_axi RTLNAME srcnn_i3_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
-      {MODELNAME srcnn_w3_m_axi RTLNAME srcnn_w3_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
-      {MODELNAME srcnn_o_m_axi RTLNAME srcnn_o_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
+      {MODELNAME srcnn_bundle_1_m_axi RTLNAME srcnn_bundle_1_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
+      {MODELNAME srcnn_weights_m_axi RTLNAME srcnn_weights_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
+      {MODELNAME srcnn_biases_m_axi RTLNAME srcnn_biases_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
+      {MODELNAME srcnn_bundle_2_m_axi RTLNAME srcnn_bundle_2_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
       {MODELNAME srcnn_control_s_axi RTLNAME srcnn_control_s_axi BINDTYPE interface TYPE interface_s_axilite}
     }
   }

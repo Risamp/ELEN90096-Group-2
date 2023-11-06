@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_COL'
 ================================================================
-* Date:           Sun Nov  5 11:02:10 2023
+* Date:           Mon Nov  6 16:28:11 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -692,12 +692,12 @@ ST_19 : Operation 493 [3/3] (5.25ns)   --->   "%mul_1_4_4 = fmul i32 %p_ZZ5conv3
 
 State 20 <SV = 19> <Delay = 7.01>
 ST_20 : Operation 494 [1/1] (0.00ns)   --->   "%zext_ln54 = zext i8 %c" [src/conv3.cpp:54]   --->   Operation 494 'zext' 'zext_ln54' <Predicate = true> <Delay = 0.00>
-ST_20 : Operation 495 [1/1] (0.78ns)   --->   "%empty_327 = add i10 %tmp_24, i10 %zext_ln54" [src/conv3.cpp:54]   --->   Operation 495 'add' 'empty_327' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_20 : Operation 496 [1/1] (0.00ns)   --->   "%p_cast = zext i10 %empty_327" [src/conv3.cpp:54]   --->   Operation 496 'zext' 'p_cast' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 495 [1/1] (0.78ns)   --->   "%empty_323 = add i10 %tmp_24, i10 %zext_ln54" [src/conv3.cpp:54]   --->   Operation 495 'add' 'empty_323' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 496 [1/1] (0.00ns)   --->   "%p_cast = zext i10 %empty_323" [src/conv3.cpp:54]   --->   Operation 496 'zext' 'p_cast' <Predicate = true> <Delay = 0.00>
 ST_20 : Operation 497 [1/1] (0.00ns)   --->   "%output_fm_buffer_0_addr = getelementptr i32 %output_fm_buffer_0, i64 0, i64 %p_cast" [src/conv3.cpp:54]   --->   Operation 497 'getelementptr' 'output_fm_buffer_0_addr' <Predicate = true> <Delay = 0.00>
 ST_20 : Operation 498 [1/1] (0.00ns)   --->   "%zext_ln54_7 = zext i8 %or_ln52" [src/conv3.cpp:54]   --->   Operation 498 'zext' 'zext_ln54_7' <Predicate = true> <Delay = 0.00>
-ST_20 : Operation 499 [1/1] (0.78ns)   --->   "%empty_328 = add i10 %tmp_24, i10 %zext_ln54_7" [src/conv3.cpp:54]   --->   Operation 499 'add' 'empty_328' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_20 : Operation 500 [1/1] (0.00ns)   --->   "%p_cast4 = zext i10 %empty_328" [src/conv3.cpp:54]   --->   Operation 500 'zext' 'p_cast4' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 499 [1/1] (0.78ns)   --->   "%empty_324 = add i10 %tmp_24, i10 %zext_ln54_7" [src/conv3.cpp:54]   --->   Operation 499 'add' 'empty_324' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 500 [1/1] (0.00ns)   --->   "%p_cast4 = zext i10 %empty_324" [src/conv3.cpp:54]   --->   Operation 500 'zext' 'p_cast4' <Predicate = true> <Delay = 0.00>
 ST_20 : Operation 501 [1/1] (0.00ns)   --->   "%output_fm_buffer_0_addr_1 = getelementptr i32 %output_fm_buffer_0, i64 0, i64 %p_cast4" [src/conv3.cpp:54]   --->   Operation 501 'getelementptr' 'output_fm_buffer_0_addr_1' <Predicate = true> <Delay = 0.00>
 ST_20 : Operation 502 [2/4] (6.43ns)   --->   "%tmp_3 = fadd i32 %tmp_2, i32 %mul_0_6" [src/conv3.cpp:54]   --->   Operation 502 'fadd' 'tmp_3' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 ST_20 : Operation 503 [2/2] (1.23ns)   --->   "%output_fm_buffer_0_load = load i10 %output_fm_buffer_0_addr" [src/conv3.cpp:57]   --->   Operation 503 'load' 'output_fm_buffer_0_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 765> <RAM>
@@ -932,8 +932,8 @@ ST_45 : Operation 650 [1/4] (6.43ns)   --->   "%add53_0_4 = fadd i32 %add53_0_3,
 ST_45 : Operation 651 [1/4] (6.43ns)   --->   "%add53_1_4 = fadd i32 %add53_1_3, i32 %tmp_50" [src/conv3.cpp:57]   --->   Operation 651 'fadd' 'add53_1_4' <Predicate = (!icmp_ln41)> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 46 <SV = 45> <Delay = 1.23>
-ST_46 : Operation 652 [1/1] (0.00ns)   --->   "%specpipeline_ln43 = specpipeline void @_ssdm_op_SpecPipeline, i32 19, i32 0, i32 0, i32 0, void @empty_36" [src/conv3.cpp:43]   --->   Operation 652 'specpipeline' 'specpipeline_ln43' <Predicate = true> <Delay = 0.00>
-ST_46 : Operation 653 [1/1] (0.00ns)   --->   "%specloopname_ln41 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [src/conv3.cpp:41]   --->   Operation 653 'specloopname' 'specloopname_ln41' <Predicate = true> <Delay = 0.00>
+ST_46 : Operation 652 [1/1] (0.00ns)   --->   "%specpipeline_ln43 = specpipeline void @_ssdm_op_SpecPipeline, i32 19, i32 0, i32 0, i32 0, void @empty" [src/conv3.cpp:43]   --->   Operation 652 'specpipeline' 'specpipeline_ln43' <Predicate = true> <Delay = 0.00>
+ST_46 : Operation 653 [1/1] (0.00ns)   --->   "%specloopname_ln41 = specloopname void @_ssdm_op_SpecLoopName, void @empty_35" [src/conv3.cpp:41]   --->   Operation 653 'specloopname' 'specloopname_ln41' <Predicate = true> <Delay = 0.00>
 ST_46 : Operation 654 [1/1] (1.23ns)   --->   "%store_ln57 = store i32 %add53_0_4, i10 %output_fm_buffer_0_addr" [src/conv3.cpp:57]   --->   Operation 654 'store' 'store_ln57' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 765> <RAM>
 ST_46 : Operation 655 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 127, i64 127, i64 127"   --->   Operation 655 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
 ST_46 : Operation 656 [1/1] (1.23ns)   --->   "%store_ln57 = store i32 %add53_1_4, i10 %output_fm_buffer_0_addr_1" [src/conv3.cpp:57]   --->   Operation 656 'store' 'store_ln57' <Predicate = (!icmp_ln41)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 765> <RAM>

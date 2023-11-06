@@ -13,52 +13,52 @@ module srcnn_conv2_Pipeline_7 (
         ap_done,
         ap_idle,
         ap_ready,
-        m_axi_i3_AWVALID,
-        m_axi_i3_AWREADY,
-        m_axi_i3_AWADDR,
-        m_axi_i3_AWID,
-        m_axi_i3_AWLEN,
-        m_axi_i3_AWSIZE,
-        m_axi_i3_AWBURST,
-        m_axi_i3_AWLOCK,
-        m_axi_i3_AWCACHE,
-        m_axi_i3_AWPROT,
-        m_axi_i3_AWQOS,
-        m_axi_i3_AWREGION,
-        m_axi_i3_AWUSER,
-        m_axi_i3_WVALID,
-        m_axi_i3_WREADY,
-        m_axi_i3_WDATA,
-        m_axi_i3_WSTRB,
-        m_axi_i3_WLAST,
-        m_axi_i3_WID,
-        m_axi_i3_WUSER,
-        m_axi_i3_ARVALID,
-        m_axi_i3_ARREADY,
-        m_axi_i3_ARADDR,
-        m_axi_i3_ARID,
-        m_axi_i3_ARLEN,
-        m_axi_i3_ARSIZE,
-        m_axi_i3_ARBURST,
-        m_axi_i3_ARLOCK,
-        m_axi_i3_ARCACHE,
-        m_axi_i3_ARPROT,
-        m_axi_i3_ARQOS,
-        m_axi_i3_ARREGION,
-        m_axi_i3_ARUSER,
-        m_axi_i3_RVALID,
-        m_axi_i3_RREADY,
-        m_axi_i3_RDATA,
-        m_axi_i3_RLAST,
-        m_axi_i3_RID,
-        m_axi_i3_RFIFONUM,
-        m_axi_i3_RUSER,
-        m_axi_i3_RRESP,
-        m_axi_i3_BVALID,
-        m_axi_i3_BREADY,
-        m_axi_i3_BRESP,
-        m_axi_i3_BID,
-        m_axi_i3_BUSER,
+        m_axi_bundle_1_AWVALID,
+        m_axi_bundle_1_AWREADY,
+        m_axi_bundle_1_AWADDR,
+        m_axi_bundle_1_AWID,
+        m_axi_bundle_1_AWLEN,
+        m_axi_bundle_1_AWSIZE,
+        m_axi_bundle_1_AWBURST,
+        m_axi_bundle_1_AWLOCK,
+        m_axi_bundle_1_AWCACHE,
+        m_axi_bundle_1_AWPROT,
+        m_axi_bundle_1_AWQOS,
+        m_axi_bundle_1_AWREGION,
+        m_axi_bundle_1_AWUSER,
+        m_axi_bundle_1_WVALID,
+        m_axi_bundle_1_WREADY,
+        m_axi_bundle_1_WDATA,
+        m_axi_bundle_1_WSTRB,
+        m_axi_bundle_1_WLAST,
+        m_axi_bundle_1_WID,
+        m_axi_bundle_1_WUSER,
+        m_axi_bundle_1_ARVALID,
+        m_axi_bundle_1_ARREADY,
+        m_axi_bundle_1_ARADDR,
+        m_axi_bundle_1_ARID,
+        m_axi_bundle_1_ARLEN,
+        m_axi_bundle_1_ARSIZE,
+        m_axi_bundle_1_ARBURST,
+        m_axi_bundle_1_ARLOCK,
+        m_axi_bundle_1_ARCACHE,
+        m_axi_bundle_1_ARPROT,
+        m_axi_bundle_1_ARQOS,
+        m_axi_bundle_1_ARREGION,
+        m_axi_bundle_1_ARUSER,
+        m_axi_bundle_1_RVALID,
+        m_axi_bundle_1_RREADY,
+        m_axi_bundle_1_RDATA,
+        m_axi_bundle_1_RLAST,
+        m_axi_bundle_1_RID,
+        m_axi_bundle_1_RFIFONUM,
+        m_axi_bundle_1_RUSER,
+        m_axi_bundle_1_RRESP,
+        m_axi_bundle_1_BVALID,
+        m_axi_bundle_1_BREADY,
+        m_axi_bundle_1_BRESP,
+        m_axi_bundle_1_BID,
+        m_axi_bundle_1_BUSER,
         sext_ln122_1,
         mul_ln115_1,
         conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_address0,
@@ -80,52 +80,52 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-output   m_axi_i3_AWVALID;
-input   m_axi_i3_AWREADY;
-output  [63:0] m_axi_i3_AWADDR;
-output  [0:0] m_axi_i3_AWID;
-output  [31:0] m_axi_i3_AWLEN;
-output  [2:0] m_axi_i3_AWSIZE;
-output  [1:0] m_axi_i3_AWBURST;
-output  [1:0] m_axi_i3_AWLOCK;
-output  [3:0] m_axi_i3_AWCACHE;
-output  [2:0] m_axi_i3_AWPROT;
-output  [3:0] m_axi_i3_AWQOS;
-output  [3:0] m_axi_i3_AWREGION;
-output  [0:0] m_axi_i3_AWUSER;
-output   m_axi_i3_WVALID;
-input   m_axi_i3_WREADY;
-output  [31:0] m_axi_i3_WDATA;
-output  [3:0] m_axi_i3_WSTRB;
-output   m_axi_i3_WLAST;
-output  [0:0] m_axi_i3_WID;
-output  [0:0] m_axi_i3_WUSER;
-output   m_axi_i3_ARVALID;
-input   m_axi_i3_ARREADY;
-output  [63:0] m_axi_i3_ARADDR;
-output  [0:0] m_axi_i3_ARID;
-output  [31:0] m_axi_i3_ARLEN;
-output  [2:0] m_axi_i3_ARSIZE;
-output  [1:0] m_axi_i3_ARBURST;
-output  [1:0] m_axi_i3_ARLOCK;
-output  [3:0] m_axi_i3_ARCACHE;
-output  [2:0] m_axi_i3_ARPROT;
-output  [3:0] m_axi_i3_ARQOS;
-output  [3:0] m_axi_i3_ARREGION;
-output  [0:0] m_axi_i3_ARUSER;
-input   m_axi_i3_RVALID;
-output   m_axi_i3_RREADY;
-input  [31:0] m_axi_i3_RDATA;
-input   m_axi_i3_RLAST;
-input  [0:0] m_axi_i3_RID;
-input  [12:0] m_axi_i3_RFIFONUM;
-input  [0:0] m_axi_i3_RUSER;
-input  [1:0] m_axi_i3_RRESP;
-input   m_axi_i3_BVALID;
-output   m_axi_i3_BREADY;
-input  [1:0] m_axi_i3_BRESP;
-input  [0:0] m_axi_i3_BID;
-input  [0:0] m_axi_i3_BUSER;
+output   m_axi_bundle_1_AWVALID;
+input   m_axi_bundle_1_AWREADY;
+output  [63:0] m_axi_bundle_1_AWADDR;
+output  [0:0] m_axi_bundle_1_AWID;
+output  [31:0] m_axi_bundle_1_AWLEN;
+output  [2:0] m_axi_bundle_1_AWSIZE;
+output  [1:0] m_axi_bundle_1_AWBURST;
+output  [1:0] m_axi_bundle_1_AWLOCK;
+output  [3:0] m_axi_bundle_1_AWCACHE;
+output  [2:0] m_axi_bundle_1_AWPROT;
+output  [3:0] m_axi_bundle_1_AWQOS;
+output  [3:0] m_axi_bundle_1_AWREGION;
+output  [0:0] m_axi_bundle_1_AWUSER;
+output   m_axi_bundle_1_WVALID;
+input   m_axi_bundle_1_WREADY;
+output  [31:0] m_axi_bundle_1_WDATA;
+output  [3:0] m_axi_bundle_1_WSTRB;
+output   m_axi_bundle_1_WLAST;
+output  [0:0] m_axi_bundle_1_WID;
+output  [0:0] m_axi_bundle_1_WUSER;
+output   m_axi_bundle_1_ARVALID;
+input   m_axi_bundle_1_ARREADY;
+output  [63:0] m_axi_bundle_1_ARADDR;
+output  [0:0] m_axi_bundle_1_ARID;
+output  [31:0] m_axi_bundle_1_ARLEN;
+output  [2:0] m_axi_bundle_1_ARSIZE;
+output  [1:0] m_axi_bundle_1_ARBURST;
+output  [1:0] m_axi_bundle_1_ARLOCK;
+output  [3:0] m_axi_bundle_1_ARCACHE;
+output  [2:0] m_axi_bundle_1_ARPROT;
+output  [3:0] m_axi_bundle_1_ARQOS;
+output  [3:0] m_axi_bundle_1_ARREGION;
+output  [0:0] m_axi_bundle_1_ARUSER;
+input   m_axi_bundle_1_RVALID;
+output   m_axi_bundle_1_RREADY;
+input  [31:0] m_axi_bundle_1_RDATA;
+input   m_axi_bundle_1_RLAST;
+input  [0:0] m_axi_bundle_1_RID;
+input  [12:0] m_axi_bundle_1_RFIFONUM;
+input  [0:0] m_axi_bundle_1_RUSER;
+input  [1:0] m_axi_bundle_1_RRESP;
+input   m_axi_bundle_1_BVALID;
+output   m_axi_bundle_1_BREADY;
+input  [1:0] m_axi_bundle_1_BRESP;
+input  [0:0] m_axi_bundle_1_BID;
+input  [0:0] m_axi_bundle_1_BUSER;
 input  [61:0] sext_ln122_1;
 input  [9:0] mul_ln115_1;
 output  [9:0] conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_address0;
@@ -139,7 +139,7 @@ output   conv2_float_255_255_float_64_1_1_float_float_255_255_o_ce0;
 input  [31:0] conv2_float_255_255_float_64_1_1_float_float_255_255_o_q0;
 
 reg ap_idle;
-reg m_axi_i3_WVALID;
+reg m_axi_bundle_1_WVALID;
 reg conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_ce0;
 reg conv2_float_255_255_float_64_1_1_float_float_255_255_o_1_ce0;
 reg conv2_float_255_255_float_64_1_1_float_float_255_255_o_ce0;
@@ -158,7 +158,7 @@ wire   [0:0] exitcond5820_fu_163_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-reg    i3_blk_n_W;
+reg    bundle_1_blk_n_W;
 wire    ap_block_pp0_stage0;
 reg    ap_block_pp0_stage0_11001;
 reg   [0:0] exitcond5820_reg_296;
@@ -177,9 +177,9 @@ reg   [7:0] loop_index_1_i_fu_78;
 wire   [7:0] empty_fu_169_p2;
 reg   [7:0] ap_sig_allocacmp_loop_index_1_i_load;
 wire   [7:0] next_urem522_fu_178_p2;
-wire   [0:0] empty_349_fu_184_p2;
+wire   [0:0] empty_345_fu_184_p2;
 wire   [9:0] phi_urem521_cast_fu_198_p1;
-wire   [9:0] empty_350_fu_202_p2;
+wire   [9:0] empty_346_fu_202_p2;
 wire   [1:0] tmp_8_fu_249_p4;
 reg    ap_done_reg;
 wire    ap_continue_int;
@@ -379,6 +379,14 @@ always @ (*) begin
 end
 
 always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+        bundle_1_blk_n_W = m_axi_bundle_1_WREADY;
+    end else begin
+        bundle_1_blk_n_W = 1'b1;
+    end
+end
+
+always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         conv2_float_255_255_float_64_1_1_float_float_255_255_o_1_ce0 = 1'b1;
     end else begin
@@ -403,18 +411,10 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-        i3_blk_n_W = m_axi_i3_WREADY;
-    end else begin
-        i3_blk_n_W = 1'b1;
-    end
-end
-
-always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-        m_axi_i3_WVALID = 1'b1;
+        m_axi_bundle_1_WVALID = 1'b1;
     end else begin
-        m_axi_i3_WVALID = 1'b0;
+        m_axi_bundle_1_WVALID = 1'b0;
     end
 end
 
@@ -436,11 +436,11 @@ assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 assign ap_block_pp0_stage0_01001 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001 = ((m_axi_i3_WREADY == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b1));
+    ap_block_pp0_stage0_11001 = ((m_axi_bundle_1_WREADY == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_subdone = ((m_axi_i3_WREADY == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b1));
+    ap_block_pp0_stage0_subdone = ((m_axi_bundle_1_WREADY == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b1));
 end
 
 assign ap_block_state1_pp0_stage0_iter0 = ~(1'b1 == 1'b1);
@@ -461,83 +461,83 @@ assign conv2_float_255_255_float_64_1_1_float_float_255_255_o_2_address0 = p_cas
 
 assign conv2_float_255_255_float_64_1_1_float_float_255_255_o_address0 = p_cast_fu_208_p1;
 
-assign empty_349_fu_184_p2 = ((next_urem522_fu_178_p2 < 8'd85) ? 1'b1 : 1'b0);
+assign empty_345_fu_184_p2 = ((next_urem522_fu_178_p2 < 8'd85) ? 1'b1 : 1'b0);
 
-assign empty_350_fu_202_p2 = (mul_ln115_1 + phi_urem521_cast_fu_198_p1);
+assign empty_346_fu_202_p2 = (mul_ln115_1 + phi_urem521_cast_fu_198_p1);
 
 assign empty_fu_169_p2 = (ap_sig_allocacmp_loop_index_1_i_load + 8'd1);
 
 assign exitcond5820_fu_163_p2 = ((ap_sig_allocacmp_loop_index_1_i_load == 8'd255) ? 1'b1 : 1'b0);
 
-assign idx_urem523_fu_190_p3 = ((empty_349_fu_184_p2[0:0] == 1'b1) ? next_urem522_fu_178_p2 : 8'd0);
+assign idx_urem523_fu_190_p3 = ((empty_345_fu_184_p2[0:0] == 1'b1) ? next_urem522_fu_178_p2 : 8'd0);
 
-assign m_axi_i3_ARADDR = 64'd0;
+assign m_axi_bundle_1_ARADDR = 64'd0;
 
-assign m_axi_i3_ARBURST = 2'd0;
+assign m_axi_bundle_1_ARBURST = 2'd0;
 
-assign m_axi_i3_ARCACHE = 4'd0;
+assign m_axi_bundle_1_ARCACHE = 4'd0;
 
-assign m_axi_i3_ARID = 1'd0;
+assign m_axi_bundle_1_ARID = 1'd0;
 
-assign m_axi_i3_ARLEN = 32'd0;
+assign m_axi_bundle_1_ARLEN = 32'd0;
 
-assign m_axi_i3_ARLOCK = 2'd0;
+assign m_axi_bundle_1_ARLOCK = 2'd0;
 
-assign m_axi_i3_ARPROT = 3'd0;
+assign m_axi_bundle_1_ARPROT = 3'd0;
 
-assign m_axi_i3_ARQOS = 4'd0;
+assign m_axi_bundle_1_ARQOS = 4'd0;
 
-assign m_axi_i3_ARREGION = 4'd0;
+assign m_axi_bundle_1_ARREGION = 4'd0;
 
-assign m_axi_i3_ARSIZE = 3'd0;
+assign m_axi_bundle_1_ARSIZE = 3'd0;
 
-assign m_axi_i3_ARUSER = 1'd0;
+assign m_axi_bundle_1_ARUSER = 1'd0;
 
-assign m_axi_i3_ARVALID = 1'b0;
+assign m_axi_bundle_1_ARVALID = 1'b0;
 
-assign m_axi_i3_AWADDR = 64'd0;
+assign m_axi_bundle_1_AWADDR = 64'd0;
 
-assign m_axi_i3_AWBURST = 2'd0;
+assign m_axi_bundle_1_AWBURST = 2'd0;
 
-assign m_axi_i3_AWCACHE = 4'd0;
+assign m_axi_bundle_1_AWCACHE = 4'd0;
 
-assign m_axi_i3_AWID = 1'd0;
+assign m_axi_bundle_1_AWID = 1'd0;
 
-assign m_axi_i3_AWLEN = 32'd0;
+assign m_axi_bundle_1_AWLEN = 32'd0;
 
-assign m_axi_i3_AWLOCK = 2'd0;
+assign m_axi_bundle_1_AWLOCK = 2'd0;
 
-assign m_axi_i3_AWPROT = 3'd0;
+assign m_axi_bundle_1_AWPROT = 3'd0;
 
-assign m_axi_i3_AWQOS = 4'd0;
+assign m_axi_bundle_1_AWQOS = 4'd0;
 
-assign m_axi_i3_AWREGION = 4'd0;
+assign m_axi_bundle_1_AWREGION = 4'd0;
 
-assign m_axi_i3_AWSIZE = 3'd0;
+assign m_axi_bundle_1_AWSIZE = 3'd0;
 
-assign m_axi_i3_AWUSER = 1'd0;
+assign m_axi_bundle_1_AWUSER = 1'd0;
 
-assign m_axi_i3_AWVALID = 1'b0;
+assign m_axi_bundle_1_AWVALID = 1'b0;
 
-assign m_axi_i3_BREADY = 1'b0;
+assign m_axi_bundle_1_BREADY = 1'b0;
 
-assign m_axi_i3_RREADY = 1'b0;
+assign m_axi_bundle_1_RREADY = 1'b0;
 
-assign m_axi_i3_WDATA = tmp_8_reg_320;
+assign m_axi_bundle_1_WDATA = tmp_8_reg_320;
 
-assign m_axi_i3_WID = 1'd0;
+assign m_axi_bundle_1_WID = 1'd0;
 
-assign m_axi_i3_WLAST = 1'b0;
+assign m_axi_bundle_1_WLAST = 1'b0;
 
-assign m_axi_i3_WSTRB = 4'd15;
+assign m_axi_bundle_1_WSTRB = 4'd15;
 
-assign m_axi_i3_WUSER = 1'd0;
+assign m_axi_bundle_1_WUSER = 1'd0;
 
 assign next_mul520_fu_233_p2 = (phi_mul519_fu_74 + 17'd386);
 
 assign next_urem522_fu_178_p2 = (ap_sig_allocacmp_phi_urem521_load + 8'd1);
 
-assign p_cast_fu_208_p1 = empty_350_fu_202_p2;
+assign p_cast_fu_208_p1 = empty_346_fu_202_p2;
 
 assign phi_urem521_cast_fu_198_p1 = ap_sig_allocacmp_phi_urem521_load;
 

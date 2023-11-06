@@ -1,7 +1,7 @@
 set ModuleHierarchy {[{
 "Name" : "srcnn","ID" : "0","Type" : "sequential",
 "SubInsts" : [
-	{"Name" : "grp_conv1_fu_280","ID" : "1","Type" : "sequential",
+	{"Name" : "grp_conv1_fu_264","ID" : "1","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "TILE_ROW","ID" : "2","Type" : "no",
 		"SubLoops" : [
@@ -60,7 +60,7 @@ set ModuleHierarchy {[{
 					"SubLoops" : [
 					{"Name" : "K.1","ID" : "36","Type" : "no"},
 					{"Name" : "K.2","ID" : "37","Type" : "no"},]},]},]},]},]},
-	{"Name" : "grp_conv2_fu_316","ID" : "38","Type" : "sequential",
+	{"Name" : "grp_conv2_fu_300","ID" : "38","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "TILE_ROW","ID" : "39","Type" : "no",
 		"SubInsts" : [
@@ -106,7 +106,7 @@ set ModuleHierarchy {[{
 				{"Name" : "grp_conv2_Pipeline_BW8_fu_511","ID" : "63","Type" : "sequential",
 						"SubLoops" : [
 						{"Name" : "BW","ID" : "64","Type" : "pipeline"},]},]},]},]},]},
-	{"Name" : "grp_conv3_fu_346","ID" : "65","Type" : "sequential",
+	{"Name" : "grp_conv3_fu_330","ID" : "65","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "TILE_ROW","ID" : "66","Type" : "no",
 		"SubInsts" : [

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_6'
 ================================================================
-* Date:           Sun Nov  5 11:03:00 2023
+* Date:           Mon Nov  6 16:29:19 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -85,7 +85,7 @@
     +---------------------------+----------+----+---+----+------------+------------+
     |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------+----------+----+---+----+------------+------------+
-    |empty_329_fu_119_p2        |         +|   0|  0|  17|          10|          10|
+    |empty_325_fu_119_p2        |         +|   0|  0|  17|          10|          10|
     |empty_fu_109_p2            |         +|   0|  0|  15|           8|           1|
     |ap_block_pp0_stage0_11001  |       and|   0|  0|   2|           1|           1|
     |exitcond9213_fu_103_p2     |      icmp|   0|  0|  15|           8|           2|
@@ -101,8 +101,8 @@
     |ap_done_int                           |   9|          2|    1|          2|
     |ap_enable_reg_pp0_iter2               |   9|          2|    1|          2|
     |ap_sig_allocacmp_loop_index_1_i_load  |   9|          2|    8|         16|
+    |bundle_2_blk_n_W                      |   9|          2|    1|          2|
     |loop_index_1_i_fu_54                  |   9|          2|    8|         16|
-    |o_blk_n_W                             |   9|          2|    1|          2|
     +--------------------------------------+----+-----------+-----+-----------+
     |Total                                 |  45|         10|   19|         38|
     +--------------------------------------+----+-----------+-----+-----------+
@@ -138,52 +138,52 @@
 |ap_done                      |  out|    1|  ap_ctrl_hs|    conv3_Pipeline_6|  return value|
 |ap_idle                      |  out|    1|  ap_ctrl_hs|    conv3_Pipeline_6|  return value|
 |ap_ready                     |  out|    1|  ap_ctrl_hs|    conv3_Pipeline_6|  return value|
-|m_axi_o_AWVALID              |  out|    1|       m_axi|                   o|       pointer|
-|m_axi_o_AWREADY              |   in|    1|       m_axi|                   o|       pointer|
-|m_axi_o_AWADDR               |  out|   64|       m_axi|                   o|       pointer|
-|m_axi_o_AWID                 |  out|    1|       m_axi|                   o|       pointer|
-|m_axi_o_AWLEN                |  out|   32|       m_axi|                   o|       pointer|
-|m_axi_o_AWSIZE               |  out|    3|       m_axi|                   o|       pointer|
-|m_axi_o_AWBURST              |  out|    2|       m_axi|                   o|       pointer|
-|m_axi_o_AWLOCK               |  out|    2|       m_axi|                   o|       pointer|
-|m_axi_o_AWCACHE              |  out|    4|       m_axi|                   o|       pointer|
-|m_axi_o_AWPROT               |  out|    3|       m_axi|                   o|       pointer|
-|m_axi_o_AWQOS                |  out|    4|       m_axi|                   o|       pointer|
-|m_axi_o_AWREGION             |  out|    4|       m_axi|                   o|       pointer|
-|m_axi_o_AWUSER               |  out|    1|       m_axi|                   o|       pointer|
-|m_axi_o_WVALID               |  out|    1|       m_axi|                   o|       pointer|
-|m_axi_o_WREADY               |   in|    1|       m_axi|                   o|       pointer|
-|m_axi_o_WDATA                |  out|   32|       m_axi|                   o|       pointer|
-|m_axi_o_WSTRB                |  out|    4|       m_axi|                   o|       pointer|
-|m_axi_o_WLAST                |  out|    1|       m_axi|                   o|       pointer|
-|m_axi_o_WID                  |  out|    1|       m_axi|                   o|       pointer|
-|m_axi_o_WUSER                |  out|    1|       m_axi|                   o|       pointer|
-|m_axi_o_ARVALID              |  out|    1|       m_axi|                   o|       pointer|
-|m_axi_o_ARREADY              |   in|    1|       m_axi|                   o|       pointer|
-|m_axi_o_ARADDR               |  out|   64|       m_axi|                   o|       pointer|
-|m_axi_o_ARID                 |  out|    1|       m_axi|                   o|       pointer|
-|m_axi_o_ARLEN                |  out|   32|       m_axi|                   o|       pointer|
-|m_axi_o_ARSIZE               |  out|    3|       m_axi|                   o|       pointer|
-|m_axi_o_ARBURST              |  out|    2|       m_axi|                   o|       pointer|
-|m_axi_o_ARLOCK               |  out|    2|       m_axi|                   o|       pointer|
-|m_axi_o_ARCACHE              |  out|    4|       m_axi|                   o|       pointer|
-|m_axi_o_ARPROT               |  out|    3|       m_axi|                   o|       pointer|
-|m_axi_o_ARQOS                |  out|    4|       m_axi|                   o|       pointer|
-|m_axi_o_ARREGION             |  out|    4|       m_axi|                   o|       pointer|
-|m_axi_o_ARUSER               |  out|    1|       m_axi|                   o|       pointer|
-|m_axi_o_RVALID               |   in|    1|       m_axi|                   o|       pointer|
-|m_axi_o_RREADY               |  out|    1|       m_axi|                   o|       pointer|
-|m_axi_o_RDATA                |   in|   32|       m_axi|                   o|       pointer|
-|m_axi_o_RLAST                |   in|    1|       m_axi|                   o|       pointer|
-|m_axi_o_RID                  |   in|    1|       m_axi|                   o|       pointer|
-|m_axi_o_RFIFONUM             |   in|   13|       m_axi|                   o|       pointer|
-|m_axi_o_RUSER                |   in|    1|       m_axi|                   o|       pointer|
-|m_axi_o_RRESP                |   in|    2|       m_axi|                   o|       pointer|
-|m_axi_o_BVALID               |   in|    1|       m_axi|                   o|       pointer|
-|m_axi_o_BREADY               |  out|    1|       m_axi|                   o|       pointer|
-|m_axi_o_BRESP                |   in|    2|       m_axi|                   o|       pointer|
-|m_axi_o_BID                  |   in|    1|       m_axi|                   o|       pointer|
-|m_axi_o_BUSER                |   in|    1|       m_axi|                   o|       pointer|
+|m_axi_bundle_2_AWVALID       |  out|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_AWREADY       |   in|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_AWADDR        |  out|   64|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_AWID          |  out|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_AWLEN         |  out|   32|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_AWSIZE        |  out|    3|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_AWBURST       |  out|    2|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_AWLOCK        |  out|    2|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_AWCACHE       |  out|    4|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_AWPROT        |  out|    3|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_AWQOS         |  out|    4|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_AWREGION      |  out|    4|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_AWUSER        |  out|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_WVALID        |  out|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_WREADY        |   in|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_WDATA         |  out|   32|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_WSTRB         |  out|    4|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_WLAST         |  out|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_WID           |  out|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_WUSER         |  out|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_ARVALID       |  out|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_ARREADY       |   in|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_ARADDR        |  out|   64|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_ARID          |  out|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_ARLEN         |  out|   32|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_ARSIZE        |  out|    3|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_ARBURST       |  out|    2|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_ARLOCK        |  out|    2|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_ARCACHE       |  out|    4|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_ARPROT        |  out|    3|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_ARQOS         |  out|    4|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_ARREGION      |  out|    4|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_ARUSER        |  out|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_RVALID        |   in|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_RREADY        |  out|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_RDATA         |   in|   32|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_RLAST         |   in|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_RID           |   in|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_RFIFONUM      |   in|   13|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_RUSER         |   in|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_RRESP         |   in|    2|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_BVALID        |   in|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_BREADY        |  out|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_BRESP         |   in|    2|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_BID           |   in|    1|       m_axi|            bundle_2|       pointer|
+|m_axi_bundle_2_BUSER         |   in|    1|       m_axi|            bundle_2|       pointer|
 |sext_ln147_2                 |   in|   62|     ap_none|        sext_ln147_2|        scalar|
 |sub_ln140_1                  |   in|   10|     ap_none|         sub_ln140_1|        scalar|
 |output_fm_buffer_0_address0  |  out|   10|   ap_memory|  output_fm_buffer_0|         array|

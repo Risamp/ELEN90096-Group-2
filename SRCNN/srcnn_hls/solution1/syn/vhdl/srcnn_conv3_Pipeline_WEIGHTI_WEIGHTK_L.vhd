@@ -16,52 +16,52 @@ port (
     ap_done : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    m_axi_w3_AWVALID : OUT STD_LOGIC;
-    m_axi_w3_AWREADY : IN STD_LOGIC;
-    m_axi_w3_AWADDR : OUT STD_LOGIC_VECTOR (63 downto 0);
-    m_axi_w3_AWID : OUT STD_LOGIC_VECTOR (0 downto 0);
-    m_axi_w3_AWLEN : OUT STD_LOGIC_VECTOR (31 downto 0);
-    m_axi_w3_AWSIZE : OUT STD_LOGIC_VECTOR (2 downto 0);
-    m_axi_w3_AWBURST : OUT STD_LOGIC_VECTOR (1 downto 0);
-    m_axi_w3_AWLOCK : OUT STD_LOGIC_VECTOR (1 downto 0);
-    m_axi_w3_AWCACHE : OUT STD_LOGIC_VECTOR (3 downto 0);
-    m_axi_w3_AWPROT : OUT STD_LOGIC_VECTOR (2 downto 0);
-    m_axi_w3_AWQOS : OUT STD_LOGIC_VECTOR (3 downto 0);
-    m_axi_w3_AWREGION : OUT STD_LOGIC_VECTOR (3 downto 0);
-    m_axi_w3_AWUSER : OUT STD_LOGIC_VECTOR (0 downto 0);
-    m_axi_w3_WVALID : OUT STD_LOGIC;
-    m_axi_w3_WREADY : IN STD_LOGIC;
-    m_axi_w3_WDATA : OUT STD_LOGIC_VECTOR (31 downto 0);
-    m_axi_w3_WSTRB : OUT STD_LOGIC_VECTOR (3 downto 0);
-    m_axi_w3_WLAST : OUT STD_LOGIC;
-    m_axi_w3_WID : OUT STD_LOGIC_VECTOR (0 downto 0);
-    m_axi_w3_WUSER : OUT STD_LOGIC_VECTOR (0 downto 0);
-    m_axi_w3_ARVALID : OUT STD_LOGIC;
-    m_axi_w3_ARREADY : IN STD_LOGIC;
-    m_axi_w3_ARADDR : OUT STD_LOGIC_VECTOR (63 downto 0);
-    m_axi_w3_ARID : OUT STD_LOGIC_VECTOR (0 downto 0);
-    m_axi_w3_ARLEN : OUT STD_LOGIC_VECTOR (31 downto 0);
-    m_axi_w3_ARSIZE : OUT STD_LOGIC_VECTOR (2 downto 0);
-    m_axi_w3_ARBURST : OUT STD_LOGIC_VECTOR (1 downto 0);
-    m_axi_w3_ARLOCK : OUT STD_LOGIC_VECTOR (1 downto 0);
-    m_axi_w3_ARCACHE : OUT STD_LOGIC_VECTOR (3 downto 0);
-    m_axi_w3_ARPROT : OUT STD_LOGIC_VECTOR (2 downto 0);
-    m_axi_w3_ARQOS : OUT STD_LOGIC_VECTOR (3 downto 0);
-    m_axi_w3_ARREGION : OUT STD_LOGIC_VECTOR (3 downto 0);
-    m_axi_w3_ARUSER : OUT STD_LOGIC_VECTOR (0 downto 0);
-    m_axi_w3_RVALID : IN STD_LOGIC;
-    m_axi_w3_RREADY : OUT STD_LOGIC;
-    m_axi_w3_RDATA : IN STD_LOGIC_VECTOR (31 downto 0);
-    m_axi_w3_RLAST : IN STD_LOGIC;
-    m_axi_w3_RID : IN STD_LOGIC_VECTOR (0 downto 0);
-    m_axi_w3_RFIFONUM : IN STD_LOGIC_VECTOR (12 downto 0);
-    m_axi_w3_RUSER : IN STD_LOGIC_VECTOR (0 downto 0);
-    m_axi_w3_RRESP : IN STD_LOGIC_VECTOR (1 downto 0);
-    m_axi_w3_BVALID : IN STD_LOGIC;
-    m_axi_w3_BREADY : OUT STD_LOGIC;
-    m_axi_w3_BRESP : IN STD_LOGIC_VECTOR (1 downto 0);
-    m_axi_w3_BID : IN STD_LOGIC_VECTOR (0 downto 0);
-    m_axi_w3_BUSER : IN STD_LOGIC_VECTOR (0 downto 0);
+    m_axi_weights_AWVALID : OUT STD_LOGIC;
+    m_axi_weights_AWREADY : IN STD_LOGIC;
+    m_axi_weights_AWADDR : OUT STD_LOGIC_VECTOR (63 downto 0);
+    m_axi_weights_AWID : OUT STD_LOGIC_VECTOR (0 downto 0);
+    m_axi_weights_AWLEN : OUT STD_LOGIC_VECTOR (31 downto 0);
+    m_axi_weights_AWSIZE : OUT STD_LOGIC_VECTOR (2 downto 0);
+    m_axi_weights_AWBURST : OUT STD_LOGIC_VECTOR (1 downto 0);
+    m_axi_weights_AWLOCK : OUT STD_LOGIC_VECTOR (1 downto 0);
+    m_axi_weights_AWCACHE : OUT STD_LOGIC_VECTOR (3 downto 0);
+    m_axi_weights_AWPROT : OUT STD_LOGIC_VECTOR (2 downto 0);
+    m_axi_weights_AWQOS : OUT STD_LOGIC_VECTOR (3 downto 0);
+    m_axi_weights_AWREGION : OUT STD_LOGIC_VECTOR (3 downto 0);
+    m_axi_weights_AWUSER : OUT STD_LOGIC_VECTOR (0 downto 0);
+    m_axi_weights_WVALID : OUT STD_LOGIC;
+    m_axi_weights_WREADY : IN STD_LOGIC;
+    m_axi_weights_WDATA : OUT STD_LOGIC_VECTOR (31 downto 0);
+    m_axi_weights_WSTRB : OUT STD_LOGIC_VECTOR (3 downto 0);
+    m_axi_weights_WLAST : OUT STD_LOGIC;
+    m_axi_weights_WID : OUT STD_LOGIC_VECTOR (0 downto 0);
+    m_axi_weights_WUSER : OUT STD_LOGIC_VECTOR (0 downto 0);
+    m_axi_weights_ARVALID : OUT STD_LOGIC;
+    m_axi_weights_ARREADY : IN STD_LOGIC;
+    m_axi_weights_ARADDR : OUT STD_LOGIC_VECTOR (63 downto 0);
+    m_axi_weights_ARID : OUT STD_LOGIC_VECTOR (0 downto 0);
+    m_axi_weights_ARLEN : OUT STD_LOGIC_VECTOR (31 downto 0);
+    m_axi_weights_ARSIZE : OUT STD_LOGIC_VECTOR (2 downto 0);
+    m_axi_weights_ARBURST : OUT STD_LOGIC_VECTOR (1 downto 0);
+    m_axi_weights_ARLOCK : OUT STD_LOGIC_VECTOR (1 downto 0);
+    m_axi_weights_ARCACHE : OUT STD_LOGIC_VECTOR (3 downto 0);
+    m_axi_weights_ARPROT : OUT STD_LOGIC_VECTOR (2 downto 0);
+    m_axi_weights_ARQOS : OUT STD_LOGIC_VECTOR (3 downto 0);
+    m_axi_weights_ARREGION : OUT STD_LOGIC_VECTOR (3 downto 0);
+    m_axi_weights_ARUSER : OUT STD_LOGIC_VECTOR (0 downto 0);
+    m_axi_weights_RVALID : IN STD_LOGIC;
+    m_axi_weights_RREADY : OUT STD_LOGIC;
+    m_axi_weights_RDATA : IN STD_LOGIC_VECTOR (31 downto 0);
+    m_axi_weights_RLAST : IN STD_LOGIC;
+    m_axi_weights_RID : IN STD_LOGIC_VECTOR (0 downto 0);
+    m_axi_weights_RFIFONUM : IN STD_LOGIC_VECTOR (12 downto 0);
+    m_axi_weights_RUSER : IN STD_LOGIC_VECTOR (0 downto 0);
+    m_axi_weights_RRESP : IN STD_LOGIC_VECTOR (1 downto 0);
+    m_axi_weights_BVALID : IN STD_LOGIC;
+    m_axi_weights_BREADY : OUT STD_LOGIC;
+    m_axi_weights_BRESP : IN STD_LOGIC_VECTOR (1 downto 0);
+    m_axi_weights_BID : IN STD_LOGIC_VECTOR (0 downto 0);
+    m_axi_weights_BUSER : IN STD_LOGIC_VECTOR (0 downto 0);
     sext_ln117 : IN STD_LOGIC_VECTOR (61 downto 0);
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_address0 : OUT STD_LOGIC_VECTOR (4 downto 0);
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_ce0 : OUT STD_LOGIC;
@@ -209,7 +209,7 @@ attribute shreg_extract : string;
     signal ap_condition_exit_pp0_iter0_stage0 : STD_LOGIC;
     signal ap_loop_exit_ready : STD_LOGIC;
     signal ap_ready_int : STD_LOGIC;
-    signal w3_blk_n_R : STD_LOGIC;
+    signal weights_blk_n_R : STD_LOGIC;
     signal ap_block_pp0_stage0 : BOOLEAN;
     signal ap_block_pp0_stage0_11001 : BOOLEAN;
     signal icmp_ln118_fu_540_p2 : STD_LOGIC_VECTOR (0 downto 0);
@@ -218,7 +218,7 @@ attribute shreg_extract : string;
     signal select_ln118_reg_762 : STD_LOGIC_VECTOR (2 downto 0);
     signal select_ln118_1_fu_592_p3 : STD_LOGIC_VECTOR (2 downto 0);
     signal select_ln118_1_reg_766 : STD_LOGIC_VECTOR (2 downto 0);
-    signal w3_addr_read_reg_770 : STD_LOGIC_VECTOR (31 downto 0);
+    signal weights_addr_read_reg_770 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_condition_exit_pp0_iter1_stage0 : STD_LOGIC;
     signal zext_ln117_fu_651_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal loop_index_i_fu_120 : STD_LOGIC_VECTOR (2 downto 0);
@@ -232,7 +232,7 @@ attribute shreg_extract : string;
     signal indvar_flatten35_fu_136 : STD_LOGIC_VECTOR (9 downto 0);
     signal add_ln117_1_fu_514_p2 : STD_LOGIC_VECTOR (9 downto 0);
     signal ap_sig_allocacmp_indvar_flatten35_load : STD_LOGIC_VECTOR (9 downto 0);
-    signal empty_326_fu_680_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal empty_322_fu_680_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal exitcond4641_fu_560_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal xor_ln117_fu_554_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal select_ln117_fu_546_p3 : STD_LOGIC_VECTOR (2 downto 0);
@@ -426,7 +426,7 @@ begin
                 icmp_ln118_reg_757 <= icmp_ln118_fu_540_p2;
                 select_ln118_1_reg_766 <= select_ln118_1_fu_592_p3;
                 select_ln118_reg_762 <= select_ln118_fu_584_p3;
-                w3_addr_read_reg_770 <= m_axi_w3_RDATA;
+                weights_addr_read_reg_770 <= m_axi_weights_RDATA;
             end if;
         end if;
     end process;
@@ -448,22 +448,22 @@ begin
     ap_CS_fsm_pp0_stage0 <= ap_CS_fsm(0);
         ap_block_pp0_stage0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_block_pp0_stage0_11001_assign_proc : process(ap_enable_reg_pp0_iter1, m_axi_w3_RVALID, icmp_ln117_reg_753)
+    ap_block_pp0_stage0_11001_assign_proc : process(ap_enable_reg_pp0_iter1, m_axi_weights_RVALID, icmp_ln117_reg_753)
     begin
-                ap_block_pp0_stage0_11001 <= ((icmp_ln117_reg_753 = ap_const_lv1_0) and (m_axi_w3_RVALID = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1));
+                ap_block_pp0_stage0_11001 <= ((icmp_ln117_reg_753 = ap_const_lv1_0) and (m_axi_weights_RVALID = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1));
     end process;
 
 
-    ap_block_pp0_stage0_subdone_assign_proc : process(ap_enable_reg_pp0_iter1, m_axi_w3_RVALID, icmp_ln117_reg_753)
+    ap_block_pp0_stage0_subdone_assign_proc : process(ap_enable_reg_pp0_iter1, m_axi_weights_RVALID, icmp_ln117_reg_753)
     begin
-                ap_block_pp0_stage0_subdone <= ((icmp_ln117_reg_753 = ap_const_lv1_0) and (m_axi_w3_RVALID = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1));
+                ap_block_pp0_stage0_subdone <= ((icmp_ln117_reg_753 = ap_const_lv1_0) and (m_axi_weights_RVALID = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1));
     end process;
 
         ap_block_state1_pp0_stage0_iter0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_block_state2_pp0_stage0_iter1_assign_proc : process(m_axi_w3_RVALID, icmp_ln117_reg_753)
+    ap_block_state2_pp0_stage0_iter1_assign_proc : process(m_axi_weights_RVALID, icmp_ln117_reg_753)
     begin
-                ap_block_state2_pp0_stage0_iter1 <= ((icmp_ln117_reg_753 = ap_const_lv1_0) and (m_axi_w3_RVALID = ap_const_logic_0));
+                ap_block_state2_pp0_stage0_iter1 <= ((icmp_ln117_reg_753 = ap_const_lv1_0) and (m_axi_weights_RVALID = ap_const_logic_0));
     end process;
 
         ap_block_state3_pp0_stage0_iter2 <= not((ap_const_boolean_1 = ap_const_boolean_1));
@@ -540,52 +540,52 @@ begin
         end if; 
     end process;
 
-    empty_326_fu_680_p1 <= w3_addr_read_reg_770;
+    empty_322_fu_680_p1 <= weights_addr_read_reg_770;
     empty_fu_600_p2 <= std_logic_vector(unsigned(select_ln118_fu_584_p3) + unsigned(ap_const_lv3_1));
     exitcond4641_fu_560_p2 <= "1" when (loop_index_i_fu_120 = ap_const_lv3_5) else "0";
     icmp_ln117_fu_508_p2 <= "1" when (ap_sig_allocacmp_indvar_flatten35_load = ap_const_lv10_320) else "0";
     icmp_ln118_fu_540_p2 <= "1" when (indvar_flatten_fu_128 = ap_const_lv6_19) else "0";
-    m_axi_w3_ARADDR <= ap_const_lv64_0;
-    m_axi_w3_ARBURST <= ap_const_lv2_0;
-    m_axi_w3_ARCACHE <= ap_const_lv4_0;
-    m_axi_w3_ARID <= ap_const_lv1_0;
-    m_axi_w3_ARLEN <= ap_const_lv32_0;
-    m_axi_w3_ARLOCK <= ap_const_lv2_0;
-    m_axi_w3_ARPROT <= ap_const_lv3_0;
-    m_axi_w3_ARQOS <= ap_const_lv4_0;
-    m_axi_w3_ARREGION <= ap_const_lv4_0;
-    m_axi_w3_ARSIZE <= ap_const_lv3_0;
-    m_axi_w3_ARUSER <= ap_const_lv1_0;
-    m_axi_w3_ARVALID <= ap_const_logic_0;
-    m_axi_w3_AWADDR <= ap_const_lv64_0;
-    m_axi_w3_AWBURST <= ap_const_lv2_0;
-    m_axi_w3_AWCACHE <= ap_const_lv4_0;
-    m_axi_w3_AWID <= ap_const_lv1_0;
-    m_axi_w3_AWLEN <= ap_const_lv32_0;
-    m_axi_w3_AWLOCK <= ap_const_lv2_0;
-    m_axi_w3_AWPROT <= ap_const_lv3_0;
-    m_axi_w3_AWQOS <= ap_const_lv4_0;
-    m_axi_w3_AWREGION <= ap_const_lv4_0;
-    m_axi_w3_AWSIZE <= ap_const_lv3_0;
-    m_axi_w3_AWUSER <= ap_const_lv1_0;
-    m_axi_w3_AWVALID <= ap_const_logic_0;
-    m_axi_w3_BREADY <= ap_const_logic_0;
+    m_axi_weights_ARADDR <= ap_const_lv64_0;
+    m_axi_weights_ARBURST <= ap_const_lv2_0;
+    m_axi_weights_ARCACHE <= ap_const_lv4_0;
+    m_axi_weights_ARID <= ap_const_lv1_0;
+    m_axi_weights_ARLEN <= ap_const_lv32_0;
+    m_axi_weights_ARLOCK <= ap_const_lv2_0;
+    m_axi_weights_ARPROT <= ap_const_lv3_0;
+    m_axi_weights_ARQOS <= ap_const_lv4_0;
+    m_axi_weights_ARREGION <= ap_const_lv4_0;
+    m_axi_weights_ARSIZE <= ap_const_lv3_0;
+    m_axi_weights_ARUSER <= ap_const_lv1_0;
+    m_axi_weights_ARVALID <= ap_const_logic_0;
+    m_axi_weights_AWADDR <= ap_const_lv64_0;
+    m_axi_weights_AWBURST <= ap_const_lv2_0;
+    m_axi_weights_AWCACHE <= ap_const_lv4_0;
+    m_axi_weights_AWID <= ap_const_lv1_0;
+    m_axi_weights_AWLEN <= ap_const_lv32_0;
+    m_axi_weights_AWLOCK <= ap_const_lv2_0;
+    m_axi_weights_AWPROT <= ap_const_lv3_0;
+    m_axi_weights_AWQOS <= ap_const_lv4_0;
+    m_axi_weights_AWREGION <= ap_const_lv4_0;
+    m_axi_weights_AWSIZE <= ap_const_lv3_0;
+    m_axi_weights_AWUSER <= ap_const_lv1_0;
+    m_axi_weights_AWVALID <= ap_const_logic_0;
+    m_axi_weights_BREADY <= ap_const_logic_0;
 
-    m_axi_w3_RREADY_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, icmp_ln117_reg_753, ap_block_pp0_stage0_11001)
+    m_axi_weights_RREADY_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, icmp_ln117_reg_753, ap_block_pp0_stage0_11001)
     begin
         if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (icmp_ln117_reg_753 = ap_const_lv1_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            m_axi_w3_RREADY <= ap_const_logic_1;
+            m_axi_weights_RREADY <= ap_const_logic_1;
         else 
-            m_axi_w3_RREADY <= ap_const_logic_0;
+            m_axi_weights_RREADY <= ap_const_logic_0;
         end if; 
     end process;
 
-    m_axi_w3_WDATA <= ap_const_lv32_0;
-    m_axi_w3_WID <= ap_const_lv1_0;
-    m_axi_w3_WLAST <= ap_const_logic_0;
-    m_axi_w3_WSTRB <= ap_const_lv4_0;
-    m_axi_w3_WUSER <= ap_const_lv1_0;
-    m_axi_w3_WVALID <= ap_const_logic_0;
+    m_axi_weights_WDATA <= ap_const_lv32_0;
+    m_axi_weights_WID <= ap_const_lv1_0;
+    m_axi_weights_WLAST <= ap_const_logic_0;
+    m_axi_weights_WSTRB <= ap_const_lv4_0;
+    m_axi_weights_WUSER <= ap_const_lv1_0;
+    m_axi_weights_WVALID <= ap_const_logic_0;
     or_ln118_fu_578_p2 <= (icmp_ln118_fu_540_p2 or and_ln117_fu_566_p2);
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_address0 <= zext_ln117_fu_651_p1(5 - 1 downto 0);
 
@@ -598,7 +598,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_0_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -620,7 +620,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_1_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_1_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_1_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -642,7 +642,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_2_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_2_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_2_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -664,7 +664,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_3_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_3_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_3_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -686,7 +686,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_4_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_4_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_0_4_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -708,7 +708,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_0_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_0_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_0_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -730,7 +730,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_1_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_1_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_1_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -752,7 +752,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_2_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_2_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_2_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -774,7 +774,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_3_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_3_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_3_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -796,7 +796,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_4_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_4_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_1_4_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -818,7 +818,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_0_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_0_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_0_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -840,7 +840,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_1_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_1_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_1_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -862,7 +862,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_2_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_2_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_2_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -884,7 +884,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_3_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_3_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_3_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -906,7 +906,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_4_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_4_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_2_4_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -928,7 +928,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_0_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_0_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_0_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -950,7 +950,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_1_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_1_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_1_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -972,7 +972,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_2_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_2_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_2_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -994,7 +994,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_3_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_3_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_3_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -1016,7 +1016,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_4_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_4_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_3_4_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -1038,7 +1038,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_0_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_0_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_0_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -1060,7 +1060,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_1_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_1_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_1_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -1082,7 +1082,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_2_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_2_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_2_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -1104,7 +1104,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_3_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_3_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_3_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -1126,7 +1126,7 @@ begin
         end if; 
     end process;
 
-    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_4_0_d0 <= empty_326_fu_680_p1;
+    p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_4_0_d0 <= empty_322_fu_680_p1;
 
     p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E13weight_buffer_4_4_0_we0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001, select_ln118_reg_762, select_ln118_1_reg_766)
     begin
@@ -1153,12 +1153,12 @@ begin
         ap_const_lv3_0 when (or_ln118_fu_578_p2(0) = '1') else 
         loop_index_i_fu_120;
 
-    w3_blk_n_R_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, m_axi_w3_RVALID, icmp_ln117_reg_753, ap_block_pp0_stage0)
+    weights_blk_n_R_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, m_axi_weights_RVALID, icmp_ln117_reg_753, ap_block_pp0_stage0)
     begin
         if (((ap_const_boolean_0 = ap_block_pp0_stage0) and (icmp_ln117_reg_753 = ap_const_lv1_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            w3_blk_n_R <= m_axi_w3_RVALID;
+            weights_blk_n_R <= m_axi_weights_RVALID;
         else 
-            w3_blk_n_R <= ap_const_logic_1;
+            weights_blk_n_R <= ap_const_logic_1;
         end if; 
     end process;
 

@@ -4647,7 +4647,7 @@ for.inc.3:53 %mul_5 = fmul i32 %bitcast_ln41_read, i32 %tmp_12
 
 <Node id="22" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.inc.0.split:1 %specpipeline_ln47 = specpipeline void @_ssdm_op_SpecPipeline, i32 9, i32 0, i32 0, i32 0, void @empty_36
+for.inc.0.split:1 %specpipeline_ln47 = specpipeline void @_ssdm_op_SpecPipeline, i32 9, i32 0, i32 0, i32 0, void @empty
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln47"/></StgValue>
@@ -4679,7 +4679,7 @@ for.inc.0.split:2 %speclooptripcount_ln46 = speclooptripcount void @_ssdm_op_Spe
 
 <Node id="24" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.0.split:3 %specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16
+for.inc.0.split:3 %specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty_35
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln46"/></StgValue>

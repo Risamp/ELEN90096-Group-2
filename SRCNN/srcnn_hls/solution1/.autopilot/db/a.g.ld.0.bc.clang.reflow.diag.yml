@@ -1821,7 +1821,7 @@ Args:
   - AccessID:        scevgepseq
   - ArrayName:       input_ftmap
   - String:          ' '
-  - BundleName:      i1
+  - BundleName:      bundle_1
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -1850,7 +1850,7 @@ Args:
   - AccessID:        scevgep2232seq
   - ArrayName:       conv1_weights
   - String:          ' '
-  - BundleName:      w1
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -1879,7 +1879,7 @@ Args:
   - AccessID:        scevgep2233seq
   - ArrayName:       conv1_weights
   - String:          ' '
-  - BundleName:      w1
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -1908,7 +1908,7 @@ Args:
   - AccessID:        scevgep2234seq
   - ArrayName:       conv1_weights
   - String:          ' '
-  - BundleName:      w1
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -1937,7 +1937,7 @@ Args:
   - AccessID:        scevgep2235seq
   - ArrayName:       conv1_weights
   - String:          ' '
-  - BundleName:      w1
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -1997,7 +1997,7 @@ Args:
   - OrigID:          PAD.i.load.14
   - ArrayName:       input_ftmap
   - String:          ' '
-  - BundleName:      i1
+  - BundleName:      bundle_1
   - String:          ' '
   - LoopName:        BH
   - String:          ' '
@@ -2021,7 +2021,7 @@ Args:
   - OrigID:          PAD.i.load.17
   - ArrayName:       input_ftmap
   - String:          ' '
-  - BundleName:      i1
+  - BundleName:      bundle_1
   - String:          ' '
   - LoopName:        BH
   - String:          ' '
@@ -2045,7 +2045,7 @@ Args:
   - OrigID:          scevgepseq
   - ArrayName:       input_ftmap
   - String:          ' '
-  - BundleName:      i1
+  - BundleName:      bundle_1
   - String:          ' '
   - LoopName:        BH
   - String:          ' '
@@ -2070,7 +2070,7 @@ Args:
   - AccessID:        scevgepseq
   - ArrayName:       input_ftmap
   - String:          ' '
-  - BundleName:      i2
+  - BundleName:      bundle_2
   - String:          ' '
   - LoopName:        BH
   - String:          ' '
@@ -2099,7 +2099,7 @@ Args:
   - AccessID:        conv2_weights109seq
   - ArrayName:       conv2_weights
   - String:          ' '
-  - BundleName:      w2
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        TILE_OUT
   - String:          ' '
@@ -2128,7 +2128,7 @@ Args:
   - AccessID:        scevgep110seq
   - ArrayName:       output_ftmap
   - String:          ' '
-  - BundleName:      i3
+  - BundleName:      bundle_1
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -2157,7 +2157,7 @@ Args:
   - AccessID:        scevgep111seq
   - ArrayName:       output_ftmap
   - String:          ' '
-  - BundleName:      i3
+  - BundleName:      bundle_1
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -2186,7 +2186,7 @@ Args:
   - AccessID:        conv2_biases112seq
   - ArrayName:       conv2_biases
   - String:          ' '
-  - BundleName:      gmem
+  - BundleName:      biases
   - String:          ' '
   - LoopName:        TILE_OUT
   - String:          ' '
@@ -2246,7 +2246,7 @@ Args:
   - OrigID:          scevgepseq
   - ArrayName:       input_ftmap
   - String:          ' '
-  - BundleName:      i2
+  - BundleName:      bundle_2
   - String:          ' '
   - LoopName:        LOAD_INPUT
   - String:          ' '
@@ -2270,7 +2270,7 @@ Args:
   - OrigID:          conv2_weights109seq
   - ArrayName:       conv2_weights
   - String:          ' '
-  - BundleName:      w2
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        TILE_ROW
   - String:          ' '
@@ -2294,7 +2294,7 @@ Args:
   - OrigID:          conv2_biases112seq
   - ArrayName:       conv2_biases
   - String:          ' '
-  - BundleName:      gmem
+  - BundleName:      biases
   - String:          ' '
   - LoopName:        TILE_ROW
   - String:          ' '
@@ -2319,7 +2319,7 @@ Args:
   - AccessID:        conv3_weights61seq
   - ArrayName:       conv3_weights
   - String:          ' '
-  - BundleName:      w3
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        WEIGHTI
   - String:          ' '
@@ -2348,7 +2348,7 @@ Args:
   - AccessID:        scevgepseq
   - ArrayName:       output_ftmap
   - String:          ' '
-  - BundleName:      o
+  - BundleName:      bundle_2
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -2377,7 +2377,7 @@ Args:
   - AccessID:        scevgep62seq
   - ArrayName:       output_ftmap
   - String:          ' '
-  - BundleName:      o
+  - BundleName:      bundle_2
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -2419,7 +2419,7 @@ Args:
   - OrigID:          for.inc69.load.8
   - ArrayName:       conv3_biases
   - String:          ' '
-  - BundleName:      gmem
+  - BundleName:      biases
   - String:          ' '
   - LoopName:        TILE_ROW
   - String:          ' '
@@ -2443,7 +2443,7 @@ Args:
   - OrigID:          conv3_weights61seq
   - ArrayName:       conv3_weights
   - String:          ' '
-  - BundleName:      w3
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        TILE_ROW
   - String:          ' '
@@ -2468,7 +2468,7 @@ Args:
   - AccessID:        scevgep1seq
   - ArrayName:       input_ftmap
   - String:          ' '
-  - BundleName:      i3
+  - BundleName:      bundle_1
   - String:          ' '
   - LoopName:        LOADH
   - String:          ' '
@@ -3260,7 +3260,7 @@ Args:
   - OrigID:          scevgep1seq
   - ArrayName:       input_ftmap
   - String:          ' '
-  - BundleName:      i3
+  - BundleName:      bundle_1
   - String:          ' '
   - LoopName:        LOADH
   - String:          ' '
@@ -3285,7 +3285,7 @@ Args:
   - AccessID:        scevgepseq
   - ArrayName:       output_ftmap
   - String:          ' '
-  - BundleName:      i2
+  - BundleName:      bundle_2
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -3314,7 +3314,7 @@ Args:
   - AccessID:        scevgep26seq
   - ArrayName:       output_ftmap
   - String:          ' '
-  - BundleName:      i2
+  - BundleName:      bundle_2
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -3343,7 +3343,7 @@ Args:
   - AccessID:        scevgep27seq
   - ArrayName:       biases
   - String:          ' '
-  - BundleName:      gmem
+  - BundleName:      biases
   - String:          ' '
   - LoopName:        EXPORT
   - String:          ' '
@@ -3407,7 +3407,7 @@ Args:
   - OrigID:          scevgep2235seq
   - ArrayName:       conv1_weights
   - String:          ' '
-  - BundleName:      w1
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -3435,7 +3435,7 @@ Args:
   - OrigID:          scevgep2234seq
   - ArrayName:       conv1_weights
   - String:          ' '
-  - BundleName:      w1
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -3463,7 +3463,7 @@ Args:
   - OrigID:          scevgep2233seq
   - ArrayName:       conv1_weights
   - String:          ' '
-  - BundleName:      w1
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -3491,7 +3491,7 @@ Args:
   - OrigID:          scevgep2232seq
   - ArrayName:       conv1_weights
   - String:          ' '
-  - BundleName:      w1
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -3519,7 +3519,7 @@ Args:
   - OrigID:          scevgepseq
   - ArrayName:       input_ftmap
   - String:          ' '
-  - BundleName:      i1
+  - BundleName:      bundle_1
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -3547,7 +3547,7 @@ Args:
   - OrigID:          scevgep111seq
   - ArrayName:       output_ftmap
   - String:          ' '
-  - BundleName:      i3
+  - BundleName:      bundle_1
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -3575,7 +3575,7 @@ Args:
   - OrigID:          scevgep110seq
   - ArrayName:       output_ftmap
   - String:          ' '
-  - BundleName:      i3
+  - BundleName:      bundle_1
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -3602,7 +3602,7 @@ Args:
   - OrigID:          conv2_biases112seq
   - ArrayName:       conv2_biases
   - String:          ' '
-  - BundleName:      gmem
+  - BundleName:      biases
   - String:          ' '
   - LoopName:        EXPORT
   - String:          ' '
@@ -3630,7 +3630,7 @@ Args:
   - OrigID:          conv2_weights109seq
   - ArrayName:       conv2_weights
   - String:          ' '
-  - BundleName:      w2
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -3658,7 +3658,7 @@ Args:
   - OrigID:          scevgepseq
   - ArrayName:       input_ftmap
   - String:          ' '
-  - BundleName:      i2
+  - BundleName:      bundle_2
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -3686,7 +3686,7 @@ Args:
   - OrigID:          scevgep62seq
   - ArrayName:       output_ftmap
   - String:          ' '
-  - BundleName:      o
+  - BundleName:      bundle_2
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -3714,7 +3714,7 @@ Args:
   - OrigID:          scevgepseq
   - ArrayName:       output_ftmap
   - String:          ' '
-  - BundleName:      o
+  - BundleName:      bundle_2
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -3742,7 +3742,7 @@ Args:
   - OrigID:          conv3_weights61seq
   - ArrayName:       conv3_weights
   - String:          ' '
-  - BundleName:      w3
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -3770,7 +3770,7 @@ Args:
   - OrigID:          scevgep1seq
   - ArrayName:       input_ftmap
   - String:          ' '
-  - BundleName:      i3
+  - BundleName:      bundle_1
   - String:          ' '
   - Function:        'load_input_buffer_c3(float (*) [7][259], float (*) [255][255], int, int)'
     DebugLoc:        { File: src/conv3.cpp, Line: 84, Column: 0 }
@@ -3794,7 +3794,7 @@ Args:
   - OrigID:          scevgep26seq
   - ArrayName:       output_ftmap
   - String:          ' '
-  - BundleName:      i2
+  - BundleName:      bundle_2
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -3822,7 +3822,7 @@ Args:
   - OrigID:          scevgepseq
   - ArrayName:       output_ftmap
   - String:          ' '
-  - BundleName:      i2
+  - BundleName:      bundle_2
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -3849,7 +3849,7 @@ Args:
   - OrigID:          scevgep27seq
   - ArrayName:       biases
   - String:          ' '
-  - BundleName:      gmem
+  - BundleName:      biases
   - String:          ' '
   - LoopName:        EXPORT
   - String:          ' '
@@ -3902,7 +3902,7 @@ Args:
   - AccessID:        seq
   - ArrayName:       ''
   - String:          ' '
-  - BundleName:      gmem
+  - BundleName:      biases
   - String:          ' '
   - LoopName:        EXPORT
   - String:          ' '
@@ -3930,57 +3930,7 @@ Args:
   - LoopLoc:         'src/conv1.cpp:133:10'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
-  - BundleName:      gmem
-  - String:          '''.'
-  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
-...
---- !Passed
-Pass:            reflow-burst-summary
-Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/conv1.cpp, Line: 147, Column: 3 }
-Function:        _Z23export_output_buffer_c1PA15_A255_fPA255_S_Pfii.1
-Args:            
-  - String:          'Multiple burst '
-  - Direction:       writes
-  - String:          ' of length '
-  - Length:          '255'
-  - String:          ' and bit width '
-  - Width:           '32'
-  - String:          ' has been inferred.'
-  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        seq1
-  - ArrayName:       ''
-  - String:          ' '
-  - BundleName:      i2
-  - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'src/conv1.cpp:147:3'
-  - String:          ' '
-  - Function:        'export_output_buffer_c1(float (*) [15][255], float (*) [255][255], float*, int, int) (.1)'
-    DebugLoc:        { File: src/conv1.cpp, Line: 131, Column: 0 }
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-burst-summary
-Name:            BurstInferredSummary
-DebugLoc:        { File: src/conv1.cpp, Line: 147, Column: 3 }
-Function:        _Z23export_output_buffer_c1PA15_A255_fPA255_S_Pfii.1
-Args:            
-  - String:          'Multiple burst '
-  - Direction:       writes
-  - String:          ' of length '
-  - Length:          '255'
-  - String:          ' and bit width '
-  - Width:           '32'
-  - String:          ' in loop '''
-  - LoopName:        anonymous
-  - String:          '''('
-  - LoopLoc:         'src/conv1.cpp:147:3'
-  - String:          ')'
-  - String:          ' has been inferred on bundle '''
-  - BundleName:      i2
+  - BundleName:      biases
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
@@ -4002,7 +3952,7 @@ Args:
   - AccessID:        seq2
   - ArrayName:       ''
   - String:          ' '
-  - BundleName:      i2
+  - BundleName:      bundle_2
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -4030,7 +3980,57 @@ Args:
   - LoopLoc:         'src/conv1.cpp:147:3'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
-  - BundleName:      i2
+  - BundleName:      bundle_2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: src/conv1.cpp, Line: 147, Column: 3 }
+Function:        _Z23export_output_buffer_c1PA15_A255_fPA255_S_Pfii.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '255'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      bundle_2
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'src/conv1.cpp:147:3'
+  - String:          ' '
+  - Function:        'export_output_buffer_c1(float (*) [15][255], float (*) [255][255], float*, int, int) (.1)'
+    DebugLoc:        { File: src/conv1.cpp, Line: 131, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: src/conv1.cpp, Line: 147, Column: 3 }
+Function:        _Z23export_output_buffer_c1PA15_A255_fPA255_S_Pfii.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '255'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         'src/conv1.cpp:147:3'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      bundle_2
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
@@ -4052,7 +4052,7 @@ Args:
   - AccessID:        seq
   - ArrayName:       ''
   - String:          ' '
-  - BundleName:      i1
+  - BundleName:      bundle_1
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -4080,7 +4080,7 @@ Args:
   - LoopLoc:         'src/conv1.cpp:104:3'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
-  - BundleName:      i1
+  - BundleName:      bundle_1
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
@@ -4102,7 +4102,7 @@ Args:
   - AccessID:        seq1
   - ArrayName:       ''
   - String:          ' '
-  - BundleName:      w1
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -4130,7 +4130,7 @@ Args:
   - LoopLoc:         'src/conv1.cpp:120:2'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
-  - BundleName:      w1
+  - BundleName:      weights
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
@@ -4152,7 +4152,7 @@ Args:
   - AccessID:        seq2
   - ArrayName:       ''
   - String:          ' '
-  - BundleName:      w1
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -4180,7 +4180,7 @@ Args:
   - LoopLoc:         'src/conv1.cpp:120:2'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
-  - BundleName:      w1
+  - BundleName:      weights
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
@@ -4202,7 +4202,7 @@ Args:
   - AccessID:        seq3
   - ArrayName:       ''
   - String:          ' '
-  - BundleName:      w1
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -4230,7 +4230,7 @@ Args:
   - LoopLoc:         'src/conv1.cpp:120:2'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
-  - BundleName:      w1
+  - BundleName:      weights
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
@@ -4252,7 +4252,7 @@ Args:
   - AccessID:        seq4
   - ArrayName:       ''
   - String:          ' '
-  - BundleName:      w1
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -4280,7 +4280,7 @@ Args:
   - LoopLoc:         'src/conv1.cpp:120:2'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
-  - BundleName:      w1
+  - BundleName:      weights
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
@@ -4302,7 +4302,7 @@ Args:
   - AccessID:        seq5
   - ArrayName:       ''
   - String:          ' '
-  - BundleName:      i1
+  - BundleName:      bundle_1
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -4330,7 +4330,7 @@ Args:
   - LoopLoc:         'src/conv1.cpp:104:3'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
-  - BundleName:      i1
+  - BundleName:      bundle_1
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
@@ -4352,7 +4352,7 @@ Args:
   - AccessID:        seq
   - ArrayName:       ''
   - String:          ' '
-  - BundleName:      i2
+  - BundleName:      bundle_2
   - String:          ' '
   - LoopName:        BH
   - String:          ' '
@@ -4380,7 +4380,7 @@ Args:
   - LoopLoc:         'src/conv2.cpp:80:6'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
-  - BundleName:      i2
+  - BundleName:      bundle_2
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
@@ -4402,7 +4402,7 @@ Args:
   - AccessID:        seq1
   - ArrayName:       ''
   - String:          ' '
-  - BundleName:      w2
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        TILE_OUT
   - String:          ' '
@@ -4430,7 +4430,7 @@ Args:
   - LoopLoc:         'src/conv2.cpp:36:13'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
-  - BundleName:      w2
+  - BundleName:      weights
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
@@ -4452,7 +4452,7 @@ Args:
   - AccessID:        seq2
   - ArrayName:       ''
   - String:          ' '
-  - BundleName:      gmem
+  - BundleName:      biases
   - String:          ' '
   - LoopName:        TILE_OUT
   - String:          ' '
@@ -4480,7 +4480,7 @@ Args:
   - LoopLoc:         'src/conv2.cpp:36:13'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
-  - BundleName:      gmem
+  - BundleName:      biases
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
@@ -4502,7 +4502,7 @@ Args:
   - AccessID:        seq3
   - ArrayName:       ''
   - String:          ' '
-  - BundleName:      i3
+  - BundleName:      bundle_1
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -4530,7 +4530,7 @@ Args:
   - LoopLoc:         'src/conv2.cpp:122:3'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
-  - BundleName:      i3
+  - BundleName:      bundle_1
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
@@ -4552,7 +4552,7 @@ Args:
   - AccessID:        seq4
   - ArrayName:       ''
   - String:          ' '
-  - BundleName:      i3
+  - BundleName:      bundle_1
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -4580,7 +4580,7 @@ Args:
   - LoopLoc:         'src/conv2.cpp:122:3'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
-  - BundleName:      i3
+  - BundleName:      bundle_1
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
@@ -4602,7 +4602,7 @@ Args:
   - AccessID:        seq
   - ArrayName:       ''
   - String:          ' '
-  - BundleName:      i3
+  - BundleName:      bundle_1
   - String:          ' '
   - Function:        'load_input_buffer_c3(float (*) [7][259], float (*) [255][255], int, int) (.1)'
     DebugLoc:        { File: src/conv3.cpp, Line: 84, Column: 0 }
@@ -4621,7 +4621,7 @@ Args:
   - String:          ' and bit width '
   - Width:           '32'
   - String:          ' has been inferred on bundle '''
-  - BundleName:      i3
+  - BundleName:      bundle_1
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
@@ -4643,7 +4643,7 @@ Args:
   - AccessID:        seq
   - ArrayName:       ''
   - String:          ' '
-  - BundleName:      w3
+  - BundleName:      weights
   - String:          ' '
   - LoopName:        WEIGHTI
   - String:          ' '
@@ -4671,7 +4671,7 @@ Args:
   - LoopLoc:         'src/conv3.cpp:117:11'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
-  - BundleName:      w3
+  - BundleName:      weights
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
@@ -4693,7 +4693,7 @@ Args:
   - AccessID:        seq1
   - ArrayName:       ''
   - String:          ' '
-  - BundleName:      o
+  - BundleName:      bundle_2
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -4721,7 +4721,7 @@ Args:
   - LoopLoc:         'src/conv3.cpp:147:3'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
-  - BundleName:      o
+  - BundleName:      bundle_2
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
@@ -4743,7 +4743,7 @@ Args:
   - AccessID:        seq2
   - ArrayName:       ''
   - String:          ' '
-  - BundleName:      o
+  - BundleName:      bundle_2
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
@@ -4771,7 +4771,7 @@ Args:
   - LoopLoc:         'src/conv3.cpp:147:3'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
-  - BundleName:      o
+  - BundleName:      bundle_2
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...

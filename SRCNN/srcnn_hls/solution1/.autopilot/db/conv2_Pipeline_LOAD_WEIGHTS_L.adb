@@ -16,7 +16,7 @@
             <Obj class_id="5" tracking_level="0" version="0">
               <type>1</type>
               <id>1</id>
-              <name>w2</name>
+              <name>weights</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -34,7 +34,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>544437362</coreId>
+              <coreId>1937011311</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -70,7 +70,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4294967295</coreId>
+              <coreId>1999052839</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>62</bitwidth>
@@ -106,7 +106,7 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1701995892</coreId>
+              <coreId>4294967295</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -574,7 +574,7 @@
             <Obj>
               <type>0</type>
               <id>16</id>
-              <name>w2_addr</name>
+              <name>weights_addr</name>
               <fileName>src/conv2.cpp</fileName>
               <fileDirectory>../.</fileDirectory>
               <lineNumber>36</lineNumber>
@@ -1168,7 +1168,7 @@
             <Obj>
               <type>0</type>
               <id>31</id>
-              <name>w2_addr_read</name>
+              <name>weights_addr_read</name>
               <fileName>src/conv2.cpp</fileName>
               <fileDirectory>../.</fileDirectory>
               <lineNumber>36</lineNumber>
@@ -1288,7 +1288,7 @@
             <Obj>
               <type>0</type>
               <id>33</id>
-              <name>empty_340</name>
+              <name>empty_336</name>
               <fileName>src/conv2.cpp</fileName>
               <fileDirectory>../.</fileDirectory>
               <lineNumber>93</lineNumber>
@@ -1320,7 +1320,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>empty_340_fu_183_p1</rtlName>
+              <rtlName>empty_336_fu_183_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -1601,7 +1601,7 @@
             <Obj>
               <type>0</type>
               <id>38</id>
-              <name>empty_341</name>
+              <name>empty_337</name>
               <fileName>src/conv2.cpp</fileName>
               <fileDirectory>../.</fileDirectory>
               <lineNumber>93</lineNumber>
@@ -1633,7 +1633,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>empty_341_fu_200_p2</rtlName>
+              <rtlName>empty_337_fu_200_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -1968,7 +1968,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1852142702</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1999,7 +1999,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1701995892</coreId>
+              <coreId>1752458345</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -2030,7 +2030,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1852142702</coreId>
+              <coreId>1867543669</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>3</bitwidth>
@@ -2061,7 +2061,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1852793695</coreId>
+              <coreId>1999052839</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -2092,7 +2092,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>807419168</coreId>
+              <coreId>1752458345</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -2123,7 +2123,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1852793695</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -2154,7 +2154,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1914725740</coreId>
+              <coreId>4294967295</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>3</bitwidth>
@@ -2185,7 +2185,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4294967295</coreId>
+              <coreId>1999052839</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -2216,7 +2216,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1431261768</coreId>
+              <coreId>857750816</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -2247,7 +2247,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>857750816</coreId>
+              <coreId>4294967295</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -2281,7 +2281,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>1852142708</coreId>
+            <coreId>4236394032</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -2320,7 +2320,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>0</coreId>
+            <coreId>4294967292</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -2355,7 +2355,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>1734439795</coreId>
+            <coreId>4215775584</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -2403,7 +2403,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>1701978146</coreId>
+            <coreId>4135603680</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -3368,7 +3368,7 @@
           </second>
         </item>
         <item>
-          <first>empty_341_fu_200_p2 ( + ) </first>
+          <first>empty_337_fu_200_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -3641,7 +3641,7 @@
           </second>
         </item>
         <item>
-          <first>w2_blk_n_R</first>
+          <first>weights_blk_n_R</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -3839,7 +3839,7 @@
           </second>
         </item>
         <item>
-          <first>w2_addr_read_reg_246</first>
+          <first>weights_addr_read_reg_246</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -3893,7 +3893,7 @@
           </second>
         </item>
         <item>
-          <first>empty_341_fu_200_p2 ( + ) </first>
+          <first>empty_337_fu_200_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -4498,7 +4498,7 @@
         </second>
       </item>
       <item>
-        <first>empty_340_fu_183</first>
+        <first>empty_336_fu_183</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4506,7 +4506,7 @@
         </second>
       </item>
       <item>
-        <first>empty_341_fu_200</first>
+        <first>empty_337_fu_200</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4594,19 +4594,19 @@
         </second>
       </item>
       <item>
-        <first>w2_addr_fu_139</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>16</item>
-        </second>
-      </item>
-      <item>
         <first>weight_buffer_addr_gep_fu_87</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>36</item>
+        </second>
+      </item>
+      <item>
+        <first>weights_addr_fu_139</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>16</item>
         </second>
       </item>
     </dp_fu_nodes_expression>
@@ -4698,7 +4698,7 @@
         </second>
       </item>
       <item>
-        <first>w2_addr_read_read_fu_82</first>
+        <first>weights_addr_read_read_fu_82</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4821,7 +4821,7 @@
         </second>
       </item>
       <item>
-        <first>w2_addr_read_reg_246</first>
+        <first>weights_addr_read_reg_246</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4856,21 +4856,6 @@
         </second>
       </item>
       <item>
-        <first>w2</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>
-            <first>read</first>
-            <second>
-              <count>1</count>
-              <item_version>0</item_version>
-              <item>31</item>
-            </second>
-          </item>
-        </second>
-      </item>
-      <item>
         <first>weight_buffer(p0)</first>
         <second>
           <count>1</count>
@@ -4881,6 +4866,21 @@
               <count>1</count>
               <item_version>0</item_version>
               <item>37</item>
+            </second>
+          </item>
+        </second>
+      </item>
+      <item>
+        <first>weights</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>
+            <first>read</first>
+            <second>
+              <count>1</count>
+              <item_version>0</item_version>
+              <item>31</item>
             </second>
           </item>
         </second>

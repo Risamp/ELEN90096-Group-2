@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_LOAD_INPUT_BH_L'
 ================================================================
-* Date:           Sun Nov  5 11:01:16 2023
+* Date:           Mon Nov  6 16:27:00 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -104,7 +104,7 @@ ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%indvar_flatten17 = alloca i32 1"  
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%sext_ln79_read = read i19 @_ssdm_op_Read.ap_auto.i19, i19 %sext_ln79"   --->   Operation 20 'read' 'sext_ln79_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%input_ftmap_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %input_ftmap"   --->   Operation 21 'read' 'input_ftmap_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%sext_ln79_cast = sext i19 %sext_ln79_read"   --->   Operation 22 'sext' 'sext_ln79_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %i2, void @empty_34, i32 0, i32 0, void @empty_36, i32 0, i32 512, void @empty_6, void @empty_31, void @empty_36, i32 16, i32 16, i32 256, i32 256, void @empty_36, void @empty_36, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %bundle_2, void @empty_6, i32 0, i32 0, void @empty, i32 0, i32 512, void @empty_19, void @empty_28, void @empty, i32 16, i32 16, i32 256, i32 256, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 24 [1/1] (0.42ns)   --->   "%store_ln0 = store i16 0, i16 %indvar_flatten17"   --->   Operation 24 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 25 [1/1] (0.42ns)   --->   "%store_ln0 = store i7 0, i7 %bin"   --->   Operation 25 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 26 [1/1] (0.42ns)   --->   "%store_ln0 = store i10 0, i10 %indvar_flatten"   --->   Operation 26 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
@@ -145,7 +145,7 @@ ST_2 : Operation 58 [1/1] (0.28ns) (out node of the LUT)   --->   "%or_ln80_2 = 
 ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln80 = br i1 %or_ln80, void %load-store-loop.i.split, void %new.body.for.body4.i" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 59 'br' 'br_ln80' <Predicate = (!icmp_ln79)> <Delay = 0.00>
 ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%br_ln80 = br i1 %or_ln80_2, void %for.first.iter.load-store-loop.i, void %for.first.iter.for.body4.i" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 60 'br' 'br_ln80' <Predicate = (!icmp_ln79 & or_ln80)> <Delay = 0.00>
 ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%br_ln0 = br void %load-store-loop.i.split"   --->   Operation 61 'br' 'br_ln0' <Predicate = (!icmp_ln79 & or_ln80)> <Delay = 0.00>
-ST_2 : Operation 62 [12/12] (1.89ns)   --->   "%empty_342 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 62 'urem' 'empty_342' <Predicate = (!icmp_ln79)> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 62 [12/12] (1.89ns)   --->   "%empty_338 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 62 'urem' 'empty_338' <Predicate = (!icmp_ln79)> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%select_ln80_cast = zext i8 %select_ln80" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 63 'zext' 'select_ln80_cast' <Predicate = (!icmp_ln79)> <Delay = 0.00>
 ST_2 : Operation 64 [1/1] (2.11ns)   --->   "%mul67 = mul i17 %select_ln80_cast, i17 386" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 64 'mul' 'mul67' <Predicate = (!icmp_ln79)> <Delay = 2.11> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.11> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%p_cast = partselect i2 @_ssdm_op_PartSelect.i2.i17.i32.i32, i17 %mul67, i32 15, i32 16" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 65 'partselect' 'p_cast' <Predicate = (!icmp_ln79)> <Delay = 0.00>
@@ -161,46 +161,46 @@ ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%br_ln0 = br void %load-store-loop.
 
 State 3 <SV = 2> <Delay = 7.30>
 ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%sext_ln79_1 = sext i62 %sext_ln80_mid2_v" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 75 'sext' 'sext_ln79_1' <Predicate = (!icmp_ln79)> <Delay = 0.00>
-ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%i2_addr = getelementptr i32 %i2, i64 %sext_ln79_1" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 76 'getelementptr' 'i2_addr' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 0.00>
-ST_3 : Operation 77 [8/8] (7.30ns)   --->   "%empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %i2_addr, i32 765" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 77 'readreq' 'empty_345' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_3 : Operation 78 [11/12] (1.89ns)   --->   "%empty_342 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 78 'urem' 'empty_342' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%i2_addr_2 = getelementptr i32 %i2, i64 %sext_ln79_1" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 79 'getelementptr' 'i2_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%bundle_2_addr = getelementptr i32 %bundle_2, i64 %sext_ln79_1" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 76 'getelementptr' 'bundle_2_addr' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 0.00>
+ST_3 : Operation 77 [8/8] (7.30ns)   --->   "%empty_341 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %bundle_2_addr, i32 765" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 77 'readreq' 'empty_341' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 78 [11/12] (1.89ns)   --->   "%empty_338 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 78 'urem' 'empty_338' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%bundle_2_addr_3 = getelementptr i32 %bundle_2, i64 %sext_ln79_1" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 79 'getelementptr' 'bundle_2_addr_3' <Predicate = true> <Delay = 0.00>
 
 State 4 <SV = 3> <Delay = 7.30>
-ST_4 : Operation 80 [7/8] (7.30ns)   --->   "%empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %i2_addr, i32 765" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 80 'readreq' 'empty_345' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_4 : Operation 81 [10/12] (1.89ns)   --->   "%empty_342 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 81 'urem' 'empty_342' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 80 [7/8] (7.30ns)   --->   "%empty_341 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %bundle_2_addr, i32 765" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 80 'readreq' 'empty_341' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 81 [10/12] (1.89ns)   --->   "%empty_338 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 81 'urem' 'empty_338' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
 State 5 <SV = 4> <Delay = 7.30>
-ST_5 : Operation 82 [6/8] (7.30ns)   --->   "%empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %i2_addr, i32 765" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 82 'readreq' 'empty_345' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_5 : Operation 83 [9/12] (1.89ns)   --->   "%empty_342 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 83 'urem' 'empty_342' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 82 [6/8] (7.30ns)   --->   "%empty_341 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %bundle_2_addr, i32 765" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 82 'readreq' 'empty_341' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 83 [9/12] (1.89ns)   --->   "%empty_338 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 83 'urem' 'empty_338' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
 State 6 <SV = 5> <Delay = 7.30>
-ST_6 : Operation 84 [5/8] (7.30ns)   --->   "%empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %i2_addr, i32 765" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 84 'readreq' 'empty_345' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_6 : Operation 85 [8/12] (1.89ns)   --->   "%empty_342 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 85 'urem' 'empty_342' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 84 [5/8] (7.30ns)   --->   "%empty_341 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %bundle_2_addr, i32 765" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 84 'readreq' 'empty_341' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 85 [8/12] (1.89ns)   --->   "%empty_338 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 85 'urem' 'empty_338' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
 State 7 <SV = 6> <Delay = 7.30>
-ST_7 : Operation 86 [4/8] (7.30ns)   --->   "%empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %i2_addr, i32 765" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 86 'readreq' 'empty_345' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_7 : Operation 87 [7/12] (1.89ns)   --->   "%empty_342 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 87 'urem' 'empty_342' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 86 [4/8] (7.30ns)   --->   "%empty_341 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %bundle_2_addr, i32 765" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 86 'readreq' 'empty_341' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 87 [7/12] (1.89ns)   --->   "%empty_338 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 87 'urem' 'empty_338' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
 State 8 <SV = 7> <Delay = 7.30>
-ST_8 : Operation 88 [3/8] (7.30ns)   --->   "%empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %i2_addr, i32 765" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 88 'readreq' 'empty_345' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_8 : Operation 89 [6/12] (1.89ns)   --->   "%empty_342 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 89 'urem' 'empty_342' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 88 [3/8] (7.30ns)   --->   "%empty_341 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %bundle_2_addr, i32 765" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 88 'readreq' 'empty_341' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 89 [6/12] (1.89ns)   --->   "%empty_338 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 89 'urem' 'empty_338' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
 State 9 <SV = 8> <Delay = 7.30>
-ST_9 : Operation 90 [2/8] (7.30ns)   --->   "%empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %i2_addr, i32 765" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 90 'readreq' 'empty_345' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_9 : Operation 91 [5/12] (1.89ns)   --->   "%empty_342 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 91 'urem' 'empty_342' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 90 [2/8] (7.30ns)   --->   "%empty_341 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %bundle_2_addr, i32 765" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 90 'readreq' 'empty_341' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 91 [5/12] (1.89ns)   --->   "%empty_338 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 91 'urem' 'empty_338' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
 State 10 <SV = 9> <Delay = 7.30>
-ST_10 : Operation 92 [1/8] (7.30ns)   --->   "%empty_345 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %i2_addr, i32 765" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 92 'readreq' 'empty_345' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 92 [1/8] (7.30ns)   --->   "%empty_341 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %bundle_2_addr, i32 765" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 92 'readreq' 'empty_341' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 ST_10 : Operation 93 [1/1] (0.00ns)   --->   "%br_ln80 = br void %for.first.iter.load-store-loop.i" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 93 'br' 'br_ln80' <Predicate = (or_ln80 & or_ln80_2)> <Delay = 0.00>
-ST_10 : Operation 94 [4/12] (1.89ns)   --->   "%empty_342 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 94 'urem' 'empty_342' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 94 [4/12] (1.89ns)   --->   "%empty_338 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 94 'urem' 'empty_338' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
 State 11 <SV = 10> <Delay = 1.89>
-ST_11 : Operation 95 [3/12] (1.89ns)   --->   "%empty_342 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 95 'urem' 'empty_342' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 95 [3/12] (1.89ns)   --->   "%empty_338 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 95 'urem' 'empty_338' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
 State 12 <SV = 11> <Delay = 7.30>
-ST_12 : Operation 96 [2/12] (1.89ns)   --->   "%empty_342 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 96 'urem' 'empty_342' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 97 [1/1] (7.30ns)   --->   "%i2_addr_2_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %i2_addr_2" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 97 'read' 'i2_addr_2_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_12 : Operation 96 [2/12] (1.89ns)   --->   "%empty_338 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 96 'urem' 'empty_338' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 97 [1/1] (7.30ns)   --->   "%bundle_2_addr_3_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %bundle_2_addr_3" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 97 'read' 'bundle_2_addr_3_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 ST_12 : Operation 131 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 131 'ret' 'ret_ln0' <Predicate = (icmp_ln79)> <Delay = 0.00>
 
 State 13 <SV = 12> <Delay = 5.90>
@@ -211,30 +211,30 @@ ST_13 : Operation 101 [1/1] (0.17ns)   --->   "%select_ln79 = select i1 %icmp_ln
 ST_13 : Operation 102 [1/1] (0.00ns)   --->   "%select_ln79_1_cast = zext i7 %select_ln79_1" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 102 'zext' 'select_ln79_1_cast' <Predicate = (!icmp_ln79)> <Delay = 0.00>
 ST_13 : Operation 103 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i7.i2, i7 %select_ln79_1, i2 0" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 103 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln79)> <Delay = 0.00>
 ST_13 : Operation 104 [1/1] (0.00ns)   --->   "%tmp_58_cast = zext i9 %tmp_s" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 104 'zext' 'tmp_58_cast' <Predicate = (!icmp_ln79)> <Delay = 0.00>
-ST_13 : Operation 105 [1/1] (0.77ns)   --->   "%empty_346 = sub i10 %tmp_58_cast, i10 %select_ln79_1_cast" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 105 'sub' 'empty_346' <Predicate = (!icmp_ln79)> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_13 : Operation 106 [1/1] (0.00ns)   --->   "%sext_ln79_2 = sext i10 %empty_346" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 106 'sext' 'sext_ln79_2' <Predicate = (!icmp_ln79)> <Delay = 0.00>
+ST_13 : Operation 105 [1/1] (0.77ns)   --->   "%empty_342 = sub i10 %tmp_58_cast, i10 %select_ln79_1_cast" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 105 'sub' 'empty_342' <Predicate = (!icmp_ln79)> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 106 [1/1] (0.00ns)   --->   "%sext_ln79_2 = sext i10 %empty_342" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 106 'sext' 'sext_ln79_2' <Predicate = (!icmp_ln79)> <Delay = 0.00>
 ST_13 : Operation 107 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 107 'specpipeline' 'specpipeline_ln0' <Predicate = (!icmp_ln79)> <Delay = 0.00>
 ST_13 : Operation 108 [1/1] (0.54ns)   --->   "%add_ln80 = add i2 %select_ln79, i2 1" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 108 'add' 'add_ln80' <Predicate = (!icmp_ln79 & and_ln79)> <Delay = 0.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_13 : Operation 109 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @BH_L_str"   --->   Operation 109 'specloopname' 'specloopname_ln0' <Predicate = (!icmp_ln79)> <Delay = 0.00>
 ST_13 : Operation 110 [1/1] (0.17ns)   --->   "%select_ln80_1 = select i1 %and_ln79, i2 %add_ln80, i2 %select_ln79" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 110 'select' 'select_ln80_1' <Predicate = (!icmp_ln79)> <Delay = 0.17> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.17> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_13 : Operation 111 [1/1] (0.00ns)   --->   "%select_ln80_1_cast = zext i2 %select_ln80_1" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 111 'zext' 'select_ln80_1_cast' <Predicate = (!icmp_ln79)> <Delay = 0.00>
-ST_13 : Operation 112 [1/1] (0.78ns)   --->   "%empty_347 = add i11 %sext_ln79_2, i11 %select_ln80_1_cast" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 112 'add' 'empty_347' <Predicate = (!icmp_ln79)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_13 : Operation 113 [1/1] (0.00ns)   --->   "%p_cast2 = sext i11 %empty_347" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 113 'sext' 'p_cast2' <Predicate = (!icmp_ln79)> <Delay = 0.00>
-ST_13 : Operation 114 [1/1] (2.14ns)   --->   "%empty_348 = mul i14 %p_cast2, i14 85" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 114 'mul' 'empty_348' <Predicate = (!icmp_ln79)> <Delay = 2.14> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 112 [1/1] (0.78ns)   --->   "%empty_343 = add i11 %sext_ln79_2, i11 %select_ln80_1_cast" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 112 'add' 'empty_343' <Predicate = (!icmp_ln79)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 113 [1/1] (0.00ns)   --->   "%p_cast2 = sext i11 %empty_343" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 113 'sext' 'p_cast2' <Predicate = (!icmp_ln79)> <Delay = 0.00>
+ST_13 : Operation 114 [1/1] (2.14ns)   --->   "%empty_344 = mul i14 %p_cast2, i14 85" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 114 'mul' 'empty_344' <Predicate = (!icmp_ln79)> <Delay = 2.14> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 ST_13 : Operation 115 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 115 'specpipeline' 'specpipeline_ln0' <Predicate = (!icmp_ln79)> <Delay = 0.00>
-ST_13 : Operation 116 [1/12] (1.89ns)   --->   "%empty_342 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 116 'urem' 'empty_342' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
-ST_13 : Operation 117 [1/1] (0.00ns)   --->   "%p_cast4 = zext i8 %empty_342" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 117 'zext' 'p_cast4' <Predicate = true> <Delay = 0.00>
-ST_13 : Operation 118 [1/1] (0.83ns)   --->   "%empty_343 = add i14 %empty_348, i14 %p_cast4" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 118 'add' 'empty_343' <Predicate = true> <Delay = 0.83> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_13 : Operation 119 [1/1] (0.00ns)   --->   "%p_cast6 = zext i14 %empty_343" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 119 'zext' 'p_cast6' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 116 [1/12] (1.89ns)   --->   "%empty_338 = urem i8 %select_ln80, i8 85" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 116 'urem' 'empty_338' <Predicate = true> <Delay = 1.89> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 117 [1/1] (0.00ns)   --->   "%p_cast4 = zext i8 %empty_338" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 117 'zext' 'p_cast4' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 118 [1/1] (0.83ns)   --->   "%empty_339 = add i14 %empty_344, i14 %p_cast4" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 118 'add' 'empty_339' <Predicate = true> <Delay = 0.83> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 119 [1/1] (0.00ns)   --->   "%p_cast6 = zext i14 %empty_339" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 119 'zext' 'p_cast6' <Predicate = true> <Delay = 0.00>
 ST_13 : Operation 120 [1/1] (0.00ns)   --->   "%conv2_float_255_255_float_64_1_1_float_float_255_255_i_3 = getelementptr i32 %conv2_float_255_255_float_64_1_1_float_float_255_255_i_2, i64 0, i64 %p_cast6" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 120 'getelementptr' 'conv2_float_255_255_float_64_1_1_float_float_255_255_i_3' <Predicate = true> <Delay = 0.00>
 ST_13 : Operation 121 [1/1] (0.00ns)   --->   "%conv2_float_255_255_float_64_1_1_float_float_255_255_i_4 = getelementptr i32 %conv2_float_255_255_float_64_1_1_float_float_255_255_i_1, i64 0, i64 %p_cast6" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 121 'getelementptr' 'conv2_float_255_255_float_64_1_1_float_float_255_255_i_4' <Predicate = true> <Delay = 0.00>
 ST_13 : Operation 122 [1/1] (0.00ns)   --->   "%conv2_float_255_255_float_64_1_1_float_float_255_255_i_5 = getelementptr i32 %conv2_float_255_255_float_64_1_1_float_float_255_255_i, i64 0, i64 %p_cast6" [src/conv2.cpp:79->src/conv2.cpp:34]   --->   Operation 122 'getelementptr' 'conv2_float_255_255_float_64_1_1_float_float_255_255_i_5' <Predicate = true> <Delay = 0.00>
-ST_13 : Operation 123 [1/1] (0.00ns)   --->   "%empty_344 = bitcast i32 %i2_addr_2_read" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 123 'bitcast' 'empty_344' <Predicate = true> <Delay = 0.00>
-ST_13 : Operation 124 [1/1] (1.23ns)   --->   "%store_ln80 = store i32 %empty_344, i14 %conv2_float_255_255_float_64_1_1_float_float_255_255_i_4" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 124 'store' 'store_ln80' <Predicate = (p_cast == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16320> <RAM>
+ST_13 : Operation 123 [1/1] (0.00ns)   --->   "%empty_340 = bitcast i32 %bundle_2_addr_3_read" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 123 'bitcast' 'empty_340' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 124 [1/1] (1.23ns)   --->   "%store_ln80 = store i32 %empty_340, i14 %conv2_float_255_255_float_64_1_1_float_float_255_255_i_4" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 124 'store' 'store_ln80' <Predicate = (p_cast == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16320> <RAM>
 ST_13 : Operation 125 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit"   --->   Operation 125 'br' 'br_ln0' <Predicate = (p_cast == 1)> <Delay = 0.00>
-ST_13 : Operation 126 [1/1] (1.23ns)   --->   "%store_ln80 = store i32 %empty_344, i14 %conv2_float_255_255_float_64_1_1_float_float_255_255_i_3" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 126 'store' 'store_ln80' <Predicate = (p_cast == 0)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16320> <RAM>
+ST_13 : Operation 126 [1/1] (1.23ns)   --->   "%store_ln80 = store i32 %empty_340, i14 %conv2_float_255_255_float_64_1_1_float_float_255_255_i_3" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 126 'store' 'store_ln80' <Predicate = (p_cast == 0)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16320> <RAM>
 ST_13 : Operation 127 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit"   --->   Operation 127 'br' 'br_ln0' <Predicate = (p_cast == 0)> <Delay = 0.00>
-ST_13 : Operation 128 [1/1] (1.23ns)   --->   "%store_ln80 = store i32 %empty_344, i14 %conv2_float_255_255_float_64_1_1_float_float_255_255_i_5" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 128 'store' 'store_ln80' <Predicate = (p_cast != 0 & p_cast != 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16320> <RAM>
+ST_13 : Operation 128 [1/1] (1.23ns)   --->   "%store_ln80 = store i32 %empty_340, i14 %conv2_float_255_255_float_64_1_1_float_float_255_255_i_5" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 128 'store' 'store_ln80' <Predicate = (p_cast != 0 & p_cast != 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16320> <RAM>
 ST_13 : Operation 129 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit"   --->   Operation 129 'br' 'br_ln0' <Predicate = (p_cast != 0 & p_cast != 1)> <Delay = 0.00>
 ST_13 : Operation 130 [1/1] (0.42ns)   --->   "%store_ln80 = store i2 %select_ln80_1, i2 %bh" [src/conv2.cpp:80->src/conv2.cpp:34]   --->   Operation 130 'store' 'store_ln80' <Predicate = (!icmp_ln79)> <Delay = 0.42>
 
@@ -250,7 +250,7 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ i2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=4; pingpong=0; private_global=0; IO mode=m_axi:ce=0
+Port [ bundle_2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=4; pingpong=0; private_global=0; IO mode=m_axi:ce=0
 Port [ input_ftmap]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
 Port [ sext_ln79]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
 Port [ conv2_float_255_255_float_64_1_1_float_float_255_255_i_2]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
@@ -322,11 +322,11 @@ store_ln80                                               (store            ) [ 0
 store_ln80                                               (store            ) [ 00000000000000]
 br_ln0                                                   (br               ) [ 01100000000000]
 sext_ln79_1                                              (sext             ) [ 00000000000000]
-i2_addr                                                  (getelementptr    ) [ 01001111111000]
-i2_addr_2                                                (getelementptr    ) [ 01001111111110]
-empty_345                                                (readreq          ) [ 00000000000000]
+bundle_2_addr                                            (getelementptr    ) [ 01001111111000]
+bundle_2_addr_3                                          (getelementptr    ) [ 01001111111110]
+empty_341                                                (readreq          ) [ 00000000000000]
 br_ln80                                                  (br               ) [ 00000000000000]
-i2_addr_2_read                                           (read             ) [ 01000000000001]
+bundle_2_addr_3_read                                     (read             ) [ 01000000000001]
 bh_load                                                  (load             ) [ 00000000000000]
 specloopname_ln0                                         (specloopname     ) [ 00000000000000]
 speclooptripcount_ln0                                    (speclooptripcount) [ 00000000000000]
@@ -334,25 +334,25 @@ select_ln79                                              (select           ) [ 0
 select_ln79_1_cast                                       (zext             ) [ 00000000000000]
 tmp_s                                                    (bitconcatenate   ) [ 00000000000000]
 tmp_58_cast                                              (zext             ) [ 00000000000000]
-empty_346                                                (sub              ) [ 00000000000000]
+empty_342                                                (sub              ) [ 00000000000000]
 sext_ln79_2                                              (sext             ) [ 00000000000000]
 specpipeline_ln0                                         (specpipeline     ) [ 00000000000000]
 add_ln80                                                 (add              ) [ 00000000000000]
 specloopname_ln0                                         (specloopname     ) [ 00000000000000]
 select_ln80_1                                            (select           ) [ 00000000000000]
 select_ln80_1_cast                                       (zext             ) [ 00000000000000]
-empty_347                                                (add              ) [ 00000000000000]
-p_cast2                                                  (sext             ) [ 00000000000000]
-empty_348                                                (mul              ) [ 00000000000000]
-specpipeline_ln0                                         (specpipeline     ) [ 00000000000000]
-empty_342                                                (urem             ) [ 00000000000000]
-p_cast4                                                  (zext             ) [ 00000000000000]
 empty_343                                                (add              ) [ 00000000000000]
+p_cast2                                                  (sext             ) [ 00000000000000]
+empty_344                                                (mul              ) [ 00000000000000]
+specpipeline_ln0                                         (specpipeline     ) [ 00000000000000]
+empty_338                                                (urem             ) [ 00000000000000]
+p_cast4                                                  (zext             ) [ 00000000000000]
+empty_339                                                (add              ) [ 00000000000000]
 p_cast6                                                  (zext             ) [ 00000000000000]
 conv2_float_255_255_float_64_1_1_float_float_255_255_i_3 (getelementptr    ) [ 00000000000000]
 conv2_float_255_255_float_64_1_1_float_float_255_255_i_4 (getelementptr    ) [ 00000000000000]
 conv2_float_255_255_float_64_1_1_float_float_255_255_i_5 (getelementptr    ) [ 00000000000000]
-empty_344                                                (bitcast          ) [ 00000000000000]
+empty_340                                                (bitcast          ) [ 00000000000000]
 store_ln80                                               (store            ) [ 00000000000000]
 br_ln0                                                   (br               ) [ 00000000000000]
 store_ln80                                               (store            ) [ 00000000000000]
@@ -366,12 +366,12 @@ ret_ln0                                                  (ret              ) [ 0
 <model>
 
 <comp_list>
-<comp id="0" class="1000" name="i2">
+<comp id="0" class="1000" name="bundle_2">
 <pin_list>
 <pin id="1" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="i2"/></StgValue>
+<StgValue><ssdm name="bundle_2"/></StgValue>
 </bind>
 </comp>
 
@@ -464,7 +464,7 @@ ret_ln0                                                  (ret              ) [ 0
 <pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_34"/></StgValue>
+<StgValue><ssdm name="empty_6"/></StgValue>
 </bind>
 </comp>
 
@@ -482,7 +482,7 @@ ret_ln0                                                  (ret              ) [ 0
 <pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_36"/></StgValue>
+<StgValue><ssdm name="empty"/></StgValue>
 </bind>
 </comp>
 
@@ -500,7 +500,7 @@ ret_ln0                                                  (ret              ) [ 0
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_6"/></StgValue>
+<StgValue><ssdm name="empty_19"/></StgValue>
 </bind>
 </comp>
 
@@ -509,7 +509,7 @@ ret_ln0                                                  (ret              ) [ 0
 <pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_31"/></StgValue>
+<StgValue><ssdm name="empty_28"/></StgValue>
 </bind>
 </comp>
 
@@ -952,11 +952,11 @@ ret_ln0                                                  (ret              ) [ 0
 </pin_list>
 <bind>
 <opcode="readreq(1154) " fcode="readreq"/>
-<opset="empty_345/3 "/>
+<opset="empty_341/3 "/>
 </bind>
 </comp>
 
-<comp id="149" class="1004" name="i2_addr_2_read_read_fu_149">
+<comp id="149" class="1004" name="bundle_2_addr_3_read_read_fu_149">
 <pin_list>
 <pin id="150" dir="0" index="0" bw="32" slack="0"/>
 <pin id="151" dir="0" index="1" bw="32" slack="9"/>
@@ -964,7 +964,7 @@ ret_ln0                                                  (ret              ) [ 0
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
-<opset="i2_addr_2_read/12 "/>
+<opset="bundle_2_addr_3_read/12 "/>
 </bind>
 </comp>
 
@@ -1471,7 +1471,7 @@ ret_ln0                                                  (ret              ) [ 0
 </pin_list>
 <bind>
 <opcode="urem(17) " fcode="urem"/>
-<opset="empty_342/2 "/>
+<opset="empty_338/2 "/>
 </bind>
 </comp>
 
@@ -1608,7 +1608,7 @@ ret_ln0                                                  (ret              ) [ 0
 </bind>
 </comp>
 
-<comp id="454" class="1004" name="i2_addr_fu_454">
+<comp id="454" class="1004" name="bundle_2_addr_fu_454">
 <pin_list>
 <pin id="455" dir="0" index="0" bw="32" slack="0"/>
 <pin id="456" dir="0" index="1" bw="62" slack="0"/>
@@ -1616,11 +1616,11 @@ ret_ln0                                                  (ret              ) [ 0
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="i2_addr/3 "/>
+<opset="bundle_2_addr/3 "/>
 </bind>
 </comp>
 
-<comp id="461" class="1004" name="i2_addr_2_fu_461">
+<comp id="461" class="1004" name="bundle_2_addr_3_fu_461">
 <pin_list>
 <pin id="462" dir="0" index="0" bw="32" slack="0"/>
 <pin id="463" dir="0" index="1" bw="62" slack="0"/>
@@ -1628,7 +1628,7 @@ ret_ln0                                                  (ret              ) [ 0
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="i2_addr_2/3 "/>
+<opset="bundle_2_addr_3/3 "/>
 </bind>
 </comp>
 
@@ -1691,7 +1691,7 @@ ret_ln0                                                  (ret              ) [ 0
 </bind>
 </comp>
 
-<comp id="491" class="1004" name="empty_346_fu_491">
+<comp id="491" class="1004" name="empty_342_fu_491">
 <pin_list>
 <pin id="492" dir="0" index="0" bw="9" slack="0"/>
 <pin id="493" dir="0" index="1" bw="7" slack="0"/>
@@ -1699,7 +1699,7 @@ ret_ln0                                                  (ret              ) [ 0
 </pin_list>
 <bind>
 <opcode="sub(10) " fcode="sub"/>
-<opset="empty_346/13 "/>
+<opset="empty_342/13 "/>
 </bind>
 </comp>
 
@@ -1750,7 +1750,7 @@ ret_ln0                                                  (ret              ) [ 0
 </bind>
 </comp>
 
-<comp id="518" class="1004" name="empty_347_fu_518">
+<comp id="518" class="1004" name="empty_343_fu_518">
 <pin_list>
 <pin id="519" dir="0" index="0" bw="10" slack="0"/>
 <pin id="520" dir="0" index="1" bw="2" slack="0"/>
@@ -1758,7 +1758,7 @@ ret_ln0                                                  (ret              ) [ 0
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="empty_347/13 "/>
+<opset="empty_343/13 "/>
 </bind>
 </comp>
 
@@ -1773,7 +1773,7 @@ ret_ln0                                                  (ret              ) [ 0
 </bind>
 </comp>
 
-<comp id="528" class="1004" name="empty_348_fu_528">
+<comp id="528" class="1004" name="empty_344_fu_528">
 <pin_list>
 <pin id="529" dir="0" index="0" bw="11" slack="0"/>
 <pin id="530" dir="0" index="1" bw="8" slack="0"/>
@@ -1781,7 +1781,7 @@ ret_ln0                                                  (ret              ) [ 0
 </pin_list>
 <bind>
 <opcode="mul(12) " fcode="mul"/>
-<opset="empty_348/13 "/>
+<opset="empty_344/13 "/>
 </bind>
 </comp>
 
@@ -1796,7 +1796,7 @@ ret_ln0                                                  (ret              ) [ 0
 </bind>
 </comp>
 
-<comp id="538" class="1004" name="empty_343_fu_538">
+<comp id="538" class="1004" name="empty_339_fu_538">
 <pin_list>
 <pin id="539" dir="0" index="0" bw="14" slack="0"/>
 <pin id="540" dir="0" index="1" bw="8" slack="0"/>
@@ -1804,7 +1804,7 @@ ret_ln0                                                  (ret              ) [ 0
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="empty_343/13 "/>
+<opset="empty_339/13 "/>
 </bind>
 </comp>
 
@@ -1819,14 +1819,14 @@ ret_ln0                                                  (ret              ) [ 0
 </bind>
 </comp>
 
-<comp id="551" class="1004" name="empty_344_fu_551">
+<comp id="551" class="1004" name="empty_340_fu_551">
 <pin_list>
 <pin id="552" dir="0" index="0" bw="32" slack="1"/>
 <pin id="553" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="bitcast(44) " fcode="bitcast"/>
-<opset="empty_344/13 "/>
+<opset="empty_340/13 "/>
 </bind>
 </comp>
 
@@ -2002,33 +2002,33 @@ ret_ln0                                                  (ret              ) [ 0
 </bind>
 </comp>
 
-<comp id="650" class="1005" name="i2_addr_reg_650">
+<comp id="650" class="1005" name="bundle_2_addr_reg_650">
 <pin_list>
 <pin id="651" dir="0" index="0" bw="32" slack="1"/>
 <pin id="652" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="i2_addr "/>
+<opset="bundle_2_addr "/>
 </bind>
 </comp>
 
-<comp id="655" class="1005" name="i2_addr_2_reg_655">
+<comp id="655" class="1005" name="bundle_2_addr_3_reg_655">
 <pin_list>
 <pin id="656" dir="0" index="0" bw="32" slack="9"/>
 <pin id="657" dir="1" index="1" bw="32" slack="9"/>
 </pin_list>
 <bind>
-<opset="i2_addr_2 "/>
+<opset="bundle_2_addr_3 "/>
 </bind>
 </comp>
 
-<comp id="660" class="1005" name="i2_addr_2_read_reg_660">
+<comp id="660" class="1005" name="bundle_2_addr_3_read_reg_660">
 <pin_list>
 <pin id="661" dir="0" index="0" bw="32" slack="1"/>
 <pin id="662" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="i2_addr_2_read "/>
+<opset="bundle_2_addr_3_read "/>
 </bind>
 </comp>
 
@@ -2394,7 +2394,7 @@ ret_ln0                                                  (ret              ) [ 0
 	Port: conv2_float_255_255_float_64_1_1_float_float_255_255_i_1 | {13 }
 	Port: conv2_float_255_255_float_64_1_1_float_float_255_255_i | {13 }
  - Input state : 
-	Port: conv2_Pipeline_LOAD_INPUT_BH_L : i2 | {3 4 5 6 7 8 9 10 12 }
+	Port: conv2_Pipeline_LOAD_INPUT_BH_L : bundle_2 | {3 4 5 6 7 8 9 10 12 }
 	Port: conv2_Pipeline_LOAD_INPUT_BH_L : input_ftmap | {1 }
 	Port: conv2_Pipeline_LOAD_INPUT_BH_L : sext_ln79 | {1 }
   - Chain level:
@@ -2429,7 +2429,7 @@ ret_ln0                                                  (ret              ) [ 0
 		or_ln80_2 : 2
 		br_ln80 : 2
 		br_ln80 : 2
-		empty_342 : 3
+		empty_338 : 3
 		select_ln80_cast : 3
 		mul67 : 4
 		p_cast : 5
@@ -2442,9 +2442,9 @@ ret_ln0                                                  (ret              ) [ 0
 		store_ln80 : 3
 		store_ln80 : 4
 	State 3
-		i2_addr : 1
-		empty_345 : 2
-		i2_addr_2 : 1
+		bundle_2_addr : 1
+		empty_341 : 2
+		bundle_2_addr_3 : 1
 	State 4
 	State 5
 	State 6
@@ -2457,16 +2457,16 @@ ret_ln0                                                  (ret              ) [ 0
 	State 13
 		select_ln79 : 1
 		tmp_58_cast : 1
-		empty_346 : 2
+		empty_342 : 2
 		sext_ln79_2 : 3
 		add_ln80 : 2
 		select_ln80_1 : 3
 		select_ln80_1_cast : 4
-		empty_347 : 5
+		empty_343 : 5
 		p_cast2 : 6
-		empty_348 : 7
+		empty_344 : 7
 		p_cast4 : 1
-		empty_343 : 8
+		empty_339 : 8
 		p_cast6 : 9
 		conv2_float_255_255_float_64_1_1_float_float_255_255_i_3 : 10
 		conv2_float_255_255_float_64_1_1_float_float_255_255_i_4 : 10
@@ -2482,107 +2482,107 @@ ret_ln0                                                  (ret              ) [ 0
 ============================================================
 
 * Functional unit list:
-|----------|------------------------------|---------|---------|---------|
-| Operation|        Functional Unit       |   DSP   |    FF   |   LUT   |
-|----------|------------------------------|---------|---------|---------|
-|   urem   |          grp_fu_385          |    0    |   189   |   106   |
-|----------|------------------------------|---------|---------|---------|
-|          |       add_ln79_3_fu_257      |    0    |    0    |    23   |
-|          |        add_ln79_fu_269       |    0    |    0    |    14   |
-|          |       add_ln79_1_fu_309      |    0    |    0    |    64   |
-|          |       add_ln79_2_fu_314      |    0    |    0    |    64   |
-|    add   |         empty_fu_411         |    0    |    0    |    15   |
-|          |       add_ln80_1_fu_417      |    0    |    0    |    17   |
-|          |        add_ln80_fu_501       |    0    |    0    |    9    |
-|          |       empty_347_fu_518       |    0    |    0    |    17   |
-|          |       empty_343_fu_538       |    0    |    0    |    21   |
-|----------|------------------------------|---------|---------|---------|
-|          |        mul_ln79_fu_299       |    1    |    0    |    6    |
-|    mul   |         mul67_fu_395         |    0    |    0    |    62   |
-|          |       empty_348_fu_528       |    1    |    0    |    5    |
-|----------|------------------------------|---------|---------|---------|
-|          |       icmp_ln79_fu_251       |    0    |    0    |    23   |
-|   icmp   |       icmp_ln80_fu_275       |    0    |    0    |    17   |
-|          |      exitcond8498_fu_335     |    0    |    0    |    15   |
-|----------|------------------------------|---------|---------|---------|
-|          |     select_ln79_1_fu_287     |    0    |    0    |    7    |
-|          |      select_ln80_fu_359      |    0    |    0    |    8    |
-|  select  |     select_ln80_2_fu_423     |    0    |    0    |    10   |
-|          |      select_ln79_fu_470      |    0    |    0    |    2    |
-|          |     select_ln80_1_fu_507     |    0    |    0    |    2    |
-|----------|------------------------------|---------|---------|---------|
-|    sub   |       empty_346_fu_491       |    0    |    0    |    16   |
-|----------|------------------------------|---------|---------|---------|
-|          |        or_ln79_fu_281        |    0    |    0    |    2    |
-|    or    |        or_ln80_fu_347        |    0    |    0    |    2    |
-|          |       or_ln80_1_fu_353       |    0    |    0    |    2    |
-|          |       or_ln80_2_fu_379       |    0    |    0    |    2    |
-|----------|------------------------------|---------|---------|---------|
-|    xor   |        xor_ln79_fu_329       |    0    |    0    |    2    |
-|          |        xor_ln80_fu_367       |    0    |    0    |    2    |
-|----------|------------------------------|---------|---------|---------|
-|    and   |        and_ln79_fu_341       |    0    |    0    |    2    |
-|          |        and_ln80_fu_373       |    0    |    0    |    2    |
-|----------|------------------------------|---------|---------|---------|
-|          |  sext_ln79_read_read_fu_130  |    0    |    0    |    0    |
-|   read   | input_ftmap_read_read_fu_136 |    0    |    0    |    0    |
-|          |  i2_addr_2_read_read_fu_149  |    0    |    0    |    0    |
-|----------|------------------------------|---------|---------|---------|
-|  readreq |      grp_readreq_fu_142      |    0    |    0    |    0    |
-|----------|------------------------------|---------|---------|---------|
-|          |     sext_ln79_cast_fu_216    |    0    |    0    |    0    |
-|   sext   |      sext_ln79_1_fu_451      |    0    |    0    |    0    |
-|          |      sext_ln79_2_fu_497      |    0    |    0    |    0    |
-|          |        p_cast2_fu_524        |    0    |    0    |    0    |
-|----------|------------------------------|---------|---------|---------|
-|          |       zext_ln79_fu_295       |    0    |    0    |    0    |
-|          |      zext_ln79_1_fu_305      |    0    |    0    |    0    |
-|          |    select_ln80_cast_fu_391   |    0    |    0    |    0    |
-|   zext   |   select_ln79_1_cast_fu_477  |    0    |    0    |    0    |
-|          |      tmp_58_cast_fu_487      |    0    |    0    |    0    |
-|          |   select_ln80_1_cast_fu_514  |    0    |    0    |    0    |
-|          |        p_cast4_fu_534        |    0    |    0    |    0    |
-|          |        p_cast6_fu_544        |    0    |    0    |    0    |
-|----------|------------------------------|---------|---------|---------|
-|partselect|    sext_ln80_mid2_v_fu_319   |    0    |    0    |    0    |
-|          |         p_cast_fu_401        |    0    |    0    |    0    |
-|----------|------------------------------|---------|---------|---------|
-|bitconcatenate|         tmp_s_fu_480         |    0    |    0    |    0    |
-|----------|------------------------------|---------|---------|---------|
-|   Total  |                              |    2    |   189   |   539   |
-|----------|------------------------------|---------|---------|---------|
+|----------|----------------------------------|---------|---------|---------|
+| Operation|          Functional Unit         |   DSP   |    FF   |   LUT   |
+|----------|----------------------------------|---------|---------|---------|
+|   urem   |            grp_fu_385            |    0    |   189   |   106   |
+|----------|----------------------------------|---------|---------|---------|
+|          |         add_ln79_3_fu_257        |    0    |    0    |    23   |
+|          |          add_ln79_fu_269         |    0    |    0    |    14   |
+|          |         add_ln79_1_fu_309        |    0    |    0    |    64   |
+|          |         add_ln79_2_fu_314        |    0    |    0    |    64   |
+|    add   |           empty_fu_411           |    0    |    0    |    15   |
+|          |         add_ln80_1_fu_417        |    0    |    0    |    17   |
+|          |          add_ln80_fu_501         |    0    |    0    |    9    |
+|          |         empty_343_fu_518         |    0    |    0    |    17   |
+|          |         empty_339_fu_538         |    0    |    0    |    21   |
+|----------|----------------------------------|---------|---------|---------|
+|          |          mul_ln79_fu_299         |    1    |    0    |    6    |
+|    mul   |           mul67_fu_395           |    0    |    0    |    62   |
+|          |         empty_344_fu_528         |    1    |    0    |    5    |
+|----------|----------------------------------|---------|---------|---------|
+|          |         icmp_ln79_fu_251         |    0    |    0    |    23   |
+|   icmp   |         icmp_ln80_fu_275         |    0    |    0    |    17   |
+|          |        exitcond8498_fu_335       |    0    |    0    |    15   |
+|----------|----------------------------------|---------|---------|---------|
+|          |       select_ln79_1_fu_287       |    0    |    0    |    7    |
+|          |        select_ln80_fu_359        |    0    |    0    |    8    |
+|  select  |       select_ln80_2_fu_423       |    0    |    0    |    10   |
+|          |        select_ln79_fu_470        |    0    |    0    |    2    |
+|          |       select_ln80_1_fu_507       |    0    |    0    |    2    |
+|----------|----------------------------------|---------|---------|---------|
+|    sub   |         empty_342_fu_491         |    0    |    0    |    16   |
+|----------|----------------------------------|---------|---------|---------|
+|          |          or_ln79_fu_281          |    0    |    0    |    2    |
+|    or    |          or_ln80_fu_347          |    0    |    0    |    2    |
+|          |         or_ln80_1_fu_353         |    0    |    0    |    2    |
+|          |         or_ln80_2_fu_379         |    0    |    0    |    2    |
+|----------|----------------------------------|---------|---------|---------|
+|    xor   |          xor_ln79_fu_329         |    0    |    0    |    2    |
+|          |          xor_ln80_fu_367         |    0    |    0    |    2    |
+|----------|----------------------------------|---------|---------|---------|
+|    and   |          and_ln79_fu_341         |    0    |    0    |    2    |
+|          |          and_ln80_fu_373         |    0    |    0    |    2    |
+|----------|----------------------------------|---------|---------|---------|
+|          |    sext_ln79_read_read_fu_130    |    0    |    0    |    0    |
+|   read   |   input_ftmap_read_read_fu_136   |    0    |    0    |    0    |
+|          | bundle_2_addr_3_read_read_fu_149 |    0    |    0    |    0    |
+|----------|----------------------------------|---------|---------|---------|
+|  readreq |        grp_readreq_fu_142        |    0    |    0    |    0    |
+|----------|----------------------------------|---------|---------|---------|
+|          |       sext_ln79_cast_fu_216      |    0    |    0    |    0    |
+|   sext   |        sext_ln79_1_fu_451        |    0    |    0    |    0    |
+|          |        sext_ln79_2_fu_497        |    0    |    0    |    0    |
+|          |          p_cast2_fu_524          |    0    |    0    |    0    |
+|----------|----------------------------------|---------|---------|---------|
+|          |         zext_ln79_fu_295         |    0    |    0    |    0    |
+|          |        zext_ln79_1_fu_305        |    0    |    0    |    0    |
+|          |      select_ln80_cast_fu_391     |    0    |    0    |    0    |
+|   zext   |     select_ln79_1_cast_fu_477    |    0    |    0    |    0    |
+|          |        tmp_58_cast_fu_487        |    0    |    0    |    0    |
+|          |     select_ln80_1_cast_fu_514    |    0    |    0    |    0    |
+|          |          p_cast4_fu_534          |    0    |    0    |    0    |
+|          |          p_cast6_fu_544          |    0    |    0    |    0    |
+|----------|----------------------------------|---------|---------|---------|
+|partselect|      sext_ln80_mid2_v_fu_319     |    0    |    0    |    0    |
+|          |           p_cast_fu_401          |    0    |    0    |    0    |
+|----------|----------------------------------|---------|---------|---------|
+|bitconcatenate|           tmp_s_fu_480           |    0    |    0    |    0    |
+|----------|----------------------------------|---------|---------|---------|
+|   Total  |                                  |    2    |   189   |   539   |
+|----------|----------------------------------|---------|---------|---------|
 
 Memories:
 N/A
 
 * Register list:
-+------------------------+--------+
-|                        |   FF   |
-+------------------------+--------+
-|    and_ln79_reg_627    |    1   |
-|       bh_reg_569       |    2   |
-|       bin_reg_583      |    7   |
-|  first_iter_01_reg_204 |    1   |
-|  first_iter_0_reg_193  |    1   |
-| i2_addr_2_read_reg_660 |   32   |
-|    i2_addr_2_reg_655   |   32   |
-|     i2_addr_reg_650    |   32   |
-|    icmp_ln79_reg_607   |    1   |
-|    icmp_ln80_reg_611   |    1   |
-|indvar_flatten17_reg_590|   16   |
-| indvar_flatten_reg_576 |   10   |
-|input_ftmap_read_reg_597|   64   |
-|  loop_index_i_reg_562  |    8   |
-|    or_ln80_2_reg_641   |    1   |
-|     or_ln80_reg_632    |    1   |
-|     p_cast_reg_646     |    2   |
-|  select_ln79_1_reg_616 |    7   |
-|   select_ln80_reg_636  |    8   |
-| sext_ln79_cast_reg_602 |   64   |
-|sext_ln80_mid2_v_reg_622|   62   |
-+------------------------+--------+
-|          Total         |   353  |
-+------------------------+--------+
++----------------------------+--------+
+|                            |   FF   |
++----------------------------+--------+
+|      and_ln79_reg_627      |    1   |
+|         bh_reg_569         |    2   |
+|         bin_reg_583        |    7   |
+|bundle_2_addr_3_read_reg_660|   32   |
+|   bundle_2_addr_3_reg_655  |   32   |
+|    bundle_2_addr_reg_650   |   32   |
+|    first_iter_01_reg_204   |    1   |
+|    first_iter_0_reg_193    |    1   |
+|      icmp_ln79_reg_607     |    1   |
+|      icmp_ln80_reg_611     |    1   |
+|  indvar_flatten17_reg_590  |   16   |
+|   indvar_flatten_reg_576   |   10   |
+|  input_ftmap_read_reg_597  |   64   |
+|    loop_index_i_reg_562    |    8   |
+|      or_ln80_2_reg_641     |    1   |
+|       or_ln80_reg_632      |    1   |
+|       p_cast_reg_646       |    2   |
+|    select_ln79_1_reg_616   |    7   |
+|     select_ln80_reg_636    |    8   |
+|   sext_ln79_cast_reg_602   |   64   |
+|  sext_ln80_mid2_v_reg_622  |   62   |
++----------------------------+--------+
+|            Total           |   353  |
++----------------------------+--------+
 
 * Multiplexer (MUX) list: 
 |--------------------|------|------|------|--------||---------||---------|
