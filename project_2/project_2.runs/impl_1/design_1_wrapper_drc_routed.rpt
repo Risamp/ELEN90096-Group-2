@@ -1,0 +1,1680 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Mon Nov  6 20:54:58 2023
+| Host         : 400p1l1760g0508 running 64-bit major release  (build 9200)
+| Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+| Design       : design_1_wrapper
+| Device       : xck26-sfvc784-2LV-c
+| Speed File   : -2LV
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 325
++-----------+----------+-------------------------+------------+
+| Rule      | Severity | Description             | Violations |
++-----------+----------+-------------------------+------------+
+| DPIP-2    | Warning  | Input pipelining        | 200        |
+| DPOP-3    | Warning  | PREG Output pipelining  | 64         |
+| DPOP-4    | Warning  | MREG Output pipelining  | 57         |
+| PDCN-1569 | Warning  | LUT equation term check | 3          |
+| RTSTAT-10 | Warning  | No routable loads       | 1          |
++-----------+----------+-------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-2#1 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_223_fu_4825_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_223_fu_4825_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#2 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_223_fu_4825_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_223_fu_4825_p2/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#3 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_224_fu_4836_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_224_fu_4836_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#4 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_224_fu_4836_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_224_fu_4836_p2/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#5 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_225_fu_4921_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_225_fu_4921_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#6 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_226_fu_4931_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_226_fu_4931_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#7 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_227_fu_5009_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_227_fu_5009_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#8 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_228_fu_5019_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_228_fu_5019_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#9 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_229_fu_5091_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_229_fu_5091_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#10 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_230_fu_5101_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_230_fu_5101_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#11 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_231_fu_5177_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_231_fu_5177_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#12 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_231_fu_5177_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_231_fu_5177_p2/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#13 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_232_fu_4857_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_232_fu_4857_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#14 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_232_fu_4857_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_232_fu_4857_p2/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#15 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_233_fu_4867_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_233_fu_4867_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#16 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_233_fu_4867_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_233_fu_4867_p2/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#17 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_234_fu_4947_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_234_fu_4947_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#18 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_235_fu_4956_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_235_fu_4956_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#19 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_236_fu_5029_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_236_fu_5029_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#20 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_237_fu_5038_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_237_fu_5038_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#21 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_238_fu_5111_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_238_fu_5111_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#22 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_239_fu_5120_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_239_fu_5120_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#23 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_240_fu_5195_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_240_fu_5195_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#24 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_240_fu_5195_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_240_fu_5195_p2/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#25 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_241_fu_5821_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_241_fu_5821_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#26 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_241_fu_5821_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_241_fu_5821_p2/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#27 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_242_fu_5833_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_242_fu_5833_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#28 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_242_fu_5833_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_242_fu_5833_p2/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#29 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_243_fu_6036_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_243_fu_6036_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#30 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_244_fu_6047_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_244_fu_6047_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#31 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_245_fu_6258_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_245_fu_6258_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#32 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_246_fu_6269_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_246_fu_6269_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#33 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_247_fu_6480_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_247_fu_6480_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#34 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_248_fu_6491_p2 input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_248_fu_6491_p2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#35 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_249_reg_15513_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_249_reg_15513_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#36 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_250_reg_15588_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_250_reg_15588_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#37 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_250_reg_15588_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_250_reg_15588_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#38 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_251_reg_15593_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_251_reg_15593_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#39 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_251_reg_15593_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_251_reg_15593_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#40 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_252_reg_15598_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_252_reg_15598_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#41 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_252_reg_15598_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_252_reg_15598_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#42 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_253_reg_15603_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_253_reg_15603_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#43 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_253_reg_15603_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_253_reg_15603_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#44 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_254_reg_15608_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_254_reg_15608_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#45 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_254_reg_15608_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_254_reg_15608_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#46 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_255_reg_15613_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_255_reg_15613_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#47 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_255_reg_15613_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_255_reg_15613_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#48 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_256_reg_15618_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_256_reg_15618_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#49 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_256_reg_15618_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_256_reg_15618_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#50 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_257_reg_15623_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_257_reg_15623_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#51 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_257_reg_15623_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_257_reg_15623_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#52 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_258_reg_15628_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_258_reg_15628_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#53 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_258_reg_15628_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_258_reg_15628_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#54 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_10s_7ns_7ns_14_4_1_U44/srcnn_mac_muladd_10s_7ns_7ns_14_4_1_DSP48_0_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_10s_7ns_7ns_14_4_1_U44/srcnn_mac_muladd_10s_7ns_7ns_14_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#55 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U100/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U100/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#56 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U104/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U104/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#57 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U105/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U105/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#58 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U110/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U110/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#59 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U45/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U45/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#60 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U46/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U46/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#61 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U48/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U48/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#62 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U50/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U50/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#63 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U53/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U53/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#64 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U55/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U55/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#65 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U58/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U58/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#66 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U60/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U60/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#67 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U63/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U63/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#68 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U65/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U65/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#69 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U68/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U68/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#70 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U70/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U70/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#71 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U73/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U73/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#72 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U75/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U75/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#73 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U78/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U78/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#74 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U80/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U80/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#75 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U83/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U83/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#76 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U85/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U85/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#77 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U89/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U89/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#78 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U90/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U90/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#79 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U94/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U94/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#80 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U95/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U95/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#81 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U99/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_32s_33_4_1_U99/srcnn_mac_muladd_16s_16s_32s_33_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#82 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U102/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U102/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#83 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U103/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U103/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#84 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U108/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U108/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#85 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U109/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U109/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#86 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U115/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U115/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#87 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U47/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U47/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#88 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U49/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U49/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#89 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U51/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U51/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#90 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U52/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U52/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#91 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U54/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U54/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#92 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U56/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U56/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#93 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U57/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U57/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#94 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U59/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U59/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#95 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U61/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U61/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#96 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U62/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U62/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#97 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U64/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U64/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#98 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U66/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U66/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#99 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U67/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U67/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#100 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U69/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U69/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#101 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U71/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U71/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#102 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U72/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U72/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#103 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U74/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U74/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#104 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U76/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U76/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#105 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U77/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U77/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#106 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U79/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U79/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#107 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U81/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U81/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#108 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U82/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U82/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#109 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U84/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U84/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#110 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U86/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U86/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#111 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U87/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U87/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#112 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U88/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U88/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#113 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U91/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U91/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#114 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U92/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U92/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#115 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U93/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U93/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#116 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U97/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U97/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#117 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U98/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mac_muladd_16s_16s_33s_33_4_1_U98/srcnn_mac_muladd_16s_16s_33s_33_4_1_DSP48_2_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#118 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U17/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U17/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#119 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U18/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U18/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#120 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U20/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U20/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#121 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U21/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U21/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#122 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U22/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U22/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#123 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U24/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U24/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#124 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U25/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U25/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#125 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U26/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U26/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#126 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U28/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U28/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#127 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U29/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U29/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#128 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U30/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U30/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#129 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U32/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U32/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#130 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U33/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U33/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#131 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U34/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U34/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#132 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mac_muladd_11s_7ns_8ns_11_4_1_U325/srcnn_mac_muladd_11s_7ns_8ns_11_4_1_DSP48_4_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/mac_muladd_11s_7ns_8ns_11_4_1_U325/srcnn_mac_muladd_11s_7ns_8ns_11_4_1_DSP48_4_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#133 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_64s_8ns_64_1_1_U315/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_64s_8ns_64_1_1_U315/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#134 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_6ns_18ns_23_1_1_U319/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_6ns_18ns_23_1_1_U319/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#135 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_6ns_9ns_14_1_1_U318/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_6ns_9ns_14_1_1_U318/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#136 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_9ns_11ns_19_1_1_U316/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_9ns_11ns_19_1_1_U316/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#137 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_9ns_11ns_19_1_1_U317/tmp_product input design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_9ns_11ns_19_1_1_U317/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#138 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_ln134_1_reg_2754_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_ln134_1_reg_2754_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#139 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_ln71_1_reg_2804_reg input design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_ln71_1_reg_2804_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#140 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv2_fu_328/grp_conv2_Pipeline_OUT_ROW_COL_fu_472/mul_8ns_10ns_17_1_1_U416/tmp_product input design_1_i/srcnn_0/inst/grp_conv2_fu_328/grp_conv2_Pipeline_OUT_ROW_COL_fu_472/mul_8ns_10ns_17_1_1_U416/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#141 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv2_fu_328/grp_load_input_buffer_c2_fu_395/grp_load_input_buffer_c2_Pipeline_BH_fu_120/mul_7ns_18ns_24_1_1_U345/tmp_product input design_1_i/srcnn_0/inst/grp_conv2_fu_328/grp_load_input_buffer_c2_fu_395/grp_load_input_buffer_c2_Pipeline_BH_fu_120/mul_7ns_18ns_24_1_1_U345/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#142 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv2_fu_328/mul_5ns_18ns_22_1_1_U619/tmp_product input design_1_i/srcnn_0/inst/grp_conv2_fu_328/mul_5ns_18ns_22_1_1_U619/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#143 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U679/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U679/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#144 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U680/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U680/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#145 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U681/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U681/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#146 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U682/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U682/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#147 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U683/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U683/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#148 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U684/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U684/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#149 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U685/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U685/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#150 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U686/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U686/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#151 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U687/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U687/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#152 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U688/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U688/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#153 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U689/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U689/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#154 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U690/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U690/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#155 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U691/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U691/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#156 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U692/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U692/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#157 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U693/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U693/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#158 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U694/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U694/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#159 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U695/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U695/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#160 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U696/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U696/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#161 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U697/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U697/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#162 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U698/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U698/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#163 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U699/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U699/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#164 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U700/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U700/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#165 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U701/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U701/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#166 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U702/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U702/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#167 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U703/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U703/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#168 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U704/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U704/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#169 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U705/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U705/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#170 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U706/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U706/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#171 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U707/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U707/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#172 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U708/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U708/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#173 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U709/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U709/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#174 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U710/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U710/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#175 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U711/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U711/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#176 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U712/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U712/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#177 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U713/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U713/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#178 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U714/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U714/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#179 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U715/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U715/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#180 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U716/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U716/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#181 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U717/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U717/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#182 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U723/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U723/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#183 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U724/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U724/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#184 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U726/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U726/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#185 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U729/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U729/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#186 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U731/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U731/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#187 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U733/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U733/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#188 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U735/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U735/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#189 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U737/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U737/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#190 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U738/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mac_muladd_16s_16s_31ns_31_4_1_U738/srcnn_mac_muladd_16s_16s_31ns_31_4_1_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#191 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U663/tmp_product input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U663/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#192 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U667/tmp_product input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U667/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#193 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U671/tmp_product input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U671/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#194 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U674/tmp_product input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U674/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#195 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U678/tmp_product input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U678/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#196 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_116_reg_6073_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_116_reg_6073_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#197 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_16_reg_5247_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_16_reg_5247_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#198 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_51_reg_5319_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_51_reg_5319_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#199 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_53_reg_5343_reg input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_53_reg_5343_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#200 Warning
+Input pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_load_input_buffer_c3_fu_215/mul_6ns_18ns_23_1_1_U632/tmp_product input design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_load_input_buffer_c3_fu_215/mul_6ns_18ns_23_1_1_U632/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-3#1 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_223_fu_4825_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_223_fu_4825_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#2 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_224_fu_4836_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_224_fu_4836_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#3 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_225_fu_4921_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_225_fu_4921_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#4 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_226_fu_4931_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_226_fu_4931_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#5 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_227_fu_5009_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_227_fu_5009_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#6 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_228_fu_5019_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_228_fu_5019_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#7 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_229_fu_5091_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_229_fu_5091_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#8 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_230_fu_5101_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_230_fu_5101_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#9 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_232_fu_4857_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_232_fu_4857_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#10 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_233_fu_4867_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_233_fu_4867_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#11 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_234_fu_4947_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_234_fu_4947_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#12 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_235_fu_4956_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_235_fu_4956_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#13 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_236_fu_5029_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_236_fu_5029_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#14 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_237_fu_5038_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_237_fu_5038_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#15 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_238_fu_5111_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_238_fu_5111_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#16 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_239_fu_5120_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_239_fu_5120_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#17 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_241_fu_5821_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_241_fu_5821_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#18 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_242_fu_5833_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_242_fu_5833_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#19 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_243_fu_6036_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_243_fu_6036_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#20 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_244_fu_6047_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_244_fu_6047_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#21 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_245_fu_6258_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_245_fu_6258_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#22 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_246_fu_6269_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_246_fu_6269_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#23 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_247_fu_6480_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_247_fu_6480_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#24 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_248_fu_6491_p2 output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_248_fu_6491_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#25 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U17/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U17/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#26 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U18/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U18/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#27 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U20/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U20/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#28 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U21/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U21/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#29 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U22/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U22/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#30 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U24/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U24/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#31 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U25/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U25/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#32 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U26/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U26/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#33 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U28/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U28/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#34 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U29/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U29/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#35 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U30/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U30/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#36 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U32/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U32/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#37 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U33/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U33/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#38 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U34/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U34/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#39 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U35/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U35/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#40 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U36/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U36/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#41 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U37/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U37/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#42 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U38/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U38/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#43 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U39/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U39/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#44 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U40/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U40/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#45 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U41/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U41/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#46 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U42/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U42/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#47 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U43/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U43/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#48 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_8ns_10ns_17_1_1_U16/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_8ns_10ns_17_1_1_U16/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#49 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_64s_8ns_64_1_1_U315/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_64s_8ns_64_1_1_U315/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#50 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_6ns_18ns_23_1_1_U319/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_6ns_18ns_23_1_1_U319/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#51 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_6ns_9ns_14_1_1_U318/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_6ns_9ns_14_1_1_U318/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#52 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_9ns_11ns_19_1_1_U316/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_9ns_11ns_19_1_1_U316/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#53 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_9ns_11ns_19_1_1_U317/tmp_product output design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_9ns_11ns_19_1_1_U317/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#54 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_ln134_1_reg_2754_reg output design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_ln134_1_reg_2754_reg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#55 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_ln71_1_reg_2804_reg output design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_ln71_1_reg_2804_reg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#56 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv2_fu_328/grp_conv2_Pipeline_OUT_ROW_COL_fu_472/mul_8ns_10ns_17_1_1_U416/tmp_product output design_1_i/srcnn_0/inst/grp_conv2_fu_328/grp_conv2_Pipeline_OUT_ROW_COL_fu_472/mul_8ns_10ns_17_1_1_U416/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#57 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv2_fu_328/grp_load_input_buffer_c2_fu_395/grp_load_input_buffer_c2_Pipeline_BH_fu_120/mul_7ns_18ns_24_1_1_U345/tmp_product output design_1_i/srcnn_0/inst/grp_conv2_fu_328/grp_load_input_buffer_c2_fu_395/grp_load_input_buffer_c2_Pipeline_BH_fu_120/mul_7ns_18ns_24_1_1_U345/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#58 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv2_fu_328/mul_5ns_18ns_22_1_1_U619/tmp_product output design_1_i/srcnn_0/inst/grp_conv2_fu_328/mul_5ns_18ns_22_1_1_U619/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#59 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U663/tmp_product output design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U663/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#60 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U667/tmp_product output design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U667/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#61 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U671/tmp_product output design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U671/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#62 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U674/tmp_product output design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U674/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#63 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U678/tmp_product output design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U678/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#64 Warning
+PREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_load_input_buffer_c3_fu_215/mul_6ns_18ns_23_1_1_U632/tmp_product output design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_load_input_buffer_c3_fu_215/mul_6ns_18ns_23_1_1_U632/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-4#1 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_231_fu_5177_p2 multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_231_fu_5177_p2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#2 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_240_fu_5195_p2 multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/add_ln54_240_fu_5195_p2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#3 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U17/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U17/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#4 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U18/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U18/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#5 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U20/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U20/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#6 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U21/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U21/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#7 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U22/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U22/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#8 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U24/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U24/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#9 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U25/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U25/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#10 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U26/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U26/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#11 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U28/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U28/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#12 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U29/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U29/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#13 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U30/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U30/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#14 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U32/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U32/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#15 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U33/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U33/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#16 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U34/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U34/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#17 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U35/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U35/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#18 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U36/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U36/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#19 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U37/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U37/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#20 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U38/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U38/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#21 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U39/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U39/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#22 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U40/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U40/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#23 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U41/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U41/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#24 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U42/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U42/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#25 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U43/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_16s_16s_32_1_1_U43/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#26 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_8ns_10ns_17_1_1_U16/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/grp_conv1_Pipeline_OUT_ROW_COL_fu_823/mul_8ns_10ns_17_1_1_U16/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#27 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_64s_8ns_64_1_1_U315/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_64s_8ns_64_1_1_U315/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#28 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_6ns_18ns_23_1_1_U319/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_6ns_18ns_23_1_1_U319/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#29 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_6ns_9ns_14_1_1_U318/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_6ns_9ns_14_1_1_U318/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#30 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_9ns_11ns_19_1_1_U316/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_9ns_11ns_19_1_1_U316/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#31 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_9ns_11ns_19_1_1_U317/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_9ns_11ns_19_1_1_U317/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#32 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_ln134_reg_2723_reg multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_ln134_reg_2723_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#33 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_ln71_reg_2799_reg multiplier stage design_1_i/srcnn_0/inst/grp_conv1_fu_292/mul_ln71_reg_2799_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#34 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv2_fu_328/grp_conv2_Pipeline_OUT_ROW_COL_fu_472/mul_8ns_10ns_17_1_1_U416/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv2_fu_328/grp_conv2_Pipeline_OUT_ROW_COL_fu_472/mul_8ns_10ns_17_1_1_U416/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#35 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv2_fu_328/grp_load_input_buffer_c2_fu_395/grp_load_input_buffer_c2_Pipeline_BH_fu_120/mul_7ns_18ns_24_1_1_U345/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv2_fu_328/grp_load_input_buffer_c2_fu_395/grp_load_input_buffer_c2_Pipeline_BH_fu_120/mul_7ns_18ns_24_1_1_U345/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#36 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv2_fu_328/mul_5ns_18ns_22_1_1_U619/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv2_fu_328/mul_5ns_18ns_22_1_1_U619/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#37 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U663/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U663/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#38 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U667/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U667/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#39 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U671/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U671/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#40 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U674/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U674/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#41 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U678/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/mul_16s_16s_31_1_1_U678/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#42 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_102_reg_5527_reg multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_102_reg_5527_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#43 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_106_reg_5616_reg multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_106_reg_5616_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#44 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_108_reg_5695_reg multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_108_reg_5695_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#45 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_112_reg_5888_reg multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_112_reg_5888_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#46 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_116_reg_6073_reg multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_116_reg_6073_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#47 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_120_reg_6315_reg multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_120_reg_6315_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#48 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_16_reg_5247_reg multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_16_reg_5247_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#49 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_51_reg_5319_reg multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_51_reg_5319_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#50 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_53_reg_5343_reg multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_53_reg_5343_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#51 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_76_reg_5443_reg multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_76_reg_5443_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#52 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_79_reg_5448_reg multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_79_reg_5448_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#53 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_82_reg_5606_reg multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_82_reg_5606_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#54 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_87_reg_5878_reg multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_87_reg_5878_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#55 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_92_reg_6063_reg multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_92_reg_6063_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#56 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_97_reg_6305_reg multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_conv3_Pipeline_IN_ROW_COL_fu_236/tmp_97_reg_6305_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#57 Warning
+MREG Output pipelining  
+DSP design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_load_input_buffer_c3_fu_215/mul_6ns_18ns_23_1_1_U632/tmp_product multiplier stage design_1_i/srcnn_0/inst/grp_conv3_fu_436/grp_load_input_buffer_c3_fu_215/mul_6ns_18ns_23_1_1_U632/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+PDCN-1569#1 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A2)+((~A2)*(~A5)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#2 Warning
+LUT equation term check  
+Used physical LUT pin 'A2' of cell design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A4)+((~A4)*(~A5)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#3 Warning
+LUT equation term check  
+Used physical LUT pin 'A3' of cell design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A2)+((~A2)*(~A5)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+33 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb,
+design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i,
+design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0],
+design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0],
+design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb,
+design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i,
+design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0],
+design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0],
+design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb,
+design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i,
+design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0],
+design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0]
+ (the first 15 of 21 listed nets/buses).
+Related violations: <none>
+
+

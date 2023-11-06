@@ -7,10 +7,10 @@ int main()
 {
     // run SRCNN testbenches
     //tb_conv1();
-    tb_srcnn();
+    //tb_srcnn();
 
     // uncomment to run set14 tests
-    //tb_set14();
+    tb_set14();
 
     return 0;
 }

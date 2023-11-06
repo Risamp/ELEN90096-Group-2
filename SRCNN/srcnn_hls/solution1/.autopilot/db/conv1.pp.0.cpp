@@ -1332,7 +1332,7 @@ struct ap_int_base : public ssdm_int<_AP_W, _AP_S> {
       int NZeros = 0;
       int i = 0;
       bool hitNonZero = false;
-      for (i = 0; i < __N - 1; ++i) {
+      VITIS_LOOP_1213_1: for (i = 0; i < __N - 1; ++i) {
         ap_int_base<64, false> t;
         t.V = ({ typename _ap_type::remove_const<typeof(this->V)>::type __Result__ = 0; typeof(this->V) __Val2__ = this->V; __builtin_bit_part_select((void*)(&__Result__), (void*)(&__Val2__), _AP_W - i * 64 - 64, _AP_W - i * 64 - 1); __Result__; });
         NZeros += hitNonZero ? 0 : __builtin_clzll(t.V);
@@ -2306,7 +2306,7 @@ struct ap_range_ref {
     bool reverse = l_index > h_index;
     unsigned low = reverse ? h_index : l_index;
     unsigned high = reverse ? l_index : h_index;
-    for (unsigned i = low; i != high; ++i) {
+    VITIS_LOOP_676_1: for (unsigned i = low; i != high; ++i) {
 
 #pragma HLS unroll
 
@@ -2320,7 +2320,7 @@ struct ap_range_ref {
     bool reverse = l_index > h_index;
     unsigned low = reverse ? h_index : l_index;
     unsigned high = reverse ? l_index : h_index;
-    for (unsigned i = low; i != high; ++i) {
+    VITIS_LOOP_690_1: for (unsigned i = low; i != high; ++i) {
 
 #pragma HLS unroll
 
@@ -2334,7 +2334,7 @@ struct ap_range_ref {
     bool reverse = l_index > h_index;
     unsigned low = reverse ? h_index : l_index;
     unsigned high = reverse ? l_index : h_index;
-    for (unsigned i = low; i != high; ++i) {
+    VITIS_LOOP_704_1: for (unsigned i = low; i != high; ++i) {
 
 #pragma HLS unroll
 
@@ -3933,7 +3933,7 @@ struct ap_fixed_base : ssdm_int<_AP_W, _AP_S> {
       int NZeros = 0;
       int i = 0;
       bool hitNonZero = false;
-      for (i = 0; i < __N - 1; ++i) {
+      VITIS_LOOP_1247_1: for (i = 0; i < __N - 1; ++i) {
         ap_int_base<64, false> t;
         t.range(0, 63) = this->range(_AP_W - i * 64 - 64, _AP_W - i * 64 - 1);
         NZeros += hitNonZero ? 0 : __builtin_clzll(t.V);
@@ -33568,16 +33568,15 @@ void conv1(input_t input_ftmap[1][255][255],
 
  static conv1o_t output_fm_buffer[8][15][255] = {0};
 #pragma HLS BIND_STORAGE variable=output_fm_buffer type=RAM_T2P impl=BRAM
-#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=block factor=3
+#pragma HLS ARRAY_PARTITION variable=output_fm_buffer dim=3 type=cyclic factor=3
 
  static input_t input_fm_buffer[1][15 + (2 * (9 - 1) / 2)][255 + (2 * (9 - 1) / 2)];
-#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=block factor=3
+#pragma HLS BIND_STORAGE variable=input_fm_buffer type=RAM_T2P impl=BRAM
+#pragma HLS ARRAY_PARTITION variable=input_fm_buffer dim=3 type=cyclic factor=3
 
  static conv1w_t weight_buffer[8][1][9][9];
 #pragma HLS BIND_STORAGE variable=weight_buffer type=RAM_2P impl=BRAM
 #pragma HLS ARRAY_PARTITION variable=weight_buffer dim=1 type=cyclic factor=2
-#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=2 type=complete
-#pragma HLS ARRAY_PARTITION variable=weight_buffer dim=3 type=complete
 
  TILE_IN: for (int in = 0; in < 1; in += 1) {
  TILE_ROW: for (int h = 0; h < 255; h += 15) {

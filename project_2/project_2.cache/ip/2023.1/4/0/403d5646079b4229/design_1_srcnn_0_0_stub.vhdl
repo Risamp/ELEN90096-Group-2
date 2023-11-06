@@ -1,0 +1,210 @@
+-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-- --------------------------------------------------------------------------------
+-- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+-- Date        : Mon Nov  6 20:32:42 2023
+-- Host        : 400p1l1760g0508 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+--               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_srcnn_0_0_stub.vhdl
+-- Design      : design_1_srcnn_0_0
+-- Purpose     : Stub declaration of top-level module interface
+-- Device      : xck26-sfvc784-2LV-c
+-- --------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
+  Port ( 
+    s_axi_control_AWADDR : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s_axi_control_AWVALID : in STD_LOGIC;
+    s_axi_control_AWREADY : out STD_LOGIC;
+    s_axi_control_WDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_control_WSTRB : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axi_control_WVALID : in STD_LOGIC;
+    s_axi_control_WREADY : out STD_LOGIC;
+    s_axi_control_BRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_control_BVALID : out STD_LOGIC;
+    s_axi_control_BREADY : in STD_LOGIC;
+    s_axi_control_ARADDR : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s_axi_control_ARVALID : in STD_LOGIC;
+    s_axi_control_ARREADY : out STD_LOGIC;
+    s_axi_control_RDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_control_RRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_control_RVALID : out STD_LOGIC;
+    s_axi_control_RREADY : in STD_LOGIC;
+    ap_clk : in STD_LOGIC;
+    ap_rst_n : in STD_LOGIC;
+    interrupt : out STD_LOGIC;
+    m_axi_bundle_1_AWID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_bundle_1_AWADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_bundle_1_AWLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_bundle_1_AWSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_bundle_1_AWBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_bundle_1_AWLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_bundle_1_AWREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_bundle_1_AWCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_bundle_1_AWPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_bundle_1_AWQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_bundle_1_AWVALID : out STD_LOGIC;
+    m_axi_bundle_1_AWREADY : in STD_LOGIC;
+    m_axi_bundle_1_WID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_bundle_1_WDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_bundle_1_WSTRB : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_bundle_1_WLAST : out STD_LOGIC;
+    m_axi_bundle_1_WVALID : out STD_LOGIC;
+    m_axi_bundle_1_WREADY : in STD_LOGIC;
+    m_axi_bundle_1_BID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_bundle_1_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_bundle_1_BVALID : in STD_LOGIC;
+    m_axi_bundle_1_BREADY : out STD_LOGIC;
+    m_axi_bundle_1_ARID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_bundle_1_ARADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_bundle_1_ARLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_bundle_1_ARSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_bundle_1_ARBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_bundle_1_ARLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_bundle_1_ARREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_bundle_1_ARCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_bundle_1_ARPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_bundle_1_ARQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_bundle_1_ARVALID : out STD_LOGIC;
+    m_axi_bundle_1_ARREADY : in STD_LOGIC;
+    m_axi_bundle_1_RID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_bundle_1_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_bundle_1_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_bundle_1_RLAST : in STD_LOGIC;
+    m_axi_bundle_1_RVALID : in STD_LOGIC;
+    m_axi_bundle_1_RREADY : out STD_LOGIC;
+    m_axi_weights_AWID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_weights_AWADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_weights_AWLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_weights_AWSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_weights_AWBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_weights_AWLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_weights_AWREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_weights_AWCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_weights_AWPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_weights_AWQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_weights_AWVALID : out STD_LOGIC;
+    m_axi_weights_AWREADY : in STD_LOGIC;
+    m_axi_weights_WID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_weights_WDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_weights_WSTRB : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_weights_WLAST : out STD_LOGIC;
+    m_axi_weights_WVALID : out STD_LOGIC;
+    m_axi_weights_WREADY : in STD_LOGIC;
+    m_axi_weights_BID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_weights_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_weights_BVALID : in STD_LOGIC;
+    m_axi_weights_BREADY : out STD_LOGIC;
+    m_axi_weights_ARID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_weights_ARADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_weights_ARLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_weights_ARSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_weights_ARBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_weights_ARLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_weights_ARREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_weights_ARCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_weights_ARPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_weights_ARQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_weights_ARVALID : out STD_LOGIC;
+    m_axi_weights_ARREADY : in STD_LOGIC;
+    m_axi_weights_RID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_weights_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_weights_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_weights_RLAST : in STD_LOGIC;
+    m_axi_weights_RVALID : in STD_LOGIC;
+    m_axi_weights_RREADY : out STD_LOGIC;
+    m_axi_biases_AWID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_biases_AWADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_biases_AWLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_biases_AWSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_biases_AWBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_biases_AWLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_biases_AWREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_biases_AWCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_biases_AWPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_biases_AWQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_biases_AWVALID : out STD_LOGIC;
+    m_axi_biases_AWREADY : in STD_LOGIC;
+    m_axi_biases_WID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_biases_WDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_biases_WSTRB : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_biases_WLAST : out STD_LOGIC;
+    m_axi_biases_WVALID : out STD_LOGIC;
+    m_axi_biases_WREADY : in STD_LOGIC;
+    m_axi_biases_BID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_biases_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_biases_BVALID : in STD_LOGIC;
+    m_axi_biases_BREADY : out STD_LOGIC;
+    m_axi_biases_ARID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_biases_ARADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_biases_ARLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_biases_ARSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_biases_ARBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_biases_ARLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_biases_ARREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_biases_ARCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_biases_ARPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_biases_ARQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_biases_ARVALID : out STD_LOGIC;
+    m_axi_biases_ARREADY : in STD_LOGIC;
+    m_axi_biases_RID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_biases_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_biases_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_biases_RLAST : in STD_LOGIC;
+    m_axi_biases_RVALID : in STD_LOGIC;
+    m_axi_biases_RREADY : out STD_LOGIC;
+    m_axi_bundle_2_AWID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_bundle_2_AWADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_bundle_2_AWLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_bundle_2_AWSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_bundle_2_AWBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_bundle_2_AWLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_bundle_2_AWREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_bundle_2_AWCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_bundle_2_AWPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_bundle_2_AWQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_bundle_2_AWVALID : out STD_LOGIC;
+    m_axi_bundle_2_AWREADY : in STD_LOGIC;
+    m_axi_bundle_2_WID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_bundle_2_WDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_bundle_2_WSTRB : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_bundle_2_WLAST : out STD_LOGIC;
+    m_axi_bundle_2_WVALID : out STD_LOGIC;
+    m_axi_bundle_2_WREADY : in STD_LOGIC;
+    m_axi_bundle_2_BID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_bundle_2_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_bundle_2_BVALID : in STD_LOGIC;
+    m_axi_bundle_2_BREADY : out STD_LOGIC;
+    m_axi_bundle_2_ARID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_bundle_2_ARADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_bundle_2_ARLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_bundle_2_ARSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_bundle_2_ARBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_bundle_2_ARLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_bundle_2_ARREGION : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_bundle_2_ARCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_bundle_2_ARPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_bundle_2_ARQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_bundle_2_ARVALID : out STD_LOGIC;
+    m_axi_bundle_2_ARREADY : in STD_LOGIC;
+    m_axi_bundle_2_RID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axi_bundle_2_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_bundle_2_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_bundle_2_RLAST : in STD_LOGIC;
+    m_axi_bundle_2_RVALID : in STD_LOGIC;
+    m_axi_bundle_2_RREADY : out STD_LOGIC
+  );
+
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
+
+architecture stub of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
+attribute syn_black_box : boolean;
+attribute black_box_pad_pin : string;
+attribute syn_black_box of stub : architecture is true;
+attribute black_box_pad_pin of stub : architecture is "s_axi_control_AWADDR[7:0],s_axi_control_AWVALID,s_axi_control_AWREADY,s_axi_control_WDATA[31:0],s_axi_control_WSTRB[3:0],s_axi_control_WVALID,s_axi_control_WREADY,s_axi_control_BRESP[1:0],s_axi_control_BVALID,s_axi_control_BREADY,s_axi_control_ARADDR[7:0],s_axi_control_ARVALID,s_axi_control_ARREADY,s_axi_control_RDATA[31:0],s_axi_control_RRESP[1:0],s_axi_control_RVALID,s_axi_control_RREADY,ap_clk,ap_rst_n,interrupt,m_axi_bundle_1_AWID[0:0],m_axi_bundle_1_AWADDR[63:0],m_axi_bundle_1_AWLEN[7:0],m_axi_bundle_1_AWSIZE[2:0],m_axi_bundle_1_AWBURST[1:0],m_axi_bundle_1_AWLOCK[1:0],m_axi_bundle_1_AWREGION[3:0],m_axi_bundle_1_AWCACHE[3:0],m_axi_bundle_1_AWPROT[2:0],m_axi_bundle_1_AWQOS[3:0],m_axi_bundle_1_AWVALID,m_axi_bundle_1_AWREADY,m_axi_bundle_1_WID[0:0],m_axi_bundle_1_WDATA[31:0],m_axi_bundle_1_WSTRB[3:0],m_axi_bundle_1_WLAST,m_axi_bundle_1_WVALID,m_axi_bundle_1_WREADY,m_axi_bundle_1_BID[0:0],m_axi_bundle_1_BRESP[1:0],m_axi_bundle_1_BVALID,m_axi_bundle_1_BREADY,m_axi_bundle_1_ARID[0:0],m_axi_bundle_1_ARADDR[63:0],m_axi_bundle_1_ARLEN[7:0],m_axi_bundle_1_ARSIZE[2:0],m_axi_bundle_1_ARBURST[1:0],m_axi_bundle_1_ARLOCK[1:0],m_axi_bundle_1_ARREGION[3:0],m_axi_bundle_1_ARCACHE[3:0],m_axi_bundle_1_ARPROT[2:0],m_axi_bundle_1_ARQOS[3:0],m_axi_bundle_1_ARVALID,m_axi_bundle_1_ARREADY,m_axi_bundle_1_RID[0:0],m_axi_bundle_1_RDATA[31:0],m_axi_bundle_1_RRESP[1:0],m_axi_bundle_1_RLAST,m_axi_bundle_1_RVALID,m_axi_bundle_1_RREADY,m_axi_weights_AWID[0:0],m_axi_weights_AWADDR[63:0],m_axi_weights_AWLEN[7:0],m_axi_weights_AWSIZE[2:0],m_axi_weights_AWBURST[1:0],m_axi_weights_AWLOCK[1:0],m_axi_weights_AWREGION[3:0],m_axi_weights_AWCACHE[3:0],m_axi_weights_AWPROT[2:0],m_axi_weights_AWQOS[3:0],m_axi_weights_AWVALID,m_axi_weights_AWREADY,m_axi_weights_WID[0:0],m_axi_weights_WDATA[31:0],m_axi_weights_WSTRB[3:0],m_axi_weights_WLAST,m_axi_weights_WVALID,m_axi_weights_WREADY,m_axi_weights_BID[0:0],m_axi_weights_BRESP[1:0],m_axi_weights_BVALID,m_axi_weights_BREADY,m_axi_weights_ARID[0:0],m_axi_weights_ARADDR[63:0],m_axi_weights_ARLEN[7:0],m_axi_weights_ARSIZE[2:0],m_axi_weights_ARBURST[1:0],m_axi_weights_ARLOCK[1:0],m_axi_weights_ARREGION[3:0],m_axi_weights_ARCACHE[3:0],m_axi_weights_ARPROT[2:0],m_axi_weights_ARQOS[3:0],m_axi_weights_ARVALID,m_axi_weights_ARREADY,m_axi_weights_RID[0:0],m_axi_weights_RDATA[31:0],m_axi_weights_RRESP[1:0],m_axi_weights_RLAST,m_axi_weights_RVALID,m_axi_weights_RREADY,m_axi_biases_AWID[0:0],m_axi_biases_AWADDR[63:0],m_axi_biases_AWLEN[7:0],m_axi_biases_AWSIZE[2:0],m_axi_biases_AWBURST[1:0],m_axi_biases_AWLOCK[1:0],m_axi_biases_AWREGION[3:0],m_axi_biases_AWCACHE[3:0],m_axi_biases_AWPROT[2:0],m_axi_biases_AWQOS[3:0],m_axi_biases_AWVALID,m_axi_biases_AWREADY,m_axi_biases_WID[0:0],m_axi_biases_WDATA[31:0],m_axi_biases_WSTRB[3:0],m_axi_biases_WLAST,m_axi_biases_WVALID,m_axi_biases_WREADY,m_axi_biases_BID[0:0],m_axi_biases_BRESP[1:0],m_axi_biases_BVALID,m_axi_biases_BREADY,m_axi_biases_ARID[0:0],m_axi_biases_ARADDR[63:0],m_axi_biases_ARLEN[7:0],m_axi_biases_ARSIZE[2:0],m_axi_biases_ARBURST[1:0],m_axi_biases_ARLOCK[1:0],m_axi_biases_ARREGION[3:0],m_axi_biases_ARCACHE[3:0],m_axi_biases_ARPROT[2:0],m_axi_biases_ARQOS[3:0],m_axi_biases_ARVALID,m_axi_biases_ARREADY,m_axi_biases_RID[0:0],m_axi_biases_RDATA[31:0],m_axi_biases_RRESP[1:0],m_axi_biases_RLAST,m_axi_biases_RVALID,m_axi_biases_RREADY,m_axi_bundle_2_AWID[0:0],m_axi_bundle_2_AWADDR[63:0],m_axi_bundle_2_AWLEN[7:0],m_axi_bundle_2_AWSIZE[2:0],m_axi_bundle_2_AWBURST[1:0],m_axi_bundle_2_AWLOCK[1:0],m_axi_bundle_2_AWREGION[3:0],m_axi_bundle_2_AWCACHE[3:0],m_axi_bundle_2_AWPROT[2:0],m_axi_bundle_2_AWQOS[3:0],m_axi_bundle_2_AWVALID,m_axi_bundle_2_AWREADY,m_axi_bundle_2_WID[0:0],m_axi_bundle_2_WDATA[31:0],m_axi_bundle_2_WSTRB[3:0],m_axi_bundle_2_WLAST,m_axi_bundle_2_WVALID,m_axi_bundle_2_WREADY,m_axi_bundle_2_BID[0:0],m_axi_bundle_2_BRESP[1:0],m_axi_bundle_2_BVALID,m_axi_bundle_2_BREADY,m_axi_bundle_2_ARID[0:0],m_axi_bundle_2_ARADDR[63:0],m_axi_bundle_2_ARLEN[7:0],m_axi_bundle_2_ARSIZE[2:0],m_axi_bundle_2_ARBURST[1:0],m_axi_bundle_2_ARLOCK[1:0],m_axi_bundle_2_ARREGION[3:0],m_axi_bundle_2_ARCACHE[3:0],m_axi_bundle_2_ARPROT[2:0],m_axi_bundle_2_ARQOS[3:0],m_axi_bundle_2_ARVALID,m_axi_bundle_2_ARREADY,m_axi_bundle_2_RID[0:0],m_axi_bundle_2_RDATA[31:0],m_axi_bundle_2_RRESP[1:0],m_axi_bundle_2_RLAST,m_axi_bundle_2_RVALID,m_axi_bundle_2_RREADY";
+attribute X_CORE_INFO : string;
+attribute X_CORE_INFO of stub : architecture is "srcnn,Vivado 2023.1";
+begin
+end;

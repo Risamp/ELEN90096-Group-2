@@ -43,7 +43,7 @@ void conv2(conv1o_t input_ftmap[N1][H][W],
 				ROW: for (int r = 0; r < C2_TH; r++) {
 				COL: for (int c = 0; c < W; c++) {
 					#pragma HLS UNROLL factor=15
-					#pragma HLS PIPELINE II=30
+					#pragma HLS PIPELINE II=19
 
 					output_fm_buffer[o][r][c] += weight * input_fm_buffer[i][r][c];
 
