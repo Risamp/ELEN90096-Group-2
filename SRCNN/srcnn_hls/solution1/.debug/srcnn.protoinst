@@ -13,7 +13,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv1_fu_246/grp_conv1_Pipeline_3_fu_722/grp_conv1_Pipeline_3_fu_722_activity": {
+				"grp_conv1_fu_324/grp_conv1_Pipeline_3_fu_1042/grp_conv1_Pipeline_3_fu_1042_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -23,7 +23,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv1_fu_246/grp_conv1_Pipeline_5_fu_745/grp_conv1_Pipeline_5_fu_745_activity": {
+				"grp_conv1_fu_324/grp_conv1_Pipeline_5_fu_1069/grp_conv1_Pipeline_5_fu_1069_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -33,7 +33,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv1_fu_246/grp_conv1_Pipeline_BW8_fu_766/grp_conv1_Pipeline_BW8_fu_766_activity": {
+				"grp_conv1_fu_324/grp_conv1_Pipeline_BW8_fu_1094/grp_conv1_Pipeline_BW8_fu_1094_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -43,7 +43,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv1_fu_246/grp_conv1_Pipeline_BW_fu_757/grp_conv1_Pipeline_BW_fu_757_activity": {
+				"grp_conv1_fu_324/grp_conv1_Pipeline_BW_fu_1083/grp_conv1_Pipeline_BW_fu_1083_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -53,7 +53,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv1_fu_246/grp_conv1_Pipeline_OUT_ROW_COL_fu_693/grp_conv1_Pipeline_OUT_ROW_COL_fu_693_activity": {
+				"grp_conv1_fu_324/grp_conv1_Pipeline_OUT_ROW_COL_fu_977/grp_conv1_Pipeline_OUT_ROW_COL_fu_977_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -63,7 +63,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv1_fu_246/grp_conv1_Pipeline_RELU7_fu_734/grp_conv1_Pipeline_RELU7_fu_734_activity": {
+				"grp_conv1_fu_324/grp_conv1_Pipeline_RELU7_fu_1056/grp_conv1_Pipeline_RELU7_fu_1056_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -73,7 +73,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv1_fu_246/grp_conv1_Pipeline_RELU_fu_711/grp_conv1_Pipeline_RELU_fu_711_activity": {
+				"grp_conv1_fu_324/grp_conv1_Pipeline_RELU_fu_1029/grp_conv1_Pipeline_RELU_fu_1029_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -83,7 +83,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv1_fu_246/grp_conv1_fu_246_activity": {
+				"grp_conv1_fu_324/grp_conv1_fu_324_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -93,7 +93,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv2_fu_280/grp_conv2_Pipeline_4_fu_427/grp_conv2_Pipeline_4_fu_427_activity": {
+				"grp_conv2_fu_392/grp_conv2_Pipeline_4_fu_605/grp_conv2_Pipeline_4_fu_605_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -103,7 +103,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv2_fu_280/grp_conv2_Pipeline_6_fu_462/grp_conv2_Pipeline_6_fu_462_activity": {
+				"grp_conv2_fu_392/grp_conv2_Pipeline_6_fu_680/grp_conv2_Pipeline_6_fu_680_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -113,7 +113,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv2_fu_280/grp_conv2_Pipeline_BW5_fu_496/grp_conv2_Pipeline_BW5_fu_496_activity": {
+				"grp_conv2_fu_392/grp_conv2_Pipeline_BW5_fu_754/grp_conv2_Pipeline_BW5_fu_754_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -123,7 +123,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv2_fu_280/grp_conv2_Pipeline_BW6_fu_511/grp_conv2_Pipeline_BW6_fu_511_activity": {
+				"grp_conv2_fu_392/grp_conv2_Pipeline_BW6_fu_789/grp_conv2_Pipeline_BW6_fu_789_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -133,7 +133,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv2_fu_280/grp_conv2_Pipeline_BW_fu_480/grp_conv2_Pipeline_BW_fu_480_activity": {
+				"grp_conv2_fu_392/grp_conv2_Pipeline_BW_fu_718/grp_conv2_Pipeline_BW_fu_718_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -143,7 +143,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv2_fu_280/grp_conv2_Pipeline_LOAD_WEIGHTS_L_fu_365/grp_conv2_Pipeline_LOAD_WEIGHTS_L_fu_365_activity": {
+				"grp_conv2_fu_392/grp_conv2_Pipeline_LOAD_WEIGHTS_L_fu_463/grp_conv2_Pipeline_LOAD_WEIGHTS_L_fu_463_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -153,7 +153,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv2_fu_280/grp_conv2_Pipeline_OUT_ROW_COL_fu_374/grp_conv2_Pipeline_OUT_ROW_COL_fu_374_activity": {
+				"grp_conv2_fu_392/grp_conv2_Pipeline_OUT_ROW_COL_fu_472/grp_conv2_Pipeline_OUT_ROW_COL_fu_472_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -163,7 +163,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv2_fu_280/grp_conv2_Pipeline_RELU4_fu_445/grp_conv2_Pipeline_RELU4_fu_445_activity": {
+				"grp_conv2_fu_392/grp_conv2_Pipeline_RELU4_fu_643/grp_conv2_Pipeline_RELU4_fu_643_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -173,7 +173,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv2_fu_280/grp_conv2_Pipeline_RELU_fu_410/grp_conv2_Pipeline_RELU_fu_410_activity": {
+				"grp_conv2_fu_392/grp_conv2_Pipeline_RELU_fu_568/grp_conv2_Pipeline_RELU_fu_568_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -183,7 +183,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv2_fu_280/grp_conv2_fu_280_activity": {
+				"grp_conv2_fu_392/grp_conv2_fu_392_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -193,7 +193,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv2_fu_280/grp_load_input_buffer_c2_fu_337/grp_load_input_buffer_c2_Pipeline_BH_fu_72/grp_load_input_buffer_c2_Pipeline_BH_fu_72_activity": {
+				"grp_conv2_fu_392/grp_load_input_buffer_c2_fu_395/grp_load_input_buffer_c2_Pipeline_BH_fu_120/grp_load_input_buffer_c2_Pipeline_BH_fu_120_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -203,7 +203,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv2_fu_280/grp_load_input_buffer_c2_fu_337/grp_load_input_buffer_c2_fu_337_activity": {
+				"grp_conv2_fu_392/grp_load_input_buffer_c2_fu_395/grp_load_input_buffer_c2_fu_395_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -213,7 +213,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv3_fu_328/grp_conv3_Pipeline_4_fu_266/grp_conv3_Pipeline_4_fu_266_activity": {
+				"grp_conv3_fu_500/grp_conv3_Pipeline_4_fu_262/grp_conv3_Pipeline_4_fu_262_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -223,7 +223,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv3_fu_328/grp_conv3_Pipeline_6_fu_290/grp_conv3_Pipeline_6_fu_290_activity": {
+				"grp_conv3_fu_500/grp_conv3_Pipeline_6_fu_286/grp_conv3_Pipeline_6_fu_286_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -233,7 +233,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv3_fu_328/grp_conv3_Pipeline_CLEARW2_fu_312/grp_conv3_Pipeline_CLEARW2_fu_312_activity": {
+				"grp_conv3_fu_500/grp_conv3_Pipeline_CLEARW2_fu_308/grp_conv3_Pipeline_CLEARW2_fu_308_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -243,7 +243,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv3_fu_328/grp_conv3_Pipeline_CLEARW3_fu_321/grp_conv3_Pipeline_CLEARW3_fu_321_activity": {
+				"grp_conv3_fu_500/grp_conv3_Pipeline_CLEARW3_fu_317/grp_conv3_Pipeline_CLEARW3_fu_317_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -253,7 +253,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv3_fu_328/grp_conv3_Pipeline_CLEARW_fu_302/grp_conv3_Pipeline_CLEARW_fu_302_activity": {
+				"grp_conv3_fu_500/grp_conv3_Pipeline_CLEARW_fu_298/grp_conv3_Pipeline_CLEARW_fu_298_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -263,7 +263,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv3_fu_328/grp_conv3_Pipeline_IN_ROW_COL_fu_240/grp_conv3_Pipeline_IN_ROW_COL_fu_240_activity": {
+				"grp_conv3_fu_500/grp_conv3_Pipeline_IN_ROW_COL_fu_236/grp_conv3_Pipeline_IN_ROW_COL_fu_236_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -273,7 +273,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv3_fu_328/grp_conv3_Pipeline_RELU1_fu_279/grp_conv3_Pipeline_RELU1_fu_279_activity": {
+				"grp_conv3_fu_500/grp_conv3_Pipeline_RELU1_fu_275/grp_conv3_Pipeline_RELU1_fu_275_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -283,7 +283,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv3_fu_328/grp_conv3_Pipeline_RELU_fu_254/grp_conv3_Pipeline_RELU_fu_254_activity": {
+				"grp_conv3_fu_500/grp_conv3_Pipeline_RELU_fu_250/grp_conv3_Pipeline_RELU_fu_250_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -293,7 +293,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv3_fu_328/grp_conv3_Pipeline_WEIGHTI_WEIGHTK_L_fu_231/grp_conv3_Pipeline_WEIGHTI_WEIGHTK_L_fu_231_activity": {
+				"grp_conv3_fu_500/grp_conv3_Pipeline_WEIGHTI_WEIGHTK_L_fu_227/grp_conv3_Pipeline_WEIGHTI_WEIGHTK_L_fu_227_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -303,7 +303,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv3_fu_328/grp_conv3_fu_328_activity": {
+				"grp_conv3_fu_500/grp_conv3_fu_500_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -313,7 +313,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv3_fu_328/grp_load_input_buffer_c3_fu_219/grp_load_input_buffer_c3_fu_219_activity": {
+				"grp_conv3_fu_500/grp_load_input_buffer_c3_fu_215/grp_load_input_buffer_c3_fu_215_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

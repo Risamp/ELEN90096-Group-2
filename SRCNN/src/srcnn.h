@@ -47,12 +47,12 @@ typedef ap_fixed<16,3> conv1o_t;  // outputs - conv 1 / inputs - conv 2
 //layer 2
 typedef ap_fixed<16,1> conv2w_t;  // weights - conv 2
 typedef ap_fixed<8,1> conv2b_t;  // biases - conv 2
-typedef ap_fixed<32,3> conv2o_t;  // outputs - conv 2 / inputs - conv 3
+typedef ap_fixed<16,3> conv2o_t;  // outputs - conv 2 / inputs - conv 3
 
 //layer 3
 typedef ap_fixed<16,1> conv3w_t;  // weights - conv 3
 typedef ap_fixed<8,1> conv3b_t;  // biases - conv 3
-typedef ap_fixed<32,3> output_t;  // output feature map
+typedef ap_fixed<16,3> output_t;  // output feature map
 
 
 

@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Sat Nov  4 20:09:39 2023
-# Process ID: 34788
+# Start of session at: Mon Nov  6 18:31:19 2023
+# Process ID: 16088
 # Current directory: C:/SPB_Data/ELEN90096-Group-2/project_1/project_1.runs/impl_1
 # Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
 # Log file: C:/SPB_Data/ELEN90096-Group-2/project_1/project_1.runs/impl_1/design_1_wrapper.vdi
 # Journal file: C:/SPB_Data/ELEN90096-Group-2/project_1/project_1.runs/impl_1\vivado.jou
-# Running On: 400p1t176rg0516, OS: Windows, CPU Frequency: 3000 MHz, CPU Physical cores: 8, Host memory: 16943 MB
+# Running On: 400p1l1760g0508, OS: Windows, CPU Frequency: 3408 MHz, CPU Physical cores: 4, Host memory: 17053 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace

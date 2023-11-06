@@ -1,5 +1,0 @@
-***** SRCNN Golden Reference *****
-  - Butterfly MSE: 0.00017891
-
-***** SRCNN - Set14 Test *****
-Image Name     PSNR GT vs HR (dB)  PSNR GT vs HR MATLAB (dB)  PSNR GT vs LR (dB)  MSE GT vs HR   MSE GT vs HR MATLAB        

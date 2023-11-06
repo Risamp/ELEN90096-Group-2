@@ -30,5 +30,5 @@ config_cosim -tool xsim
 source "./srcnn_hls/solution1/directives.tcl"
 csim_design -ldflags {-I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include} -clean
 csynth_design
-cosim_design -ldflags {-I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include}
+cosim_design -ldflags {-I/C:/SPB_Data/ELEN90096-Group-2/SRCNN/src/include} -tool xsim
 export_design -rtl verilog -format ip_catalog -output C:/Users/rpais/Desktop

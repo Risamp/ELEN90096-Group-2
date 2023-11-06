@@ -21,19 +21,19 @@ void srcnn(input_t input_ftmap[N0][H][W],
 	//#pragma HLS PIPELINE off
 
 	//Interface definitions
-	#pragma HLS INTERFACE m_axi port=input_ftmap offset=slave depth=512 bundle=i1 max_read_burst_length=256 max_write_burst_length=256 max_widen_bitwidth=512
-	#pragma HLS INTERFACE m_axi port=conv1_weights offset=slave depth=512 bundle=w1 max_read_burst_length=256 max_write_burst_length=256 max_widen_bitwidth=512
-	#pragma HLS INTERFACE m_axi port=conv1_output_ftmap offset=slave depth=512 bundle=i2 max_read_burst_length=256 max_write_burst_length=256 max_widen_bitwidth=512
-	#pragma HLS INTERFACE m_axi port=conv2_weights offset=slave depth=512 bundle=w2 max_read_burst_length=256 max_write_burst_length=256 max_widen_bitwidth=512
-	#pragma HLS INTERFACE m_axi port=conv2_output_ftmap offset=slave depth=512 bundle=i3 max_read_burst_length=256 max_write_burst_length=256 max_widen_bitwidth=512
-	#pragma HLS INTERFACE m_axi port=conv3_weights offset=slave depth=512 bundle=w3 max_read_burst_length=256 max_write_burst_length=256 max_widen_bitwidth=512
-	#pragma HLS INTERFACE m_axi port=output_ftmap offset=slave depth=512 bundle=o max_read_burst_length=256 max_write_burst_length=256 max_widen_bitwidth=512
+	#pragma HLS INTERFACE m_axi port=input_ftmap offset=slave depth=512 bundle=bundle_1 max_read_burst_length=256 max_write_burst_length=256 max_widen_bitwidth=512
+	#pragma HLS INTERFACE m_axi port=conv1_weights offset=slave depth=512 bundle=weights max_read_burst_length=256 max_write_burst_length=256 max_widen_bitwidth=512
+	#pragma HLS INTERFACE m_axi port=conv1_output_ftmap offset=slave depth=512 bundle=bundle_2 max_read_burst_length=256 max_write_burst_length=256 max_widen_bitwidth=512
+	#pragma HLS INTERFACE m_axi port=conv2_weights offset=slave depth=512 bundle=weights max_read_burst_length=256 max_write_burst_length=256 max_widen_bitwidth=512
+	#pragma HLS INTERFACE m_axi port=conv2_output_ftmap offset=slave depth=512 bundle=bundle_1 max_read_burst_length=256 max_write_burst_length=256 max_widen_bitwidth=512
+	#pragma HLS INTERFACE m_axi port=conv3_weights offset=slave depth=512 bundle=weights max_read_burst_length=256 max_write_burst_length=256 max_widen_bitwidth=512
+	#pragma HLS INTERFACE m_axi port=output_ftmap offset=slave depth=512 bundle=bundle_2 max_read_burst_length=256 max_write_burst_length=256 max_widen_bitwidth=512
 	#pragma HLS INTERFACE s_axilite port=return
 
 	// keep the biases on-board - they are small
-	#pragma HLS INTERFACE m_axi port=conv1_biases offset=slave depth=512
-	#pragma HLS INTERFACE m_axi port=conv2_biases offset=slave depth=512
-	#pragma HLS INTERFACE m_axi port=conv3_biases offset=slave depth=512
+	#pragma HLS INTERFACE m_axi port=conv1_biases bundle=biases offset=slave depth=512
+	#pragma HLS INTERFACE m_axi port=conv2_biases bundle=biases offset=slave depth=512
+	#pragma HLS INTERFACE m_axi port=conv3_biases bundle=biases offset=slave depth=512
 
 
 	//memset(conv1_output_ftmap, 0, N1 * H * W * sizeof(ftmap_t));
